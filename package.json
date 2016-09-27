@@ -144,11 +144,7 @@
   },
   "peerDependencies": {
     "cheerio": "^0.22.0",
-<<<<<<< 0e38e55238c77bb8537ce9ce3fc13046a20eb673
-    "socketcluster-client": "^5.0.10"
-=======
     "socketcluster-client": "5.0.10"
->>>>>>> Setup project for Thrive
   },
   "devDependencies": {
     "@kadira/storybook": "^2.19.0",
@@ -193,14 +189,11 @@
     "react-addons-test-utils": "^15.3.2",
     "react-storybook-addon-backgrounds": "0.0.4",
     "reactdown": "^1.0.0-alpha14",
-<<<<<<< 0e38e55238c77bb8537ce9ce3fc13046a20eb673
     "redux-logger": "^2.7.0",
-=======
     "redbox-react": "^1.3.1",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
->>>>>>> Setup project for Thrive
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "storybook-addon-specifications": "^1.0.15",
