@@ -1,13 +1,7 @@
-# React Redux Booster Kit
+# Thrive Marketing Site
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/338bf79312184e0f9bbaeacf710e0fc9)](https://www.codacy.com/app/Spartan/booster-kit-react?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spartansystems/booster-kit-react&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/spartansystems/booster-kit-react/tree/master.svg?style=svg)](https://circleci.com/gh/spartansystems/booster-kit-react/tree/master)
-[![dependencies](https://david-dm.org/spartansystems/booster-kit-react.svg)](https://david-dm.org/spartansystems/booster-kit-react)
-[![devDependency Status](https://david-dm.org/spartansystems/booster-kit-react/dev-status.svg)](https://david-dm.org/spartansystems/booster-kit-react/#info=devDependencies)
 
-## Demo
-The microsite for [Spartan's booster kits](http://boosters.joinspartan.com) was built with this framework. Check out  [specific examples](http://boosters.joinspartan.com/react-web/markdown) and further usage instruction.
 
 ## Table of Contents
 1. [Features](#features)
@@ -20,9 +14,6 @@ The microsite for [Spartan's booster kits](http://boosters.joinspartan.com) was 
 1. [Testing](#testing)
 1. [Deployment](#deployment)
     1. [Static Deployments With Surge](#static-deployments)
-    1. [Integration With Rails Booster Kit](#integration-with-the-rails-booster-kit)
-    1. [Integration With Phoenix Booster Kit](#integration-with-the-phoenix-booster-kit)
-    1. [Universal Node App](#universal-node-app)
 1. [Production Optimization](#production-optimization)
 1. [Build System](#build-system)
   1. [Configuration](#configuration)
@@ -57,8 +48,8 @@ The microsite for [Spartan's booster kits](http://boosters.joinspartan.com) was 
 After confirming that your development environment meets the specified [requirements](#requirements), you can follow these steps to get the project up and running:
 
 ```bash
-$ git clone https://github.com/spartansystems/booster-kit-react.git
-$ cd booster-kit-react
+$ git clone https://github.com/spartansystems/thrive-marketing.git
+$ cd thrive-marketing
 $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
@@ -161,18 +152,6 @@ Steps to publish:
 * Update the new host domain path in `CNAME` and in the `publish` npm script in `package.json`.
 
 `circle.yml` is configured to publish on successful merges into master, but you will still need to provide it with a Surge auth token. [Read more](http://surge.sh/help/integrating-with-circleci) about Surge continous deployment via CIrcleCI.
-
-### Server Side Rendering  
-#### Integration With The Rails Booster Kit
-Coming soon...
-
-#### Integration With The Phoenix Booster Kit
-This project is configured to use Phoenix Channels out of the box via [phoenixjs](https://www.npmjs.com/package/phoenixjs).
-
-Example usage:
-```
-import { Socket } from 'phoenix'
-```
 
 #### Universal Node App
 This app has not been optimized (yet) to render static markup on the server. This is necessary to get an SEO friendly web client. To accomplish this, we could either follow the [official Redux universal example](https://github.com/reactjs/redux/tree/master/examples/universal) or explore alternative options like [redux-connect](https://github.com/makeomatic/redux-connect).
@@ -282,7 +261,7 @@ You can browser additional plugins at [postcss.parts](http://postcss.parts/)
 
 ### Server
 
-This booster kit comes packaged with an Express server. It's important to note that the sole purpose of this server is to provide `webpack-dev-middleware` and `webpack-hot-middleware` for hot module replacement. Using a custom Express app in place of [webpack-dev-server](https://github.com/webpack/webpack-dev-server) makes it easier to extend the starter kit to include functionality such as API's, universal rendering, and more -- all without bloating the base boilerplate.
+This app comes packaged with an Express server. It's important to note that the sole purpose of this server is to provide `webpack-dev-middleware` and `webpack-hot-middleware` for hot module replacement. Using a custom Express app in place of [webpack-dev-server](https://github.com/webpack/webpack-dev-server) makes it easier to extend the starter kit to include functionality such as API's, universal rendering, and more -- all without bloating the base boilerplate.
 
 ### Production Optimization
 
