@@ -1,5 +1,5 @@
 {
-  "name": "react-web-booster-kit",
+  "name": "thrive-marketing",
   "version": "1.0.0-alpha.0",
   "homepage": "react.joinspartan.com",
   "description": "Get started with React, Redux, and React-Router!",
@@ -68,7 +68,7 @@
       }
     },
     "publish": {
-      "command": "surge --project ./dist/ --domain boosters.joinspartan.com",
+      "command": "surge --project ./dist/ --domain thrive.joinspartan.com",
       "env": {
         "DEBUG": "app:*"
       }
@@ -97,7 +97,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spartansystems/booster-kit-react.git"
+    "url": "git+https://github.com/spartansystems/thrive.git"
   },
   "author": "Spartan (http://joinspartan.com)",
   "license": "MIT",
@@ -151,7 +151,6 @@
   "peerDependencies": {
     "cheerio": "^0.22.0",
     "socketcluster-client": "5.0.10"
-
   },
   "devDependencies": {
     "ava": "^0.16.0",
@@ -191,6 +190,9 @@
     "react-addons-test-utils": "^15.3.2",
     "reactdown": "^1.0.0-alpha14",
     "redbox-react": "^1.3.1",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "stylelint": "^7.3.1",
