@@ -1,7 +1,7 @@
 {
   "sourceBase":"universal",
-  "testBase":"tests",
-  "smartPath":"containers",
-  "dumbPath":"components",
-  "fileCasing":"pascal"
+  "testBase":"universal",
+  "smartPath":"universal/containers",
+  "dumbPath":"universal/components",
+  "fileCasing":"default"
 }
