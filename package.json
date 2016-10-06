@@ -68,7 +68,7 @@
       }
     },
     "publish": {
-      "command": "surge --project ./dist/ --domain thrive.joinspartan.com",
+      "command": "surge --project ./dist/ --domain thrive.spartanqa.com",
       "env": {
         "DEBUG": "app:*"
       }
