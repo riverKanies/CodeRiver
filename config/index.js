@@ -29,8 +29,9 @@ const config = {
   // ----------------------------------
   // Server Configuration
   // ----------------------------------
-  server_host    : localip, // use string 'localhost' to prevent exposure on local network
-  server_port    : process.env.PORT || 3000,
+  server_protocol    : process.env.PROTOCOL || 'http',
+  server_host        : process.env.HOST || localip,
+  server_port        : process.env.PORT || 3000,
 
   // ----------------------------------
   // Socket Configuration
@@ -51,7 +52,6 @@ const config = {
   // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
-  compiler_css_modules     : true,
   compiler_devtool         : 'source-map',
   compiler_hash_type       : 'hash',
   compiler_fail_on_warning : false,
@@ -101,7 +101,10 @@ config.globals = {
   '__PROD__'     : config.env === 'production',
   '__TEST__'     : config.env === 'test',
   '__DEBUG__'    : config.env === 'development' && !argv.no_debug,
-  '__COVERAGE__' : !argv.watch && config.env === 'test'
+  '__COVERAGE__' : !argv.watch && config.env === 'test',
+  '__PROTOCOL__' : config.server_protocol,
+  '__HOST__'     : config.server_host,
+  '__PORT__'     : config.server_port
 }
 
 // ------------------------------------

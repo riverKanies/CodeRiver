@@ -11,10 +11,11 @@ const karmaConfig = {
   files: [
     {
       pattern: `./${config.dir_test}/test-bundler.js`,
-      watched: false,
+      watched: true,
       served: true,
       included: true
     }
+
   ],
   singleRun: !argv.watch,
   frameworks: ['mocha'],
@@ -51,15 +52,15 @@ const karmaConfig = {
       'react/addons': true,
       'react/lib/ExecutionEnvironment': true,
       'react/lib/ReactContext': 'window'
-    },
-    sassLoader: webpackConfig.sassLoader
+    }
   },
   webpackMiddleware: {
     noInfo: true
   },
   coverageReporter: {
     reporters: config.coverage_reporters
-  }
+  },
+  port: 9876
 }
 
 if (config.globals.__COVERAGE__) {
