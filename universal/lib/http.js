@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 function hostUrl () {
   const host = process.env.API_HOST || 'localhost'
   const protocol = process.env.API_PROTOCOL || 'http'
-  const port = process.env.API_PORT || '4444'
+  const port = process.env.API_PORT || '3000'
 
   return `${protocol}://${host}:${port}`
 }

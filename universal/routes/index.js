@@ -4,6 +4,9 @@ import Home from 'layouts/Home'
 import LayoutSidebar from 'layouts/LayoutSidebar'
 import Counter from 'modules/Counter'
 import Markdown from 'components/Markdown'
+import SignupForm from 'components/SignupForm'
+import Welcome from 'components/Welcome'
+import UserForm from 'components/UserForm'
 
 export const createRoutes = (store) => ({
   path: '/',
@@ -21,6 +24,18 @@ export const createRoutes = (store) => ({
         {
           path: 'markdown',
           component: Markdown
+        },
+        {
+          path: 'signup',
+          component: SignupForm
+        },
+        {
+          path: 'welcome',
+          component: Welcome
+        },
+        {
+          path: 'update_user',
+          component: UserForm
         }
       ]
     }
