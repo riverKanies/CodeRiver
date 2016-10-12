@@ -1,18 +1,5 @@
 # Thrive Marketing Site
 
-<<<<<<< 0e38e55238c77bb8537ce9ce3fc13046a20eb673
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/338bf79312184e0f9bbaeacf710e0fc9)](https://www.codacy.com/app/Spartan/booster-kit-react?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=spartansystems/booster-kit-react&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/spartansystems/booster-kit-react/tree/master.svg?style=svg)](https://circleci.com/gh/spartansystems/booster-kit-react/tree/master)
-[![dependencies](https://david-dm.org/spartansystems/booster-kit-react.svg)](https://david-dm.org/spartansystems/booster-kit-react)
-[![devDependency Status](https://david-dm.org/spartansystems/booster-kit-react/dev-status.svg)](https://david-dm.org/spartansystems/booster-kit-react/#info=devDependencies)
-
-## Demo
-The microsite for [Spartan's booster kits](http://boosters.joinspartan.com) was built with this framework. Check out  [specific examples](http://boosters.joinspartan.com/react) and further usage instruction.
-=======
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
->>>>>>> Setup project for Thrive
-
 ## Table of Contents
 1. [Features](#features)
 1. [Requirements](#requirements)
@@ -141,54 +128,6 @@ Steps to publish:
 * Add tokens to CircleCI if you want to set up automatic deploys. See below for more information.
 
 `circle.yml` is configured to publish on successful merges into master, but you will still need to provide it with a Surge auth token. [Read more](http://surge.sh/help/integrating-with-circleci) about Surge continous deployment via CIrcleCI.
-
-#### Universal Node App
-This app has not been optimized (yet) to render static markup on the server. This is necessary to get an SEO friendly web client. To accomplish this, we could either follow the [official Redux universal example](https://github.com/reactjs/redux/tree/master/examples/universal) or explore alternative options like [redux-connect](https://github.com/makeomatic/redux-connect).
-
-##### Heroku
-
-Heroku has `nodejs buildpack` script that does the following when you deploy your app to Heroku.
-1. Find `packages.json` in the root directory.
-2. Install `nodejs` and `npm` packages.
-3. Run `npm postinstall script`
-4. Run `npm start`
-
-Therefore, you need to modify `package.json` before deploying to Heroku. Make the following changes in the `scripts` section of `package.json`.
-
-```javascript
-...
-"start": "better-npm-run start:prod",
-"serve": "better-npm-run start",
-"postinstall": "npm run deploy:prod",
-"betterScripts": {
-  ...
-  "start:prod": {
-    "command": "babel-node bin/server",
-    "env": {
-      "NODE_ENV": "production"
-    }
-  }
-  ...
-},
-```
-
-It's also important to tell Heroku to install all `devDependencies` to successfully compile your app on Heroku's environment. Run the following in your terminal.
-
-```bash
-$ heroku config:set NPM_CONFIG_PRODUCTION=false
-```
-
-With this setup, you will install all the necessray packages, build your app, and start the webserver (e.g. koa) everytime you push your app to Heroku. Try to deploy to Heroku by running the following commands.
-
-```bash
-$ git add .
-$ git commit -m 'My awesome commit'
-$ git push heroku master
-```
-
-If you fail to deploy for an unknown reason, try [this helpful comment](https://github.com/davezuko/react-redux-starter-kit/issues/730#issuecomment-213997120) by [DonHansDampf](https://github.com/DonHansDampf) addressing Heroku deployments.
-
-Have more questions? Feel free to submit an issue or join the Gitter chat!
 
 ## Build System
 
