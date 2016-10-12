@@ -41,6 +41,11 @@ module.exports = function(config, env) {
       test: /\.css$/,
       loaders: [ 'style', 'css-loader?modules=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'],
       include: path.resolve(__dirname, '../')
+    },
+    {
+      test: /\.scss$/,
+      loaders: [ 'style', 'css-loader?modules=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'],
+      include: path.resolve(__dirname, '../')
     }
   ]
 

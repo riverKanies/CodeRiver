@@ -1,7 +1,7 @@
 import React from 'react'
 import { IndexLink, Link } from 'react-router'
 
-import styles from './styles'
+import styles from './styles.scss'
 import mark from './assets/mark-color.png'
 
 export const Header = () => (
