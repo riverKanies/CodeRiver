@@ -1,5 +1,7 @@
 # Thrive Marketing Site
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 ## Table of Contents
 1. [Features](#features)
 1. [Requirements](#requirements)
@@ -71,8 +73,7 @@ The application structure presented in this boilerplate is **fractal**, where fu
 ├── config                   # Project configuration settings
 ├── server                   # Express application (uses webpack middleware)
 │   └── index.js             # Server application entry point
-├── tests                    # Unit Tests
-└── unviersal                # Shared application source code
+└── universal                # Shared application source code
     ├── components           # Reusable Presentational Components
     ├── containers           # Reusable Container Components
     │   └── AppContainer     # Primary wrapper for all application code in `universal`
