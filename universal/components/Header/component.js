@@ -16,6 +16,9 @@ export const Header = () => (
       <Link to='/react' className={styles.link} activeClassName={styles.activeRoute}>
         React Web
       </Link>
+      <Link to='/signup' className={styles.link} activeClassName={styles.activeRoute}>
+        Sign Up
+      </Link>
     </div>
   </div>
 )
