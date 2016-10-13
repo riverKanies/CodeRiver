@@ -1,4 +1,4 @@
-import stylelint from 'stylelint'
+// import stylelint from 'stylelint'
 import lost from 'lost'
 import fontMagician from 'postcss-font-magician'
 import cssNext from 'postcss-cssnext'
@@ -7,7 +7,7 @@ import cssBrowserReporter from 'postcss-browser-reporter'
 import precss from 'precss'
 
 export default [
-  stylelint,
+  // stylelint,
   precss,
   cssNext,
   lost,
