@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { toast } from 'modules/Toast'
+import { reducer as formReducer } from 'redux-form'
 
 const locationState = {
   location: null
@@ -16,6 +17,7 @@ export const makeRootReducer = (asyncReducers) => {
     // Add sync reducers here
     [toast.KEY]: toast.reducer,
     location: locationReducer,
+    form: formReducer,
     ...asyncReducers
   })
 }

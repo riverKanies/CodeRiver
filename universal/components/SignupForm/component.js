@@ -1,28 +1,50 @@
 import React from 'react'
-import _ from 'lodash'
-import { http } from 'lib'
-import { connect } from 'react-redux'
+import { Field } from 'redux-form'
 
-
-class SignupForm extends React.Component {
-  constructor (props) {
-    super(props)
-    console.log('props', props)
-
-    this.state = {}
-
-    _.bindAll(this, ['onSubmit'])
-  }
-
-  onSubmit () {
-    const resp = http.post('/api/auth', {email: 'river8@ex.com', password: 'password', password_confirmation: 'password', confirm_success_url: 'http://localhost:4000/react/welcome'})
-    console.log('resp', resp)
-    // http://localhost:4000/react/welcome?account_confirmation_success=true&client_id=Ky6DahT9lPdA9w4u7YMwaA&config=default&expiry=1477516139&token=TXOYsJH-6ECAnP3ySBSEZA&uid=river4%40ex.com
-  }
-
-  render () {
-    return <button onClick={this.onSubmit}>submit</button>
-  }
+const renderField = ({input, label, type, meta: { touched, error }}) => {
+  const _error = (touched && error) ? error : undefined
+  return (
+    <label>
+      {label}
+      {_error}
+      <Field {...input} component='input' type={type} />
+    </label>
+  )
 }
 
-export default connect(() => ({}))(SignupForm)
+const renderSubmit = ({ valid = false, submitting = false, handleSubmit }) => {
+  return (
+    <button
+      type='submit'
+      onClick={handleSubmit}
+      disabled={!valid || submitting}
+    >
+    Sign Up
+    </button>
+  )
+}
+
+const SignUpForm = (props) => {
+  return (
+    <form>
+      <Field
+        component={renderField}
+        name='email'
+        type='email'
+        label='email' />
+      <Field
+        component={renderField}
+        name='password'
+        type='password'
+        label='password' />
+      <Field
+        component={renderField}
+        name='password_confirmation'
+        type='password'
+        label='password_confirmation' />
+      {renderSubmit(props)}
+    </form>
+  )
+}
+
+export default SignUpForm
