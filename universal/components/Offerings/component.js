@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './styles.scss'
 
 type Props = {
-  title: String
+  title: String,
+  children: Array,
 };
-
 
 const Offerings = ({ title = 'Offerings', children = [] }: Props) => {
   return (
