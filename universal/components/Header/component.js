@@ -13,6 +13,9 @@ export const Header = () => (
       <h1>Thrive Global</h1>
     </div>
     <div className={styles.links}>
+      <Link to='/about' className={styles.link} activeClassName={styles.activeRoute}>
+        About
+      </Link>
       <Link to='/signup' className={styles.link} activeClassName={styles.activeRoute}>
         Sign Up
       </Link>
