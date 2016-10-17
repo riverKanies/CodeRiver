@@ -1,55 +1,38 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
-export default {
-  dev: [
-    {
-      test: /\.css$/,
-      loaders: [
-        'style-loader',
-        { loader: 'css-loader', query: { modules: true } },
-        { loader: 'postcss-loader' }
+const loaderOptions = [
+  { loader: 'css-loader', query: { modules: true, importLoaders: 1 } },
+  { loader: 'postcss-loader'
+    // pending new postcss-loader release - then remove loaderOptionsPlugin
+    // options: {
+    //   plugins: function () {
+    //     return postcssPlugins
+    //   }
+    // }
+  },
+  {
+    loader: 'sass-loader',
+    query: { outputStyle: 'compressed' }
+  }
+]
+
+const styleLoaders = {
+  development: {
+    test: /\.css|\.scss$/,
+    loaders: [
+      'style-loader',
+      ...loaderOptions
+    ]
+  },
+  production: {
+    test: /\.css|\.scss$/,
+    loaders: ExtractTextPlugin.extract({
+      fallbackLoader: 'style-loader',
+      loader: [
+        ...loaderOptions
       ]
-    },
-    {
-      test: /\.scss$/,
-      loaders: [
-        'style-loader',
-        { loader: 'css-loader', query: { modules: true } },
-        { loader: 'postcss-loader' },
-        {
-          loader: 'sass-loader',
-          query: { outputStyle: 'compressed' }
-        }
-      ]
-    }
-  ],
-  prod: [
-    {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract({
-        fallbackLoader: 'style-loader',
-        loader: [
-          { loader: 'css-loader', query: { modules: true } },
-          { loader: 'postcss-loader' }
-        ]
-      })
-    },
-    {
-      test: /\.scss$/,
-      loaders: [
-        'style-loader',
-        { loader: 'css-loader', query: { modules: true } },
-        { loader: 'postcss-loader' },
-        {
-          loader: 'sass-loader',
-          query: { outputStyle: 'compressed' }
-        }
-      ]
-    }
-  ],
-  extract:
-    new ExtractTextPlugin({
-      filename: '[name].[contenthash].css',
-      allChunks: true
     })
+  }
 }
+
+export default styleLoaders
