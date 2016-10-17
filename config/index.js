@@ -52,6 +52,18 @@ const config = {
   // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
+  compiler_options         : {
+    env: process.env.NODE_ENV || 'development'
+  },
+  compiler_extensions      : [
+    '.js',
+    '.jsx',
+    '.json',
+    '.css',
+    '.sss',
+    '.md'
+  ],
+  compiler_target          : 'web',
   compiler_devtool         : 'source-map',
   compiler_hash_type       : 'hash',
   compiler_fail_on_warning : false,
@@ -79,6 +91,9 @@ const config = {
   ]
 }
 
+config.server_url = `${config.server_protocol}://${config.server_host}:${config.server_port}`
+config.test_server = process.env.TEST_SERVER || config.server_url
+
 /************************************************
 -------------------------------------------------
 
@@ -104,7 +119,8 @@ config.globals = {
   '__COVERAGE__' : !argv.watch && config.env === 'test',
   '__PROTOCOL__' : config.server_protocol,
   '__HOST__'     : config.server_host,
-  '__PORT__'     : config.server_port
+  '__PORT__'     : config.server_port,
+  '__TEST_SERVER__' : config.test_server
 }
 
 // ------------------------------------
