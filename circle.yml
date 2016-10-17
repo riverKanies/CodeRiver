@@ -12,7 +12,7 @@ test:
     - npm run deploy:test
     - npm run test:configs
     - npm run test:specs -- --json
-    - npm start
+    - npm start &
     - npm run test:features -- --json
 
 deployment:
