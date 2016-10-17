@@ -10,12 +10,9 @@ export const Header = () => (
       <IndexLink className={styles.logo} to='/' activeClassName={styles.activeRoute}>
         <img src={mark} height='40' width='40' />
       </IndexLink>
-      <h1>Spartan Booster Kits</h1>
+      <h1>Thrive Global</h1>
     </div>
     <div className={styles.links}>
-      <Link to='/react' className={styles.link} activeClassName={styles.activeRoute}>
-        React Web
-      </Link>
       <Link to='/signup' className={styles.link} activeClassName={styles.activeRoute}>
         Sign Up
       </Link>
