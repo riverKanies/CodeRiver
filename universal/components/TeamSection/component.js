@@ -1,21 +1,21 @@
 import React from 'react'
 import styles from './styles.scss'
+import TeamBio from 'components/TeamBio'
 
 type Props = {
   title: String,
-  children: Array,
 };
 
-const TeamSection = ({ title = 'Team', children = [] }: Props) => {
+const TeamSection = ({ title = 'Team' }: Props) => {
   return (
     <div className={styles.container}>
-      <div>
-        <h1>
-          {title}
-        </h1>
-      </div>
+      <h1>
+        {title}
+      </h1>
       <div className={styles.partnersContainer} >
-        {children}
+        <TeamBio />
+        <TeamBio />
+        <TeamBio />
       </div>
     </div>
   )

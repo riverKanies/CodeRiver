@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles.scss'
+import OfferingCTA from 'components/OfferingCTA'
 
 type Props = {
   title: String,
@@ -15,7 +16,9 @@ const Offerings = ({ title = 'Offerings', children = [] }: Props) => {
         </h1>
       </div>
       <div className={styles.partnersContainer} >
-        {children}
+        <OfferingCTA />
+        <OfferingCTA />
+        <OfferingCTA />
       </div>
     </div>
   )

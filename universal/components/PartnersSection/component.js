@@ -1,21 +1,23 @@
 import React from 'react'
 import styles from './styles.scss'
+import PartnerDetail from 'components/PartnerDetail'
 
 type Props = {
   title: String,
-  children: Array,
 };
 
-const PartnersSection = ({ title = 'Partners', children = [] }: Props) => {
+const PartnersSection = ({ title = 'Partners' }: Props) => {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.content}>
         <h1>
           {title}
         </h1>
-      </div>
-      <div className={styles.partnersContainer} >
-        {children}
+        <div className={styles.partnersContainer} >
+          <PartnerDetail />
+          <PartnerDetail />
+          <PartnerDetail details={['Hello']} />
+        </div>
       </div>
     </div>
   )
