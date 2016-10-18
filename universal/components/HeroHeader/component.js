@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './styles.scss'
+import styles from './styles'
 
 type Props = {
   title: String,
@@ -12,8 +12,8 @@ mattis consectetur purus sit amet fermentum.`]
 
 const HeroHeader = ({ title = 'About Thrive', bodyCopy = defaultCopy }: Props) => {
   return (
-    <div className={styles.container}>
-      <div>
+    <div>
+      <div className={styles.container}>
         <h1>
           {title}
         </h1>
