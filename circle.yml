@@ -7,9 +7,16 @@ dependencies:
     - ./node_modules/
 
 test:
+  pre:
+    - npm start:
+        background: true
+    - sleep 5
   override:
     - npm run lint
-    - npm test
+    - npm run deploy:test
+    - npm run test:configs
+    - npm run test:specs -- --json
+    - npm run test:features -- --json
 
 deployment:
   production:

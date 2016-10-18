@@ -5,7 +5,7 @@ import styles from './styles.scss'
 import mark from './assets/mark-color.png'
 
 export const Header = () => (
-  <div className={styles.container}>
+  <div id='header' className={styles.container}>
     <div className={styles.header}>
       <IndexLink className={styles.logo} to='/' activeClassName={styles.activeRoute}>
         <img src={mark} height='40' width='40' />

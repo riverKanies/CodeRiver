@@ -1,19 +1,27 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { browserHistory } from 'react-router'
+import { createMemoryHistory } from 'react-router'
 import createStore from 'store/createStore'
+import locationReducer from 'store/reducers'
 
 import { mount } from 'enzyme'
-import { expect } from 'chai'
-
+const history = createMemoryHistory('/')
 import AppContainer from 'containers/AppContainer'
-
 describe('<AppContainer />', () => {
-  it('Should render as a <Provider>.', () => {
-    const store = createStore({})
+  const store = createStore({})
+  const wrapper = mount(<AppContainer store={store} history={history} />)
 
-    const wrapper = mount(<AppContainer store={store} history={browserHistory} />)
+  it('Should render as a <Provider />.', () => {
+    const providerElement = wrapper.find('Provider')
 
-    expect(wrapper.props().store).to.equal(store);
+    expect(providerElement.length).toBe(1)
+    expect(providerElement.props().store).toEqual(store)
+  })
+
+  it('Should render a child <Router />', () => {
+    const routerElement = wrapper.find('Router')
+
+    expect(routerElement.length).toBe(1)
+    expect(routerElement.props().history).toEqual(history)
   })
 })
