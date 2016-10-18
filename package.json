@@ -1,5 +1,5 @@
 {
-  "name": "thrive-marketing",
+  "name": "thrive",
   "version": "1.0.0-alpha.0",
   "homepage": "thrive.spartanqa.com",
   "description": "Get started with React, Redux, and React-Router!",
@@ -58,14 +58,14 @@
       }
     },
     "publish": {
-      "command": "surge --project ./dist/ --domain thrive-marketing.spartanqa.com",
+      "command": "surge --project ./dist/ --domain thrive.spartanqa.com",
       "env": {
         "DEBUG": "app:*",
         "NODE_ENV": "production"
       }
     },
     "publish:prod": {
-      "command": "surge --project ./dist/ --domain thrive-marketing.spartanqa.com",
+      "command": "surge --project ./dist/ --domain thrive.spartanqa.com",
       "env": {
         "DEBUG": "app:*",
         "NODE_ENV": "production"
@@ -108,7 +108,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spartansystems/thrive.git"
+    "url": "git+https://github.com/spartansystems/thrive-marketing.git"
   },
   "author": "Spartan (http://joinspartan.com)",
   "license": "MIT",
