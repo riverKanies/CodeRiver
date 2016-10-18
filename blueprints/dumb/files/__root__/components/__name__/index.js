@@ -1,3 +1,1 @@
-import <%= pascalEntityName %> from './component'
-
-export default <%= pascalEntityName %>
+export default from './component'
