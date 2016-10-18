@@ -1,9 +1,7 @@
 import LayoutCore from 'layouts/LayoutCore'
 import Home from 'layouts/Home'
+import About from 'layouts/About'
 
-import LayoutSidebar from 'layouts/LayoutSidebar'
-import Counter from 'modules/Counter'
-import Markdown from 'components/Markdown'
 import SignupForm from 'components/SignupForm'
 import Welcome from 'components/Welcome'
 
@@ -13,19 +11,10 @@ export const createRoutes = (store) => ({
   indexRoute: Home,
   childRoutes: [
     {
-      path: 'react',
-      component: LayoutSidebar,
-      childRoutes: [
-        {
-          path: 'counter',
-          component: Counter(store)
-        },
-        {
-          path: 'markdown',
-          component: Markdown
-        }
-      ]
-    }, {
+      path: 'about',
+      component: About
+    },
+    {
       path: 'signup',
       component: SignupForm
     },

@@ -2,16 +2,16 @@
 import { browser, baseUrl } from '../browser/config'
 
 describe('Booster Kit Nav', () => {
-  it('should find the react link', async (done) => {
+  it('should find the about link', async (done) => {
     await browser
       .goto(baseUrl)
       .wait('#header')
       .evaluate(function () {
-        return document.querySelector('#react').href
+        return document.querySelector('#about').href
       })
       .end()
       .then(function (link) {
-        expect(link).toEqual(`${baseUrl}/react`)
+        expect(link).toEqual(`${baseUrl}/about`)
         done()
       })
       .catch(function (error) {
