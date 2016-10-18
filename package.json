@@ -1,7 +1,7 @@
 {
-  "name": "thrive-marketing",
+  "name": "thrive",
   "version": "1.0.0-alpha.0",
-  "homepage": "thrive-marketing.spartanqa.com",
+  "homepage": "thrive.spartanqa.com",
   "description": "Get started with React, Redux, and React-Router!",
   "main": "index.js",
   "private": "true",
@@ -58,14 +58,14 @@
       }
     },
     "publish": {
-      "command": "surge --project ./dist/ --domain thrive-marketing.spartanqa.com",
+      "command": "surge --project ./dist/ --domain thrive.spartanqa.com",
       "env": {
         "DEBUG": "app:*",
         "NODE_ENV": "production"
       }
     },
     "publish:prod": {
-      "command": "surge --project ./dist/ --domain thrive-marketing.spartanqa.com",
+      "command": "surge --project ./dist/ --domain thrive.spartanqa.com",
       "env": {
         "DEBUG": "app:*",
         "NODE_ENV": "production"
