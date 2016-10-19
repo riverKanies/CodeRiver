@@ -4,8 +4,9 @@ import About from 'layouts/About'
 
 import SignupForm from 'components/SignupForm'
 import Welcome from 'components/Welcome'
+import Calendar from '../components/Calendar'
 
-export const createRoutes = (store) => ({
+export const createRoutes = (store) => ([{
   path: '/',
   component: LayoutCore,
   indexRoute: Home,
@@ -23,6 +24,9 @@ export const createRoutes = (store) => ({
       component: Welcome
     }
   ]
-})
+}, {
+  path: '/calendar',
+  component: Calendar
+}])
 
 export default createRoutes

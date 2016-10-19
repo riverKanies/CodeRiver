@@ -8,7 +8,7 @@ function hostUrl () {
   return `${protocol}://${host}:${port}`
 }
 
-const HOST_URL = hostUrl()
+export const HOST_URL = hostUrl()
 
 function request (action, route, data) {
   let authHeaders = JSON.parse(localStorage.getItem('thrive_user_headers')) || {}
