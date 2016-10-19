@@ -9,23 +9,19 @@ const loaderOptions = [
     //     return postcssPlugins
     //   }
     // }
-  },
-  {
-    loader: 'sass-loader',
-    query: { outputStyle: 'compressed' }
   }
 ]
 
 const styleLoaders = {
   development: {
-    test: /\.css|\.scss$/,
+    test: /\.css$/,
     loaders: [
       'style-loader',
       ...loaderOptions
     ]
   },
   production: {
-    test: /\.css|\.scss$/,
+    test: /\.css$/,
     loaders: ExtractTextPlugin.extract({
       fallbackLoader: 'style-loader',
       loader: [

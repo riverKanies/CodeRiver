@@ -1,0 +1,7 @@
+@value babyBear: 40em;
+@value mamaBear: 60em;
+@value papaBear: 80em;
+
+@value viewport-mama-bear: (min-width: babyBear);
+@value viewport-papa-bear: (min-width: mamaBear)
+@value viewport-gran-bear: (min-width: papaBear);
