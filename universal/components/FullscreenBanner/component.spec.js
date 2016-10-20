@@ -1,7 +1,7 @@
 import React from 'react'
-import HeroHeader from './component'
+import FullscreenBanner from './component'
 
-describe('(Component) HeroHeader', () => {
+describe('(Component) FullscreenBanner', () => {
   it('should exist', () => {
 
   })

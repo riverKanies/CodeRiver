@@ -1,7 +1,7 @@
 import React from 'react'
-import HeroHeader from './component'
+import MediumPostCard from './component'
 
-describe('(Component) HeroHeader', () => {
+describe('(Component) MediumPostCard', () => {
   it('should exist', () => {
 
   })
