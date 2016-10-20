@@ -1,12 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { loadMicrosteps } from 'modules/Products'
 
 type Props = {
-
+  dispatch: Function
 }
 export class ProductList extends React.Component {
   props: Props;
+
+  componentDidMount () {
+    const { dispatch } = this.props
+    dispatch(loadMicrosteps())
+  }
 
   render () {
     return (
@@ -18,11 +23,7 @@ export class ProductList extends React.Component {
 const mapStateToProps = (state) => {
   return {}
 }
-const mapDispatchToProps = (dispatch) => {
-  return {}
-}
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
 )(ProductList)
