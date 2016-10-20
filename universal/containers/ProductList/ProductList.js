@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { loadMicrosteps } from 'modules/Products'
+import { loadMicrosteps, KEY } from 'modules/Products'
 
 type Props = {
-  dispatch: Function
+  dispatch: Function,
+  products: Object
 }
 export class ProductList extends React.Component {
   props: Props;
@@ -14,14 +15,23 @@ export class ProductList extends React.Component {
   }
 
   render () {
+    const { list } = this.props.products
+
     return (
-      <div>A Product List!</div>
+      <div>
+        <h1>A Product List!</h1>
+        <ul>
+          {list.map(item => (<li>{item.title}</li>))}
+        </ul>
+      </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  return {}
+  return {
+    products: state[KEY]
+  }
 }
 
 export default connect(
