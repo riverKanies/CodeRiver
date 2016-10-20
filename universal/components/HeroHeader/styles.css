@@ -1,7 +1,7 @@
 @value primary, secondary, medium, large from "styles/colors";
 
 @value breakpoints: "styles/breakpoints";
-@value viewport-papa-bear, viewport-mama-bear, viewport-gran-bear from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
 .container {
   height: 590px;
@@ -10,15 +10,17 @@
 }
 
 .container h1 {
-  lost-column: 1;
-  color: green;
+  @media bp-baby-bear {
+    lost-column: 1;
+    color: green;
+  }
 
-  @media viewport-mama-bear {
+  @media bp-mama-bear {
     lost-column: 1/2;
     color: red;
   }
 
-  @media viewport-papa-bear {
+  @media bp-papa-bear {
     lost-column: 1/4;
     color: blue;
   }
