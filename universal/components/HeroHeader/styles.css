@@ -1,5 +1,4 @@
 @value primary, secondary, medium, large from "styles/colors";
-
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
