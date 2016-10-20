@@ -12,11 +12,11 @@ const ToastContainer = toast.container
 
 export const LayoutCore = ({ children }) => (
   <section className={styles.mainContainer}>
-    <ToastContainer />
     <Header />
-    <div className={styles.bodyContainer}>
+    <ToastContainer />
+    <main role='main' className={styles.bodyContainer}>
       {children}
-    </div>
+    </main>
   </section>
 )
 
