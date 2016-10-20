@@ -45,7 +45,7 @@ export default class Calendar extends React.Component {
         >
           <option value='DAILY'>Daily</option>
           <option value='WEEKLY'>Weekly</option>
-          <option value='Monthly'>Monthly</option>
+          <option value='MONTHLY'>Monthly</option>
         </select>
         <p>Select frequency.</p>
         <a href={this.downloadLink()} download>
