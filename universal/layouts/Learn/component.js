@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './styles'
 
-export const HomeView = () => (
+export const LearnView = () => (
   <div className={styles.container}>
     <h1>
-      This is the home page.
+      Learn
     </h1>
   </div>
 )
 
-export default HomeView
+export default LearnView
