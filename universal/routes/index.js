@@ -1,6 +1,8 @@
 import LayoutCore from 'layouts/LayoutCore'
 import Home from 'layouts/Home'
 import About from 'layouts/About'
+import Learn from 'layouts/Learn'
+import Content from 'layouts/Content'
 
 import SignupForm from 'components/SignupForm'
 import Welcome from 'components/Welcome'
@@ -22,6 +24,14 @@ export const createRoutes = (store) => ([{
     {
       path: 'welcome',
       component: Welcome
+    },
+    {
+      path: 'learn',
+      component: Learn
+    },
+    {
+      path: '*',
+      component: Content
     }
   ]
 }, {
