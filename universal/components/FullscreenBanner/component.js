@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles'
-// Add in a default image
+
+import dummyImage from './assets/bg.jpg'
 
 type Props = {
   title: String,
@@ -9,14 +10,17 @@ type Props = {
   bannerImage: String,
 };
 
-const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
-eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
-mattis consectetur purus sit amet fermentum.`]
+const defaultText = [`Using a mobile first approach, we start with a block
+display at small viewports so our copy content doesn't float on the image at
+small sizes. Then as we size up we switch to flex so that we can position the
+text on top of the image. This is in lieu of using a background image and
+background image size.`]
 
-const FullscreenBanner = ({ title = 'Title', subTitle = 'Subtitle', bannerText = defaultText }: Props) => {
+const FullscreenBanner = ({ title = 'Title', subTitle = 'Subtitle',
+bannerText = defaultText, bannerImage }: Props) => {
   return (
     <section className={styles.fullscreenBanner}>
-      <img className={styles.bannerImage} src='{bannerImage}' />
+      <img className={styles.bannerImage} src={bannerImage} />
       <div className={styles.bannerContent}>
         <header className={styles.bannerHeader}>
           <h1>{title}</h1>
@@ -28,6 +32,12 @@ const FullscreenBanner = ({ title = 'Title', subTitle = 'Subtitle', bannerText =
       </div>
     </section>
   )
+}
+
+FullscreenBanner.defaultProps = {
+  title: 'I Am A Fullscreen Banner',
+  subTitle: 'Fullscreen is Great',
+  bannerImage: dummyImage
 }
 
 export default FullscreenBanner
