@@ -1,0 +1,202 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+// Global Typography Styles
+h1, h2, h3, h4, h5 {
+	text-align: inherit; color: inherit;
+	& a {
+		color: inherit; text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1 {
+	@media bp-baby-bear {
+		margin-bottom: .5rem; font-size: 1.75rem; line-height: 125%;
+	}
+	@media bp-mama-bear {
+		font-size: 2rem;
+	}
+	@media bp-papa-bear {
+		font-size: 2.5rem;
+	}
+}
+
+h2 {
+	@media bp-baby-bear {
+		margin-bottom: .62rem; font-size: 1.25rem; line-height: 115%;
+	}
+	@media bp-mama-bear {
+		font-size: 1.5rem;
+	}
+	@media bp-papa-bear {
+		font-size: 1.625rem;
+	}
+}
+
+h3 {
+	@media bp-baby-bear {
+		margin-bottom: .5rem; font-size: 1.25rem; line-height: 125%;
+	}
+	@media bp-papa-bear {
+		font-size: 1.5rem;
+	}
+}
+
+h4 {
+	@media bp-baby-bear {
+		margin-bottom: .5rem; font-size: 1.25rem; font-style: bold; font-weight: 600; line-height: 100%;
+	}
+}
+
+a {
+	text-decoration: none; cursor: pointer; background: transparent; transition: $cubic200;
+}
+
+p {
+	@media bp-baby-bear {
+		margin-bottom: .75rem; font-size: .88rem; letter-spacing: 0.01rem; color: $bodyCopy; text-align: inherit;
+	}
+	@media bp-mama-bear {
+		font-size: 1rem;
+	}
+	a {
+		color: inherit; text-decoration: underline; cursor: pointer;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	strong, b {
+		font-style: bold; font-weight: 600;
+	}
+	em {
+		font-style: italic;
+	}
+}
+
+// Lists
+ul {
+	@media bp-baby-bear {
+		display: block; width: 100%; margin: 0 0; padding: 0 0 0 .25rem; float: left; list-style: disc;
+	}
+	@media bp-mama-bear {
+		padding: 0 0 0 0;
+	}
+	li {
+		@media bp-baby-bear {
+			display: list-item; margin-bottom: .45rem; margin-left: 1rem; padding-left: .25rem; font-size: .88rem; line-height: 150%; letter-spacing: -.0125rem; list-style: disc; list-style-position: outside;
+		}
+		@media bp-mama-bear {
+			font-size: 1rem;
+		}
+	}
+}
+ol {
+	@media bp-baby-bear {
+		display: block; width: 100%; margin: 0 0; padding: 0 0 0 .25rem; float: left; list-style: decimal;
+	}
+	@media bp-mama-bear {
+		padding: 0 0 0 0;
+	}
+	li {
+		@media bp-baby-bear {
+			display: list-item; margin-bottom: .45rem; margin-left: 1rem; font-size: .88rem; line-height: 150%; letter-spacing: -.0125rem; list-style: decimal; list-style-position: outside;
+		}
+		@media bp-mama-bear {
+			font-size: 1rem;
+		}
+	}
+}
+
+// Blockquote
+blockquote {
+	@media bp-baby-bear {
+		display: block; width: 100%; height: auto; margin: .5rem auto; padding: 1.5em 1.5rem; float: left; background: lighten($bodyCopy, 50%); border-left: .25rem solid $bodyCopy; font-size: .88rem; line-height: 150%; text-align: left;
+	}
+	@media bp-mama-bear {
+		font-size: 1rem;
+	}
+	@media bp-papa-bear {
+		font-size: 1.25rem;
+	}
+	p {
+		font-family: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; color: inherit; text-align: inherit;
+	}
+}
+
+// Form Styles
+form {
+	display: block; width: 100%; padding: 0 0; float: left; position: relative; text-align: center;
+	@media bp-baby-bear {
+		margin-top: 6.5rem; margin-bottom: 2.5rem;
+	}
+	@media bp-mama-bear {
+		@include sectionMargin;
+	}
+	input, select, textarea {
+		display: block; width: 100%; height: auto; margin: 0 auto 1.25em auto; padding: .75em 1em .95em 1rem; appearance: none; border: 1px solid; border-radius: .5rem; position: relative; z-index: 500;
+	}
+	input, select {
+		text-align: left;
+	}
+	input[placeholder] {
+		display: block; color: lighten($bodyCopy, 50%);
+		&:focus, &:target {
+			color: $bodyCopy;
+		}
+	}
+	input, textarea {
+		transition: $cubic250;
+		&:focus, &:target {
+			color: $bodyCopy;
+		}
+	}
+	textarea {
+		text-align: left;
+	}
+	input[type="submit"] {
+		display: inline-block; width: 100%; margin: .0125em 0; padding: 1.125em 0 1em 0; position: relative; background: transparent; font-size: .88rem; line-height: 100%; letter-spacing: .1rem; text-align: center; text-transform: uppercase; transition: $cubic250;
+    	&:hover {
+
+        }
+        &:target, &:active {
+
+        }
+	}
+	select {
+		background: $white; transition: $cubic250;
+		&:focus, &:target {
+
+		}
+	}
+	label {
+		margin-bottom: 1rem; font-size: 1.5rem; line-height: 100%; text-align: center;
+	}
+	button {
+		text-align: center;
+	}
+	button[type="submit"] {
+		display: inline-block; width: auto; margin: .0125em 0; padding: 1em 1rem; position: relative; background: transparent; font-size: .88rem; line-height: 100%; letter-spacing: .1rem; text-align: center; text-transform: uppercase;
+    	&:hover {
+
+        }
+        &:target, &:active {
+
+        }
+	}
+}
+fieldset {
+	display: block; width: 100%; height: auto; margin: 0 auto; padding: 0 0; float: left;
+	&.half {
+		@media bp-baby-bear {
+			width: 100%;
+		}
+		@media bp-papa-bear {
+			width: 50%;
+		}
+	}
+}

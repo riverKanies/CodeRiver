@@ -1,0 +1,47 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+
+.fullscreenBanner {
+  @media bp-baby-bear {
+    display: block; width: 100%; height: auto; float: left; margin: 0 auto; padding: 0 0; position: relative; text-align: center;
+  }
+  @media bp-mama-bear {
+    display: flex; flex-direction: column; flex-flow: center; align-items: center; justify-content: center; width: 100%; height: 100vh; overflow: hidden;
+  }
+}
+
+.bannerImage {
+  @media bp-baby-bear {
+    display: block; width: 100%; height: auto; margin: 0 auto 1.56rem; float: left; position: relative; z-index: -100; text-align: center;
+  }
+  @media bp-mama-bear {
+    display: inline-block; width: auto; height: 100vh; position: absolute; top: 0;
+  }
+}
+
+.bannerContent {
+  @media bp-baby-bear {
+    lost-center: 88% 6%;
+  }
+  @media bp-mama-bear {
+    lost-column: 10/12;
+  }
+}
+
+.bannerHeader {
+  @media bp-baby-bear {
+    width: 100%; text-align: center;
+  }
+  @media bp-mama-bear {
+    text-align: left;
+  }
+}
+
+.bannerText {
+  @media bp-baby-bear {
+    width: 100%; text-align: center;
+  }
+  @media bp-mama-bear {
+    text-align: left;
+  }
+}
