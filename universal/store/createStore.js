@@ -2,12 +2,13 @@ import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import makeRootReducer from './reducers'
 import createLogger from 'redux-logger'
+import callAPIMiddleware from 'modules/Middleware/callApi'
 
 export default (preloadedState = {}) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
-  const middleware = [thunk]
+  const middleware = [thunk, callAPIMiddleware]
 
   // ======================================================
   // Store Enhancers
