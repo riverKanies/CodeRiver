@@ -13,7 +13,7 @@ mattis consectetur purus sit amet fermentum.`]
 const HeroHeader = ({ title = 'About Thrive', bodyCopy = defaultCopy }: Props) => {
   return (
     <div>
-      <div className={styles.countainer}>
+      <div className={styles.container}>
         <h1>{title}</h1>
         <h1>{title}</h1>
         <h1>{title}</h1>
