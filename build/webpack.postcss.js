@@ -3,9 +3,11 @@ import cssNext from 'postcss-cssnext'
 import cssReporter from 'postcss-reporter'
 import fontMagician from 'postcss-font-magician'
 import lost from 'lost'
+import precss from 'precss'
 
 export default [
   cssNext,
+  precss,
   lost,
   cssBrowserReporter,
   cssReporter,
