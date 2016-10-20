@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles'
+// Add in a default image
 
 type Props = {
   title: String,
