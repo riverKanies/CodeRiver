@@ -37,14 +37,10 @@
   }
   @media bp-mama-bear {
     display: inline-block;
-    width: auto;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-  }
-  @media bp-papa-bear {
-    width: 100%;
-    height: auto;
   }
   &::after {
     @media bp-mama-bear {
@@ -65,7 +61,6 @@
 .bannerImage {
   @media bp-baby-bear {
     width: 100%;
-    height: auto;
     text-align: center;
     z-index: -100;
   }
