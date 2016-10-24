@@ -12,13 +12,20 @@ export const actions = { ...baseActions(KEY) }
 
 // Reducer
 export const initialState = {
-  list: []
+  list: [],
+  fetchPending: false
 }
 
 export function reducer (state = initialState, action) {
   switch (action.type) {
     case actions.fetchSuccess:
-      return { ...state, list: action.data }
+      return { ...state, list: action.data, fetchPending: false }
+
+    case actions.fetchPending:
+      return { ...state, fetchPending: true }
+
+    case actions.fetchFailure:
+      return { ...state, fetchPending: false }
 
     default:
       return state
@@ -35,8 +42,4 @@ export function loadMicrosteps () {
     ],
     callAPI: () => httpGet('/api/microsteps')
   }
-}
-
-export default {
-  KEY, reducer
 }

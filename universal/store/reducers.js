@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { toast } from 'modules/Toast'
 import { reducer as formReducer } from 'redux-form'
-import products from 'modules/Products'
+import * as products from 'modules/Products'
 
 const locationState = {
   location: null

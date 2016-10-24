@@ -10,6 +10,14 @@ function hostUrl () {
 
 export const HOST_URL = hostUrl()
 
+function checkStatus (request) {
+  if (request.status >= 200 && request.status <= 299) {
+    return Promise.resolve(request)
+  } else {
+    return Promise.reject(request)
+  }
+}
+
 export function httpPost (route, data) {
   const method = 'POST'
   const headers = {
@@ -26,9 +34,17 @@ export function httpPost (route, data) {
   }).then(response => response.json())
 }
 
+function parseErrorResponse (response) {
+  return response.json()
+  .then(r => Promise.reject(r))
+}
+
 export function httpGet (route) {
   return fetch(HOST_URL + route)
-    .then(response => response.json())
+    .then(checkStatus)
+    .then(
+      r => r.json(),
+      parseErrorResponse)
 }
 
 export const getClientError = errors => {
