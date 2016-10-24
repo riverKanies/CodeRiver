@@ -159,6 +159,7 @@
     "jest": "^16.0.1",
     "json-concat": "0.0.1",
     "json-loader": "^0.5.4",
+    "lost": "^7.1.0",
     "npm": "^3.10.7",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
