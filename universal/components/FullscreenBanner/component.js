@@ -20,7 +20,9 @@ const FullscreenBanner = ({ title = 'Title', subTitle = 'Subtitle',
 bannerText = defaultText, bannerImage }: Props) => {
   return (
     <section className={styles.fullscreenBanner}>
-      <img className={styles.bannerImage} src={bannerImage} />
+      <span className={styles.bannerImageWrap}>
+        <img className={styles.bannerImage} src={bannerImage} />
+      </span>
       <div className={styles.bannerContent}>
         <header className={styles.bannerHeader}>
           <h1>{title}</h1>
