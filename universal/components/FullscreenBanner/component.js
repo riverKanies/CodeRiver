@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles'
-
 import dummyImage from './assets/bg.jpg'
 
 type Props = {
@@ -16,8 +15,10 @@ small sizes. Then as we size up we switch to flex so that we can position the
 text on top of the image. This is in lieu of using a background image and
 background image size.`]
 
+const defaultImage = dummyImage
+
 const FullscreenBanner = ({ title = 'Title', subTitle = 'Subtitle',
-bannerText = defaultText, bannerImage }: Props) => {
+bannerText = defaultText, bannerImage = defaultImage }: Props) => {
   return (
     <section className={styles.fullscreenBanner}>
       <span className={styles.bannerImageWrap}>
@@ -34,12 +35,6 @@ bannerText = defaultText, bannerImage }: Props) => {
       </div>
     </section>
   )
-}
-
-FullscreenBanner.defaultProps = {
-  title: 'I Am A Fullscreen Banner',
-  subTitle: 'Fullscreen is Great',
-  bannerImage: dummyImage
 }
 
 export default FullscreenBanner

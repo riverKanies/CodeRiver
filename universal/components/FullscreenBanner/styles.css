@@ -65,7 +65,7 @@
     z-index: -100;
   }
   @media bp-mama-bear {
-    width: auto;
+    height: 100vh;
     object-fit: cover;
     object-position: 50% 50%;
   }
