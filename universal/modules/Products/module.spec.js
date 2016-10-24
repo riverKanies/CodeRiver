@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import { reducer, initialState, actions, loadMicrosteps } from './index'
 import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
+import { HOST_URL } from 'utils/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
@@ -58,7 +59,7 @@ describe('ProductList', () => {
   describe('actions', () => {
     context('loadMicrosteps', () => {
       it('loadMicrosteps dispatches happy path actions and calls api', () => {
-        nock('http://localhost:3333/')
+        nock(HOST_URL)
           .get('/api/microsteps')
           .reply(200, [])
 
@@ -76,7 +77,7 @@ describe('ProductList', () => {
       })
 
       it('loadMicrosteps dispatches sad path actions and calls api', () => {
-        nock('http://localhost:3333/')
+        nock(HOST_URL)
           .get('/api/microsteps')
           .reply(404, [])
 
