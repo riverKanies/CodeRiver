@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
 import { toast } from 'modules/Toast'
 import { reducer as formReducer } from 'redux-form'
-import * as products from 'modules/Products'
+import * as microsteps from 'modules/Microsteps'
+import * as microstep from 'modules/Microstep'
 
 const locationState = {
   location: null
@@ -17,7 +18,8 @@ export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     // Add sync reducers here
     [toast.KEY]: toast.reducer,
-    [products.KEY]: products.reducer,
+    [microsteps.KEY]: microsteps.reducer,
+    [microstep.KEY]: microstep.reducer,
     location: locationReducer,
     form: formReducer,
     ...asyncReducers
