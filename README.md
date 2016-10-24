@@ -168,6 +168,15 @@ If you need environment-specific overrides (useful for dynamically setting API e
 
 Certain variables should be provided via an `.env` file. Please see `.env.sample` for those that can currently be set. If you add more variables to `.env` and want to reference them in the application code via `process.env.VARIABLE`, you will need to add it to the `Environments` webpack plugin commons list in `build/webpack.plugins.js`.
 
+```bash
+# example .env file, contains default environment variables
+PROTOCOL=http
+HOST=localhost
+PORT=3000
+API_PROTOCOL=http
+API_HOST=localhost
+API_PORT=3333
+```
 
 ### Root Resolve
 Webpack is configured to make use of [resolve.root](http://webpack.github.io/docs/configuration.html#resolve-root), which lets you import local packages as if you were traversing from the root of your `~/universal` directory. Here's an example:
