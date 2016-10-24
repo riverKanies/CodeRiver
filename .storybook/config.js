@@ -27,7 +27,7 @@ function loadStories() {
 }
 
 const CenterDecorator = (story) => (
-  <div style={{ display: "flex", justifyContent: "center",  alignItems: "center", margin: "0 0 50px 0" }}>
+  <div style={{ display: "flex", justifyContent: "center",  alignItems: "center", margin: "0 0" }}>
     {story()}
   </div>
 )
