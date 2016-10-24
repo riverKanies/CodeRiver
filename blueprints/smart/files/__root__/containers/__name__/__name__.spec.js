@@ -1,5 +1,5 @@
 describe('(Component) <%= pascalEntityName %>', () => {
-  it('exists', () => {
-
+  it('needs a test', () => {
+    expect(false).toEqual(true)
   })
 })

@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from './styles'
+import ProductList from 'containers/ProductList'
 
 export const HomeView = () => (
   <div className={styles.container}>
-    <h1>
-      This is the home page.
-    </h1>
+    <ProductList />
   </div>
 )
 
