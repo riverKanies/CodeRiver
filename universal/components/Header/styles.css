@@ -1,3 +1,12 @@
+header[role="banner"] {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 9000;
+}
+
 .activeRoute {
   font-weight: bold;
   text-decoration: underline;
