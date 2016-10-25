@@ -16,9 +16,8 @@ const MediumPostFilter = ({
           <h2>{filterText}</h2>
         </header>
         <form className={styles.filter}>
-          <fieldset className={styles.categories}>
-            <MediumPostFilterOptions />
-          </fieldset>
+          <MediumPostFilterOptions />
+          <button type='submit' value='Apply Filter' />
         </form>
       </div>
     </section>
