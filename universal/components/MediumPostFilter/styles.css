@@ -1,2 +1,12 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+
+.postFilter {
+  @media bp-baby-bear {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0;
+  }
+}
