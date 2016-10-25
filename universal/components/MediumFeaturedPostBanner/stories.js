@@ -8,7 +8,9 @@ import MediumFeaturedPostBanner from './component'
 const notes = 'This story demonstrates the props that can be passed to MediumFeaturedPostBanner'
 
 const props = {
-  title: 'MediumFeaturedPostBanner Title'
+  title: 'MediumFeaturedPostBanner Title',
+  buttonText: 'Read Me',
+  buttonolor: 'bannerButton'
 }
 
 storiesOf('MediumFeaturedPostBanner', module)
@@ -18,6 +20,8 @@ storiesOf('MediumFeaturedPostBanner', module)
       <WithNotes notes={notes}>
         <MediumFeaturedPostBanner
           title={text('Title', props.title)}
+          buttonText={text('Button Text', props.buttonText)}
+          buttonColor={text('Button Color', props.buttonColor)}
         />
       </WithNotes>
     )
