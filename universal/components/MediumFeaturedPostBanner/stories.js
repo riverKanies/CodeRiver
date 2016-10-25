@@ -19,7 +19,7 @@ storiesOf('MediumFeaturedPostBanner', module)
         <MediumFeaturedPostBanner
           title={text('Title', props.title)}
           buttonText={text('Button Text', props.buttonText)}
-          color={text('Button Color', props.color)}
+          buttonColor={text('Button Color', props.buttonColor)}
         />
       </WithNotes>
     )
