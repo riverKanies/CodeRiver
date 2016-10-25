@@ -1,8 +1,32 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
-.container {
-  background-color: 'blue';
-  height: 100px;
-  width:400px;
+.pathwayCard {
+  @media bp-baby-bear {
+    display: block;
+    width: 19.375rem;
+    float: left;
+    margin: 0 auto;
+    padding: 0 0 2rem 0;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .20);
+  }
+  @media bp-mama-bear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.pathwayImage {
+  @media bp-baby-bear {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.pathwayDescription {
+  width: 100%;
+  padding: 1em;
 }
