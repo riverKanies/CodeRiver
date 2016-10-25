@@ -14,9 +14,9 @@ export const LayoutCore = ({ children }) => (
   <section className={styles.mainContainer}>
     <Header />
     <ToastContainer />
-    <main role='main' className={styles.bodyContainer}>
+    <section className={styles.bodyContainer}>
       {children}
-    </main>
+    </section>
   </section>
 )
 
