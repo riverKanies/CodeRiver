@@ -6,8 +6,8 @@
     display: block;
     width: 19.375rem;
     float: left;
-    margin: 0 auto;
-    padding: 0 0 2rem 0;
+    margin: 1rem 1.25rem;
+    padding: 0 0 3rem 0;
     position: relative;
     border: 1px solid rgba(0, 0, 0, .20);
   }
@@ -21,6 +21,7 @@
 .pathwayImage {
   @media bp-baby-bear {
     width: 100%;
+    height: 11rem;
     object-fit: cover;
     object-position: 50% 50%;
   }
