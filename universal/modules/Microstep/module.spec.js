@@ -1,15 +1,16 @@
 import configureMockStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
-import { reducer, initialState, actions, loadMicrosteps } from './index'
-import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
+import thunk from 'redux-thunk'
+
+import callAPI from 'modules/Middleware/callApi'
+import { reducer, initialState, actions, loadMicrostep } from './index'
 import { HOST_URL } from 'utils/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
 
-describe('ProductList', () => {
-  describe('reducer', () => {
+describe('Microstep module', () => {
+  describe('REDUCER', () => {
     it('sets up initial state', () => {
       expect(reducer(undefined, {})).toEqual(initialState)
     })
@@ -31,13 +32,13 @@ describe('ProductList', () => {
       expect(
         reducer({ ...initialState, fetchPending : true }, {
           type: actions.fetchSuccess,
-          data: [1,2,3]
+          data: {oh: 'hi'}
         })
       ).toEqual(
         {
           ...initialState,
           fetchPending: false,
-          list: [1,2,3]
+          data: {oh: 'hi'}
         }
       )
     })
@@ -56,39 +57,39 @@ describe('ProductList', () => {
     })
   })
 
-  describe('actions', () => {
-    context('loadMicrosteps', () => {
-      it('loadMicrosteps dispatches happy path actions and calls api', () => {
+  describe('ACTIONS', () => {
+    context('loadMicrostep', () => {
+      it('loadMicrostep dispatches happy path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps')
-          .reply(200, [])
+          .get('/api/microsteps/1')
+          .reply(200, {})
 
         const expectedActions = [
             { type: actions.fetchPending },
-            { type: actions.fetchSuccess, data: [] }
+            { type: actions.fetchSuccess, data: {} }
         ]
 
         const store = mockStore({})
 
-        return store.dispatch(loadMicrosteps())
+        return store.dispatch(loadMicrostep('1'))
           .then(() => { // return of async actions
             expect(store.getActions()).toEqual(expectedActions)
           })
       })
 
-      it('loadMicrosteps dispatches sad path actions and calls api', () => {
+      it('loadMicrostep dispatches sad path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps')
-          .reply(404, [])
+          .get('/api/microsteps/fail')
+          .reply(404, {})
 
         const expectedActions = [
             { type: actions.fetchPending },
-            { type: actions.fetchFailure, error: [] }
+            { type: actions.fetchFailure, error: {} }
         ]
 
         const store = mockStore({})
 
-        return store.dispatch(loadMicrosteps())
+        return store.dispatch(loadMicrostep('fail'))
           .then(() => { // return of async actions
             expect(store.getActions()).toEqual(expectedActions)
           })
