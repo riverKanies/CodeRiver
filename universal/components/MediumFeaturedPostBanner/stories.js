@@ -18,6 +18,8 @@ storiesOf('MediumFeaturedPostBanner', module)
       <WithNotes notes={notes}>
         <MediumFeaturedPostBanner
           title={text('Title', props.title)}
+          buttonText={text('Button Text', props.buttonText)}
+          color={text('Button Color', props.color)}
         />
       </WithNotes>
     )

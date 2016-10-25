@@ -1,3 +1,12 @@
+@define-mixin button $bgNormal, $colorNormal, $bgHover, $colorHover {
+  background: $bgNormal;
+  color: $colorNormal;
+  &:hover {
+    background: $bgHover;
+    color: $colorHover;
+  }
+}
+
 .button {
   border: 1px solid;
   border-radius: 40px;
@@ -36,4 +45,8 @@
 .dark:hover {
   background-color: rgba(24, 27, 32, 100);
   color: #FFF;
+}
+
+.bannerButton {
+  @mixin button (white, black, black, white);
 }

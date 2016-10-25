@@ -8,16 +8,16 @@ type Props = {
   children: any,
   handleClick: Function,
   linkTo: string,
-  color: string,
+  buttonColor: string,
   segmentProps: Object,
   disabled: bool,
 }
 
-export const Button = ({ children, linkTo, color, handleClick, segmentProps, disabled }: Props) => {
+export const Button = ({ children, linkTo, buttonColor, handleClick, segmentProps, disabled }: Props) => {
   return (
     <Link
       to={linkTo}
-      className={styles[color]}
+      className={styles[buttonColor]}
       onClick={handleClick}
       activeClassName={styles.activeStyle}
       disabled={disabled}
@@ -30,7 +30,7 @@ export const Button = ({ children, linkTo, color, handleClick, segmentProps, dis
 Button.defaultProps = {
   buttonText: 'Join Us',
   linkTo: '/',
-  color: 'light'
+  buttonColor: 'light'
 }
 
 export default Button

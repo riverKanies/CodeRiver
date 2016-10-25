@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from '../Button'
-
 import styles from './styles'
 import dummyImage from './assets/bg.jpg'
 
@@ -9,18 +8,23 @@ type Props = {
   subTitle: String,
   bannerText: Array,
   bannerImage: String,
+  buttonText: String,
+  linkTo: String,
+  buttonColor: String
 };
 
-const defaultText = [`Using a mobile first approach, we start with a block
-display at small viewports so our copy content doesn't float on the image at
-small sizes. Then as we size up we switch to flex so that we can position the
-text on top of the image. This is in lieu of using a background image and
-background image size.`]
-
+const defaultText = [`I am a Medium Post excerpt. I am made of words, and tell
+you the summary of what the heck this post is about. I am super cool.`]
 const defaultImage = dummyImage
 
-const MediumFeaturedPostBanner = ({ title = 'Title', subTitle = 'Subtitle',
-bannerText = defaultText, bannerImage = defaultImage }: Props) => {
+const MediumFeaturedPostBanner = ({
+  title = 'Medium Post Title',
+  subTitle = 'Medium Category/Collection',
+  bannerText = defaultText,
+  bannerImage = defaultImage,
+  buttonText = 'Read More',
+  buttonColor = 'bannerButton'
+  }: Props) => {
   return (
     <section className={styles.MediumFeaturedPostBanner}>
       <span className={styles.bannerImageWrap}>
@@ -38,12 +42,6 @@ bannerText = defaultText, bannerImage = defaultImage }: Props) => {
       </div>
     </section>
   )
-}
-
-Button.defaultProps = {
-  buttonText: 'Join Us',
-  linkTo: '/',
-  color: 'light'
 }
 
 export default MediumFeaturedPostBanner
