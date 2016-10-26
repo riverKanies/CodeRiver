@@ -42,13 +42,13 @@ export function reducer (state = initialState, action) {
   }
 }
 
-export function loadMicrostep (id) {
+export function loadMicrostep (id: string, stepType: string) {
   return {
     types: [
       actions.fetchPending,
       actions.fetchSuccess,
       actions.fetchFailure
     ],
-    callAPI: () => httpGet(`/api/microsteps/${id}`)
+    callAPI: () => httpGet(`/api/microsteps/${id}?type=${stepType}`)
   }
 }

@@ -6,14 +6,21 @@ import 'styles/vendor/normalize'
 
 import Microstep from 'containers/Microstep'
 
-const Props = {
+type Props = {
   params: {
-    id: String
+    id: string,
+  },
+  location: {
+    query: string
   }
 }
 
-const EmbeddedMicrostep = ({ params } : Props) => {
-  return <Microstep id={params.id} />
+const EmbeddedMicrostep = ({ params: { id }, location: { query } } : Props) => {
+  const params = {
+    id,
+    stepType: query.type || 'informational'
+  }
+  return <Microstep {...params} />
 }
 
 export default EmbeddedMicrostep

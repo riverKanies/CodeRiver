@@ -61,7 +61,7 @@ describe('Microstep module', () => {
     context('loadMicrostep', () => {
       it('loadMicrostep dispatches happy path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps/1')
+          .get('/api/microsteps/1?type=informational')
           .reply(200, {})
 
         const expectedActions = [
@@ -71,7 +71,7 @@ describe('Microstep module', () => {
 
         const store = mockStore({})
 
-        return store.dispatch(loadMicrostep('1'))
+        return store.dispatch(loadMicrostep('1', 'informational'))
           .then(() => { // return of async actions
             expect(store.getActions()).toEqual(expectedActions)
           })
@@ -79,7 +79,7 @@ describe('Microstep module', () => {
 
       it('loadMicrostep dispatches sad path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps/fail')
+          .get('/api/microsteps/fail?type=informational')
           .reply(404, {})
 
         const expectedActions = [
@@ -89,7 +89,7 @@ describe('Microstep module', () => {
 
         const store = mockStore({})
 
-        return store.dispatch(loadMicrostep('fail'))
+        return store.dispatch(loadMicrostep('fail', 'informational'))
           .then(() => { // return of async actions
             expect(store.getActions()).toEqual(expectedActions)
           })
