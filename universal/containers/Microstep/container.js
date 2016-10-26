@@ -8,17 +8,21 @@ import { connect } from 'react-redux'
 import { loadMicrostep, KEY } from 'modules/Microstep'
 import styles from './styles'
 
-const Props = {
-  id: String
+type Props = {
+  dispatch: () => void,
+  fetchPending: boolean,
+  id: string,
+  microstep: any,
+  stepType: string
 }
 
 export class Microstep extends React.Component {
   props: Props;
 
   componentWillMount () {
-    const { id } = this.props
+    const { id, stepType } = this.props
 
-    this.props.dispatch(loadMicrostep(id))
+    this.props.dispatch(loadMicrostep(id, stepType))
   }
 
   renderMicrostep (microstep) {
