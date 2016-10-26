@@ -10,8 +10,8 @@ import React from 'react'
 
 setAddon(infoAddon)
 setOptions({
-  name: 'React Booster Kit',
-  url: 'http://boosters.joinspartan.com',
+  name: 'Thrive Global',
+  url: 'http://thriveglobal.com',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,
