@@ -17,8 +17,12 @@ background image size.`]
 
 const defaultImage = dummyImage
 
-const FullscreenBanner = ({ title = 'Title', subTitle = 'Subtitle',
-bannerText = defaultText, bannerImage = defaultImage }: Props) => {
+const FullscreenBanner = ({
+  title = 'Title',
+  subTitle = 'Subtitle',
+  bannerText = defaultText,
+  bannerImage = defaultImage
+}: Props) => {
   return (
     <section className={styles.fullscreenBanner}>
       <span className={styles.bannerImageWrap}>
