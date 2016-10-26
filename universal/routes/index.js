@@ -1,13 +1,13 @@
-import LayoutCore from 'layouts/LayoutCore'
-import Home from 'layouts/Home'
-import Microsteps from 'layouts/Microsteps'
-import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
-import About from 'layouts/About'
-import Learn from 'layouts/Learn'
+import Calendar from 'components/Calendar'
 import Content from 'layouts/Content'
+import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
+import Home from 'layouts/Home'
+import LayoutCore from 'layouts/LayoutCore'
+import Learn from 'layouts/Learn'
+import Microsteps from 'layouts/Microsteps'
 import SignupForm from 'components/SignupForm'
+import Thrive from 'layouts/Thrive'
 import Welcome from 'components/Welcome'
-import Calendar from '../components/Calendar'
 
 export const createRoutes = (store) => ([
   {
@@ -24,8 +24,8 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     childRoutes: [
       {
-        path: 'about',
-        component: About
+        path: 'thrive',
+        component: Thrive
       },
       {
         path: 'signup',
