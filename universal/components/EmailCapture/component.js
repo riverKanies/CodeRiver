@@ -19,10 +19,10 @@ const EmailCapture = ({ title = 'Title', sectionText = defaultText }: Props) => 
           <h3>{title}</h3>
         </header>
         <section className={styles.sectionContent}>
-          {sectionText.map(paragraph => (<p>{paragraph}</p>))}
+          {sectionText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </section>
         <form className={styles.emailInput}>
-          <input type='email' placeholder='Enter Email' value='emailAddress' />
+          <input type='email' placeholder='Enter Email' value='emailAddress' readOnly />
           <input type='submit' value='submit' />
         </form>
       </div>

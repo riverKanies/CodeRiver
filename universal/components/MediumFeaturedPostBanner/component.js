@@ -36,7 +36,7 @@ const MediumFeaturedPostBanner = ({
           <h2>{subTitle}</h2>
         </header>
         <section className={styles.postExcerpt}>
-          {bannerText.map(paragraph => (<p>{paragraph}</p>))}
+          {bannerText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
           <Button />
         </section>
       </div>

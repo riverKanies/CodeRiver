@@ -22,7 +22,7 @@ const QuoteSection = ({quote = defaultQuote, citation = 'Arriana Huffington'}: P
     <section className={styles.quoteContainer}>
       <div className={styles.container}>
         <section className={styles.sectionQuote}>
-          {quote.map(paragraph => (<q>{quote}</q>))}
+          {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
           <cite>{citation}</cite>
         </section>
         <section className={styles.quoteImage}>
