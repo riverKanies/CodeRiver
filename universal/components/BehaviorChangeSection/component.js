@@ -7,9 +7,14 @@ type Props = {
 
 const BehaviorChangeSection = ({ title = 'BehaviorChangeSection' }: Props) => {
   return (
-    <div className={styles.container}>
-      {title}
-    </div>
+    <section className={styles.container}>
+      <h2>{title}</h2>
+      <section className={styles.row}>
+        <p> Hi </p>
+        <p> Hi </p>
+        <p> Hi </p>
+      </section>
+    </section>
   )
 }
 
