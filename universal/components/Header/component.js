@@ -6,12 +6,11 @@ import mark from './assets/mark-color.png'
 
 export const Header = () => (
   <header role='banner' id='header' className={styles.container}>
-    <div className={styles.header}>
-      <IndexLink className={styles.logo} to='/' activeClassName={styles.activeRoute}>
+    <span className={styles.thriveLogo}>
+      <IndexLink to='/' activeClassName={styles.activeRoute}>
         <img src={mark} height='40' width='40' />
       </IndexLink>
-      <h1>Thrive Global</h1>
-    </div>
+    </span>
     <nav role='navigation' className={styles.links}>
       <Link id='about' to='/about' className={styles.link} activeClassName={styles.activeRoute}>
         About
