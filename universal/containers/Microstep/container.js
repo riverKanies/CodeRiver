@@ -2,6 +2,7 @@ import React from 'react'
 
 import LoadingMicrostep from './components/LoadingMicrostep'
 import MissingMicrostep from './components/MissingMicrostep'
+import InformationalMicrostep from './components/InformationalMicrostep'
 import BasicMicrostep from './components/BasicMicrostep'
 
 import { connect } from 'react-redux'
@@ -26,13 +27,19 @@ export class Microstep extends React.Component {
   }
 
   renderMicrostep (microstep) {
-    const { fetchPending } = this.props
+    const { fetchPending, stepType } = this.props
 
-    if (microstep) {
-      return <BasicMicrostep microstep={microstep} />
+    if (!microstep) {
+      return (fetchPending) ? <LoadingMicrostep /> : <MissingMicrostep />
     }
 
-    return (fetchPending) ? <LoadingMicrostep /> : <MissingMicrostep />
+    switch (stepType) {
+      case 'informational':
+        return <InformationalMicrostep microstep={microstep} />
+
+      default:
+        return <BasicMicrostep microstep={microstep} />
+    }
   }
 
   render () {

@@ -2,15 +2,30 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  title: String
+  microstep: {
+    title: String,
+    description: String,
+  }
 };
 
-const InformationalMicrostep = ({ title = 'InformationalMicrostep' }: Props) => {
+const InformationalMicrostep = ({ microstep }: Props) => {
   return (
     <div className={styles.container}>
-      {title}
+      <h1>
+        {microstep.title}
+      </h1>
+      <p>
+        {microstep.description}
+      </p>
     </div>
   )
+}
+
+InformationalMicrostep.defaultProps = {
+  microstep: {
+    title: 'A basic Microstep',
+    description: 'Lorem ipsum...'
+  }
 }
 
 export default InformationalMicrostep
