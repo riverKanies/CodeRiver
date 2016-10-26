@@ -1,2 +1,14 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+
+.postCard {
+  @media bp-baby-bear {
+    lost-column: 1;
+  }
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/4;
+  }
+}
