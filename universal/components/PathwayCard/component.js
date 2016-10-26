@@ -5,26 +5,24 @@ import pathwayPlaceholder from './assets/pathway-placeholder.jpg'
 type Props = {
   title: String,
   description: String,
-  pathwayImage: String,
+  image: Object,
 };
 
 const defaultText = [`Pathway Title`]
 
-const defaultImage = pathwayPlaceholder
-
 const PathwayCard = ({
-  title = 'Pathway Card',
+  title = {defaultText},
   description = 'Vestibulum id ligula porta felis euismod semper.',
-  pathwayImage = defaultImage }: Props) => {
+  image = pathwayPlaceholder }: Props) => {
   return (
-    <section className={styles.pathwayCard}>
-      <span className={styles.pathwayImageWrap}>
-        <img className={styles.pathwayImage} src={pathwayImage} />
+    <section className={styles.card}>
+      <span className={styles.imageWrap}>
+        <img className={styles.image} src={image} />
       </span>
-      <div className={styles.pathwayDescription}>
+      <section className={styles.description}>
         <h3>{title}</h3>
         <p>{description}</p>
-      </div>
+      </section>
     </section>
   )
 }
