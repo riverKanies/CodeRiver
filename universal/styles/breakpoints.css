@@ -5,5 +5,5 @@
 
 @value bp-baby-bear: (min-width: babyBear);
 @value bp-mama-bear: (min-width: mamaBear);
-@value bp-papa-bear: (min-width: papaBear)
+@value bp-papa-bear: (min-width: papaBear);
 @value bp-grand-bear: (min-width: grandBear);

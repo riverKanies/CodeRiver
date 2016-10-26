@@ -1,5 +1,5 @@
 // Name
-export const name = '<%= dashesEntityName %>'
+export const KEY = '<%= dashesEntityName %>'
 
 // Constants
 export const constants = { }

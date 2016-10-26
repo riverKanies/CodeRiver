@@ -1,0 +1,12 @@
+.container {
+  lost-utility: clearfix;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  padding: 1rem 0;
+}
+
+.row {
+  lost-utility: clearfix;
+}
