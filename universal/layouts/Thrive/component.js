@@ -7,7 +7,7 @@ import TeamSection from 'components/TeamSection'
 import FounderBio from 'components/FounderBio'
 import Offerings from 'components/Offerings'
 
-export const AboutView = () => (
+export const ThriveView = () => (
   <div className={styles.container}>
     <HeroHeader />
     <PartnersSection />
@@ -17,4 +17,4 @@ export const AboutView = () => (
   </div>
 )
 
-export default AboutView
+export default ThriveView
