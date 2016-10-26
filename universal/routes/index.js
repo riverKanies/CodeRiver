@@ -1,6 +1,6 @@
 import LayoutCore from 'layouts/LayoutCore'
 import Home from 'layouts/Home'
-import About from 'layouts/About'
+import Thrive from 'layouts/Thrive'
 import Learn from 'layouts/Learn'
 import Content from 'layouts/Content'
 
@@ -14,8 +14,8 @@ export const createRoutes = (store) => ([{
   indexRoute: Home,
   childRoutes: [
     {
-      path: 'about',
-      component: About
+      path: 'thrive',
+      component: Thrive
     },
     {
       path: 'signup',
