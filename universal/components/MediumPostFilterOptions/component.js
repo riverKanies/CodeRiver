@@ -21,28 +21,22 @@ const MediumPostFilterOptions = ({
   return (
     <fieldset className={styles.categories}>
       <div className={styles.inputWrap}>
-        <input type='checkbox' className={styles.checkbox} value='categoryOne' />
-        <label>{categoryOne}</label>
+        <label><input type='checkbox' className={styles.checkbox} value='categoryOne' />{categoryOne}</label>
       </div>
       <div className={styles.inputWrap}>
-        <input type='checkbox' className={styles.checkbox} value='categoryTwo' />
-        <label>{categoryTwo}</label>
+        <label><input type='checkbox' className={styles.checkbox} value='categoryTwo' />{categoryTwo}</label>
       </div>
       <div className={styles.inputWrap}>
-        <input type='checkbox' className={styles.checkbox} value='categoryThree' />
-        <label>{categoryThree}</label>
+        <label><input type='checkbox' className={styles.checkbox} value='categoryThree' />{categoryThree}</label>
       </div>
       <div className={styles.inputWrap}>
-        <input type='checkbox' className={styles.checkbox} value='categoryFour' />
-        <label>{categoryFour}</label>
+        <label><input type='checkbox' className={styles.checkbox} value='categoryFour' />{categoryFour}</label>
       </div>
       <div className={styles.inputWrap}>
-        <input type='checkbox' className={styles.checkbox} value='categoryFive' />
-        <label>{categoryFive}</label>
+        <label><input type='checkbox' className={styles.checkbox} value='categoryFive' />{categoryFive}</label>
       </div>
       <div className={styles.inputWrap}>
-        <input type='checkbox' className={styles.checkbox} value='categorySix' />
-        <label>{categorySix}</label>
+        <label><input type='checkbox' className={styles.checkbox} value='categorySix' />{categorySix}</label>
       </div>
     </fieldset>
   )

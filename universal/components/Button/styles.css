@@ -19,6 +19,7 @@
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: all 200ms cubic-bezier(.33,.89,.34,.98);
 }
 
 /* stylelint-disable */

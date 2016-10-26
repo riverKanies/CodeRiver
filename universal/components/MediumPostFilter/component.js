@@ -17,7 +17,7 @@ const MediumPostFilter = ({
         </header>
         <form className={styles.filter}>
           <MediumPostFilterOptions />
-          <button type='submit' value='Apply Filter' />
+          <input type='submit' value='Apply Filter' />
         </form>
       </div>
     </section>
