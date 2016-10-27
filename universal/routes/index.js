@@ -1,4 +1,3 @@
-import Calendar from 'components/Calendar'
 import Content from 'layouts/Content'
 import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
 import Home from 'layouts/Home'
@@ -9,10 +8,6 @@ import Thrive from 'layouts/Thrive'
 import Welcome from 'components/Welcome'
 
 export const createRoutes = (store) => ([
-  {
-    path: '/calendar',
-    component: Calendar
-  },
   {
     path: '/steps/:id',
     component: EmbeddedMicrostep
