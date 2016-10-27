@@ -9,8 +9,8 @@
     margin: 0 auto;
     padding: 10em 0;
     float: left;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+  }
+  @media bp-mama-bear {
     background: url('./assets/ah.jpg') no-repeat;
     background-position: center right;
     background-size: contain;
@@ -19,13 +19,13 @@
 
 .sectionQuote {
   @media bp-baby-bear {
-    lost-column: 12/12 1;
+    lost-column: 1;
   }
   @media bp-mama-bear {
-    lost-column: 6/12 6;
+    lost-column: 1/2;
   }
   @media bp-papa-bear {
-    lost-column: 8/12 8;
+    lost-column: 3/4;
   }
   q {
     @media bp-baby-bear {
