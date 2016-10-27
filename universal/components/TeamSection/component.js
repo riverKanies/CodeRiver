@@ -1,10 +1,11 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import TeamBio from 'components/TeamBio'
 
 type Props = {
-  title: String,
-};
+  title: string,
+}
 
 const TeamSection = ({ title = 'Team' }: Props) => {
   return (

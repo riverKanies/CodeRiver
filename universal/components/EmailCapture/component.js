@@ -1,10 +1,11 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 // Add in a button
 
 type Props = {
-  title: String,
-  sectionText: Array,
+  title: string,
+  sectionText: Array<string>,
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at

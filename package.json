@@ -10,6 +10,7 @@
     "npm": "^3.10.6"
   },
   "scripts": {
+    "analyze": "flow",
     "clean": "rimraf dist",
     "clean:project": "npm prune && npm cache clear && npm install",
     "compile": "better-npm-run compile",

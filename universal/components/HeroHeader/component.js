@@ -1,9 +1,10 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 
 type Props = {
-  title: String,
-  bodyCopy: Array,
+  title: string,
+  bodyCopy: Array<string>,
 };
 
 const defaultCopy = [`Morbi leo risus, porta ac consectetur ac, vestibulum at

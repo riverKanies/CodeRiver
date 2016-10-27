@@ -1,16 +1,17 @@
+/* @flow */
 import React from 'react'
 import Button from '../Button'
 import styles from './styles'
 import dummyImage from './assets/bg.jpg'
 
 type Props = {
-  title: String,
-  subTitle: String,
-  bannerText: Array,
-  bannerImage: String,
-  buttonText: String,
-  linkTo: String,
-  buttonColor: String
+  title: string,
+  subTitle: string,
+  bannerText: Array<string>,
+  bannerImage: string,
+  buttonText: string,
+  linkTo: string,
+  buttonColor: string
 };
 
 const defaultText = [`I am a Medium Post excerpt. I am made of words, and tell

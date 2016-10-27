@@ -1,12 +1,13 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/bg.jpg'
 
 type Props = {
-  title: String,
-  subTitle: String,
-  bannerText: Array,
-  bannerImage: String,
+  title: string,
+  subTitle: string,
+  bannerText: Array<string>,
+  bannerImage: string,
 };
 
 const defaultText = [`Using a mobile first approach, we start with a block

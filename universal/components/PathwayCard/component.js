@@ -1,17 +1,18 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import pathwayPlaceholder from './assets/pathway-placeholder.jpg'
 
 type Props = {
-  title: String,
-  description: String,
-  image: Object,
+  title: string,
+  description: string,
+  image: any,
 };
 
 const defaultText = [`Pathway Title`]
 
 const PathwayCard = ({
-  title = {defaultText},
+  title = defaultText[0],
   description = 'Vestibulum id ligula porta felis euismod semper.',
   image = pathwayPlaceholder }: Props) => {
   return (

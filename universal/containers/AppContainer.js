@@ -1,13 +1,17 @@
-import React, { PropTypes } from 'react'
+/* @flow */
+import React from 'react'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import createRoutes from 'routes'
 
+type Props = {
+  history: Object,
+  store: Object,
+}
+
 class AppContainer extends React.Component {
-  static propTypes = {
-    store: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired
-  }
+  props: Props
+  unsubscribe: any
 
   componentDidMount () {
     const { history, store } = this.props

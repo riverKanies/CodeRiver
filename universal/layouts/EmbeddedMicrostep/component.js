@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 
 import 'styles/core'
@@ -24,4 +25,3 @@ const EmbeddedMicrostep = ({ params: { id }, location: { query } } : Props) => {
 }
 
 export default EmbeddedMicrostep
-

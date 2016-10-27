@@ -1,13 +1,14 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 
 type Props = {
-  categoryOne: String,
-  categoryTwo: String,
-  categoryThree: String,
-  categoryFour: String,
-  categoryFive: String,
-  categorySix: String,
+  categoryOne: string,
+  categoryTwo: string,
+  categoryThree: string,
+  categoryFour: string,
+  categoryFive: string,
+  categorySix: string,
 };
 
 const MediumPostFilterOptions = ({

@@ -1,3 +1,4 @@
+/* @flow */
 import 'styles/core'
 import 'styles/fonts/icomoon'
 import 'styles/vendor/normalize'
@@ -10,7 +11,11 @@ import { toast } from 'modules/Toast'
 
 const ToastContainer = toast.container
 
-export const LayoutCore = ({ children }) => (
+type Props = {
+  children: any
+}
+
+export const LayoutCore = ({ children }: Props) => (
   <section className={styles.mainContainer}>
     <Header />
     <ToastContainer />

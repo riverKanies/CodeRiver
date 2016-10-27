@@ -1,11 +1,12 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 // Add in a default image
 
 type Props = {
-  quote: String,
-  citation: String,
-  quoteImage: Object,
+  quote: Array<string>,
+  citation: string,
+  quoteImage: any,
 };
 
 const defaultQuote = [`What is a good life?” has been a question asked by

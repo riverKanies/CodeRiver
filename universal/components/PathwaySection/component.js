@@ -1,10 +1,11 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import PathwayCard from 'components/PathwayCard'
 import productivityImage from '../PathwayCard/assets/pathway-red.jpg'
 
 type Props = {
-  title: String
+  title: string
 };
 
 const PathwaySection = ({ title = 'Pathways' }: Props) => {

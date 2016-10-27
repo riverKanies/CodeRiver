@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 
 import LoadingMicrostep from './components/LoadingMicrostep'
@@ -26,7 +27,7 @@ export class Microstep extends React.Component {
     this.props.dispatch(loadMicrostep(id, stepType))
   }
 
-  renderMicrostep (microstep) {
+  renderMicrostep (microstep: any) {
     const { fetchPending, stepType } = this.props
 
     if (!microstep) {

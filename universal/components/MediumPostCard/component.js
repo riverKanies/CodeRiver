@@ -1,16 +1,17 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import Button from '../Button'
 import dummyImage from './assets/mediumFPO.png'
 
 type Props = {
-  title: String,
-  collectionName: String,
-  postExcerpt: Array,
-  postImage: String,
-  buttonText: String,
-  linkTo: String,
-  buttonColor: String
+  title: string,
+  collectionName: string,
+  postExcerpt: Array<string>,
+  postImage: string,
+  buttonText: string,
+  linkTo: string,
+  buttonColor: string
 };
 
 const defaultText = [`Sed posuere consectetur est at lobortis. Praesent commodo

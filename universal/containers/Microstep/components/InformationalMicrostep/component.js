@@ -1,11 +1,12 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import { Link } from 'react-router'
 
 type Props = {
   microstep: {
-    title: String,
-    description: String,
+    title: string,
+    description: string,
   }
 };
 

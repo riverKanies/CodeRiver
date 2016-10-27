@@ -13,6 +13,7 @@ test:
     - sleep 5
   override:
     - npm run lint
+    - npm run analyze
     - npm run deploy:test
     - npm run test:configs
     - npm run test:specs -- --json

@@ -1,3 +1,4 @@
+/* @flow */
 import { injectReducer } from 'store/reducers'
 import module from './module'
 import container from './container'
@@ -11,7 +12,7 @@ export const counter = {
   reducer
 }
 
-export default (store) => {
+export default (store: any) => {
   injectReducer(store, { key: KEY, reducer: reducer })
   return container
 }

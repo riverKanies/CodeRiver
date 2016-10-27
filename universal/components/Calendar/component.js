@@ -1,10 +1,13 @@
+/* @flow */
 import _ from 'lodash'
 import React from 'react'
 import { http } from '../../lib'
 const HOST_URL = http.HOST_URL
 
 export default class Calendar extends React.Component {
-  constructor (props) {
+  state: any
+
+  constructor (props: any) {
     super(props)
 
     this.state = {
@@ -55,18 +58,18 @@ export default class Calendar extends React.Component {
     )
   }
 
-  onChangeHours (e) {
-    const hours = e.target.value
+  onChangeHours (event: any) {
+    const hours = event.target.value
     this.setState({hours: hours})
   }
 
-  onChangeMinutes (e) {
-    const minutes = e.target.value
+  onChangeMinutes (event: any) {
+    const minutes = event.target.value
     this.setState({minutes: minutes})
   }
 
-  onChangeFrequency (e) {
-    const frequency = e.target.value
+  onChangeFrequency (event: any) {
+    const frequency = event.target.value
     this.setState({frequency: frequency})
   }
 

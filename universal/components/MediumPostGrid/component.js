@@ -1,10 +1,11 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import MediumPostFilter from '../MediumPostFilter'
 import MediumPostCard from '../MediumPostCard'
 
 type Props = {
-  title: String
+  title: string
 };
 
 const MediumPostGrid = ({
