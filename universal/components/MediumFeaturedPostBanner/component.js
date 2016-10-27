@@ -1,16 +1,17 @@
+/* @flow */
 import React from 'react'
 import Button from '../Button'
 import styles from './styles'
 import dummyImage from './assets/bg.jpg'
 
 type Props = {
-  title: String,
-  subTitle: String,
-  bannerText: Array,
-  bannerImage: String,
-  buttonText: String,
-  linkTo: String,
-  buttonColor: String
+  title: string,
+  subTitle: string,
+  bannerText: Array<string>,
+  bannerImage: string,
+  buttonText: string,
+  linkTo: string,
+  buttonColor: string
 };
 
 const defaultText = [`I am a Medium Post excerpt. I am made of words, and tell
@@ -36,7 +37,7 @@ const MediumFeaturedPostBanner = ({
           <h2>{subTitle}</h2>
         </header>
         <section className={styles.postExcerpt}>
-          {bannerText.map(paragraph => (<p>{paragraph}</p>))}
+          {bannerText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
           <Button />
         </section>
       </div>

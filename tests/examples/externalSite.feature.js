@@ -7,11 +7,11 @@ describe('Booster Kit Nav', () => {
       .goto(baseUrl)
       .wait('#header')
       .evaluate(function () {
-        return document.querySelector('#about').href
+        return document.querySelector("#navMedia").href
       })
       .end()
       .then(function (link) {
-        expect(link).toEqual(`${baseUrl}/about`)
+        expect(link).toEqual(`${baseUrl}/media`)
         done()
       })
       .catch(function (error) {

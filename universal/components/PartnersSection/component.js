@@ -1,9 +1,10 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import PartnerDetail from 'components/PartnerDetail'
 
 type Props = {
-  title: String,
+  title: string,
 };
 
 const PartnersSection = ({ title = 'Partners' }: Props) => {

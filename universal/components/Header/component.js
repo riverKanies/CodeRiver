@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 import { IndexLink, Link } from 'react-router'
 
@@ -15,7 +16,7 @@ export const Header = () => (
 
     <nav role='navigation' className={styles.utilityNav}>
       <section>
-        <Link to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
           Sign Up
         </Link>
         <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>

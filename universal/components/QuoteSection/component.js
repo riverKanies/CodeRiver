@@ -1,11 +1,18 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/ah.png'
 
 type Props = {
+<<<<<<< HEAD
   quote: String,
   citation: String,
   quoteImage: String,
+=======
+  quote: Array<string>,
+  citation: string,
+  quoteImage: any,
+>>>>>>> origin/master
 };
 
 const defaultQuote = [`What is a good life?” has been a question asked by
@@ -28,7 +35,7 @@ const QuoteSection = ({
     <section className={styles.quoteContainer}>
       <div className={styles.container}>
         <section className={styles.sectionQuote}>
-          {quote.map(paragraph => (<q>{quote}</q>))}
+          {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
           <cite>{citation}</cite>
         </section>
       </div>

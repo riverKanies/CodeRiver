@@ -1,10 +1,11 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import OfferingCTA from 'components/OfferingCTA'
 
 type Props = {
-  title: String,
-  children: Array,
+  title: string,
+  children: Array<any>,
 };
 
 const Offerings = ({ title = 'Offerings', children = [] }: Props) => {

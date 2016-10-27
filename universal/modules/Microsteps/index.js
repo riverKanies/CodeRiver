@@ -1,8 +1,9 @@
+/* @flow */
 import { httpGet } from 'utils/http'
 import baseActions from 'modules/baseActions'
 
 // Name
-export const KEY = 'products'
+export const KEY = 'microsteps'
 
 // Constants
 export const constants = { }
@@ -16,7 +17,7 @@ export const initialState = {
   fetchPending: false
 }
 
-export function reducer (state = initialState, action) {
+export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
     case actions.fetchSuccess:
       return { ...state, list: action.data, fetchPending: false }

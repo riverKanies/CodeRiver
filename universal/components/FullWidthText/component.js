@@ -1,8 +1,10 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
 
 type Props = {
+<<<<<<< HEAD
   sectionClass: String,
   title: String,
   subTitle: String,
@@ -10,6 +12,11 @@ type Props = {
   buttonText: String,
   linkTo: String,
   buttonColor: String
+=======
+  title: string,
+  subTitle: string,
+  sectionText: Array<string>,
+>>>>>>> origin/master
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -33,8 +40,12 @@ const FullWidthText = ({
           <h3>{subTitle}</h3>
         </header>
         <section className={styles.sectionContent}>
+<<<<<<< HEAD
           {sectionText.map(paragraph => (<p>{paragraph}</p>))}
           <Button className={buttonColor} to={linkTo} buttonText={buttonText} />
+=======
+          {sectionText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+>>>>>>> origin/master
         </section>
       </div>
     </section>

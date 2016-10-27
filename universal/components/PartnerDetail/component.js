@@ -1,12 +1,14 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import Rocket from './assets/rocket.png'
 
 type Props = {
-  title: String,
-  details: Array,
-  image: Object,
-};
+  title: string,
+  details: Array<string>,
+  image: any,
+}
+
 const defaultDetails = [
   `Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.`,
   `Donec sed odio dui. Nullam Hey.`
