@@ -5,5 +5,18 @@
 
 @value bp-baby-bear: (min-width: babyBear);
 @value bp-mama-bear: (min-width: mamaBear);
-@value bp-papa-bear: (min-width: papaBear)
+@value bp-papa-bear: (min-width: papaBear);
 @value bp-grand-bear: (min-width: grandBear);
+
+@value containerWidth: 90rem;
+@value containerMargin: 0 auto;
+@value containerPadding: 0 1.875rem;
+@value containerFloat: none;
+
+
+/*@define-extend gridContainer {
+  max-width: containerWidth;
+  margin: containerMargin;
+  padding: containerPadding;
+  float: containerFloat;
+}*/

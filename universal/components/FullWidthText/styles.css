@@ -1,14 +1,12 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
-@value mixins: "styles/mixins";
-@value sectionPadding from mixins;
 
 .fullWidthText {
   lost-flex-container: column;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  @value sectionPadding;
+  @add-mixin sectionPadding;
   position: relative;
   background: gray;
   text-align: center;
