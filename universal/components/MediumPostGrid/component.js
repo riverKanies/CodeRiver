@@ -1,15 +1,27 @@
 import React from 'react'
 import styles from './styles'
+import MediumPostFilter from '../MediumPostFilter'
+import MediumPostCard from '../MediumPostCard'
 
 type Props = {
   title: String
 };
 
-const MediumPostGrid = ({ title = 'MediumPostGrid' }: Props) => {
+const MediumPostGrid = ({
+  title = 'MediumPostGrid'
+}: Props) => {
   return (
-    <div className={styles.container}>
-      {title}
-    </div>
+    <section className={styles.featuredMediumPosts}>
+      <MediumPostFilter />
+      <section className={styles.posts}>
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+      </section>
+    </section>
   )
 }
 
