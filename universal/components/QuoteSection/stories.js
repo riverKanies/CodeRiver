@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text, boolean } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
 import QuoteSection from './component'
 
