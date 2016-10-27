@@ -17,9 +17,9 @@
 
   /* Enable this to display lost Grid debugging in browser */
 
-   /*html {
-    lost-utility: edit;
-  }*/
+   html {
+    lost-utility: edit rgb(15, 150, 25);
+  }
 
   i {
     -moz-osx-font-smoothing: grayscale;
