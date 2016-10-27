@@ -7,7 +7,7 @@ type Props = {
   quote: string,
   citation: string,
   quoteImage: string,
-  quote: Array,
+  quote: Array<string>,
   citation: string,
   quoteImage: any,
 };

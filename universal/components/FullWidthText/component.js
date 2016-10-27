@@ -6,13 +6,10 @@ type Props = {
   sectionClass: string,
   title: string,
   subTitle: string,
-  sectionText: Array,
   buttonText: string,
   linkTo: string,
   buttonColor: string,
-  title: string,
-  subTitle: string,
-  sectionText: Array,
+  sectionText: Array<string>,
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
