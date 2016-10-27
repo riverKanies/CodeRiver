@@ -1,7 +1,17 @@
 import React from 'react'
 import { Field } from 'redux-form'
 
-const renderField = ({input, label, type, meta: { touched, error }}) => {
+type renderFieldProps = {
+  input: Object,
+  label: String,
+  type: String,
+  meta: {
+    touched: Boolean,
+    error: 'string'
+  }
+}
+
+const renderField = ({input, label, type, meta: { touched, error }}: renderFieldProps) => {
   const _error = (touched && error) ? error : undefined
   return (
     <label>
@@ -12,7 +22,13 @@ const renderField = ({input, label, type, meta: { touched, error }}) => {
   )
 }
 
-const renderSubmit = ({ valid = false, submitting = false, handleSubmit }) => {
+type renderSubmitField = {
+  valid: Boolean,
+  submitting: Boolean,
+  handleSubmit: Function
+};
+
+const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: renderSubmitField) => {
   return (
     <button
       type='submit'
