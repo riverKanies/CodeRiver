@@ -37,7 +37,7 @@ const MediumPostCard = ({
         </header>
       </section>
       <figcaption>
-        {postExcerpt.map(paragraph => (<p>{paragraph}</p>))}
+        {postExcerpt.map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
         <Button />
       </figcaption>
     </figure>
