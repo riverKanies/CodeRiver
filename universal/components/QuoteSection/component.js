@@ -4,15 +4,12 @@ import styles from './styles'
 import dummyImage from './assets/ah.png'
 
 type Props = {
-<<<<<<< HEAD
-  quote: String,
-  citation: String,
-  quoteImage: String,
-=======
-  quote: Array<string>,
+  quote: string,
+  citation: string,
+  quoteImage: string,
+  quote: Array,
   citation: string,
   quoteImage: any,
->>>>>>> origin/master
 };
 
 const defaultQuote = [`What is a good life?” has been a question asked by
