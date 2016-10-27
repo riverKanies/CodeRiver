@@ -167,11 +167,4 @@
   fieldset {
   	display: block; width: 100%; height: auto; margin: 0 auto; padding: 0 0; float: left;
   }
-
-  // Global Mixins
-  @define-mixin sectionPadding {
-    @media bp-baby-bear {
-      padding-top: 3.125em; padding-bottom: 3.125em;
-    }
-  }
 }

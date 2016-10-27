@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles'
-import Button from '../Button'
+import Button from 'components/Button'
 
 type Props = {
   sectionClass: String,
