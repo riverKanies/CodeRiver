@@ -1,9 +1,12 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-// Add in a default image
+import dummyImage from './assets/ah.png'
 
 type Props = {
+  quote: string,
+  citation: string,
+  quoteImage: string,
   quote: Array<string>,
   citation: string,
   quoteImage: any,
@@ -18,16 +21,19 @@ But over the long term, money and power by themselves are like a two-legged
 stool – you can balance on them for a while, but eventually you’re going to
 topple over. More and more people – very successful people – are toppling over.`]
 
-const QuoteSection = ({quote = defaultQuote, citation = 'Arriana Huffington'}: Props) => {
+const defaultImage = dummyImage
+
+const QuoteSection = ({
+  quote = defaultQuote,
+  citation = 'Arriana Huffington',
+  quoteImage = defaultImage
+}: Props) => {
   return (
     <section className={styles.quoteContainer}>
       <div className={styles.container}>
         <section className={styles.sectionQuote}>
           {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
           <cite>{citation}</cite>
-        </section>
-        <section className={styles.quoteImage}>
-          <img src='{image}' />
         </section>
       </div>
     </section>

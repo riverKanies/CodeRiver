@@ -1,2 +1,58 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+
+.quoteContainer {
+  @media bp-baby-bear {
+    lost-flex-container: row;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10em 0;
+    float: left;
+  }
+  @media bp-mama-bear {
+    background: url('./assets/ah.jpg') no-repeat;
+    background-position: center right;
+    background-size: contain;
+  }
+}
+
+.sectionQuote {
+  @media bp-baby-bear {
+    lost-column: 1;
+  }
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-papa-bear {
+    lost-column: 3/4;
+  }
+  q {
+    @media bp-baby-bear {
+      display: block;
+      width: 100%;
+      margin: 0 auto 1rem;
+      padding: 0 0;
+      float: left;
+      font: italic 1rem/175% sans-serif;
+    }
+    @media bp-mama-bear {
+      font-size: 1.25rem;
+    }
+    @media bp-papa-bear {
+      font-size: 1.5rem;
+    }
+  }
+  cite {
+    display: block;
+    width: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
+    font: bold 1.25em/175% sans-serif;
+    text-align: right;
+    &::before {
+      content: '—';
+    }
+  }
+}

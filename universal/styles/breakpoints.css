@@ -1,4 +1,4 @@
-@value babyBear: 10em;
+@value babyBear: 1em;
 @value mamaBear: 29em;
 @value papaBear: 40em;
 @value grandBear: 53.75em;
@@ -7,3 +7,6 @@
 @value bp-mama-bear: (min-width: mamaBear);
 @value bp-papa-bear: (min-width: papaBear);
 @value bp-grand-bear: (min-width: grandBear);
+
+@value containerWidth: 90rem;
+@value containerPadding: 1.875rem;

@@ -5,7 +5,10 @@ import { withKnobs, text, boolean } from '@kadira/storybook-addon-knobs'
 
 import QuoteSection from './component'
 
-const notes = 'This story demonstrates the props that can be passed to QuoteSection'
+const notes = 'This story demonstrates the props that can be passed to ' +
+'QuoteSection. This component was created to be used on the homepage for the ' +
+'main quote from Arriana. It can be used elsewhere if desired. It is a ' +
+'freestanding component, just pass some props to it and you are good to go.'
 
 const props = {
   title: 'QuoteSection'
@@ -18,7 +21,8 @@ storiesOf('QuoteSection', module)
       <WithNotes notes={notes}>
         <QuoteSection
           quote={text('Quote', props.quote)}
-          citation={text('Citation', props.citation)}
+          citation={text('Citation Name', props.citation)}
+          quoteImage={text('Quote Image', props.quoteImage)}
         />
       </WithNotes>
     )
