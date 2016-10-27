@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './styles'
-import MediumFeaturedPostBanner from '../../components/MediumFeaturedPostBanner'
-import MediumPostGrid from '../../components/MediumPostGrid'
-import FullWidthText from '../../components/FullWidthText'
-import EmailCapture from '../../components/EmailCapture'
-import QuoteSection from '../../components/QuoteSection'
-import ThriveStoryCarousel from '../../components/ThriveStoryCarousel'
+import MediumFeaturedPostBanner from 'components/MediumFeaturedPostBanner'
+import MediumPostGrid from 'components/MediumPostGrid'
+import FullWidthText from 'components/FullWidthText'
+import EmailCapture from 'components/EmailCapture'
+import QuoteSection from 'components/QuoteSection'
+import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
 
 export const HomeView = () => (
   <main role='main' className={styles.homePage}>

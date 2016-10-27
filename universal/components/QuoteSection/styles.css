@@ -19,13 +19,13 @@
 
 .sectionQuote {
   @media bp-baby-bear {
-    lost-column: 12/12;
+    lost-column: 12/12 1;
   }
   @media bp-mama-bear {
-    lost-column: 6/12;
+    lost-column: 6/12 6;
   }
-  @media bp-baby-bear {
-    lost-column: 8/12;
+  @media bp-papa-bear {
+    lost-column: 8/12 8;
   }
   q {
     @media bp-baby-bear {
