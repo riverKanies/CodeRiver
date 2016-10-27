@@ -9,14 +9,4 @@
 @value bp-grand-bear: (min-width: grandBear);
 
 @value containerWidth: 90rem;
-@value containerMargin: 0 auto;
-@value containerPadding: 0 1.875rem;
-@value containerFloat: none;
-
-
-/*@define-extend gridContainer {
-  max-width: containerWidth;
-  margin: containerMargin;
-  padding: containerPadding;
-  float: containerFloat;
-}*/
+@value containerPadding: 1.875rem;

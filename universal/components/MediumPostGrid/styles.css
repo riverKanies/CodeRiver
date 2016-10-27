@@ -1,13 +1,6 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerMargin, containerPadding, containerFloat from breakpoints;
-
-@define-extend gridContainer {
-  max-width: containerWidth;
-  margin: containerMargin;
-  padding: containerPadding;
-  float: containerFloat;
-}
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
 
 .posts {
-  @extend gridContainer;
+  lost-center: containerWidth containerPadding;
 }
