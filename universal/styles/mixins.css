@@ -1,0 +1,9 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+
+// Section Padding
+@value sectionPadding {
+  @media bp-baby-bear {
+    padding-top: 3.125em; padding-bottom: 3.125em;
+  }
+}

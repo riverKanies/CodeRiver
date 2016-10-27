@@ -1,2 +1,37 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value mixins: "styles/mixins";
+@value sectionPadding from mixins;
+
+.fullWidthText {
+  lost-flex-container: column;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  @value sectionPadding;
+  position: relative;
+  background: gray;
+  text-align: center;
+}
+
+.container {
+  lost-center: 80% flex;
+}
+
+header {
+  @media bp-baby-bear {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    position: relative;
+    text-align: center;
+  }
+  h2, h3 {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    text-align: center;
+  }
+}
