@@ -38,7 +38,6 @@ const FullWidthText = ({
         <section className={styles.sectionContent}>
           {sectionText.map(paragraph => (<p>{paragraph}</p>))}
           <Button className={buttonColor} to={linkTo} buttonText={buttonText} />
-          {sectionText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </section>
       </div>
     </section>
