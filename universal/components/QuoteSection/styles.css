@@ -2,39 +2,46 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
 .quoteContainer {
-  display: flex;
-  flex-direction: row;
-  flex-flow: center;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 10em 0;
-  float: left;
-  background: gray url('./assets/ah.jpg') no-repeat;
-  background-position: center right;
-  background-size: fit;
+  @media bp-baby-bear {
+    lost-flex-container: row;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10em 0;
+    float: left;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background: url('./assets/ah.jpg') no-repeat;
+    background-position: center right;
+    background-size: contain;
+  }
 }
 
 .sectionQuote {
   @media bp-baby-bear {
-    width: 100%;
-    float: left;
+    lost-column: 12/12;
+  }
+  @media bp-mama-bear {
+    lost-column: 6/12;
   }
   @media bp-baby-bear {
-    lost-column: 1/2;
-  }
-  @media bp-baby-bear {
-    lost-column: 2/3;
+    lost-column: 8/12;
   }
   q {
-    display: block;
-    width: 100%;
-    margin: 0 auto 1em;
-    padding: 0 0;
-    float: left;
-    font: italic 1.25em/175% sans-serif;
+    @media bp-baby-bear {
+      display: block;
+      width: 100%;
+      margin: 0 auto 1rem;
+      padding: 0 0;
+      float: left;
+      font: italic 1rem/175% sans-serif;
+    }
+    @media bp-mama-bear {
+      font-size: 1.25rem;
+    }
+    @media bp-papa-bear {
+      font-size: 1.5rem;
+    }
   }
   cite {
     display: block;
