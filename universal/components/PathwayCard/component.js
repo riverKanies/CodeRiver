@@ -16,7 +16,7 @@ const PathwayCard = ({
   description = 'Vestibulum id ligula porta felis euismod semper.',
   image = pathwayPlaceholder }: Props) => {
   return (
-    <section className={styles.card}>
+    <div className={styles.card}>
       <span className={styles.imageWrap}>
         <img className={styles.image} src={image} />
       </span>
@@ -24,7 +24,7 @@ const PathwayCard = ({
         <h3>{title}</h3>
         <p>{description}</p>
       </section>
-    </section>
+    </div>
   )
 }
 

@@ -1,12 +1,15 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear from breakpoints;
+
 .container {
-  lost-utility: clearfix;
   padding: 2rem 1rem;
+  background-color: gray;
 }
 
 h2 {
-  padding: 1rem 0;
 }
 
 .row {
-  lost-utility: clearfix;
+  background-color: red;
+  lost-center: 90rem 1rem;
 }

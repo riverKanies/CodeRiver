@@ -1,3 +1,25 @@
-.container {
+@value breakpoints: "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear from breakpoints;
 
+.container {
+  max-width: 19rem;
+  height: 23.75rem;
+  padding: 0 0 1rem 0;
+  margin-bottom: 1.25rem;
+  @media bp-mama-bear {
+    lost-column: 2/4 2;
+  }
+  @media bp-papa-bear {
+    lost-column: 3/9 3;
+  }
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.description {
+  width: 100%;
+  padding: 1em;
 }

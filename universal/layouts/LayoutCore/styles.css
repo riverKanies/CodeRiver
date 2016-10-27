@@ -1,8 +1,10 @@
 .mainContainer {
   height: 100%;
+  lost-utility: clearfix;
 }
 
 .bodyContainer {
   height: 100%;
   padding: 0;
+  lost-utility: clearfix;
 }

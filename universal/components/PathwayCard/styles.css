@@ -2,16 +2,16 @@
 @value bp-mama-bear, bp-papa-bear from breakpoints;
 
 .card {
-  max-width: 19rem;
+  lost-center: 19rem;
   height: 23.75rem;
   padding: 0 0 1rem 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   border: 1px solid rgba(0, 0, 0, .20);
   @media bp-mama-bear {
-    lost-column: 2/4 2;
+    lost-column: 1/2;
   }
   @media bp-papa-bear {
-    lost-column: 3/9 3;
+    lost-column: 1/3;
   }
 }
 
