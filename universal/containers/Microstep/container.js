@@ -4,6 +4,7 @@ import React from 'react'
 import LoadingMicrostep from './components/LoadingMicrostep'
 import MissingMicrostep from './components/MissingMicrostep'
 import InformationalMicrostep from './components/InformationalMicrostep'
+import CalendarMicrostep from './components/CalendarMicrostep'
 import BasicMicrostep from './components/BasicMicrostep'
 
 import { connect } from 'react-redux'
@@ -35,6 +36,9 @@ export class Microstep extends React.Component {
     }
 
     switch (stepType) {
+      case 'calendar':
+        return <CalendarMicrostep microstep={microstep} />
+
       case 'informational':
         return <InformationalMicrostep microstep={microstep} />
 

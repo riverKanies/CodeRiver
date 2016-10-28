@@ -4,13 +4,17 @@ import {shallow} from 'enzyme'
 
 import lolex from 'lolex'
 
-import Calendar from 'components/Calendar'
+import CalendarMicrostep from './component'
 
-import { http } from '../../lib'
-const HOST_URL = http.HOST_URL
+import { HOST_URL } from 'utils/http'
 
-describe('<Calendar />', () => {
-  const wrapper = shallow(<Calendar />)
+describe('<CalendarMicrostep />', () => {
+  const microstep = {
+    id: 1,
+    title: 'title',
+    description: 'description'
+  }
+  const wrapper = shallow(<CalendarMicrostep microstep={microstep} />)
 
   it('Should have default state', () => {
     const hours = wrapper.state().hours
@@ -24,18 +28,15 @@ describe('<Calendar />', () => {
 
   it('Should render a download link', () => {
     let clock = lolex.install(1475791313486)
-    const cal = shallow(<Calendar />)
+    const cal = shallow(<CalendarMicrostep microstep={microstep} />)
 
     let date = new Date(Date.now())
     date.setHours(cal.state().hours, cal.state().minutes, 0, 0)
     date = date.toISOString().replace(/-|:/g, '').split('.')[0] + 'Z'
 
-    const link =
-      <a href={`${HOST_URL}/api/calendar?eventtime=${date}&frequency=DAILY`} download>
-        Get Sleep Reminder
-      </a>
+    const expected_url = `${HOST_URL}/api/calendar?id=1&eventtime=${date}&frequency=DAILY`
 
-    expect(cal.contains(link)).toEqual(true)
+    expect(cal.find('a').first().prop('href')).toEqual(expected_url)
     clock.uninstall()
   })
 
