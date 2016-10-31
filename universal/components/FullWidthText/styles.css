@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+.healthwellness {
+  background: black;
+}
+
 .container {
   lost-center: 80% flex;
 }

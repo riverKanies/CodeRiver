@@ -15,9 +15,7 @@ const props = {
   sectionClass: 'grey',
   title: 'h2 Title',
   subTitle: 'h3 Subtitle',
-  sectionText: defaultText,
-  buttonText: 'Read More',
-  buttonColor: 'dark'
+  sectionText: defaultText
 }
 
 storiesOf('FullWidthText', module)
@@ -29,8 +27,6 @@ storiesOf('FullWidthText', module)
           title={text('Section Title', props.title)}
           subTitle={text('Section Subtitle', props.subTitle)}
           sectionText={text('Section Text', props.sectionText)}
-          buttonText={text('Button Text', props.buttonText)}
-          buttonColor={text('Button Color', props.buttonColor)}
         />
       </WithNotes>
     )

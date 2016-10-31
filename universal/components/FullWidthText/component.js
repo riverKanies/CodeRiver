@@ -1,14 +1,10 @@
 import React from 'react'
 import styles from './styles'
-import Button from 'components/Button'
 
 type Props = {
   sectionClass: string,
   title: string,
   subTitle: string,
-  buttonText: string,
-  linkTo: string,
-  buttonColor: string,
   sectionText: Array<string>,
 };
 
@@ -17,16 +13,14 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
-  sectionClass = '',
+  sectionClass = 'Thrive',
   title = 'Title',
   subTitle = 'Subtitle',
-  sectionText = defaultText,
-  buttonText = 'Read More',
-  linkTo = 'javascript:void(0)',
-  buttonColor = 'dark'
+  sectionText = defaultText
 }: Props) => {
   return (
-    <section className={styles.fullWidthText}>
+    <section
+      className={[styles.fullWidthText, styles[sectionClass]]}>
       <div className={styles.container}>
         <header>
           <h2>{title}</h2>
@@ -34,7 +28,6 @@ const FullWidthText = ({
         </header>
         <section className={styles.sectionContent}>
           {sectionText.map(paragraph => (<p>{paragraph}</p>))}
-          <Button className={buttonColor} to={linkTo} buttonText={buttonText} />
         </section>
       </div>
     </section>
