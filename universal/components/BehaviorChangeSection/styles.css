@@ -1,10 +1,20 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear from breakpoints;
+
 .container {
-  lost-utility: clearfix;
   padding: 2rem 1rem;
+  lost-center: 1160px flex;
 }
 
 h2 {
-  padding: 1rem 0;
+  lost-row: 1;
+}
+
+.details {
+  lost-column: 1;
+  @media bp-mama-bear {
+    lost-column: 2/3;
+  }
 }
 
 .row {
