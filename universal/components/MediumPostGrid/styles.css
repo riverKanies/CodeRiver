@@ -3,4 +3,6 @@
 
 .posts {
   lost-center: containerWidth containerPadding;
+  margin: 0 auto;
+  float: none;
 }

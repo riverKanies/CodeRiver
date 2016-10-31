@@ -21,6 +21,12 @@ const MediumPostGrid = ({
         <MediumPostCard />
         <MediumPostCard />
         <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
       </section>
     </section>
   )

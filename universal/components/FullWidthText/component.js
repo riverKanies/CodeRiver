@@ -20,7 +20,7 @@ const FullWidthText = ({
 }: Props) => {
   return (
     <section
-      className={[styles.fullWidthText, styles[sectionClass]]}>
+      className={[styles.fullWidthText, styles['sectionClass']]}>
       <div className={styles.container}>
         <header>
           <h2>{title}</h2>

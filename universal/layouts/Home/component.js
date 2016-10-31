@@ -9,25 +9,25 @@ import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
 
 export const HomeView = () => {
-  const ftwProps = {
+  const sectionHWProps = {
     sectionClass: 'healthWellness',
     title: 'Thrive Global',
-    subTitle: 'Health &amp; Wellness Program',
-    sectionText: 'sdfsdfsdfs'
+    subTitle: 'Health & Wellness Program',
+    sectionText: [`Morbi leo risus, porta ac consectetur ac, vestibulum at
+    eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
+    mattis consectetur purus sit amet fermentum.`]
   }
-
-  const btnProps = {
+  const btnHWProps = {
     buttonText: 'Read More',
     linkTo: '/',
-    buttonColor: 'light'
-
+    buttonColor: 'dark'
   }
   return (
     <main role='main' className={styles.homePage}>
       <MediumFeaturedPostBanner />
       <MediumPostGrid />
-      <FullWidthText {...ftwProps}>
-        <Button {...btnProps} />
+      <FullWidthText {...sectionHWProps}>
+        <Button {...btnHWProps} />
       </FullWidthText>
       <EmailCapture />
       <FullWidthText />

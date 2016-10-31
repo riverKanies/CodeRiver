@@ -1,12 +1,12 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
 
 .fullWidthText {
+  lost-utility: clearfix;
   lost-flex-container: column;
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  @add-mixin sectionPadding;
+  margin: 0 auto 3em auto;
   position: relative;
   background: gray;
   text-align: center;
@@ -17,7 +17,10 @@
 }
 
 .container {
-  lost-center: 80% flex;
+  lost-center: containerWidth containerPadding;
+  margin: 0 auto;
+  padding: 0 0;
+  float: none;
 }
 
 header {
