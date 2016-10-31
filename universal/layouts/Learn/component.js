@@ -7,6 +7,8 @@ import MediumPostCard from 'components/MediumPostCard'
 import MediumPostGrid from 'components/MediumPostGrid'
 import Sidebar from 'components/Sidebar'
 
+import lists from '../data/lists.js'
+
 export const LearnView = () => {
   const bannerProps = {
     title: 'Learn',

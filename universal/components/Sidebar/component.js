@@ -1,31 +1,30 @@
 import React from 'react'
 import styles from './styles'
+import lists from 'universal/data/lists.js'
 
 type Props = {
-  sectionClass: string,
-  title: string,
-  listName: Array<string>,
+  listID: string,
+  listTitle: string,
+  listItemText: Array<string>,
+  listItemURL: Array<string>,
+  sidebarClass: string
 };
 
-const defaultList = []
-
-const renderList = (listItem) => listItem.map((item, url) => {
-  let listitem = 'defaultList'
+const renderList = (lists) => listDetails.map((listItemText, listItemURL) => {
   return (
-    <li key={index}><a href='LIST LINK URL HERE'>LIST ITEM TEXT HERE</a></li>
+    <li><a href='{listItemURL}'>{listItemText}</a></li>
   )
 })
 
 const Sidebar = ({
-  sectionClass = 'thriveAside',
-  title = 'Sidebar',
-  listName = defaultList
+  listID = 'defaultList',
+  listTitle = 'Default List'
 }: Props) => {
   return (
     <aside role='sidebar'
       className={[styles.sidebar, styles['sectionClass']]}>
       <header>
-        <h3>{title}</h3>
+        <h3>{listTitle}</h3>
       </header>
       <ul>
         {renderList}
