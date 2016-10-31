@@ -4,7 +4,7 @@ import IconWithText from 'components/IconWithText'
 
 type Props = {
   title: String,
-  details: Array<string>,
+  details: Array<string>
 };
 
 const details = [
@@ -14,7 +14,7 @@ const details = [
 ]
 
 const shortDescription = [
-  `This is a short description. Cras mattis consectetur purus sit `
+  `This is a short description`
 ]
 
 const mediumDescription = [
@@ -22,8 +22,7 @@ const mediumDescription = [
   cursus commodo, tortor mauris condimentum nibh ut fermentum massa justo sit amet risus.`
 ]
 
-const BehaviorChangeSection = ({
-  title = 'Behavior Change', }: Props) => {
+const BehaviorChangeSection = ({ title = 'Behavior Change' }: Props) => {
   return (
     <section className={styles.container}>
       <h2>{title}</h2>

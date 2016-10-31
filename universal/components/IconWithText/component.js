@@ -11,7 +11,7 @@ type Props = {
 const IconWithText = ({
   title = 'IconWithText',
   description = 'Description goes here...',
-  icon = iconPlaceholder,
+  icon = iconPlaceholder
   }: Props) => {
   return (
     <section className={styles.container}>
