@@ -24,7 +24,7 @@ const readMoreBtn = {
   linkTo: '/',
   buttonColor: 'bannerButton'
 }
-const sidebarList = lists['defaultList']
+const sidebarList = lists['mediumCollections']
 
 export const LearnView = () => (
   <main role='main' className={styles.learnPage}>

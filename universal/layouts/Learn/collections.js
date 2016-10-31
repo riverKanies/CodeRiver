@@ -8,5 +8,14 @@ export default {
       { text: 'default text', link: 'http://www.google.com' },
       { text: 'default text', link: 'http://www.google.com' }
     ]
+  },
+  'mediumCollections': {
+    title: 'Collections',
+    items: [
+      { text: 'Collection Name', link: 'http://www.google.com' },
+      { text: 'Collection Name', link: 'http://www.google.com' },
+      { text: 'Collection Name', link: 'http://www.google.com' },
+      { text: 'Collection Name', link: 'http://www.google.com' }
+    ]
   }
 }
