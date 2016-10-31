@@ -88,7 +88,7 @@ export default class Calendar extends React.Component {
         </select>
         <p>Select frequency.</p>
         <a href={this.downloadLink()} download>
-          Get Sleep Reminder
+          Download Reminder
         </a>
       </div>
     )
