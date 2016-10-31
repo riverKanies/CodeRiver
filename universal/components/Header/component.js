@@ -26,9 +26,6 @@ export const Header = () => (
     </nav>
 
     <nav role='navigation' className={styles.mainNav}>
-      <Link id='navMedia' to='/media' className={styles.link} activeClassName={styles.activeRoute}>
-        Media
-      </Link>
       <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
         Learn
       </Link>

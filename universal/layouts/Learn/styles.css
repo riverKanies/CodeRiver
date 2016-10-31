@@ -1,4 +1,2 @@
-.container {
-  height: 100%;
-  width: 100%;
-}
+@value breakpoints: "styles/breakpoints";
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;

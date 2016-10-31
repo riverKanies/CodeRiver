@@ -1,3 +1,6 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+
 @define-mixin button $bgNormal, $colorNormal, $bgHover, $colorHover {
   background: $bgNormal;
   color: $colorNormal;
@@ -22,32 +25,36 @@
   transition: all 200ms cubic-bezier(.33,.89,.34,.98);
 }
 
-/* stylelint-disable */
 .light {
   composes: button;
-  border-color: #FFF;
-  color: #FFF;
+  border-color: #fff;
+  color: #fff;
 }
-/* stylelint-enable */
 
 .light:hover {
-  background-color: #FFF;
+  background-color: #fff;
   color: rgba(24, 27, 32, 100);
 }
 
-/* stylelint-disable */
 .dark {
   composes: button;
   border-color: rgba(24, 27, 32, 100);
   color: rgba(24, 27, 32, 100);
 }
-/* stylelint-enable*/
 
 .dark:hover {
   background-color: rgba(24, 27, 32, 100);
-  color: #FFF;
+  color: #fff;
 }
 
 .bannerButton {
-  @mixin button (white, black, black, white);
+  @media bp-baby-bear {
+    composes: button;
+    background-color: rgba(0, 0, 0, 1);
+    color: #000;
+  }
+  @media bp-mama-bear {
+    background-color: rgba(255, 255, 255, 1);
+    color: #fff;
+  }
 }
