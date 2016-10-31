@@ -3,13 +3,12 @@
 
 .container {
   padding: 2rem 1rem;
-  background-color: gray;
+  lost-center: 1160px flex;
 }
 
 h2 {
+  lost-row: 1;
 }
 
 .row {
-  background-color: red;
-  lost-center: 90rem 1rem;
 }
