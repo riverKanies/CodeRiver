@@ -7,46 +7,42 @@ import MediumPostCard from 'components/MediumPostCard'
 import MediumPostGrid from 'components/MediumPostGrid'
 import Sidebar from 'components/Sidebar'
 
-import lists from '../data/lists.js'
+import lists from './collections'
 
-export const LearnView = () => {
-  const bannerProps = {
-    title: 'Learn',
-    subTitle: 'Engage with Thrive',
-    bannerImage: ''
-  }
-  const bannerBtn = {
-    buttonText: 'Read on Medium',
-    linkTo: '/',
-    buttonColor: 'bannerButton'
-  }
-  const readMoreBtn = {
-    buttonText: 'Read on Medium',
-    linkTo: '/',
-    buttonColor: 'bannerButton'
-  }
-  const sidebarList = {
-    title: 'Collections',
-    listName: 'list'
-  }
-  return (
-    <main role='main' className={styles.learnPage}>
-      <FullscreenBanner {...bannerProps}>
-        <Button {...bannerBtn} />
-        <MediumPostCard className={styles.featuredPost} />
-      </FullscreenBanner>
-      <header className={styles.readPosts}>
-        <h2>Read The Latest Posts From Thrive Global</h2>
-      </header>
-      <MediumPostGrid />
-      <section className={styles.readAll}>
-        <Button {...readMoreBtn} />
-      </section>
-      <section className={styles.postList}>
-        <Sidebar {...sidebarList} />
-      </section>
-    </main>
-  )
+const bannerProps = {
+  title: 'Learn',
+  subTitle: 'Engage with Thrive',
+  bannerImage: ''
 }
+const bannerBtn = {
+  buttonText: 'Read on Medium',
+  linkTo: '/',
+  buttonColor: 'bannerButton'
+}
+const readMoreBtn = {
+  buttonText: 'Read on Medium',
+  linkTo: '/',
+  buttonColor: 'bannerButton'
+}
+const sidebarList = lists['defaultList']
+
+export const LearnView = () => (
+  <main role='main' className={styles.learnPage}>
+    <FullscreenBanner {...bannerProps}>
+      <Button {...bannerBtn} />
+      <MediumPostCard className={styles.featuredPost} />
+    </FullscreenBanner>
+    <header className={styles.readPosts}>
+      <h2>Read The Latest Posts From Thrive Global</h2>
+    </header>
+    <MediumPostGrid />
+    <section className={styles.readAll}>
+      <Button {...readMoreBtn} />
+    </section>
+    <section className={styles.postList}>
+      <Sidebar {...sidebarList} />
+    </section>
+  </main>
+)
 
 export default LearnView
