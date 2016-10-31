@@ -12,7 +12,7 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const props = {
-  sectionClass: 'grey',
+  sectionClass: 'healthWellness',
   title: 'h2 Title',
   subTitle: 'h3 Subtitle',
   sectionText: defaultText
@@ -24,6 +24,7 @@ storiesOf('FullWidthText', module)
     return (
       <WithNotes notes={notes}>
         <FullWidthText
+          sectionClass={text('Section Class', props.sectionClass)}
           title={text('Section Title', props.title)}
           subTitle={text('Section Subtitle', props.subTitle)}
           sectionText={text('Section Text', props.sectionText)}
