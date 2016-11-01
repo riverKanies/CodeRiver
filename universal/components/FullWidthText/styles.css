@@ -19,16 +19,16 @@
 .container {
   lost-center: containerWidth containerPadding;
   margin: 0 auto;
-  padding: 0 0;
   float: none;
 }
 
-header {
+.fwtHeader {
   @media bp-baby-bear {
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0 0;
+    float: left;
     position: relative;
     text-align: center;
   }
@@ -37,6 +37,17 @@ header {
     width: 100%;
     margin: 0 0;
     padding: 0 0;
+    float: left;
     text-align: center;
   }
+}
+
+.sectionContent {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  text-align: center;
 }

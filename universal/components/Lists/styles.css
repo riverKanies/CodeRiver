@@ -1,2 +1,52 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+
+.listContainer {
+  @media bp-baby-bear {
+    lost-column: 1;
+  }
+  @media bp-mama-bear {
+    lost-column: 6/12;
+  }
+  @media bp-papa-bear {
+    lost-column: 9/12;
+  }
+}
+
+header {
+  display: block;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  text-align: left;
+    h3 {
+      text-align: inherit;
+    }
+}
+
+ul {
+  display: block;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  text-align: left;
+    li {
+      display: block;
+      width: 100%;
+      margin: 0 0;
+      padding: 0 0;
+      float: left;
+        a {
+          display: block;
+          width: 100%;
+          margin: 0 0;
+          padding: 0 0;
+          float: left;
+          position: relative;
+        }
+    }
+}

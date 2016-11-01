@@ -17,5 +17,14 @@ export default {
       { text: 'Collection Name', link: 'http://www.google.com' },
       { text: 'Collection Name', link: 'http://www.google.com' }
     ]
+  },
+  'mediumPosts': {
+    title: 'Thriving Medium Articles',
+    items: [
+      { text: 'Collection Name', link: 'http://www.google.com' },
+      { text: 'Collection Name', link: 'http://www.google.com' },
+      { text: 'Collection Name', link: 'http://www.google.com' },
+      { text: 'Collection Name', link: 'http://www.google.com' }
+    ]
   }
 }

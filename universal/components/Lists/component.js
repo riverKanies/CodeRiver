@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: string,
   title: string,
   items: Array<any>
 };
@@ -12,12 +11,18 @@ const renderList = (items) => items.map(
 )
 
 const List = ({
+  title = 'List Title',
   items = ['1', '2', '3']
 }: Props) => {
   return (
-    <ul className={styles.list}>
-      {renderList(items)}
-    </ul>
+    <div className={styles.listContainer}>
+      <header>
+        <h3>{title}</h3>
+      </header>
+      <ul className={styles.list}>
+        {renderList(items)}
+      </ul>
+    </div>
   )
 }
 

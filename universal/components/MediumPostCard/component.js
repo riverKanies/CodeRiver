@@ -26,6 +26,7 @@ const MediumPostCard = ({
   postImage = defaultImage,
   postExcerpt = defaultText,
   buttonText = 'Read More',
+  linkTo = '/',
   buttonColor = 'dark'
 }: Props) => {
   return (

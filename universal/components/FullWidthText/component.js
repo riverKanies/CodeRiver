@@ -19,15 +19,14 @@ const FullWidthText = ({
   sectionText = defaultText
 }: Props) => {
   return (
-    <section
-      className={[styles.fullWidthText, styles['sectionClass']]}>
+    <section className={[styles.fullWidthText, styles['sectionClass']]}>
       <div className={styles.container}>
-        <header>
+        <header className={styles.fwtHeader}>
           <h2>{title}</h2>
           <h3>{subTitle}</h3>
         </header>
         <section className={styles.sectionContent}>
-          {sectionText.map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
+          <p>{sectionText}</p>
         </section>
       </div>
     </section>

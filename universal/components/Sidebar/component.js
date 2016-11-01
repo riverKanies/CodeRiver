@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: string,
   title: string,
   items: Array<any>
 };
@@ -16,13 +15,15 @@ const Sidebar = ({
   items = ['1', '2', '3']
 }: Props) => {
   return (
-    <aside role='sidebar' className={[styles.sidebar, styles['sectionClass']]}>
-      <header>
-        <h3>{title}</h3>
-      </header>
-      <ul>
-        {renderList(items)}
-      </ul>
+    <aside role='sidebar' className={styles.sidebar}>
+      <div className='sidebarContainer'>
+        <header>
+          <h3>{title}</h3>
+        </header>
+        <ul>
+          {renderList(items)}
+        </ul>
+      </div>
     </aside>
   )
 }

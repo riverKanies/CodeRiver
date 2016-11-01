@@ -10,7 +10,6 @@ quite nifty. You can either specify the list name from a JSON file to have it
 autofill the list, or pull the data in via an external source.`
 
 const props = {
-  sectionClass: 'string',
   title: 'string',
   listName: Array
 }
@@ -21,7 +20,6 @@ storiesOf('Sidebar', module)
     return (
       <WithNotes notes={notes}>
         <Sidebar
-          sectionClass={text('Section Class', props.sectionClass)}
           title={text('Sidebar Header title', props.title)}
           items={text('Enter The Name Of The List', props.items)}
         />

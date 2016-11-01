@@ -8,20 +8,19 @@ import EmailCapture from 'components/EmailCapture'
 import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
 
+const sectionHWProps = {
+  sectionClass: 'healthWellness',
+  title: 'Thrive Global',
+  subTitle: 'Health & Wellness Program',
+  sectionText: [`Replace me with real text, yo.`]
+}
+const btnHWProps = {
+  buttonText: 'Read More',
+  linkTo: '/',
+  buttonColor: 'dark'
+}
+
 export const HomeView = () => {
-  const sectionHWProps = {
-    sectionClass: 'healthWellness',
-    title: 'Thrive Global',
-    subTitle: 'Health & Wellness Program',
-    sectionText: [`Morbi leo risus, porta ac consectetur ac, vestibulum at
-    eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
-    mattis consectetur purus sit amet fermentum.`]
-  }
-  const btnHWProps = {
-    buttonText: 'Read More',
-    linkTo: '/',
-    buttonColor: 'dark'
-  }
   return (
     <main role='main' className={styles.homePage}>
       <MediumFeaturedPostBanner />

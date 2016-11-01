@@ -19,15 +19,6 @@
   }
 }
 
-.cardMeta {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: .5em .5em;
-  float: left;
-  overflow: hidden;
-}
-
 .postImage {
   display: block;
   width: 100%;
@@ -36,10 +27,28 @@
   float: left;
 }
 
-figcaption {
+.cardMeta {
   display: block;
   width: 100%;
   margin: 0 auto;
   padding: .5em .5em;
+  float: left;
+  overflow: hidden;
+  header {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+    position: relative;
+    text-align: center;
+  }
+}
+
+figcaption {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
   float: left;
 }

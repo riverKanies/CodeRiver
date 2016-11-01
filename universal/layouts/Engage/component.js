@@ -1,15 +1,20 @@
 // Engage Parent Page
 import React from 'react'
 import styles from './styles'
+
+// Component Import
 import FullscreenBanner from 'components/FullscreenBanner'
 import Button from 'components/Button'
 import MediumPostCard from 'components/MediumPostCard'
 import MediumPostGrid from 'components/MediumPostGrid'
 import Sidebar from 'components/Sidebar'
 import Lists from 'components/Lists'
+import FullWidthText from 'components/FullWidthText'
 
+// Content Import
 import lists from './collections'
 
+// Layout Content
 const bannerProps = {
   title: 'Engage',
   subTitle: 'Thrive Global Media Library',
@@ -26,8 +31,14 @@ const readMoreBtn = {
   buttonColor: 'bannerButton'
 }
 const sidebarList = lists['mediumCollections']
-const syndicatedList = lists['defaultList']
+const syndicatedList = lists['mediumPosts']
+const thriveGlobal = {
+  sectionClass: 'thriveGlobal',
+  title: 'A Global Effort',
+  sectionText: 'Replace Me!'
+}
 
+// Engage Page Layout
 export const EngageView = () => (
   <main role='main' className={styles.learnPage}>
     <FullscreenBanner {...bannerProps}>
@@ -45,6 +56,10 @@ export const EngageView = () => (
       <Sidebar {...sidebarList} />
       <Lists {...syndicatedList} />
     </section>
+    <section className={styles.readAll}>
+      <Button {...readMoreBtn} />
+    </section>
+    <FullWidthText {...thriveGlobal} />
   </main>
 )
 
