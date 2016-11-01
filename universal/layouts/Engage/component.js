@@ -10,8 +10,8 @@ import Sidebar from 'components/Sidebar'
 import lists from './collections'
 
 const bannerProps = {
-  title: 'Learn',
-  subTitle: 'Engage with Thrive',
+  title: 'Engage',
+  subTitle: 'Thrive Global Media Library',
   bannerImage: ''
 }
 const bannerBtn = {

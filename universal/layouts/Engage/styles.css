@@ -1,11 +1,2 @@
-<<<<<<< HEAD
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
-=======
-.container {
-  lost-utility: clearfix;
-}
-
-.content {
-}
->>>>>>> origin/master
