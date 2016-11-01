@@ -27,7 +27,7 @@ const FullWidthText = ({
           <h3>{subTitle}</h3>
         </header>
         <section className={styles.sectionContent}>
-          {sectionText.map(paragraph => (<p>{paragraph}</p>))}
+          {sectionText.map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
         </section>
       </div>
     </section>

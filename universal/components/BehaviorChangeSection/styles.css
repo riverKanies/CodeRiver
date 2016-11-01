@@ -10,5 +10,13 @@ h2 {
   lost-row: 1;
 }
 
+.details {
+  lost-column: 1;
+  @media bp-mama-bear {
+    lost-column: 2/3;
+  }
+}
+
 .row {
+  lost-utility: clearfix;
 }

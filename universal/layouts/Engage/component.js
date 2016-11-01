@@ -26,7 +26,7 @@ const readMoreBtn = {
 }
 const sidebarList = lists['mediumCollections']
 
-export const LearnView = () => (
+export const EngageView = () => (
   <main role='main' className={styles.learnPage}>
     <FullscreenBanner {...bannerProps}>
       <Button {...bannerBtn} />
@@ -45,4 +45,4 @@ export const LearnView = () => (
   </main>
 )
 
-export default LearnView
+export default EngageView

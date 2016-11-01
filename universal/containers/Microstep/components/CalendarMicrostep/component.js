@@ -1,11 +1,19 @@
 /* @flow */
 import _ from 'lodash'
 import React from 'react'
-import { http } from '../../lib'
-const HOST_URL = http.HOST_URL
+import { HOST_URL } from 'utils/http'
+
+type Props = {
+  microstep: {
+    id: string,
+    title: string,
+    description: string,
+  }
+};
 
 export default class Calendar extends React.Component {
-  state: any
+  state: any;
+  props: Props;
 
   constructor (props: any) {
     super(props)
@@ -15,15 +23,43 @@ export default class Calendar extends React.Component {
       minutes: 0,
       frequency: 'DAILY'
     }
+    _.bindAll(this, ['onChangeFrequency', 'onChangeMinutes', 'onChangeHours', 'updateTime'])
+  }
 
-    _.bindAll(this, ['onChangeHours', 'onChangeMinutes', 'onChangeFrequency'])
+  onChangeMinutes (e: any) {
+    const minutes = e.target.value
+    this.setState({ minutes })
+  }
+
+  onChangeFrequency (e: any) {
+    const frequency = e.target.value
+    this.setState({ frequency })
+  }
+
+  onChangeHours (e: any) {
+    const hours = e.target.value
+    this.setState({ hours })
+  }
+
+  updateTime () {
+    let date = new Date(Date.now())
+    date.setHours(this.state.hours, this.state.minutes, 0, 0)
+    return date.toISOString().replace(/-|:/g, '').split('.')[0] + 'Z'
+  }
+
+  downloadLink () {
+    const { id } = this.props.microstep
+    const time = this.updateTime()
+    const frequency = this.state.frequency
+
+    return `${HOST_URL}/api/calendar?id=${id}&eventtime=${time}&frequency=${frequency}`
   }
 
   render () {
     return (
       <div>
-        <h1>Start Getting the Sleep You Need!</h1>
-        <p>Set a calendar reminder that tells you when to go to bed.</p>
+        <h1>{this.props.microstep.title}</h1>
+        <p>{this.props.microstep.description}</p>
         <input
           defaultValue={this.state.hours}
           id='hours'
@@ -52,34 +88,9 @@ export default class Calendar extends React.Component {
         </select>
         <p>Select frequency.</p>
         <a href={this.downloadLink()} download>
-          Get Sleep Reminder
+          Download Reminder
         </a>
       </div>
     )
-  }
-
-  onChangeHours (event: any) {
-    const hours = event.target.value
-    this.setState({hours: hours})
-  }
-
-  onChangeMinutes (event: any) {
-    const minutes = event.target.value
-    this.setState({minutes: minutes})
-  }
-
-  onChangeFrequency (event: any) {
-    const frequency = event.target.value
-    this.setState({frequency: frequency})
-  }
-
-  updateTime () {
-    let date = new Date(Date.now())
-    date.setHours(this.state.hours, this.state.minutes, 0, 0)
-    return date.toISOString().replace(/-|:/g, '').split('.')[0] + 'Z'
-  }
-
-  downloadLink () {
-    return `${HOST_URL}/api/calendar?eventtime=${this.updateTime()}&frequency=${this.state.frequency}`
   }
 }

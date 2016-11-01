@@ -3,20 +3,20 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
-import OfferingCTA from './component'
+import BehaviorChangeSection from './component'
 
-const notes = 'This story demonstrates the props that can be passed to OfferingCTA'
+const notes = 'This story demonstrates the props that can be passed to BehaviorChangeSection'
 
 const props = {
-  title: 'OfferingCTA Title'
+  title: 'BehaviorChangeSection Title'
 }
 
-storiesOf('OfferingCTA', module)
+storiesOf('BehaviorChangeSection', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <OfferingCTA
+        <BehaviorChangeSection
           title={text('Title', props.title)}
         />
       </WithNotes>
