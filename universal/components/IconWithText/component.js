@@ -1,11 +1,12 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import iconPlaceholder from './assets/rocket.png'
 
 type Props = {
-  title: String,
-  description: String,
-  icon: Object
+  title: string,
+  description: string,
+  icon: any
 };
 
 const IconWithText = ({

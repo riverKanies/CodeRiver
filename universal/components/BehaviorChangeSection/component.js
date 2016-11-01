@@ -1,9 +1,10 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import IconWithText from 'components/IconWithText'
 
 type Props = {
-  title: String,
+  title: string,
   details: Array<string>
 };
 
