@@ -4,6 +4,7 @@ import styles from './styles'
 import LearnHeader from 'components/LearnHeader'
 import PathwaySection from 'components/PathwaySection'
 import BehaviorChangeSection from 'components/BehaviorChangeSection'
+import LearnCTASection from 'components/LearnCTASection'
 
 export const LearnView = () => (
   <section className={styles.container}>
@@ -11,6 +12,7 @@ export const LearnView = () => (
       <LearnHeader />
       <PathwaySection />
       <BehaviorChangeSection />
+      <LearnCTASection />
     </section>
   </section>
 )
