@@ -6,17 +6,17 @@
   lost-center: 1160px flex;
 }
 
-h2 {
-  lost-row: 1;
+.title {
+  lost-column: 1;
+  text-align: center;
 }
 
 .details {
   lost-column: 1;
-  @media bp-mama-bear {
-    lost-column: 2/3;
-  }
+  text-align: center;
+  padding: 0 20rem 2rem 20rem;
 }
 
 .row {
-  lost-utility: clearfix;
+  lost-center: 1160px;
 }

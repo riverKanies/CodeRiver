@@ -2,12 +2,13 @@
 @value bp-mama-bear, bp-papa-bear from breakpoints;
 
 .container {
-  padding: 2rem 1rem;
   lost-center: 1160px flex;
+  padding: 2rem 1rem;
 }
 
 .title {
-  lost-center: 975px;
+  lost-column: 1;
+  text-align: center;
 }
 
 .row {
