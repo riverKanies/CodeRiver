@@ -6,9 +6,10 @@
   lost-center: 1160px flex;
 }
 
-h2 {
-  lost-row: 1;
+.title {
+  lost-center: 975px;
 }
 
 .row {
+  lost-center: 1160px;
 }
