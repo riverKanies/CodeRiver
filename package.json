@@ -19,6 +19,7 @@
     "start": "better-npm-run start",
     "dev": "better-npm-run dev",
     "test": "npm run test:configs && npm run test:specs && npm run test:features",
+    "test:all": "npm run test:configs && better-npm-run test --config tests/config/generated/tests.all.json",
     "test:specs": "better-npm-run test --config tests/config/generated/tests.specs.json",
     "test:features": "better-npm-run test --config tests/config/generated/tests.features.json",
     "test:configs": "better-npm-run test:configs",
@@ -94,14 +95,14 @@
       }
     },
     "test": {
-      "command": "jest",
+      "command": "jest --coverage",
       "env": {
         "NODE_ENV": "test",
         "DEBUG": "app:*"
       }
     },
     "test:configs": {
-      "command": "rimraf tests/config/generated/* && json-concat tests/config/specs.config.json tests/config/common.config.json tests/config/generated/tests.specs.json && json-concat tests/config/features.config.json tests/config/common.config.json tests/config/generated/tests.features.json",
+      "command": "rimraf tests/config/generated/* && json-concat tests/config/specs.config.json tests/config/common.config.json tests/config/generated/tests.specs.json && json-concat tests/config/features.config.json tests/config/common.config.json tests/config/generated/tests.features.json && json-concat tests/config/all.config.json tests/config/common.config.json tests/config/generated/tests.all.json ",
       "env": {
         "DEBUG": "app:*"
       }
@@ -136,6 +137,7 @@
     "better-npm-run": "0.0.11",
     "browser-sync": "^2.16.0",
     "browser-sync-webpack-plugin": "^1.1.3",
+    "codacy-coverage": "^2.0.0",
     "codecov": "^1.0.1",
     "connect-history-api-fallback": "^1.3.0",
     "css-loader": "^0.25.0",
@@ -161,6 +163,7 @@
     "json-concat": "0.0.1",
     "json-loader": "^0.5.4",
     "lost": "^7.1.0",
+    "mocha-lcov-reporter": "^1.2.0",
     "npm": "^3.10.7",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",

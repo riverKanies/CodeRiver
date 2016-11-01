@@ -1,13 +1,14 @@
+/* @flow */
 import React from 'react'
 import { Field } from 'redux-form'
 
 type renderFieldProps = {
   input: Object,
-  label: String,
-  type: String,
+  label: string,
+  type: string,
   meta: {
-    touched: Boolean,
-    error: 'string'
+    touched: boolean,
+    error: string
   }
 }
 
@@ -23,8 +24,8 @@ const renderField = ({input, label, type, meta: { touched, error }}: renderField
 }
 
 type renderSubmitField = {
-  valid: Boolean,
-  submitting: Boolean,
+  valid: boolean,
+  submitting: boolean,
   handleSubmit: Function
 };
 
@@ -40,7 +41,14 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
   )
 }
 
-const SignUpForm = (props) => {
+type signupProps = {
+  renderField: string,
+  handleSubmit: Function,
+  submitting: boolean,
+  valid: boolean,
+}
+
+const SignUpForm = (props: signupProps) => {
   return (
     <form>
       <Field

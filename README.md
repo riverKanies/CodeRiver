@@ -1,5 +1,8 @@
 # Thrive Marketing Site
 
+[![CircleCI](https://circleci.com/gh/spartansystems/thrive-marketing/tree/master.svg?style=svg&circle-token=2c246cc4762c9c906be9a4df6a9617388ce6c682)](https://circleci.com/gh/spartansystems/thrive-marketing/tree/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/781f339d8db24526893414ffbdeccdcf)](https://www.codacy.com/app/Spartan/thrive-marketing/dashboard)
+[![Codacy Badge Coverage](https://api.codacy.com/project/badge/Coverage/781f339d8db24526893414ffbdeccdcf)](https://www.codacy.com/app/Spartan/thrive-marketing/dashboard)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Table of Contents
