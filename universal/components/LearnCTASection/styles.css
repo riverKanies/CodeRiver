@@ -1,7 +1,13 @@
 .container {
-
+  height: 22rem;
 }
 
 .content {
   lost-center: 1160px;
+  padding: 4rem 1rem;
+}
+
+.button {
+  lost-column: 1;
+  padding-top: 2rem;
 }

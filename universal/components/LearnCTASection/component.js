@@ -18,9 +18,11 @@ const LearnCTASection = ({ title = 'LearnCTASection' }: Props) => {
       <div className={styles.content}>
         <h2>{title}</h2>
         <p>{details}</p>
-        <Button
-          buttonText='Hello'
-        />
+        <section className={styles.button}>
+          <Button
+            buttonText='Hello'
+          />
+        </section>
       </div>
     </div>
   )
