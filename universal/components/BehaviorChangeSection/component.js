@@ -26,9 +26,9 @@ const mediumDescription = [
 const BehaviorChangeSection = ({ title = 'Behavior Change' }: Props) => {
   return (
     <section className={styles.container}>
-      <section className={styles.row}>
-        <h2 className={styles.title}>{title}</h2>
-        {details.map(paragraph => (<p className={styles.details}>{paragraph}</p>))}
+      <section className={styles.title}>
+        <h2>{title}</h2>
+        {details.map(paragraph => (<div className={styles.details}>{paragraph}</div>))}
       </section>
       <section className={styles.row}>
         <IconWithText description={shortDescription} />

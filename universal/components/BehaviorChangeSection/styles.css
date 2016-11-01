@@ -1,22 +1,26 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-mama-bear, bp-papa-bear from breakpoints;
+@value bp-mama-bear, containerWidth, containerPadding from breakpoints;
 
 .container {
+  lost-center: containerWidth flex;
   padding: 2rem 1rem;
-  lost-center: 1160px flex;
 }
 
 .title {
   lost-column: 1;
   text-align: center;
-}
 
-.details {
-  lost-column: 1;
-  text-align: center;
-  padding: 0 20rem 2rem 20rem;
+  .details {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    @media bp-mama-bear{
+      width: 60%;
+    }
+  }
 }
 
 .row {
-  lost-center: 1160px;
+  lost-center: containerWidth;
 }
