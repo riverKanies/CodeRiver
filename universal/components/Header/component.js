@@ -26,7 +26,7 @@ export const Header = () => (
     </nav>
 
     <nav role='navigation' className={styles.mainNav}>
-      <Link id='navLearn' to='/engae' className={styles.link} activeClassName={styles.activeRoute}>
+      <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
         Engage
       </Link>
       <Link id='navShop' to='http://shop.thriveglobal.com' className={styles.link} activeClassName={styles.activeRoute}>

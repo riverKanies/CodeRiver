@@ -1,4 +1,4 @@
-// Learn Parent Page
+// Engage Parent Page
 import React from 'react'
 import styles from './styles'
 import FullscreenBanner from 'components/FullscreenBanner'
@@ -6,6 +6,7 @@ import Button from 'components/Button'
 import MediumPostCard from 'components/MediumPostCard'
 import MediumPostGrid from 'components/MediumPostGrid'
 import Sidebar from 'components/Sidebar'
+import Lists from 'components/Lists'
 
 import lists from './collections'
 
@@ -25,6 +26,7 @@ const readMoreBtn = {
   buttonColor: 'bannerButton'
 }
 const sidebarList = lists['mediumCollections']
+const syndicatedList = lists['defaultList']
 
 export const EngageView = () => (
   <main role='main' className={styles.learnPage}>
@@ -41,6 +43,7 @@ export const EngageView = () => (
     </section>
     <section className={styles.postList}>
       <Sidebar {...sidebarList} />
+      <Lists {...syndicatedList} />
     </section>
   </main>
 )
