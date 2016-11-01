@@ -19,9 +19,7 @@ const IconWithText = ({
       <span className={styles.iconWrap}>
         <img className={styles.icon} src={icon} />
       </span>
-      <section className={styles.text}>
-        <p>{description}</p>
-      </section>
+      <p className={styles.text}>{description}</p>
     </section>
   )
 }
