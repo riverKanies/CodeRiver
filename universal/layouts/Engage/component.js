@@ -12,18 +12,27 @@ import Lists from 'components/Lists'
 import FullWidthText from 'components/FullWidthText'
 
 // Content Import
-import lists from './collections'
+import lists from './assets/collections'
 
 // Layout Content
 const bannerProps = {
   title: 'Engage',
   subTitle: 'Thrive Global Media Library',
-  bannerImage: ''
+  bannerImage: 'http://placekitten.com/g/1440/900'
 }
 const bannerBtn = {
   buttonText: 'Read on Medium',
   linkTo: '/',
   buttonColor: 'bannerButton'
+}
+const featuredPostContent = {
+  title: 'Featured Post',
+  collectionName: 'Collection Name',
+  postExcerpt: ['Lorem Ipsum, replace me.'],
+  postImage: 'http://placekitten.com/g/600/600',
+  buttonText: 'Read More',
+  linkTo: 'javascript:void(0)',
+  buttonColor: 'dark'
 }
 const readMoreBtn = {
   buttonText: 'Read on Medium',
@@ -35,6 +44,13 @@ const syndicatedList = lists['mediumPosts']
 const thriveGlobal = {
   sectionClass: 'thriveGlobal',
   title: 'A Global Effort',
+  subtitle: 'Needs a Subtitle',
+  sectionText: 'Replace Me!'
+}
+const engageCTAs = {
+  sectionClass: 'engageThrive',
+  title: 'Might Need a New Component',
+  subtitle: 'Or Not...',
   sectionText: 'Replace Me!'
 }
 
@@ -43,7 +59,7 @@ export const EngageView = () => (
   <main role='main' className={styles.learnPage}>
     <FullscreenBanner {...bannerProps}>
       <Button {...bannerBtn} />
-      <MediumPostCard className={styles.featuredPost} />
+      <MediumPostCard {...featuredPostContent} />
     </FullscreenBanner>
     <header className={styles.readPosts}>
       <h2>Read The Latest Posts From Thrive Global</h2>
@@ -60,6 +76,7 @@ export const EngageView = () => (
       <Button {...readMoreBtn} />
     </section>
     <FullWidthText {...thriveGlobal} />
+    <FullWidthText {...engageCTAs} />
   </main>
 )
 
