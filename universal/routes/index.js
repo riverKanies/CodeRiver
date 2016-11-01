@@ -34,7 +34,7 @@ export const createRoutes = (store) => ([
         component: Learn
       },
       {
-        path: '*',
+        path: ':page_id',
         component: Content
       }
     ]
