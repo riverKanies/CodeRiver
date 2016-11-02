@@ -1,20 +1,18 @@
 /* @flow */
 function track () {
-  window.analytics.track(...arguments)
+  return window.analytics.track(...arguments)
 }
 
 function identify () {
-  return (
-    window.analytics.identify(...arguments)
-  )
+  return window.analytics.identify(...arguments)
 }
 
 function page () {
-  window.analytics.page(...arguments)
+  return window.analytics.page(...arguments)
 }
 
 function alias (user: string) {
-  window.analytics.alias(user, window.analytics.user().anonymousId())
+  return window.analytics.alias(user, window.analytics.user().anonymousId())
 }
 
 function trackLink (properties: string) {

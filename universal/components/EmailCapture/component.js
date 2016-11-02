@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import LeadForm from 'containers/LeadForm'
 // Add in a button
 
 type Props = {
@@ -21,11 +22,8 @@ const EmailCapture = ({ title = 'Title', sectionText = defaultText }: Props) => 
         </header>
         <section className={styles.sectionContent}>
           {sectionText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          <LeadForm />
         </section>
-        <form className={styles.emailInput}>
-          <input type='email' placeholder='Enter Email' value='emailAddress' readOnly />
-          <input type='submit' value='submit' />
-        </form>
       </div>
     </section>
   )
