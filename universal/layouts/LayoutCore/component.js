@@ -27,10 +27,6 @@ class LayoutCore extends React.Component {
     segment.page()
   }
 
-  componentDidUpdate () {
-    segment.page()
-  }
-
   render () {
     return (
       <section className={styles.mainContainer}>
