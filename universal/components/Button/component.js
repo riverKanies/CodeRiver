@@ -11,9 +11,10 @@ type Props = {
   buttonColor: string,
   segmentProps: Object,
   disabled: bool,
+  buttonText: String
 }
 
-export const Button = ({ children, linkTo, buttonColor, handleClick, segmentProps, disabled }: Props) => {
+export const Button = ({ children, linkTo, buttonColor, buttonText, handleClick, segmentProps, disabled }: Props) => {
   return (
     <Link
       to={linkTo}
@@ -22,7 +23,7 @@ export const Button = ({ children, linkTo, buttonColor, handleClick, segmentProp
       activeClassName={styles.activeStyle}
       disabled={disabled}
     >
-      {children}
+      {buttonText || children}
     </Link>
   )
 }

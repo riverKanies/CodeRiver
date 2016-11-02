@@ -11,7 +11,9 @@ type Props = {
 const PathwaySection = ({ title = 'Pathways' }: Props) => {
   return (
     <section className={styles.container}>
-      <h2>{title}</h2>
+      <section className={styles.title}>
+        <h2>{title}</h2>
+      </section>
       <section className={styles.row}>
         <PathwayCard
           title='Joy'

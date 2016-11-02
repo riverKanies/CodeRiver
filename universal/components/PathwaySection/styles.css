@@ -1,14 +1,16 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-mama-bear, bp-papa-bear from breakpoints;
+@value containerWidth, containerPadding from breakpoints;
 
 .container {
+  lost-center: containerWidth flex;
   padding: 2rem 1rem;
-  lost-center: 1160px flex;
 }
 
-h2 {
-  lost-row: 1;
+.title {
+  lost-column: 1;
+  text-align: center;
 }
 
 .row {
+  lost-center: containerWidth;
 }
