@@ -3,6 +3,8 @@ import React from 'react'
 import styles from './styles'
 
 import * as pages from './pages'
+import PageHeader from 'components/PageHeader'
+import PageFooter from 'components/PageFooter'
 
 type Props = {
   params: {
@@ -28,7 +30,9 @@ export const ContentView = (props: Props) => {
 
   return (
     <div className={styles.container}>
+      <PageHeader />
       <Page />
+      <PageFooter />
     </div>
   )
 }
