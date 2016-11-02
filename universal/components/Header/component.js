@@ -32,9 +32,9 @@ export const Header = () => (
       <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
         Learn
       </Link>
-      <Link id='navShop' to='http://shop.thriveglobal.com' className={styles.link} activeClassName={styles.activeRoute}>
+      <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
         Shop
-      </Link>
+      </a>
       <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
         Thrive
       </Link>
