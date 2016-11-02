@@ -5,7 +5,11 @@ import 'styles/vendor/normalize'
 
 import React from 'react'
 import Header from 'components/Header'
+import Helmet from 'react-helmet'
+
 import styles from './styles'
+import headers from 'lib/headers'
+import segment from 'lib/segment'
 
 import { toast } from 'modules/Toast'
 
@@ -15,18 +19,33 @@ type Props = {
   children: any
 }
 
-export const LayoutCore = ({ children }: Props) => (
-  <section className={styles.mainContainer}>
-    <Header />
-    <ToastContainer />
-    <section className={styles.bodyContainer}>
-      {children}
-    </section>
-  </section>
-)
+class LayoutCore extends React.Component {
+  props: Props
 
-LayoutCore.propTypes = {
-  children: React.PropTypes.element.isRequired
+  componentDidMount () {
+    segment.load(process.env.SEGMENT)
+    segment.page()
+  }
+
+  componentDidUpdate () {
+    segment.page()
+  }
+
+  render () {
+    return (
+      <section className={styles.mainContainer}>
+        <Helmet
+          title='Thrive'
+          script={headers.scripts}
+        />
+        <Header />
+        <ToastContainer />
+        <section className={styles.bodyContainer}>
+          {this.props.children}
+        </section>
+      </section>
+    )
+  }
 }
 
 export default LayoutCore
