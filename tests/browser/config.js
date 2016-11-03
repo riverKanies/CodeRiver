@@ -11,9 +11,9 @@ export const browser = Nightmare({
   webPreferences: {
     preload: path.resolve(__dirname, 'preload.js')
   },
-  waitTimeout: 10000,
-  gotoTimeout: 10000,
-  loadTimeout: 10000,
+  waitTimeout: 6000,
+  gotoTimeout: 6000,
+  loadTimeout: 6000,
   typeInterval: 20
 })
 
