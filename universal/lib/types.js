@@ -6,3 +6,25 @@ export type NavElement = {
   text: string,
   id: string
 }
+
+export type Form = {
+  formData: Object,
+  handleSubmit: Function,
+  Field: Function,
+  FieldArray: Function,
+  pristine: bool,
+  reset: Function,
+  skip: Function,
+  submitting: bool
+}
+
+export type Field = {
+  accept: string,
+  input: Object,
+  label: string,
+  meta: Object,
+  multiple: bool,
+  options: Array<mixed>,
+  placeholder: string,
+  type: string,
+}

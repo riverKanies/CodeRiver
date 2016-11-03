@@ -1,16 +1,21 @@
 import segment from 'lib/segment'
 
+const handleEvents = {
+  'LOCATION_CHANGE': function () {
+    segment.page()
+  },
+  'LEAD_FORM_SUBMITTED': function ({ track }) {
+    segment.track('LEAD_FORM_SUBMITTED', track)
+  }
+}
+
 export default function analyticsMiddleware ({ dispatch, getState }) {
   return next => action => {
     const { type } = action
-    const events = ['LOCATION_CHANGE']
 
-    if (!events.includes(type)) {
-      // Normal action: pass it on
-      return next(action)
+    if (handleEvents[type]) {
+      handleEvents[type](action)
     }
-
-    segment.page()
 
     return next(action)
   }

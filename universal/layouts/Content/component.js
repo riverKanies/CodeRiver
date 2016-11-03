@@ -5,6 +5,7 @@ import styles from './styles'
 import * as pages from './pages'
 import PageHeader from 'components/PageHeader'
 import PageFooter from 'components/PageFooter'
+import LeadForm from 'containers/LeadForm'
 
 type Props = {
   params: {
