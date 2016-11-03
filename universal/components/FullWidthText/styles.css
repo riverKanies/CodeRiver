@@ -21,7 +21,6 @@
   background: blue;
 }
 
-
 .container {
   lost-center: containerWidth containerPadding;
   margin: 0 auto;
@@ -29,9 +28,7 @@
 }
 
 .columns {
-  @media bp-baby-bear {
-    lost-center: 1;
-  }
+  lost-center: 1;
   @media bp-mama-bear {
     lost-center: 9;
   }

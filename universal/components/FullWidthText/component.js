@@ -13,7 +13,7 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
-  sectionClass = 'blue',
+  sectionClass = 'default',
   title = 'Title',
   subTitle = 'Subtitle',
   sectionText = defaultText

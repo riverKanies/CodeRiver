@@ -12,7 +12,7 @@ const renderList = (items) => items.map(
 
 const List = ({
   title = 'List Title',
-  items = ['1', '2', '3']
+  items = [{ link: 'http://www.google.com', text: 'google' }]
 }: Props) => {
   return (
     <div className={styles.listContainer}>
