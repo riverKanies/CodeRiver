@@ -1,13 +1,14 @@
 // Fullscreen Banner Component
 import React from 'react'
 import styles from './styles'
-import dummyImage from './assets/bg.jpg'
+import dummyImage from 'assets/bg.jpg'
 
 type Props = {
   title: string,
   subTitle: string,
   bannerText: Array<string>,
   bannerImage: string,
+  height: string,
 };
 
 const defaultText = [`Using a mobile first approach, we start with a block
@@ -22,10 +23,11 @@ const FullscreenBanner = ({
   title = 'Title',
   subTitle = 'Subtitle',
   bannerText = defaultText,
-  bannerImage = defaultImage
+  bannerImage = defaultImage,
+  height = 'fullHeight'
 }: Props) => {
   return (
-    <section className={styles.fullscreenBanner}>
+    <section className={styles[height]}>
       <span className={styles.bannerImageWrap}>
         <img className={styles.bannerImage} src={bannerImage} />
       </span>

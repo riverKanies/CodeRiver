@@ -1,6 +1,3 @@
 ---
-id: example
-name: Markdown Example
+title: Careers
 ---
-
-## Careers

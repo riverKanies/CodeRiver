@@ -7,7 +7,7 @@ describe('ContentView', () => {
       .goto(baseUrl + '/contact')
       .wait('#root')
       .evaluate(function () {
-        return document.querySelector('h2').innerText
+        return document.querySelector('h1').innerText
       })
       .end()
       .then(function (link) {

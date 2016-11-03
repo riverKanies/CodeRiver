@@ -1,3 +1,33 @@
+@value breakpoints: "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear from breakpoints;
+
 .container {
-  margin-top: 100px;
+  lost-column: 1;
+  height: 70vh;
+
+  @media bp-mama-bear {
+    height: 60vh;
+  }
+
+  @media bp-papa-bear {
+    height: 50vh;
+  }
+
+  background: url('assets/bg.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  lost-center: 1160px;
+  padding: 0 1rem 4rem 1rem;
+  padding-top: 25vh;
+  color: white;
+}
+
+.details {
+  lost-column: 1;
+  @media bp-mama-bear {
+    lost-column: 2/3
+  }
 }

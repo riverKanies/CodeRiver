@@ -1,6 +1,3 @@
 ---
-id: example
-name: Markdown Example
+title: Training
 ---
-
-## Training
