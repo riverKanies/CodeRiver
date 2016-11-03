@@ -9,7 +9,7 @@ export const Header = () => (
   <header role='banner' id='header' className={styles.container}>
 
     <span className={styles.thriveLogo}>
-      <IndexLink to='/' activeClassName={styles.activeRoute}>
+      <IndexLink id='navLinkToHome' to='/' activeClassName={styles.activeRoute}>
         <img src={mark} height='40' width='40' />
       </IndexLink>
     </span>
