@@ -1,4 +1,9 @@
 .container {
-  height: 100%;
-  width: 100%;
+  lost-utility: clearfix;
+}
+
+.pageContainer {
+  lost-utility: clearfix;
+  margin: 0 auto;
+  padding: 0 1rem;
 }

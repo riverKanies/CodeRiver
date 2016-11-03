@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 // Component Import
-import FullscreenBanner from 'components/FullscreenBanner'
+import Banner from 'components/Banner'
 import Button from 'components/Button'
 import MediumPostCard from 'components/MediumPostCard'
 import MediumPostGrid from 'components/MediumPostGrid'
@@ -57,10 +57,10 @@ const engageCTAs = {
 // Engage Page Layout
 export const EngageView = () => (
   <main role='main' className={styles.learnPage}>
-    <FullscreenBanner {...bannerProps}>
+    <Banner {...bannerProps}>
       <Button {...bannerBtn} />
       <MediumPostCard {...featuredPostContent} />
-    </FullscreenBanner>
+    </Banner>
     <header className={styles.readPosts}>
       <h2>Read The Latest Posts From Thrive Global</h2>
     </header>

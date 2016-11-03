@@ -11,8 +11,8 @@ export default ({ input, label, type, meta: { touched, error, warning } }
         <input {...input} placeholder={label} type={type} />
         {
           touched && (
-            (error   && <span className="error">{error}</span>) ||
-            (warning && <span className="warning">{warning}</span>)
+            (error && <span className='error'>{error}</span>) ||
+            (warning && <span className='warning'>{warning}</span>)
           )
         }
       </div>

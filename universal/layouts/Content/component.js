@@ -3,9 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 import * as pages from './pages'
-import PageHeader from 'components/PageHeader'
-import PageFooter from 'components/PageFooter'
-import LeadForm from 'containers/LeadForm'
+import Banner from 'components/Banner'
 
 type Props = {
   params: {
@@ -27,13 +25,20 @@ export function fetchPageById (pageId: string) {
 }
 
 export const ContentView = (props: Props) => {
-  const { Page } = fetchPageById(props.params.page_id)
+  const { Page, meta } = fetchPageById(props.params.page_id)
+  const bannerProps = {
+    bannerText: [],
+    title: meta.data.title,
+    subTitle: '',
+    height: 'halfHeight'
+  }
 
   return (
     <div className={styles.container}>
-      <PageHeader />
-      <Page />
-      <PageFooter />
+      <Banner {...bannerProps} />
+      <div className={styles.pageContainer}>
+        <Page />
+      </div>
     </div>
   )
 }
