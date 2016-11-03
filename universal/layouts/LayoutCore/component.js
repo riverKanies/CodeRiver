@@ -1,6 +1,6 @@
 /* @flow */
 import 'styles/core'
-import 'styles/fonts/icomoon'
+import 'styles/fonts/webfonts/webfonts'
 import 'styles/vendor/normalize'
 
 import React from 'react'

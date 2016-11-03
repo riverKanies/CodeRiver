@@ -1,3 +1,5 @@
+@value OpenSansLight, OpenSans, OpenSansSemiBold, OpenSansExtraBold, Playfair, PlayfairBlack, PlayfairSC, PlayfairSCBlack from './fonts.css';
+
 :global {
   html {
     box-sizing: border-box;
@@ -8,6 +10,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: OpenSans;
   }
 
   body {

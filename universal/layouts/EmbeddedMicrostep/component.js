@@ -2,7 +2,6 @@
 import React from 'react'
 
 import 'styles/core'
-import 'styles/fonts/icomoon'
 import 'styles/vendor/normalize'
 
 import Microstep from 'containers/Microstep'
