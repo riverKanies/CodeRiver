@@ -1,7 +1,8 @@
 /* @flow */
+import 'styles/vendor/normalize'
 import 'styles/core'
 import 'styles/fonts/webfonts/webfonts'
-import 'styles/vendor/normalize'
+import 'styles/typography'
 
 import React from 'react'
 import Header from 'components/Header'

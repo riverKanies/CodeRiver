@@ -1,6 +1,7 @@
-import 'styles/core'
-import 'styles/fonts/icomoon'
 import 'styles/vendor/normalize'
+import 'styles/core'
+import 'styles/fonts/webfonts/webfonts'
+import 'styles/typography'
 
 import { configure, setAddon, addDecorator } from '@kadira/storybook'
 import infoAddon from '@kadira/react-storybook-addon-info'
