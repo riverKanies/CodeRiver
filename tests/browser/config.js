@@ -3,7 +3,7 @@ import path from 'path'
 import config from '../../config'
 
 /* eslint-disable */
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000
 /* eslint-enable */
 
 export const browser = Nightmare({
