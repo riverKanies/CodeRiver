@@ -1,11 +1,12 @@
 /* @flow */
 import React from 'react'
 
+import BasicMicrostep from './components/BasicMicrostep'
+import CalendarMicrostep from './components/CalendarMicrostep'
+import InformationalMicrostep from './components/InformationalMicrostep'
 import LoadingMicrostep from './components/LoadingMicrostep'
 import MissingMicrostep from './components/MissingMicrostep'
-import InformationalMicrostep from './components/InformationalMicrostep'
-import CalendarMicrostep from './components/CalendarMicrostep'
-import BasicMicrostep from './components/BasicMicrostep'
+import ProductMicrostep from './components/ProductMicrostep'
 
 import { connect } from 'react-redux'
 import { loadMicrostep, KEY } from 'modules/Microstep'
@@ -41,6 +42,9 @@ export class Microstep extends React.Component {
 
       case 'informational':
         return <InformationalMicrostep microstep={microstep} />
+
+      case 'product':
+        return <ProductMicrostep microstep={microstep} />
 
       default:
         return <BasicMicrostep microstep={microstep} />

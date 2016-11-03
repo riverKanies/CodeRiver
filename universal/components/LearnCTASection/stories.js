@@ -3,20 +3,20 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
-import MediumPostGrid from './component'
+import LearnCTASection from './component'
 
-const notes = 'MediumPostGrid, a grid of Medium posts.'
+const notes = 'This story demonstrates the props that can be passed to LearnCTASection'
 
 const props = {
-  title: 'MediumPostGrid'
+  title: 'LearnCTASection Title'
 }
 
-storiesOf('MediumPostGrid', module)
+storiesOf('LearnCTASection', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <MediumPostGrid
+        <LearnCTASection
           title={text('Title', props.title)}
         />
       </WithNotes>

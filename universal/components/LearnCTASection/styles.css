@@ -1,0 +1,17 @@
+@value breakpoints: "styles/breakpoints";
+@value containerWidth, containerPadding from breakpoints;
+
+.container {
+  height: 22rem;
+  background-color: lightgray;
+}
+
+.content {
+  lost-center: containerWidth containerPadding;
+  padding: 4rem 1rem;
+}
+
+.button {
+  lost-column: 1;
+  padding-top: 2rem;
+}

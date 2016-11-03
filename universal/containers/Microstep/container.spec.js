@@ -58,4 +58,25 @@ describe('(Component) MicrostepList', () => {
 
     expect(element.length).toBe(1)
   })
+
+  it('Should render as a <ProductMicrostep /> when we have one to render.', () => {
+    const props = {
+      ...defaultProps,
+      microstep: {
+        title: 'Product',
+        body_html: 'Stuff',
+        link: 'link/to/store',
+        price: '$100.00',
+        image: {
+          src: '/path/to/image'
+        }
+      },
+      stepType: 'product'
+    }
+
+    const wrapper = shallow(<Microstep {...props} />)
+    const element = wrapper.find('ProductMicrostep')
+
+    expect(element.length).toBe(1)
+  })
 })
