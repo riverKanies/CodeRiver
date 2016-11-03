@@ -19,7 +19,7 @@ const props = {
   sectionClass: 'default',
   title: 'h2 Title',
   subTitle: 'h3 Subtitle',
-  sectionText: defaultText
+  sectionText: defaultTextw
 }
 
 storiesOf('FullWidthText', module)
