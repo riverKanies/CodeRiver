@@ -1,4 +1,4 @@
-/* @flow */
+// Site Header
 import React from 'react'
 import { IndexLink, Link } from 'react-router'
 
@@ -9,7 +9,7 @@ export const Header = () => (
   <header role='banner' id='header' className={styles.container}>
 
     <span className={styles.thriveLogo}>
-      <IndexLink to='/' activeClassName={styles.activeRoute}>
+      <IndexLink id='navLinkToHome' to='/' activeClassName={styles.activeRoute}>
         <img src={mark} height='40' width='40' />
       </IndexLink>
     </span>
@@ -26,11 +26,8 @@ export const Header = () => (
     </nav>
 
     <nav role='navigation' className={styles.mainNav}>
-      <Link id='navMedia' to='/media' className={styles.link} activeClassName={styles.activeRoute}>
-        Media
-      </Link>
-      <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
-        Learn
+      <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
+        Engage
       </Link>
       <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
         Shop

@@ -16,12 +16,10 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const props = {
-  sectionClass: 'grey',
+  sectionClass: 'default',
   title: 'h2 Title',
   subTitle: 'h3 Subtitle',
-  sectionText: defaultText,
-  buttonText: 'Read More',
-  buttonColor: 'dark'
+  sectionText: defaultText
 }
 
 storiesOf('FullWidthText', module)
@@ -30,11 +28,10 @@ storiesOf('FullWidthText', module)
     return (
       <WithNotes notes={notes}>
         <FullWidthText
+          sectionClass={text('Section Class', props.sectionClass)}
           title={text('Section Title', props.title)}
           subTitle={text('Section Subtitle', props.subTitle)}
           sectionText={text('Section Text', props.sectionText)}
-          buttonText={text('Button Text', props.buttonText)}
-          buttonColor={text('Button Color', props.buttonColor)}
         />
       </WithNotes>
     )

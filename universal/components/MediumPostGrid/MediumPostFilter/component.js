@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import MediumPostFilterOptions from '../MediumPostFilterOptions'
+import MediumPostFilterOptions from './MediumPostFilterOptions'
 
 type Props = {
   filterText: string

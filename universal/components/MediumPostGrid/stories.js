@@ -5,10 +5,10 @@ import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
 import MediumPostGrid from './component'
 
-const notes = 'This story demonstrates the props that can be passed to MediumPostGrid'
+const notes = 'MediumPostGrid, a grid of Medium posts.'
 
 const props = {
-  title: 'MediumPostGrid Title'
+  title: 'MediumPostGrid'
 }
 
 storiesOf('MediumPostGrid', module)

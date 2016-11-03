@@ -26,18 +26,19 @@ const MediumPostCard = ({
   postImage = defaultImage,
   postExcerpt = defaultText,
   buttonText = 'Read More',
+  linkTo = '/',
   buttonColor = 'dark'
 }: Props) => {
   return (
     <figure className={styles.postCard}>
       <img className={styles.postImage} src={postImage} />
       <section className={styles.cardMeta}>
-        <header>
+        <header className={styles.header}>
           <h3>{title}</h3>
           <h4>{collectionName}</h4>
         </header>
       </section>
-      <figcaption>
+      <figcaption className={styles.caption}>
         {postExcerpt.map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
         <Button />
       </figcaption>

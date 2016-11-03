@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import MediumPostFilter from '../MediumPostFilter'
+import MediumPostFilter from './MediumPostFilter'
 import MediumPostCard from '../MediumPostCard'
 
 type Props = {
@@ -15,6 +15,12 @@ const MediumPostGrid = ({
     <section className={styles.featuredMediumPosts}>
       <MediumPostFilter />
       <section className={styles.posts}>
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
+        <MediumPostCard />
         <MediumPostCard />
         <MediumPostCard />
         <MediumPostCard />

@@ -1,35 +1,72 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
 
 .fullWidthText {
+  lost-utility: clearfix;
   lost-flex-container: column;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  @add-mixin sectionPadding;
   position: relative;
-  background: gray;
   text-align: center;
 }
 
-.container {
-  lost-center: 80% flex;
+.default {
+  composes: fullWidthText;
+  background: gray;
 }
 
-header {
-  @media bp-baby-bear {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 0;
-    position: relative;
-    text-align: center;
+.blue {
+  composes: fullWidthText;
+  background: blue;
+}
+
+.container {
+  lost-center: containerWidth containerPadding;
+  margin: 0 auto;
+  float: none;
+}
+
+.columns {
+  lost-center: 1;
+  @media bp-mama-bear {
+    lost-center: 9;
   }
+  @media bp-papa-bear {
+    lost-center: 7;
+  }
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: center;
   h2, h3 {
     display: inline-block;
     width: 100%;
     margin: 0 0;
     padding: 0 0;
+    float: left;
     text-align: center;
+  }
+}
+
+.sectionContent {
+  lost-utility: clearfix;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: center;
+  p {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+    position: relative;
   }
 }

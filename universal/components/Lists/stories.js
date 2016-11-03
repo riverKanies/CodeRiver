@@ -3,21 +3,23 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
-import MediumPostFilterOptions from './component'
+import List from './component'
 
-const notes = 'This story demonstrates the props that can be passed to MediumPostFilterOptions'
+const notes = 'This component is for generating a <ul> list from a JSON File or API endpoint.'
 
 const props = {
-  title: 'MediumPostFilterOptions Title'
+  sectionClass: 'string',
+  title: 'string'
 }
 
-storiesOf('MediumPostFilterOptions', module)
+storiesOf('List', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <MediumPostFilterOptions
-          title={text('Title', props.title)}
+        <List
+          sectionClass={text('Section Class', props.sectionClass)}
+          title={text('List Header title', props.title)}
         />
       </WithNotes>
     )

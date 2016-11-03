@@ -1,14 +1,10 @@
 import React from 'react'
 import styles from './styles'
-import Button from 'components/Button'
 
 type Props = {
-  sectionClass: string,
+  sectionClass: 'default' | 'blue',
   title: string,
   subTitle: string,
-  buttonText: string,
-  linkTo: string,
-  buttonColor: string,
   sectionText: Array<string>,
 };
 
@@ -17,26 +13,24 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
-  sectionClass = '',
+  sectionClass = 'default',
   title = 'Title',
   subTitle = 'Subtitle',
-  sectionText = defaultText,
-  buttonText = 'Read More',
-  linkTo = 'javascript:void(0)',
-  buttonColor = 'dark'
+  sectionText = defaultText
 }: Props) => {
   return (
-    <section className={styles.fullWidthText}>
-      <div className={styles.container}>
-        <header>
-          <h2>{title}</h2>
-          <h3>{subTitle}</h3>
-        </header>
-        <section className={styles.sectionContent}>
-          {sectionText.map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
-          <Button className={buttonColor} to={linkTo} buttonText={buttonText} />
-        </section>
-      </div>
+    <section className={styles[sectionClass]}>
+      <section className={styles.container}>
+        <div className={styles.columns}>
+          <header className={styles.header}>
+            <h2>{title}</h2>
+            <h3>{subTitle}</h3>
+          </header>
+          <section className={styles.sectionContent}>
+            <p>{sectionText}</p>
+          </section>
+        </div>
+      </section>
     </section>
   )
 }
