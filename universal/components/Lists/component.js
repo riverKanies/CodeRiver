@@ -16,7 +16,7 @@ const List = ({
 }: Props) => {
   return (
     <div className={styles.listContainer}>
-      <header>
+      <header className={styles.header}>
         <h3>{title}</h3>
       </header>
       <ul className={styles.list}>

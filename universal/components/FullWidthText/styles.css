@@ -8,9 +8,19 @@
   height: auto;
   margin: 0 auto;
   position: relative;
-  background: gray;
   text-align: center;
 }
+
+.default {
+  composes: fullWidthText;
+  background: gray;
+}
+
+.blue {
+  composes: fullWidthText;
+  background: blue;
+}
+
 
 .container {
   lost-center: containerWidth containerPadding;
@@ -30,7 +40,7 @@
   }
 }
 
-.header {1
+.header {
   width: 100%;
   margin: 0 auto;
   padding: 0 0;

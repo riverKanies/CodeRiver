@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: string,
+  sectionClass: 'default' | 'blue',
   title: string,
   subTitle: string,
   sectionText: Array<string>,
@@ -13,13 +13,13 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
-  sectionClass = '',
+  sectionClass = 'blue',
   title = 'Title',
   subTitle = 'Subtitle',
   sectionText = defaultText
 }: Props) => {
   return (
-    <section className={[styles.fullWidthText, styles['sectionClass']]}>
+    <section className={styles[sectionClass]}>
       <section className={styles.container}>
         <div className={styles.columns}>
           <header className={styles.header}>

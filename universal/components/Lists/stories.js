@@ -9,8 +9,7 @@ const notes = 'This component is for generating a <ul> list from a JSON File or 
 
 const props = {
   sectionClass: 'string',
-  title: 'string',
-  listName: Array
+  title: 'string'
 }
 
 storiesOf('List', module)
@@ -21,7 +20,6 @@ storiesOf('List', module)
         <List
           sectionClass={text('Section Class', props.sectionClass)}
           title={text('List Header title', props.title)}
-          items={text('Enter The Name Of The List', props.items)}
         />
       </WithNotes>
     )

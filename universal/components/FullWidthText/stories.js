@@ -16,7 +16,7 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const props = {
-  sectionClass: 'healthWellness',
+  sectionClass: 'default',
   title: 'h2 Title',
   subTitle: 'h3 Subtitle',
   sectionText: defaultText
