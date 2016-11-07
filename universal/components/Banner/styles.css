@@ -22,11 +22,11 @@
   }
 }
 
-.fullHeight { 
+.fullHeight {
   composes: fullscreenBanner;
 }
 
-.halfHeight { 
+.halfHeight {
   composes: fullscreenBanner;
 
   @media bp-mama-bear {

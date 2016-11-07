@@ -21,6 +21,9 @@ export const Header = () => (
       <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
         Shop
       </a>
+      <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
+        Learn
+      </Link>
       <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
         Thrive
       </Link>
