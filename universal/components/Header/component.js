@@ -15,26 +15,21 @@ export const Header = () => (
     </span>
 
     <nav role='navigation' className={styles.mainNav}>
-      <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
+      <Link id='navEngage' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
         Engage
       </Link>
-
-      <a id='navLearn' href='http://learn.thriveglobal.com' className={styles.link}>
+      <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
         Learn
-      </a>
-
-      <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
+      </Link>
+      <Link id='navShop' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
         Shop
-      </a>
-
+      </Link>
       <Link id='navGive' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
         Give
       </Link>
-
       <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
         Thrive
       </Link>
-
     </nav>
 
     <nav role='navigation' className={styles.utilityNav}>
@@ -42,10 +37,6 @@ export const Header = () => (
         <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
           Sign Up
         </Link>
-        {/* <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-          Search
-        </Link>
-        */}
       </section>
     </nav>
 
