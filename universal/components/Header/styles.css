@@ -9,7 +9,7 @@ header[role="banner"] {
   padding: 1.25rem 1.25rem;
   float: left;
   background: linear-gradient(to right, rgba(66,44,117,1) 0%,rgba(0,195,201,1) 100%);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -63,15 +63,20 @@ header[role="banner"] {
   display: inline-block;
   width: auto;
   height: auto;
-  margin: 0 .5rem;
+  margin: 0 .75rem;
   padding: 0 0;
   float: none;
+  border-bottom: 0px solid rgba(255, 255, 255, 0);
   font-family: navItem;
   font-size: 0.75rem;
-  letter-spacing: .08rem;
+  letter-spacing: .1rem;
   text-align: center;
   text-transform: uppercase;
   color: white;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
 }
 
 .utilityNav {
