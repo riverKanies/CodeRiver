@@ -14,17 +14,6 @@ export const Header = () => (
       </IndexLink>
     </span>
 
-    <nav role='navigation' className={styles.utilityNav}>
-      <section>
-        <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-          Sign Up
-        </Link>
-        <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-          Search
-        </Link>
-      </section>
-    </nav>
-
     <nav role='navigation' className={styles.mainNav}>
       <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
         Engage
@@ -40,16 +29,15 @@ export const Header = () => (
       </Link>
     </nav>
 
-    <nav role='navigation' className={styles.socialNav}>
-      <Link to='javascript:void(0)' className={styles.linkSocial}>
-        Social
-      </Link>
-      <Link to='javascript:void(0)' className={styles.linkSocial}>
-        Social
-      </Link>
-      <Link to='javascript:void(0)' className={styles.linkSocial}>
-        Social
-      </Link>
+    <nav role='navigation' className={styles.utilityNav}>
+      <section>
+        <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+          Sign Up
+        </Link>
+        <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+          Search
+        </Link>
+      </section>
     </nav>
 
   </header>
