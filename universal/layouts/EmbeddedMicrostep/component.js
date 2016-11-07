@@ -1,9 +1,10 @@
 /* @flow */
 import React from 'react'
 
-import 'styles/core'
-import 'styles/fonts/icomoon'
 import 'styles/vendor/normalize'
+import 'styles/core'
+import 'styles/fonts/webfonts/webfonts'
+import 'styles/typography'
 
 import Microstep from 'containers/Microstep'
 

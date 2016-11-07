@@ -8,11 +8,11 @@ import mark from './assets/mark-color.png'
 export const Header = () => (
   <header role='banner' id='header' className={styles.container}>
 
-    <span className={styles.thriveLogo}>
+    <figure className={styles.thriveLogo}>
       <IndexLink id='navLinkToHome' to='/' activeClassName={styles.activeRoute}>
         <img src={mark} alt='Thrive Global' />
       </IndexLink>
-    </span>
+    </figure>
 
     <nav role='navigation' className={styles.mainNav}>
       <Link id='navEngage' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
@@ -33,15 +33,9 @@ export const Header = () => (
     </nav>
 
     <nav role='navigation' className={styles.utilityNav}>
-      <section>
-        <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-          Sign Up
-        </Link>
-        <Link id='navSearch' to='javascript:void(0)' className={styles.linkUtility}
-          activeClassName={styles.activeRoute}>
-          Search
-        </Link>
-      </section>
+      <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        Sign Up
+      </Link>
     </nav>
 
   </header>

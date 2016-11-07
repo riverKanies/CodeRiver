@@ -1,0 +1,70 @@
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from './breakpoints.css'
+@value OpenSansLight, OpenSans, OpenSansSemiBold, OpenSansExtraBold, Playfair, PlayfairBlack, PlayfairSC, PlayfairSCBlack from './fonts.css';
+
+// Global Typography Styles
+h1, h2, h3, h4, h5 {
+  text-align: inherit; color: inherit;
+  & a {
+    color: inherit; text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  margin-bottom: .5rem; font-size: 1.75rem; line-height: 125%;
+  @media bp-mama-bear {
+    font-size: 2rem;
+  }
+  @media bp-papa-bear {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  margin-bottom: .62rem; font-size: 1.25rem; line-height: 115%;
+  @media bp-mama-bear {
+    font-size: 1.5rem;
+  }
+  @media bp-papa-bear {
+    font-size: 1.625rem;
+  }
+}
+
+h3 {
+  margin-bottom: .5rem; font-size: 1.25rem; line-height: 125%;
+  @media bp-papa-bear {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  margin-bottom: .5rem; font-size: 1.25rem; font-style: bold; font-weight: 600; line-height: 100%;
+}
+
+a {
+  text-decoration: none; cursor: pointer; background: transparent;
+}
+
+p {
+  margin-bottom: .75rem; font-family: OpenSans; font-size: .88rem; letter-spacing: 0.01rem; text-align: inherit;
+  @media bp-mama-bear {
+    font-size: 1rem;
+  }
+  a {
+    color: inherit; text-decoration: underline; cursor: pointer;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  strong, b {
+    font-style: bold; font-weight: 600;
+  }
+  em {
+    font-style: italic;
+  }
+}
