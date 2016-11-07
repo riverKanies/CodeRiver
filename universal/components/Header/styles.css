@@ -2,26 +2,46 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
 header[role="banner"] {
-  display: block;
+  lost-flex-container: row;
   width: 100%;
+  height: auto;
   margin: 0 auto;
   padding: 0 0;
   float: left;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: black;
+  z-index: 1000;
 }
 
+.brand {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+}
 .thriveLogo {
-
+  width: 4rem;
+  height: auto;
+  margin: 0 0;
+  padding: 1rem 1rem;
+  float: left;
+  z-index: 1200;
 }
 
 .mainNav {
-  a {
+  display: flex;
+  text-align: center;
+}
 
-  }
+.link {
+  color: white;
 }
 
 .utilityNav {
+  lost-column: 1 flex;
+}
 
+.linkUtility {
+  color: white;
 }

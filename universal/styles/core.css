@@ -11,10 +11,10 @@
     font-size: 16px;
     line-height: 150%;
   }
-  // Enable this to display lost Grid debugging in browser
-   /*html {
+  /*Enable this to display lost Grid debugging in browser*/
+   html {
     lost-utility: edit rgb(15, 150, 25);
-  }*/
+  }
   i {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

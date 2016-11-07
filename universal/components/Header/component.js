@@ -6,11 +6,10 @@ import styles from './styles'
 import mark from './assets/mark-color.png'
 
 export const Header = () => (
-  <header role='banner' id='header' className={styles.container}>
-
-    <figure className={styles.thriveLogo}>
-      <IndexLink id='navLinkToHome' to='/' activeClassName={styles.activeRoute}>
-        <img src={mark} alt='Thrive Global' />
+  <header role='banner' className={styles.siteHeader}>
+    <figure className={styles.brand}>
+      <IndexLink id='linkHome' to='/'>
+        <img className={styles.thriveLogo} src={mark} alt='Thrive Global' />
       </IndexLink>
     </figure>
 
@@ -37,7 +36,6 @@ export const Header = () => (
         Sign Up
       </Link>
     </nav>
-
   </header>
 )
 
