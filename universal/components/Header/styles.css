@@ -1,47 +1,108 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from "styles/breakpoints";
+@value navItem from "styles/fonts.css";
 
 header[role="banner"] {
-  lost-flex-container: row;
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 1.25rem 1.25rem;
   float: left;
-  background: black;
+  background: linear-gradient(to right, rgba(66,44,117,1) 0%,rgba(0,195,201,1) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1000;
 }
 
 .brand {
-  display: flex;
+  display: block;
   width: auto;
   height: auto;
   margin: 0 0;
   padding: 0 0;
   float: left;
 }
-.thriveLogo {
-  width: 4rem;
-  height: auto;
+#linkHome {
   margin: 0 0;
   padding: 1rem 1rem;
+}
+.thriveLogo {
+  width: 10rem;
+  height: auto;
+  margin: 0 0 0 0;
+  padding: 0 0;
   float: left;
   z-index: 1200;
 }
 
+.navContainer {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: absolute;
+  top: 1.5rem;
+}
+
 .mainNav {
-  display: flex;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
   text-align: center;
 }
 
 .link {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 .5rem;
+  padding: 0 0;
+  float: none;
+  font-family: navItem;
+  font-size: 0.75rem;
+  letter-spacing: .08rem;
+  text-align: center;
+  text-transform: uppercase;
   color: white;
 }
 
 .utilityNav {
-  lost-column: 1 flex;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  text-align: right;
 }
 
 .linkUtility {
+  display: inline-block;
+  margin: -.5rem 0 0 0;
+  padding: .25rem .75rem;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 1.3125rem;
+  font-family: navItem;
+  font-size: 0.75rem;
+  letter-spacing: .08rem;
+  text-align: center;
+  text-transform: uppercase;
   color: white;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    background: #fff;
+    color: rgba(0,195,201,1);
+  }
 }
