@@ -10,7 +10,7 @@ export const Header = () => (
 
     <span className={styles.thriveLogo}>
       <IndexLink id='navLinkToHome' to='/' activeClassName={styles.activeRoute}>
-        <img src={mark} height='40' width='40' />
+        <img src={mark} alt='Thrive Global' />
       </IndexLink>
     </span>
 
@@ -36,6 +36,10 @@ export const Header = () => (
       <section>
         <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
           Sign Up
+        </Link>
+        <Link id='navSearch' to='javascript:void(0)' className={styles.linkUtility}
+          activeClassName={styles.activeRoute}>
+          Search
         </Link>
       </section>
     </nav>

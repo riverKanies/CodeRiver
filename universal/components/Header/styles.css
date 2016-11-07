@@ -1,43 +1,5 @@
-header[role="banner"] {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: transparent;
-  z-index: 9000;
-}
-
-.activeRoute {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.container {
-  height: 100px;
-  lost-column: 12/12;
-  lost-flex-container: row;
-  padding: 20px;
-}
-
-.links {
-  lost-column: 7/12;
-  margin: 25px 0 0;
-}
-
-.links a {
-  color: darkgray;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.header {
-  lost-align: vertical;
-  lost-column: 5/12;
-}
-
-.header h1 {
-  margin: 0 0 0 60px;
-}
+@value breakpoints: "styles/breakpoints";
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
 header[role="banner"] {
   display: block;
@@ -63,4 +25,3 @@ header[role="banner"] {
 .utilityNav {
 
 }
-
