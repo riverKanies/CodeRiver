@@ -37,6 +37,9 @@ export const Header = () => (
         <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
           Sign Up
         </Link>
+        <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+          Login
+        </Link>
       </nav>
 
     </section>
