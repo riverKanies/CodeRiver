@@ -14,42 +14,39 @@ export const Header = () => (
       </IndexLink>
     </span>
 
+    <nav role='navigation' className={styles.mainNav}>
+      <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
+        Engage
+      </Link>
+
+      <a id='navLearn' href='http://learn.thriveglobal.com' className={styles.link}>
+        Learn
+      </a>
+
+      <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
+        Shop
+      </a>
+
+      <Link id='navGive' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+        Give
+      </Link>
+
+      <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
+        Thrive
+      </Link>
+
+    </nav>
+
     <nav role='navigation' className={styles.utilityNav}>
       <section>
         <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
           Sign Up
         </Link>
-        <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        {/* <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>
           Search
         </Link>
+        */}
       </section>
-    </nav>
-
-    <nav role='navigation' className={styles.mainNav}>
-      <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
-        Engage
-      </Link>
-      <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
-        Shop
-      </a>
-      <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
-        Thrive
-      </Link>
-      <Link id='navContribute' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
-        Contribute
-      </Link>
-    </nav>
-
-    <nav role='navigation' className={styles.socialNav}>
-      <Link to='javascript:void(0)' className={styles.linkSocial}>
-        Social
-      </Link>
-      <Link to='javascript:void(0)' className={styles.linkSocial}>
-        Social
-      </Link>
-      <Link to='javascript:void(0)' className={styles.linkSocial}>
-        Social
-      </Link>
     </nav>
 
   </header>

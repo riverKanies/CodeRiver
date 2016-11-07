@@ -38,3 +38,29 @@ header[role="banner"] {
 .header h1 {
   margin: 0 0 0 60px;
 }
+
+header[role="banner"] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thriveLogo {
+
+}
+
+.mainNav {
+  a {
+
+  }
+}
+
+.utilityNav {
+
+}
+
