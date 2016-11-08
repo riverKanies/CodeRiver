@@ -13,7 +13,7 @@ header[role="banner"] {
   top: 0;
   left: 0;
   z-index: 1000;
-  @media bp-baby-bear {
+  @media bp-papa-bear {
     height: auto;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ header[role="banner"] {
   margin: 0 auto;
   padding: 0 0;
   float: left;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     display: block;
     width: auto;
     height: auto;
@@ -46,7 +46,7 @@ header[role="banner"] {
   padding: 0 0;
   float: none;
   z-index: 1200;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     width: 10rem;
     float: left;
   }
@@ -58,7 +58,7 @@ header[role="banner"] {
   margin: 0 auto;
   padding: 0 0;
   float: left;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     position: absolute;
     top: 1.5rem;
   }
@@ -72,7 +72,7 @@ header[role="banner"] {
   padding: 0 0;
   float: left;
   text-align: center;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     position: absolute;
     top: 0;
     left: 0;
@@ -80,13 +80,11 @@ header[role="banner"] {
 }
 
 .link {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  margin: 0 .75rem;
-  padding: 0 0;
-  float: none;
-  border-bottom: 0px solid rgba(255, 255, 255, 0);
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  float: left;
   font-family: navItem;
   font-size: 0.75rem;
   letter-spacing: .1rem;
@@ -94,29 +92,46 @@ header[role="banner"] {
   text-transform: uppercase;
   color: white;
   transition: all 150ms ease-in-out;
-  &:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, 1);
+  @media bp-papa-bear {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 .75rem;
+    padding: 0 0;
+    float: none;
+    border-bottom: 0px solid rgba(255, 255, 255, 0);
+    &:hover {
+      border-bottom: 2px solid rgba(255, 255, 255, 1);
+    }
   }
 }
 
 .utilityNav {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
   margin: 0 0;
   padding: 0 0;
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 2rem;
-  text-align: right;
+  text-align: center;
+  @media bp-papa-bear {
+    width: auto;
+    height: auto;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    text-align: right;
+  }
 }
 
 .linkUtility {
-  display: block;
-  margin: -.25rem 0 0 .75rem;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1rem auto;
   padding: .25rem 1.25rem;
-  float: right;
+  float: none;
+  clear: both;
   background: transparent;
   border: 1px solid #fff;
   border-radius: 1.3125rem;
@@ -127,8 +142,24 @@ header[role="banner"] {
   text-transform: uppercase;
   color: white;
   transition: all 150ms ease-in-out;
+  &:last-child {
+    margin: 0 auto 0 auto;
+  }
+  @media bp-papa-bear {
+    display: block;
+    width: auto;
+    margin: -.25rem 0 0 .75rem;
+    float: left;
+    clear: none;
+    &:last-child {
+      margin:  -.25rem 0 0 .75rem;
+    }
+  }
   &:hover {
     background: #fff;
     color: rgba(0,195,201,1);
+  }
+  &#navLogin {
+    background: #fff;
   }
 }
