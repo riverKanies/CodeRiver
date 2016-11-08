@@ -18,14 +18,17 @@ export const Header = () => (
       <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
         Engage
       </Link>
+      <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
+        Learn
+      </Link>
       <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
         Shop
       </a>
+      <Link id='navContribute' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+        Give
+      </Link>
       <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
         Thrive
-      </Link>
-      <Link id='navContribute' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
-        Contribute
       </Link>
     </nav>
 
