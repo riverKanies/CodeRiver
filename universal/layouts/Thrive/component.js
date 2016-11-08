@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 import Banner from 'components/Banner'
+import BehaviorChangeSection from 'components/BehaviorChangeSection'
 import PartnersSection from 'components/PartnersSection'
 import TeamSection from 'components/TeamSection'
 import FounderBio from 'components/FounderBio'
@@ -22,7 +23,9 @@ const bannerProps = {
 export const ThriveView = () => (
   <div className={styles.container}>
     <Banner {...bannerProps} />
+    <BehaviorChangeSection />
     <TeamSection />
+    <PartnersSection />
   </div>
 )
 

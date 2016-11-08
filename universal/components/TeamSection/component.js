@@ -9,16 +9,19 @@ type Props = {
 
 const TeamSection = ({ title = 'Team' }: Props) => {
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>
-        {title}
-      </h2>
-      <div className={styles.partnersContainer} >
+    <section className={styles.container}>
+      <section className={styles.title}>
+        <h2>{title}</h2>
+      </section>
+      <section className={styles.row} >
         <TeamBio />
         <TeamBio />
         <TeamBio />
-      </div>
-    </div>
+        <TeamBio />
+        <TeamBio />
+        <TeamBio />
+      </section>
+    </section>
   )
 }
 
