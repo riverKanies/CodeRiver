@@ -1,30 +1,30 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Rocket from './assets/rocket.png'
+import imagePlaceholder from './assets/partner-placeholder.jpg'
 
 type Props = {
-  title: string,
-  details: Array<string>,
+  name: string,
+  detail: string,
   image: any,
 }
 
-const defaultDetails = [
-  `Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.`,
-  `Donec sed odio dui. Nullam Hey.`
-]
-const PartnerDetail = ({ title = 'PartnerDetail', details = defaultDetails, image = Rocket }: Props) => {
+const defaultName = [`Partner Name`]
+const defaultDetail = [`Partner Detail`]
+
+const PartnerDetail = ({
+  name = defaultName,
+  detail = defaultDetail,
+  image = imagePlaceholder }: Props) => {
   return (
-    <div className={styles.container}>
-      <img
-        className={styles.image}
-        src={image}
-      />
-      <h3>
-        {title}
-      </h3>
-      {details.map(paragraph => (<p>{paragraph}</p>))}
-    </div>
+    <section className={styles.partner}>
+      <div className={styles.image}>
+        <div className={styles.text}>
+          <h3>{name}</h3>
+          <p>{detail}</p>
+        </div>
+      </div>
+    </section>
   )
 }
 

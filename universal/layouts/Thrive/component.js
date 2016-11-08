@@ -6,7 +6,6 @@ import Banner from 'components/Banner'
 import BehaviorChangeSection from 'components/BehaviorChangeSection'
 import PartnersSection from 'components/PartnersSection'
 import TeamSection from 'components/TeamSection'
-import FounderBio from 'components/FounderBio'
 
 import bannerImage from 'assets/thrivin.jpg'
 
