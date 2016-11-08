@@ -4,7 +4,7 @@
 header[role="banner"] {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0 auto;
   padding: 1.25rem 1.25rem;
   float: left;
@@ -13,15 +13,27 @@ header[role="banner"] {
   top: 0;
   left: 0;
   z-index: 1000;
+  @media bp-baby-bear {
+    height: auto;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
 }
 
 .brand {
-  display: block;
-  width: auto;
+  display: inline-block;
+  width: 100%;
   height: auto;
-  margin: 0 0;
+  margin: 0 auto;
   padding: 0 0;
   float: left;
+  @media bp-mama-bear {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 0;
+  }
 }
 #linkHome {
   margin: 0 0;
@@ -32,8 +44,12 @@ header[role="banner"] {
   height: auto;
   margin: 0 0 0 0;
   padding: 0 0;
-  float: left;
+  float: none;
   z-index: 1200;
+  @media bp-mama-bear {
+    width: 10rem;
+    float: left;
+  }
 }
 
 .navContainer {
@@ -42,8 +58,10 @@ header[role="banner"] {
   margin: 0 auto;
   padding: 0 0;
   float: left;
-  position: absolute;
-  top: 1.5rem;
+  @media bp-mama-bear {
+    position: absolute;
+    top: 1.5rem;
+  }
 }
 
 .mainNav {
@@ -53,10 +71,12 @@ header[role="banner"] {
   margin: 0 auto;
   padding: 0 0;
   float: left;
-  position: absolute;
-  top: 0;
-  left: 0;
   text-align: center;
+  @media bp-mama-bear {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .link {
