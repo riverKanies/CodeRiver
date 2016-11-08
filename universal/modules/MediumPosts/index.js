@@ -14,7 +14,12 @@ export const initialState = {
   fetchPending: false
 }
 
-export function reducer (state = initialState, action) {
+type ActionType = {
+  type: string,
+  data: any
+}
+
+export function reducer (state: any = initialState, action: ActionType) {
   switch (action.type) {
     case actions.fetchSuccess:
       return { ...state, list: action.data, fetchPending: false }

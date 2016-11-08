@@ -2,37 +2,36 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { loadMediumPosts, KEY } from 'modules/MediumPosts'
+import MediumPostGrid from './component'
+import type { MediumPost } from 'lib/types'
 
 type Props = {
   dispatch: Function,
-  mediumPosts: Object
+  mediumPosts: Array<MediumPost>,
+  requestPending: boolean
 }
 
 export class MediumPostsContainer extends React.Component {
   props: Props;
 
-  componentDidMount () {
+  componentWillMount () {
     const { dispatch } = this.props
+
     dispatch(loadMediumPosts())
   }
 
   render () {
-    const { list } = this.props.mediumPosts
-
-    return (
-      <div>
-        <h1>you know...</h1>
-        <ul>
-          {list.map(item => (<li>{item.title}</li>))}
-        </ul>
-      </div>
-    )
+    return <MediumPostGrid
+      posts={this.props.mediumPosts}
+      requestPending={this.props.requestPending}
+    />
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    mediumPosts: state[KEY]
+    mediumPosts: state[KEY].list,
+    requestPending: state[KEY].requestPending
   }
 }
 

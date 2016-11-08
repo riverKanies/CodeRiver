@@ -1,47 +1,39 @@
 /* @flow */
+/*
+ * adding eslint ignore rule for view components since we're rendering atributes
+ * straight from the API
+ */
+/* eslint camelcase: "never" */
+
+
 import React from 'react'
 import styles from './styles'
-import Button from '../Button'
 import dummyImage from './assets/mediumFPO.png'
 
 type Props = {
   title: string,
   collectionName: string,
-  postExcerpt: Array<string>,
-  postImage: string,
-  buttonText: string,
+  tags: Array<string>,
   linkTo: string,
-  buttonColor: string
+  cover_image: string
 };
-
-const defaultText = [`Sed posuere consectetur est at lobortis. Praesent commodo
-cursus magna, vel scelerisque nisl consectetur et. Cum soci
-is natoque penatibus et magnis dis part urient montes, nascetur ridiculus mus...`]
 
 const defaultImage = dummyImage
 
 const MediumPostCard = ({
   title = 'Post Title',
-  collectionName = 'Collection Name',
-  postImage = defaultImage,
-  postExcerpt = defaultText,
-  buttonText = 'Read More',
-  linkTo = '/',
-  buttonColor = 'dark'
+  cover_image = defaultImage,
+  tags = []
 }: Props) => {
   return (
     <figure className={styles.postCard}>
-      <img className={styles.postImage} src={postImage} />
+      <img className={styles.postImage} src={cover_image} />
       <section className={styles.cardMeta}>
         <header className={styles.header}>
+          <p>{tags.join(', ')}</p>
           <h3>{title}</h3>
-          <h4>{collectionName}</h4>
         </header>
       </section>
-      <figcaption className={styles.caption}>
-        {postExcerpt.map((paragraph, idx) => (<p key={idx}>{paragraph}</p>))}
-        <Button />
-      </figcaption>
     </figure>
   )
 }

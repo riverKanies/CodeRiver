@@ -1,32 +1,23 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import MediumPostFilter from './MediumPostFilter'
 import MediumPostCard from '../MediumPostCard'
+import type { MediumPost } from 'lib/types'
 
 type Props = {
-  title: string
+  posts: Array<MediumPost>,
+  requestPending: boolean
 };
 
 const MediumPostGrid = ({
-  title = 'MediumPostGrid'
+  posts = [],
+  requestPending = false
 }: Props) => {
   return (
     <section className={styles.featuredMediumPosts}>
-      <MediumPostFilter />
+      {/* <MediumPostFilter /> */}
       <section className={styles.posts}>
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
-        <MediumPostCard />
+        {posts.map(post => <MediumPostCard {...post} />)}
       </section>
     </section>
   )
