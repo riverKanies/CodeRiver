@@ -1,12 +1,35 @@
-.container {
-  display: inline-block;
-  margin: 20px 20px 0 0;
-  width: 430px;
-  height: 320px;
-  background-color: white;
+@value breakpoints: "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear from breakpoints;
+
+.partner {
+  lost-flex-container: row;
+  width: 22rem;
+  height: 23.75rem;
+  margin-bottom: 1.5rem;
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
 }
 
 .image {
-  width: 20%;
-  height: 20%;
+  lost-flex-container: row;
+  width: 22rem;
+  height: 100%;
+  background:
+    linear-gradient(90deg, rgba(0,192,201,0.5), rgba(81,45,168,0.8)),
+    url('./assets/partner-placeholder.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media bp-papa-bear {
+    width: 28rem;
+  }
+}
+
+.text {
+  lost-column: 1 flex;
+  z-index: 1;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: white;
+  align-self: flex-end;
 }

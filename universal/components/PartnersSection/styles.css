@@ -1,10 +1,16 @@
+@value breakpoints: "styles/breakpoints";
+@value containerWidth, containerPadding from breakpoints;
+
 .container {
-  background-color: #666;
-  height: 1040px;
+  lost-center: containerWidth flex;
+  padding: 2rem 1rem;
 }
 
-.content {
-  padding-top: 100px;
-  width: 1020px;
-  margin-left: 200px;
+.title {
+  lost-column: 1;
+  text-align: center;
+}
+
+.row {
+  lost-center: containerWidth;
 }

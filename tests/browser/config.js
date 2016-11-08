@@ -7,7 +7,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000
 /* eslint-enable */
 
 export const browser = Nightmare({
-  show: true,
+  show: false,
   webPreferences: {
     preload: path.resolve(__dirname, 'preload.js')
   },
