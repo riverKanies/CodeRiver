@@ -22,11 +22,13 @@ function handleFailure (error, genericMessage = undefined) {
 
 function genHandler ({ errorMessage }) {
   return function (data, dispatch) {
-    return http.post('/api/auth', { ...data, confirm_success_url: 'http://localhost:4000/welcome' })
+    return http.post('/api/auth', { ...data, confirm_success_url: `${currentHost}/welcome` })
       .then(() => handleSuccess(dispatch))
       .catch(e => handleFailure(e, errorMessage))
   }
 }
+
+const currentHost = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`
 
 const handler = genHandler({
   errorMessage: 'Failed to sign up.'
