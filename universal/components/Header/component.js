@@ -25,7 +25,7 @@ class Header extends React.Component {
     const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderAcitve
 
     return (
-      <header role='banner' className={siteHeaderStyle}>
+      <header id='header' role='banner' className={siteHeaderStyle}>
 
         <figure className={styles.brand}>
           <IndexLink id='linkHome' to='/'>

@@ -7,7 +7,7 @@ describe('Booster Kit Nav', () => {
       .goto(baseUrl)
       .wait('#header')
       .evaluate(function () {
-        return document.querySelector("#navLinkToHome").href
+        return document.querySelector("#linkHome").href
       })
       .end()
       .then(function (link) {
