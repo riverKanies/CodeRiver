@@ -1,3 +1,7 @@
+/* @flow */
+import http from 'utils/http'
+import baseActions from 'modules/baseActions'
+
 // Name
 export const KEY = '<%= dashesEntityName %>'
 
@@ -5,7 +9,7 @@ export const KEY = '<%= dashesEntityName %>'
 export const constants = { }
 
 // Action Creators
-export const actions = { }
+export const actions = { ...baseActions(KEY) }
 
 // Reducer
 export const initialState = { }

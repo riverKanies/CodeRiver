@@ -28,3 +28,11 @@ export type Field = {
   placeholder: string,
   type: string,
 }
+
+export type MediumPost = {
+  cover_image: string,
+  meduim_uuid: string,
+  tags: Array<string>,
+  title: string
+}
+
