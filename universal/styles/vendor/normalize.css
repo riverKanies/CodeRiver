@@ -135,10 +135,6 @@
    * contexts in Firefox 4+, Safari, and Chrome.
    */
 
-  h1 {
-    font-size: 2em;
-    /*margin: 0.67em 0;*/
-  }
 
   /**
    * Address styling not present in IE 8/9.
@@ -202,10 +198,6 @@
   /**
    * Address margin not present in IE 8/9 and Safari.
    */
-
-  /*figure {
-    margin: 1em 40px;
-  }*/
 
   /**
    * Address differences between Firefox and other browsers.
