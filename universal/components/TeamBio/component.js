@@ -9,8 +9,8 @@ type Props = {
   image: any,
 };
 
-const defaultName = [`Arianna Huffington`]
-const defaultTitle = [`President`]
+const defaultName = 'Arianna Huffington'
+const defaultTitle = 'President'
 
 const TeamBio = ({
   name = defaultName,

@@ -9,8 +9,8 @@ type Props = {
   image: any,
 }
 
-const defaultName = [`Partner Name`]
-const defaultDetail = [`Partner Detail`]
+const defaultName = 'Partner Name'
+const defaultDetail = 'Partner Detail'
 
 const PartnerDetail = ({
   name = defaultName,
