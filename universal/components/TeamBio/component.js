@@ -1,16 +1,30 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import imagePlaceholder from './assets/team-placeholder.jpg'
 
 type Props = {
-  title: string
-}
+  title: string,
+  name: string,
+  image: any,
+};
 
-const TeamBio = ({ title = 'TeamBio' }: Props) => {
+const defaultName = 'Arianna Huffington'
+const defaultTitle = 'President'
+
+const TeamBio = ({
+  name = defaultName,
+  title = defaultTitle,
+  image = imagePlaceholder }: Props) => {
   return (
-    <div className={styles.container}>
-      {title}
-    </div>
+    <section className={styles.bio}>
+      <div className={styles.image}>
+        <div className={styles.text}>
+          <h3>{name}</h3>
+          <p>{title}</p>
+        </div>
+      </div>
+    </section>
   )
 }
 
