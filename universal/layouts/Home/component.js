@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles'
-import MediumFeaturedPostBanner from 'components/MediumFeaturedPostBanner'
+import Banner from 'components/Banner'
 import MediumPostGrid from 'components/MediumPostGrid'
 import FullWidthText from 'components/FullWidthText'
 import Button from 'components/Button'
@@ -23,7 +23,7 @@ const btnHWProps = {
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
-      <MediumFeaturedPostBanner />
+      <Banner />
       <MediumPostGrid />
       <FullWidthText {...sectionHWProps}>
         <Button {...btnHWProps} />

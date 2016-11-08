@@ -3,47 +3,71 @@ import React from 'react'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
-import mark from './assets/mark-color.png'
+import mark from './assets/thriveText.png'
 
-export const Header = () => (
-  <header role='banner' id='header' className={styles.container}>
+class Header extends React.Component {
 
-    <span className={styles.thriveLogo}>
-      <IndexLink id='navLinkToHome' to='/' activeClassName={styles.activeRoute}>
-        <img src={mark} height='40' width='40' />
-      </IndexLink>
-    </span>
+  constructor (props) {
+    super(props)
+    this.state = {
+      active: false
+    }
+    this.toggleActive = this.toggleActive.bind(this)
+  }
 
-    <nav role='navigation' className={styles.mainNav}>
-      <Link id='navLearn' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
-        Engage
-      </Link>
-      <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
-        Learn
-      </Link>
-      <a id='navShop' href='http://shop.thriveglobal.com' className={styles.link}>
-        Shop
-      </a>
-      <Link id='navContribute' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
-        Give
-      </Link>
-      <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
-        Thrive
-      </Link>
-    </nav>
+  toggleActive () {
+    this.setState({active: !this.state.active})
+  }
 
-    <nav role='navigation' className={styles.utilityNav}>
-      <section>
-        <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-          Sign Up
-        </Link>
-        <Link to='javascript:void(0)' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-          Search
-        </Link>
-      </section>
-    </nav>
+  render () {
+    const { active } = this.state
 
-  </header>
-)
+    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderAcitve
+
+    return (
+      <header id='header' role='banner' className={siteHeaderStyle}>
+
+        <figure className={styles.brand}>
+          <IndexLink id='linkHome' to='/'>
+            <img className={styles.thriveLogo} src={mark} alt='Thrive Global' />
+          </IndexLink>
+        </figure>
+
+        <section className={styles.navContainer}>
+          <nav role='navigation' className={styles.mainNav}>
+            <Link id='navEngage' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
+              Engage
+            </Link>
+            <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
+              Learn
+            </Link>
+            <Link id='navShop' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+              Shop
+            </Link>
+            <Link id='navGive' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+              Give
+            </Link>
+            <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
+              Thrive
+            </Link>
+          </nav>
+
+          <nav role='navigation' className={styles.utilityNav}>
+            <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+              Sign Up
+            </Link>
+            <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+              Login
+            </Link>
+          </nav>
+        </section>
+
+        <span className={styles.menuButton} onClick={this.toggleActive}>
+          <svg className={styles.openClose} />
+        </span>
+      </header>
+    )
+  }
+}
 
 export default Header

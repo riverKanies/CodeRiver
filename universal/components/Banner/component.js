@@ -37,7 +37,7 @@ const FullscreenBanner = ({
           <h2>{subTitle}</h2>
         </header>
         <section className={styles.bannerText}>
-          {bannerText.map(paragraph => (<p>{paragraph}</p>))}
+          {bannerText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
         </section>
       </div>
     </section>
