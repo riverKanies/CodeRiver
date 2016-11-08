@@ -66,8 +66,8 @@ class Header extends React.Component {
           <svg className={styles.openClose} />
         </span>
       </header>
-      )
-    }
+    )
+  }
 }
 
 export default Header
