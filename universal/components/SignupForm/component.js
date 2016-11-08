@@ -10,7 +10,7 @@ type renderFieldProps = {
     touched: boolean,
     error: string
   }
-}
+};
 
 const renderField = ({input, label, type, meta: { touched, error }}: renderFieldProps) => {
   const _error = (touched && error) ? error : undefined
@@ -46,11 +46,11 @@ type signupProps = {
   handleSubmit: Function,
   submitting: boolean,
   valid: boolean,
-}
+};
 
 const SignUpForm = (props: signupProps) => {
   return (
-    <form>
+    <form style={{ marginTop: '100px' }}>
       <Field
         component={renderField}
         name='email'

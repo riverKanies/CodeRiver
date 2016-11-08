@@ -14,7 +14,7 @@ class Welcome extends React.Component {
   }
 
   render () {
-    return <p>Welcome, your account has been created!</p>
+    return <p style={{ marginTop: '100px' }}>Welcome, your account has been created!</p>
   }
 }
 
