@@ -8,10 +8,10 @@ import FullscreenBanner from './component'
 const notes = 'This story demonstrates the props that can be passed to FullscreenBanner'
 
 const props = {
-  title: 'FullscreenBanner'
+  title: 'Banner'
 }
 
-storiesOf('FullscreenBanner', module)
+storiesOf('Banner', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (

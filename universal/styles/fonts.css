@@ -8,6 +8,4 @@
 @value PlayBlack: PlayfairBlack;
 @value PlayBlackItalic: PlayfairBoldItalic;
 
-/* Not defining the Hind type family as I don't think it's in the design. */
-
 @value navItem: Mon;

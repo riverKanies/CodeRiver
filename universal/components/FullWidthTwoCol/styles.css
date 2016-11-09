@@ -1,0 +1,88 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, grandPadding from "styles/breakpoints.css";
+@value lightGray from "styles/colors.css";
+@value Mon, Play from "styles/fonts.css";
+
+/* Parent Most Container */
+.fullWidthTwoCol {
+  display: block;
+  lost-column: 1;
+  height: auto;
+  margin: 0 auto;
+  float: left;
+  padding: babyPadding;
+  position: relative;
+  background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+  @media bp-grand-bear {
+    padding: grandPadding;
+  }
+}
+
+.default {
+  composes: fullWidthTwoCol;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.lightGray {
+  composes: fullWidthTwoCol;
+  background: lightGray;
+}
+
+/* Column Order Styles */
+.container {
+  lost-flex-container: row;
+  width: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  position: relative;
+}
+
+.imgLeft {
+  composes: container;
+}
+
+.imgRight {
+  composes: container;
+}
+
+/* Column Styling */
+.column {
+  lost-column: 1/2 flex;
+  position: relative;
+}
+
+.imageWrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.image {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+
+.label {
+  font-family: Mon;
+  font-style: normal;
+}
+.header {
+  lost-column: 1;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.sectionContent {
+  lost-column: 1;
+  > p {
+    /*font-family: Play; Something is up with the actual font files*/
+  }
+}
