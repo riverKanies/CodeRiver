@@ -1,5 +1,4 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from './breakpoints.css'
-@value OpenSansLight, OpenSans, OpenSansSemiBold, OpenSansExtraBold, Playfair, PlayfairBlack, PlayfairSC, PlayfairSCBlack from './fonts.css';
 
 // Global Typography Styles
 h1, h2, h3, h4, h5 {
@@ -51,7 +50,7 @@ a {
 }
 
 p {
-  margin-bottom: .75rem; font-family: OpenSans; font-size: .88rem; letter-spacing: 0.01rem; text-align: inherit;
+  margin-bottom: .75rem; font-size: .88rem; letter-spacing: 0.01rem; text-align: inherit;
   @media bp-mama-bear {
     font-size: 1rem;
   }
