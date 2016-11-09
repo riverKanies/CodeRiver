@@ -35,8 +35,9 @@
   font-weight: normal;
   font-style: normal;
 }
+/* Montserrat Bold */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'MontserratBold';
   src: url('./montserrat-bold.eot');
   src: url('./montserrat-bold.eot?#iefix') format('embedded-opentype'),
        url('./montserrat-bold.woff2') format('woff2'),
@@ -111,7 +112,7 @@
   font-style: normal;
 }
 
-/* Hind Type Family:
+/* Hind Type Family: Not defined as a @value, not sure if we're using these.
 */
 /* Hind Light */
 @font-face {

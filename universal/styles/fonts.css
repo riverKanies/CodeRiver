@@ -1,6 +1,7 @@
 @value MonThin: MontserratThin;
 @value MonLight: MontserratLight;
 @value Mon: Montserrat;
+@value MonBold: MontserratBold;
 @value MonBlack: MontserratBlack;
 
 @value Play: Playfair;
@@ -8,3 +9,5 @@
 @value PlayBlackItalic: PlayfairBoldItalic;
 
 /* Not defining the Hind type family as I don't think it's in the design. */
+
+@value navItem: Mon;

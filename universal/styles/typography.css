@@ -1,10 +1,13 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from './breakpoints.css'
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from './breakpoints.css';
+@value MonThin, MonLight, Mon, MonBold, MonBlack, Play, PlayBlack, PlayBlackItalic from './fonts.css';
 
-// Global Typography Styles
+/* Global Typography Styles */
 h1, h2, h3, h4, h5 {
-  text-align: inherit; color: inherit;
+  text-align: inherit;
+  color: inherit;
   & a {
-    color: inherit; text-decoration: none;
+    color: inherit;
+    text-decoration: none;
     &:hover {
       text-decoration: none;
     }
@@ -13,57 +16,75 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 0;
   }
 }
-
 h1 {
-  margin-bottom: .5rem; font-size: 1.75rem; line-height: 125%;
+  margin-bottom: .5em;
+  font-family: MonBold;
+  font-size: 2em;
+  line-height: 86%;
   @media bp-mama-bear {
-    font-size: 2rem;
+    font-size: 3.25em;
   }
   @media bp-papa-bear {
-    font-size: 2.5rem;
+    font-size: 4.5em;
   }
 }
-
 h2 {
-  margin-bottom: .62rem; font-size: 1.25rem; line-height: 115%;
+  margin-bottom: 2em;
+  font-family: MonBold;
+  font-size: 1.5em;
+  line-height: 100%;
   @media bp-mama-bear {
-    font-size: 1.5rem;
+    font-size: 2em;
   }
   @media bp-papa-bear {
-    font-size: 1.625rem;
+    font-size: 3em;
   }
 }
-
 h3 {
-  margin-bottom: .5rem; font-size: 1.25rem; line-height: 125%;
+  margin-bottom: .5em;
+  font-family: MonBold;
+  font-size: 1em;
+  line-height: 125%;
+  @media bp-mama-bear {
+    font-size: 2em;
+  }
   @media bp-papa-bear {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 }
-
 h4 {
-  margin-bottom: .5rem; font-size: 1.25rem; font-style: bold; font-weight: 600; line-height: 100%;
+  margin-bottom: .5rem;
+  font-family: MonBold;
+  font-size: .875em;
+  line-height: 142%;
 }
-
 a {
-  text-decoration: none; cursor: pointer; background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
 }
-
 p {
-  margin-bottom: .75rem; font-size: .88rem; letter-spacing: 0.01rem; text-align: inherit;
+  margin-bottom: 2em;
+  font-family: MonLight;
+  font-size: .88em;
+  line-height: 150%;
+  letter-spacing: 0.0rem;
+  text-align: inherit;
   @media bp-mama-bear {
-    font-size: 1rem;
+    font-size: 1em;
   }
   a {
-    color: inherit; text-decoration: underline; cursor: pointer;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
   }
   &:last-child {
     margin-bottom: 0;
   }
   strong, b {
-    font-style: bold; font-weight: 600;
+    font-family: MonBold;
   }
   em {
-    font-style: italic;
+    font-family: MonBold;
   }
 }
