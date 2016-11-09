@@ -1,4 +1,4 @@
-// Breakpoints
+/* Breakpoints */
 @value babyBear: 1rem;
 @value mamaBear: 29rem;
 @value papaBear: 40rem;
@@ -9,11 +9,11 @@
 @value bp-papa-bear: (min-width: papaBear);
 @value bp-grand-bear: (min-width: grandBear);
 
-// Container max-width cap
+/* Container max-width cap */
 @value containerWidth: 90rem;
 @value containerPadding: 1.875rem;
 
-// Universal Section Margins & Padding
+/* Universal Section Margins & Padding */
 @value babyMargin: 2rem 0;
 @value mamaMargin: 4rem 0;
 @value papaMargin: 4.5rem 0;
