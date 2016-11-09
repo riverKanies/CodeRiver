@@ -10,7 +10,7 @@ import MicrostepSearch from './form'
 
 type Props = {
   dispatch: Function,
-  products: Object
+  microsteps: Array<any>
 }
 
 export class MicrostepsContainer extends React.Component {

@@ -1,32 +1,42 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-import type { Field as FieldType } from 'lib/types'
+import { updateFilter, KEY } from 'modules/MicrostepsFilter'
 
-function SearchField ({ input, label, type } : FieldType) {
-  return (
-    <input {...input} placeholder={label} type={type} />
-  )
+type Props = {
+  dispatch: Function,
+  filter: string
 }
 
-export default function SearchForm () {
-  return (
-    <SearchField />
-  )
+class SearchForm extends React.Component {
+  props: Props
+
+  constructor (props) {
+    super(props)
+
+    this.updateFilter = this.updateFilter.bind(this)
+  }
+
+  updateFilter (event) {
+    const { dispatch } = this.props
+
+    dispatch(updateFilter(event.target.value))
+  }
+
+  render () {
+    return (
+      <input
+        type='text'
+        placeholder='filter microsteps'
+        value={this.props.filter}
+        onChange={this.updateFilter}
+      />
+    )
+  }
 }
 
-// reduxform => SearchForm
-//  => MicrostepsFilter
-//
-//  initial state, we just get the informational microsteps (all of them) and
-//  display the list
-//
-//  as a user starts typing, we do match or filter over that list
-//  use a selector to perform this filter so that what is displayed in the list
-//  is the following
-//
-//  intersection of filterString and available microsteps titles
-//
-//
-//  store: {
-//
-//  }
+const mapStateToProps = (state) => ({
+  filter: state[KEY].filter
+})
+
+export default connect(mapStateToProps)(SearchForm)

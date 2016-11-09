@@ -16,13 +16,13 @@ export const initialState = {
   filter: ''
 }
 
-export function reducer (state = initialState, action) {
-  switch (action.type) {
+export function reducer (state = initialState, a) {
+  switch (a.type) {
     case actions.clearFilter:
       return { ...state, filter: '' }
 
     case actions.updateFilter:
-      return { ...state, filter: actions.filter }
+      return { ...state, filter: a.filter }
 
     default:
       return state
