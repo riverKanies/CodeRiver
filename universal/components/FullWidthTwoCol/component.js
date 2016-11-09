@@ -34,11 +34,11 @@ const FullWidthText = ({
         </div>
 
         <div className={styles.column}>
-          <i className={styles.label}>{label}</i>
-          <header className={styles.header}>
-            <h2>{title}</h2>
-          </header>
           <section className={styles.sectionContent}>
+            <i className={styles.label}>{label}</i>
+            <header className={styles.header}>
+              <h2>{title}</h2>
+            </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>
         </div>
