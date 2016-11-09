@@ -113,6 +113,7 @@
   text-align: center;
   text-transform: uppercase;
   color: ThriveGray;
+  cursor: pointer;
   transition: all 150ms ease-in-out;
   @media bp-papa-bear {
     display: inline-block;
@@ -158,6 +159,7 @@
   text-align: center;
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
   transition: all 150ms ease-in-out;
   @media bp-papa-bear {
     display: block;
@@ -175,6 +177,7 @@
 }
 
 .link, .linkUtility {
+  cursor: pointer;
   @media bp-papa-bear {
     position: relative;
     &::after {
@@ -213,6 +216,7 @@
   top: 0;
   right: 0;
   background: ThriveTeal;
+  cursor: pointer;
   z-index: 9999;
   > svg {
     display: block;
