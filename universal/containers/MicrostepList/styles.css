@@ -1,0 +1,8 @@
+@value breakpoints: "styles/breakpoints";
+@value containerWidth from breakpoints;
+
+.container {
+  lost-utility: clearfix;
+  lost-center: containerWidth;
+  margin-top: 50px;
+}

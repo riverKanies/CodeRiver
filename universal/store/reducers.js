@@ -4,6 +4,7 @@ import { reducer as formReducer } from 'redux-form'
 import * as microsteps from 'modules/Microsteps'
 import * as microstep from 'modules/Microstep'
 import * as mediumPosts from 'modules/MediumPosts'
+import * as microstepsFilter from 'modules/MicrostepsFilter'
 
 const locationState = {
   location: null
@@ -22,6 +23,7 @@ export const makeRootReducer = (asyncReducers) => {
     [microsteps.KEY]: microsteps.reducer,
     [microstep.KEY]: microstep.reducer,
     [mediumPosts.KEY]: mediumPosts.reducer,
+    [microstepsFilter.KEY]: microstepsFilter.reducer,
     location: locationReducer,
     form: formReducer,
     ...asyncReducers
