@@ -17,6 +17,7 @@
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
     padding: 1.25rem 3rem 1.25rem 1.25rem;
+    position: relative;
     background: white;
     border-bottom: .25rem solid ThriveTeal;
     text-align: center;
@@ -72,13 +73,13 @@
   position: absolute;
   top: 0;
   right: -120%;
-  background: ThriveTeal;
+  background: rgba(255, 255, 255, .98);
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
     display: block;
     height: auto;
     padding: 0 0;
-    top: 1.1875rem;
+    top: 1.6875rem;
     right: auto;
     background: none;
   }
@@ -211,7 +212,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: black;
+  background: ThriveTeal;
   z-index: 9999;
   > svg {
     display: block;

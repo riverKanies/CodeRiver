@@ -1,7 +1,7 @@
 /* Breakpoints */
 @value babyBear: 1rem;
 @value mamaBear: 29rem;
-@value papaBear: 40rem;
+@value papaBear: 46.875rem;
 @value grandBear: 53.75em;
 
 @value bp-baby-bear: (min-width: babyBear);

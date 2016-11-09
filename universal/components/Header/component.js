@@ -3,10 +3,9 @@ import React from 'react'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
-import mark from './assets/thriveText.png'
+import mark from './assets/thriveLogo.png'
 
 class Header extends React.Component {
-
   constructor (props) {
     super(props)
     this.state = {
@@ -14,11 +13,9 @@ class Header extends React.Component {
     }
     this.toggleActive = this.toggleActive.bind(this)
   }
-
   toggleActive () {
     this.setState({active: !this.state.active})
   }
-
   render () {
     const { active } = this.state
 
