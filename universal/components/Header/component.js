@@ -57,7 +57,7 @@ class Header extends React.Component {
               Sign Up
             </Link>
             <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-              Login
+              Log In
             </Link>
           </nav>
         </section>

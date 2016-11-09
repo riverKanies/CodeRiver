@@ -1,9 +1,14 @@
-@value primary: #BF4040;
-@value secondary: #1F4F7F;
-
 @value white: #ffffff;
 @value black: #000000;
-@value bodyCopy: #454443;
-@value brandOne: #bada55;
-@value brandTwo: #bada55;
-@value brandThree: #bada55;
+@value lightGray: #e1e3e5;
+@value darkGray: #999999;
+
+@value bodyCopy: #2b2a28;
+
+@value ThriveTeal: #71cbd2;
+@value ThriveBlue: #0053d4;
+@value ThriveDarkBlue: #144085;
+@value ThriveRoyalBlue: #3f17a8;
+@value ThriveBlurple: #4600d4;
+@value ThriveViolet: #3f17a8;
+@value ThriveGray: #303030;
