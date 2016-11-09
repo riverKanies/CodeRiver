@@ -6,11 +6,11 @@
   padding: 2rem 1rem;
 }
 
-.title {
-  lost-column: 1;
-  text-align: center;
+.content {
+  lost-center: 1160px;
 }
 
-.row {
-  lost-center: containerWidth;
+.title {
+  lost-column: 1;
+  margin-bottom: 1rem;
 }

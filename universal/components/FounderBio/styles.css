@@ -1,3 +1,32 @@
-.container {;
-  height: 400px;
+@value breakpoints: "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding from breakpoints;
+
+.container {
+  lost-center: containerWidth;
+  padding: 2rem 1rem 0rem 1rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.content {
+  lost-center: 1120px;
+}
+
+.image {
+  lost-flex-container: row;
+  height: 475px;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(0,192,201,0.6), rgba(81,45,168,0.8)),
+    url('./assets/arianna.jpg') no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.text {
+  lost-column: 1;
+  padding: 0 0 1rem 1rem;
+  color: white;
+  align-self: flex-end;
 }
