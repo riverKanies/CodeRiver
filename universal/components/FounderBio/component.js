@@ -7,9 +7,9 @@ type Props = {
 };
 
 const defaultTitle = 'Team'
-const details = [`Thrive Global has partnered with the leading companies,
+const details = `Thrive Global has partnered with the leading companies,
 academic institutions, and thought leaders to accelerate the cultural shift
-around the way we work and live.`]
+around the way we work and live.`
 const name = 'Arianna'
 const position = 'Founder'
 
