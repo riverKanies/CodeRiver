@@ -7,6 +7,7 @@ import getFilteredMicrosteps from './selector'
 import styles from './styles'
 import MicrostepList from './component'
 import MicrostepSearch from './form'
+import Paginate from './Paginate'
 
 type Props = {
   dispatch: Function,
@@ -28,6 +29,7 @@ export class MicrostepsContainer extends React.Component {
     return (
       <div className={styles.container}>
         <MicrostepSearch />
+        <Paginate />
         <MicrostepList list={microsteps} />
       </div>
     )
@@ -35,8 +37,10 @@ export class MicrostepsContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  const { microsteps } = getFilteredMicrosteps(state)
+
   return {
-    microsteps: getFilteredMicrosteps(state)
+    microsteps
   }
 }
 

@@ -32,5 +32,19 @@ describe('(Redux) microstepsFilter', () => {
         }
       )
     })
+
+    it('updates the currentPage when we tell it to', () => {
+      expect(
+        reducer({ ...initialState, currentPage: 0}, {
+          type: actions.updatePage,
+          currentPage: 2
+        })
+      ).toEqual(
+        {
+          ...initialState,
+          currentPage: 2
+        }
+      )
+    })
   })
 })

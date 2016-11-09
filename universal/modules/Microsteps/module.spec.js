@@ -60,7 +60,7 @@ describe('MicrostepList', () => {
     context('loadMicrosteps', () => {
       it('loadMicrosteps dispatches happy path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps?type=informational')
+          .get('/api/microsteps')
           .reply(200, [])
 
         const expectedActions = [
@@ -78,7 +78,7 @@ describe('MicrostepList', () => {
 
       it('loadMicrosteps dispatches sad path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps?type=informational')
+          .get('/api/microsteps')
           .reply(404, [])
 
         const expectedActions = [

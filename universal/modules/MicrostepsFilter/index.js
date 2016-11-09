@@ -8,21 +8,27 @@ export const constants = { }
 // Action Creators
 export const actions = {
   updateFilter: `${KEY}/update-filter`,
-  clearFilter: `${KEY}/clear-filter`
+  clearFilter: `${KEY}/clear-filter`,
+  updatePage: `${KEY}/update-page`
 }
 
 // Reducer
 export const initialState = {
-  filter: ''
+  filter: '',
+  currentPage: 0,
+  perPage: 5
 }
 
 export function reducer (state = initialState, a) {
   switch (a.type) {
+    case actions.updatePage:
+      return { ...state, currentPage: a.currentPage }
+
     case actions.clearFilter:
-      return { ...state, filter: '' }
+      return initialState
 
     case actions.updateFilter:
-      return { ...state, filter: a.filter }
+      return { ...initialState, filter: a.filter }
 
     default:
       return state
@@ -39,5 +45,12 @@ export function updateFilter (s) {
 export function clearFilter () {
   return {
     type: actions.clearFilter
+  }
+}
+
+export function updatePage (currentPage) {
+  return {
+    type: actions.updatePage,
+    currentPage
   }
 }
