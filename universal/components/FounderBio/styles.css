@@ -1,5 +1,5 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding from breakpoints;
+@value bp-mama-bear, containerWidth, containerPadding from breakpoints;
 
 .container {
   lost-center: containerWidth;
@@ -8,6 +8,10 @@
 
 .title {
   margin-bottom: 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
 }
 
 .content {

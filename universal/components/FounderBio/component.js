@@ -7,6 +7,9 @@ type Props = {
 };
 
 const defaultTitle = 'Team'
+const details = [`Thrive Global has partnered with the leading companies,
+academic institutions, and thought leaders to accelerate the cultural shift
+around the way we work and live.`]
 const name = 'Arianna'
 const position = 'Founder'
 
@@ -17,6 +20,7 @@ const FounderBio = ({
       <section className={styles.content}>
         <section className={styles.title}>
           <h2>{title}</h2>
+          <p>{details}</p>
         </section>
         <section className={styles.image}>
           <section className={styles.text}>
