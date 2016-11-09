@@ -41,6 +41,6 @@ export function loadMicrosteps () {
       actions.fetchSuccess,
       actions.fetchFailure
     ],
-    callAPI: () => httpGet('/api/microsteps?type=informational')
+    callAPI: () => httpGet('/api/microsteps')
   }
 }

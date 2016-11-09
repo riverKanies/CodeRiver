@@ -1,4 +1,3 @@
-import styles from './styles'
 import React from 'react'
 
 type Props = {
@@ -10,7 +9,7 @@ export default function MicrostepList ({ list }: Props) {
     <div>
       <h1>A Microstep List!</h1>
       <ul>
-        {list.map(m => <li key={m.id}>{m.title}</li>)}
+        {list.map(m => <li key={`${m.microstep_type}${m.id}`}>{m.title}</li>)}
       </ul>
     </div>
   )
