@@ -18,6 +18,8 @@ class Paginate extends React.Component {
     super(props)
 
     this.updatePage = this.updatePage.bind(this)
+    this.nextPage = this.nextPage.bind(this)
+    this.prevPage = this.prevPage.bind(this)
   }
 
   updatePage (event) {
@@ -26,13 +28,42 @@ class Paginate extends React.Component {
     dispatch(updatePage(event.target.value))
   }
 
+  prevPage () {
+    const { dispatch, currentPage } = this.props
+
+    dispatch(updatePage(currentPage - 1))
+  }
+
+  nextPage () {
+    const { dispatch, currentPage } = this.props
+
+    dispatch(updatePage(currentPage + 1))
+  }
+
+  renderPrev () {
+    const { currentPage, totalPages } = this.props
+
+    if (currentPage - 1 < 0) return null
+
+    return <a onClick={this.prevPage}> &lt;&lt; </a>
+  }
+
+  renderNext () {
+    const { currentPage, totalPages } = this.props
+
+    if (currentPage + 1 > totalPages) return null
+
+    return <a onClick={this.nextPage}> &gt;&gt; </a>
+  }
+
   render () {
     if (this.props.totalPages <= 1) return null
-
     return (
-      <select onChange={this.updatePage}>
-        {_.range(this.props.totalPages).map(i => <option value={i}>{i + 1}</option>)}
-      </select>
+      <div>
+        {this.renderPrev()}
+        {this.props.currentPage}
+        {this.renderNext()}
+      </div>
     )
   }
 }

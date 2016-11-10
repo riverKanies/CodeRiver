@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import { updateFilter, KEY } from 'modules/MicrostepsFilter'
+import styles from './styles'
 
 type Props = {
   dispatch: Function,
@@ -26,6 +26,7 @@ class SearchForm extends React.Component {
   render () {
     return (
       <input
+        className={styles.input}
         type='text'
         placeholder='filter microsteps'
         value={this.props.filter}

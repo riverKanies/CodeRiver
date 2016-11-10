@@ -5,8 +5,8 @@ import { loadMicrosteps } from 'modules/Microsteps'
 import getFilteredMicrosteps from './selector'
 
 import styles from './styles'
-import MicrostepList from './component'
-import MicrostepSearch from './form'
+import List from './List'
+import Filter from './Filter'
 import Paginate from './Paginate'
 
 type Props = {
@@ -28,9 +28,14 @@ export class MicrostepsContainer extends React.Component {
 
     return (
       <div className={styles.container}>
-        <MicrostepSearch />
-        <Paginate />
-        <MicrostepList list={microsteps} />
+        <h1>Microstep Search</h1>
+        <div className={styles.inputContainer}>
+          <Filter />
+        </div>
+        <div className={styles.inputContainer}>
+          <List list={microsteps} />
+          <Paginate />
+        </div>
       </div>
     )
   }

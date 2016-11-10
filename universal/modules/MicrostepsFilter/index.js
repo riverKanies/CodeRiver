@@ -16,7 +16,7 @@ export const actions = {
 export const initialState = {
   filter: '',
   currentPage: 0,
-  perPage: 5
+  perPage: 25
 }
 
 export function reducer (state = initialState, a) {

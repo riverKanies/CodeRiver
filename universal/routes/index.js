@@ -21,7 +21,7 @@ export const createRoutes = (store) => ([
     childRoutes: [
       {
         path: 'microsteps',
-        component: Microsteps.component
+        component: Microsteps
       },
       {
         path: 'learn',

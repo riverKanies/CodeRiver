@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './styles'
 
 type MProps = {
   id: string,
@@ -33,8 +34,7 @@ function MicrostepLI ({ id, microstep_type, title }: MProps) {
 export default function MicrostepList ({ list }: Props) {
   return (
     <div>
-      <h1>A Microstep List!</h1>
-      <ul>
+      <ul className={styles.listContainer}>
         {list.map(MicrostepLI)}
       </ul>
     </div>
