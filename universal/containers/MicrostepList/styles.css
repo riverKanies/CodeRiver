@@ -1,0 +1,27 @@
+@value breakpoints: "styles/breakpoints";
+@value containerWidth from breakpoints;
+
+.container {
+  lost-utility: clearfix;
+  lost-center: containerWidth;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.inputContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.input {
+  width: 75%;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.listContainer {
+  width: 100%;
+  margin: 2em 0;
+  font-size: 1.5rem;
+  border: 1px solid grey;
+}

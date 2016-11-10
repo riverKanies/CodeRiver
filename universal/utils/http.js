@@ -1,5 +1,11 @@
 import fetch from 'isomorphic-fetch'
 
+function clientUrl () {
+  return (location) ? location.origin : ''
+}
+
+export const CLIENT_URL = clientUrl()
+
 function hostUrl () {
   const host = process.env.API_HOST
   const protocol = process.env.API_PROTOCOL

@@ -1,5 +1,6 @@
 import Content from 'layouts/Content'
 import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
+import Microsteps from 'layouts/Microsteps'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import Learn from 'layouts/Learn'
@@ -18,6 +19,10 @@ export const createRoutes = (store) => ([
     component: LayoutCore,
     indexRoute: Home,
     childRoutes: [
+      {
+        path: 'microsteps',
+        component: Microsteps
+      },
       {
         path: 'learn',
         component: Learn

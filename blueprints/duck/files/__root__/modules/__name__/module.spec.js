@@ -1,9 +1,10 @@
-import { reducer, initialState } from './<%= camelEntityName %>'
+import { reducer, initialState } from './index'
 
 describe('(Redux) <%= camelEntityName %>', () => {
   describe('(Reducer)', () => {
     it('sets up initial state', () => {
-      expect(reducer(undefined, {})).to.eql(initialState)
+      expect(reducer(undefined, {})).toEqual(initialState)
     })
   })
 })
+
