@@ -4,7 +4,7 @@ import dummyImage from './assets/fpo.png'
 import Button from 'components/Button'
 
 type Props = {
-  sectionClass: 'default' | 'lightGray',
+  sectionClass: 'default' | 'lightGray' | 'transparent',
   title: string,
   label: string,
   labelColor: 'defaultLabel' | 'tealLabel' | 'blueLabel' | 'darkBlueLabel' |
@@ -18,7 +18,7 @@ const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
-const FullWidthTwoCol = ({
+const FullWidthTwoColSpecial = ({
   sectionClass = 'default',
   title = 'Title',
   label = 'Label',
@@ -31,11 +31,6 @@ const FullWidthTwoCol = ({
     <section className={styles[sectionClass]}>
       <section className={styles.container}>
         <div className={styles.column}>
-          <figure className={styles.imageWrap}>
-            <img className={styles.image} src={image} alt={title} />
-          </figure>
-        </div>
-        <div className={styles.column}>
           <section className={styles.sectionContent}>
             <i className={styles[labelColor]}>{label}</i>
             <header className={styles.header}>
@@ -45,9 +40,14 @@ const FullWidthTwoCol = ({
             <Button {...button} />
           </section>
         </div>
+        <div className={styles.column}>
+          <figure className={styles.imageWrap}>
+            <img className={styles.image} src={image} alt={title} />
+          </figure>
+        </div>
       </section>
     </section>
   )
 }
 
-export default FullWidthTwoCol
+export default FullWidthTwoColSpecial

@@ -1,46 +1,50 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from "styles/breakpoints.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand from "styles/breakpoints.css";
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
 @value Mon, Play from "styles/fonts.css";
 
 /* Parent Most Container + BG Color Variants */
-.fullWidthTwoCol {
+.fullWidthTwoColSpecial {
   display: block;
   lost-column: 1;
   height: auto;
   margin: 0 auto;
   float: left;
-  padding: babyPadding;
+  padding: 0 0;
   position: relative;
   overflow: hidden;
-  @media bp-mama-bear {
-    padding: mamaPadding;
-  }
-  @media bp-papa-bear {
-    padding: papaPadding;
-  }
 }
 .default {
-  composes: fullWidthTwoCol;
+  composes: fullWidthTwoColSpecial;
   background: white;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
 .lightGray {
-  composes: fullWidthTwoCol;
+  composes: fullWidthTwoColSpecial;
   background: lightGray;
+}
+.transparent {
+  composes: fullWidthTwoColSpecial;
+  background: none;
 }
 
 /* Column Container Styles */
 .container {
   display: block;
   max-width: containerWidth;
-  margin: 0 auto;
-  padding: containerPadding;
+  margin: babyMargin auto;
+  padding: 0 containerPadding;
   float: left;
   position: relative;
+  background: white;
+  @media bp-mama-bear {
+    margin: mamaMargin auto;
+  }
   @media bp-papa-bear {
     lost-flex-container: row;
+    margin: papaMargin auto;
     float: none;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.1);
   }
 }
 
@@ -50,6 +54,40 @@
   position: relative;
   @media bp-papa-bear {
     lost-column: 1/2 flex;
+  }
+  &:first-child {
+    padding: babyPadding;
+    @media bp-mama-bear {
+      padding: mamaPadding;
+    }
+    @media bp-papa-bear {
+      padding: papaPadding;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: babyMargin;
+      margin: 0 0;
+      padding: 0 0;
+      float: left;
+      background: ThriveTeal;
+      position: absolute;
+      top: negBaby;
+      left: 0;
+      @media bp-mama-bear {
+        height: mamaMargin;
+        top: negMama;
+      }
+      @media bp-papa-bear {
+        height: papaMargin;
+        top: negPapa;
+      }
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+    float: right;
   }
 }
 
