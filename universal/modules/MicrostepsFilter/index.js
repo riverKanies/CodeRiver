@@ -12,6 +12,12 @@ export const actions = {
   updatePage: `${KEY}/update-page`
 }
 
+type StateProps = {
+  filter: string,
+  currentPage: number,
+  perPage: number
+}
+
 // Reducer
 export const initialState = {
   filter: '',
@@ -19,7 +25,7 @@ export const initialState = {
   perPage: 25
 }
 
-export function reducer (state = initialState, a) {
+export function reducer (state: StateProps = initialState, a: any) {
   switch (a.type) {
     case actions.updatePage:
       return { ...state, currentPage: a.currentPage }
@@ -35,7 +41,7 @@ export function reducer (state = initialState, a) {
   }
 }
 
-export function updateFilter (s) {
+export function updateFilter (s: string) {
   return {
     type: actions.updateFilter,
     filter: s
@@ -48,7 +54,7 @@ export function clearFilter () {
   }
 }
 
-export function updatePage (currentPage) {
+export function updatePage (currentPage: string | number) {
   return {
     type: actions.updatePage,
     currentPage

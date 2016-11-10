@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import _ from 'lodash'
 
 import getFilteredMicrosteps from './selector'
 import { updatePage } from 'modules/MicrostepsFilter'
@@ -41,7 +40,7 @@ class Paginate extends React.Component {
   }
 
   renderPrev () {
-    const { currentPage, totalPages } = this.props
+    const { currentPage } = this.props
 
     if (currentPage - 1 < 0) return null
 

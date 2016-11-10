@@ -1,32 +1,35 @@
 import React from 'react'
 import styles from './styles'
 
-type MProps = {
+import { CLIENT_URL as baseUrl } from 'utils/http'
+
+type Microstep = {
   id: string,
   microstep_type: string,
   title: string
 }
 
 type Props = {
-  list: Array<MProps>
+  list: Array<Microstep>
 }
 
-function genMicrostepLink(id: string, microstep_type: string) {
-  const baseUrl = 'http://localhost:4000/steps/'
+function genMicrostepLink (id: string, microstep_type: string) {
+  const base = `${baseUrl}/steps/`
   const ss = {
-    'Microstep::Calendar': `${baseUrl}${id}?type=calendar`,
-    'Microstep::Informational': `${baseUrl}${id}?type=informational`,
-    'Microstep::Product': `${baseUrl}${id}?type=product`,
-    'Microstep::Pathway': `${baseUrl}${id}?type=pathway`,
+    'Microstep::Calendar': `${base}${id}?type=calendar`,
+    'Microstep::Informational': `${base}${id}?type=informational`,
+    'Microstep::Product': `${base}${id}?type=product`,
+    'Microstep::Pathway': `${base}${id}?type=pathway`
   }
 
-  return ss[microstep_type] || "you're busted"
+  return ss[microstep_type] || 'link not currently available'
 }
 
-function MicrostepLI ({ id, microstep_type, title }: MProps) {
+function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
+  const link = genMicrostepLink(id, microstep_type)
   return (
     <li key={`${microstep_type}${id}`}>
-      <a target='_blank' href={`${genMicrostepLink(id, microstep_type)}`}>{title}</a>
+      <a target='_blank' href={link}>{title}</a>
     </li>
   )
 }
@@ -35,7 +38,7 @@ export default function MicrostepList ({ list }: Props) {
   return (
     <div>
       <ul className={styles.listContainer}>
-        {list.map(MicrostepLI)}
+        {list.map(MicrostepListItem)}
       </ul>
     </div>
   )

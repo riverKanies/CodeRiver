@@ -11,6 +11,6 @@ describe('(Component) MicrostepList', () => {
     const wrapper = shallow(<MicrostepsContainer dispatch={dispatch} products={products} />)
     const element = wrapper.find('div')
 
-    expect(element.length).toBe(1)
+    expect(element.length).toBe(3)
   })
 })
