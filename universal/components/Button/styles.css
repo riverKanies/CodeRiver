@@ -1,19 +1,12 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
-
-@define-mixin button $bgNormal, $colorNormal, $bgHover, $colorHover {
-  background: $bgNormal;
-  color: $colorNormal;
-  &:hover {
-    background: $bgHover;
-    color: $colorHover;
-  }
-}
+@value Mon from "styles/fonts.css";
+@value ThriveViolet, ThriveBlurple from "styles/colors.css";
 
 .button {
   border: 1px solid;
-  border-radius: 40px;
-  font-family: RionaSans-Light;
+  border-radius: 1px;
+  font-family: Mon;
   font-size: 14px;
   line-height: 20px;
   min-width: 120px;
@@ -27,24 +20,47 @@
 
 .light {
   composes: button;
-  border-color: #fff;
-  color: #fff;
+  border-color: ThriveViolet;
+  color: ThriveViolet;
 }
 
+.light-medium {
+  composes: light;
+  padding: 10px 40px 8px;
+}
+
+.light-large {
+  composes: light;
+  padding: 10px 60px 8px;
+}
+
+
 .light:hover {
-  background-color: #fff;
-  color: rgba(24, 27, 32, 100);
+  background-color: ThriveBlurple;
+  border-color: ThriveBlurple;
+  color: #fff;
 }
 
 .dark {
   composes: button;
-  border-color: rgba(24, 27, 32, 100);
-  color: rgba(24, 27, 32, 100);
+  border-color: #fff;
+  color: #fff;
+}
+
+.dark-medium {
+  composes: dark;
+  padding: 10px 40px 8px;
+}
+
+.dark-large {
+  composes: dark;
+  padding: 10px 60px 8px;
 }
 
 .dark:hover {
-  background-color: rgba(24, 27, 32, 100);
+  background-color: ThriveViolet;
   color: #fff;
+  border-color: ThriveViolet;
 }
 
 .bannerButton {

@@ -12,6 +12,8 @@ const details = [
   eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare`
 ]
 
+const hello = `Hello Thrivin'`
+
 const LearnCTASection = ({ title = 'LearnCTASection' }: Props) => {
   return (
     <div className={styles.container}>
@@ -20,7 +22,8 @@ const LearnCTASection = ({ title = 'LearnCTASection' }: Props) => {
         <p>{details}</p>
         <section className={styles.button}>
           <Button
-            buttonText='Hello'
+            buttonText={hello}
+            buttonStyle='light'
           />
         </section>
       </div>

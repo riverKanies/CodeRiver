@@ -2,7 +2,6 @@
 @value containerWidth, containerPadding from breakpoints;
 
 .container {
-  height: 22rem;
   background-color: lightgray;
 }
 
