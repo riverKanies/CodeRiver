@@ -44,14 +44,6 @@
   position: relative;
 }
 
-.imgLeft {
-  composes: container;
-}
-
-.imgRight {
-  composes: container;
-}
-
 /* Column Styling */
 .column {
   lost-column: 1/2 flex;
@@ -67,13 +59,16 @@
 }
 .image {
   display: inline-block;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
 }
 .sectionContent {
   lost-column: 1;
   padding: 0 10%;
 }
+
 .label {
   display: block;
   margin: .75rem 0 0 0;
@@ -89,6 +84,10 @@
   text-transform: uppercase;
   color: white;
 }
+.blueLabel {
+  composes: label;
+}
+
 .header {
   lost-column: 1;
   margin-bottom: 2rem;

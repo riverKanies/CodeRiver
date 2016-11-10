@@ -1,14 +1,16 @@
 import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/fpo.png'
+import Button from 'components/Button'
 
 type Props = {
   sectionClass: 'default' | 'lightGray',
-  columnOrder: 'imgLeft' | 'imgRight',
   title: string,
-  label: string;
+  label: string,
+  labelColor: string,
   sectionText: Array<string>,
   image: string,
+  button: Object
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -17,15 +19,16 @@ mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
   sectionClass = 'default',
-  columnOrder = 'imgLeft',
   title = 'Title',
   label = 'Label',
+  labelColor = 'blue',
   sectionText = defaultText,
-  image = dummyImage
+  image = dummyImage,
+  button = {}
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
-      <section className={styles[columnOrder]}>
+      <section className={styles.container}>
 
         <div className={styles.column}>
           <figure className={styles.imageWrap}>
@@ -35,11 +38,12 @@ const FullWidthText = ({
 
         <div className={styles.column}>
           <section className={styles.sectionContent}>
-            <i className={styles.label}>{label}</i>
+            <i className={styles[labelColor]}>{label}</i>
             <header className={styles.header}>
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            <Button {...button} />
           </section>
         </div>
 
