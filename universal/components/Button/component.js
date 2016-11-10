@@ -31,7 +31,7 @@ export const Button = ({ children, linkTo, buttonStyle, buttonText, handleClick,
 Button.defaultProps = {
   buttonText: 'Join Us',
   linkTo: '/',
-  buttonStyle: 'white'
+  buttonStyle: 'violet'
 }
 
 export default Button
