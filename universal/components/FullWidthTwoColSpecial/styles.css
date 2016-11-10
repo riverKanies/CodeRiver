@@ -1,5 +1,5 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand from "styles/breakpoints.css";
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
+@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from "styles/colors.css";
 @value Mon, Play from "styles/fonts.css";
 
 /* Parent Most Container + BG Color Variants */
@@ -33,7 +33,7 @@
   display: block;
   max-width: containerWidth;
   margin: babyMargin auto;
-  padding: 0 containerPadding;
+  padding: 0 0;
   float: left;
   position: relative;
   background: white;
@@ -50,18 +50,22 @@
 
 /* Column Styling */
 .column {
-  lost-column: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 1.875rem;
+  float: left;
   position: relative;
   @media bp-papa-bear {
-    lost-column: 1/2 flex;
+    width: 50%;
+    flex-direction: row;
+    padding: 0 0;
   }
   &:first-child {
-    padding: babyPadding;
-    @media bp-mama-bear {
-      padding: mamaPadding;
-    }
+    order: 2;
     @media bp-papa-bear {
-      padding: papaPadding;
+      order: 1;
     }
     &:before {
       content: '';
@@ -71,7 +75,7 @@
       margin: 0 0;
       padding: 0 0;
       float: left;
-      background: ThriveTeal;
+      background: gradientBlurple;
       position: absolute;
       top: negBaby;
       left: 0;
@@ -86,13 +90,18 @@
     }
   }
   &:last-child {
+    order: 1;
     margin-right: 0;
-    float: right;
+    padding: 1.875rem 1.875rem;
+    @media bp-papa-bear {
+      order: 2;
+      padding: 0 0;
+    }
   }
 }
 
 .imageWrap {
-  display: block;
+  display: flex;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -101,13 +110,12 @@
   text-align: center;
   overflow: hidden;
   @media bp-papa-bear {
-    display: flex;
     height: 100%;
     float: none;
   }
 }
 .image {
-  display: inline-block;
+  display: flex;
   width: 100%;
   height: auto;
   text-align: center;
@@ -117,9 +125,12 @@
   }
 }
 .sectionContent {
-  lost-column: 1;
+  padding: babyPadding;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
   @media bp-papa-bear {
-    padding: 0 10%;
+    padding: papaMargin 15%;
   }
 }
 
@@ -167,9 +178,8 @@
   background: ThriveViolet;
 }
 
-
 .header {
-  lost-column: 1;
+  lost-column: 1 flex;
   margin-bottom: 2rem;
   text-align: left;
 }
