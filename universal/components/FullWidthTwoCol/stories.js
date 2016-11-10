@@ -1,25 +1,32 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
 import FullWidthTwoCol from './component'
+import dummyImage from './assets/thriveScience.jpg'
 
 const notes = `This story demonstrates the props that can be passed to
-FullWidthTwoCol. This component features a full viewport wide layout, with a
-title, subtitle, text and an optional call to action. All of these pieces are
-customizable by picking class names to change the background-color, button
-color, etc.`
+FullWidthTwoCol.`
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
+const defaultButton = {
+  buttonText: 'Read More',
+  linkTo: 'javascript:void(0)',
+  buttonStyle: 'violet'
+}
+
 const props = {
-  sectionClass: 'default',
-  title: 'h2 Title',
-  subTitle: 'h3 Subtitle',
-  sectionText: defaultText
+  sectionClass: ['default', 'lightGray', 'transparent'],
+  title: 'I am a Title',
+  label: 'Label',
+  labelColor: ['defaultLabel', 'tealLabel', 'blueLabel', 'darkBlueLabel',
+    'royalBlueLabel', 'blurpleLabel', 'violetLabel'],
+  sectionText: defaultText,
+  image: dummyImage
 }
 
 storiesOf('FullWidthTwoCol', module)
@@ -28,10 +35,11 @@ storiesOf('FullWidthTwoCol', module)
     return (
       <WithNotes notes={notes}>
         <FullWidthTwoCol
-          sectionClass={text('Section Class', props.sectionClass)}
+          sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           title={text('Section Title', props.title)}
-          subTitle={text('Section Subtitle', props.subTitle)}
+          labelColor={select('Label', props.labelColor, props.labelColor[0])}
           sectionText={text('Section Text', props.sectionText)}
+          button={defaultButton}
         />
       </WithNotes>
     )

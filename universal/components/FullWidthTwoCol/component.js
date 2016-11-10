@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles'
-import dummyImage from './assets/fpo.png'
+import dummyImage from './assets/thriveScience.jpg'
 import Button from 'components/Button'
 
 type Props = {
