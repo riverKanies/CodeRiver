@@ -1,7 +1,0 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
-
-html, body, main {
-  height: 100%;
-
-}
