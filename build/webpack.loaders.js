@@ -28,7 +28,7 @@ const fileLoaders = [
     loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml',
     include: paths.universal('styles/fonts')
   }, {
-    test: /\.(png|jpg)$/,
+    test: /\.(png|jpg|svg)$/,
     loader: 'url?limit=8192'
   }
 ]
