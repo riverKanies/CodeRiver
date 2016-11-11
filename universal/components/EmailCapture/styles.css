@@ -1,12 +1,61 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand from "styles/breakpoints.css";
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from "styles/colors.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, grandMargin, negBaby, negMama, negPapa, negGrand from "styles/breakpoints.css";
+@value ThriveTeal, gradientEmailCap from "styles/colors.css";
 @value Mon, Play from "styles/fonts.css";
 
+/* Form is styled in typography.css. Position form stuff is in here. */
+
 .emailCapture {
-  lost-flex-container: column;
+  display: block;
   width: 100%;
+  margin: 0 auto;
   padding: babyPadding;
+  background: gradientEmailCap;
   @media bp-mama-bear {
     padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding
+  }
+  @media bp-grand-bear {
+    padding: grandPadding;
+  }
+}
+
+.container {
+  lost-center: containerWidth containerPadding;
+  margin: 0 auto;
+  float: none;
+  > form {
+    lost-center: 80% 10%;
+    height: auto;
+    input, button {
+      display: block;
+      float: left;
+    }
+    > span {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 0 0;
+      float: left;
+      position: relative;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.header {
+  lost-column: 1;
+  margin: 0 auto babyMargin auto;
+  padding: 0 0;
+  text-align: center;
+  color: white;
+  @media bp-mama-bear {
+    margin: 0 auto mamaMargin auto;
   }
 }

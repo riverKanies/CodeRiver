@@ -15,7 +15,7 @@ const LeadForm = ({ handleSubmit, submitting, submitSucceeded }: FormType) => {
     <div className={styles.container}>
       {message}
       <form onSubmit={handleSubmit}>
-        <Field name='email' label='email' component={Input} />
+        <Field name='email' label='email' placeholder='Enter Your Email' component={Input} />
         <button type='submit' disabled={submitting}>Submit</button>
       </form>
     </div>
