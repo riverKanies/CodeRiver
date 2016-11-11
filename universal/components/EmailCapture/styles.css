@@ -1,2 +1,78 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, grandMargin, negBaby, negMama, negPapa, negGrand from "styles/breakpoints.css";
+@value ThriveTeal, gradientEmailCap from "styles/colors.css";
+@value Mon, Play from "styles/fonts.css";
+
+/* Form is styled in typography.css. Position form stuff is in here. */
+
+.emailCapture {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: babyPadding;
+  background: url('./assets/emailBG.png') repeat;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    background:  gradientEmailCap;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding
+  }
+  @media bp-grand-bear {
+    padding: grandPadding;
+  }
+}
+
+.container {
+  lost-center: containerWidth containerPadding;
+  margin: 0 auto;
+  float: none;
+  > form {
+    lost-center: 95% 2.5%;
+    height: auto;
+    @media bp-papa-bear {
+      lost-center: 80% 10%;
+    }
+    input, button {
+      display: block;
+      float: left;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.inputWrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+}
+
+.header {
+  lost-column: 1;
+  margin: 0 auto babyMargin auto;
+  padding: 0 0;
+  text-align: center;
+  color: white;
+  @media bp-mama-bear {
+    margin: 0 auto mamaMargin auto;
+  }
+}

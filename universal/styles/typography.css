@@ -3,6 +3,7 @@
 
 /* Global Typography Styles */
 h1, h2, h3, h4, h5 {
+  -webkit-margin-before: 0;
   text-align: inherit;
   color: inherit;
   & a {
@@ -87,5 +88,43 @@ p {
   }
   em {
     font-family: MonBold;
+  }
+}
+
+/* Standard Form Styles */
+input {
+  appearance: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: .75rem 1.25rem;
+  float: left;
+  background: transparent;
+  border: .125rem solid rgba(255, 255, 255, .3);
+  outline: none;
+  font-family: Mon;
+  font-size: .88rem;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  &::placeholder {
+    color: rgba(255, 255, 255, .7);
+  }
+}
+button {
+  appearance: none;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  border: none;
+  outline: none;
+  font-family: Mon;
+  font-size: .75rem;
+  line-height: 100%;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  color: white;
+  &:hover {
+
   }
 }
