@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import styles from './styles'
 
 import getFilteredMicrosteps from './selector'
 import { updatePage } from 'modules/MicrostepsFilter'
@@ -58,7 +59,7 @@ class Paginate extends React.Component {
   render () {
     if (this.props.totalPages <= 1) return null
     return (
-      <div>
+      <div className={styles.paginate}>
         {this.renderPrev()}
         {this.props.currentPage}
         {this.renderNext()}

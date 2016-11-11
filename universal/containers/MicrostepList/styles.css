@@ -4,24 +4,70 @@
 .container {
   lost-utility: clearfix;
   lost-center: containerWidth;
-  margin-top: 100px;
-  text-align: center;
+  padding: 5em 10em;
+}
+
+.filterContainer {
+  lost-utility: clearfix;
+  lost-center: containerWidth;
+  border-bottom: 1px solid grey;
+}
+
+.filterDescription {
+  font-weight: bold;
 }
 
 .inputContainer {
   width: 100%;
-  text-align: center;
-}
-
-.input {
-  width: 75%;
   height: 3rem;
   font-size: 1.5rem;
+
+  label {
+    color: blue; 
+    padding-right: 0.5em;
+    width: 20%;
+    font-weight: bold;
+    font-size: 1.6em;
+  }
+
+  input {
+    size: 2em;
+    border: 0;
+    width: 80%;
+    &:focus {
+      outline: none; 
+    }
+  }
 }
+
 
 .listContainer {
   width: 100%;
-  margin: 2em 0;
   font-size: 1.5rem;
-  border: 1px solid grey;
+}
+
+.paginate {
+  width: 100%;
+  padding-top: 2rem;
+  text-align: center;
+
+  a {
+    padding: 2px 4px; 
+    margin: 2px;
+    color: blue;
+    border: 1px solid blue; 
+
+    &:hover {
+      background-color: blue;
+      color: white; 
+    }
+  }
+}
+
+.listItem {
+  lost-column: 1/2;
+}
+
+.resultsText {
+  text-align: center;
 }
