@@ -6,6 +6,7 @@ import LayoutCore from 'layouts/LayoutCore'
 import Learn from 'layouts/Learn'
 import SignupForm from 'components/SignupForm'
 import Thrive from 'layouts/Thrive'
+import Pulse from 'layouts/Pulse'
 import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 
@@ -30,6 +31,10 @@ export const createRoutes = (store) => ([
       {
         path: 'thrive',
         component: Thrive
+      },
+      {
+        path: 'pulse',
+        component: Pulse
       },
       {
         path: 'signup',
