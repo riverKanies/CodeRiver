@@ -28,9 +28,12 @@ class SearchForm extends React.Component {
       <div className={styles.filterContainer}>
         <p className={styles.filterDescription}>Search for a microstep and click the link to copy</p>
         <div className={styles.inputContainer}>
-          <label>microstep</label>
+          <span className={styles.inputHighlight}>
+            {this.props.filter}
+          </span>
           <input
             autoFocus
+            placeholder='Search Microsteps'
             className={styles.input}
             type='text'
             value={this.props.filter}
