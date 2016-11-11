@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles'
+import Paginate from './Paginate'
 
 import { CLIENT_URL as baseUrl } from 'utils/http'
 
@@ -28,7 +29,7 @@ function genMicrostepLink (id: string, microstep_type: string) {
 function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
   const link = genMicrostepLink(id, microstep_type)
   return (
-    <li key={`${microstep_type}${id}`}>
+    <li className={styles.listItem} key={`${microstep_type}${id}`}>
       <a target='_blank' href={link}>{title}</a>
     </li>
   )
@@ -37,9 +38,11 @@ function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
 export default function MicrostepList ({ list }: Props) {
   return (
     <div>
+      <p className={styles.resultsText}>SEARCH RESULTS</p>
       <ul className={styles.listContainer}>
         {list.map(MicrostepListItem)}
       </ul>
+      <Paginate />
     </div>
   )
 }
