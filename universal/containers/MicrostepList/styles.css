@@ -1,13 +1,17 @@
 @value breakpoints: "styles/breakpoints";
-@value containerWidth, bp-mama-bear from breakpoints;
-@value ThriveTeal, ThriveGray, lightGray from "styles/colors";
+@value containerWidth, bp-mama-bear, bp-papa-bear, bp-elder-bear from breakpoints;
+@value ThriveTeal, lightGray from "styles/colors";
 @value Mon, MonBold from "styles/fonts";
 
 .container {
   lost-utility: clearfix;
   lost-center: containerWidth;
-  @media bp-mama-bear {
-    padding: 5em 10em;
+  padding: 2rem 1rem;
+  @media bp-papa-bear {
+    padding: 5em 4em;
+  }
+  @media bp-elder-bear {
+    padding: 5em 9em;
   }
 }
 
@@ -19,15 +23,13 @@
 }
 
 .filterDescription {
-  color: ThriveGray;
+  color: #999;
 }
 
 .inputContainer {
   width: 100%;
   height: 3rem;
   font-family: MonBold;
-  margin-bottom: 0.75rem;
-  font-size: 1.5rem;
   position: relative;
 
   input {
@@ -35,7 +37,6 @@
     font-size: 1.5em;
     color: ThriveTeal;
     border: 0;
-    width: 80%;
 
     &:focus {
       outline: none;
@@ -43,15 +44,19 @@
     &::placeholder {
       color: lightGray;
     }
+
+    @media bp-mama-bear {
+      font-size: 1.5em;
+    }
   }
 
   .inputHighlight {
+    position: absolute;
+    height: 0;
+    left: 0;
+    bottom: -0.2rem;
     font-size: 1.5em;
     z-index: 10;
-    position: absolute;
-    bottom: -0.85rem;
-    left: 0;
-    height: 0;
     overflow: hidden;
     color: transparent;
     -webkit-touch-callout: none;
@@ -60,6 +65,14 @@
     border-top: 3px solid ThriveTeal;
     border-radius: 2px;
     min-width: 3px;
+    @media bp-mama-bear {
+      bottom: -0.85rem;
+    }
+  }
+
+  @media bp-mama-bear {
+    font-size: 1.5em;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -92,11 +105,20 @@
   @media bp-mama-bear {
     lost-column: 1/2;
   }
+  @media bp-elder-bear {
+    lost-column: 1/3;
+  }
 }
 
 .listRow {
+  display: flex;
+
+  img {
+    padding: 1.3em 1em 1.3em 0;
+  }
+
   .stepIcon {
-    display: show;
+    display: block;
   }
 
   .copyIcon {
@@ -104,7 +126,7 @@
   }
 
   p {
-    margin-bottom: 1em;
+    line-height: 1.8;
   }
 
   &:hover {
@@ -118,15 +140,5 @@
     .copyIcon {
       display: block;
     }
-  }
-}
-
-
-.listRow {
-  display: flex;
-  align-items: left;
-
-  img {
-    padding: 1.3em 1em;
   }
 }
