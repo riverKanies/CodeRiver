@@ -22,7 +22,7 @@ type StateProps = {
 export const initialState = {
   filter: '',
   currentPage: 0,
-  perPage: 25
+  perPage: 20
 }
 
 export function reducer (state: StateProps = initialState, a: any) {
