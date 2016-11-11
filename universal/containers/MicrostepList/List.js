@@ -3,6 +3,12 @@ import styles from './styles'
 import Paginate from './Paginate'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
+import CalendarSVG from './assets/calendar.svg'
+import CopySVG from './assets/copy.svg'
+import InformationalSVG from './assets/informational.svg'
+import ProductSVG from './assets/product.svg'
+import PathwaySVG from './assets/pathway.svg'
+
 import { CLIENT_URL as baseUrl } from 'utils/http'
 
 type Microstep = {
@@ -27,13 +33,29 @@ function genMicrostepLink (id: string, microstep_type: string) {
   return ss[microstep_type] || 'link not currently available'
 }
 
+function genMicrostepIcon (microstep_type: string) {
+  const ss = {
+    'Microstep::Calendar': CalendarSVG,
+    'Microstep::Informational': InformationalSVG,
+    'Microstep::Product': ProductSVG,
+    'Microstep::Pathway': PathwaySVG
+  }
+
+  return ss[microstep_type]
+}
+
 function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
   const link = genMicrostepLink(id, microstep_type)
+  const Icon = genMicrostepIcon(microstep_type)
 
   return (
     <li className={styles.listItem} key={`${microstep_type}${id}`}>
       <CopyToClipboard text={link}>
-        <p>{title}</p>
+        <div className={styles.listRow}>
+          <img src={Icon} className={styles.stepIcon} />
+          <img src={CopySVG} className={styles.copyIcon} />
+          <p>{title}</p>
+        </div>
       </CopyToClipboard>
     </li>
   )
