@@ -66,6 +66,9 @@
 
 .listItem {
   lost-column: 1/2;
+  &:hover {
+    cursor: pointer; 
+  }
 }
 
 .resultsText {

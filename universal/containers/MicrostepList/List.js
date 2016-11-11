@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles'
 import Paginate from './Paginate'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 import { CLIENT_URL as baseUrl } from 'utils/http'
 
@@ -28,9 +29,12 @@ function genMicrostepLink (id: string, microstep_type: string) {
 
 function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
   const link = genMicrostepLink(id, microstep_type)
+
   return (
     <li className={styles.listItem} key={`${microstep_type}${id}`}>
-      <a target='_blank' href={link}>{title}</a>
+      <CopyToClipboard text={link}>
+        <p>{title}</p>
+      </CopyToClipboard>
     </li>
   )
 }
