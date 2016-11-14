@@ -14,7 +14,8 @@ const name = 'Arianna'
 const position = 'Founder'
 
 const FounderBio = ({
-  title = defaultTitle, }: Props) => {
+  title = defaultTitle
+}: Props) => {
   return (
     <section className={styles.container}>
       <section className={styles.content}>
