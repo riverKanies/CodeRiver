@@ -13,6 +13,14 @@ export const initialState = { }
 
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
+    case actions.createSuccess:
+      return { ...state, list: action.data, createPending: false }
+
+    case actions.createPending:
+      return { ...state, createPending: true }
+
+    case actions.createFailure:
+      return { ...state, createPending: false }
     default:
       return state
   }
