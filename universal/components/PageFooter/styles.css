@@ -11,7 +11,7 @@
 }
 
 .container {
-	lost-center: containerWidth;
+	lost-center: 90rem;
   margin: 0 auto;
   float: none;
 
@@ -113,7 +113,11 @@ cite {
 }
 
 .logo {
-	margin-top: 100px;
+	width: 7rem;
+  height: auto;
+  padding: 0 0;
+  float: none;
+	margin-top: 50px;
 }
 
 .socialIcons {
@@ -126,6 +130,11 @@ cite {
 		&:last-child {
 			padding-right: 0;
 		}
+}
+
+.icon {
+	color: #999;
+	margin-right: 10px;
 }
 
 a:hover {
