@@ -8,7 +8,7 @@ import { httpPost, HOST_URL } from 'lib/http'
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
 
-describe('MicrostepList', () => {
+describe('SignUp', () => {
   describe('reducer', () => {
     it('sets up initial state', () => {
       expect(reducer(undefined, {})).toEqual(initialState)

@@ -3,6 +3,7 @@ import { createAccount } from 'modules/SignUp'
 
 import { createValidator, required, email, minLength, match } from 'lib/validate'
 import component from './component'
+import toast from 'modules/Toast'
 
 const validate = createValidator({
   email: [required, email],
@@ -12,6 +13,26 @@ const validate = createValidator({
 
 const handleSubmit = (data, dispatch) => {
   return dispatch(createAccount(data))
+  .then(() => successfulSubmit(dispatch))
+  .catch(() => failedSubmit(dispatch))
+}
+
+const successfulSubmit = (dispatch) => {
+  dispatch(
+    toast.actions.show({
+      type: 'notice',
+      message: 'Successfully Submitted Form'
+    })
+  )
+}
+
+const failedSubmit = (dispatch) => {
+  dispatch(
+    toast.actions.show({
+      type: 'error',
+      message: 'Error Submitting Form'
+    })
+  )
 }
 
 export default reduxForm({
