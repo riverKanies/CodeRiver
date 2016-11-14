@@ -1,6 +1,6 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
-@value Mon, MonBold from "styles/fonts.css";
+@value Mon, MonBold, PlayBlack from "styles/fonts.css";
 
 .footer {
 	background-color: #222328;
@@ -21,7 +21,6 @@
     flex-flow: center;
     align-items: center;
     justify-content: center;
-    height: auto;
   }*/
 }
 
@@ -45,7 +44,7 @@
 	&::before {
 		content: '"';
 		font-size: 50px;
-		font-family: Mon;
+		font-family: PlayBlack;
 		float: left;
 		margin: 30px 20px 0 -40px;
 		color: #FFF;
@@ -73,6 +72,7 @@
 	margin: 0 auto;
 	text-align: center;
 	float: none!important;
+	line-height: normal;
 
 	p {
 		display: inline;
@@ -106,10 +106,15 @@ cite {
 }
 
 .footerLinks {
-	color: #636363;
+	color: #838d8f;
 	font-size: 12px;
 	font-family: Mon;
   margin-top: 5px;
+  line-height: 2;
+
+  &:first-child {
+  	margin-top: 10px;
+  }
 }
 
 .logo {
@@ -118,6 +123,7 @@ cite {
   padding: 0 0;
   float: none;
 	margin-top: 50px;
+	margin-left: 10px;
 }
 
 .socialIcons {
@@ -136,10 +142,10 @@ cite {
 .icon {
 	margin-right: 20px;
 	display: inline;
+}
 
-	&a svg:hover {
-		fill: #FFF;
-	}
+a svg:hover {
+	fill: #FFF;
 }
 
 a:hover {
