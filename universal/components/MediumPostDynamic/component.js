@@ -5,9 +5,10 @@ import dummyImage from './assets/postFPO.jpg'
 import ContentLabel from 'components/ContentLabel'
 
 type Props = {
-  cardType: 'halfBGimg' | 'halfThriveBrand' | 'halfNewsSignup' | 'quarter',
+  cardType: 'half' | 'quarter',
   postTitle: string,
   postAuthor: string,
+  hasImage: 'imageTrue' | 'imageFalse',
   hasSynopsis: 'true' | 'false',
   postSynopsis: Array<string>,
   postLabel: Object,
@@ -20,24 +21,22 @@ const postImage = dummyImage
 const defaultText = 'When providing a health benefits strategy, employers too often focus solely on physical health.'
 
 const MediumPostDynamic = ({
-  cardType = 'halfThriveBrand',
+  cardType = 'half',
   postTitle = 'Post Title',
   postAuthor = 'Post Author',
+  hasImage = 'imageTrue',
   hasSynopsis = 'true',
   postSynopsis = defaultText,
   postLabel = {},
-  postURL = 'http://google.com'
+  postURL = 'javascript:void(0)'
 }: Props) => {
   return (
     <figure className={styles[cardType]}>
-      <a href='{postURL}'>
+      <a className={styles.cardLink} href={postURL}>
         <ContentLabel {...postLabel} />
-        <span className={styles.imgContainer}>
-          <img src={postImage} alt={postTitle} />
-        </span>
         <figcaption className={styles.postMeta}>
           <header className={styles.header}>
-            <h4>{postTitle}</h4>
+            <h3>{postTitle}</h3>
           </header>
           <section className={styles[hasSynopsis]}>
             <p>{postSynopsis}</p>
@@ -48,6 +47,9 @@ const MediumPostDynamic = ({
             </span>
           </footer>
         </figcaption>
+        <span className={styles[hasImage]}>
+          <img className={styles.image} src={postImage} alt={postTitle} />
+        </span>
       </a>
     </figure>
   )

@@ -1,6 +1,119 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value breakpoints: 'styles/breakpoints.css';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from breakpoints;
+@value bodyCopy, gradientCardThrive from 'styles/colors.css';
 
+/* Default Card Container Styles + cardType */
 .postCard {
-  
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  color: bodyCopy;
+  cursor: pointer;
+  @media bp-mama-bear {
+    display: flex;
+    height: 100%;
+    margin: 0 mediumGutter;
+    color: white;
+  }
+}
+.half {
+  composes: postCard;
+  lost-column: 1;
+  @media bp-papa-bear {
+    lost-column: 1/2 mediumGutter;
+  }
+}
+.quarter {
+  composes: postCard;
+  lost-column: 1;
+  @media bp-papa-bear {
+    lost-column: 1/4 mediumGutter;
+  }
+}
+
+/* Link Wrapper */
+.cardLink {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  @media bp-mama-bear {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: .75rem 2rem;
+  }
+  @media bp-papa-bear {
+    padding: 1.25rem 5.125rem
+  }
+}
+
+/* Image Styles */
+.image {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Image Yes/No */
+.imageContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: -1000;
+}
+.imageTrue {
+  composes: imageContainer;
+  @media bp-mama-bear {
+    background: none;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    z-index: 1;
+  }
+}
+.imageFalse {
+  composes: imageContainer;
+  background: gradientCardThrive;
+  > .image {
+    display: none;
+  }
+}
+
+/* Card Label */
+.cardLink > i {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 1.25rem 0 0 1.25rem;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

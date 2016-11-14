@@ -29,3 +29,6 @@
 @value negMama: -3.25rem;
 @value negPapa: -4.375rem;
 @value negGrand: -5rem;
+
+/* Grid Margin Value, To Be Used In Conjunction With Lost Grid */
+@value mediumGutter: .375rem;
