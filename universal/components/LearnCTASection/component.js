@@ -12,19 +12,22 @@ const details = [
   eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare`
 ]
 
+const hello = `Let's Thrive`
+
 const LearnCTASection = ({ title = 'LearnCTASection' }: Props) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
+    <section className={styles.container}>
+      <section className={styles.content}>
         <h2>{title}</h2>
         <p>{details}</p>
         <section className={styles.button}>
           <Button
-            buttonText='Hello'
+            buttonText={hello}
+            buttonStyle='violet-medium'
           />
         </section>
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 

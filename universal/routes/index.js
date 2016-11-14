@@ -1,10 +1,12 @@
 import Content from 'layouts/Content'
 import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
+import Microsteps from 'layouts/Microsteps'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import Learn from 'layouts/Learn'
 import SignupForm from 'components/SignupForm'
 import Thrive from 'layouts/Thrive'
+import Pulse from 'layouts/Pulse'
 import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 
@@ -19,12 +21,20 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     childRoutes: [
       {
+        path: 'microsteps',
+        component: Microsteps
+      },
+      {
         path: 'learn',
         component: Learn
       },
       {
         path: 'thrive',
         component: Thrive
+      },
+      {
+        path: 'pulse',
+        component: Pulse
       },
       {
         path: 'signup',

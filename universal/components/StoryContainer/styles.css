@@ -1,0 +1,21 @@
+/*
+  This is the stylesheet for: StoryContainer
+*/
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.light {
+  composes: container;
+  background-color: white;
+}
+
+.dark {
+  composes: container;
+  background-color: #666;
+}

@@ -1,5 +1,6 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from "styles/breakpoints";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from "styles/breakpoints";
 @value navItem from "styles/fonts.css";
+@value white, ThriveGray, ThriveTeal, ThriveBlue from "styles/colors.css";
 
 .siteHeader {
   display: block;
@@ -15,9 +16,12 @@
   overflow-y: visible;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
-    background: linear-gradient(to right, rgba(66,44,117,1) 0%,rgba(0,195,201,1) 100%);
+    padding: 1.25rem 3rem 1.25rem 1.25rem;
+    position: relative;
+    background: white;
+    border-bottom: .25rem solid ThriveTeal;
     text-align: center;
-    overflow: visible;
+    overflow: hidden;
   }
 }
 
@@ -47,14 +51,13 @@
   padding: 1rem 1rem;
 }
 .thriveLogo {
-  width: 10rem;
+  width: 7rem;
   height: auto;
   margin: 0 0 0 0;
   padding: 0 0;
   float: none;
   z-index: 1200;
   @media bp-papa-bear {
-    width: 10rem;
     float: left;
   }
 }
@@ -69,13 +72,13 @@
   position: absolute;
   top: 0;
   right: -120%;
-  background: linear-gradient(to right, rgba(66,44,117,1) 0%,rgba(0,195,201,1) 100%);
+  background: rgba(255, 255, 255, .98);
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
     display: block;
     height: auto;
     padding: 0 0;
-    top: 1.5rem;
+    top: 2rem;
     right: auto;
     background: none;
   }
@@ -105,22 +108,19 @@
   float: left;
   font-family: navItem;
   font-size: 0.75rem;
-  letter-spacing: .1rem;
+  letter-spacing: .01rem;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: ThriveGray;
+  cursor: pointer;
   transition: all 150ms ease-in-out;
   @media bp-papa-bear {
     display: inline-block;
     width: auto;
     height: auto;
     margin: 0 .75rem;
-    padding: 0 0;
+    padding: .5rem 0;
     float: none;
-    border-bottom: 0px solid rgba(255, 255, 255, 0);
-    &:hover {
-      border-bottom: 2px solid rgba(255, 255, 255, 1);
-    }
   }
 }
 
@@ -134,51 +134,104 @@
   @media bp-papa-bear {
     width: auto;
     height: auto;
+    margin: 0 3rem 0 0;
     float: right;
-    position: absolute;
-    top: 0;
-    right: 2rem;
+    position: relative;
     text-align: right;
   }
 }
 
 .linkUtility {
   display: inline-block;
-  width: 50%;
+  width: 75%;
   height: auto;
-  margin: 0 25% 1rem 25%;
+  margin: 0 12.5% 1rem 12.5%;
   padding: .25rem 1.25rem;
-  float: none;
+  float: left;
   clear: both;
   background: transparent;
   border: 1px solid #fff;
   border-radius: 1.3125rem;
   font-family: navItem;
   font-size: 0.75rem;
-  letter-spacing: .08rem;
+  letter-spacing: .01rem;
   text-align: center;
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
   transition: all 150ms ease-in-out;
-  &:last-child {
-    margin: 0 25% 0 25%;
-  }
   @media bp-papa-bear {
     display: block;
     width: auto;
-    margin: -.25rem 0 0 .75rem;
-    float: left;
+    height: auto;
+    margin: 0 0 0 .75rem;
+    padding: .5rem 0;
     clear: none;
-    &:last-child {
-      margin:  -.25rem 0 0 .75rem;
+    background: none;
+    border: none;
+    text-align: right;
+    text-transform: uppercase;
+    color: ThriveGray;
+  }
+}
+.search {
+  display: none;
+  margin: 0 12.5% 1rem 12.5%;
+  padding: .25rem 1.25rem;
+  float: left;
+  clear: both;
+  position: relative;
+  transition: all 150ms ease-in-out;
+  @media bp-papa-bear {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 0 .75rem;
+    padding: .5rem .5rem;
+    clear: none;
+    background: none;
+    border: none;
+    text-align: right;
+  }
+}
+.searchIcon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.search {
+  fill: ThriveTeal;
+}
+
+.link, .linkUtility {
+  cursor: pointer;
+  @media bp-papa-bear {
+    position: relative;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .44rem;
+      height: .44rem;
+      margin: 0 auto 0 -.25rem;
+      padding: 0 0;
+      float: none;
+      background: ThriveTeal;
+      border-radius: .22rem;
+      position: absolute;
+      bottom: -3rem;;
+      left: 50%;
+      opacity: .85;
+      transition: all 150ms cubic-bezier(.04,.39,.94,.53);
     }
-  }
-  &:hover {
-    background: #fff;
-    color: rgba(0,195,201,1);
-  }
-  &#navLogin {
-    background: #fff;
+    &:hover {
+      color: ThriveTeal;
+      &::after {
+        bottom: 0;
+      }
+    }
   }
 }
 
@@ -186,15 +239,15 @@
   display: block;
   width: 2rem;
   height: 2rem;
-  margin: 1.375rem 1.375rem 0 0;
+  margin: 2.375rem 2.375rem 0 0;
   padding: 0 0;
   float: right;
   position: absolute;
   top: 0;
   right: 0;
-  background: black;
+  cursor: pointer;
   z-index: 9999;
-  > svg {
+  > .button {
     display: block;
     width: 2rem;
     height: 2rem;
@@ -203,6 +256,13 @@
   @media bp-papa-bear {
     display: none;
   }
+}
+.button {
+  transition: all 150ms cubic-bezier(.04,.39,.94,.53);
+}
+.topLine, .middleLine, .bottomLine {
+  fill: ThriveTeal;
+  transition: all 150ms cubic-bezier(.04,.39,.94,.53);
 }
 
 .siteHeaderAcitve {

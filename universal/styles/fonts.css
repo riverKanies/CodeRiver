@@ -1,10 +1,11 @@
-@value OpenSansLight: Open Sans Light;
-@value OpenSans: Open Sans;
-@value OpenSansSemiBold: Open Sans SemiBold;
-@value OpenSansExtraBold: Open Sans ExtraBold;
-@value Playfair: Playfair;
-@value PlayfairBlack: Playfair Black;
-@value PlayfairSC: Playfair SC;
-@value PlayfairSCBlack: Playfair SC Black;
+@value MonThin: MontserratThin;
+@value MonLight: MontserratLight;
+@value Mon: Montserrat;
+@value MonBold: MontserratBold;
+@value MonBlack: MontserratBlack;
 
-@value navItem: OpenSans;
+@value Play: Playfair;
+@value PlayBlack: PlayfairBlack;
+@value PlayBlackItalic: PlayfairBoldItalic;
+
+@value navItem: Mon;

@@ -3,12 +3,7 @@
 
 .container {
   lost-center: containerWidth flex;
-  padding: 2rem 1rem;
-}
-
-.title {
-  lost-column: 1;
-  text-align: center;
+  padding: 2rem 1rem 0rem 1rem;
 }
 
 .row {

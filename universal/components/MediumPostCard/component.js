@@ -1,10 +1,4 @@
 /* @flow */
-/*
- * adding eslint ignore rule for view components since we're rendering atributes
- * straight from the API
- */
-/* eslint camelcase: "never" */
-
 
 import React from 'react'
 import styles from './styles'

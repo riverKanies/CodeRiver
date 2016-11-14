@@ -1,7 +1,7 @@
-// Breakpoints
+/* Breakpoints */
 @value babyBear: 1rem;
 @value mamaBear: 29rem;
-@value papaBear: 40rem;
+@value papaBear: 46.875rem;
 @value grandBear: 53.75em;
 
 @value bp-baby-bear: (min-width: babyBear);
@@ -9,17 +9,23 @@
 @value bp-papa-bear: (min-width: papaBear);
 @value bp-grand-bear: (min-width: grandBear);
 
-// Container max-width cap
+/* Container max-width cap */
 @value containerWidth: 90rem;
 @value containerPadding: 1.875rem;
 
-// Universal Section Margins & Padding
-@value babyMargin: 2rem 0;
-@value mamaMargin: 4rem 0;
-@value papaMargin: 4.5rem 0;
-@value grandMargin: 5.5rem 0;
+/* Universal Section Margins & Padding */
+@value babyMargin: 2rem;
+@value mamaMargin: 3.25rem;
+@value papaMargin: 4.375rem;
+@value grandMargin: 5rem;
 
 @value babyPadding: 2rem 0;
-@value mamaPadding: 4rem 0;
-@value papaPadding: 4.5rem 0;
-@value grandPadding: 5.5rem 0;
+@value mamaPadding: 3.25rem 0;
+@value papaPadding: 4.375rem 0;
+@value grandPadding: 5rem 0;
+
+/* Negative Values */
+@value negBaby: -2rem;
+@value negMama: -3.25rem;
+@value negPapa: -4.375rem;
+@value negGrand: -5rem;

@@ -1,19 +1,12 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
-
-@define-mixin button $bgNormal, $colorNormal, $bgHover, $colorHover {
-  background: $bgNormal;
-  color: $colorNormal;
-  &:hover {
-    background: $bgHover;
-    color: $colorHover;
-  }
-}
+@value Mon from "styles/fonts.css";
+@value ThriveViolet, ThriveTeal, ThriveBlurple from "styles/colors.css";
 
 .button {
-  border: 1px solid;
-  border-radius: 40px;
-  font-family: RionaSans-Light;
+  border: 2px solid;
+  border-radius: 1px;
+  font-family: Mon;
   font-size: 14px;
   line-height: 20px;
   min-width: 120px;
@@ -25,26 +18,70 @@
   transition: all 200ms cubic-bezier(.33,.89,.34,.98);
 }
 
-.light {
+.violet {
+  composes: button;
+  border-color: ThriveViolet;
+  color: ThriveViolet;
+
+  &-medium {
+    composes: violet;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: violet;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveBlurple;
+    border-color: ThriveBlurple;
+    color: #fff;
+  }
+}
+
+.white {
   composes: button;
   border-color: #fff;
   color: #fff;
+
+  &-medium {
+    composes: white;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: white;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveViolet;
+    color: #fff;
+    border-color: ThriveViolet;
+  }
 }
 
-.light:hover {
-  background-color: #fff;
-  color: rgba(24, 27, 32, 100);
-}
-
-.dark {
+.teal {
   composes: button;
-  border-color: rgba(24, 27, 32, 100);
-  color: rgba(24, 27, 32, 100);
-}
+  border-color: ThriveTeal;
+  color: ThriveTeal;
 
-.dark:hover {
-  background-color: rgba(24, 27, 32, 100);
-  color: #fff;
+  &-medium {
+    composes: teal;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: teal;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveTeal;
+    color: #fff;
+    border-color: ThriveTeal;
+  }
 }
 
 .bannerButton {

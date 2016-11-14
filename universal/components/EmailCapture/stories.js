@@ -5,10 +5,10 @@ import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
 import EmailCapture from './component'
 
-const notes = 'This story demonstrates the props that can be passed to EmailCapture'
+const notes = 'This story demonstrates the component EmailCapture'
 
 const props = {
-  title: 'EmailCapture'
+  title: 'Thrive with us today!'
 }
 
 storiesOf('EmailCapture', module)
@@ -18,8 +18,6 @@ storiesOf('EmailCapture', module)
       <WithNotes notes={notes}>
         <EmailCapture
           title={text('Section Title', props.title)}
-          subTitle={text('Section Subtitle', props.subTitle)}
-          sectionText={text('Section Text', props.sectionText)}
         />
       </WithNotes>
     )
