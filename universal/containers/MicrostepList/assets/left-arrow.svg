@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="14px" viewBox="0 0 19 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>left arrow - blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="21.85 17.25 26.05 13.05 25 12 19 18 25 24 26.05 22.95 21.85 18.75 36 18.75 36 17.25"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-0.5" y="-0.5" width="18" height="13">
+            <rect x="18.5" y="11.5" width="18" height="13" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Microstep-Search" transform="translate(-611.000000, -790.000000)">
+            <g id="pagination" transform="translate(543.000000, 779.000000)">
+                <g id="btn---normal-copy" transform="translate(50.000000, 0.000000)">
+                    <g id="left-arrow---blue">
+                        <use fill="#004ACE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use stroke="#004ACE" mask="url(#mask-2)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

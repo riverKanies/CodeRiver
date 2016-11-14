@@ -28,7 +28,7 @@ class SearchForm extends React.Component {
       <div className={styles.filterContainer}>
         <p className={styles.filterDescription}>Search for a microstep and click the link to copy</p>
         <div className={styles.inputContainer}>
-          <span className={styles.inputHighlight}>
+          <span aria-hidden='true' className={styles.inputHighlight}>
             {this.props.filter}
           </span>
           <input

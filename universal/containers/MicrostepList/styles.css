@@ -79,7 +79,9 @@
 
 .listContainer {
   width: 100%;
+  min-height: 500px;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .paginate {
