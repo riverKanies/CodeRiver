@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/thriveScience.jpg'
