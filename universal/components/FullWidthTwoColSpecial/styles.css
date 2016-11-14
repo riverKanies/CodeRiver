@@ -132,54 +132,27 @@
   @media bp-papa-bear {
     padding: papaMargin 15%;
   }
+  > i {
+    display: inline-block;
+    margin: 2rem 0;
+    float: left;
+    clear: both;
+  }
+  p {
+    display: block;
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+  > a {
+    float: left;
+    clear: both;
+  }
 }
-
-/* Label + Label Colors */
-.label {
-  display: block;
-  margin: .75rem 0 0 0;
-  padding: .25rem .75rem;
-  float: left;
-  background: ThriveBlue;
-  font-family: Mon;
-  font-style: normal;
-  font-size: .75rem;
-  line-height: 100%;
-  letter-spacing: .1rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-}
-.defaultLabel {
-  composes: label;
-}
-.tealLabel {
-  composes: label;
-  background: ThriveTeal;
-}
-.blueLabel {
-  composes: label;
-  background: ThriveBlue;
-}
-.darkBlueLabel {
-  composes: label;
-  background: ThriveDarkBlue;
-}
-.royalBlueLabel {
-  composes: label;
-  background: ThriveRoyalBlue;
-}
-.blurpleLabel {
-  composes: label;
-  background: ThriveBlurple;
-}
-.violetLabel {
-  composes: label;
-  background: ThriveViolet;
-}
-
 .header {
-  lost-column: 1 flex;
-  margin-bottom: 2rem;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
   text-align: left;
 }
