@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import styles from './styles'
+import NextSVG from './assets/right-arrow.svg'
 
 import getFilteredMicrosteps from './selector'
 import { updatePage } from 'modules/MicrostepsFilter'
@@ -53,7 +54,7 @@ class Paginate extends React.Component {
 
     if (currentPage + 1 > totalPages) return null
 
-    return <a onClick={this.nextPage}> &gt;&gt; </a>
+    return <a onClick={this.nextPage}><img src={NextSVG} /></a>
   }
 
   render () {
