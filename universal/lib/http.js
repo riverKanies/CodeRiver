@@ -38,7 +38,7 @@ export function httpPost (route, data) {
     headers,
     method,
     body: JSON.stringify(data)
-  }).then(response => response.json())
+  }).then(parseResponse, parseResponse)
 }
 
 export function httpGet (route) {
