@@ -1,14 +1,13 @@
 import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/thriveScience.jpg'
+import ContentLabel from 'components/ContentLabel'
 import Button from 'components/Button'
 
 type Props = {
   sectionClass: 'default' | 'lightGray',
   title: string,
-  label: string,
-  labelColor: 'defaultLabel' | 'tealLabel' | 'blueLabel' | 'darkBlueLabel' |
-    'royalBlueLabel' | 'blurpleLabel' | 'violetLabel',
+  label: Object,
   sectionText: Array<string>,
   image: string,
   button: Object
@@ -21,8 +20,7 @@ mattis consectetur purus sit amet fermentum.`]
 const FullWidthTwoCol = ({
   sectionClass = 'default',
   title = 'Title',
-  label = 'Label',
-  labelColor = 'blue',
+  label = {},
   sectionText = defaultText,
   image = dummyImage,
   button = {}
@@ -37,7 +35,7 @@ const FullWidthTwoCol = ({
         </div>
         <div className={styles.column}>
           <section className={styles.sectionContent}>
-            <i className={styles[labelColor]}>{label}</i>
+            <ContentLabel {...label} />
             <header className={styles.header}>
               <h2>{title}</h2>
             </header>
