@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles'
-import Banner from 'components/Banner'
 import MediumPostGrid from 'components/MediumPostGrid'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
@@ -44,7 +43,7 @@ const twoColScience = {
   }
 }
 const twoColLife = {
-  sectionClass: 'lightGray',
+  sectionClass: 'transparent',
   title: 'The Science Behind Thrive',
   label: 'Science',
   labelColor: 'defaultLabel',
@@ -67,7 +66,6 @@ const twoColLife = {
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
-      <Banner />
       <MediumPostGrid />
       <FullWidthText {...sectionHWProps}>
         <Button {...btnHWProps} />
