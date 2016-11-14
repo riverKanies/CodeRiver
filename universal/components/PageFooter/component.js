@@ -27,7 +27,7 @@ const PageFooter = ({
 }: Props) => {
   return (
     <section className={styles.footer}>
-	    <div className={styles.footerContainer}>
+	    <div className={styles.container}>
 	    	<section className={styles.linksColumn}>
 		      <div className={styles.heading}>
 		      	{heading}
