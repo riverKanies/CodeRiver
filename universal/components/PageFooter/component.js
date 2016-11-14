@@ -54,7 +54,7 @@ const PageFooter = ({
 		      </ul>
 	    	</section>
 	    	<section className={styles.footerQuote}>
-	        {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
+	        {quote.map((paragraph, index) => <p className={styles.quote} key={index}>{quote}</p>)}
 	        <cite>{citation}</cite>
 	      </section>
 	    	<section className={styles.socialColumn}>
@@ -64,9 +64,15 @@ const PageFooter = ({
 		      <div className={styles.logo}>
 		      	{logoFooter}
 		      </div>
+		      <div className={styles.socialIcons}>
+		      	<span>df</span>
+		      	<span>df</span>
+		      	<span>df</span>
+		      	<span>df</span>
+		      </div>
 	    	</section>
 	    	<section className={styles.copyright}>
-	    		Thrive Global © 2016  |
+	    		<p>Thrive Global © 2016</p>
 	    		<Link to='/' className={styles.link}>
 	        	Privacy
 	        </Link> &
