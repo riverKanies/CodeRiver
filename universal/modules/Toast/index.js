@@ -9,3 +9,5 @@ export const toast = {
   KEY,
   reducer
 }
+
+export default toast
