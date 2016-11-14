@@ -1,16 +1,24 @@
 @value breakpoints: "styles/breakpoints";
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
 
+.footer {
+	background-color: #222328;
+  lost-utility: clearfix;
+  lost-column: 1;
+  margin: 0 auto;
+  padding: 60px 40px;
+  height: 400px;
+  overflow: hidden;
+}
+
 .footerContainer {
 	background-color: #222328;
   lost-utility: clearfix;
   lost-column: 1;
   margin: 0 auto;
-  padding: 0 40px;
   height: 400px;
-  overflow: hidden;
 
-  @media bp-baby-bear {
+  /*@media bp-grand-bear {
     display: flex;
     flex-direction: column;
     flex-flow: center;
@@ -18,7 +26,7 @@
     justify-content: center;
     overflow: hidden;
     height: auto;
-  }
+  }*/
 }
 
 .footerQuote {
@@ -28,22 +36,27 @@
 	font-size: 20px;
 	lost-column: 3/6;
 	margin-right: 5%!important;
-	flex-direction: column;
+
+	&::before {
+		content: '"';
+		font-size: 50px;
+		float: left;
+		margin: 30px 20px 0 -40px;
+		color: #FFF;
+	}
 }
 
-.linksContainer {
+.linksColumn {
 	display: block;
 	lost-column: 1.3/6;
 	float: left;
 	margin-right: 5%!important;
-	flex-direction: column;
 }
 
-.socialContainer {
+.socialColumn {
 	display: block;
-	lost-column: 1.5/6;
+	lost-column: 1.2/6;
 	float: left;
-	flex-direction: column;
 }
 
 .copyright {
@@ -72,17 +85,19 @@ cite {
 .link {
 	color: #acacac;
 	padding: 0 5px;
-
-	&:hover {
-		color: #FFF;
-	}
 }
 
 .footerLinks {
 	color: #636363;
 	font-size: 12px;
+	font-weight: bold;
+  margin-top: 5px;
 }
 
 .logo {
 	width: 100%;
+}
+
+a:hover {
+	color: #FFF;
 }

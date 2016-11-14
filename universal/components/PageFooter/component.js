@@ -1,8 +1,8 @@
 /* @flow */
 import React from 'react'
-import styles from './styles'
 import logo from './assets/logo-footer.png'
 import { Link } from 'react-router'
+import styles from './styles'
 
 type Props = {
   title: string,
@@ -26,54 +26,56 @@ const PageFooter = ({
 	logoFooter = logo
 }: Props) => {
   return (
-    <div className={styles.footerContainer}>
-      <section className={styles.footerQuote}>
-        {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
-        <cite>{citation}</cite>
-      </section>
-    	<section className={styles.linksContainer}>
-	      <div className={styles.heading}>
-	      	{heading}
-	      </div>
-	      <ul>
-	      	<li className={styles.footerLinks}>
-	          Press
-	      	</li>
-	      	<li className={styles.footerLinks}>
-	          Become a Contributor
-	      	</li>
-	      	<li className={styles.footerLinks}>
-	          Advertise
-	      	</li>
-	      	<li className={styles.footerLinks}>
-	          Careers
-	      	</li>
-	      	<li className={styles.footerLinks}>
-	          Site Map
-	      	</li>
-	      	<li className={styles.footerLinks}>
-	          Contact
-	      	</li>
-	      </ul>
-    	</section>
-    	<section className={styles.socialContainer}>
-	      <div className={styles.heading}>
-	      	{heading2}
-	      </div>
-	      <div className={styles.logo}>
-	      	{logoFooter}
-	      </div>
-    	</section>
-    	<section className={styles.copyright}>
-    		Thrive Global © 2016  |
-    		<Link to='/privacy' className={styles.link}>
-        	Privacy
-        </Link> &
-				<Link to='/terms' className={styles.link}>
-        	Terms
-        </Link>
-    	</section>
-    </div>
+    <section className={styles.footer}>
+	    <div className={styles.footerContainer}>
+	    	<section className={styles.linksColumn}>
+		      <div className={styles.heading}>
+		      	{heading}
+		      </div>
+		      <ul>
+		      	<li className={styles.footerLinks}>
+		          <Link to='/'>Press</Link>
+		      	</li>
+		      	<li className={styles.footerLinks}>
+		          <Link to='/'>Become a Contributor</Link>
+		      	</li>
+		      	<li className={styles.footerLinks}>
+		          <Link to='/'>Advertise</Link>
+		      	</li>
+		      	<li className={styles.footerLinks}>
+		          <Link to='/'>Careers</Link>
+		      	</li>
+		      	<li className={styles.footerLinks}>
+		          <Link to='/'>Site Map</Link>
+		      	</li>
+		      	<li className={styles.footerLinks}>
+		          <Link to='/'>Contact</Link>
+		      	</li>
+		      </ul>
+	    	</section>
+	    	<section className={styles.footerQuote}>
+	        {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
+	        <cite>{citation}</cite>
+	      </section>
+	    	<section className={styles.socialColumn}>
+		      <div className={styles.heading}>
+		      	{heading2}
+		      </div>
+		      <div className={styles.logo}>
+		      	{logoFooter}
+		      </div>
+	    	</section>
+	    	<section className={styles.copyright}>
+	    		Thrive Global © 2016  |
+	    		<Link to='/' className={styles.link}>
+	        	Privacy
+	        </Link> &
+					<Link to='/' className={styles.link}>
+	        	Terms
+	        </Link>
+	    	</section>
+	    </div>
+	  </section>
   )
 }
 
