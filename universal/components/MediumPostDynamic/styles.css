@@ -5,61 +5,27 @@
 /* Default Card Container Styles */
 .postCard {
   display: block;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 0;
+  height: 100%;
+  margin: 0 mediumGutter;
+  padding: 1.25rem 0;
   float: left;
   position: relative;
   color: bodyCopy;
   cursor: pointer;
-  @media bp-papa-bear {
-    lost-flex-container: column;
-    height: 100%;
-    margin: 0 mediumGutter;
-  }
+  /* Card Label */
+  > i {
+   display: block;
+   width: auto;
+   height: auto;
+   margin: 1.25rem 0 0 1.25rem;
+   float: left;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+ }
 }
 /* Composed cardType(s) at End of File for Scoping Reasons */
-/* Card Label */
-.cardLink > i {
-  display: block;
-  width: auto;
-  height: auto;
-  margin:  0 0;
-  float: left;
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  z-index: 1000;
-}
-
-/* Link Wrapper */
-.cardLink {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 0;
-  padding: 0 0;
-  float: left;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* Content Wrapper */
-.cardContent {
-  display: block;
-  width: 100%;
-  position: relative;
-  @media bp-papa-bear {
-    lost-flex-container: column;
-    height: 100%;
-    margin: 0 0 0 0;
-    padding: 1.25rem 5.125rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
 
 /* Image Container Styles */
 .imageContainer {
@@ -78,9 +44,6 @@
   width: 100%;
   height: auto;
   float: left;
-  position: absolute;
-  top: 0;
-  left: 0;
   background: white;
   overflow: hidden;
 }
@@ -99,16 +62,20 @@
   }
 }
 
-/* Card Content Styles */
-/* Post Meta Container */
-.postMeta {
+/* Content Wrapper */
+.cardContent {
+  lost-flex-container: column;
+  flex-flow: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 0;
+  height: 100%;
+  padding: 0 5.125em;
+  position: relative;
 }
+/* Card Content Styles */
 /* Header */
 .header {
-  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -118,7 +85,6 @@
 }
 /* Synopsis True/False */
 .synopsisTrue {
-  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -131,10 +97,9 @@
 }
 /* Content Footer + Composed Styles */
 .footer {
-  display: block;
-  width: 100%;
+  lost-column: 1 flex;
   height: auto;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0 0;
   float: left;
   text-align: left;
@@ -143,33 +108,31 @@
 /* Composed cardType */
 .half {
   composes: postCard;
-  lost-column: 1;
+  lost-column: 1/2 flex mediumGutter;
   background: gradientCardThrive;
-  @media bp-papa-bear {
-    lost-column: 1/2 mediumGutter;
+  .footer {
+    width: 100%;
+    padding: .625rem 1.25rem;
+    background: rgba(0, 0, 0, .2);
+    border-radius: .25rem;
+  }
+  .authorWrap {
+    text-align: right;
+    color: white;
   }
 }
 .halfImage {
   composes: postCard;
-  lost-column: 1;
-  background: white;
-  @media bp-papa-bear {
-    lost-column: 1/2 mediumGutter;
-  }
+  lost-column: 1/2 flex mediumGutter;
+  background: none;
 }
 .quarterWhite {
   composes: postCard;
-  lost-column: 1;
+  lost-column: 1/4 mediumGutter;
   background: white;
-  @media bp-papa-bear {
-    lost-column: 1/4 mediumGutter;
-  }
 }
 .quarterBlue {
   composes: postCard;
-  lost-column: 1;
   background: ThriveBlue;
-  @media bp-papa-bear {
-    lost-column: 1/4 mediumGutter;
-  }
+  lost-column: 1/4 mediumGutter;
 }
