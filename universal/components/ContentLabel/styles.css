@@ -5,7 +5,6 @@
 /* Label + Label Colors */
 .label {
   display: block;
-  margin: .75rem 0 0 0;
   padding: .25rem .75rem;
   float: left;
   background: ThriveBlue;

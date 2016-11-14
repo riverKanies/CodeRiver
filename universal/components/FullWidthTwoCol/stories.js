@@ -18,8 +18,10 @@ const defaultButton = {
   linkTo: 'javascript:void(0)',
   buttonStyle: 'violet'
 }
+
 const defaultLabel = {
-  label: 'Label'
+  label: 'Label',
+  labelColor: 'defaultLabel'
 }
 
 const props = {
