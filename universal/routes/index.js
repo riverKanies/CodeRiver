@@ -4,7 +4,7 @@ import Microsteps from 'layouts/Microsteps'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import Learn from 'layouts/Learn'
-import SignupForm from 'components/SignupForm'
+import SignUp from 'layouts/SignUp'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Engage from 'layouts/Engage'
@@ -38,7 +38,7 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'signup',
-        component: SignupForm
+        component: SignUp
       },
       {
         path: 'welcome',

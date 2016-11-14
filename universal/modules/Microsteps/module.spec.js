@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import { reducer, initialState, actions, loadMicrosteps } from './index'
 import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
-import { HOST_URL } from 'utils/http'
+import { HOST_URL } from 'lib/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
