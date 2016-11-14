@@ -1,72 +1,67 @@
 @value breakpoints: 'styles/breakpoints.css';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from breakpoints;
-@value bodyCopy, gradientCardThrive from 'styles/colors.css';
+@value bodyCopy, ThriveBlue, gradientCardThrive from 'styles/colors.css';
 
-/* Default Card Container Styles + cardType */
+/* Default Card Container Styles */
 .postCard {
   display: block;
-  width: 100%;
+  height: auto;
   margin: 0 auto;
   padding: 0 0;
   float: left;
   position: relative;
   color: bodyCopy;
   cursor: pointer;
-  @media bp-mama-bear {
-    display: flex;
+  @media bp-papa-bear {
+    lost-flex-container: column;
     height: 100%;
     margin: 0 mediumGutter;
-    color: white;
   }
 }
-.half {
-  composes: postCard;
-  lost-column: 1;
-  @media bp-papa-bear {
-    lost-column: 1/2 mediumGutter;
-  }
-}
-.quarter {
-  composes: postCard;
-  lost-column: 1;
-  @media bp-papa-bear {
-    lost-column: 1/4 mediumGutter;
-  }
+/* Composed cardType(s) at End of File for Scoping Reasons */
+/* Card Label */
+.cardLink > i {
+  display: block;
+  width: auto;
+  height: auto;
+  margin:  0 0;
+  float: left;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 1000;
 }
 
 /* Link Wrapper */
 .cardLink {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0 0;
   padding: 0 0;
   float: left;
-  position: relative;
-  @media bp-mama-bear {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: .75rem 2rem;
-  }
-  @media bp-papa-bear {
-    padding: 1.25rem 5.125rem
-  }
-}
-
-/* Image Styles */
-.image {
-  display: block;
-  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
-  object-fit: cover;
-  object-position: center center;
 }
 
-/* Image Yes/No */
+/* Content Wrapper */
+.cardContent {
+  display: block;
+  width: 100%;
+  position: relative;
+  @media bp-papa-bear {
+    lost-flex-container: column;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 1.25rem 5.125rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Image Container Styles */
 .imageContainer {
   display: block;
   width: 100%;
@@ -77,43 +72,104 @@
   background: white;
   z-index: -1000;
 }
+/* Image Styles */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  overflow: hidden;
+}
+/* Image True/False Composed */
 .imageTrue {
   composes: imageContainer;
   @media bp-mama-bear {
     background: none;
   }
-  &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0 0;
-    padding: 0 0;
-    float: left;
-    background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .6;
-    z-index: 1;
-  }
 }
 .imageFalse {
   composes: imageContainer;
-  background: gradientCardThrive;
-  > .image {
+  display: none;
+  .image {
     display: none;
   }
 }
 
-/* Card Label */
-.cardLink > i {
+/* Card Content Styles */
+/* Post Meta Container */
+.postMeta {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+}
+/* Header */
+.header {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  margin: 1.25rem 0 0 1.25rem;
+  margin: 0 auto;
+  padding: 0 0;
   float: left;
-  position: absolute;
-  top: 0;
-  left: 0;
+  text-align: left;
+}
+/* Synopsis True/False */
+.synopsisTrue {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: left;
+}
+.synopsisFalse {
+  display: none;
+}
+/* Content Footer + Composed Styles */
+.footer {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: left;
+}
+
+/* Composed cardType */
+.half {
+  composes: postCard;
+  lost-column: 1;
+  background: gradientCardThrive;
+  @media bp-papa-bear {
+    lost-column: 1/2 mediumGutter;
+  }
+}
+.halfImage {
+  composes: postCard;
+  lost-column: 1;
+  background: white;
+  @media bp-papa-bear {
+    lost-column: 1/2 mediumGutter;
+  }
+}
+.quarterWhite {
+  composes: postCard;
+  lost-column: 1;
+  background: white;
+  @media bp-papa-bear {
+    lost-column: 1/4 mediumGutter;
+  }
+}
+.quarterBlue {
+  composes: postCard;
+  lost-column: 1;
+  background: ThriveBlue;
+  @media bp-papa-bear {
+    lost-column: 1/4 mediumGutter;
+  }
 }
