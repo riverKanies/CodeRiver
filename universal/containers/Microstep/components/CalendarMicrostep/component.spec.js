@@ -6,7 +6,7 @@ import lolex from 'lolex'
 
 import CalendarMicrostep from './component'
 
-import { HOST_URL } from 'utils/http'
+import { HOST_URL } from 'lib/http'
 
 describe('<CalendarMicrostep />', () => {
   const microstep = {

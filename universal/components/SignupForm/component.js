@@ -1,27 +1,7 @@
 /* @flow */
 import React from 'react'
 import { Field } from 'redux-form'
-
-type renderFieldProps = {
-  input: Object,
-  label: string,
-  type: string,
-  meta: {
-    touched: boolean,
-    error: string
-  }
-};
-
-const renderField = ({input, label, type, meta: { touched, error }}: renderFieldProps) => {
-  const _error = (touched && error) ? error : undefined
-  return (
-    <label>
-      {label}
-      {_error}
-      <Field {...input} component='input' type={type} />
-    </label>
-  )
-}
+import Input from 'components/Input'
 
 type renderSubmitField = {
   valid: boolean,
@@ -50,19 +30,19 @@ type signupProps = {
 
 const SignUpForm = (props: signupProps) => {
   return (
-    <form style={{ marginTop: '100px' }}>
+    <form style={{ marginTop: '100px', backgroundColor: 'blue' }}>
       <Field
-        component={renderField}
+        component={Input}
         name='email'
         type='email'
         label='email' />
       <Field
-        component={renderField}
+        component={Input}
         name='password'
         type='password'
         label='password' />
       <Field
-        component={renderField}
+        component={Input}
         name='password_confirmation'
         type='password'
         label='password_confirmation' />

@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 
 import callAPI from 'modules/Middleware/callApi'
 import { reducer, initialState, actions, loadMicrostep } from './index'
-import { HOST_URL } from 'utils/http'
+import { HOST_URL } from 'lib/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
