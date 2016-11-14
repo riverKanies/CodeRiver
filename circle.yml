@@ -12,9 +12,9 @@ test:
         background: true
     - sleep 5
   override:
+    - npm run lint
     - npm run analyze
-    - npm run deploy:test
-    - npm run test:all
+    - npm run test
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
 
 deployment:
