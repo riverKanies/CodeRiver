@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from "styles/breakpoints.css";
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
-@value Mon, Play from "styles/fonts.css";
+@value Mon, Playfair from "styles/fonts.css";
 
 /* Parent Most Container + BG Color Variants */
 .fullWidthTwoCol {
