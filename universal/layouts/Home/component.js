@@ -3,6 +3,12 @@ import styles from './styles'
 import MediumPostGridDynamic from 'components/MediumPostGridDynamic'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
+<<<<<<< 81e7f329424991897b0dfaac0054d8d0d10252fe
+=======
+import Button from 'components/Button'
+import FeaturedProduct from 'components/FeaturedProduct'
+import EmailCapture from 'components/EmailCapture'
+>>>>>>> WIP
 import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
 import thriveScience from './assets/thriveScience.jpg'
@@ -52,6 +58,7 @@ export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
+      <FeaturedProduct />
       <ThriveStoryCarousel />
       <QuoteSection />
       <FullWidthTwoCol {...twoColScience} />

@@ -3,5 +3,13 @@
 */
 
 .container {
+  lost-center: 1200px;
+}
 
+.content {
+}
+
+.product {
+  background-color: white;
+  lost-column: 1/4;
 }
