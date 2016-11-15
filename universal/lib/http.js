@@ -25,12 +25,19 @@ function parseResponse (response) {
   return response.json()
 }
 
-export function httpPost (route, data) {
-  const method = 'POST'
-  const headers = {
+export function loadHeaders () {
+  const defaultHeaders = {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   }
+  const keys = window.localStorage.getItem('thrive_user_headers')
+
+  return (keys) ? { ...defaultHeaders, ...JSON.parse(keys) } : defaultHeaders
+}
+
+export function httpPost (route, data) {
+  const method = 'POST'
+  const headers = loadHeaders()
 
   const FULL_PATH = HOST_URL + route
 
@@ -42,7 +49,11 @@ export function httpPost (route, data) {
 }
 
 export function httpGet (route) {
-  return fetch(HOST_URL + route)
+  const headers = loadHeaders()
+
+  const FULL_PATH = HOST_URL + route
+
+  return fetch(FULL_PATH, { headers })
     .then(parseResponse, parseResponse)
 }
 

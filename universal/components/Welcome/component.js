@@ -3,13 +3,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 class Welcome extends React.Component {
-  componentDidMount () {
+  componentWillMount () {
     const { token, client_id, uid } = this.props.location.query
     const headers = {
       'access-token': token,
       client: client_id,
       uid: decodeURIComponent(uid)
     }
+
     localStorage.setItem('thrive_user_headers', JSON.stringify(headers))
   }
 
