@@ -25,12 +25,6 @@ class Welcome extends React.Component {
     }
   }
 
-  componentDidMount () {
-    const { dispatch } = this.props
-
-    dispatch(checkSession())
-  }
-
   render () {
     return <Profile />
   }

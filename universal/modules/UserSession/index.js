@@ -1,5 +1,5 @@
 /* @flow */
-import { httpGet, httpPost } from 'lib/http'
+import { httpGet, httpPost, httpDelete } from 'lib/http'
 import baseActions from 'modules/baseActions'
 
 // Name
@@ -62,5 +62,16 @@ export function createSession (data: any) {
       actions.createFailure
     ],
     callAPI: () => httpPost('/api/auth/sign_in', data)
+  }
+}
+
+export function deleteSession () {
+  return {
+    types: [
+      actions.deletePending,
+      actions.deleteSuccess,
+      actions.deleteFailure
+    ],
+    callAPI: () => httpDelete('/api/auth/sign_out')
   }
 }

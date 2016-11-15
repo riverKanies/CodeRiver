@@ -1,10 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import SignUpForm from './container'
+import LoginForm from './container'
 
-describe('(Container) SignUpForm', () => {
-  const wrapper = shallow(<SignUpForm />)
+describe('(Container) LoginForm', () => {
+  const wrapper = shallow(<LoginForm />)
 
   it('should require a valid email', () => {
     const expectedResult = wrapper.props().validate()
@@ -28,29 +28,5 @@ describe('(Container) SignUpForm', () => {
     const expectedResult = wrapper.props().validate({'password': '12345678'})
 
     expect(Object.keys(expectedResult)).not.toContain('password')
-  })
-
-  it('should require a password confirmation', () => {
-    const expectedResult = wrapper.props().validate()
-
-    expect(Object.keys(expectedResult)).toContain('password_confirmation')
-  })
-
-  it('should accept a valid password confirmation', () => {
-    const expectedResult = wrapper.props().validate({
-      'password': '12345678',
-      'password_confirmation': '12345678'
-    })
-
-    expect(Object.keys(expectedResult)).not.toContain('password_confirmation')
-  })
-
-  it('should reject non matching passwords', () => {
-    const expectedResult = wrapper.props().validate({
-      'password': '123456789',
-      'password_confirmation': '12345678'
-    })
-
-    expect(Object.keys(expectedResult)).toContain('password_confirmation')
   })
 })

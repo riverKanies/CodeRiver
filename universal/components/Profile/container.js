@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Profile from './component'
-import { checkSession } from 'modules/UserSession'
+import { checkSession, deleteSession } from 'modules/UserSession'
 import selector from './selector'
 import LoginForm from 'components/LoginForm'
 
@@ -13,10 +13,20 @@ type Props = {
 }
 
 class ProfileContainer extends React.Component {
+  logOutUser: Function
   props: Props
+
+  constructor () {
+    super(...arguments)
+    this.logOutUser = this.logOutUser.bind(this)
+  }
 
   componentWillMount () {
     this.props.dispatch(checkSession())
+  }
+
+  logOutUser () {
+    this.props.dispatch(deleteSession())
   }
 
   render () {
@@ -24,17 +34,11 @@ class ProfileContainer extends React.Component {
       return <LoginForm />
     }
 
-    return <Profile {...this.props.userData} />
+    return <Profile
+      {...this.props.userData}
+      logOutAction={this.logOutUser}
+     />
   }
 }
-
-// const mapStateToProps = (state) => {
-//   const { renderLoginForm, userData } = selector(state)
-//
-//   return {
-//     renderLoginForm,
-//     userData
-//   }
-// }
 
 export default connect(selector)(ProfileContainer)

@@ -64,6 +64,10 @@ export function httpPut (route, data) {
   return httpPost(route, data, 'PUT')
 }
 
+export function httpDelete (route, data) {
+  return httpPost(route, data, 'DELETE')
+}
+
 export function httpGet (route) {
   const headers = loadHeaders()
 
