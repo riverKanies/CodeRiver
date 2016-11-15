@@ -1,27 +1,31 @@
 @value breakpoints: 'styles/breakpoints.css';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from breakpoints;
 @value bodyCopy, ThriveBlue, gradientCardThrive from 'styles/colors.css';
+@value MonBold, Playfair, PlayBlack from 'styles/fonts.css';
+
+@value imgCardBaby: 20rem;
+@value imgCardMama: 25rem;
+@value imgCardPapa: 30rem;
 
 /* Default Card Container Styles */
 .postCard {
   display: block;
-  height: 100%;
+  height: auto;
   margin: 0 mediumGutter;
-  padding: 1.25rem 0;
+  padding: 0 0;
   float: left;
   position: relative;
   color: bodyCopy;
-  cursor: pointer;
   /* Card Label */
   > i {
    display: block;
    width: auto;
    height: auto;
-   margin: 1.25rem 0 0 1.25rem;
+   margin: 0 0;
    float: left;
    position: absolute;
-   top: 0;
-   left: 0;
+   top: 1.25rem;
+   left: 1.25rem;
    z-index: 1000;
  }
 }
@@ -31,47 +35,71 @@
 .imageContainer {
   display: block;
   width: 100%;
-  height: 100%;
+  height: imgCardBaby;
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
+  text-align: center;
   z-index: -1000;
+  overflow: hidden;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardPapa;
+  }
 }
 /* Image Styles */
 .image {
-  display: block;
+  display: inline-block;
   width: 100%;
-  height: auto;
-  float: left;
-  background: white;
-  overflow: hidden;
+  object-fit: cover;
 }
 /* Image True/False Composed */
 .imageTrue {
   composes: imageContainer;
-  @media bp-mama-bear {
-    background: none;
+  background: white;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1;
   }
 }
 .imageFalse {
   composes: imageContainer;
-  display: none;
+  background: gradientCardThrive;
   .image {
     display: none;
   }
 }
 
 /* Content Wrapper */
-.cardContent {
+.postContent {
   lost-flex-container: column;
   flex-flow: center;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
   width: 100%;
-  height: 100%;
+  height: imgCardBaby;
   padding: 0 5.125em;
   position: relative;
+  z-index: 100;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardPapa;
+  }
 }
 /* Card Content Styles */
 /* Header */
@@ -82,6 +110,7 @@
   padding: 0 0;
   float: left;
   text-align: left;
+  color: white;
 }
 /* Synopsis True/False */
 .synopsisTrue {
@@ -91,40 +120,96 @@
   padding: 0 0;
   float: left;
   text-align: left;
+  color: white;
+  p {
+    color: rgba(255, 255, 255, .7);
+    transition: color 100ms ease-in-out;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 .synopsisFalse {
   display: none;
 }
 /* Content Footer + Composed Styles */
 .footer {
-  lost-column: 1 flex;
+  width: 100%;
   height: auto;
   margin: 0 0;
   padding: 0 0;
   float: left;
   text-align: left;
 }
+.authorWrap {
+  font-size: .75rem;
+  font-family: MonBold;
+  i {
+    margin-right: .25rem;
+    font-family: PlayBlack;
+  }
+}
 
 /* Composed cardType */
 .half {
   composes: postCard;
   lost-column: 1/2 flex mediumGutter;
+  height: imgCardbaby;
   background: gradientCardThrive;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardPapa;
+  }
   .footer {
     width: 100%;
+    margin: 2.5rem auto;
     padding: .625rem 1.25rem;
     background: rgba(0, 0, 0, .2);
     border-radius: .25rem;
   }
   .authorWrap {
+    display: block;
+    float: right;
     text-align: right;
     color: white;
+  }
+  &:hover {
+    p {
+      color: rgba( 255, 255, 255, 1);
+    }
   }
 }
 .halfImage {
   composes: postCard;
   lost-column: 1/2 flex mediumGutter;
+  height: imgCardbaby;
   background: none;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardPapa;
+  }
+  .footer {
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: .625rem 1.25rem;
+    background: rgba(0, 0, 0, .2);
+    border-radius: .25rem;
+  }
+  .authorWrap {
+    display: block;
+    float: right;
+    text-align: right;
+    color: white;
+  }
+  &:hover {
+    p {
+      color: rgba( 255, 255, 255, 1);
+    }
+  }
 }
 .quarterWhite {
   composes: postCard;

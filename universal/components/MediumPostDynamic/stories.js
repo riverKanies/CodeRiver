@@ -1,14 +1,22 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
 import MediumPostDynamic from './component'
 
 const notes = 'This story demonstrates the props that can be passed to MediumPostDynamic'
 
+const cardType = [
+  'half',
+  'halfImage',
+  'quarterWhite',
+  'quarterBlue'
+]
+
 const props = {
-  title: 'MediumPostDynamic'
+  hasImage: 'imageTrue' | 'imageFalse',
+  hasSynopsis: 'synopsisTrue' | 'synopsisFalse'
 }
 
 storiesOf('MediumPostDynamic', module)
@@ -17,9 +25,7 @@ storiesOf('MediumPostDynamic', module)
     return (
       <WithNotes notes={notes}>
         <MediumPostDynamic
-          title={text('Post Name', props.title)}
-          collectionName={text('Medium Collection', props.collectionName)}
-          postExcerpt={text('Post Excrept', props.postExcerpt)}
+          cardType={select('Card Type', cardType, 'halfImage')}
         />
       </WithNotes>
     )
