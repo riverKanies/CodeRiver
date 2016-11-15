@@ -7,7 +7,6 @@ import getFilteredMicrosteps from './selector'
 import styles from './styles'
 import List from './List'
 import Filter from './Filter'
-import Paginate from './Paginate'
 
 type Props = {
   dispatch: Function,
@@ -28,14 +27,8 @@ export class MicrostepsContainer extends React.Component {
 
     return (
       <div className={styles.container}>
-        <h1>Microstep Search</h1>
-        <div className={styles.inputContainer}>
-          <Filter />
-        </div>
-        <div className={styles.inputContainer}>
-          <List list={microsteps} />
-          <Paginate />
-        </div>
+        <Filter />
+        <List list={microsteps} />
       </div>
     )
   }
