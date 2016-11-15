@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import styles from './styles'
-import NextSVG from './assets/right-arrow.svg'
 
 import getFilteredMicrosteps from './selector'
 import { updatePage } from 'modules/MicrostepsFilter'
@@ -44,17 +43,31 @@ class Paginate extends React.Component {
   renderPrev () {
     const { currentPage } = this.props
 
-    if (currentPage - 1 < 0) return null
+    const ClickMe = (currentPage - 1 < 0) ? <div /> : (
+      <a onClick={this.prevPage} className={styles.nextLink}>
+        <svg className={styles.arrow} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+          <title>Left Arrow</title>
+          <path d='M3.22,21.13,13.49,31.4a1.6,1.6,0,1,0,2.27-2.27L8.23,21.6H35.65a1.6,1.6,0,0,0,0-3.21H8.23l7.53-7.53A1.6,1.6,0,0,0,13.49,8.6L3.22,18.87A1.6,1.6,0,0,0,3.22,21.13Z' />
+        </svg>
+      </a>
+    )
 
-    return <a onClick={this.prevPage}> &lt;&lt; </a>
+    return <div className={styles.leftArrowContainer}>{ClickMe}</div>
   }
 
   renderNext () {
     const { currentPage, totalPages } = this.props
 
-    if (currentPage + 1 > totalPages) return null
+    const ClickMe = (currentPage + 1 > totalPages) ? <div /> : (
+      <a onClick={this.nextPage} className={styles.backLink}>
+        <svg className={styles.arrow} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+          <title>Next Arrow</title>
+          <path d='M36.78,18.87,26.51,8.6a1.6,1.6,0,0,0-2.27,2.27l7.53,7.53H4.35a1.6,1.6,0,0,0,0,3.21H31.77l-7.53,7.53a1.6,1.6,0,0,0,2.27,2.27L36.78,21.13A1.6,1.6,0,0,0,36.78,18.87Z' />
+        </svg>
+      </a>
+    )
 
-    return <a onClick={this.nextPage}><img src={NextSVG} /></a>
+    return <div className={styles.rightArrowContainer}>{ClickMe}</div>
   }
 
   render () {
@@ -62,7 +75,9 @@ class Paginate extends React.Component {
     return (
       <div className={styles.paginate}>
         {this.renderPrev()}
-        {this.props.currentPage}
+        <p className={styles.number}>
+          {this.props.currentPage + 1}
+        </p>
         {this.renderNext()}
       </div>
     )

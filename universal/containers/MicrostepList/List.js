@@ -64,9 +64,11 @@ function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
 export default function MicrostepList ({ list }: Props) {
   return (
     <div>
-      <ul className={styles.listContainer}>
-        {list.map(MicrostepListItem)}
-      </ul>
+      <div className={styles.listContainer}>
+        <ul>
+          {list.map(MicrostepListItem)}
+        </ul>
+      </div>
       <Paginate />
     </div>
   )

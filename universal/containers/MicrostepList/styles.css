@@ -77,30 +77,80 @@
   }
 }
 
+.paginate {
+  position: relative;
+  margin: 2rem auto;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid ThriveTeal;
+
+  .rightArrowContainer {
+    position: absolute;
+    display: inline-block;
+    border-left: 1px solid ThriveTeal;
+    right: 0;
+  }
+
+  .leftArrowContainer {
+    position: absolute;
+    display: inline-block;
+    border-right: 1px solid ThriveTeal;
+    left: 0;
+  }
+
+  .number {
+    display: inline-block;
+    font-family: MonBold;
+    margin: 0.5rem 2rem;
+  }
+
+  @media bp-mama-bear {
+    max-width: 280px;
+  }
+}
+
+a {
+  color: ThriveTeal;
+
+  .arrow {
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: ThriveTeal;
+    color: ThriveTeal;
+  }
+}
+
+.nextLink, .backLink {
+  display: block;
+  height: 2.5rem;
+  width: 4rem;
+  padding: 0.4rem;
+
+  > svg {
+    display: block;
+    fill: ThriveTeal;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: ThriveTeal;
+
+    svg {
+      fill: white;
+    }
+  }
+}
+
 
 .listContainer {
   width: 100%;
-  min-height: 500px;
+  min-height: 400px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.paginate {
-  width: 100%;
-  padding-top: 2rem;
-  text-align: center;
-
-  a {
-    padding: 2px 4px;
-    margin: 2px;
-    color: ThriveTeal;
-    border: 1px solid ThriveTeal;
-
-    &:hover {
-      background-color: ThriveTeal;
-      color: white;
-    }
-  }
 }
 
 .listItem {
