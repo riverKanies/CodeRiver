@@ -65,7 +65,7 @@ class Paginate extends React.Component {
   renderNext () {
     const { currentPage, totalPages } = this.props
 
-    const ClickMe = (currentPage + 1 > totalPages) ? <div /> : (
+    const ClickMe = (currentPage + 1 >= totalPages) ? <div /> : (
       <a onClick={this.nextPage} className={styles.backLink}>
         <svg
           className={styles.arrow}
