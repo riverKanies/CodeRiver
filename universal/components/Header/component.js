@@ -7,11 +7,13 @@ import styles from './styles'
 import mark from './assets/thriveLogo.png'
 
 class Header extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      active: false
-    }
+  toggleActive: Function;
+  state = {
+    active: false
+  }
+  constructor () {
+    super(...arguments)
+
     this.toggleActive = this.toggleActive.bind(this)
   }
   toggleActive () {
@@ -20,7 +22,7 @@ class Header extends React.Component {
   render () {
     const { active } = this.state
 
-    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderAcitve
+    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
 
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
