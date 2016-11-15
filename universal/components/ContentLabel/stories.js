@@ -10,8 +10,16 @@ ContentLabel.`
 
 const props = {
   label: 'Label Name',
-  labelColor: ['defaultLabel', 'tealLabel', 'blueLabel', 'darkBlueLabel',
-    'royalBlueLabel', 'blurpleLabel', 'violetLabel']
+  labelColor: [
+    'defaultLabel',
+    'tealLabel',
+    'blueLabel',
+    'darkBlueLabel',
+    'royalBlueLabel',
+    'blurpleLabel',
+    'violetLabel',
+    'whiteLabel'
+  ]
 }
 
 storiesOf('ContentLabel', module)

@@ -1,0 +1,353 @@
+@value breakpoints: 'styles/breakpoints.css';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from breakpoints;
+@value bodyCopy, ThriveBlue, darkGray, gradientCardThrive from 'styles/colors.css';
+@value MonBold, MonBlack, Playfair, PlayBlack from 'styles/fonts.css';
+
+@value imgCardBaby: 20rem;
+@value imgCardMama: 25rem;
+@value imgCardPapa: 30rem;
+
+@value imgCardHalfBaby: 10rem;
+@value imgCardHalfMama: 12.5rem;
+@value imgCardHalfPapa: 15rem;
+
+/* Default Card Container Styles */
+.postCard {
+  display: block;
+  height: auto;
+  margin: 0 mediumGutter;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  color: bodyCopy;
+
+  /* Card Label */
+  > i {
+   display: block;
+   width: auto;
+   height: auto;
+   margin: 0 0;
+   float: left;
+   position: absolute;
+   top: 1.25rem;
+   left: 1.25rem;
+   z-index: 1000;
+ }
+}
+/* Composed cardType(s) at End of File for Scoping Reasons */
+
+/* Image Container Styles */
+.imageContainer {
+  display: block;
+  width: 100%;
+  height: imgCardBaby;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: -1000;
+  overflow: hidden;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardPapa;
+  }
+}
+/* Image Styles */
+.image {
+  display: inline-block;
+  width: 100%;
+  object-fit: cover;
+}
+/* Image True/False Composed */
+.imageTrue {
+  composes: imageContainer;
+  background: white;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1;
+  }
+}
+.imageFalse {
+  composes: imageContainer;
+  background-color: gradientCardThrive;
+  background-image: url('./assets/thriveVines.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  .image {
+    display: none;
+  }
+}
+
+/* Content Wrapper */
+.postContent {
+  lost-flex-container: column;
+  flex-flow: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  height: imgCardBaby;
+  position: relative;
+  z-index: 100;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardPapa;
+  }
+}
+/* Card Content Styles */
+/* Header */
+.header {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: left;
+  color: white;
+}
+/* Synopsis True/False */
+.synopsisTrue {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: left;
+  color: white;
+  p {
+    color: rgba(255, 255, 255, .7);
+    transition: color 100ms ease-in-out;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.synopsisFalse {
+  display: none;
+}
+/* Content Footer + Composed Styles */
+.footer {
+  width: 100%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  text-align: left;
+}
+.authorWrap {
+  font-size: .75rem;
+  font-family: MonBold;
+  i {
+    margin-right: .25rem;
+    font-family: PlayBlack;
+  }
+}
+
+/* Composed cardType */
+.half {
+  composes: postCard;
+  lost-column: 1 flex mediumGutter;
+  height: imgCardbaby;
+  background: gradientCardThrive;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/2 flex mediumGutter;
+    height: imgCardPapa;
+  }
+  .postContent {
+    padding: 0 2rem;
+    @media bp-mama-bear {
+      padding: 0 25%%;
+    }
+    @media bp-papa-bear {
+      padding: 0 5.125rem;
+    }
+  }
+  .footer {
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: .625rem 1.25rem;
+    background: rgba(0, 0, 0, .2);
+    border-radius: .25rem;
+  }
+  .authorWrap {
+    display: block;
+    float: right;
+    text-align: right;
+    color: white;
+  }
+  &:hover {
+    p {
+      color: rgba( 255, 255, 255, 1);
+    }
+  }
+}
+.quarterWhite {
+  composes: postCard;
+  lost-column: 1;
+  height: auto;
+  background: white;
+  @media bp-papa-bear {
+    lost-column: 1/4 mediumGutter;
+  }
+  .imageTrue {
+    display: block;
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: both;
+    background: white;
+    @media bp-mama-bear {
+      height: imgCardHalfMama;
+    }
+    @media bp-papa-bear {
+      height: imgCardHalfBaby;
+    }
+    &::after {
+      position: relative;
+      top: auto;
+      left: auto;
+      background: none;
+      z-index: auto;
+    }
+  }
+  .postContent {
+    display: block;
+    lost-column: 1;
+    height: auto;
+    float: left;
+    clear: both;
+    color: bodyCopy;
+    background: white;
+  }
+  .imageContainer {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .synopsisTrue {
+    padding: 0 1.625rem;
+    p {
+      font-size: .88rem;
+      text-align: center;
+      color: bodyCopy;
+    }
+  }
+  .header {
+    padding: 1.625rem 1.625rem 0 1.625rem;
+    background: white;
+    text-align: center;
+    h2 {
+      margin-bottom: 0;
+      font-family: MonBold;
+      font-size: .88rem;
+      line-height: 166%;
+      text-align: center;
+      color: black;
+    }
+  }
+  .footer {
+    padding: 0 1.625rem 1.625rem 1.625rem;
+    background: white;
+    text-align: center;
+  }
+  .authorWrap {
+    color: rgba(0, 0, 0, .5);
+    transition: color 100ms ease-in-out;
+  }
+  &:hover {
+    .authorWrap {
+      color: bodyCopy;
+    }
+  }
+}
+.quarterBlue {
+  composes: postCard;
+  lost-column: 1;
+  height: auto;
+  background: ThriveBlue;
+  @media bp-papa-bear {
+    lost-column: 1/4 mediumGutter;
+  }
+  .imageTrue {
+    display: block;
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: both;
+    background: ThriveBlue;
+    @media bp-mama-bear {
+      height: imgCardHalfMama;
+    }
+    @media bp-papa-bear {
+      height: imgCardHalfBaby;
+    }
+    &::after {
+      position: relative;
+      top: auto;
+      left: auto;
+      background: none;
+      z-index: auto;
+    }
+  }
+  .postContent {
+    display: block;
+    lost-column: 1;
+    height: auto;
+    float: left;
+    clear: both;
+    color: white;
+    background: ThriveBlue;
+  }
+  .imageContainer {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .synopsisTrue {
+    padding: 0 1.625rem;
+    p {
+      font-size: .88rem;
+      text-align: center;
+      color: white;
+    }
+  }
+  .header {
+    padding: 1.625rem 1.625rem 0 1.625rem;
+    background: ThriveBlue;
+    text-align: center;
+    h2 {
+      margin-bottom: 0;
+      font-family: MonBold;
+      font-size: .88rem;
+      line-height: 166%;
+      text-align: center;
+      color: white;
+    }
+  }
+  .footer {
+    padding: 0 1.625rem 1.625rem 1.625rem;
+    background: ThriveBlue;
+    text-align: center;
+  }
+  .authorWrap {
+    color: white;
+    transition: color 100ms ease-in-out;
+  }
+}
