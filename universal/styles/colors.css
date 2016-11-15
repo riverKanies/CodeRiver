@@ -15,5 +15,5 @@
 @value ThriveGray: #303030;
 
 @value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061a4 100%);
-@value gradientEmailCap: linear-gradient(-136deg, rgba(35,15,168,.9) 0%,r gba(13,117,163,.9) 100%);
+@value gradientEmailCap: linear-gradient(-136deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
 @value gradientCardThrive: linear-gradient(0deg, #207ad0 0%, #4eb4ca 100%);
