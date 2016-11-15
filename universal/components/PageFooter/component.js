@@ -146,12 +146,12 @@ const PageFooter = ({
         <section className={styles.copyright}>
           <p>Thrive Global © 2016</p>
           <Link to='/' className={styles.link}>
-          Privacy
+            Privacy
           </Link>
-          &
+            &
           <Link to='/' className={styles.link}>
-          Terms
-         </Link>
+            Terms
+          </Link>
         </section>
       </div>
     </section>
