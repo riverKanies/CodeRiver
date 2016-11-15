@@ -23,7 +23,6 @@ function handleFailure (error, dispatch) {
   for (const key of Object.keys(error)) {
     errors[key] = error[key].join(', ')
   }
-
   throw new SubmissionError(errors)
 }
 

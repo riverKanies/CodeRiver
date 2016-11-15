@@ -8,7 +8,6 @@ import { httpPost, HOST_URL } from 'lib/http'
 const genericError = {
   error: "there was an error processing request"
 }
-
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
 
