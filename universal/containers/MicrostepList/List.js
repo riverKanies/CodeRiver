@@ -55,8 +55,12 @@ function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
           <img src={Icon} className={styles.stepIcon} />
           <img src={CopySVG} className={styles.copyIcon} />
           <p>{title}</p>
+          <span className={styles.tooltip}>
+            <p> Click to Copy </p>
+          </span>
         </div>
       </CopyToClipboard>
+
     </li>
   )
 }
