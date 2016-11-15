@@ -4,12 +4,16 @@
 
 .container {
   lost-center: 1200px;
+  height: 500px;
+  width: 100%;
+  background-color: white;
 }
 
 .content {
+  background-color: gray;
 }
 
 .product {
-  background-color: white;
+  background-color: teal;
   lost-column: 1/4;
 }
