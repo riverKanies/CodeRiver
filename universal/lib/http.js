@@ -16,7 +16,20 @@ function hostUrl () {
 
 export const HOST_URL = hostUrl()
 
+export const saveHeaders = (headers) => {
+  const h = {
+    'access-token': headers.get('access-token'),
+    'token-type': headers.get('token-type'),
+    'client': headers.get('client'),
+    'uid': headers.get('uid')
+  }
+
+  localStorage.setItem('thrive_user_headers', JSON.stringify(h))
+}
+
 function parseResponse (response) {
+  saveHeaders(response.headers)
+
   if (!response.status) {
     throw new Error(response)
   } else if (response.status >= 400) {
@@ -35,8 +48,7 @@ export function loadHeaders () {
   return (keys) ? { ...defaultHeaders, ...JSON.parse(keys) } : defaultHeaders
 }
 
-export function httpPost (route, data) {
-  const method = 'POST'
+export function httpPost (route, data, method = 'POST') {
   const headers = loadHeaders()
 
   const FULL_PATH = HOST_URL + route
@@ -46,6 +58,10 @@ export function httpPost (route, data) {
     method,
     body: JSON.stringify(data)
   }).then(parseResponse, parseResponse)
+}
+
+export function httpPut (route, data) {
+  return httpPost(route, data, 'PUT')
 }
 
 export function httpGet (route) {

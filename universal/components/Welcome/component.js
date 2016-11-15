@@ -1,8 +1,17 @@
 /* @flow */
 import React from 'react'
 import { connect } from 'react-redux'
+import { checkSession } from 'modules/UserSession'
+import LoginForm from 'components/LoginForm'
+
+type Props = {
+  dispatch: Function,
+  location: Object
+}
 
 class Welcome extends React.Component {
+  props: Props
+
   componentWillMount () {
     const { token, client_id, uid } = this.props.location.query
     const headers = {
@@ -11,16 +20,20 @@ class Welcome extends React.Component {
       uid: decodeURIComponent(uid)
     }
 
-    localStorage.setItem('thrive_user_headers', JSON.stringify(headers))
+    if (uid) {
+      localStorage.setItem('thrive_user_headers', JSON.stringify(headers))
+    }
+  }
+
+  componentDidMount () {
+    const { dispatch } = this.props
+
+    dispatch(checkSession())
   }
 
   render () {
-    return <p style={{ marginTop: '100px' }}>Welcome, your account has been created!</p>
+    return <LoginForm />
   }
-}
-
-Welcome.propTypes = {
-  location: React.PropTypes.object
 }
 
 export default connect(() => ({}))(Welcome)
