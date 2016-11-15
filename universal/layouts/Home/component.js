@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles'
-import MediumPostGrid from 'components/MediumPostGrid'
+import MediumPostGridDynamic from 'components/MediumPostGridDynamic'
+import MediumPostDynamic from 'components/MediumPostDynamic'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
@@ -63,10 +64,19 @@ const twoColLife = {
   }
 }
 
+// Medium Post Props
+const postOne = {
+  cardType: 'half',
+  hasImage: 'imageTrue',
+  hasSynopsis: 'synopsisTrue'
+}
+
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
-      <MediumPostGrid />
+      <MediumPostGridDynamic>
+        <MediumPostDynamic {...postOne} />
+      </MediumPostGridDynamic>
       <FullWidthText {...sectionHWProps}>
         <Button {...btnHWProps} />
       </FullWidthText>

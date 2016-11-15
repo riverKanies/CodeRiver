@@ -3,20 +3,20 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
-import MediumPostFilter from './component'
+import MediumPostGridDynamic from './component'
 
-const notes = 'This story demonstrates the props that can be passed to MediumPostFilter'
+const notes = 'MediumPostGridDynamic, a grid of Medium posts.'
 
 const props = {
-  title: 'MediumPostFilter Title'
+  title: 'MediumPostGridDynamic'
 }
 
-storiesOf('MediumPostFilter', module)
+storiesOf('MediumPostGridDynamic', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <MediumPostFilter
+        <MediumPostGridDynamic
           title={text('Title', props.title)}
         />
       </WithNotes>
