@@ -5,7 +5,7 @@ import styles from './styles'
 type Props = {
 label: string,
 labelColor: 'defaultLabel' | 'tealLabel' | 'blueLabel' | 'darkBlueLabel' |
-  'royalBlueLabel' | 'blurpleLabel' | 'violetLabel'
+  'royalBlueLabel' | 'blurpleLabel' | 'violetLabel' | 'whiteLabel'
 };
 
 const ContentLabel = ({
