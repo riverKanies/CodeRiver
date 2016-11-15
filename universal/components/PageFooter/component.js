@@ -14,15 +14,17 @@ type Props = {
   logoFooter: Array
 };
 
-const footerQuote = [`Time is the most valuable coin in your life.
-You and you alone will determine how that coin will be spent.
-Be careful that you do not let other people spend it for you.`]
+const footerQuote = [`People look for retreats for themselves,
+                      in the country, by the coast, or in the hills . . .
+                      There is nowhere that a person can find a more peaceful
+                      and trouble-free retreat than in his own mind. . . .
+                      So constantly give yourself this retreat, and renew yourself.`]
 
 // const logoFooter = logo
 
 const PageFooter = ({
   quote = footerQuote,
-  citation = '- Carl Sandburg',
+  citation = '—Marcus Aurelius',
   heading = 'Links',
   heading2 = 'Follow Us',
   logoFooter = logo
