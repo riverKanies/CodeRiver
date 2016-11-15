@@ -15,8 +15,7 @@
   overflow-x: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
-    padding: 1.25rem 3rem 1.25rem 1.25rem;
-    background: white;
+    padding: 0 3rem 0 1.25rem;
     border-bottom: .25rem solid ThriveTeal;
     text-align: center;
     overflow: hidden;
@@ -38,6 +37,7 @@
     width: auto;
     height: auto;
     margin: 0 0;
+    padding: 1.25rem 0;
     position: relative;
     top: auto;
     left: auto;
@@ -79,6 +79,7 @@
     padding: 0 0;
     top: 2rem;
     right: auto;
+    overflow: visible;
     background: none;
   }
 }
@@ -120,6 +121,7 @@
     margin: 0 .75rem;
     padding: .5rem 0;
     float: none;
+    background: transparent;
   }
 }
 
@@ -166,7 +168,7 @@
     margin: 0 0 0 .75rem;
     padding: .5rem 0;
     clear: none;
-    background: none;
+    background: transparent;
     border: none;
     text-align: right;
     text-transform: uppercase;
@@ -188,7 +190,7 @@
     margin: 0 0 0 .75rem;
     padding: .5rem .5rem;
     clear: none;
-    background: none;
+    background: transparent;
     border: none;
     text-align: right;
   }
@@ -214,16 +216,17 @@
       display: inline-block;
       width: .44rem;
       height: .44rem;
-      margin: 0 auto 0 -.25rem;
+      margin: 0 auto 0 -.22rem;
       padding: 0 0;
       float: none;
       background: ThriveTeal;
       border-radius: .22rem;
       position: absolute;
-      bottom: -3rem;;
+      bottom: -3rem;
       left: 50%;
       opacity: .85;
       transition: all 150ms cubic-bezier(.04,.39,.94,.53);
+      z-index: 9999;
     }
     &:hover {
       color: ThriveTeal;
