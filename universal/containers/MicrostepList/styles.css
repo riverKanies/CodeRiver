@@ -169,14 +169,10 @@
     display: none;
   }
 
-  p {
-    line-height: 1.8;
-  }
-
   .tooltip {
     position: absolute;
     margin: 0 0 0 0.5rem;
-    color: ThriveTeal;
+    color: gray;
     display: none;
     font-size: 0.8rem;
   }
