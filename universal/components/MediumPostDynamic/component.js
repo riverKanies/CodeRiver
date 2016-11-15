@@ -18,7 +18,7 @@ type Props = {
 
 const postImage = dummyImage
 
-const defaultText = 'When providing a health benefits strategy, employers too often focus solely on physical health.'
+const defaultText = ['When providing a health benefits strategy, employers too often focus solely on physical health.']
 
 const MediumPostDynamic = ({
   cardType = 'half',
