@@ -25,13 +25,22 @@ class SearchForm extends React.Component {
 
   render () {
     return (
-      <input
-        className={styles.input}
-        type='text'
-        placeholder='filter microsteps'
-        value={this.props.filter}
-        onChange={this.updateFilter}
-      />
+      <div className={styles.filterContainer}>
+        <p className={styles.filterDescription}>Search for a microstep and click the link to copy</p>
+        <div className={styles.inputContainer}>
+          <span aria-hidden='true' className={styles.inputHighlight}>
+            {this.props.filter}
+          </span>
+          <input
+            autoFocus
+            placeholder='Search Microsteps'
+            className={styles.input}
+            type='text'
+            value={this.props.filter}
+            onChange={this.updateFilter}
+          />
+        </div>
+      </div>
     )
   }
 }

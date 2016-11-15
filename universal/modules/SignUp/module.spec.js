@@ -5,6 +5,9 @@ import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
 import { httpPost, HOST_URL } from 'lib/http'
 
+const genericError = {
+  error: "there was an error processing request"
+}
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
 
@@ -83,7 +86,7 @@ describe('SignUp', () => {
 
         const expectedActions = [
             { type: actions.createPending },
-            { type: actions.createFailure, error: [] }
+            { type: actions.createFailure, error: genericError }
         ]
 
         const store = mockStore({})

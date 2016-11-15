@@ -1,7 +1,9 @@
 /* @flow */
 import React from 'react'
 import { Field } from 'redux-form'
+import Button from 'components/Button'
 import Input from 'components/Input'
+import styles from './styles'
 
 type renderSubmitField = {
   valid: boolean,
@@ -11,13 +13,13 @@ type renderSubmitField = {
 
 const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: renderSubmitField) => {
   return (
-    <button
+    <Button
       type='submit'
-      onClick={handleSubmit}
+      handleClick={handleSubmit}
       disabled={!valid || submitting}
-    >
-    Sign Up
-    </button>
+      buttonStyle='teal'
+      buttonText='Sign Up'
+    />
   )
 }
 
@@ -30,24 +32,37 @@ type signupProps = {
 
 const SignUpForm = (props: signupProps) => {
   return (
-    <form style={{ marginTop: '100px', backgroundColor: 'blue' }}>
-      <Field
-        component={Input}
-        name='email'
-        type='email'
-        label='email' />
-      <Field
-        component={Input}
-        name='password'
-        type='password'
-        label='password' />
-      <Field
-        component={Input}
-        name='password_confirmation'
-        type='password'
-        label='password_confirmation' />
-      {renderSubmit(props)}
-    </form>
+    <section className={styles.container}>
+      <div className={styles.headerRow}>
+        <h2>Sign up to start thriving</h2>
+      </div>
+      <form>
+        <div className={styles.fieldRow}>
+          <Field
+            component={Input}
+            name='email'
+            type='email'
+            label='Email Address' />
+        </div>
+        <div className={styles.fieldRow}>
+          <Field
+            component={Input}
+            name='password'
+            type='password'
+            label='Password' />
+        </div>
+        <div className={styles.fieldRow}>
+          <Field
+            component={Input}
+            name='password_confirmation'
+            type='password'
+            label='Confirm Password' />
+        </div>
+        <div className={styles.buttonRow}>
+          {renderSubmit(props)}
+        </div>
+      </form>
+    </section>
   )
 }
 

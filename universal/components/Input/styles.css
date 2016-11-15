@@ -1,3 +1,26 @@
-.container {
+@value colors: 'styles/colors';
+@value ThriveTeal, darkGray, lightGray from colors;
 
+.base {
+  label {
+    color: ThriveTeal;
+  }
+
+  input {
+    border-color: ThriveTeal;
+    color: darkGray;
+    &::placeholder { color: darkGray }
+  }
+}
+
+.teal {
+  composes: base;
+}
+
+.error {
+  color: darkGray;
+}
+
+.warning {
+  color: orange;
 }

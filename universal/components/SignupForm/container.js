@@ -1,4 +1,4 @@
-import { reduxForm } from 'redux-form'
+import { reduxForm, SubmissionError } from 'redux-form'
 import { createAccount } from 'modules/SignUp'
 
 import { createValidator, required, email, minLength, match } from 'lib/validate'
@@ -11,32 +11,35 @@ const validate = createValidator({
   password_confirmation: [required, match('password')]
 })
 
-const handleSubmit = (data, dispatch) => {
-  return dispatch(createAccount(data))
-  .then(() => successfulSubmit(dispatch))
-  .catch(() => failedSubmit(dispatch))
+function handleSuccess (result, dispatch) {
+  dispatch(toast.actions.show({
+    type: 'notice',
+    message: 'Please check your email to verify your account'
+  }))
 }
 
-const successfulSubmit = (dispatch) => {
-  dispatch(
-    toast.actions.show({
-      type: 'notice',
-      message: 'Successfully Submitted Form'
-    })
-  )
+function handleFailure (error, dispatch) {
+  const errors = { }
+  for (const key of Object.keys(error)) {
+    errors[key] = error[key].join(', ')
+  }
+  throw new SubmissionError(errors)
 }
 
-const failedSubmit = (dispatch) => {
-  dispatch(
-    toast.actions.show({
-      type: 'error',
-      message: 'Error Submitting Form'
-    })
-  )
+function genFormHandler ({ action }) {
+  return function (data, dispatch) {
+    return dispatch(action(data))
+      .then(result => handleSuccess(result, dispatch))
+      .catch(e => handleFailure(e, dispatch))
+  }
 }
+
+const onSubmit = genFormHandler({
+  action: createAccount
+})
 
 export default reduxForm({
   form: 'signup',
   validate,
-  onSubmit: handleSubmit
+  onSubmit
 })(component)
