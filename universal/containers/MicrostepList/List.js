@@ -59,7 +59,6 @@ function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
           </span></p>
         </div>
       </CopyToClipboard>
-
     </li>
   )
 }
