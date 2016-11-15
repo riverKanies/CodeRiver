@@ -1,0 +1,95 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from "styles/breakpoints.css";
+@value darkGray, bodyCopy, ThriveTeal, ThriveLightBlurple from "styles/colors.css";
+@value Mon, Play from "styles/fonts.css";
+
+@value imgCardBaby: 20rem;
+@value imgCardMama: 25rem;
+@value imgCardPapa: 30rem;
+
+@value imgCardHalfBaby: 10rem;
+@value imgCardHalfMama: 12.5rem;
+@value imgCardHalfPapa: 15rem;
+
+/* Form is styled in typography.css. Position form stuff is in here. */
+
+.emailCaptureMini {
+  display: block;
+  lost-column: 1;
+  margin: 0 mediumGutter;
+  padding: 1.25rem 1.25rem;
+  float: none;
+  background: ThriveTeal url('./assets/emailMiniBG.png') repeat;
+  position: relative;
+  @media bp-mama-bear {
+    padding: 2rem 2rem;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/2;
+  }
+}
+
+.container {
+  lost-flex-container: column;
+  flex-flow: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 100;
+  @media bp-mama-bear {
+    height: imgCardHalfMama;
+  }
+  @media bp-papa-bear {
+    height: imgCardHalfPapa;
+  }
+  > form {
+    width: 100%;
+    height: auto;
+    input, button {
+      display: block;
+      float: left;
+    }
+    input {
+      width: 100%;
+      position: relative;
+      background: white;
+      border-color: white;
+      color: bodyCopy;
+      &::placeholder {
+        color: darkGray;
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: ThriveLightBlurple;
+    }
+  }
+}
+
+.inputWrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  text-align: left;
+  color: white;
+  p {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 0;
+  }
+}
