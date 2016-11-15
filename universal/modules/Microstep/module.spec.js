@@ -90,9 +90,11 @@ describe('Microstep module', () => {
         const store = mockStore({})
 
         return store.dispatch(loadMicrostep('fail', 'informational'))
-          .then(() => { // return of async actions
-            expect(store.getActions()).toEqual(expectedActions)
-          })
+          .then(
+            () => expect(false).toEq(true),
+            () => expect(store.getActions()).toEqual(expectedActions)
+          )
+
       })
     })
   })

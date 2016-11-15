@@ -89,9 +89,10 @@ describe('MicrostepList', () => {
         const store = mockStore({})
 
         return store.dispatch(loadMicrosteps())
-          .then(() => { // return of async actions
-            expect(store.getActions()).toEqual(expectedActions)
-          })
+          .then(
+            () => expect(false).toEqual(true),
+            () => expect(store.getActions()).toEqual(expectedActions)
+          )
       })
     })
   })

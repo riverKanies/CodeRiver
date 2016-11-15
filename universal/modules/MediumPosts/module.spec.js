@@ -89,9 +89,10 @@ describe('MediumPosts', () => {
         const store = mockStore({})
 
         return store.dispatch(loadMediumPosts())
-          .then(() => { // return of async actions
-            expect(store.getActions()).toEqual(expectedActions)
-          })
+          .then(
+            () => expect(false).toEqual(true),
+            () => expect(store.getActions()).toEqual(expectedActions)
+          )
       })
     })
   })
