@@ -25,10 +25,9 @@ describe('(Component) Input', () => {
     const props = { ...defaultProps, meta: { touched: true, warning: 'warning: missing' } }
 
     const wrapper = shallow(<Input {...props} />)
-    const element = wrapper.find('.warning')
+    const element = wrapper.find('Warning')
 
     expect(element.length).toBe(1)
-    expect(element.text()).toBe(props.meta.warning)
   })
 
   it('renders no warning if present and not touched', () => {
@@ -44,17 +43,16 @@ describe('(Component) Input', () => {
     const props = { ...defaultProps, meta: { touched: true, error: 'error: missing' } }
 
     const wrapper = shallow(<Input {...props} />)
-    const element = wrapper.find('.error')
+    const element = wrapper.find('Error')
 
     expect(element.length).toBe(1)
-    expect(element.text()).toBe(props.meta.error)
   })
 
   it('renders no error if present and not touched', () => {
     const props = { ...defaultProps, meta: { touched: false, error: 'error: missing' } }
 
     const wrapper = shallow(<Input {...props} />)
-    const element = wrapper.find('.error')
+    const element = wrapper.find('Error')
 
     expect(element.length).toBe(0)
   })

@@ -26,6 +26,7 @@ export type Field = {
   multiple: bool,
   options: Array<mixed>,
   placeholder: string,
+  theme: string,
   type: string,
 }
 

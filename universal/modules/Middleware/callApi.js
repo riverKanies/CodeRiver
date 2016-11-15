@@ -40,11 +40,12 @@ export default function callAPIMiddleware ({ dispatch, getState }) {
         type: successType
       })),
       error => {
+        const e = error.errors || { error: 'there was an error processing request' }
         dispatch(Object.assign({}, payload, {
-          error,
+          error: e,
           type: failureType
         }))
-        throw new Error('Error dispatching to the API.')
+        return Promise.reject(e)
       }
     )
   }

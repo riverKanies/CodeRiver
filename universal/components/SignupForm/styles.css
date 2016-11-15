@@ -1,0 +1,19 @@
+@value colors: 'styles/colors';
+@value ThriveTeal, darkGray, lightGray from colors;
+
+.buttonRow {
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.container {
+  padding: 10px;
+}
+
+.headerRow {
+  display: inline-block;
+  padding-top: 2rem;
+  width: 100%;
+  color: ThriveTeal;
+  text-align: center;
+}

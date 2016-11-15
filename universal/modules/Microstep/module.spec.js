@@ -6,6 +6,10 @@ import callAPI from 'modules/Middleware/callApi'
 import { reducer, initialState, actions, loadMicrostep } from './index'
 import { HOST_URL } from 'lib/http'
 
+const genericError = {
+  error: "there was an error processing request"
+}
+
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
 
@@ -84,7 +88,7 @@ describe('Microstep module', () => {
 
         const expectedActions = [
             { type: actions.fetchPending },
-            { type: actions.fetchFailure, error: {} }
+            { type: actions.fetchFailure, error: genericError }
         ]
 
         const store = mockStore({})
