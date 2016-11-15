@@ -8,20 +8,21 @@
   padding: 60px 40px;
   height: 400px;
   width: 100%;
+
+  @media bp-baby-bear {
+    display: flex;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;
+    justify-content: center;
+    height: auto
+  }
 }
 
 .container {
 	lost-center: 90rem;
   margin: 0 auto;
   float: none;
-
-  /*@media bp-baby-bear {
-    display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-  }*/
 }
 
 .footerQuote {
@@ -123,7 +124,6 @@ cite {
   padding: 0 0;
   float: none;
 	margin-top: 50px;
-	margin-left: 10px;
 }
 
 .socialIcons {
