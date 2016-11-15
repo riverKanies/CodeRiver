@@ -9,6 +9,8 @@ import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
+import Profile from 'layouts/Profile'
+import Login from 'layouts/Login'
 
 export const createRoutes = (store) => ([
   {
@@ -47,6 +49,14 @@ export const createRoutes = (store) => ([
       {
         path: 'engage',
         component: Engage
+      },
+      {
+        path: 'profile',
+        component: Profile
+      },
+      {
+        path: 'login',
+        component: Login
       },
       {
         path: ':page_id',

@@ -1,5 +1,5 @@
 /* @flow */
-import { httpGet, httpPut, httpPost } from 'lib/http'
+import { httpGet, httpPost } from 'lib/http'
 import baseActions from 'modules/baseActions'
 
 // Name
@@ -18,9 +18,11 @@ export const initialState = {
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
     case actions.fetchPending:
+    case actions.createPending:
       return { ...state, requestPending: true }
 
     case actions.fetchSuccess:
+    case actions.createSuccess:
       return {
         ...state,
         requestPending: false,
@@ -28,12 +30,12 @@ export function reducer (state: any = initialState, action: any) {
         sessionAlive: true
       }
 
-    case actions.createSuccess:
+    case actions.fetchFailure:
+    case actions.createFailure:
       return {
         ...state,
         requestPending: false,
-        userData: action.data.data,
-        sessionAlive: true
+        userData: false
       }
 
     default:
@@ -52,13 +54,13 @@ export function checkSession () {
   }
 }
 
-export function createSession () {
+export function createSession (data: any) {
   return {
     types: [
       actions.createPending,
       actions.createSuccess,
       actions.createFailure
     ],
-    callAPI: () => httpPost('/api/auth/sign_in')
+    callAPI: () => httpPost('/api/auth/sign_in', data)
   }
 }

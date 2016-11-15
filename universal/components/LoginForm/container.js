@@ -3,18 +3,15 @@ import { createSession } from 'modules/UserSession'
 
 import { createValidator, required } from 'lib/validate'
 import component from './component'
-import toast from 'modules/Toast'
+import { browserHistory } from 'react-router'
 
 const validate = createValidator({
   email: [required],
   password: [required]
 })
 
-function handleSuccess (result, dispatch) {
-  dispatch(toast.actions.show({
-    type: 'notice',
-    message: 'Please check your email to verify your account'
-  }))
+function handleSuccess () {
+  browserHistory.push('profile')
 }
 
 function handleFailure (error, dispatch) {

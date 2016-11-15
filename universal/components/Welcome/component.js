@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { checkSession } from 'modules/UserSession'
-import LoginForm from 'components/LoginForm'
+import Profile from 'components/Profile'
 
 type Props = {
   dispatch: Function,
@@ -32,7 +32,7 @@ class Welcome extends React.Component {
   }
 
   render () {
-    return <LoginForm />
+    return <Profile />
   }
 }
 
