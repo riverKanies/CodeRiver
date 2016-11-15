@@ -12,17 +12,10 @@ test:
         background: true
     - sleep 5
   override:
+    - npm run lint
     - npm run analyze
-    - npm run deploy:test
-    - npm run test:all
+    - npm run test
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
-
-deployment:
-  production:
-    branch: master
-    commands:
-      - npm run deploy:prod
-      - curl -X POST --data-urlencode 'payload={"channel":"#build_thrive","username":"CircleCI Deploy","text":"Production Deploy!","icon_emoji":":shipit:"}' $SLACK_WEBHOOK
 
 experimental:
   notify:

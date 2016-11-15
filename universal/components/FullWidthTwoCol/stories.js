@@ -19,12 +19,14 @@ const defaultButton = {
   buttonStyle: 'violet'
 }
 
+const defaultLabel = {
+  label: 'Label',
+  labelColor: 'defaultLabel'
+}
+
 const props = {
   sectionClass: ['default', 'lightGray', 'transparent'],
   title: 'I am a Title',
-  label: 'Label',
-  labelColor: ['defaultLabel', 'tealLabel', 'blueLabel', 'darkBlueLabel',
-    'royalBlueLabel', 'blurpleLabel', 'violetLabel'],
   sectionText: defaultText,
   image: dummyImage
 }
@@ -37,7 +39,7 @@ storiesOf('FullWidthTwoCol', module)
         <FullWidthTwoCol
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           title={text('Section Title', props.title)}
-          labelColor={select('Label', props.labelColor, props.labelColor[0])}
+          label={defaultLabel}
           sectionText={text('Section Text', props.sectionText)}
           button={defaultButton}
         />

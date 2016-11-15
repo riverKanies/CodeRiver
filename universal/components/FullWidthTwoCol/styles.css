@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from "styles/breakpoints.css";
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
-@value Mon, Play from "styles/fonts.css";
+@value Mon, Playfair from "styles/fonts.css";
 
 /* Parent Most Container + BG Color Variants */
 .fullWidthTwoCol {
@@ -83,55 +83,28 @@
   @media bp-papa-bear {
     padding: 0 10%;
   }
+  > i {
+    display: inline-block;
+    margin: 2rem 0;
+    float: left;
+    clear: both;
+  }
+  p {
+    display: block;
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+  > a {
+    float: left;
+    clear: both;
+  }
 }
-
-/* Label + Label Colors */
-.label {
-  display: block;
-  margin: .75rem 0 0 0;
-  padding: .25rem .75rem;
-  float: left;
-  background: ThriveBlue;
-  font-family: Mon;
-  font-style: normal;
-  font-size: .75rem;
-  line-height: 100%;
-  letter-spacing: .1rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-}
-.defaultLabel {
-  composes: label;
-}
-.tealLabel {
-  composes: label;
-  background: ThriveTeal;
-}
-.blueLabel {
-  composes: label;
-  background: ThriveBlue;
-}
-.darkBlueLabel {
-  composes: label;
-  background: ThriveDarkBlue;
-}
-.royalBlueLabel {
-  composes: label;
-  background: ThriveRoyalBlue;
-}
-.blurpleLabel {
-  composes: label;
-  background: ThriveBlurple;
-}
-.violetLabel {
-  composes: label;
-  background: ThriveViolet;
-}
-
 
 .header {
-  lost-column: 1;
-  margin-bottom: 2rem;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
   text-align: left;
 }
