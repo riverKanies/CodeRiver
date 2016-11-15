@@ -1,22 +1,35 @@
 import fetch from 'isomorphic-fetch'
 
+function clientUrl () {
+  return (location) ? location.origin : ''
+}
+
+export const CLIENT_URL = clientUrl()
+
 function hostUrl () {
-  const host = process.env.API_HOST || 'localhost'
-  const protocol = process.env.API_PROTOCOL || 'http'
-  const port = process.env.API_PORT || '3000'
+  const host = process.env.API_HOST
+  const protocol = process.env.API_PROTOCOL
+  const port = process.env.API_PORT
 
   return `${protocol}://${host}:${port}`
 }
 
 export const HOST_URL = hostUrl()
 
-function request (action, route, data) {
-  let authHeaders = JSON.parse(localStorage.getItem('thrive_user_headers')) || {}
-  const method = action
+function parseResponse (response) {
+  if (!response.status) {
+    throw new Error(response)
+  } else if (response.status >= 400) {
+    return response.json().then(r => Promise.reject(r))
+  }
+  return response.json()
+}
+
+export function httpPost (route, data) {
+  const method = 'POST'
   const headers = {
     'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    ...authHeaders
+    'Content-Type': 'application/json'
   }
 
   const FULL_PATH = HOST_URL + route
@@ -25,35 +38,15 @@ function request (action, route, data) {
     headers,
     method,
     body: JSON.stringify(data)
-  }).then(response => {
-    let token = response.headers.get('access-token')
-    if (response.status === 200 && token) {
-      authHeaders['access-token'] = token
-      localStorage.setItem('thrive_user_headers', JSON.stringify(headers))
-    }
-    return response.json()
-  }).then(parsed => {
-    if (parsed.errors) {
-      return Promise.reject(parsed.errors)
-    }
-    return parsed
-  })
+  }).then(parseResponse, parseResponse)
 }
 
-export function post (route, data) {
-  return request('POST', route, data)
-}
-
-export function put (route, data) {
-  return request('PUT', route, data)
-}
-
-export function get (route) {
+export function httpGet (route) {
   return fetch(HOST_URL + route)
-    .then(response => response.json())
+    .then(parseResponse, parseResponse)
 }
 
-export const error = errors => {
+export const getClientError = errors => {
   if (!errors) {
     return
   }

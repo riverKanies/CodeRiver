@@ -1,7 +1,7 @@
 /* @flow */
 import _ from 'lodash'
 import React from 'react'
-import { HOST_URL } from 'utils/http'
+import { HOST_URL } from 'lib/http'
 
 type Props = {
   microstep: {

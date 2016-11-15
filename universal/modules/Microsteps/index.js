@@ -1,5 +1,5 @@
 /* @flow */
-import { httpGet } from 'utils/http'
+import { httpGet } from 'lib/http'
 import baseActions from 'modules/baseActions'
 
 // Name

@@ -39,10 +39,13 @@ export default function callAPIMiddleware ({ dispatch, getState }) {
         data,
         type: successType
       })),
-      error => dispatch(Object.assign({}, payload, {
-        error,
-        type: failureType
-      }))
+      error => {
+        dispatch(Object.assign({}, payload, {
+          error,
+          type: failureType
+        }))
+        throw new Error('Error dispatching to the API.')
+      }
     )
   }
 }

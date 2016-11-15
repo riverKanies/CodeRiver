@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import { reducer, initialState, actions, loadMediumPosts } from './index'
 import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
-import { HOST_URL } from 'utils/http'
+import { HOST_URL } from 'lib/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
@@ -89,9 +89,10 @@ describe('MediumPosts', () => {
         const store = mockStore({})
 
         return store.dispatch(loadMediumPosts())
-          .then(() => { // return of async actions
-            expect(store.getActions()).toEqual(expectedActions)
-          })
+          .then(
+            () => expect(false).toEqual(true),
+            () => expect(store.getActions()).toEqual(expectedActions)
+          )
       })
     })
   })
