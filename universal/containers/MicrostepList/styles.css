@@ -109,23 +109,10 @@
   }
 }
 
-a {
-  color: ThriveTeal;
-
-  .arrow {
-    height: 100%;
-    width: 100%;
-  }
-
-  &:hover {
-    background-color: ThriveTeal;
-    color: ThriveTeal;
-  }
-}
-
 .nextLink, .backLink {
   display: block;
   height: 2.5rem;
+  color: ThriveTeal;
   width: 4rem;
   padding: 0.4rem;
 
@@ -138,6 +125,7 @@ a {
 
   &:hover {
     background-color: ThriveTeal;
+    color: ThriveTeal;
 
     svg {
       fill: white;
@@ -149,8 +137,11 @@ a {
 .listContainer {
   width: 100%;
   min-height: 400px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  display: flex;
+  padding: 1rem 0 0 0;
+  @media bp-mama-bear {
+    padding: 1rem 0 0.5rem 0;
+  }
 }
 
 .listItem {
