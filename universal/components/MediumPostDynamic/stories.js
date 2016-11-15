@@ -9,15 +9,17 @@ const notes = 'This story demonstrates the props that can be passed to MediumPos
 
 const cardType = [
   'half',
-  'halfImage',
   'quarterWhite',
   'quarterBlue'
 ]
-
-const props = {
-  hasImage: 'imageTrue' | 'imageFalse',
-  hasSynopsis: 'synopsisTrue' | 'synopsisFalse'
-}
+const hasImage = [
+  'imageTrue',
+  'imageFalse'
+]
+const hasSynopsis = [
+  'synopsisTrue',
+  'synopsisFalse'
+]
 
 storiesOf('MediumPostDynamic', module)
   .addDecorator(withKnobs)
@@ -25,7 +27,10 @@ storiesOf('MediumPostDynamic', module)
     return (
       <WithNotes notes={notes}>
         <MediumPostDynamic
-          cardType={select('Card Type', cardType, 'halfImage')}
+          postTitle={text('Post Title', 'Arianna Huffington’s Sleep Revolution Starts at Home')}
+          cardType={select('Card Type', cardType, 'half')}
+          hasImage={select('Does this card have an image?', hasImage, 'imageTrue')}
+          hasSynopsis={select('Does this card have an post synopsis?', hasSynopsis, 'synopsisTrue')}
         />
       </WithNotes>
     )

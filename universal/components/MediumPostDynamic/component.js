@@ -5,11 +5,11 @@ import dummyImage from './assets/postFPO.jpg'
 import ContentLabel from 'components/ContentLabel'
 
 type Props = {
-  cardType: 'half' | 'halfImage' | 'quarterWhite' | 'quarterBlue',
-  postTitle: string,
-  postAuthor: string,
+  cardType: 'half' | 'quarterWhite' | 'quarterBlue',
   hasImage: 'imageTrue' | 'imageFalse',
   hasSynopsis: 'synopsisTrue' | 'synopsisFalse',
+  postTitle: string,
+  postAuthor: string,
   postSynopsis: Array<string>,
   postLabel: Object,
   postURL: 'string',
@@ -21,11 +21,11 @@ const postImage = dummyImage
 const defaultText = 'When providing a health benefits strategy, employers too often focus solely on physical health.'
 
 const MediumPostDynamic = ({
-  cardType = 'halfImage',
-  postTitle = 'Post Title',
-  postAuthor = 'Post Author',
+  cardType = 'half',
   hasImage = 'imageTrue',
   hasSynopsis = 'synopsisTrue',
+  postTitle = 'Post Title',
+  postAuthor = 'Post Author',
   postSynopsis = defaultText,
   postLabel = {},
   postURL = 'javascript:void(0)'
@@ -45,7 +45,7 @@ const MediumPostDynamic = ({
         </section>
         <footer className={styles.footer}>
           <span className={styles.authorWrap}>
-            <i>By</i> {postAuthor}
+            <i>by</i> {postAuthor}
           </span>
         </footer>
       </section>
