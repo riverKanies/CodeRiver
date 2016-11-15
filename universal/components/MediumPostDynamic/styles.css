@@ -212,6 +212,7 @@
     height: auto;
     float: left;
     clear: both;
+    background: white;
     @media bp-mama-bear {
       height: imgCardHalfMama;
     }
@@ -248,7 +249,7 @@
       margin-bottom: 0;
       font-family: MonBold;
       font-size: .88rem;
-      line-height: 125%;
+      line-height: 166%;
       text-align: center;
       color: black;
     }
@@ -270,6 +271,67 @@
 }
 .quarterBlue {
   composes: postCard;
+  lost-column: 1;
+  height: auto;
   background: ThriveBlue;
-  lost-column: 1/4 mediumGutter;
+  @media bp-papa-bear {
+    lost-column: 1/4 mediumGutter;
+  }
+  .imageTrue {
+    display: block;
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: both;
+    background: ThriveBlue;
+    @media bp-mama-bear {
+      height: imgCardHalfMama;
+    }
+    @media bp-papa-bear {
+      height: imgCardHalfBaby;
+    }
+    &::after {
+      position: relative;
+      top: auto;
+      left: auto;
+      background: none;
+      z-index: auto;
+    }
+  }
+  .postContent {
+    display: block;
+    lost-column: 1;
+    height: auto;
+    float: left;
+    clear: both;
+    color: white;
+    background: ThriveBlue;
+  }
+  .imageContainer {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .header {
+    padding: 1.625rem 1.625rem 0 1.625rem;
+    background: ThriveBlue;
+    text-align: center;
+    h2 {
+      margin-bottom: 0;
+      font-family: MonBold;
+      font-size: .88rem;
+      line-height: 166%;
+      text-align: center;
+      color: white;
+    }
+  }
+  .footer {
+    padding: 0 1.625rem 1.625rem 1.625rem;
+    background: ThriveBlue;
+    text-align: center;
+  }
+  .authorWrap {
+    color: white;
+    transition: color 100ms ease-in-out;
+  }
 }
