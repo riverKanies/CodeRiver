@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 
 import callAPI from 'modules/Middleware/callApi'
 import { reducer, initialState, actions, loadMicrostep } from './index'
-import { HOST_URL } from 'utils/http'
+import { HOST_URL } from 'lib/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
@@ -90,9 +90,11 @@ describe('Microstep module', () => {
         const store = mockStore({})
 
         return store.dispatch(loadMicrostep('fail', 'informational'))
-          .then(() => { // return of async actions
-            expect(store.getActions()).toEqual(expectedActions)
-          })
+          .then(
+            () => expect(false).toEq(true),
+            () => expect(store.getActions()).toEqual(expectedActions)
+          )
+
       })
     })
   })

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles'
 
-import { CLIENT_URL as baseUrl } from 'utils/http'
+import { CLIENT_URL as baseUrl } from 'lib/http'
 
 type Microstep = {
   id: string,

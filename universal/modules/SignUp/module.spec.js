@@ -1,94 +1,94 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { reducer, initialState, actions, loadMicrosteps } from './index'
+import { reducer, initialState, actions, createAccount } from './index'
 import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
-import { HOST_URL } from 'lib/http'
+import { httpPost, HOST_URL } from 'lib/http'
 
 const middlewares = [ thunk, callAPI ]
 const mockStore = configureMockStore(middlewares)
 
-describe('MicrostepList', () => {
+describe('SignUp', () => {
   describe('reducer', () => {
     it('sets up initial state', () => {
       expect(reducer(undefined, {})).toEqual(initialState)
     })
 
-    it('should handle fetchPending', () => {
+    it('should handle createPending', () => {
       expect(
-        reducer({ ...initialState, fetchPending : false }, {
-          type: actions.fetchPending,
+        reducer({ ...initialState, createPending : false }, {
+          type: actions.createPending,
         })
       ).toEqual(
         {
           ...initialState,
-          fetchPending: true
+          createPending: true
         }
       )
     })
 
-    it('should handle fetchSuccess', () => {
+    it('should handle createSuccess', () => {
       expect(
-        reducer({ ...initialState, fetchPending : true }, {
-          type: actions.fetchSuccess,
+        reducer({ ...initialState, createPending : true }, {
+          type: actions.createSuccess,
           data: [1,2,3]
         })
       ).toEqual(
         {
           ...initialState,
-          fetchPending: false,
+          createPending: false,
           list: [1,2,3]
         }
       )
     })
 
-    it('should handle fetchFailure', () => {
+    it('should handle createFailure', () => {
       expect(
-        reducer({ ...initialState, fetchPending : true }, {
-          type: actions.fetchFailure
+        reducer({ ...initialState, createPending : true }, {
+          type: actions.createFailure
         })
       ).toEqual(
         {
           ...initialState,
-          fetchPending: false
+          createPending: false
         }
       )
     })
   })
 
   describe('actions', () => {
-    context('loadMicrosteps', () => {
-      it('loadMicrosteps dispatches happy path actions and calls api', () => {
+    context('createAccount', () => {
+      it('createAccount dispatches happy path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps')
+          .post('/api/auth')
           .reply(200, [])
 
         const expectedActions = [
-            { type: actions.fetchPending },
-            { type: actions.fetchSuccess, data: [] }
+            { type: actions.createPending },
+            { type: actions.createSuccess, data: [] }
         ]
 
         const store = mockStore({})
 
-        return store.dispatch(loadMicrosteps())
+        return store.dispatch(createAccount())
           .then(() => { // return of async actions
             expect(store.getActions()).toEqual(expectedActions)
           })
       })
 
-      it('loadMicrosteps dispatches sad path actions and calls api', () => {
+      it('createAccount dispatches sad path actions and calls api', () => {
         nock(HOST_URL)
-          .get('/api/microsteps')
+          .post('/api/auth')
           .reply(404, [])
 
         const expectedActions = [
-            { type: actions.fetchPending },
-            { type: actions.fetchFailure, error: [] }
+            { type: actions.createPending },
+            { type: actions.createFailure, error: [] }
         ]
 
         const store = mockStore({})
 
-        return store.dispatch(loadMicrosteps())
+        return store.dispatch(createAccount())
           .then(
             () => expect(false).toEqual(true),
             () => expect(store.getActions()).toEqual(expectedActions)
