@@ -175,10 +175,10 @@
 
   .tooltip {
     position: absolute;
+    margin: 0 0 0 0.5rem;
     color: ThriveTeal;
     display: none;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    font-size: 0.8rem;
   }
 
   &:hover {
@@ -194,7 +194,7 @@
     }
 
     .tooltip {
-      display: block;
+      display: inline-block;
     }
   }
 }
