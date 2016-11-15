@@ -1,0 +1,36 @@
+{
+  "name": "thrive-marketing",
+  "description": "Thrive Marketing Site",
+  "scripts": {},
+  "env": {
+    "API_HOST": {
+      "required": true
+    },
+    "API_PORT": {
+      "required": true
+    },
+    "API_PROTOCOL": {
+      "required": true
+    },
+    "BUILDPACK_URL": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "required": true
+    },
+    "SEGMENT": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
