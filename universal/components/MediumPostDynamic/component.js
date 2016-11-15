@@ -35,7 +35,7 @@ const MediumPostDynamic = ({
       <ContentLabel {...postLabel} />
       <section className={styles.postContent}>
         <div className={styles[hasImage]}>
-          <img className={styles.image} src={postImage} alt={postTitle} />
+          <a href={postURL}><img className={styles.image} src={postImage} alt={postTitle} /></a>
         </div>
         <header className={styles.header}>
           <h2><a href={postURL}>{postTitle}</a></h2>
@@ -49,7 +49,6 @@ const MediumPostDynamic = ({
           </span>
         </footer>
       </section>
-
     </article>
   )
 }
