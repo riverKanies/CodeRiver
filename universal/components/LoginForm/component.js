@@ -3,6 +3,7 @@ import React from 'react'
 import { Field } from 'redux-form'
 import Button from 'components/Button'
 import Input from 'components/Input'
+import GenericFormError from 'components/GenericFormError'
 import styles from './styles'
 
 type renderSubmitField = {
@@ -30,16 +31,6 @@ type signupProps = {
   valid: boolean,
 };
 
-const genericError = ({ error } : { error?: String}) => {
-  if (!error) return null
-
-  return (
-    <div>
-      <strong>{error}</strong>
-    </div>
-  )
-}
-
 const LoginForm = (props: signupProps) => {
   return (
     <section className={styles.container}>
@@ -47,7 +38,7 @@ const LoginForm = (props: signupProps) => {
         <h2>Log In</h2>
       </div>
       <form>
-        {genericError(props)}
+        <GenericFormError {...props} />
         <div className={styles.fieldRow}>
           <Field
             component={Input}

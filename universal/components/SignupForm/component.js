@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import { Field } from 'redux-form'
+import GenericFormError from 'components/GenericFormError'
 import Button from 'components/Button'
 import Input from 'components/Input'
 import styles from './styles'
@@ -37,6 +38,7 @@ const SignUpForm = (props: signupProps) => {
         <h2>Sign up to start thriving</h2>
       </div>
       <form>
+        <GenericFormError {...props} />
         <div className={styles.fieldRow}>
           <Field
             component={Input}

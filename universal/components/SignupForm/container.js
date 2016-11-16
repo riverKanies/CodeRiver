@@ -1,7 +1,8 @@
-import { reduxForm, SubmissionError } from 'redux-form'
+import { reduxForm } from 'redux-form'
 import { createAccount } from 'modules/SignUp'
 
 import { createValidator, required, email, minLength, match } from 'lib/validate'
+import { genFormHandler } from 'lib/formHelpers'
 import component from './component'
 import toast from 'modules/Toast'
 
@@ -11,31 +12,16 @@ const validate = createValidator({
   password_confirmation: [required, match('password')]
 })
 
-function handleSuccess (result, dispatch) {
+function onSuccess (result, dispatch) {
   dispatch(toast.actions.show({
     type: 'notice',
     message: 'Please check your email to verify your account'
   }))
 }
 
-function handleFailure (error, dispatch) {
-  const errors = { }
-  for (const key of Object.keys(error)) {
-    errors[key] = error[key].join(', ')
-  }
-  throw new SubmissionError(errors)
-}
-
-function genFormHandler ({ action }) {
-  return function (data, dispatch) {
-    return dispatch(action(data))
-      .then(result => handleSuccess(result, dispatch))
-      .catch(e => handleFailure(e, dispatch))
-  }
-}
-
 const onSubmit = genFormHandler({
-  action: createAccount
+  action: createAccount,
+  onSuccess
 })
 
 export default reduxForm({
