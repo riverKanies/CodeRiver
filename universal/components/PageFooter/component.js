@@ -14,10 +14,6 @@ type Props = {
   quote: Array<string>,
   heading: string,
   heading2: string,
-  facebookIcon: any,
-  twitterIcon: any,
-  instagramIcon: any,
-  mediumIcon: any,
   logoFooter: any
 };
 
@@ -34,11 +30,7 @@ const PageFooter = ({
   citation = '— Marcus Aurelius',
   heading = 'Links',
   heading2 = 'Follow Us',
-  logoFooter = logo,
-  facebookIcon = facebookIcon,
-  twitterIcon = twitterIcon,
-  instagramIcon = instagramIcon,
-  mediumIcon = mediumIcon
+  logoFooter = logo
 }: Props) => {
   return (
     <section className={styles.footer}>
