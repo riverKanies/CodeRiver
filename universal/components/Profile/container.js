@@ -12,7 +12,7 @@ type Props = {
   renderLoginForm: boolean
 }
 
-class ProfileContainer extends React.Component {
+export class ProfileContainer extends React.Component {
   logOutUser: Function
   props: Props
 
