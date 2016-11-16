@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 import MediumPostDynamic from 'components/MediumPostDynamic'
 import EmailCaptureMini from 'components/EmailCaptureMini'
+require('masonry-layout')
 
 // import type { MediumPost } from 'lib/types'
 
@@ -34,15 +35,17 @@ const featuredQuarterBlue = {
   hasSynopsis: 'synopsisFalse'
 }
 
-const grid = document.querySelector('.posts');
-const msnry = new Masonry( grid, {
-  itemSelector: ['.half', '.quarterWhite', '.quarterBlue']
-})
+// const msnry = new MasonryLayout('.posts', {
+//   itemSelector: ['article', 'section']
+// })
+
+// Masonry being initialized in HTML with 'data-masonry'
+const msnryArgs = "{'itemSelector': 'article'}"
 
 const MediumPostGridDynamic = (props) => {
   return (
     <section className={styles.featuredMediumPosts}>
-      <section className={styles.posts}>
+      <section data-masonry={msnryArgs} className={styles.posts}>
         <MediumPostDynamic {...featuredHalfImage} />
         <EmailCaptureMini />
         <MediumPostDynamic {...featuredHalfNoImage} />

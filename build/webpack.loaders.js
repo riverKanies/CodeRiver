@@ -30,6 +30,9 @@ const fileLoaders = [
   }, {
     test: /\.(png|jpg|svg)$/,
     loader: 'url?limit=8192'
+  }, {
+    test: /masonry-layout/,
+    loader: 'imports?define=>false&this=>window'
   }
 ]
 

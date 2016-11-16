@@ -1,27 +1,12 @@
 import React from 'react'
 import styles from './styles'
 import MediumPostGridDynamic from 'components/MediumPostGridDynamic'
-import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
-import Button from 'components/Button'
-import EmailCapture from 'components/EmailCapture'
 import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
-
 import thriveScience from './assets/thriveScience.jpg'
 
-const sectionHWProps = {
-  sectionClass: 'healthWellness',
-  title: 'Thrive Global',
-  subTitle: 'Health & Wellness Program',
-  sectionText: [`Replace me with real text, yo.`]
-}
-const btnHWProps = {
-  buttonText: 'Read More',
-  linkTo: '/',
-  buttonColor: 'dark'
-}
 const twoColScience = {
   sectionClass: 'default',
   title: 'The Science Behind Thrive',
@@ -67,15 +52,10 @@ export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
-      <FullWidthText {...sectionHWProps}>
-        <Button {...btnHWProps} />
-      </FullWidthText>
+      <ThriveStoryCarousel />
+      <QuoteSection />
       <FullWidthTwoCol {...twoColScience} />
       <FullWidthTwoColSpecial {...twoColLife} />
-      <FullWidthText />
-      <QuoteSection />
-      <ThriveStoryCarousel />
-      <EmailCapture />
     </main>
   )
 }
