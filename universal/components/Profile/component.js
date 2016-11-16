@@ -9,10 +9,17 @@ type Props = {
 }
 
 const Profile = ({ email, logOutAction }: Props) => {
+  if (!email) return null
   return (
     <div className={styles.container}>
-      Hi {email}
-      <Button handleClick={logOutAction} buttonText={'Log Out'} />
+      <div className={styles.greeting}>
+        <p>
+          Hi {email}
+        </p>
+      </div>
+      <div className={styles.logout}>
+        <Button handleClick={logOutAction} buttonText={'Log Out'} />
+      </div>
     </div>
   )
 }

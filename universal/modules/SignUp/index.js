@@ -8,13 +8,27 @@ export const KEY = 'sign-up'
 // Action Creators
 export const actions = { ...baseActions(KEY) }
 
+export const constants = {
+  successMessage: `
+    Your account has been created, please check your email to activate your
+    account.
+  `
+}
+
 // Reducer
-export const initialState = { }
+export const initialState = {
+  createPending: false,
+  message: null
+}
 
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
     case actions.createSuccess:
-      return { ...state, list: action.data, createPending: false }
+      return {
+        ...state,
+        createPending: false,
+        message: constants.successMessage
+      }
 
     case actions.createPending:
       return { ...state, createPending: true }

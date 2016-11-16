@@ -29,6 +29,7 @@ type signupProps = {
   handleSubmit: Function,
   submitting: boolean,
   valid: boolean,
+  message: string
 };
 
 const SignUpForm = (props: signupProps) => {
@@ -63,6 +64,7 @@ const SignUpForm = (props: signupProps) => {
         <div className={styles.buttonRow}>
           {renderSubmit(props)}
         </div>
+        {(props.message) ? <p>{props.message}</p> : null }
       </form>
     </section>
   )

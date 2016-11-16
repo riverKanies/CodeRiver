@@ -1,9 +1,10 @@
 import { reduxForm } from 'redux-form'
+import { connect } from 'react-redux'
 import { createAccount } from 'modules/SignUp'
 import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required, email, minLength, match } from 'lib/validate'
+import { KEY } from 'modules/signup'
 
-import toast from 'modules/Toast'
 import component from './component'
 
 const validate = createValidator({
@@ -13,10 +14,8 @@ const validate = createValidator({
 })
 
 function onSuccess (result, dispatch) {
-  dispatch(toast.actions.show({
-    type: 'notice',
-    message: 'Please check your email to verify your account'
-  }))
+  // do nothing special
+  return undefined
 }
 
 const onSubmit = genFormHandler({
@@ -24,8 +23,11 @@ const onSubmit = genFormHandler({
   onSuccess
 })
 
+const mapStateToProps = (store) => ({ message: store[KEY].message })
+const container = connect(mapStateToProps)(component)
+
 export default reduxForm({
   form: 'signup',
   validate,
   onSubmit
-})(component)
+})(container)

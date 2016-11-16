@@ -3,5 +3,17 @@
 */
 
 .container {
+  margin: 10em;
+  text-align: center;
+  border: 1px solid red;
+  width: 100%;
+}
+
+.greeting {
+  padding: 20px;
+
+}
+
+.logout {
 
 }

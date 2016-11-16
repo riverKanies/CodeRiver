@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { reducer, initialState, actions, createAccount } from './index'
+import { reducer, initialState, actions, createAccount, constants } from './index'
 import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
 import { httpPost, HOST_URL } from 'lib/http'
@@ -34,13 +34,12 @@ describe('SignUp', () => {
       expect(
         reducer({ ...initialState, createPending : true }, {
           type: actions.createSuccess,
-          data: [1,2,3]
         })
       ).toEqual(
         {
           ...initialState,
           createPending: false,
-          list: [1,2,3]
+          message: constants.successMessage
         }
       )
     })
