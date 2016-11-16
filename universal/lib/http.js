@@ -27,8 +27,12 @@ export const saveHeaders = (headers) => {
   }
 
   if (h['access-token'] && h['token-type']) {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(h))
+    saveHeaderObject(h)
   }
+}
+
+export function saveHeaderObject (h) {
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(h))
 }
 
 export const clearHeaders = () => localStorage.setItem(LOCAL_STORAGE_KEY, null)
