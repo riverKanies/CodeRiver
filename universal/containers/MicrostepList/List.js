@@ -54,13 +54,11 @@ function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
         <div className={styles.listRow}>
           <img src={Icon} className={styles.stepIcon} />
           <img src={CopySVG} className={styles.copyIcon} />
-          <p>{title}</p>
-          <span className={styles.tooltip}>
-            <p> Click to Copy </p>
-          </span>
+          <p>{title} <span className={styles.tooltip}>
+            Click to Copy
+          </span></p>
         </div>
       </CopyToClipboard>
-
     </li>
   )
 }

@@ -115,7 +115,7 @@ button {
   width: auto;
   height: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   border: none;
   outline: none;
   font-family: Mon;
@@ -124,7 +124,7 @@ button {
   letter-spacing: .15rem;
   text-transform: uppercase;
   color: white;
-  &:hover {
-
+  @media bp-papa-bear {
+    padding: 0 2rem;
   }
 }

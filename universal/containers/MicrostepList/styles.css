@@ -169,16 +169,12 @@
     display: none;
   }
 
-  p {
-    line-height: 1.8;
-  }
-
   .tooltip {
     position: absolute;
-    color: ThriveTeal;
+    margin: 0 0 0 0.5rem;
+    color: gray;
     display: none;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    font-size: 0.8rem;
   }
 
   &:hover {
@@ -194,7 +190,7 @@
     }
 
     .tooltip {
-      display: block;
+      display: inline-block;
     }
   }
 }
