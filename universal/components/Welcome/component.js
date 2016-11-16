@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Profile from 'components/Profile'
-import { saveHeaders } from 'lib/http'
+import { saveHeaderObject } from 'lib/http'
 
 type Props = {
   dispatch: Function,
@@ -21,7 +21,7 @@ export class Welcome extends React.Component {
     }
 
     if (uid) {
-      saveHeaders(headers)
+      saveHeaderObject(headers)
     }
   }
 
