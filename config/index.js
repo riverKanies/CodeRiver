@@ -110,7 +110,9 @@ Edit at Your Own Risk
 config.globals = {
   'process.env'  : {
     'NODE_ENV' : JSON.stringify(config.env),
-    'SEGMENT'  : JSON.stringify(process.env.SEGMENT)
+    'SEGMENT'  : JSON.stringify(process.env.SEGMENT),
+    'ROLLBAR'  : JSON.stringify(process.env.ROLLBAR),
+    'ROLLBAR_ENV'  : JSON.stringify(process.env.ROLLBAR_ENV)
   },
   'NODE_ENV'     : config.env,
   '__DEV__'      : config.env === 'development',
