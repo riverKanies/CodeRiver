@@ -1,7 +1,15 @@
-/*
-  This is the stylesheet for: Profile
-*/
 
 .container {
+  margin-top: 10em;
+  text-align: center;
+  width: 100%;
+}
+
+.greeting {
+  padding: 20px;
+
+}
+
+.logout {
 
 }
