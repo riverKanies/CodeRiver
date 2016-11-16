@@ -2,6 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Profile from 'components/Profile'
+import { saveHeaders } from 'lib/http'
 
 type Props = {
   dispatch: Function,
@@ -20,7 +21,7 @@ export class Welcome extends React.Component {
     }
 
     if (uid) {
-      localStorage.setItem('thrive_user_headers', JSON.stringify(headers))
+      saveHeaders(headers)
     }
   }
 
