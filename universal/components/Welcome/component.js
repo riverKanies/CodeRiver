@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react'
 import { connect } from 'react-redux'
-import { checkSession } from 'modules/UserSession'
 import Profile from 'components/Profile'
 
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
   location: Object
 }
 
-class Welcome extends React.Component {
+export class Welcome extends React.Component {
   props: Props
 
   componentWillMount () {

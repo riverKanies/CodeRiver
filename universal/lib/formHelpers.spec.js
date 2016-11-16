@@ -16,7 +16,6 @@ describe('genFormHandler', () => {
 
   const rejectedAction = (data) => (dispatch) => {
     dispatch({ type: 'INITIAL_ACTION', data })
-    console.log('this was dispatched ***')
     return Promise.reject({ error_1: 'there was an error'})
   }
 

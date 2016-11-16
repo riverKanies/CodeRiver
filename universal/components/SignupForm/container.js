@@ -1,9 +1,8 @@
 import { reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
-import { createAccount } from 'modules/SignUp'
+import { createAccount, KEY } from 'modules/SignUp'
 import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required, email, minLength, match } from 'lib/validate'
-import { KEY } from 'modules/signup'
 
 import component from './component'
 
