@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 import MediumPostDynamic from 'components/MediumPostDynamic'
 import EmailCaptureMini from 'components/EmailCaptureMini'
+
 // import type { MediumPost } from 'lib/types'
 
 // {posts.map(post => <MediumPostDynamic {...post} />)}
@@ -32,6 +33,11 @@ const featuredQuarterBlue = {
   hasImage: 'imageTrue',
   hasSynopsis: 'synopsisFalse'
 }
+
+const grid = document.querySelector('.posts');
+const msnry = new Masonry( grid, {
+  itemSelector: ['.half', '.quarterWhite', '.quarterBlue']
+})
 
 const MediumPostGridDynamic = (props) => {
   return (
