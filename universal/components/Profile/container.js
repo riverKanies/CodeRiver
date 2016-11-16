@@ -23,6 +23,10 @@ export class ProfileContainer extends React.Component {
 
   componentWillMount () {
     this.props.dispatch(checkSession())
+      .catch(e => {
+        // ssshhhhhhh, its ok....
+        return undefined
+      })
   }
 
   logOutUser () {
