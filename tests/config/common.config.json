@@ -1,5 +1,6 @@
 {
   "scriptPreprocessor": "<rootDir>/tests/config/preprocessor",
+  "setupFiles": ["<rootDir>/tests/config/envScript.js"],
   "globals": {
     "__DEV__": true,
     "__PROD__": false,

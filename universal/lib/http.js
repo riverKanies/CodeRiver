@@ -1,5 +1,7 @@
 import fetch from 'isomorphic-fetch'
 
+const LOCAL_STORAGE_KEY = 'thrive_user_headers'
+
 function clientUrl () {
   return (location) ? location.origin : ''
 }
@@ -16,7 +18,28 @@ function hostUrl () {
 
 export const HOST_URL = hostUrl()
 
+export const saveHeaders = (headers) => {
+  const h = {
+    'access-token': headers.get('access-token'),
+    'token-type': headers.get('token-type'),
+    'client': headers.get('client'),
+    'uid': headers.get('uid')
+  }
+
+  if (h['access-token'] && h['token-type']) {
+    saveHeaderObject(h)
+  }
+}
+
+export function saveHeaderObject (h) {
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(h))
+}
+
+export const clearHeaders = () => localStorage.setItem(LOCAL_STORAGE_KEY, null)
+
 function parseResponse (response) {
+  saveHeaders(response.headers)
+
   if (!response.status) {
     throw new Error(response)
   } else if (response.status >= 400) {
@@ -25,12 +48,18 @@ function parseResponse (response) {
   return response.json()
 }
 
-export function httpPost (route, data) {
-  const method = 'POST'
-  const headers = {
+export function loadHeaders () {
+  const defaultHeaders = {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   }
+  const keys = window.localStorage.getItem('thrive_user_headers')
+
+  return (keys) ? { ...defaultHeaders, ...JSON.parse(keys) } : defaultHeaders
+}
+
+export function httpPost (route, data, method = 'POST') {
+  const headers = loadHeaders()
 
   const FULL_PATH = HOST_URL + route
 
@@ -41,8 +70,20 @@ export function httpPost (route, data) {
   }).then(parseResponse, parseResponse)
 }
 
+export function httpPut (route, data) {
+  return httpPost(route, data, 'PUT')
+}
+
+export function httpDelete (route, data) {
+  return httpPost(route, data, 'DELETE')
+}
+
 export function httpGet (route) {
-  return fetch(HOST_URL + route)
+  const headers = loadHeaders()
+
+  const FULL_PATH = HOST_URL + route
+
+  return fetch(FULL_PATH, { headers })
     .then(parseResponse, parseResponse)
 }
 

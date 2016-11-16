@@ -5,6 +5,8 @@ import * as microsteps from 'modules/Microsteps'
 import * as microstep from 'modules/Microstep'
 import * as mediumPosts from 'modules/MediumPosts'
 import * as microstepsFilter from 'modules/MicrostepsFilter'
+import * as session from 'modules/UserSession'
+import * as signup from 'modules/SignUp'
 
 const locationState = {
   location: null
@@ -24,6 +26,8 @@ export const makeRootReducer = (asyncReducers) => {
     [microstep.KEY]: microstep.reducer,
     [mediumPosts.KEY]: mediumPosts.reducer,
     [microstepsFilter.KEY]: microstepsFilter.reducer,
+    [session.KEY]: session.reducer,
+    [signup.KEY]: signup.reducer,
     location: locationReducer,
     form: formReducer,
     ...asyncReducers

@@ -7,5 +7,7 @@ dist
 coverage
 
 .env
+.
+todo.txt
 
 tests/config/generated/*.json

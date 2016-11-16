@@ -1,9 +1,9 @@
 /* @flow */
 import React from 'react'
 import { Field } from 'redux-form'
-import GenericFormError from 'components/GenericFormError'
 import Button from 'components/Button'
 import Input from 'components/Input'
+import GenericFormError from 'components/GenericFormError'
 import styles from './styles'
 
 type renderSubmitField = {
@@ -19,7 +19,7 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
       handleClick={handleSubmit}
       disabled={!valid || submitting}
       buttonStyle='teal'
-      buttonText='Sign Up'
+      buttonText='Log In'
     />
   )
 }
@@ -29,14 +29,13 @@ type signupProps = {
   handleSubmit: Function,
   submitting: boolean,
   valid: boolean,
-  message: string
 };
 
-const SignUpForm = (props: signupProps) => {
+const LoginForm = (props: signupProps) => {
   return (
     <section className={styles.container}>
       <div className={styles.headerRow}>
-        <h2>Sign up to start thriving</h2>
+        <h2>Log In</h2>
       </div>
       <form>
         <GenericFormError {...props} />
@@ -54,20 +53,12 @@ const SignUpForm = (props: signupProps) => {
             type='password'
             label='Password' />
         </div>
-        <div className={styles.fieldRow}>
-          <Field
-            component={Input}
-            name='password_confirmation'
-            type='password'
-            label='Confirm Password' />
-        </div>
         <div className={styles.buttonRow}>
           {renderSubmit(props)}
         </div>
-        {(props.message) ? <p>{props.message}</p> : null }
       </form>
     </section>
   )
 }
 
-export default SignUpForm
+export default LoginForm

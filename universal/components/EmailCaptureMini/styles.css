@@ -14,17 +14,18 @@
 
 .emailCaptureMini {
   display: block;
-  lost-column: 1;
-  margin: 0 mediumGutter;
+  width: 100%;
+  margin: 0 auto;
   padding: 1.25rem 1.25rem;
-  float: none;
+  float: left;
   background: ThriveTeal url('./assets/emailMiniBG.png') repeat;
   position: relative;
   @media bp-mama-bear {
     padding: 2rem 2rem;
   }
   @media bp-papa-bear {
-    lost-column: 1/2;
+    lost-masonry-column: 1/2 0rem;
+    border: .25rem solid #f0f0f0;
   }
 }
 
