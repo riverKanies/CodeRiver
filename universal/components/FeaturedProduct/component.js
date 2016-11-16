@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import image from './assets/product-placeholder.jpg'
 
 type Props = {
   title: string,
@@ -9,15 +10,13 @@ type Props = {
 }
 
 const fp1 = {
-  title: 'boomtown',
-  productTitle: 'Teapots',
-  price: '$22.00'
+  productTitle: 'Sense by Hello',
+  price: '$45.00'
 }
 
 const fp2 = {
-  title: 'boomcityUSA',
-  productTitle: 'Diamondgrillz',
-  price: '$45,550'
+  productTitle: 'Rubber Yarn',
+  price: '$150.00'
 }
 
 const Product = ({
@@ -27,12 +26,13 @@ const Product = ({
 }: Props) => {
   return (
     <section className={styles.product}>
-      <h3>{title}</h3>
-      <p>{productTitle}
-        <span>
-          {price}
-        </span>
-      </p>
+      <figure className={styles.imageWrap}>
+        <img className={styles.image} src={image} />
+      </figure>
+      <div className={styles.description}>
+        <h4>{productTitle}</h4>
+        <p>{price}</p>
+      </div>
     </section>
   )
 }
@@ -42,9 +42,10 @@ class FeaturedProduct extends React.Component {
     return (
       <section className={styles.container}>
         <section className={styles.content}>
-          <h2>Hello</h2>
+          <h3 className={styles.header}>Shop</h3>
           <Product {...fp1} />
           <Product {...fp2} />
+          <Product {...fp1} />
           <Product {...fp2} />
         </section>
       </section>

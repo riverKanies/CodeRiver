@@ -5,6 +5,7 @@
 
 .container {
   lost-utility: clearfix;
+  background-color: white;
   lost-center: containerWidth;
   padding: 2rem 1rem;
   @media bp-papa-bear {
@@ -148,9 +149,6 @@
   lost-column: 1;
   @media bp-mama-bear {
     lost-column: 1/2;
-  }
-  @media bp-elder-bear {
-    lost-column: 1/3;
   }
 }
 
