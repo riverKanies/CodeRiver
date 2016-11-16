@@ -1,10 +1,10 @@
 import { reduxForm } from 'redux-form'
 import { createAccount } from 'modules/SignUp'
-
-import { createValidator, required, email, minLength, match } from 'lib/validate'
 import { genFormHandler } from 'lib/formHelpers'
-import component from './component'
+import { createValidator, required, email, minLength, match } from 'lib/validate'
+
 import toast from 'modules/Toast'
+import component from './component'
 
 const validate = createValidator({
   email: [required, email],
