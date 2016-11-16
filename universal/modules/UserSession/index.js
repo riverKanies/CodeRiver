@@ -1,5 +1,5 @@
 /* @flow */
-import { httpGet, httpPost, httpDelete } from 'lib/http'
+import { httpGet, httpPost, httpDelete, clearHeaders } from 'lib/http'
 import baseActions from 'modules/baseActions'
 
 // Name
@@ -50,7 +50,8 @@ export function checkSession () {
       actions.fetchSuccess,
       actions.fetchFailure
     ],
-    callAPI: () => httpGet('/api/auth/validate_token')
+    callAPI: () => httpGet('/api/auth/validate_token'),
+    failureCallback: () => clearHeaders()
   }
 }
 
@@ -61,7 +62,8 @@ export function createSession (data: any) {
       actions.createSuccess,
       actions.createFailure
     ],
-    callAPI: () => httpPost('/api/auth/sign_in', data)
+    callAPI: () => httpPost('/api/auth/sign_in', data),
+    failureCallback: () => clearHeaders()
   }
 }
 
@@ -72,6 +74,7 @@ export function deleteSession () {
       actions.deleteSuccess,
       actions.deleteFailure
     ],
-    callAPI: () => httpDelete('/api/auth/sign_out')
+    callAPI: () => httpDelete('/api/auth/sign_out'),
+    successCallback: () => clearHeaders()
   }
 }
