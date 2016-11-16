@@ -42,7 +42,7 @@ const featuredQuarterBlue = {
 // Masonry being initialized in HTML with 'data-masonry'
 const msnryArgs = "{'itemSelector': 'article'}"
 
-const MediumPostGridDynamic = (props) => {
+const MediumPostGridDynamic = () => {
   return (
     <section className={styles.featuredMediumPosts}>
       <section data-masonry={msnryArgs} className={styles.posts}>
