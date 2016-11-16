@@ -6,7 +6,7 @@ import WithProvider from 'lib/testHelpers'
 describe('(Container) Profile', () => {
   it('should render a <LoginForm />', () => {
     const props = {
-      dispatch: () => {},
+      dispatch: () => Promise.resolve(),
       userData: 'test',
       renderLoginForm: true
     }
@@ -19,7 +19,7 @@ describe('(Container) Profile', () => {
 
   it('should render a <Profile />', () => {
     const props = {
-      dispatch: () => {},
+      dispatch: () => Promise.resolve(),
       userData: 'test',
       renderLoginForm: false
     }
