@@ -1,6 +1,6 @@
 import React from 'react'
 import { Welcome } from './component'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 describe('(Component) Welcome', () => {
   it('should render a <Profile /> element', () => {
