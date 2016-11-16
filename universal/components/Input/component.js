@@ -4,8 +4,13 @@ import styles from './styles'
 
 import type { Field as FieldType } from 'lib/types'
 
-const Error = (error: any) => <span className={styles.error}>{error}</span>
-const Warning = (warning: any) => <span className={styles.warning}>{warning}</span>
+const Error = ({ error } : { error: string }) => {
+  return <span className={styles.error}>{error}</span>
+}
+
+const Warning = ({ warning } : { warning: string}) => {
+  return <span className={styles.warning}>{warning}</span>
+}
 
 export default ({
   input,

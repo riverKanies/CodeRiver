@@ -1,25 +1,33 @@
 /* @flow */
 import React from 'react'
 import { connect } from 'react-redux'
+import Profile from 'components/Profile'
+import { saveHeaders } from 'lib/http'
 
-class Welcome extends React.Component {
-  componentDidMount () {
+type Props = {
+  dispatch: Function,
+  location: Object
+}
+
+export class Welcome extends React.Component {
+  props: Props
+
+  componentWillMount () {
     const { token, client_id, uid } = this.props.location.query
     const headers = {
       'access-token': token,
       client: client_id,
       uid: decodeURIComponent(uid)
     }
-    localStorage.setItem('thrive_user_headers', JSON.stringify(headers))
+
+    if (uid) {
+      saveHeaders(headers)
+    }
   }
 
   render () {
-    return <p style={{ marginTop: '100px' }}>Welcome, your account has been created!</p>
+    return <Profile />
   }
-}
-
-Welcome.propTypes = {
-  location: React.PropTypes.object
 }
 
 export default connect(() => ({}))(Welcome)

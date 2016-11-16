@@ -4,6 +4,8 @@ export default function callAPIMiddleware ({ dispatch, getState }) {
       types,
       callAPI,
       shouldCallAPI = () => true,
+      successCallback = () => undefined,
+      failureCallback = () => undefined,
       payload = {}
     } = action
 
@@ -35,16 +37,20 @@ export default function callAPIMiddleware ({ dispatch, getState }) {
     }))
 
     return callAPI().then(
-      data => dispatch(Object.assign({}, payload, {
-        data,
-        type: successType
-      })),
+      data => {
+        dispatch(Object.assign({}, payload, {
+          data,
+          type: successType
+        }))
+        successCallback()
+      },
       error => {
         const e = error.errors || { error: 'there was an error processing request' }
         dispatch(Object.assign({}, payload, {
           error: e,
           type: failureType
         }))
+        failureCallback()
         return Promise.reject(e)
       }
     )

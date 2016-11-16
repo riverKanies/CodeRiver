@@ -81,7 +81,7 @@
       }
     },
     "test": {
-      "command": "jest --coverage",
+      "command": "jest",
       "env": {
         "NODE_ENV": "test",
         "DEBUG": "app:*"
