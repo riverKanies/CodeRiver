@@ -9,16 +9,6 @@ type Props = {
   price: string
 }
 
-const fp1 = {
-  productTitle: 'Sense by Hello',
-  price: '$45.00'
-}
-
-const fp2 = {
-  productTitle: 'Rubber Yarn',
-  price: '$150.00'
-}
-
 const Product = ({
   title = 'Shop',
   productTitle = 'My product',
@@ -43,10 +33,10 @@ class FeaturedProduct extends React.Component {
       <section className={styles.container}>
         <section className={styles.content}>
           <h3 className={styles.header}>Shop</h3>
-          <Product {...fp1} />
-          <Product {...fp2} />
-          <Product {...fp1} />
-          <Product {...fp2} />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
         </section>
       </section>
     )
