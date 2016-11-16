@@ -1,9 +1,9 @@
 import { reduxForm } from 'redux-form'
 import { browserHistory } from 'react-router'
-
-import { createSession } from 'modules/UserSession'
 import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required } from 'lib/validate'
+
+import { createSession } from 'modules/UserSession'
 import component from './component'
 
 const validate = createValidator({
