@@ -2,22 +2,47 @@
 import React from 'react'
 import styles from './styles'
 import MediumPostDynamic from 'components/MediumPostDynamic'
-import type { MediumPost } from 'lib/types'
+import EmailCaptureMini from 'components/EmailCaptureMini'
+// import type { MediumPost } from 'lib/types'
 
-type Props = {
-  posts: Array<MediumPost>,
-  requestPending: boolean
-};
+// {posts.map(post => <MediumPostDynamic {...post} />)}
 
-const MediumPostGridDynamic = ({
-  posts = [],
-  requestPending = false
-}: Props) => {
+// type Props = {
+//   posts: Array<MediumPost>,
+//   requestPending: boolean
+// };
+
+const featuredHalfImage = {
+  cardType: 'half',
+  hasImage: 'imageTrue',
+  hasSynopsis: 'synopsisTrue'
+}
+const featuredHalfNoImage = {
+  cardType: 'half',
+  hasImage: 'imageFalse',
+  hasSynopsis: 'synopsisTrue'
+}
+const featuredQuarterWhite = {
+  cardType: 'quarterWhite',
+  hasImage: 'imageTrue',
+  hasSynopsis: 'synopsisFalse'
+}
+const featuredQuarterBlue = {
+  cardType: 'quarterBlue',
+  hasImage: 'imageTrue',
+  hasSynopsis: 'synopsisFalse'
+}
+
+const MediumPostGridDynamic = (props) => {
   return (
     <section className={styles.featuredMediumPosts}>
-      {/* <MediumPostFilter /> */}
       <section className={styles.posts}>
-        {posts.map(post => <MediumPostDynamic {...post} />)}
+        <MediumPostDynamic {...featuredHalfImage} />
+        <EmailCaptureMini />
+        <MediumPostDynamic {...featuredHalfNoImage} />
+        <MediumPostDynamic {...featuredHalfImage} />
+        <MediumPostDynamic {...featuredQuarterWhite} />
+        <MediumPostDynamic {...featuredQuarterBlue} />
       </section>
     </section>
   )

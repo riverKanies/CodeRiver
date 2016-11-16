@@ -15,7 +15,7 @@
 .postCard {
   display: block;
   height: auto;
-  margin: 0 mediumGutter;
+  margin: 0 auto;
   padding: 0 0;
   float: left;
   position: relative;
@@ -160,14 +160,15 @@
 /* Composed cardType */
 .half {
   composes: postCard;
-  lost-column: 1 flex mediumGutter;
+  width: 100%;
   height: imgCardbaby;
+  float: left;
   background: gradientCardThrive;
   @media bp-mama-bear {
     height: imgCardMama;
   }
   @media bp-papa-bear {
-    lost-column: 1/2 flex mediumGutter;
+    width: 50%;
     height: imgCardPapa;
   }
   .postContent {
@@ -200,11 +201,11 @@
 }
 .quarterWhite {
   composes: postCard;
-  lost-column: 1;
+  width: 100%;
   height: auto;
   background: white;
   @media bp-papa-bear {
-    lost-column: 1/4 mediumGutter;
+    width: 25%;
   }
   .imageTrue {
     display: block;
@@ -283,7 +284,7 @@
   height: auto;
   background: ThriveBlue;
   @media bp-papa-bear {
-    lost-column: 1/4 mediumGutter;
+    width: 25%;
   }
   .imageTrue {
     display: block;

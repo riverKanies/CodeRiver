@@ -1,8 +1,19 @@
 @value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin from breakpoints;
 
-.posts {
+.featuredMediumPosts {
   lost-center: containerWidth containerPadding;
   margin: 0 auto;
   float: none;
+}
+
+.posts {
+  lost-masonry-wrap: no-flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  @media bp-papa-bear {
+    margin: 1.5rem auto papaMargin;
+  }
 }
