@@ -16,6 +16,7 @@ test:
     - npm run analyze
     - npm run test
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
+    - npm run heroku-postbuild
 
 experimental:
   notify:
