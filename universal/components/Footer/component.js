@@ -25,7 +25,7 @@ const footerQuote = [`People look for retreats for themselves,
 
 // const logoFooter = logo
 
-const PageFooter = ({
+const Footer = ({
   quote = footerQuote,
   citation = '— Marcus Aurelius',
   heading = 'Links',
@@ -100,4 +100,4 @@ const PageFooter = ({
   )
 }
 
-export default PageFooter
+export default Footer
