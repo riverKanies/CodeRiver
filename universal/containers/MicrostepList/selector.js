@@ -15,7 +15,7 @@ export default createSelector(
     const begin = currentPage * perPage
     const end = begin + perPage
 
-    const filtered = microsteps.filter(m => m.title.match(re))
+    const filtered = microsteps.filter(m => m.search_field.match(re))
     const totalPages = Math.ceil(filtered.length / perPage)
 
     return {
