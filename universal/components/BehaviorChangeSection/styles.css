@@ -1,5 +1,4 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-mama-bear, containerWidth, containerPadding from breakpoints;
+@value bp-mama-bear, containerWidth, containerPadding from 'all';
 
 .container {
   lost-center: containerWidth flex;

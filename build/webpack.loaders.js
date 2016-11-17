@@ -9,30 +9,30 @@ const fileLoaders = [
   },
   {
     test: /\.woff$/,
-    loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff'
   },
   {
     test: /\.woff2$/,
-    loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2'
   }, {
     test: /\.otf$/,
-    loader: 'file?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype'
+    loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=font/opentype'
   }, {
     test: /\.ttf$/,
-    loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream'
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream'
   }, {
     test: /\.eot$/,
-    loader: 'file?prefix=fonts/&name=[path][name].[ext]'
+    loader: 'file-loader?prefix=fonts/&name=[path][name].[ext]'
   }, {
     test: /\.svg$/,
-    loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml',
+    loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml',
     include: paths.universal('styles/fonts')
   }, {
     test: /\.(png|jpg|svg)$/,
-    loader: 'url?limit=8192'
+    loader: 'url-loader?limit=8192'
   }, {
     test: /masonry-layout/,
-    loader: 'imports?define=>false&this=>window'
+    loader: 'imports-loader?define=>false&this=>window'
   }
 ]
 

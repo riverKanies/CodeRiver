@@ -34,7 +34,7 @@ const webpackConfig = (options) => {
   debug(`Configuring loaders for ${ENV}`)
   const rules = [{
     test: /\.(js|jsx)$/,
-    loader: 'babel',
+    loader: 'babel-loader',
     include: paths.base(),
     exclude: paths.base('node_modules')
   }, {
@@ -62,13 +62,16 @@ const webpackConfig = (options) => {
     context: paths.client(),
     resolve: {
       extensions: config.compiler_extensions,
-      modules: [paths.universal(), paths.client(), 'node_modules']
+      modules: [paths.universal(), paths.client(), 'node_modules'],
+      alias: {
+        all: paths.universal('styles/allTheThings.css')
+      }
     },
-    externals: {
-      'react/addons': true,
-      'react/lib/ExecutionEnvironment': true,
-      'react/lib/ReactContext': true
-    },
+    externals: [
+      'react/addons',
+      'react/lib/ExecutionEnvironment',
+      'react/lib/ReactContext'
+    ],
     entry: entry,
     output: output,
     plugins: plugins,
