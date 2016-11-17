@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, babyMargin from 'all';
 
 .fullscreenBanner {
   display: block;
@@ -8,6 +8,7 @@
   margin: 0 auto;
   padding: 0 0;
   position: relative;
+  background: white;
   text-align: center;
   @media bp-mama-bear {
     display: flex;
@@ -94,7 +95,10 @@
 }
 .bannerContent {
   lost-center: 88% 6%;
-  background: white;
+  padding-bottom: babyMargin;
+  @media bp-mama-bear {
+    padding-bottom: 0;
+  }
 }
 
 .bannerHeader {
@@ -102,7 +106,6 @@
   margin: 0 auto 1.25rem auto;
   color: black;
   text-align: left;
-  padding-left: 1em;
   @media bp-mama-bear {
     text-align: center;
     padding: 0;
@@ -119,14 +122,15 @@
 }
 .bannerText {
   width: 100%;
-  text-align: center;
+  text-align: left;
   color: black;
   @media bp-mama-bear {
-    text-align: left;
+    text-align: center;
     color: white;
   }
   p {
     margin-bottom: 0;
+    text-align: inherit;
     color: inherit;
   }
 }
