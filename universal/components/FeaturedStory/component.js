@@ -16,7 +16,7 @@ const defaultTitle = ['Its time to say goodbye']
 
 const defaultAuthor = ['Koby Bryant']
 
-const StoryComponent = ({
+const FeaturedStory = ({
   title = defaultTitle,
   author = defaultAuthor,
   details = defaultDetails
@@ -43,4 +43,4 @@ const StoryComponent = ({
   )
 }
 
-export default StoryComponent
+export default FeaturedStory
