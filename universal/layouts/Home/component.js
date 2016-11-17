@@ -3,8 +3,10 @@ import styles from './styles'
 import MediumPostGridDynamic from 'components/MediumPostGridDynamic'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
+import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
+
 import thriveScience from './assets/thriveScience.jpg'
 
 const twoColScience = {
@@ -53,6 +55,7 @@ export const HomeView = () => {
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
       <ThriveStoryCarousel />
+      <HalfTextOverlay />
       <QuoteSection />
       <FullWidthTwoCol {...twoColScience} />
       <FullWidthTwoColSpecial {...twoColLife} />

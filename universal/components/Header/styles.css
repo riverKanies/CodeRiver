@@ -13,6 +13,7 @@
   background: rgba(255, 255, 255, 1);
   z-index: 1000;
   overflow-x: hidden;
+  overflow-y: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
     padding: 0 3rem 0 1.25rem;
@@ -284,6 +285,7 @@
   composes: siteHeader;
   height: auto;
   overflow-x: visible;
+  overflow-y: visible;
   .brand {
     z-index: 9000;
   }

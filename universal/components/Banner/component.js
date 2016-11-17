@@ -9,7 +9,7 @@ type Props = {
   subTitle: string,
   bannerText: Array<string>,
   bannerImage: string,
-  height: string,
+  height: 'fullHeight' | 'halfHeight' | 'quarterHeight' | 'thirdHeight' | 'twoThirdsHeight'
 };
 
 const defaultText = [`Using a mobile first approach, we start with a block
