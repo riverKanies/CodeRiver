@@ -1,0 +1,103 @@
+/*
+  This is the stylesheet for: HalfTextOverlay
+*/
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from "styles/breakpoints.css";
+@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
+@value Mon, MonBold, Playfair from "styles/fonts.css";
+
+.halfOverlay {
+  display: block;
+  max-width: containerWidth;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+}
+
+.imageWrap {
+  display: block;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  z-index: -100;
+}
+.image {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  object-fit: cover;
+}
+
+.postContent {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: ThriveBlue;
+  @media bp-papa-bear {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 83, 212, .8);
+  }
+  > i {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 0;
+    float: left;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+}
+.contentWrap {
+  display: block;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  z-index: 50;
+  @media bp-papa-bear {
+    lost-flex-container: column;
+    flex-flow: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+.content {
+  width: 100%;
+  padding: containerPadding;
+  @media bp-papa-bear {
+    padding: 0 10%;
+  }
+  p {
+    font-family: Mon;
+    text-align: left;
+    color: white;
+    @media bp-papa-bear {
+      font-family: MonBold;
+      color: rgba(255, 255, 255, .7);
+    }
+  }
+  &:hover {
+    p {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.header {
+  width: 100%;
+  margin: 0 auto 1.635rem;
+  padding: 0 0;
+  text-align: left;
+  color: white;
+}
