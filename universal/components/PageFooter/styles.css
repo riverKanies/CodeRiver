@@ -5,22 +5,22 @@
 .footer {
 	background-color: #222328;
   margin: 0 auto;
-  padding: 60px 40px;
   height: auto;
   width: 100%;
 
-  /*@media bp-baby-bear {
+  @media bp-mama-bear {
     display: flex;
     flex-direction: column;
     flex-flow: center;
     align-items: center;
     justify-content: center;
     height: auto
-  }*/
+  }
 }
 
 .container {
 	lost-center: 90rem;
+	padding: 60px 40px;
   margin: 0 auto;
   float: none;
 }
@@ -28,101 +28,91 @@
 /* ===== COLUMNS ===== */
 
 .footerQuote {
-	color: #959595;
-	display: block;
-	font-size: 20px;
-	text-align: left;
-	lost-column: 3.6/6;
-	/* margin-right: 5%!important; */
-	margin-top: -20px;
-	margin-right: 60px !important;
+	display: flex;
+	flex-direction: column;
+	flex-flow: center;
+	align-items: center;
+	text-align: center;
+	margin-right: 0;
+	margin-bottom: 60px;
+	width: 100%;
+	height: auto;
 
 	p {
+		color: #959595;
+		text-align: center;
 		margin-bottom: 10px;
-		font-family: Mon;
+		font-family: MonBold;
+		font-size: 16px;
+		line-height: normal;
+		letter-spacing: 1px;
 
 		&.quote {
-			font-family: MonBold;
-		}
 
-		/*@media bp-baby-bear {
-			text-align: center;
-	  }*/
+			@media bp-grand-bear {
+				text-align: left;
+				font-size: 20px;
+			}
+		}
 	}
 
 	&::before {
 		content: '"';
 		font-size: 50px;
 		font-family: PlayBlack;
-		float: left;
-		margin: 30px 20px 0 -40px;
 		color: #FFF;
+		float: none;
+		margin: 0;
+		text-align: center;
 
-		/*@media bp-baby-bear {
-			margin: 0 auto;
-		}*/
+		@media bp-grand-bear {
+			float: left;
+			margin: 30px 20px 0 -40px;
+			text-align: left;
+	  }
 	}
 
-	/*@media bp-baby-bear {
-    display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-		text-align: center;
-		margin-right: 0!important;
-		margin-bottom: 60px;
-		width: 100%;
-  }
-
 	@media bp-grand-bear {
+		text-align: left;
 		display: block;
-  }*/
+		lost-column: 3.6/6;
+		margin-top: -20px;
+		margin: 0 40px;
+  }
 }
 
 .linksColumn {
-	display: block;
-	lost-column: 1/6;
-	float: left;
-	/* margin-right: 5%!important; */
-
-	/*@media bp-baby-bear {
-		display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-		lost-column: 1;
-		margin-right: 0!important;
-		margin-bottom: 60px;
-  }
+	display: flex;
+	flex-direction: column;
+	flex-flow: center;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	lost-column: 1;
+	margin-right: 0!important;
+	margin-bottom: 60px;
 
 	@media bp-grand-bear {
 		display: block;
-  }*/
+		lost-column: 1/6;
+		float: left;
+  }
 }
 
 .socialColumn {
-	display: block;
-	lost-column: 1/6;
-	float: left;
-
-	/*@media bp-baby-bear {
-		display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-		lost-column: 1;
-		text-align: center;
-  }
+	display: flex;
+	flex-direction: column;
+	flex-flow: center;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	lost-column: 1;
 
 	@media bp-grand-bear {
 		display: block;
-  }*/
+		lost-column: 1/6;
+		float: left;
+  }
 }
 
 .copyright {
@@ -134,7 +124,7 @@
 	margin: 0 auto;
 	margin-top: 40px;
 	text-align: center;
-	float: none!important;
+	float: none;
 	line-height: normal;
 
 	p {
@@ -155,6 +145,8 @@ cite {
 	font-size: 12px;
 	font-weight: bold;
 	font-style: normal;
+	text-align: center;
+	display: inherit;
 }
 
 .heading {
@@ -175,28 +167,25 @@ cite {
 .footerLinks {
 	color: #838d8f;
 	font-size: 12px;
+	line-height: 2;
 	font-family: Mon;
-  margin-top: 5px;
-  line-height: 2;
+	display: flex;
+	flex-direction: column;
+	flex-flow: center;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	text-align: center;
 
   &:first-child {
   	margin-top: 10px;
   }
 
-	/*@media bp-baby-bear {
-		display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-		lost-column: 1;
-		text-align: center;
-  }
-
 	@media bp-grand-bear {
+	  margin-top: 5px;
+		text-align: left;
 		display: block;
-  }*/
+  }
 }
 
 li {
@@ -252,5 +241,9 @@ a:hover {
 	width: 8rem;
   height: auto;
   float: none;
-	margin-top: 50px;
+	margin-top: 10px;
+
+	@media bp-grand-bear {
+		margin-top: 25px;
+  }
 }
