@@ -1,6 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin from "styles/breakpoints.css";
-@value bodyCopy, ThriveTeal, lightGray, darkGray from "styles/colors.css";
-@value Mon, MonBold, Playfair from "styles/fonts.css";
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveTeal, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
 .quoteContainer {
