@@ -2,9 +2,8 @@
   This is the stylesheet for: FeaturedProduct
 */
 
-@value breakpoints: 'all';
-@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from breakpoints;
-@value ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray from "styles/colors";
+@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
+@value ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray from 'all';
 @value Playfair, MonLight, Mon, MonBold from 'all';
 
 .container {
