@@ -1,7 +1,67 @@
 /*
-  This is the stylesheet for: StoryComponent
+  This is the stylesheet for: FeaturedProduct
 */
 
-.container {
+@value breakpoints: 'all';
+@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from breakpoints;
+@value ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray from "styles/colors";
+@value Playfair, MonLight, Mon, MonBold from 'all';
 
+.container {
+  background-color: ThriveBlurple;
+  min-height: 500px;
+}
+
+.content {
+  lost-center: containerWidth;
+  padding: 4rem containerPadding;
+  text-align: center;
+}
+
+.label {
+  color: white;
+  display: block;
+  font-family: Mon;
+  font-size: .75rem;
+  font-style: normal;
+  letter-spacing: .1rem;
+  line-height: 100%;
+  padding: .25rem .75rem;
+  text-align: center;
+}
+
+.header {
+  font-family: Playfair;
+  text-align: center;
+  color: white;;
+  padding-bottom: 2rem;
+}
+
+.details {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 1em;
+  font-family: MonLight;
+}
+
+.button {
+  text-align: center;
+}
+
+.imageWrap {
+  position: relative;
+  lost-column: 1;
+
+  &:hover {
+    .image {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
 }
