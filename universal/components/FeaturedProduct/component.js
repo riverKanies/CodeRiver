@@ -4,13 +4,11 @@ import styles from './styles'
 import image from './assets/product-placeholder.jpg'
 
 type Props = {
-  title: string,
   productTitle: string,
   price: string
 }
 
 const Product = ({
-  title = 'Shop',
   productTitle = 'My product',
   price = '$20.00'
 }: Props) => {
@@ -28,6 +26,7 @@ const Product = ({
 }
 
 class FeaturedProduct extends React.Component {
+  props: Props
   render () {
     return (
       <section className={styles.container}>
