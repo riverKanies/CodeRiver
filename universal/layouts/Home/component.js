@@ -6,7 +6,7 @@ import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import FeaturedProduct from 'components/FeaturedProduct'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
-import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
+import StoryComponent from 'components/StoryComponent'
 
 import thriveScience from './assets/thriveScience.jpg'
 
@@ -56,7 +56,7 @@ export const HomeView = () => {
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
       <FeaturedProduct />
-      <ThriveStoryCarousel />
+      <StoryComponent />
       <HalfTextOverlay />
       <QuoteSection />
       <FullWidthTwoCol {...twoColScience} />
