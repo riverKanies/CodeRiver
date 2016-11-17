@@ -33,8 +33,8 @@ const PageFooter = ({
   logoFooter = logo
 }: Props) => {
   return (
-    <section className={styles.footer}>
-      {EmailCapture}
+    <footer className={styles.footer}>
+      <EmailCapture />
       <div className={styles.container}>
         <section className={styles.linksColumn}>
           <div className={styles.heading}>
@@ -82,8 +82,8 @@ const PageFooter = ({
             <Link to='https://www.facebook.com/AriannaHuffington/'>
               <Medium />
             </Link>
-            <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
           </div>
+          <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
         </section>
         <section className={styles.copyright}>
           <p>Thrive Global © 2016</p>
@@ -96,7 +96,7 @@ const PageFooter = ({
           </Link>
         </section>
       </div>
-    </section>
+    </footer>
   )
 }
 
