@@ -1,4 +1,4 @@
-@value breakpoints: "styles/breakpoints";
+@value breakpoints: 'all';
 @value containerWidth, containerPadding from breakpoints;
 
 .container {

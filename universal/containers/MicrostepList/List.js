@@ -7,14 +7,13 @@ import CalendarSVG from './assets/calendar.svg'
 import CopySVG from './assets/copy.svg'
 import InformationalSVG from './assets/informational.svg'
 import ProductSVG from './assets/product.svg'
-import PathwaySVG from './assets/pathway.svg'
 
 import { CLIENT_URL as baseUrl } from 'lib/http'
 
 type Microstep = {
   id: string,
   microstep_type: string,
-  title: string
+  search_field: string
 }
 
 type Props = {
@@ -24,27 +23,25 @@ type Props = {
 function genMicrostepLink (id: string, microstep_type: string) {
   const base = `${baseUrl}/steps/`
   const ss = {
-    'Microstep::Calendar': `${base}${id}?type=calendar`,
-    'Microstep::Informational': `${base}${id}?type=informational`,
-    'Microstep::Product': `${base}${id}?type=product`,
-    'Microstep::Pathway': `${base}${id}?type=pathway`
+    'Calendar': `${base}${id}?type=calendar`,
+    'Content': `${base}${id}?type=content`,
+    'Product': `${base}${id}?type=product`
   }
 
-  return ss[microstep_type] || 'link not currently available'
+  return ss[microstep_type] || `${base}${id}?type=undefined`
 }
 
 function genMicrostepIcon (microstep_type: string) {
   const ss = {
-    'Microstep::Calendar': CalendarSVG,
-    'Microstep::Informational': InformationalSVG,
-    'Microstep::Product': ProductSVG,
-    'Microstep::Pathway': PathwaySVG
+    'Calendar': CalendarSVG,
+    'Content': InformationalSVG,
+    'Product': ProductSVG
   }
 
-  return ss[microstep_type]
+  return ss[microstep_type] || InformationalSVG
 }
 
-function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
+function MicrostepListItem ({ id, microstep_type, search_field }: Microstep) {
   const link = genMicrostepLink(id, microstep_type)
   const Icon = genMicrostepIcon(microstep_type)
 
@@ -54,7 +51,7 @@ function MicrostepListItem ({ id, microstep_type, title }: Microstep) {
         <div className={styles.listRow}>
           <img src={Icon} className={styles.stepIcon} />
           <img src={CopySVG} className={styles.copyIcon} />
-          <p>{title} <span className={styles.tooltip}>
+          <p>{search_field} <span className={styles.tooltip}>
             Click to Copy
           </span></p>
         </div>

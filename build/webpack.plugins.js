@@ -49,7 +49,6 @@ const webpackPlugins = {
     commonsChunkOptions
   ],
   production: [
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         unused: true,

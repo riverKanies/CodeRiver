@@ -5,15 +5,15 @@
 
 @value bodyCopy: #2b2a28;
 
-@value ThriveTeal: #71cbd2;
-@value ThriveBlue: #0053d4;
+@value ThriveTeal: #71CBD2;
+@value ThriveBlue: #0053D4;
 @value ThriveDarkBlue: #144085;
-@value ThriveRoyalBlue: #3f17a8;
-@value ThriveLightBlurple: #403eb8;
-@value ThriveBlurple: #4600d4;
-@value ThriveViolet: #3f17a8;
+@value ThriveRoyalBlue: #3F17A8;
+@value ThriveLightBlurple: #403EB8;
+@value ThriveBlurple: #4600D4;
+@value ThriveViolet: #3f17A8;
 @value ThriveGray: #303030;
 
-@value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061a4 100%);
+@value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061A4 100%);
 @value gradientEmailCap: linear-gradient(-136deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
-@value gradientCardThrive: linear-gradient(0deg, #207ad0 0%, #4eb4ca 100%);
+@value gradientCardThrive: linear-gradient(0deg, #207AD0 0%, #4EB4CA 100%);

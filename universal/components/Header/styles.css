@@ -1,6 +1,6 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear from "styles/breakpoints";
-@value navItem from "styles/fonts.css";
-@value white, ThriveGray, ThriveTeal, ThriveBlue from "styles/colors.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
+@value navItem from 'all';
+@value white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
 
 .siteHeader {
   display: block;
