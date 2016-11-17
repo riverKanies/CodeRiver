@@ -1,6 +1,6 @@
-@value breakpoints: "styles/breakpoints";
+@value breakpoints: 'all';
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
-@value Mon, MonBold, PlayBlack from "styles/fonts.css";
+@value Mon, MonBold, PlayBlack from 'all';
 
 .footer {
 	background-color: #222328;
