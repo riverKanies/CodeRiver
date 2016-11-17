@@ -1,9 +1,7 @@
 /*
   This is the stylesheet for: HalfTextOverlay
 */
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin from "styles/breakpoints.css";
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
-@value Mon, MonBold, Playfair from "styles/fonts.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, Mon, MonBold, Playfair from 'all';
 
 .gridWrap {
   lost-center: containerWidth;
