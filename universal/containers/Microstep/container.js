@@ -3,7 +3,6 @@ import React from 'react'
 
 import BasicMicrostep from './components/BasicMicrostep'
 import CalendarMicrostep from './components/CalendarMicrostep'
-import InformationalMicrostep from './components/InformationalMicrostep'
 import LoadingMicrostep from './components/LoadingMicrostep'
 import MissingMicrostep from './components/MissingMicrostep'
 import ProductMicrostep from './components/ProductMicrostep'
@@ -39,9 +38,6 @@ export class Microstep extends React.Component {
     switch (stepType) {
       case 'calendar':
         return <CalendarMicrostep microstep={microstep} />
-
-      case 'informational':
-        return <InformationalMicrostep microstep={microstep} />
 
       case 'product':
         return <ProductMicrostep microstep={microstep} />
