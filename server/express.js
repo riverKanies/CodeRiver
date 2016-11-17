@@ -8,6 +8,13 @@ const debug = _debug('app:server:express')
 const app = express()
 const paths = config.utils_paths
 
+function redirectMiddleware (req, res, next) {
+  if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
+    return next()
+  }
+  res.redirect('https://' + req.hostname + req.originalUrl)
+}
+
 require('events').EventEmitter.prototype._maxListeners = 100
 
 // This rewrites all routes requests to the root /index.html file
@@ -46,10 +53,7 @@ if (config.env === 'development') {
     'server such as nginx to serve your static files. See the "deployment" ' +
     'section in the README for more information on deployment strategies.'
   )
-
-  // Serving ~/dist by default. Ideally these files should be served by
-  // the web server and not the app server, but this helps to demo the
-  // server in production.
+  app.use(redirectMiddleware)
   app.use(express.static(paths.dist()))
 }
 
