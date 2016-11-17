@@ -22,7 +22,10 @@ module.exports = function(config, env) {
   config.resolve = {
     root: UNIVERSAL,
     extensions: [...appConfig.compiler_extensions, ''],
-    moduleDirectories: [UNIVERSAL, NODE_MODULES]
+    moduleDirectories: [UNIVERSAL, NODE_MODULES],
+    alias: {
+      all: UNIVERSAL + '/styles/allTheThings.css'
+    }
   }
 
   config.module.loaders = [
