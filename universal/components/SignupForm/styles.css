@@ -1,4 +1,4 @@
-@value colors: 'styles/colors';
+@value colors: 'all';
 @value ThriveTeal, darkGray, lightGray from colors;
 
 .buttonRow {

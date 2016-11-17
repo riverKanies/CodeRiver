@@ -1,5 +1,5 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear from './breakpoints.css';
-@value MonThin, MonLight, Mon, MonBold, MonBlack, Play, PlayBlack, PlayBlackItalic from './fonts.css';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
+@value MonThin, MonLight, Mon, MonBold, MonBlack from 'all';
 
 /* Global Typography Styles */
 h1, h2, h3, h4, h5 {

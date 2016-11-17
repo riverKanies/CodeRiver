@@ -1,5 +1,4 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
 
 .fullWidthText {
   lost-utility: clearfix;
