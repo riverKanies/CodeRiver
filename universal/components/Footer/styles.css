@@ -1,6 +1,4 @@
-@value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
-@value Mon, MonBold, PlayBlack from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, Mon, MonBold, PlayBlack from 'all';
 
 .footer {
 	background-color: #222328;
@@ -48,7 +46,6 @@
 		letter-spacing: 1px;
 
 		&.quote {
-
 			@media bp-grand-bear {
 				text-align: left;
 				font-size: 20px;
@@ -196,6 +193,9 @@ li {
 	@media bp-grand-bear {
 		display: block;
   }
+	a {
+		color: #95958D;
+	}
 }
 
 a:hover {
