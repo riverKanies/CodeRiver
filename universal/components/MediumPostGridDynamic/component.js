@@ -5,15 +5,6 @@ import MediumPostDynamic from 'components/MediumPostDynamic'
 import EmailCaptureMini from 'components/EmailCaptureMini'
 require('masonry-layout')
 
-// import type { MediumPost } from 'lib/types'
-
-// {posts.map(post => <MediumPostDynamic {...post} />)}
-
-// type Props = {
-//   posts: Array<MediumPost>,
-//   requestPending: boolean
-// };
-
 const featuredHalfImage = {
   cardType: 'half',
   hasImage: 'imageTrue',
