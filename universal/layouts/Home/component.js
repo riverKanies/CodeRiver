@@ -4,8 +4,10 @@ import MediumPostGridDynamic from 'components/MediumPostGridDynamic'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import FeaturedProduct from 'components/FeaturedProduct'
+import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
+
 import thriveScience from './assets/thriveScience.jpg'
 
 const twoColScience = {
@@ -55,6 +57,7 @@ export const HomeView = () => {
       <MediumPostGridDynamic />
       <FeaturedProduct />
       <ThriveStoryCarousel />
+      <HalfTextOverlay />
       <QuoteSection />
       <FullWidthTwoCol {...twoColScience} />
       <FullWidthTwoColSpecial {...twoColLife} />

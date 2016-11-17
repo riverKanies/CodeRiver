@@ -1,6 +1,6 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear from "styles/breakpoints.css";
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from "styles/colors.css";
-@value Mon, Play from "styles/fonts.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
+@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
+@value Mon, Play from 'all';
 
 /* Label + Label Colors */
 .label {
@@ -14,6 +14,7 @@
   letter-spacing: .1rem;
   text-align: center;
   text-transform: uppercase;
+  z-index: 101;
 }
 .defaultLabel {
   composes: label;

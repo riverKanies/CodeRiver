@@ -1,6 +1,6 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from "styles/breakpoints.css";
-@value darkGray, bodyCopy, ThriveTeal, ThriveLightBlurple from "styles/colors.css";
-@value Mon, Play from "styles/fonts.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from 'all';
+@value darkGray, bodyCopy, ThriveTeal, ThriveLightBlurple from 'all';
+@value Mon, Play from 'all';
 
 @value imgCardBaby: 20rem;
 @value imgCardMama: 25rem;

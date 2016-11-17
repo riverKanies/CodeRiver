@@ -1,7 +1,8 @@
-@value breakpoints: "styles/breakpoints";
-@value containerWidth, bp-mama-bear, bp-papa-bear, bp-elder-bear from breakpoints;
-@value ThriveTeal, lightGray from "styles/colors";
-@value Mon, MonBold from "styles/fonts";
+@value all: 'all';
+
+@value containerWidth, bp-mama-bear, bp-papa-bear, bp-elder-bear from all;
+@value Mon, MonBold from all;
+@value lightGray, ThriveTeal from all;
 
 .container {
   lost-utility: clearfix;

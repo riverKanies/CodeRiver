@@ -1,7 +1,8 @@
-@value breakpoints: 'styles/breakpoints.css';
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from breakpoints;
-@value bodyCopy, ThriveBlue, darkGray, gradientCardThrive from 'styles/colors.css';
-@value MonBold, MonBlack, Playfair, PlayBlack from 'styles/fonts.css';
+@value all: 'all';
+
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from all;
+@value bodyCopy, ThriveBlue, darkGray, gradientCardThrive from all;
+@value MonBold, MonBlack, Playfair, PlayBlack from all;
 
 @value imgCardBaby: 20rem;
 @value imgCardMama: 25rem;
@@ -34,7 +35,6 @@
    position: absolute;
    top: 1.25rem;
    left: 1.25rem;
-   z-index: 1000;
  }
 }
 /* Composed cardType(s) at End of File for Scoping Reasons */

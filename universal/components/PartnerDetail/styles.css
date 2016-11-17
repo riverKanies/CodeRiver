@@ -1,4 +1,4 @@
-@value breakpoints: "styles/breakpoints";
+@value breakpoints: 'all';
 @value bp-mama-bear, bp-papa-bear from breakpoints;
 
 .partner {

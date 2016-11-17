@@ -1,5 +1,4 @@
-@value breakpoints: "styles/breakpoints";
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 
 .fullscreenBanner {
   display: block;
@@ -10,7 +9,6 @@
   padding: 0 0;
   position: relative;
   text-align: center;
-
   @media bp-mama-bear {
     display: flex;
     flex-direction: column;
@@ -21,16 +19,31 @@
     height: 100vh;
   }
 }
-
 .fullHeight {
   composes: fullscreenBanner;
 }
-
 .halfHeight {
   composes: fullscreenBanner;
-
   @media bp-mama-bear {
     height: 50vh;
+  }
+}
+.quarterHeight {
+  composes: fullscreenBanner;
+  @media bp-mama-bear {
+    height: 25vh;
+  }
+}
+.thirdHeight {
+  composes: fullscreenBanner;
+  @media bp-mama-bear {
+    height: 33.33vh;
+  }
+}
+.twoThirdsHeight {
+  composes: fullscreenBanner;
+  @media bp-mama-bear {
+    height: 66.66vh;
   }
 }
 
