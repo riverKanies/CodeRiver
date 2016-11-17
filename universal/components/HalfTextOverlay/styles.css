@@ -1,13 +1,27 @@
 /*
   This is the stylesheet for: HalfTextOverlay
 */
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from "styles/breakpoints.css";
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin from "styles/breakpoints.css";
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from "styles/colors.css";
 @value Mon, MonBold, Playfair from "styles/fonts.css";
 
+.gridWrap {
+  lost-center: containerWidth;
+  margin: babyMargin auto;
+  padding: containerPadding;
+  float: none;
+  position: relative;
+  @media bp-mama-bear {
+    margin: mamaMargin auto;
+  }
+  @media bp-papa-bear {
+    margin: papaMargin auto;
+  }
+}
+
 .halfOverlay {
   display: block;
-  max-width: containerWidth;
+  width: 100%;
   margin: 0 auto;
   padding: 0 0;
   float: left;
@@ -38,6 +52,7 @@
 .postContent {
   width: 100%;
   height: auto;
+  float: left;
   overflow: hidden;
   background: ThriveBlue;
   @media bp-papa-bear {
@@ -64,6 +79,7 @@
   width: 100%;
   margin: 0 0;
   padding: 0 0;
+  float: left;
   z-index: 50;
   @media bp-papa-bear {
     lost-flex-container: column;
