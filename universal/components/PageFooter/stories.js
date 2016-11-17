@@ -17,7 +17,9 @@ storiesOf('PageFooter', module)
     return (
       <WithNotes notes={notes}>
         <PageFooter
-          title={text('Title', props.title)}
+          quote={text('Banner Sub Title', props.quote)}
+          citation={text('Banner Text', props.citation)}
+          heading={text('Links', props.heading)}
         />
       </WithNotes>
     )
