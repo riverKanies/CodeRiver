@@ -1,0 +1,86 @@
+/*
+  This is the stylesheet for: FeaturedProduct
+*/
+
+@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
+@value ThriveBlurple, backgroundGray, ThriveGray from 'all';
+@value PlayBlack, Playfair, MonLight, Mon from 'all';
+
+.container {
+  background: linear-gradient(rgba(35,11,138,0.75), rgba(35,11,138,0.75)),
+    url('./assets/kobe.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: ThriveBlurple;
+}
+
+.content {
+  lost-center: containerWidth;
+  padding: 4rem containerPadding;
+  text-align: center;
+  @media bp-mama-bear {
+    padding: 6rem containerPadding;
+  }
+}
+
+.label {
+  color: white;
+  display: block;
+  font-family: Mon;
+  font-size: .75rem;
+  font-style: normal;
+  letter-spacing: .1rem;
+  line-height: 100%;
+  padding: 1rem;
+}
+
+.header {
+  font-family: PlayfairBlack;
+  font-size: 2em;
+  padding: 0.75rem;
+  margin-bottom: 0;
+  color: white;
+
+  @media bp-mama-bear {
+    max-width: 40rem;
+    line-height: 86%;
+    padding: 1rem;
+    font-size: 3.25em;
+    margin: 0 auto;
+  }
+
+  @media bp-papa-bear {
+    font-size: 4.5em;
+  }
+}
+
+.details {
+  clear: both;
+  width: 100%;
+  color: white;
+  padding: 1em;
+  margin-top: 0;
+  font-family: MonLight;
+
+  .author {
+    display: block;
+    clear: both;
+    width: 100%;
+
+    &::before {
+      content: 'by';
+      display: inline-block;
+      margin: 0 .25rem 0 0;
+      padding: 0 0;
+      font-family: Playfair;
+      font-style: italic;
+      text-transform: none;
+    }
+  }
+
+  @media bp-mama-bear {
+    max-width: 40rem;
+    margin: 1rem auto 1.5rem auto;
+    line-height: 2rem;
+  }
+}
