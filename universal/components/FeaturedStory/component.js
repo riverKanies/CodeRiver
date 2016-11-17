@@ -9,12 +9,12 @@ type Props = {
   title: string
 }
 
-const defaultDetails = [`this the details Cras justo odio, dapibus ac facilisis in,
-egestas eget quam. Etiam porta sem malesuada magna mollis euismod.`]
+const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
+' facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.'
 
-const defaultTitle = ["It's Time To Say Goodbye."]
+const defaultTitle = "It's Time To Say Goodbye."
 
-const defaultAuthor = ['Koby Bryant']
+const defaultAuthor = 'Koby Bryant'
 
 const FeaturedStory = ({
   title = defaultTitle,
