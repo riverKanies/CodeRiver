@@ -28,8 +28,7 @@ const FeaturedStory = ({
         <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
-          <span className={styles.author}>by</span>
-          {author}
+          <span className={styles.author}>{author}</span>
         </p>
         <Button
           buttonText='READ STORY'
