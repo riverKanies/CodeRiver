@@ -32,10 +32,22 @@ class FeaturedProduct extends React.Component {
       <section className={styles.container}>
         <section className={styles.content}>
           <h3 className={styles.header}>Shop</h3>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            productTitle={'First Product'}
+            price={'$24.00'}
+          />
+          <Product
+            productTitle={'Second Product'}
+            price={'$24.00'}
+          />
+          <Product
+            productTitle={'Third Product'}
+            price={'$24.00'}
+          />
+          <Product
+            productTitle={'Fourth Product'}
+            price={'$24.00'}
+          />
         </section>
       </section>
     )
