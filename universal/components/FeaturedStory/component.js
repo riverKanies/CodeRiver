@@ -12,7 +12,7 @@ type Props = {
 const defaultDetails = [`this the details Cras justo odio, dapibus ac facilisis in,
 egestas eget quam. Etiam porta sem malesuada magna mollis euismod.`]
 
-const defaultTitle = ['Its time to say goodbye']
+const defaultTitle = ["It's Time To Say Goodbye."]
 
 const defaultAuthor = ['Koby Bryant']
 
@@ -23,21 +23,19 @@ const FeaturedStory = ({
 }: Props) => {
   return (
     <section className={styles.container}>
-      <section className={styles.container}>
+      <section className={styles.content}>
         <label className={styles.label}>STORIES</label>
-        <h1 className={styles.header}>{title}</h1>
+        <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
           <span className={styles.author}>by</span>
           {author}
         </p>
-        <div className={styles.button}>
-          <Button
-            buttonText='READ STORY'
-            linkTo='/'
-            buttonStyle='white'
-          />
-        </div>
+        <Button
+          buttonText='READ STORY'
+          linkTo='/'
+          buttonStyle='white'
+        />
       </section>
     </section>
   )
