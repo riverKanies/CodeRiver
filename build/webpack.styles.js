@@ -2,14 +2,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 const loaderOptions = [
   { loader: 'css-loader', query: { modules: true, importLoaders: 1 } },
-  { loader: 'postcss-loader'
-    // pending new postcss-loader release - then remove loaderOptionsPlugin
-    // options: {
-    //   plugins: function () {
-    //     return postcssPlugins
-    //   }
-    // }
-  }
+  { loader: 'postcss-loader' }
 ]
 
 const styleLoaders = {
