@@ -1,40 +1,43 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import dummyImage from './assets/ah.png'
+import dummyImage from './assets/quote_imagePlaceholder.png'
 
 type Props = {
-  quote: string,
-  citation: string,
-  quoteImage: string,
+  bgColor: 'default' | 'white' | 'gray',
   quote: Array<string>,
   citation: string,
-  quoteImage: any,
+  quoteImage: string,
 };
 
-const defaultQuote = [`What is a good life?” has been a question asked by
-philosophers going back to the ancient Greeks. But somewhere along the line we
-abandoned the question and shifted our attention to how much money we can make,
-how big a house we can buy, and how high we can climb up the career ladder.
-This idea of success can work-or at least appear to work – in the short term.
-But over the long term, money and power by themselves are like a two-legged
-stool – you can balance on them for a while, but eventually you’re going to
-topple over. More and more people – very successful people – are toppling over.`]
+const defaultQuote = [
+  `Intention is one of the most powerful forces there is.
+  What you mean when you do a thing will always determine the outcome.`
+]
 
 const defaultImage = dummyImage
 
 const QuoteSection = ({
+  bgColor = 'default',
   quote = defaultQuote,
   citation = 'Arriana Huffington',
   quoteImage = defaultImage
 }: Props) => {
   return (
-    <section className={styles.quoteContainer}>
+    <section className={styles[bgColor]}>
       <div className={styles.container}>
-        <section className={styles.sectionQuote}>
-          {quote.map((paragraph, index) => <p key={index}>{quote}</p>)}
-          <cite>{citation}</cite>
+
+        <section className={styles.quoteImage}>
+          <img className={styles.image} src={quoteImage} />
         </section>
+
+        <section className={styles.quoteSection}>
+          <q className={styles.quote}>
+            {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
+          </q>
+          <cite className={styles.citation}>{citation}</cite>
+        </section>
+
       </div>
     </section>
   )

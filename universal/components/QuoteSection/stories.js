@@ -1,18 +1,23 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
+import dummyImage from './assets/quote_imagePlaceholder.png'
 
 import QuoteSection from './component'
 
-const notes = 'This story demonstrates the props that can be passed to ' +
-'QuoteSection. This component was created to be used on the homepage for the ' +
-'main quote from Arriana. It can be used elsewhere if desired. It is a ' +
-'freestanding component, just pass some props to it and you are good to go.'
+const notes = 'This story demonstrates the props that can be passed to thw QuoteSection component.'
 
-const props = {
-  title: 'QuoteSection'
-}
+const bgColor = [
+  'default',
+  'white',
+  'gray'
+]
+
+const defaultQuote = [
+  `Intention is one of the most powerful forces there is.
+  What you mean when you do a thing will always determine the outcome.`
+]
 
 storiesOf('QuoteSection', module)
   .addDecorator(withKnobs)
@@ -20,9 +25,10 @@ storiesOf('QuoteSection', module)
     return (
       <WithNotes notes={notes}>
         <QuoteSection
-          quote={text('Quote', props.quote)}
-          citation={text('Citation Name', props.citation)}
-          quoteImage={text('Quote Image', props.quoteImage)}
+          bgColor={select('Background Color', bgColor, 'default')}
+          quote={text('Quote Text', defaultQuote)}
+          citation={text('Cite', 'Arriana Huffington')}
+          quoteImage={text('Quote Image', dummyImage)}
         />
       </WithNotes>
     )
