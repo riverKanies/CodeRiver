@@ -6,6 +6,7 @@
 
 .container {
   lost-utility: clearfix;
+  background-color: white;
   lost-center: containerWidth;
   padding: 2rem 1rem;
   @media bp-papa-bear {
@@ -147,13 +148,16 @@
 
 .listItem {
   lost-column: 1;
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
 }
 
 .listRow {
   display: flex;
 
   img {
-    padding: 1.3em 1em 2em 0;
+    padding: 1.2rem 1rem 2rem 0;
   }
 
   .stepIcon {

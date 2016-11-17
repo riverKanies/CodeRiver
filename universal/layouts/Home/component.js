@@ -3,6 +3,7 @@ import styles from './styles'
 import MediumPostGridDynamic from 'components/MediumPostGridDynamic'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
+import FeaturedProduct from 'components/FeaturedProduct'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 import ThriveStoryCarousel from 'components/ThriveStoryCarousel'
@@ -54,6 +55,7 @@ export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
+      <FeaturedProduct />
       <ThriveStoryCarousel />
       <HalfTextOverlay />
       <QuoteSection />
