@@ -17,7 +17,7 @@ const Sidebar = ({
   return (
     <aside role='sidebar' className={styles.sidebar}>
       <div className='sidebarContainer'>
-        <header>
+        <header className='sidebar'>
           <h3>{title}</h3>
         </header>
         <ul>

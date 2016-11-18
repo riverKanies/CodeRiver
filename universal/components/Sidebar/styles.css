@@ -10,6 +10,7 @@
   }
   @media bp-papa-bear {
     lost-column: 3/12;
+    margin: 40px 20px 40px 0;
   }
 }
 
@@ -30,7 +31,11 @@ header {
   padding: 0 0;
   float: left;
   position: relative;
-  text-align: center;
+  text-align: left;
+
+  &.sidebar {
+    border-bottom: 1px solid rgba(0,0,0,0.8);
+  }
 }
 
 ul {
@@ -45,8 +50,9 @@ ul {
       display: block;
       width: 100%;
       margin: 0 0;
-      padding: 0 0;
+      padding: 12px 0;
       float: left;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
         a {
           display: block;
           width: 100%;
@@ -54,6 +60,9 @@ ul {
           padding: 0 0;
           float: left;
           position: relative;
+            &:hover {
+              color: rgba(0,0,0,1);
+            }
         }
     }
 }
