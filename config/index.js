@@ -16,6 +16,8 @@ const config = {
 
   app_name : 'reactBoosterKit',
 
+  force_https : process.env.FORCE_HTTPS || false,
+
   // ----------------------------------
   // Project Structure
   // ----------------------------------
