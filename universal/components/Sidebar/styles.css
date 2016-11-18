@@ -1,5 +1,5 @@
 @value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, Mon from 'all';
 
 .sidebar {
   @media bp-baby-bear {
@@ -7,10 +7,10 @@
   }
   @media bp-mama-bear {
     lost-column: 6/12;
+    margin: 40px 20px 40px 0;
   }
   @media bp-papa-bear {
     lost-column: 3/12;
-    margin: 40px 20px 40px 0;
   }
 }
 
@@ -54,6 +54,7 @@ ul.sidebar {
       float: left;
       border-bottom: 1px solid rgba(0,0,0,0.15);
         a {
+          font-family: Mon;
           display: block;
           width: 100%;
           margin: 0 0;
