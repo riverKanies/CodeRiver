@@ -1,16 +1,25 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import JourneyCard from 'components/JourneyCard'
 
 type Props = {
-  title: string
+  journeys: Array<any>,
+  pathway: Object
 }
 
-const Pathway = ({ title = 'Pathway' }: Props) => {
+const Pathway = ({ pathway = null, journeys = [] }: Props) => {
+  if (!pathway) return null
+
   return (
-    <div className={styles.container}>
-      {title}
-    </div>
+    <section className={styles.container}>
+      <section className={styles.title}>
+          <h1>{pathway.title}</h1>
+      </section>
+      <section className={styles.row}>
+        {journeys.map(j => <JourneyCard {...j} pathwayId={pathway.id} />)}
+      </section>
+    </section>
   )
 }
 

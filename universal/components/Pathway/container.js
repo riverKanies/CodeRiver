@@ -1,24 +1,49 @@
 import React from 'react'
 import Pathway from './component'
+import { connect } from 'react-redux'
+
+import { loadJourneys } from 'modules/Journeys'
+import { choosePathway, loadPathways } from 'modules/Pathways'
+import { getPathwayDetail } from 'modules/Pathways/selector'
 
 type Props = {
-  id: number
+  id: number,
+  pathway: Object,
+  journeys: Array<any>,
+  dispatch: Function
 }
 
-export default class PathwayContainer extends React.Component {
+class PathwayContainer extends React.Component {
   props: Props
-  state = {
-    id: undefined
-  }
-  componentWillMount () {
-    const { id } = this.props
 
-    this.setState({ id })
+  componentWillMount () {
+    const { id, dispatch, pathway } = this.props
+
+    if (!pathway) {
+      dispatch(loadPathways())
+    }
+
+    dispatch(choosePathway(id))
+    dispatch(loadJourneys(id))
   }
 
   render () {
+    const { pathway, journeys } = this.props
+    const detailProps = { pathway, journeys }
     return (
-      <Pathway />
+      <div>
+        <Pathway {...detailProps} />
+      </div>
     )
   }
 }
+
+function mapStateToProps (state) {
+  const { pathway, journeys } = getPathwayDetail(state)
+
+  return {
+    pathway,
+    journeys
+  }
+}
+export default connect(mapStateToProps)(PathwayContainer)

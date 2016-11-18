@@ -6,16 +6,23 @@ import baseActions from 'modules/baseActions'
 export const KEY = 'pathways'
 
 // Action Creators
-export const actions = { ...baseActions(KEY) }
+export const actions = {
+  ...baseActions(KEY),
+  choosePathway: `${KEY}/choose-pathway`
+}
 
 // Reducer
 export const initialState = {
   fetchPending: false,
+  currentPathway: undefined,
   list: []
 }
 
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
+    case actions.choosePathway:
+      return { ...state, currentPathway: action.id }
+
     case actions.fetchSuccess:
       return { ...state, list: action.data, requestPending: false }
 
@@ -32,5 +39,12 @@ export function loadPathways () {
       actions.fetchFailure
     ],
     callAPI: () => httpGet('/api/pathways')
+  }
+}
+
+export function choosePathway (pathwayId) {
+  return {
+    type: actions.choosePathway,
+    id: pathwayId
   }
 }
