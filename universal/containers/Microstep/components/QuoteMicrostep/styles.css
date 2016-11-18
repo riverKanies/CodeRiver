@@ -1,8 +1,6 @@
 /*
   This is the stylesheet for: QuoteMicrostep
 */
-
-<<<<<<< HEAD
 @value microstepContainerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
 @value backgroundGray bodyCopy, ThriveBlurple, ThriveTeal, ThriveGray from 'all';
 @value PlayBlack, Playfair, MonLight, Mon, MonBold from 'all';
@@ -158,8 +156,4 @@
   composes: container;
   background-color: ThriveBlurple;
   color: white;
-=======
-.container {
-
->>>>>>> master
 }
