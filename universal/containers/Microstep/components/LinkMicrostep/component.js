@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import marked from 'marked'
+import Button from 'components/Button'
 
 type Props = {
   microstep: {
@@ -19,8 +20,16 @@ const LinkMicrostep = ({ microstep }: Props) => {
   } = microstep
   return (
     <div className={styles.container}>
-      <div dangerouslySetInnerHTML={{__html: marked(description)}} />
-      <a href={cta_link}>{cta_text}</a>
+      <div className={styles.content}>
+        <div dangerouslySetInnerHTML={{__html: marked(description)}} />
+        <div className={styles.button}>
+          <Button>
+            buttonText: {cta_text},
+            linkTo: {cta_link},
+            buttonStyle: 'violet'
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }
