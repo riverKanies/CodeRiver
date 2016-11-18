@@ -14,8 +14,13 @@ type Props = {
 };
 
 export default class CalendarContainer extends React.Component {
+<<<<<<< HEAD
   state: any;
   props: Props;
+=======
+  state: any
+  props: Props
+>>>>>>> master
 
   constructor (props: any) {
     super(props)
