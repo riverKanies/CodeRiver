@@ -8,17 +8,11 @@ import LinkMicrostep from './component'
 const notes = 'This story demonstrates the props that can be passed to LinkMicrostep'
 
 const markdown = `
-Paragraphs are separated by a blank line.
+##### Joy
 
-2nd paragraph. *Italic*, **bold**. Itemized lists
-look like:
-
-  * this one
-  * that one
-  * the other one
-
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+Realize that everything can be used for your learning, upliftment, and growth.
+What challenge or adversity can you use today for your upliftment and growth?
+How can you use it to your advantage? How can you turn this stumbling block into a stepping stone.
 `
 
 const props = {

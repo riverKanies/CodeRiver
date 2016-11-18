@@ -2,6 +2,87 @@
   This is the stylesheet for: LinkMicrostep
 */
 
-.container {
+@value microstepContainerWidth, bp-mama-bear, bp-papa-bear from 'all';
+@value ThriveBlurple from 'all';
+@value PlayBlack, Playfair, MonLight, Mon from 'all';
 
+.container {
+  background-color: ThriveBlurple;
+}
+
+.content {
+  lost-center: microstepContainerWidth;
+  height: 100%;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: left;
+  box-shadow: inset 0px 0px 38px 30px rgba(0,0,0,0.1);
+
+  p {
+    margin-bottom: 1em;
+    font-family: MonLight;
+    font-size: .88em;
+    line-height: 150%;
+    text-align: inherit;
+    @media bp-mama-bear {
+      font-size: 1em;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  h1 {
+    font-family: PlayfairBlack;
+    font-size: 2rem;
+    line-height: 100%;
+    margin-bottom: 0;
+
+    @media bp-mama-bear {
+      padding: 1rem;
+      font-size: 3.25em;
+      margin: 0 auto;
+    }
+
+    @media bp-papa-bear {
+      font-size: 4.5em;
+    }
+  }
+
+  h5 {
+    display: block;
+    text-transform: uppercase;
+    font-family: Mon;
+    font-size: .75rem;
+    font-style: normal;
+    letter-spacing: .1rem;
+    line-height: 100%;
+  }
+
+  ol, ul {
+    padding: 0 0;
+    list-style: none;
+  }
+
+  li {
+    clear: both;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    margin-top: 0;
+    font-family: MonLight;
+
+    @media bp-mama-bear {
+      max-width: 40rem;
+      padding: 1rem 3.5rem;
+      text-align: left;
+    }
+  }
+
+  @media bp-mama-bear {
+    padding: 3.5rem 2rem;
+    text-align: center;
+  }
 }

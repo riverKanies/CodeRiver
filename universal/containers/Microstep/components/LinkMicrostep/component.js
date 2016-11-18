@@ -19,8 +19,10 @@ const LinkMicrostep = ({ microstep }: Props) => {
   } = microstep
   return (
     <div className={styles.container}>
-      <div dangerouslySetInnerHTML={{__html: marked(description)}} />
-      <a href={cta_link}>{cta_text}</a>
+      <div className={styles.content}>
+        <div dangerouslySetInnerHTML={{__html: marked(description)}} />
+        <a href={cta_link}>{cta_text}</a>
+      </div>
     </div>
   )
 }
