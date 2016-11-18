@@ -140,8 +140,6 @@
     font-family: MonLight;
 
     @media bp-mama-bear {
-      max-width: 40rem;
-      padding: 1rem 3.5rem;
       text-align: left;
     }
   }
