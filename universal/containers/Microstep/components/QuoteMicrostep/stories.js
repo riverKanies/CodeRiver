@@ -42,4 +42,5 @@ storiesOf('QuoteMicrostep', module)
         </StoryContainer>
       </WithNotes>
     )
-  })
+  }
+)
