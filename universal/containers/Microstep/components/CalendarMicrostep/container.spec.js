@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {shallow} from 'enzyme'
+import {mount} from 'enzyme'
 
 import lolex from 'lolex'
 
-import CalendarMicrostep from './component'
+import CalendarMicrostep from './container'
 
 import { HOST_URL } from 'lib/http'
 
@@ -14,7 +14,7 @@ describe('<CalendarMicrostep />', () => {
     title: 'title',
     description: 'description'
   }
-  const wrapper = shallow(<CalendarMicrostep microstep={microstep} />)
+  const wrapper = mount(<CalendarMicrostep microstep={microstep} />)
 
   it('Should have default state', () => {
     const hours = wrapper.state().hours
@@ -28,7 +28,7 @@ describe('<CalendarMicrostep />', () => {
 
   it('Should render a download link', () => {
     let clock = lolex.install(1475791313486)
-    const cal = shallow(<CalendarMicrostep microstep={microstep} />)
+    const cal = mount(<CalendarMicrostep microstep={microstep} />)
 
     let date = new Date(Date.now())
     date.setHours(cal.state().hours, cal.state().minutes, 0, 0)

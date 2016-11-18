@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react'
 
-import BasicMicrostep from './components/BasicMicrostep'
 import CalendarMicrostep from './components/CalendarMicrostep'
 import LoadingMicrostep from './components/LoadingMicrostep'
 import MissingMicrostep from './components/MissingMicrostep'
@@ -43,7 +42,7 @@ export class Microstep extends React.Component {
         return <ProductMicrostep microstep={microstep} />
 
       default:
-        return <BasicMicrostep microstep={microstep} />
+        return <MissingMicrostep microstep={microstep} />
     }
   }
 

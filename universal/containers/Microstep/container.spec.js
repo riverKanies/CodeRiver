@@ -28,21 +28,6 @@ describe('(Component) MicrostepList', () => {
     expect(element.length).toBe(1)
   })
 
-  it('Should render as a <BasicMicrostep /> when we have one to render.', () => {
-    const props = {
-      ...defaultProps,
-      microstep: {
-        title: 'hello',
-        description: 'goodbye'
-      },
-    }
-
-    const wrapper = shallow(<Microstep {...props} />)
-    const element = wrapper.find('BasicMicrostep')
-
-    expect(element.length).toBe(1)
-  })
-
   it('Should render as a <ProductMicrostep /> when we have one to render.', () => {
     const props = {
       ...defaultProps,
