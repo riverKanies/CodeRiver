@@ -3,6 +3,9 @@ import 'styles/core'
 import 'styles/fonts/webfonts/webfonts'
 import 'styles/typography'
 
+// storybook css overrides
+import './storybook'
+
 import { configure, setAddon, addDecorator } from '@kadira/storybook'
 import infoAddon from '@kadira/react-storybook-addon-info'
 import { setOptions } from '@kadira/storybook-addon-options'

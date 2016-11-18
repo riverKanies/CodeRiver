@@ -144,6 +144,7 @@
     "less": "^2.7.1",
     "lolex": "^1.5.1",
     "lost": "^7.1.0",
+    "marked": "^0.3.6",
     "masonry-layout": "^4.1.1",
     "mocha": "^3.0.2",
     "mocha-lcov-reporter": "^1.2.0",

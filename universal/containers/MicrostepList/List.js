@@ -12,7 +12,7 @@ import { CLIENT_URL as baseUrl } from 'lib/http'
 
 type Microstep = {
   id: string,
-  microstep_type: string,
+  type: string,
   search_field: string
 }
 
@@ -22,13 +22,9 @@ type Props = {
 
 function genMicrostepLink (id: string, microstep_type: string) {
   const base = `${baseUrl}/steps/`
-  const ss = {
-    'Calendar': `${base}${id}?type=calendar`,
-    'Content': `${base}${id}?type=content`,
-    'Product': `${base}${id}?type=product`
-  }
+  const type = microstep_type.toLowerCase()
 
-  return ss[microstep_type] || `${base}${id}?type=undefined`
+  return `${base}${id}?type=${type}`
 }
 
 function genMicrostepIcon (microstep_type: string) {
@@ -41,12 +37,12 @@ function genMicrostepIcon (microstep_type: string) {
   return ss[microstep_type] || InformationalSVG
 }
 
-function MicrostepListItem ({ id, microstep_type, search_field }: Microstep) {
-  const link = genMicrostepLink(id, microstep_type)
-  const Icon = genMicrostepIcon(microstep_type)
+function MicrostepListItem ({ id, type, search_field }: Microstep) {
+  const link = genMicrostepLink(id, type)
+  const Icon = genMicrostepIcon(type)
 
   return (
-    <li className={styles.listItem} key={`${microstep_type}${id}`}>
+    <li className={styles.listItem} key={`${type}${id}`}>
       <CopyToClipboard text={link}>
         <div className={styles.listRow}>
           <img src={Icon} className={styles.stepIcon} />
