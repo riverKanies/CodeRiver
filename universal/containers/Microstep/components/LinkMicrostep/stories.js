@@ -10,9 +10,10 @@ const notes = 'This story demonstrates the props that can be passed to LinkMicro
 const markdown = `
 ##### Joy
 
-Realize that everything can be used for your learning, upliftment, and growth.
-What challenge or adversity can you use today for your upliftment and growth?
-How can you use it to your advantage? How can you turn this stumbling block into a stepping stone.
+Experience yourself feeling lighter and more connected to your center in a place
+of openness and receptivity: in the eye of the hurricane, where no matter what
+storm is around us, there is stillness, quiet and peace. Anytime you find yourself
+caught up in the storm you can return to the "eye" through this simple forgiveness process.
 `
 
 const props = {
