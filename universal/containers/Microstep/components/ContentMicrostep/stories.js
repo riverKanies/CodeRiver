@@ -29,8 +29,6 @@ We can feel this as a wave. (3 breaths)
 in other words it is more difficult if we are slumping or have our legs crossed.)
 
 ----
-
-(Can be done at anytime during the day as a mini-break).
 `
 
 const microstep = {
