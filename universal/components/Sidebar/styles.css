@@ -27,8 +27,8 @@
 header {
   display: block;
   width: 100%;
-  margin: 0 0;
-  padding: 0 0;
+  margin: 0;
+  padding: 0;
   float: left;
   position: relative;
   text-align: left;
@@ -38,7 +38,7 @@ header {
   }
 }
 
-ul {
+ul.sidebar {
   display: block;
   width: 100%;
   margin: 0 0;

@@ -20,7 +20,7 @@ const Sidebar = ({
         <header className='sidebar'>
           <h3>{title}</h3>
         </header>
-        <ul>
+        <ul className={styles.sidebar}>
           {renderList(items)}
         </ul>
       </div>
