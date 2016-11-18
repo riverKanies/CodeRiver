@@ -4,7 +4,6 @@ import styles from './styles'
 import marked from 'marked'
 
 type Props = {
-  colorScheme: 'white' | 'purple',
   microstep: {
     description: string
   }
