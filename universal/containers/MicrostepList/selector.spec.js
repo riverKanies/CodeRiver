@@ -9,7 +9,8 @@ describe("filter selector", () => {
       { id: 1, search_field: 'find me' },
       { id: 2, search_field: 'xxxx me' },
       { id: 3, search_field: 'yyyy me' },
-      { id: 4, search_field: 'find me' }
+      { id: 4, search_field: 'find me' },
+      { id: 5, search_field: null }
     ]
 
     function checkForFindWithFilter(filter) {
@@ -38,15 +39,16 @@ describe("filter selector", () => {
   context("paginated results with no filter", () => {
     const filter = ''
     const list = [
-      { id: 0, search_field: 'find me' },
-      { id: 1, search_field: 'xxxx me' },
-      { id: 2, search_field: 'yyyy me' },
-      { id: 3, search_field: 'find me' },
+      { id: 0, search_field: null },
+      { id: 1, search_field: 'find me' },
+      { id: 2, search_field: 'xxxx me' },
+      { id: 3, search_field: 'yyyy me' },
       { id: 4, search_field: 'find me' },
-      { id: 5, search_field: 'xxxx me' },
-      { id: 6, search_field: 'yyyy me' },
-      { id: 7, search_field: 'find me' },
-      { id: 8, search_field: 'find me batman!' }
+      { id: 5, search_field: 'find me' },
+      { id: 6, search_field: 'xxxx me' },
+      { id: 7, search_field: 'yyyy me' },
+      { id: 8, search_field: 'find me' },
+      { id: 9, search_field: 'find me batman!' }
     ]
 
     it("return two results from the first page", () => {
@@ -59,8 +61,8 @@ describe("filter selector", () => {
       })
 
       const expected = [
-        { id: 0, search_field: 'find me' },
-        { id: 1, search_field: 'xxxx me' },
+        { id: 1, search_field: 'find me' },
+        { id: 2, search_field: 'xxxx me' },
       ]
 
       expect(selected.microsteps).toEqual(expected)
@@ -77,10 +79,10 @@ describe("filter selector", () => {
       })
 
       const expected = [
-        { id: 0, search_field: 'find me' },
-        { id: 1, search_field: 'xxxx me' },
-        { id: 2, search_field: 'yyyy me' },
-        { id: 3, search_field: 'find me' },
+        { id: 1, search_field: 'find me' },
+        { id: 2, search_field: 'xxxx me' },
+        { id: 3, search_field: 'yyyy me' },
+        { id: 4, search_field: 'find me' },
       ]
 
       expect(selected.microsteps).toEqual(expected)
@@ -97,10 +99,10 @@ describe("filter selector", () => {
       })
 
       const expected = [
-        { id: 4, search_field: 'find me' },
-        { id: 5, search_field: 'xxxx me' },
-        { id: 6, search_field: 'yyyy me' },
-        { id: 7, search_field: 'find me' }
+        { id: 5, search_field: 'find me' },
+        { id: 6, search_field: 'xxxx me' },
+        { id: 7, search_field: 'yyyy me' },
+        { id: 8, search_field: 'find me' }
       ]
 
       expect(selected.microsteps).toEqual(expected)
@@ -116,7 +118,7 @@ describe("filter selector", () => {
       })
 
       const expected = [
-        { id: 8, search_field: 'find me batman!' }
+        { id: 9, search_field: 'find me batman!' }
       ]
 
       expect(selected.microsteps).toEqual(expected)
