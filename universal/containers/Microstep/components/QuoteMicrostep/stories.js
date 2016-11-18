@@ -9,22 +9,22 @@ import QuoteMicrostep from './index'
 const notes = 'This story demonstrates the props that can be passed to QuoteMicrostep'
 
 const markdown = `
-# Quote Microstep
+##### We Suggest
+# Get a Headstart.
+Before you end your work day, take 10 minutes to look to the day ahead.
+Mentally preparing for what’s to come tomorrow will alleviate unknowns and stress.
 
-Paragraphs are separated by a blank line.
+----
 
-2nd paragraph. *Italic*, **bold**. Itemized lists
-look like:
+![Author Image](http://placekitten.com/g/600/600)
 
-  * this one
-  * that one
-  * the other one
+#### *by* Author Name
+###### Wellbeing Consultant
 `
 
 const microstep = {
   description: markdown
 }
-
 const background = [
   'light',
   'dark'
@@ -35,11 +35,12 @@ storiesOf('QuoteMicrostep', module)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <StoryContainer
-          style={select('Background', background, 'dark')}
-        >
-          <QuoteMicrostep microstep={microstep} />
+        <StoryContainer style={select('Background', background, 'dark')}>
+          <QuoteMicrostep
+            microstep={microstep}
+          />
         </StoryContainer>
       </WithNotes>
     )
-  })
+  }
+)

@@ -3,7 +3,6 @@ import React from 'react'
 
 import LoadingMicrostep from './components/LoadingMicrostep'
 import MissingMicrostep from './components/MissingMicrostep'
-
 import CalendarMicrostep from './components/CalendarMicrostep'
 import ContentMicrostep from './components/ContentMicrostep'
 import LinkMicrostep from './components/LinkMicrostep'

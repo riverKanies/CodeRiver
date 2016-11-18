@@ -23,6 +23,7 @@
     "heroku-postbuild": "better-npm-run build",
     "start": "better-npm-run start",
     "start:prod": "better-npm-run start:prod",
+    "start:test": "better-npm-run start:test",
     "storybook:build": "build-storybook -c .storybook -0 .storybook-static",
     "storybook:start": "start-storybook -p 4003 -c .storybook",
     "test": "npm run test:configs && npm run test:specs",
@@ -57,6 +58,13 @@
       "command": "node bin/server.babel",
       "env": {
         "DEBUG": "app:*"
+      }
+    },
+    "start:test": {
+      "command": "node bin/server.babel",
+      "env": {
+        "DEBUG": "app:*",
+        "NODE_ENV": "test"
       }
     },
     "start:prod": {

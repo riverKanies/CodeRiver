@@ -13,7 +13,7 @@ const QuoteMicrostep = ({ microstep }: Props) => {
   const { description = '' } = microstep
   return (
     <div className={styles.container}>
-      <div dangerouslySetInnerHTML={{__html: marked(description)}} />
+      <div className={styles.content} dangerouslySetInnerHTML={{__html: marked(description)}} />
     </div>
   )
 }

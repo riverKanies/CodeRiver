@@ -15,7 +15,7 @@
 /* Container max-width cap */
 @value containerWidth: 90rem;
 @value containerPadding: 1.875rem;
-@value microstepContainerWidth: 43.75;
+@value microstepContainerWidth: 43.75rem;
 
 /* Universal Section Margins & Padding */
 @value babyMargin: 2rem;
