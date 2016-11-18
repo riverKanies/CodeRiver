@@ -26,21 +26,14 @@ const featuredQuarterBlue = {
   hasSynopsis: 'synopsisFalse'
 }
 
-// const msnry = new MasonryLayout('.posts', {
-//   itemSelector: ['article', 'section']
-// })
-
-// Masonry being initialized in HTML with 'data-masonry'
-const msnryArgs = "{'itemSelector': 'article'}"
-
 const MediumPostGridDynamic = () => {
   return (
     <section className={styles.featuredMediumPosts}>
-      <section data-masonry={msnryArgs} className={styles.posts}>
+      <section className={styles.posts}>
         <MediumPostDynamic {...featuredHalfImage} />
         <EmailCaptureMini />
-        <MediumPostDynamic {...featuredHalfNoImage} />
         <MediumPostDynamic {...featuredHalfImage} />
+        <MediumPostDynamic {...featuredHalfNoImage} />
         <MediumPostDynamic {...featuredQuarterWhite} />
         <MediumPostDynamic {...featuredQuarterBlue} />
       </section>
