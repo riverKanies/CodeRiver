@@ -7,6 +7,7 @@ import * as mediumPosts from 'modules/MediumPosts'
 import * as microstepsFilter from 'modules/MicrostepsFilter'
 import * as session from 'modules/UserSession'
 import * as signup from 'modules/SignUp'
+import * as pathways from 'modules/Pathways'
 
 const locationState = {
   location: null
@@ -27,6 +28,7 @@ export const makeRootReducer = (asyncReducers) => {
     [mediumPosts.KEY]: mediumPosts.reducer,
     [microstepsFilter.KEY]: microstepsFilter.reducer,
     [session.KEY]: session.reducer,
+    [pathways.KEY]: pathways.reducer,
     [signup.KEY]: signup.reducer,
     location: locationReducer,
     form: formReducer,
