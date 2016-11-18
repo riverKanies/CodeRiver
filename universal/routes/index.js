@@ -11,6 +11,7 @@ import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
+import Pathway from 'layouts/Pathway'
 
 export const createRoutes = (store) => ([
   {
@@ -25,6 +26,10 @@ export const createRoutes = (store) => ([
       {
         path: 'microsteps',
         component: Microsteps
+      },
+      {
+        path: 'pathways/:id',
+        component: Pathway
       },
       {
         path: 'learn',
