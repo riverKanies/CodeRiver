@@ -1,5 +1,5 @@
 @value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, Mon from 'all';
 
 .sidebar {
   @media bp-baby-bear {
@@ -7,6 +7,7 @@
   }
   @media bp-mama-bear {
     lost-column: 6/12;
+    margin: 40px 20px 40px 0;
   }
   @media bp-papa-bear {
     lost-column: 3/12;
@@ -26,14 +27,18 @@
 header {
   display: block;
   width: 100%;
-  margin: 0 0;
-  padding: 0 0;
+  margin: 0;
+  padding: 0;
   float: left;
   position: relative;
-  text-align: center;
+  text-align: left;
+
+  &.sidebar {
+    border-bottom: 1px solid rgba(0,0,0,0.8);
+  }
 }
 
-ul {
+ul.sidebar {
   display: block;
   width: 100%;
   margin: 0 0;
@@ -45,15 +50,20 @@ ul {
       display: block;
       width: 100%;
       margin: 0 0;
-      padding: 0 0;
+      padding: 12px 0;
       float: left;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
         a {
+          font-family: Mon;
           display: block;
           width: 100%;
           margin: 0 0;
           padding: 0 0;
           float: left;
           position: relative;
+            &:hover {
+              color: rgba(0,0,0,1);
+            }
         }
     }
 }

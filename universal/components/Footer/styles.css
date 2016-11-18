@@ -185,6 +185,10 @@ cite {
   }
 }
 
+ul {
+	padding-left: 0;
+}
+
 li {
 	@media bp-baby-bear {
 		margin-right: 0!important;
