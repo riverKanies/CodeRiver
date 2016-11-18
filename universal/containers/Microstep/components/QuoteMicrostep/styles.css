@@ -3,23 +3,10 @@
 */
 
 @value microstepContainerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value bodyCopy, ThriveBlurple, backgroundGray, ThriveGray from 'all';
+@value backgroundGray bodyCopy, ThriveBlurple, ThriveTeal, ThriveGray from 'all';
 @value PlayBlack, Playfair, MonLight, Mon, MonBold from 'all';
 
-.container {
-  lost-center: microstepContainerWidth;
-  height: auto;
-  background-color: white;
-}
-.white {
-  composes: container;
-  color: bodyCopy;
-}
-.purple {
-  composes: container;
-  background-color: ThriveBlurple;
-  color: white;
-}
+/* Container Stuff at End For Composing Reasons */
 
 .content {
   display: block;
@@ -97,7 +84,7 @@
     font-style: normal;
     letter-spacing: .1rem;
     line-height: 100%;
-    color: inherit;
+    color: ThriveTeal;
     text-transform: uppercase;
   }
   h6 {
@@ -111,7 +98,7 @@
     font-style: normal;
     letter-spacing: .1rem;
     line-height: 100%;
-    color: inherit;
+    color: ThriveTeal;
     text-transform: uppercase;
   }
   p {
@@ -141,7 +128,7 @@
     padding-bottom: 2.5rem;
     background: none;
     border: none;
-    border-bottom: 1px solid ThriveBlurple;
+    border-bottom: 1px solid ThriveTeal;
   }
   img {
     display: inline-block;
@@ -154,5 +141,20 @@
     border: none!important;
     border-radius: 2.5rem;
   }
+}
 
+/* Container */
+.container {
+  lost-center: microstepContainerWidth;
+  height: auto;
+  background-color: white;
+}
+.white {
+  composes: container;
+  color: bodyCopy;
+}
+.purple {
+  composes: container;
+  background-color: ThriveBlurple;
+  color: white;
 }
