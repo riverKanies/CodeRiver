@@ -1,3 +1,2 @@
-import EmailCaptureMini from './component'
+export default from './container'
 
-export default EmailCaptureMini

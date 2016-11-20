@@ -1,19 +1,26 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-// import LeadForm from 'containers/LeadForm'
+import { Field } from 'redux-form'
+import Input from 'components/BasicInput'
 
 type Props = {
   title: string,
-  message: Array<string>
+  message: string,
+  handleSubmit: Function,
+  pristine: boolean,
+  submitting: boolean
 };
 
-const defaultText = ['Sign up to receive the best tips and articles right in your email.']
+const defaultText = 'Sign up to receive the best tips and articles right in your email.'
 
-const EmailCaptureMini = ({
+export default function ({
   title = 'Newsletter',
-  message = defaultText
-}: Props) => {
+  handleSubmit = () => null,
+  message = defaultText,
+  pristine = false,
+  submitting = false
+}: Props) {
   return (
     <section className={styles.emailCaptureMini}>
       <div className={styles.container}>
@@ -21,9 +28,13 @@ const EmailCaptureMini = ({
           <h3>{title}</h3>
           <p>{message}</p>
         </header>
-        <form>
+        <form onSubmit={handleSubmit}>
           <span className={styles.inputWrap}>
-            <input type='email' name='email' label='email' placeholder='Enter Your Email' />
+            <Field
+              type='email'
+              name='email'
+              placeholder='Enter Your Email'
+              component={Input} />
             <button type='submit'>Submit</button>
           </span>
         </form>
@@ -32,4 +43,3 @@ const EmailCaptureMini = ({
   )
 }
 
-export default EmailCaptureMini
