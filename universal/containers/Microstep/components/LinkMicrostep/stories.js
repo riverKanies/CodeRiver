@@ -1,14 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs } from '@kadira/storybook-addon-knobs'
+import { withKnobs, select } from '@kadira/storybook-addon-knobs'
 
+import StoryContainer from 'components/StoryContainer'
 import LinkMicrostep from './component'
 
 const notes = 'This story demonstrates the props that can be passed to LinkMicrostep'
 
 const markdown = `
 ##### Joy
+
+# Come Into the Present Moment
 
 Experience yourself feeling lighter and more connected to your center in a place
 of openness and receptivity: in the eye of the hurricane, where no matter what
@@ -24,12 +27,21 @@ const props = {
   }
 }
 
+const background = [
+  'light',
+  'dark'
+]
+
 storiesOf('LinkMicrostep', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <LinkMicrostep {...props} />
+        <StoryContainer
+          style={select('Background', background, 'dark')}
+        >
+          <LinkMicrostep {...props} />
+        </StoryContainer>
       </WithNotes>
     )
   })
