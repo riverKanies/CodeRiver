@@ -42,7 +42,7 @@ export function loadPathways () {
   }
 }
 
-export function choosePathway (pathwayId) {
+export function choosePathway (pathwayId: number | string) {
   return {
     type: actions.choosePathway,
     id: pathwayId

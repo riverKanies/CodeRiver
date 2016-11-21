@@ -9,7 +9,7 @@ type Props = {
   pathway: Object
 }
 
-const Pathway = ({ pathway = null, journeys = [] }: Props) => {
+export default function ({ pathway, journeys = [] }: Props) {
   if (!pathway) return null
 
   return (
@@ -21,5 +21,3 @@ const Pathway = ({ pathway = null, journeys = [] }: Props) => {
     </div>
   )
 }
-
-export default Pathway

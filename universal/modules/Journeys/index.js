@@ -43,7 +43,7 @@ export function reducer (state: any = initialState, action: any) {
   }
 }
 
-export function loadJourneys (pathwayId) {
+export function loadJourneys (pathwayId: number | string) {
   return {
     types: [
       actions.fetchPending,
@@ -54,7 +54,7 @@ export function loadJourneys (pathwayId) {
   }
 }
 
-export function loadJourneyDetail (pathwayId, journeyId) {
+export function loadJourneyDetail (pathwayId: number | string, journeyId: number | string) {
   return {
     types: [
       actions.fetchDetailPending,
@@ -65,7 +65,7 @@ export function loadJourneyDetail (pathwayId, journeyId) {
   }
 }
 
-export function chooseJourney (pathwayId) {
+export function chooseJourney (pathwayId: number | string) {
   return {
     type: actions.chooseJourney,
     id: pathwayId

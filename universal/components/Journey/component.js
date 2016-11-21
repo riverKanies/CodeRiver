@@ -10,7 +10,7 @@ type Props = {
   microsteps: Array<any>
 }
 
-export default function ({ journey = null, microsteps = [] }: Props) {
+export default function ({ journey, microsteps = [] }: Props) {
   if (!journey) return null
 
   return (
