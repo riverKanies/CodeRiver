@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 import Microstep from 'containers/Microstep/component'
+import PageHeader from 'components/PageHeader'
 
 type Props = {
   journey: Object,
@@ -13,15 +14,15 @@ export default function ({ journey = null, microsteps = [] }: Props) {
   if (!journey) return null
 
   return (
-    <div className={styles.container}>
-      <h1>{journey.title}</h1>
-      <ul>
+    <div>
+      <PageHeader title={journey.title} />
+      <section className={styles.container}>
         {microsteps.map(m => (
           <div className={styles.microstepContainer}>
             <Microstep microstep={m} type={m.type} />
           </div>
         ))}
-      </ul>
+      </section>
     </div>
   )
 }

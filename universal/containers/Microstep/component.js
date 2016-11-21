@@ -11,7 +11,7 @@ type Props = {
   type: string
 }
 
-export default function Microstep ({ microstep, type } : Props) {
+export default function Microstep ({ microstep, type = '' } : Props) {
   const stepType = type.toLowerCase()
 
   switch (stepType) {

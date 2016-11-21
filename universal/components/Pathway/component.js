@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import JourneyCard from 'components/JourneyCard'
+import PageHeader from 'components/PageHeader'
 
 type Props = {
   journeys: Array<any>,
@@ -12,14 +13,12 @@ const Pathway = ({ pathway = null, journeys = [] }: Props) => {
   if (!pathway) return null
 
   return (
-    <section className={styles.container}>
-      <section className={styles.title}>
-          <h1>{pathway.title}</h1>
-      </section>
+    <div>
+      <PageHeader title={pathway.title} />
       <section className={styles.row}>
         {journeys.map(j => <JourneyCard {...j} pathwayId={pathway.id} />)}
       </section>
-    </section>
+    </div>
   )
 }
 

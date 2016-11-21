@@ -1,12 +1,19 @@
+@value breakpoints: 'all';
+@value containerWidth, containerPadding from breakpoints;
 /*
   This is the stylesheet for: Pathways
 */
 
 .container {
+  lost-center: containerWidth flex;
+  padding: 2rem 1rem;
+}
 
+.row {
+  lost-center: containerWidth;
 }
 
 .microstepContainer {
-  border: 1px solid black;
-  margin: 5em;
+  margin: 1em;
+  width: 100%;
 }
