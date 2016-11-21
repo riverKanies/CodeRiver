@@ -156,3 +156,32 @@
   float: left;
   text-align: left;
 }
+
+/* Label True/False */
+.hasLabel {
+  width: 100%;
+  margin: 2rem 0;
+  float: left;
+}
+.labelTrue {
+  composes: hasLabel;
+  display: block;
+}
+.labelFalse {
+  composes: hasLabel;
+  display: none;
+}
+
+/* Button True/False */
+.hasButton {
+  width: 100%;
+  float: left;
+}
+.buttonTrue {
+  composes: hasButton;
+  display: block;
+}
+.buttonFalse {
+  composes: hasButton;
+  display: none;
+}
