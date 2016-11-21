@@ -1,5 +1,4 @@
 /* @flow */
-// Fullscreen Banner Component
 import React from 'react'
 import styles from './styles'
 import dummyImage from 'assets/bg.jpg'
@@ -9,6 +8,7 @@ type Props = {
   title: string,
   bannerText: string,
   bannerImage: string,
+  bannerImageOverlay: 'overlayTrue' | 'overlayFalse',
   height: 'fullHeight' | 'halfHeight' | 'quarterHeight' | 'thirdHeight' | 'twoThirdsHeight'
 };
 
@@ -19,12 +19,13 @@ const FullscreenBanner = ({
   title = 'Title',
   bannerText = 'Hello, I am text!',
   bannerImage = defaultImage,
+  bannerImageOverlay = 'overlayTrue',
   height = 'fullHeight'
 }: Props) => {
   return (
     <section className={styles[height]}>
-      <span className={styles.bannerImageWrap}>
-        <img className={styles.bannerImage} src={bannerImage} />
+      <span className={styles[bannerImageOverlay]}>
+        <img className={styles.bannerImage} src={bannerImage} alt={title} />
       </span>
       <div className={styles[contentPosition]}>
         <header className={styles.bannerHeader}>

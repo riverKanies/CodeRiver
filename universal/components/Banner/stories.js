@@ -16,6 +16,10 @@ const props = {
   title: 'Title',
   bannerText: 'Hello, I am text!',
   bannerImage: dummyImage,
+  bannerImageOverlay: [
+    'overlayTrue',
+    'overlayFalse'
+  ],
   height: [
     'fullHeight',
     'halfHeight',
@@ -36,6 +40,7 @@ storiesOf('Banner', module)
           title={text('Banner Title', props.title)}
           bannerText={text('Banner Content Text', props.bannerText)}
           bannerImage={text('Banner Image URL', props.bannerImage)}
+          bannerImageOverlay={select('Banner Image Overlay', props.bannerImageOverlay, props.bannerImageOverlay[0])}
         />
       </WithNotes>
     )

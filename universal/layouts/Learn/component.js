@@ -7,10 +7,15 @@ import PathwaySection from 'components/PathwaySection'
 import BehaviorChangeSection from 'components/BehaviorChangeSection'
 import LearnCTASection from 'components/LearnCTASection'
 
+import bannerImage from './assets/learnBanner.jpg'
+
 const bannerProps = {
+  contentPosition: 'bottomLeft',
   title: 'Learn & Grow',
-  details: 'Ad sea vidisse appetere evertitur, cu pro ridens efficiendi, duo ' +
-  'dicant oporteat ad. Wisi periculis conceptam pro eu, discere accusata.'
+  bannerText: 'Ad sea vidisse appetere evertitur, cu pro ridens efficiendi, duo.',
+  bannerImage: bannerImage,
+  bannerImageOverlay: 'overlayFalse',
+  height: 'halfHeight'
 }
 
 export const LearnView = () => (
