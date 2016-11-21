@@ -1,4 +1,4 @@
-import analyticsMiddleware from './analytics'
+import analyticsMiddleware, { actions } from './analytics'
 import segment from 'lib/segment'
 
 const createFakeStore = fakeData => ({
@@ -26,7 +26,7 @@ describe('middleware', () => {
 
     it('should dispatch if store is empty', () => {
       const action = {
-        type: 'LOCATION_CHANGE'
+        type: actions.locationChange
       }
 
       expect(
@@ -36,7 +36,7 @@ describe('middleware', () => {
 
     it('should run segment.page when the location changes', () => {
       const action = {
-        type: 'LOCATION_CHANGE'
+        type: actions.locationChange
       }
 
       expect(segment.page.mock.calls.length).toBe(0)
@@ -48,11 +48,12 @@ describe('middleware', () => {
   context('LEAD_FORM_SUBMITTED', () => {
     beforeEach(() => {
       segment.track = jest.genMockFunction()
+      segment.identify = jest.genMockFunction()
     })
 
     it('should dispatch if store is empty', () => {
       const action = {
-        type: 'LEAD_FORM_SUBMITTED',
+        type: actions.leadFormSubmitted,
         track: { email: 'sample@email.com' }
       }
 
@@ -63,13 +64,17 @@ describe('middleware', () => {
 
     it('should run segment.track when the location changes', () => {
       const action = {
-        type: 'LEAD_FORM_SUBMITTED',
+        type: actions.leadFormSubmitted,
         track: { email: 'sample@email.com' }
       }
 
       expect(segment.track.mock.calls.length).toBe(0)
+      expect(segment.identify.mock.calls.length).toBe(0)
+
       dispatchWithStoreOf({}, action)
+
       expect(segment.track.mock.calls.length).toBe(1)
+      expect(segment.identify.mock.calls.length).toBe(1)
     })
   })
 })

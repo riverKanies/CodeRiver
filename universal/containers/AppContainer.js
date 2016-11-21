@@ -1,4 +1,5 @@
 /* @flow */
+import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import React from 'react'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
@@ -19,7 +20,7 @@ class AppContainer extends React.Component {
     // Use history to update store with location
     this.unsubscribe = history.listen(location => {
       store.dispatch({
-        type: 'LOCATION_CHANGE',
+        type: analyticsActions.locationChange,
         location
       })
     })

@@ -1,3 +1,4 @@
+import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import { combineReducers } from 'redux'
 import { toast } from 'modules/Toast'
 import { reducer as formReducer } from 'redux-form'
@@ -14,7 +15,7 @@ const locationState = {
 }
 
 const locationReducer = (state = locationState, action) => {
-  return action.type === 'LOCATION_CHANGE'
+  return action.type === analyticsActions.locationChange
     ? action.location
     : state
 }
