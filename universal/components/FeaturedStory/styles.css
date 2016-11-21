@@ -7,8 +7,7 @@
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {
-  background: linear-gradient(rgba(35,11,138,0.75), rgba(35,11,138,0.75)),
-    url('./assets/kobe.jpg') no-repeat;
+  background: url('./assets/kobe.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-color: ThriveBlurple;
