@@ -33,16 +33,27 @@ export default function (props: any) {
           type='number'
         />
         <p>Select time.</p>
-        <select
+        <ul
           defaultValue={props.frequency}
           id='frequency'
           onChange={props.onChangeFrequency}
         >
-          <option value='DAILY'>Daily</option>
-          <option value='WEEKLY'>Weekly</option>
-          <option value='MONTHLY'>Monthly</option>
-        </select>
-        <p>Select frequency.</p>
+          <li>
+            <input type='radio' id='dailyOption' name='selector' value='Daily' />
+            <label htmlFor='dailyOption'>Daily</label>
+            <div className={styles.check} />
+          </li>
+          <li>
+            <input type='radio' id='weeklyOption' name='selector' />
+            <label htmlFor='weeklyOption'>Weekly</label>
+            <div className={styles.check}><div className={styles.inside} /></div>
+          </li>
+          <li>
+            <input type='radio' id='monthlyOption' name='selector' />
+            <label htmlFor='monthlyOption'>Monthly</label>
+            <div className={styles.check}><div className={styles.inside} /></div>
+          </li>
+        </ul>
         <div className={styles.button}>
           <Button>
             buttonText: {props.microstep.cta_text || 'Download Reminder'},
