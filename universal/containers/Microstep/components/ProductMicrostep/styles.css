@@ -1,0 +1,150 @@
+/*
+  This is the stylesheet for: ProductMicrostep
+*/
+@value microstepContainerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
+@value backgroundGray bodyCopy, ThriveBlurple, ThriveTeal, ThriveGray from 'all';
+@value PlayBlack, Playfair, MonLight, Mon, MonBold from 'all';
+
+/* Container Stuff at End For Composing Reasons */
+
+.content {
+  display: block;
+  width: 90%;
+  height: 100%;
+  margin: 0 5%;
+  padding: 4rem 1rem;
+  text-align: center;
+  @media bp-mama-bear {
+    width: 76%;
+    margin: 0 12%;
+  }
+  h1 {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    /* set margin-botom in ems so it scales down proportionally */
+    margin-bottom: .5em!important;
+    padding: 0 0;
+    float: left;
+    font-family: PlayfairBlack;
+    font-size: 2rem;
+    color: inherit;
+    text-align: inherit;
+    text-transform: capitalize;
+    @media bp-mama-bear {
+      margin: 0 auto;
+      padding: 1rem 1rem;
+      font-size: 2.1825rem;
+    }
+  }
+  h3 {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+    font-family: Playfair;
+    font-size: 1rem;
+    font-style: italic;
+    color: inherit;
+    @media bp-mama-bear {
+      max-width: 40rem;
+      padding: 1rem;
+      font-size: 1.25rem;
+      margin: 0 auto;
+    }
+    @media bp-papa-bear {
+      font-size: 1.5rem;
+    }
+  }
+  h4 {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0 0;
+    font-family: MonBold;
+    font-size: 62.5%;
+    line-height: 100%;
+    text-transform: uppercase;
+    & em {
+      font-family: Playfair;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+  }
+  h5 {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    float: left;
+    font-family: MonBold;
+    font-size: .75rem;
+    font-style: normal;
+    letter-spacing: .1rem;
+    line-height: 100%;
+    color: ThriveTeal;
+    text-transform: uppercase;
+  }
+  h6 {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+    font-family: Mon;
+    font-size: .75rem;
+    font-style: normal;
+    letter-spacing: .1rem;
+    line-height: 100%;
+    color: ThriveTeal;
+    text-transform: uppercase;
+  }
+  p {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    float: left;
+    border: none;
+    font-family: MonLight;
+    font-size: .88em;
+    color: inherit;
+    line-height: 133%;
+    letter-spacing: 0.0rem;
+    text-align: inherit;
+    @media bp-mama-bear {
+      font-size: 1.125em;
+    }
+  }
+}
+.header {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  text-align: center;
+    h1 {
+      color: ThriveBlurple;
+    }
+}
+
+/* Container */
+.container {
+  lost-center: microstepContainerWidth;
+  height: auto;
+  background-color: white;
+}
+.white {
+  composes: container;
+  color: bodyCopy;
+}
+.purple {
+  composes: container;
+  background-color: ThriveBlurple;
+  color: white;
+}

@@ -1,5 +1,7 @@
 /* @flow */
 import React from 'react'
+import styles from './styles'
+import Button from 'components/Button'
 
 type Props = {
   microstep: {
@@ -14,15 +16,28 @@ type Props = {
 };
 
 const ProductMicrostep = ({ microstep }: Props) => {
+  const {
+    cta_text = 'Learn More'
+  } = microstep
   return (
-    <div>
-      <h1>
-        {microstep.title}
-      </h1>
-      <img src={microstep.image.src} />
-      <p>{microstep.price}</p>
-      <div dangerouslySetInnerHTML={{__html: microstep.body_html}} />
-      <a href={microstep.link} rel='nofollow' target='_blank'>View in Store</a>
+    <div className={styles.container}>
+      <section className={styles.content}>
+        <header className={styles.header}>
+          <h5 className={styles.label}>We Recommend</h5>
+          <h1 className={styles.msTitle}>{microstep.title}</h1>
+        </header>
+        <span className={styles.productBy}>
+          <h4><em>by</em> NAME</h4>
+        </span>
+        <img src={microstep.image.src} alt={microstep.title} />
+        <p>{microstep.price}</p>
+        <div dangerouslySetInnerHTML={{__html: microstep.body_html}} />
+        <Button>
+          buttonText: {cta_text},
+          linkTo: {microstep.link},
+          buttonStyle: 'violet'
+        </Button>
+      </section>
     </div>
   )
 }
