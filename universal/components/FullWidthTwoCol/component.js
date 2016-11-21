@@ -8,9 +8,11 @@ import Button from 'components/Button'
 type Props = {
   sectionClass: 'default' | 'lightGray',
   title: string,
+  hasLabel: 'labelTrue' | 'labelFalse',
   label: Object,
   sectionText: Array<string>,
   image: string,
+  hasButton: 'buttonTrue' | 'buttonFalse',
   button: Object
 };
 
@@ -21,9 +23,11 @@ mattis consectetur purus sit amet fermentum.`]
 const FullWidthTwoCol = ({
   sectionClass = 'default',
   title = 'Title',
+  hasLabel = 'labelTrue',
   label = {},
   sectionText = defaultText,
   image = dummyImage,
+  hasButton = 'buttonTrue',
   button = {}
 }: Props) => {
   return (
@@ -36,12 +40,16 @@ const FullWidthTwoCol = ({
         </div>
         <div className={styles.column}>
           <section className={styles.sectionContent}>
-            <ContentLabel {...label} />
+            <span className={styles[hasLabel]}>
+              <ContentLabel {...label} />
+            </span>
             <header className={styles.header}>
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-            <Button {...button} />
+            <span className={styles[hasButton]}>
+              <Button {...button} />
+            </span>
           </section>
         </div>
       </section>
