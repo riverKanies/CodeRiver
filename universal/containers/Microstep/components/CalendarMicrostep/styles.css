@@ -261,3 +261,7 @@
   background-color: ThriveBlurple;
   color: white;
 }
+
+.active { 
+  background-color: gray;
+}

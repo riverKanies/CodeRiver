@@ -9,30 +9,46 @@ function renderDescription (description) {
   )
 }
 
+function formatAMPM (hours) {
+  return (hours < 12) ? 'AM' : 'PM'
+}
+
+function formatHours (hours) {
+  return (hours % 12 === 0) ? 12 : hours % 12
+}
+
+function formatMinutes (minutes) {
+  if (minutes.toString().length === 1) {
+    return `0${minutes}`
+  }
+  return minutes
+}
+
 export default function (props: any) {
+  const increment = (props.hourActive) ? props.incrementHour : props.incrementMinute
+  const decrement = (props.hourActive) ? props.decrementHour : props.decrementMinute
+
+  const hourClass = (props.hourActive) ? styles.active : undefined
+  const minuteClass = (!props.hourActive) ? styles.active : undefined
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         {renderDescription(props.microstep.description)}
+        <div className={styles.timeBar}>
+          <span className={hourClass} onClick={props.activateHour}>{formatHours(props.hours)}</span>
+          <span>:</span>
+          <span className={minuteClass} onClick={props.activateMinute}>{formatMinutes(props.minutes)}</span>
+          <span>{formatAMPM(props.hours)}</span>
+        </div>
+        <div className={styles.timeBar}>
+          <span onClick={increment}>+</span>
+          <span>:</span>
+          <span onClick={decrement}>-</span>
+        </div>
         <section className={styles.time}>
-          <input
-            className={styles.hours}
-            defaultValue={props.hours}
-            id='hours'
-            max='23'
-            min='00'
-            onChange={props.onChangeHours}
-            type='number'
-          />
-          <input
-            className={styles.minutes}
-            defaultValue={props.minutes}
-            id='minutes'
-            max='59'
-            min='00'
-            onChange={props.onChangeMinutes}
-            type='number'
-          />
+          <input className={styles.hours} value={formatHours(props.hours)} />
+          <input className={styles.minutes} value={formatMinutes(props.minutes)} />
         </section>
         <ul
           defaultValue={props.frequency}

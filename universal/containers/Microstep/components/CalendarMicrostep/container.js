@@ -16,16 +16,36 @@ type Props = {
 export default class CalendarContainer extends React.Component {
   state: any;
   props: Props;
+  state = {
+    hours: 22,
+    minutes: 0,
+    frequency: 'DAILY',
+    hourActive: true
+  }
 
   constructor (props: any) {
     super(props)
 
-    this.state = {
-      hours: 22,
-      minutes: 0,
-      frequency: 'DAILY'
-    }
-    _.bindAll(this, ['onChangeFrequency', 'onChangeMinutes', 'onChangeHours', 'updateTime'])
+    _.bindAll(this, [
+      'onChangeFrequency',
+      'onChangeMinutes',
+      'onChangeHours',
+      'updateTime',
+      'incrementHour',
+      'decrementHour',
+      'incrementMinute',
+      'decrementMinute',
+      'activateMinute',
+      'activateHour'
+    ])
+  }
+
+  activateHour (e: any) {
+    this.setState({ hourActive: true })
+  }
+  activateMinute (e: any) {
+    console.log('hey')
+    this.setState({ hourActive: false })
   }
 
   onChangeMinutes (e: any) {
@@ -33,14 +53,38 @@ export default class CalendarContainer extends React.Component {
     this.setState({ minutes })
   }
 
-  onChangeFrequency (e: any) {
-    const frequency = e.target.value
-    this.setState({ frequency })
-  }
-
   onChangeHours (e: any) {
     const hours = e.target.value
     this.setState({ hours })
+  }
+
+  incrementHour (e: any) {
+    const next = this.state.hours + 1
+
+    this.setState({ hours: next % 24 })
+  }
+
+  decrementHour (e: any) {
+    const next = (this.state.hours - 1 < 0) ? 23 : this.state.hours - 1
+
+    this.setState({ hours: next })
+  }
+
+  incrementMinute (e: any) {
+    const next = this.state.minutes + 1
+
+    this.setState({ minutes: next % 60 })
+  }
+
+  decrementMinute (e: any) {
+    const next = (this.state.minutes - 1 < 0) ? 59 : this.state.minutes - 1
+
+    this.setState({ minutes: next })
+  }
+
+  onChangeFrequency (e: any) {
+    const frequency = e.target.value
+    this.setState({ frequency })
   }
 
   updateTime () {
@@ -65,7 +109,13 @@ export default class CalendarContainer extends React.Component {
       onChangeMinutes: this.onChangeMinutes,
       microstep: this.props.microstep,
       onChangeFrequency: this.onChangeFrequency,
-      downloadLink: this.downloadLink()
+      downloadLink: this.downloadLink(),
+      activateHour: this.activateHour,
+      activateMinute: this.activateMinute,
+      incrementMinute: this.incrementMinute,
+      decrementMinute: this.decrementMinute,
+      incrementHour: this.incrementHour,
+      decrementHour: this.decrementHour
     }
 
     return (
