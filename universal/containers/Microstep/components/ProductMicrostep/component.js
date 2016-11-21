@@ -36,14 +36,20 @@ const ProductMicrostep = ({ microstep }: Props) => {
 
         <div dangerouslySetInnerHTML={{__html: microstep.body_html}} />
 
-        <img src={microstep.image.src} alt={microstep.title} />
-        <p>{microstep.price}</p>
+        <section className={styles.product}>
+          <div className={styles.imgCol}>
+            <img src={microstep.image.src} alt={microstep.title} />
+          </div>
+          <div className={styles.contentCol}>
+            <h3 className={styles.productTitle}>{microstep.title}</h3>
+            <p className={styles.productPrice}>{microstep.price}</p>
+          </div>
+        </section>
 
         <div className={styles.button}>
           <Button>
             buttonText: 'Learn More',
-            linkTo: {microstep.link},
-            buttonStyle: 'violet'
+            linkTo: {microstep.link}
           </Button>
         </div>
 

@@ -7,6 +7,7 @@ import marked from 'marked'
 
 import StoryContainer from 'components/StoryContainer'
 import ProductMicrostep from './component'
+import defaultImage from './assets/product-placeholder.jpg'
 
 const notes = 'This story demonstrates the props that can be passed to LinkMicrostep'
 
@@ -20,10 +21,14 @@ const props = {
     title: 'Product Title',
     body_html: marked(markdown),
     link: 'javascript:void(0)',
-    price: '100.00',
+    price: '$100.00',
     image: {
-      src: 'http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg'
+      src: defaultImage
     }
+  },
+  button: {
+    buttonText: 'Learn More',
+    buttonStyle: 'violet'
   }
 }
 
