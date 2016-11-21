@@ -1,19 +1,18 @@
-@value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, papaPadding, mediumGutterHalf from 'all';
 
 .featuredMediumPosts {
   lost-center: containerWidth containerPadding;
   margin: 0 auto;
   float: none;
+  @media bp-papa-bear {
+    margin: 1.5rem auto;
+  }
 }
 
 .posts {
-  lost-masonry-wrap: no-flex;
+  lost-masonry-wrap: no-flex 0px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0;
+  margin-top: papaMargin;
   float: left;
-  @media bp-papa-bear {
-    margin: 1.5rem auto papaMargin;
-  }
 }
