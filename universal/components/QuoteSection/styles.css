@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveTeal, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
 .quoteContainer {
@@ -27,6 +27,24 @@
 .gray {
   composes: quoteContainer;
   background: #f0f0f0;
+}
+.purple {
+  composes: quoteContainer;
+  background: ThriveBlurple;
+  * {
+    color: white;
+  }
+  .quote {
+    &::before, &::after {
+      color: white;
+    }
+  }
+  .citation {
+    color: white;
+    &::before {
+      color: white;
+    }
+  }
 }
 
 /* Content Grid Container */

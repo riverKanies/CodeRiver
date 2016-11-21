@@ -4,7 +4,7 @@ import styles from './styles'
 import dummyImage from './assets/quote_imagePlaceholder.png'
 
 type Props = {
-  bgColor: 'default' | 'white' | 'gray',
+  bgColor: 'default' | 'white' | 'gray' | 'purple',
   quote: Array<string>,
   citation: string,
   quoteImage: string,

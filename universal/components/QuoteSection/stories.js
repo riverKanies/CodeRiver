@@ -11,7 +11,8 @@ const notes = 'This story demonstrates the props that can be passed to thw Quote
 const bgColor = [
   'default',
   'white',
-  'gray'
+  'gray',
+  'purple'
 ]
 
 const defaultQuote = [
