@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Microstep } from './container'
+import Microstep from './component'
 
 const genericDescription = `
 Paragraphs are separated by a blank line.
@@ -15,7 +15,7 @@ describe('(Component) MicrostepList', () => {
     dispatch: () => {},
     microstep: undefined,
     fetchPending: false,
-    stepType: undefined
+    type: undefined
   }
 
   it('Should render as a <MissingMicrostep /> when no request pending and no Microstep present', () => {
@@ -23,15 +23,6 @@ describe('(Component) MicrostepList', () => {
 
     const wrapper = shallow(<Microstep {...props} />)
     const element = wrapper.find('MissingMicrostep')
-
-    expect(element.length).toBe(1)
-  })
-
-  it('Should render as a <LoadingMicrostep /> when request pending', () => {
-    const props = { ...defaultProps, fetchPending: true, microstep: undefined}
-
-    const wrapper = shallow(<Microstep {...props} />)
-    const element = wrapper.find('LoadingMicrostep')
 
     expect(element.length).toBe(1)
   })
@@ -48,7 +39,7 @@ describe('(Component) MicrostepList', () => {
           src: '/path/to/image'
         }
       },
-      stepType: 'product'
+      type: 'product'
     }
 
     const wrapper = shallow(<Microstep {...props} />)
@@ -65,7 +56,7 @@ describe('(Component) MicrostepList', () => {
     const props = {
       ...defaultProps,
       microstep,
-      stepType: 'calendar'
+      type: 'calendar'
     }
 
     const wrapper = shallow(<Microstep {...props} />)
@@ -81,7 +72,7 @@ describe('(Component) MicrostepList', () => {
     const props = {
       ...defaultProps,
       microstep,
-      stepType: 'content'
+      type: 'content'
     }
 
     const wrapper = shallow(<Microstep {...props} />)
@@ -99,7 +90,7 @@ describe('(Component) MicrostepList', () => {
     const props = {
       ...defaultProps,
       microstep,
-      stepType: 'link'
+      type: 'link'
     }
 
     const wrapper = shallow(<Microstep {...props} />)
@@ -116,7 +107,7 @@ describe('(Component) MicrostepList', () => {
     const props = {
       ...defaultProps,
       microstep,
-      stepType: 'quote'
+      type: 'quote'
     }
 
     const wrapper = shallow(<Microstep {...props} />)

@@ -9,6 +9,7 @@ import * as microstepsFilter from 'modules/MicrostepsFilter'
 import * as session from 'modules/UserSession'
 import * as signup from 'modules/SignUp'
 import * as pathways from 'modules/Pathways'
+import * as journeys from 'modules/Journeys'
 
 const locationState = {
   location: null
@@ -30,6 +31,7 @@ export const makeRootReducer = (asyncReducers) => {
     [microstepsFilter.KEY]: microstepsFilter.reducer,
     [session.KEY]: session.reducer,
     [pathways.KEY]: pathways.reducer,
+    [journeys.KEY]: journeys.reducer,
     [signup.KEY]: signup.reducer,
     location: locationReducer,
     form: formReducer,

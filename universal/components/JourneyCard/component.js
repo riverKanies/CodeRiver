@@ -1,25 +1,25 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import pathwayPlaceholder from '../../assets/thrivin.jpg'
+import placeholder from '../../assets/thrivin.jpg'
 import { Link } from 'react-router'
 
 type Props = {
   title: string,
   description: string,
   id: number,
+  pathwayId: number,
   image: any,
 };
 
-const defaultText = [`Pathway Title`]
-
-const PathwayCard = ({
-  title = defaultText[0],
+export default function ({
+  title = 'Don\'t stop believing',
   description = 'Vestibulum id ligula porta felis euismod semper.',
-  image = pathwayPlaceholder,
-  id }: Props) => {
+  image = placeholder,
+  pathwayId,
+  id }: Props) {
   return (
-    <Link to={`/pathways/${id}`} className={styles.card}>
+    <Link to={`/pathways/${pathwayId}/journeys/${id}`} className={styles.card}>
       <section>
         <span className={styles.imageWrap}>
           <img className={styles.image} src={image} />
@@ -32,5 +32,3 @@ const PathwayCard = ({
     </Link>
   )
 }
-
-export default PathwayCard

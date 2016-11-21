@@ -1,7 +1,16 @@
-/*
-  This is the stylesheet for: Pathways
-*/
+@value breakpoints: 'all';
+@value containerWidth, containerPadding from breakpoints;
 
 .container {
+  lost-center: containerWidth flex;
+  padding: 2rem 1rem;
+}
 
+.title {
+  lost-column: 1;
+  text-align: center;
+}
+
+.row {
+  lost-center: containerWidth;
 }

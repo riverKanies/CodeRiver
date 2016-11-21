@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import PathwayCard from 'components/PathwayCard'
-import productivityImage from '../PathwayCard/assets/pathway-red.jpg'
+import productivityImage from '../../assets/thrivin.jpg'
 
 type Props = {
   title: string,
