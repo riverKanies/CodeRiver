@@ -13,4 +13,9 @@
 
 .row {
   lost-center: containerWidth;
+  a {
+    text-align: center;
+    display: inline-block;
+    
+  }
 }

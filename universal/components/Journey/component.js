@@ -14,16 +14,16 @@ export default function ({ journey, microsteps = [] }: Props) {
   if (!journey) return null
 
   return (
-    <div>
+    <section className={styles.container}>
       <PageHeader title={journey.title} />
-      <section className={styles.container}>
+      <div>
         {microsteps.map(m => (
           <div className={styles.microstepContainer}>
             <Microstep microstep={m} type={m.type} />
           </div>
         ))}
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
 

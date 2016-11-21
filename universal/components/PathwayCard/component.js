@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import pathwayPlaceholder from './assets/pathway-placeholder.jpg'
+import pathwayPlaceholder from '../../assets/thrivin.jpg'
 import { Link } from 'react-router'
 
 type Props = {

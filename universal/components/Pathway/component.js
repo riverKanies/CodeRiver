@@ -13,11 +13,13 @@ export default function ({ pathway, journeys = [] }: Props) {
   if (!pathway) return null
 
   return (
-    <div>
-      <PageHeader title={pathway.title} />
+    <section className={styles.container}>
+      <section className={styles.title}>
+          <h1>{pathway.title}</h1>
+      </section>
       <section className={styles.row}>
         {journeys.map(j => <JourneyCard {...j} pathwayId={pathway.id} />)}
       </section>
-    </div>
+    </section>
   )
 }
