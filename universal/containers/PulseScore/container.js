@@ -1,23 +1,19 @@
 import React, { Component } from 'react'
 import PulseScore from './component'
 import { connect } from 'react-redux'
-
-const mapStateToProps = (state) => {
-
-  return  {
-    score: 45 //TODO: Pass real score here from state obj
-  }
-}
+import { checkSession } from 'modules/UserSession'
+import { getScoreData } from 'modules/UserSession/selectors'
 
 type Props = {
-  score: number
+  score: number,
+  dispatch: Function
 };
 
 class Container extends Component {
   props: Props;
 
   componentWillMount () {
-    // TODO: Probably need to retrieve score from some endpoint here, then dispatch an action to update store
+    this.props.dispatch(checkSession())
   }
 
   render () {
@@ -25,6 +21,4 @@ class Container extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps
-)(Container)
+export default connect(getScoreData)(Container)
