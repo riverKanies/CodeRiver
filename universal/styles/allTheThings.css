@@ -36,6 +36,7 @@
 
 /* Grid Margin Value, To Be Used In Conjunction With Lost Grid */
 @value mediumGutter: .375rem;
+@value mediumGutterHalf: .1875rem;
 
 /* colors */
 

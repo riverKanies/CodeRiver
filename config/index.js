@@ -90,7 +90,11 @@ const config = {
   coverage_reporters : [
     { type : 'text-summary' },
     { type : 'lcov', dir : 'coverage' }
-  ]
+  ],
+  jasmine_timeout: process.env.JASMINE_TIMEOUT || 15000,
+  nightmare_wait_timeout: process.env.NIGHTMARE_WAIT_TIMEOUT || 14000,
+  nightmare_goto_timeout: process.env.NIGHTMARE_GOTO_TIMEOUT || 14000,
+  nightmare_load_timeout: process.env.NIGHTMARE_LOAD_TIMEOUT || 14000
 }
 
 config.server_url = `${config.server_protocol}://${config.server_host}:${config.server_port}`

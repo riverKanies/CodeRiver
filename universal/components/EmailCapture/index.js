@@ -1,3 +1,2 @@
-import EmailCapture from './component'
+export default from './container'
 
-export default EmailCapture

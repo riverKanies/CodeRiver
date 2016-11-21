@@ -1,6 +1,6 @@
 @value all: 'all';
 
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from all;
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter, mediumGutterHalf from all;
 @value bodyCopy, ThriveBlue, darkGray, gradientCardThrive from all;
 @value MonBold, MonBlack, Playfair, PlayBlack from all;
 
@@ -21,10 +21,6 @@
   float: left;
   position: relative;
   color: bodyCopy;
-  @media bp-papa-bear {
-    border: .25rem solid #f0f0f0;
-  }
-
   /* Card Label */
   > i {
    display: block;
@@ -171,8 +167,9 @@
     height: imgCardMama;
   }
   @media bp-papa-bear {
-    lost-masonry-column: 1/2 0rem;
+    lost-masonry-column: 1/2 mediumGutterHalf;
     height: imgCardPapa;
+    margin-bottom: mediumGutter;
   }
   .postContent {
     padding: 0 2rem;
@@ -208,7 +205,8 @@
   height: auto;
   background: white;
   @media bp-papa-bear {
-    lost-masonry-column: 1/4 0rem;
+    lost-masonry-column: 3/12 mediumGutterHalf;
+    margin-bottom: mediumGutter;
   }
   .imageTrue {
     display: block;
@@ -287,7 +285,8 @@
   height: auto;
   background: ThriveBlue;
   @media bp-papa-bear {
-    lost-masonry-column: 1/4 0rem;
+    lost-masonry-column: 3/12 mediumGutterHalf;
+    margin-bottom: mediumGutter;
   }
   .imageTrue {
     display: block;
