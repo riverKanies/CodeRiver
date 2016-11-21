@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, babyMargin from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, bodyCopy from 'all';
 
 .fullscreenBanner {
   display: block;
@@ -19,6 +19,13 @@
     overflow: hidden;
     height: 100vh;
     background: none;
+  }
+  &:hover {
+    @media bp-mama-bear {
+      p {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
   }
 }
 .fullHeight {
@@ -60,7 +67,6 @@
   @media bp-mama-bear {
     z-index: -100;
   }
-
   @media bp-mama-bear {
     display: inline-block;
     width: 100%;
@@ -68,7 +74,6 @@
     position: absolute;
     top: 0;
   }
-
   &::after {
     @media bp-mama-bear {
       content: '';
@@ -94,44 +99,83 @@
     object-position: 50% 50%;
   }
 }
-.bannerContent {
-  lost-center: 88% 6%;
-  padding-bottom: babyMargin;
-  @media bp-mama-bear {
-    padding-bottom: 0;
-  }
-}
 
 .bannerHeader {
   width: 100%;
   margin: 0 auto 1.25rem auto;
-  color: black;
+  color: bodyCopy;
   text-align: left;
   @media bp-mama-bear {
-    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: inherit;
     padding: 0;
+    text-align: inherit;
     color: white;
   }
-  h1 {
+  .h1 {
+    width: 100%;
     margin-top: 0;
-    margin-bottom: 1.5rem;
-  }
-  h2 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+    font-size: 2.125rem;
+    text-align: inherit;
+    color: inherit;
   }
 }
 .bannerText {
   width: 100%;
+  clear: both;
   text-align: left;
-  color: black;
+  color: inherit;
   @media bp-mama-bear {
+    display: flex;
     text-align: center;
     color: white;
   }
   p {
     margin-bottom: 0;
     text-align: inherit;
-    color: inherit;
+    color: bodyCopy;
+    @media bp-mama-bear {
+      color: rgba(255, 255, 255, .7);
+      transition: color 100ms ease-in-out;
+    }
+  }
+}
+
+/* Banner Content + Composed Positioning */
+.bannerContent {
+  lost-center: containerWidth;
+  margin: 0 auto babyMargin auto;
+  padding: containerPadding;
+  float: none;
+  @media bp-mama-bear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+.defaultPosition {
+  composes: bannerContent;
+  @media bp-mama-bear {
+    text-align: center;
+  }
+}
+.bottomLeft {
+  composes: bannerContent;
+  @media bp-mama-bear {
+    display: block;
+    padding: 0 0 5.625rem 5.625rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .bannerHeader {
+      text-align: left;
+    }
+    .bannerContent {
+      text-align: left;
+    }
   }
 }

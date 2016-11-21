@@ -1,23 +1,22 @@
+
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import PageHeader from 'components/PageHeader'
+import Banner from 'components/Banner'
 import PathwaySection from 'components/PathwaySection'
 import BehaviorChangeSection from 'components/BehaviorChangeSection'
 import LearnCTASection from 'components/LearnCTASection'
 
-const headerProps = {
+const bannerProps = {
   title: 'Learn & Grow',
-  details: `Maecenas sed diam eget risus varius blandit sit amet non magna.
-  Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula
-  ut id elit. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem
-  lacinia quam venenatis vestibulum.`
+  details: 'Ad sea vidisse appetere evertitur, cu pro ridens efficiendi, duo ' +
+  'dicant oporteat ad. Wisi periculis conceptam pro eu, discere accusata.'
 }
 
 export const LearnView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
-      <PageHeader {...headerProps} />
+      <Banner {...bannerProps} />
       <PathwaySection />
       <BehaviorChangeSection />
       <LearnCTASection />
