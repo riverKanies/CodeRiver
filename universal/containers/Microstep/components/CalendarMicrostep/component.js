@@ -36,20 +36,22 @@ export default function (props: any) {
       <div className={styles.content}>
         {renderDescription(props.microstep.description)}
         <div className={styles.timeBar}>
+          <Button
+            handleClick={decrement}
+            linkTo={null}
+          >-
+          </Button>
           <span className={hourClass} onClick={props.activateHour}>{formatHours(props.hours)}</span>
           <span>:</span>
           <span className={minuteClass} onClick={props.activateMinute}>{formatMinutes(props.minutes)}</span>
           <span>{formatAMPM(props.hours)}</span>
+          <Button
+            handleClick={increment}
+            linkTo={null}
+          >+
+          </Button>
         </div>
-        <div className={styles.timeBar}>
-          <span onClick={increment}>+</span>
-          <span>:</span>
-          <span onClick={decrement}>-</span>
-        </div>
-        <section className={styles.time}>
-          <input className={styles.hours} value={formatHours(props.hours)} />
-          <input className={styles.minutes} value={formatMinutes(props.minutes)} />
-        </section>
+
         <ul
           defaultValue={props.frequency}
           id='frequency'

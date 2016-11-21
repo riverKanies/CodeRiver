@@ -15,15 +15,18 @@ type Props = {
 }
 
 export const Button = ({ children, linkTo, buttonStyle, buttonText, handleClick, segmentProps, disabled }: Props) => {
+  const linkProps = {
+    className: styles[buttonStyle],
+    onClick: handleClick,
+    activeClassName: styles.activeStyle,
+    disabled: disabled
+  }
+  if (linkTo) {
+    linkProps.to = linkTo
+  }
   return (
-    <Link
-      to={linkTo}
-      className={styles[buttonStyle]}
-      onClick={handleClick}
-      activeClassName={styles.activeStyle}
-      disabled={disabled}
-    >
-      {buttonText || children}
+    <Link {...linkProps}>
+      {children || buttonText}
     </Link>
   )
 }
