@@ -14,25 +14,26 @@ export default function (props: any) {
     <div className={styles.container}>
       <div className={styles.content}>
         {renderDescription(props.microstep.description)}
-        <input
-          className={styles.hours}
-          defaultValue={props.hours}
-          id='hours'
-          max='23'
-          min='00'
-          onChange={props.onChangeHours}
-          type='number'
-        />
-        <input
-          className={styles.minutes}
-          defaultValue={props.minutes}
-          id='minutes'
-          max='59'
-          min='00'
-          onChange={props.onChangeMinutes}
-          type='number'
-        />
-        <p>Select time.</p>
+        <section className={styles.time}>
+          <input
+            className={styles.hours}
+            defaultValue={props.hours}
+            id='hours'
+            max='23'
+            min='00'
+            onChange={props.onChangeHours}
+            type='number'
+          />
+          <input
+            className={styles.minutes}
+            defaultValue={props.minutes}
+            id='minutes'
+            max='59'
+            min='00'
+            onChange={props.onChangeMinutes}
+            type='number'
+          />
+        </section>
         <ul
           defaultValue={props.frequency}
           id='frequency'
@@ -44,22 +45,22 @@ export default function (props: any) {
             <div className={styles.check} />
           </li>
           <li>
-            <input type='radio' id='weeklyOption' name='selector' />
+            <input type='radio' id='weeklyOption' name='selector' value='Weekly' />
             <label htmlFor='weeklyOption'>Weekly</label>
             <div className={styles.check}><div className={styles.inside} /></div>
           </li>
           <li>
-            <input type='radio' id='monthlyOption' name='selector' />
+            <input type='radio' id='monthlyOption' name='selector' value='Montly' />
             <label htmlFor='monthlyOption'>Monthly</label>
             <div className={styles.check}><div className={styles.inside} /></div>
           </li>
         </ul>
         <div className={styles.button}>
-          <Button>
-            buttonText: {props.microstep.cta_text || 'Download Reminder'},
-            linkTo: {props.downloadLink},
-            buttonStyle: 'violet'
-          </Button>
+          <Button
+            buttonText={props.microstep.cta_text || 'Download Reminder'}
+            linkTo={props.downloadLink}
+            buttonStyle='violet'
+          />
         </div>
       </div>
     </div>

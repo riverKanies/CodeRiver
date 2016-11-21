@@ -114,19 +114,24 @@
       font-size: 1.125em;
     }
   }
-  input {
-    display: inline-block;
-    padding: 1rem 0;
-    color: black;
-    font-size: 2rem;
-  }
+  /* Set time */
+  .time {
+    padding: 1rem;
 
-  .hours {
-    width: 50%;
-  }
+    input {
+      display: inline-block;
+      padding: 1rem 0;
+      color: black;
+      font-size: 2rem;
+    }
 
-  .minutes {
-    width: 50%;
+    .hours {
+      width: 50%;
+    }
+
+    .minutes {
+      width: 50%;
+    }
   }
 
   hr {
