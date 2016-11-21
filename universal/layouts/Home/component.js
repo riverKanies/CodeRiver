@@ -50,13 +50,18 @@ const twoColLife = {
     buttonColor: 'dark'
   }
 }
+const featuredStory = {
+  button: {
+    linkto: 'https://medium.com/@myleik/lessons-from-kobe-bryant-5efdf8e54a12#.gz9vb8907'
+  }
+}
 
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
       <FeaturedProduct />
-      <FeaturedStory />
+      <FeaturedStory {...featuredStory} />
       <HalfTextOverlay />
       <QuoteSection />
       <FullWidthTwoCol {...twoColScience} />
