@@ -1,11 +1,13 @@
 /* eslint-disable */
-import { browser, baseUrl } from '../../../tests/browser/config'
+import { browserConfig, baseUrl } from '../../../tests/browser/config'
+import Nightmare from 'nightmare'
 
 describe('ContentView', () => {
-  it('should render markdown', async (done) => {
-    await browser
+  it('should render markdown', (done) => {
+    var browser = Nightmare(browserConfig)
+    browser
       .goto(baseUrl + '/contact')
-      .wait('#root')
+      .wait('#contentView')
       .evaluate(function () {
         return document.querySelector('h1').innerText
       })
