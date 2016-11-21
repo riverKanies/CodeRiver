@@ -44,7 +44,6 @@ export default class CalendarContainer extends React.Component {
     this.setState({ hourActive: true })
   }
   activateMinute (e: any) {
-    console.log('hey')
     this.setState({ hourActive: false })
   }
 
