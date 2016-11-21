@@ -2,7 +2,7 @@
   This is the stylesheet for: CalendarMicrostep
 */
 @value microstepContainerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value backgroundGray bodyCopy, ThriveBlurple, ThriveTeal, ThriveGray from 'all';
+@value backgroundGray bodyCopy, backgroundGray, ThriveBlurple, ThriveTeal, ThriveGray from 'all';
 @value PlayBlack, Playfair, MonLight, Mon, MonBold from 'all';
 /* Container Stuff at End For Composing Reasons */
 .content {
@@ -20,7 +20,6 @@
     display: block;
     width: 100%;
     margin-top: 0;
-    /* set margin-botom in ems so it scales down proportionally */
     margin-bottom: .5em!important;
     padding: 0 0;
     float: left;
@@ -114,37 +113,48 @@
       font-size: 1.125em;
     }
   }
-  /* Set time */
-  .time {
+
+  /* Time Bar */
+
+  .timeBar {
+    display: inline-block;
+    margin-top: 1rem;
+    color: black;
+    font-size: 1.5rem;
+    font-family: MonLight;
+
+    a {
+      font-size: 2rem;
+      font-family: MonBold;
+    }
+
+    @media bp-papa-bear {
+      font-size: 2.5rem;
+    }
+  }
+
+  .digits {
+    display: inline-block;
     padding: 1rem;
 
-    input {
-      display: inline-block;
-      padding: 1rem 0;
-      color: black;
-      font-size: 2rem;
-    }
-
-    .hours {
-      width: 50%;
-    }
-
-    .minutes {
-      width: 50%;
+    &:hover {
+      cursor: pointer;
     }
   }
 
-  hr {
-    display: block;
-    width: 100%;
-    height: 1px;
-    float: left;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    background: none;
-    border: none;
-    border-bottom: 1px solid ThriveTeal;
+  .hours, .minutes {
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: backgroundGray;
+    }
   }
+
+  .active {
+    background-color: rgba(70, 28, 208, 0.2);
+  }
+
+  /* Radio Inputs */
 
   .ul{
     list-style: none;
@@ -178,13 +188,17 @@
   ul li label{
     display: block;
     position: relative;
-    padding: 1.5rem 1.5rem 1.5rem 3.75rem;
+    padding: 1rem;
     margin: 10px auto;
     height: 1.875rem;
     font-family: MonLight;
     z-index: 7;
     cursor: pointer;
     -webkit-transition: all 0.25s linear;
+
+    @media bp-mama-bear {
+      padding: 1.5rem 1.5rem 1.5rem 3.75rem;
+    }
   }
 
   ul li:hover label{
@@ -242,10 +256,6 @@
   padding-top: 2rem;
 }
 
-/* Radio CSS */
-
-
-
 /* Container */
 .container {
   lost-center: microstepContainerWidth;
@@ -260,8 +270,4 @@
   composes: container;
   background-color: ThriveBlurple;
   color: white;
-}
-
-.active { 
-  background-color: gray;
 }

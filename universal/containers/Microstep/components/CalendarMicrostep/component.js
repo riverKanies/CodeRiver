@@ -41,10 +41,20 @@ export default function (props: any) {
             linkTo={null}
           >-
           </Button>
-          <span className={hourClass} onClick={props.activateHour}>{formatHours(props.hours)}</span>
-          <span>:</span>
-          <span className={minuteClass} onClick={props.activateMinute}>{formatMinutes(props.minutes)}</span>
-          <span>{formatAMPM(props.hours)}</span>
+          <section className={styles.digits}>
+            <span
+              className={`${hourClass} ${styles.hours}`} onClick={props.activateHour}
+            >
+              {formatHours(props.hours)}
+            </span>
+            <span>:</span>
+            <span
+              className={`${minuteClass} ${styles.minutes}`} onClick={props.activateMinute}
+            >
+              {formatMinutes(props.minutes)}
+            </span>
+            <span>{formatAMPM(props.hours)}</span>
+          </section>
           <Button
             handleClick={increment}
             linkTo={null}
