@@ -12,18 +12,12 @@ type Props = {
   height: 'fullHeight' | 'halfHeight' | 'quarterHeight' | 'thirdHeight' | 'twoThirdsHeight'
 };
 
-const defaultText = [`Using a mobile first approach, we start with a block
-display at small viewports so our copy content doesn't float on the image at
-small sizes. Then as we size up we switch to flex so that we can position the
-text on top of the image. This is in lieu of using a background image and
-background image size.`]
-
 const defaultImage = dummyImage
 
 const FullscreenBanner = ({
   title = 'Title',
   subTitle = 'Subtitle',
-  bannerText = defaultText,
+  bannerText = 'Hello, I am text!',
   bannerImage = defaultImage,
   height = 'fullHeight'
 }: Props) => {
@@ -38,7 +32,7 @@ const FullscreenBanner = ({
           <h2>{subTitle}</h2>
         </header>
         <section className={styles.bannerText}>
-          {bannerText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+          <p>{bannerText}</p>
         </section>
       </div>
     </section>
