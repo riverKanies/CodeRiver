@@ -7,7 +7,9 @@ import Learn from 'layouts/Learn'
 import SignUp from 'layouts/SignUp'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
+import GlassDoor from 'layouts/GlassDoor'
 import Engage from 'layouts/Engage'
+import Team from 'layouts/Team'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -45,8 +47,16 @@ export const createRoutes = (store) => ([
         component: Thrive
       },
       {
+        path: 'team',
+        component: Team
+      },      
+      {
         path: 'pulse',
         component: Pulse
+      },
+      {
+        path: 'pledge',
+        component: GlassDoor
       },
       {
         path: 'signup',
