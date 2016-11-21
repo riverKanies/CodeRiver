@@ -9,13 +9,15 @@ dependencies:
 test:
   pre:
     - npm run heroku-postbuild
-    - npm run start:test:
-        background: true
-    - ./wait_for_server.sh
   override:
     - npm run lint
     - npm run analyze
-    - npm run test:all
+    - npm run test:configs
+    - npm run test:specs
+    - npm run start:test:
+        background: true
+    - ./wait_for_server.sh
+    - npm run test:features
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
 
 experimental:
