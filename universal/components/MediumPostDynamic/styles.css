@@ -205,7 +205,7 @@
   height: auto;
   background: white;
   @media bp-papa-bear {
-    lost-masonry-column: 1/4 mediumGutterHalf;
+    lost-masonry-column: 3/12 mediumGutterHalf;
     margin-bottom: mediumGutter;
   }
   .imageTrue {
@@ -285,7 +285,7 @@
   height: auto;
   background: ThriveBlue;
   @media bp-papa-bear {
-    lost-masonry-column: 1/4 mediumGutterHalf;
+    lost-masonry-column: 3/12 mediumGutterHalf;
     margin-bottom: mediumGutter;
   }
   .imageTrue {
