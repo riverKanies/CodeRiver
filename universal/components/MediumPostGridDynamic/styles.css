@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, papaPadding, mediumGutter from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, papaPadding, mediumGutterHalf from 'all';
 
 .featuredMediumPosts {
   lost-center: containerWidth containerPadding;
@@ -12,6 +12,7 @@
 .posts {
   lost-masonry-wrap: no-flex 0px;
   width: 100%;
-  margin: papaMargin auto 0 auto;
+  margin: 0 auto;
+  margin-top: papaMargin;
   float: left;
 }
