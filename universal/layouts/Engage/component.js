@@ -16,7 +16,7 @@ import lists from './assets/collections'
 const bannerProps = {
   title: 'Engage',
   subTitle: 'Thrive Global Media Library',
-  bannerText: [],
+  bannerText: '',
   bannerImage: 'http://placekitten.com/g/1440/900',
   height: 'halfHeight'
 }

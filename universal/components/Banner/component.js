@@ -7,7 +7,7 @@ import dummyImage from 'assets/bg.jpg'
 type Props = {
   title: string,
   subTitle: string,
-  bannerText: Array<string>,
+  bannerText: string,
   bannerImage: string,
   height: 'fullHeight' | 'halfHeight' | 'quarterHeight' | 'thirdHeight' | 'twoThirdsHeight'
 };
