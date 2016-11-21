@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter, mediumGutterHalf from 'all';
 @value darkGray, bodyCopy, ThriveTeal, ThriveLightBlurple from 'all';
 @value Mon, Play from 'all';
 
@@ -15,7 +15,7 @@
 .emailCaptureMini {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto ;
   padding: 1.25rem 1.25rem;
   float: left;
   background: ThriveTeal url('./assets/emailMiniBG.png') repeat;
@@ -24,8 +24,8 @@
     padding: 2rem 2rem;
   }
   @media bp-papa-bear {
-    lost-masonry-column: 1/2 0rem;
-    border: .25rem solid #f0f0f0;
+    lost-masonry-column: 1/2 mediumGutterHalf;
+    margin-bottom: mediumGutter;
   }
 }
 
