@@ -47,7 +47,7 @@ export const createRoutes = (store) => ([
       {
         path: 'pulsescore',
         component: PulseScore
-      },      
+      },
       {
         path: 'signup',
         component: SignUp
