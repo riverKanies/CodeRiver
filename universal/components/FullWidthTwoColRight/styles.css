@@ -1,0 +1,123 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from 'all';
+@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
+@value Mon, Playfair from 'all';
+
+/* Parent Most Container + BG Color Variants */
+.fullWidthTwoCol {
+  display: block;
+  lost-column: 1;
+  height: auto;
+  margin: 0 auto;
+  float: left;
+  padding: babyPadding;
+  position: relative;
+  overflow: hidden;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: fullWidthTwoCol;
+  background: white;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.lightGray {
+  composes: fullWidthTwoCol;
+  background: lightGray;
+}
+
+/* Column Container Styles */
+.container {
+  display: block;
+  max-width: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: left;
+  position: relative;
+  @media bp-papa-bear {
+    lost-flex-container: row;
+    float: none;
+  }
+}
+
+/* Column Styling */
+.columnRight {
+  lost-column: 1;
+  position: relative;
+  @media bp-papa-bear {
+    lost-column: 1/2 flex;
+    float: right;
+  }
+}
+
+.columnLeft {
+  lost-column: 1;
+  margin-top: 40px;
+  @media bp-papa-bear {
+    lost-column: 1/2 flex;
+    position: absolute;
+    bottom: 31px;
+    left: 0;
+    float: left;
+  }
+}
+
+.imageWrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  @media bp-papa-bear {
+    display: flex;
+    height: 100%;
+    float: none;
+  }
+}
+.image {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  @media bp-papa-bear {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.sectionContent {
+  lost-column: 1;
+  @media bp-papa-bear {
+    padding: 0 10%;
+  }
+  > i {
+    display: inline-block;
+    margin: 2rem 0;
+    float: left;
+    clear: both;
+  }
+  p {
+    display: block;
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+  > a {
+    float: left;
+    clear: both;
+  }
+}
+
+.header {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  text-align: left;
+}
