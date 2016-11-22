@@ -38,6 +38,11 @@
 @value mediumGutter: .375rem;
 @value mediumGutterHalf: .1875rem;
 
+/* Header Element Bottom Margins */
+@value babyHeader: 1.5rem;
+@value mamaHeader: 2.3125rem;
+@value papaHeader: 3.125rem;
+
 /* colors */
 
 @value white: #ffffff;

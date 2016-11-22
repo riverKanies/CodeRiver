@@ -21,7 +21,8 @@ const webpackPlugins = {
     new webpack.EnvironmentPlugin([
       'API_PROTOCOL',
       'API_HOST',
-      'API_PORT'
+      'API_PORT',
+      'SHOPIFY_URL'
     ]),
     new webpack.LoaderOptionsPlugin({
       options: {

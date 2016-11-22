@@ -1,6 +1,8 @@
 /* @flow */
 // Site Header
 import React from 'react'
+import { linkToShopify } from 'lib/sso'
+
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
@@ -16,9 +18,11 @@ class Header extends React.Component {
 
     this.toggleActive = this.toggleActive.bind(this)
   }
+
   toggleActive () {
     this.setState({active: !this.state.active})
   }
+
   render () {
     const { active } = this.state
 
@@ -41,7 +45,11 @@ class Header extends React.Component {
             <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
               Learn
             </Link>
-            <Link id='navShop' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+            <Link
+              id='navShop'
+              className={styles.link}
+              onClick={linkToShopify}
+              activeClassName={styles.activeRoute}>
               Shop
             </Link>
             <Link id='navGive' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>

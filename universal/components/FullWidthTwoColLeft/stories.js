@@ -3,45 +3,39 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
-import FullWidthText from './component'
+import FullWidthTwoColLeft from './component'
+import dummyImage from './assets/appPlaceholder.png'
 
 const notes = `This story demonstrates the props that can be passed to
-FullWidthText. This component features a full viewport wide layout, with a
-title, subtitle, text and an optional call to action. All of these pieces are
-customizable by picking class names to change the background-color, button
-color, etc.`
+FullWidthTwoColLeft.`
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
-const props = {
-  sectionClass: [
-    'default',
-    'white',
-    'blue',
-    'gray'
-  ],
-  sectionWidth: [
-    'defaultWidth',
-    'fullWidth',
-    'twoThirdsWidth',
-    'halfWidth'
-  ],
-  title: 'h2 Title',
-  sectionText: defaultText
+const defaultButton = {
+  buttonText: 'Download',
+  linkTo: 'javascript:void(0)',
+  buttonStyle: 'teal'
 }
 
-storiesOf('FullWidthText', module)
+const props = {
+  sectionClass: ['default', 'lightGray', 'transparent'],
+  title: 'App Name',
+  sectionText: defaultText,
+  image: dummyImage
+}
+
+storiesOf('FullWidthTwoColLeft', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <FullWidthText
+        <FullWidthTwoColLeft
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
-          sectionWidth={select('Section Content Width', props.sectionWidth, props.sectionWidth[0])}
           title={text('Section Title', props.title)}
           sectionText={text('Section Text', props.sectionText)}
+          button={defaultButton}
         />
       </WithNotes>
     )

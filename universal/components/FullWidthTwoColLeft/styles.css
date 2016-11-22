@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from 'all';
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
 @value Mon, Playfair from 'all';
 
@@ -53,6 +53,17 @@
   }
 }
 
+.columnRight {
+  position: relative;
+  margin-top: 40px;
+  @media bp-papa-bear {
+    lost-column: 1/2 flex;
+    position: absolute;
+    bottom: 31px;
+    right: 0;
+  }
+}
+
 .imageWrap {
   display: block;
   width: 100%;
@@ -80,18 +91,19 @@
 }
 .sectionContent {
   lost-column: 1;
+  margin-top: 40px;
   @media bp-papa-bear {
-    lost-column: 1 flex;
-    flex-direction: column;
-    height: 1;
     padding: 0 10%;
+    margin-top: 0;
   }
   > i {
     display: inline-block;
+    margin: 2rem 0;
     float: left;
     clear: both;
   }
   p {
+    display: block;
     width: 100%;
     float: left;
     clear: both;
@@ -104,44 +116,8 @@
 
 .header {
   width: 100%;
-  margin: 0 auto babyHeader auto;
+  margin: 0 0;
   padding: 0 0;
   float: left;
   text-align: left;
-  @media bp-mama-bear {
-    margin: 0 auto mamaHeader auto;
-  }
-  @media bp-papa-header {
-    display: flex;
-    margin: 0 auto papaHeader auto;
-  }
-}
-
-/* Label True/False */
-.hasLabel {
-  width: 100%;
-  margin: 2rem 0;
-  float: left;
-}
-.labelTrue {
-  composes: hasLabel;
-  display: block;
-}
-.labelFalse {
-  composes: hasLabel;
-  display: none;
-}
-
-/* Button True/False */
-.hasButton {
-  width: 100%;
-  float: left;
-}
-.buttonTrue {
-  composes: hasButton;
-  display: block;
-}
-.buttonFalse {
-  composes: hasButton;
-  display: none;
 }
