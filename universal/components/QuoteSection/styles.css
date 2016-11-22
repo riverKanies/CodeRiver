@@ -70,7 +70,7 @@
     lost-column: 1/4 flex;
   }
 }
-.image {
+.roundImage {
   display: inline-block;
   width: 6.25rem;
   height: 6.25rem;
@@ -81,6 +81,12 @@
   @media bp-mama-bear {
     margin: 0 0 0 0;
   }
+}
+
+.squareImage {
+  composes: roundImage;
+  border-radius: 0;
+  border: none;
 }
 
 /* Quote Section */

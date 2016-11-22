@@ -29,7 +29,9 @@ const CTASection = ({
     <section className={styles[colorScheme]}>
       <section className={styles[alignment]}>
         <section className={styles[sectionWidth]}>
-          <h2>{title}</h2>
+          <header className={styles.header}>
+            <h2>{title}</h2>
+          </header>
           <section className={styles.sectionContent}>
             <p>{sectionText}</p>
           </section>

@@ -8,6 +8,7 @@ import QuoteSection from 'components/QuoteSection'
 import FeaturedStory from 'components/FeaturedStory'
 
 import bannerImage from './assets/givingBanner.jpg'
+import quoteImage from './assets/GPPLogo.jpg'
 
 const bannerProps = {
   contentPosition: 'bottomLeft',
@@ -19,8 +20,9 @@ const bannerProps = {
 }
 
 const theThriveFoundation = {
-  sectionClass: 'default',
-  title: 'We Train Non-Profits',
+  colorScheme: 'white',
+  title: 'The Thrive Foundation',
+  sectionWidth: 'twoThirdsWidth',
   sectionText: ['Hello there... ' +
   'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
   'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
@@ -29,7 +31,8 @@ const theThriveFoundation = {
 
 const globalPovertyProject = {
   bgColor: 'white',
-  quoteImage: 'http://steezo.com/wp-content/uploads/2012/12/man-in-suit2.jpg',
+  imageShape: 'squareImage',
+  quoteImage: quoteImage,
   citation: 'Hugh Evans - CEO Global Poverty Project',
   quote: ['The training was truly an eye opener as it reminded us of the importance of ' +
   'living out our true purpose, and doing so in a way that will ensure our team is sustainable in the long-term.']
@@ -37,8 +40,9 @@ const globalPovertyProject = {
 
 const trainNonProfits = {
   alignment: 'center',
-  sectionClass: 'default',
+  colorScheme: 'default',
   title: 'We Train Non-Profits',
+  sectionWidth: 'twoThirdsWidth',
   sectionText: ['Hello there... ' +
   'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
   'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
