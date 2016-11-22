@@ -7,7 +7,6 @@ import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import TwoColText from 'components/TwoColText'
 import PathwaySection from 'components/PathwaySection'
-import BehaviorChangeSection from 'components/BehaviorChangeSection'
 
 import bannerImage from './assets/learnBanner.jpg'
 
@@ -31,17 +30,17 @@ const howToGrowOne = {
 const howToGrowTwo = {
   bgColor: 'default',
   hasTitle: 'titleFalse',
-  colTextOne: 'In a study on what made babies better at walking, scientists ' +
+  colTextOne: ['In a study on what made babies better at walking, scientists ' +
     'discovered that more than height, brain development, or any other variable, ' +
     'what really made the difference was simply how much time babies spent trying ' +
     'to walk. As Daniel Coyle writes in The Talent Code, “Baby steps are the royal ' +
     'road to skill,” and this is as true for sleep as it is for any other habit. ' +
-    'Start small and keep at it.',
-  colTextTwo: 'But changing habits is not something we can achieve quickly. As ' +
+    'Start small and keep at it.'],
+  colTextTwo: ['But changing habits is not something we can achieve quickly. As ' +
     'with any other well-established pattern, making a lasting change requires ' +
     'taking small daily steps toward our goal. And the steps that will work for ' +
     'each of us are unique; we may need to try out a few different practices and ' +
-    'rituals before landing on the right combination.'
+    'rituals before landing on the right combination.']
 }
 const behaviorChange = {
   sectionClass: 'default',
@@ -72,13 +71,15 @@ const library = {
   }
 }
 const eCourse = {
-  sectionClass: 'default',
-  title: 'What is Behavior Change?',
-  hasLabel: 'labelFalse',
-  sectionText: ['Making a sustained behavioral change happens when we no longer ' +
-    'feel we’re having to work to do something other than what we’d normally do. ' +
-    'That is, it’s when we find a new equilibrium and create a new norm.'],
-  hasButton: 'buttonFalse'
+  bgColor: 'default',
+  hasTitle: 'titleTrue',
+  title: 'E-Course',
+  colTextOne: ['The six-week online course with Arianna Huffington helps you move ' +
+    'from surviving to thriving. The course uses scientifically proven methods to ' +
+    'decrease stress and burnout and improve your overall health, happiness and well-being.',
+    'In each lesson we tackle two steps — for a total of 12 steps (because we are ' +
+    'all addicted to our current way of living and working!) — with practical tips and tools.'],
+  colTextTwo: ['string']
 }
 
 export const LearnView = () => (
@@ -91,7 +92,6 @@ export const LearnView = () => (
       <FullWidthTwoColSpecial {...library} />
       <PathwaySection />
       <TwoColText {...eCourse} />
-      <BehaviorChangeSection />
     </section>
   </section>
 )

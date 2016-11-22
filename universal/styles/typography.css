@@ -3,6 +3,7 @@
 
 /* Global Typography Styles */
 h1, h2, h3, h4, h5 {
+  margin-top: 0;
   -webkit-margin-before: 0;
   text-align: inherit;
   color: inherit;
@@ -66,7 +67,8 @@ a {
   background: transparent;
 }
 p {
-  margin-bottom: 2em;
+  margin-top: 0;
+  margin-bottom: 1em;
   font-family: MonLight;
   font-size: .88em;
   line-height: 150%;
