@@ -8,7 +8,6 @@ import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import TwoColText from 'components/TwoColText'
 import PathwaySection from 'components/PathwaySection'
 import BehaviorChangeSection from 'components/BehaviorChangeSection'
-import LearnCTASection from 'components/LearnCTASection'
 
 import bannerImage from './assets/learnBanner.jpg'
 
@@ -68,8 +67,18 @@ const library = {
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Read More',
+    buttonStyle: 'blue',
     linkTo: 'javascript:void(0)'
   }
+}
+const eCourse = {
+  sectionClass: 'default',
+  title: 'What is Behavior Change?',
+  hasLabel: 'labelFalse',
+  sectionText: ['Making a sustained behavioral change happens when we no longer ' +
+    'feel we’re having to work to do something other than what we’d normally do. ' +
+    'That is, it’s when we find a new equilibrium and create a new norm.'],
+  hasButton: 'buttonFalse'
 }
 
 export const LearnView = () => (
@@ -81,8 +90,8 @@ export const LearnView = () => (
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
       <PathwaySection />
+      <TwoColText {...eCourse} />
       <BehaviorChangeSection />
-      <LearnCTASection />
     </section>
   </section>
 )
