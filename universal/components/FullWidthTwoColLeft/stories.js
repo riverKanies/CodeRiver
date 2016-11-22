@@ -3,11 +3,11 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
-import AppFullWidthTwoColRight from './component'
+import FullWidthTwoColLeft from './component'
 import dummyImage from './assets/appPlaceholder.png'
 
 const notes = `This story demonstrates the props that can be passed to
-AppFullWidthTwoColRight.`
+FullWidthTwoColLeft.`
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
@@ -26,12 +26,12 @@ const props = {
   image: dummyImage
 }
 
-storiesOf('AppFullWidthTwoColRight', module)
+storiesOf('FullWidthTwoColLeft', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <AppFullWidthTwoColRight
+        <FullWidthTwoColLeft
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           title={text('Section Title', props.title)}
           sectionText={text('Section Text', props.sectionText)}

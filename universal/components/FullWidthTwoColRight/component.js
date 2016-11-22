@@ -17,7 +17,7 @@ const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
-const AppFullWidthTwoColLeft = ({
+const FullWidthTwoColRight = ({
   sectionClass = 'default',
   title = 'Title',
   sectionText = defaultText,
@@ -27,12 +27,12 @@ const AppFullWidthTwoColLeft = ({
   return (
     <section className={styles[sectionClass]}>
       <section className={styles.container}>
-        <div className={styles.column}>
+        <div className={styles.columnRight}>
           <figure className={styles.imageWrap}>
             <img className={styles.image} src={image} alt={title} />
           </figure>
         </div>
-        <div className={styles.columnRight}>
+        <div className={styles.columnLeft}>
           <section className={styles.sectionContent}>
             <header className={styles.header}>
               <h2>{title}</h2>
@@ -46,4 +46,4 @@ const AppFullWidthTwoColLeft = ({
   )
 }
 
-export default AppFullWidthTwoColLeft
+export default FullWidthTwoColRight
