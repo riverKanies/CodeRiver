@@ -1,15 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
 
 .container {
-  lost-utility: clearfix;
-  lost-center: containerWidth;
-  margin: 0 auto;
-  padding: containerPadding;
-  float: none;
-  text-align: center;
-}
-
-.content {
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -23,9 +14,19 @@
   }
 }
 
+.content {
+  lost-utility: clearfix;
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  text-align: center;
+}
+
 .title {
-  width: 100%;
+  lost-column: 1;
   margin-bottom: babyHeader;
+  float: left;
   text-align: center;
   @media bp-mama-bear {
     margin-bottom: mamaHeader;
@@ -39,10 +40,7 @@
 }
 
 .row {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 0;
+  lost-column: 1;
   float: left;
   a {
     display: inline-block;
