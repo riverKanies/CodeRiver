@@ -6,8 +6,8 @@ type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
-  colTextOne: Array<string>,
-  colTextTwo: Array<string>
+  colTextOne: any,
+  colTextTwo: any
 }
 
 const defaultText = ['Hello, I am some text!', 'I am also text!']

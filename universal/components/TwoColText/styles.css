@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TwoColText
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
@@ -55,9 +55,9 @@
 }
 
 /* Title True/False */
-.title {
+.hasTitle {
   lost-column: 1;
-  margin: 0 auto;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   float: left;
   clear: both;
@@ -66,6 +66,10 @@
   color: inherit;
   @media bp-mama-bear {
     width: 100%;
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
   }
   h2 {
     text-align: inherit;
@@ -73,7 +77,7 @@
   }
 }
 .titleTrue {
-  composes: title;
+  composes: hasTitle;
 }
 .titleFalse {
   display: none;

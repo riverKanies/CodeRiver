@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
 
 .fullWidthText {
   lost-utility: clearfix;
@@ -64,10 +64,16 @@
 
 .header {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   position: relative;
   text-align: center;
+  @media bp-mama-bear {
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
   h2 {
     display: inline-block;
     width: 100%;
