@@ -6,7 +6,7 @@ type Props = {
   sectionClass: 'default' | 'white' | 'blue' | 'gray',
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   title: string,
-  sectionText: Array<string>,
+  sectionText: any,
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -27,7 +27,7 @@ const FullWidthText = ({
             <h2>{title}</h2>
           </header>
           <section className={styles.sectionContent}>
-            <p>{sectionText}</p>
+            {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>
         </div>
       </section>

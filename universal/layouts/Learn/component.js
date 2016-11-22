@@ -19,25 +19,47 @@ const bannerProps = {
   bannerImageOverlay: 'overlayFalse',
   height: 'twoThirdsHeight'
 }
-const howToGrowOne = {
-  sectionClass: 'white',
-  title: 'How to Grow?',
+const learnIntro = {
+  sectionClass: 'default',
+  sectionWidth: 'twoThirdsWidth',
+  title: '',
   sectionText: [
-    'So, where do you go from here? You know about the scientific ' +
-    'evidence on sleep, meditation, giving, our relationship with technology, and so ' +
-    'much more. But how do you move from awareness to action? How do you use this ' +
-    'knowledge to make changes in your daily life?'
+    'Welcome to the Thrive Global Pathways. There are five pathways built of ' +
+    'multiple microsteps you can practice in a sustainable way. The steps are ' +
+    'small and very easy to integrate into your life, but the impact is ' +
+    'transformational. This is the part where we go from knowing what to do to ' +
+    'actually doing it. Choose the Pathway you want to begin with--Joy, Calm, ' +
+    'Productivity, Well-Being and Purpose.',
+    'The purpose of a microstep, simply stated, is the tiniest step you can ' +
+    'take to put you on the path towards what you want to achieve. Once you are ' +
+    'on the path, myriad opportunities open up for you to improve your health, ' +
+    'productivity, and happiness. Our microsteps are practical and they work! ' +
+    'Pick the microstep that becomes your cornerstone habit, and keep adding ' +
+    'in the order that works best for you.',
+    'There are five Pathway Protocols -- experiment with them, discover what ' +
+    'most resonates with you, and return to it again and again. You can do ' +
+    'these at any time -- as you begin your pathways, on your commute, during ' +
+    'a break in your day, or before you go to bed at night. We have bracketed ' +
+    'in italics commentary to help you practice the protocols the first few ' +
+    'times, after which it will become second nature'
   ]
 }
 const howToGrowTwo = {
   bgColor: 'default',
-  hasTitle: 'titleFalse',
-  colTextOne: ['In a study on what made babies better at walking, scientists ' +
+  hasTitle: 'titleTrue',
+  title: 'How to Grow?',
+  colTextOne: [
+    'So, where do you go from here? You know about the scientific ' +
+    'evidence on sleep, meditation, giving, our relationship with technology, and so ' +
+    'much more. But how do you move from awareness to action? How do you use this ' +
+    'knowledge to make changes in your daily life?',
+    'In a study on what made babies better at walking, scientists ' +
     'discovered that more than height, brain development, or any other variable, ' +
     'what really made the difference was simply how much time babies spent trying ' +
     'to walk. As Daniel Coyle writes in The Talent Code, “Baby steps are the royal ' +
     'road to skill,” and this is as true for sleep as it is for any other habit. ' +
-    'Start small and keep at it.'],
+    'Start small and keep at it.'
+  ],
   colTextTwo: [
     'But changing habits is not something we can achieve quickly. As ' +
     'with any other well-established pattern, making a lasting change requires ' +
@@ -110,11 +132,11 @@ export const LearnView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
       <Banner {...bannerProps} />
-      <FullWidthText {...howToGrowOne} />
+      <FullWidthText {...learnIntro} />
       <TwoColText {...howToGrowTwo} />
+      <PathwaySection />
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
-      <PathwaySection />
       <TwoColText {...eCourse} />
       <QuoteSection {...quote} />
     </section>

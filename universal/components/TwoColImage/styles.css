@@ -1,0 +1,111 @@
+/*
+  This is the stylesheet for: TwoColImage
+*/
+
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+
+/* Base Section Styling + Composed Styles */
+.twoColText {
+  width: 100%;
+  height: auto;
+  margin: babyMargin auto;
+  padding: babyPadding;
+  position: relative;
+  text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto;
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: twoColText;
+  background: white;
+  color: bodyCopy;
+}
+.transparent {
+  composes: twoColText;
+  background: transparent;
+  color: bodyCopy;
+}
+.lightGray {
+  composes: twoColText;
+  background: lightGray;
+  color: bodyCopy;
+}
+.purple {
+  composes: twoColText;
+  background: ThriveBlurple;
+  color: white;
+}
+.blue {
+  composes: twoColText;
+  background: ThriveBlue;
+  color: white;
+}
+
+/* Container Styles */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  color: inherit;
+}
+
+/* Title True/False */
+.hasTitle {
+  lost-column: 1;
+  margin: 0 auto babyHeader auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  position: relative;
+  text-align: left;
+  color: inherit;
+  @media bp-mama-bear {
+    width: 100%;
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
+  h2 {
+    text-align: inherit;
+    color: inherit;
+  }
+}
+.titleTrue {
+  composes: hasTitle;
+}
+.titleFalse {
+  display: none;
+}
+
+/* Column Styles */
+.columnWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+}
+.column {
+  lost-column: 1;
+  float: left;
+  text-align: inherit;
+  color: inherit;
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  > img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+  }
+}
