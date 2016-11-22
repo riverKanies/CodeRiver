@@ -12,7 +12,7 @@ export default function ({ pathway, journeys = [] }: Props) {
   if (!pathway) return null
 
   return (
-    <section className={styles.container}>
+    <section id='pathway_container' className={styles.container}>
       <section className={styles.title}>
         <h1>{pathway.title}</h1>
       </section>
