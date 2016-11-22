@@ -16,4 +16,3 @@ export default function PulseView () {
   return <TypeForm typeformkey='sKzAso' urlParams={`&accesstoken=${creds['access-token']}&uid=${creds.uid}&client=${creds.client}`} />
 }
 
-

@@ -10,20 +10,33 @@ type Props = {
   linkTo: string,
   buttonStyle: string,
   segmentProps: Object,
-  disabled: bool,
-  buttonText: String
+  disabled: boolean,
+  buttonText: String,
+  download: boolean
 }
 
-export const Button = ({ children, linkTo, buttonStyle, buttonText, handleClick, segmentProps, disabled }: Props) => {
+export const Button = ({
+  children,
+  linkTo,
+  buttonStyle,
+  buttonText,
+  handleClick,
+  segmentProps,
+  disabled,
+  download = true
+ }: Props) => {
+  const linkProps = {
+    className: styles[buttonStyle],
+    onClick: handleClick,
+    activeClassName: styles.activeStyle,
+    disabled,
+    to: linkTo,
+    download
+  }
+
   return (
-    <Link
-      to={linkTo}
-      className={styles[buttonStyle]}
-      onClick={handleClick}
-      activeClassName={styles.activeStyle}
-      disabled={disabled}
-    >
-      {buttonText || children}
+    <Link {...linkProps} >
+      {children || buttonText}
     </Link>
   )
 }

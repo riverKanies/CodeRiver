@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Profile from './component'
 import { checkSession, deleteSession } from 'modules/UserSession'
-import selector from './selector'
+import { loginSelector as selector } from 'modules/UserSession/selectors'
 import LoginForm from 'components/LoginForm'
 
 type Props = {
