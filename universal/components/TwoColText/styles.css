@@ -1,0 +1,93 @@
+/*
+  This is the stylesheet for: TwoColText
+*/
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+
+/* Base Section Styling + Composed Styles */
+.twoColText {
+  lost-utility: clearfix;
+  lost-flex-container: column;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  position: relative;
+  text-align: left;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: twoColText;
+  background: white;
+  color: bodyCopy;
+}
+.transparent {
+  composes: twoColText;
+  background: transparent;
+  color: bodyCopy;
+}
+.lightGray {
+  composes: twoColText;
+  background: lightGray;
+  color: bodyCopy;
+}
+.purple {
+  composes: twoColText;
+  background: ThriveBlurple;
+  color: white;
+}
+.blue {
+  composes: twoColText;
+  background: ThriveBlue;
+  color: white;
+}
+
+/* Container Styles */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  color: inherit;
+}
+
+/* Title True/False */
+.title {
+  lost-column: 1;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: left;
+  color: inherit;
+  h2 {
+    text-align: inherit;
+    color: inherit;
+  }
+}
+.titleTrue {
+  composes: title;
+}
+.titleFalse {
+  display: none;
+}
+
+/* Column Styles */
+.column {
+  lost-column: 1;
+  text-align: inherit;
+  color: inherit;
+  @media bp-papa-bear {
+    lost-column: 1/2;
+  }
+  p {
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: inherit;
+    color: inherit;
+  }
+}
