@@ -22,7 +22,13 @@ export default function ({ journey, microsteps = [] }: Props) {
             <div className={styles.microstepContainer}>
               <Microstep microstep={m} type={m.type} />
             </div>
-            <a className="twitter-share-button" data-size='small' href={`https://twitter.com/intent/tweet?text=${m.share_text} ${document.location.href}`}>Share</a>
+            <a
+              className='twitter-share-button'
+              data-size='small'
+              href={`https://twitter.com/intent/tweet?text=${m.share_text}`}
+            >
+              Share
+            </a>
           </div>
         ))}
       </div>
