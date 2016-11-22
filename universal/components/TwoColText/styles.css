@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TwoColText
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
@@ -12,11 +12,10 @@
   position: relative;
   text-align: left;
   @media bp-mama-bear {
-    margin: mamaMargin auto;
+    margin: 0 auto;
     padding: mamaPadding;
   }
   @media bp-papa-bear {
-    margin: papaMargin auto;
     padding: papaPadding;
   }
 }

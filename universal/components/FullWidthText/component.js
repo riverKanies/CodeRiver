@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: 'default' | 'blue' | 'gray',
+  sectionClass: 'default' | 'white' | 'blue' | 'gray',
   title: string,
   sectionText: Array<string>,
 };

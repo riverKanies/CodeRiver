@@ -23,6 +23,13 @@
     color: bodyCopy;
   }
 }
+.white {
+  composes: fullWidthText;
+  background: white;
+  * {
+    color: bodyCopy;
+  }
+}
 .gray {
   composes: fullWidthText;
   background: lightGray;

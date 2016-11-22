@@ -18,6 +18,7 @@ mattis consectetur purus sit amet fermentum.`]
 const props = {
   sectionClass: [
     'default',
+    'white',
     'blue',
     'gray'
   ],
