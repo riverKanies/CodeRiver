@@ -28,13 +28,11 @@ export default class CalendarContainer extends React.Component {
 
     _.bindAll(this, [
       'onChangeFrequency',
-      'onChangeMinutes',
-      'onChangeHours',
       'updateTime',
-      'incrementHour',
-      'decrementHour',
-      'incrementMinute',
-      'decrementMinute',
+      'incHour',
+      'decHour',
+      'incMinute',
+      'decMinute',
       'activateMinute',
       'activateHour'
     ])
@@ -43,39 +41,30 @@ export default class CalendarContainer extends React.Component {
   activateHour (e: any) {
     this.setState({ hourActive: true })
   }
+
   activateMinute (e: any) {
     this.setState({ hourActive: false })
   }
 
-  onChangeMinutes (e: any) {
-    const minutes = e.target.value
-    this.setState({ minutes })
-  }
-
-  onChangeHours (e: any) {
-    const hours = e.target.value
-    this.setState({ hours })
-  }
-
-  incrementHour (e: any) {
+  incHour () {
     const next = this.state.hours + 1
 
     this.setState({ hours: next % 24 })
   }
 
-  decrementHour (e: any) {
+  decHour () {
     const next = (this.state.hours - 1 < 0) ? 23 : this.state.hours - 1
 
     this.setState({ hours: next })
   }
 
-  incrementMinute (e: any) {
+  incMinute () {
     const next = this.state.minutes + 1
 
     this.setState({ minutes: next % 60 })
   }
 
-  decrementMinute (e: any) {
+  decMinute () {
     const next = (this.state.minutes - 1 < 0) ? 59 : this.state.minutes - 1
 
     this.setState({ minutes: next })
@@ -104,17 +93,15 @@ export default class CalendarContainer extends React.Component {
     const props = {
       ...this.state,
       ...this.props,
-      onChangeHours: this.onChangeHours,
-      onChangeMinutes: this.onChangeMinutes,
       microstep: this.props.microstep,
       onChangeFrequency: this.onChangeFrequency,
       downloadLink: this.downloadLink(),
       activateHour: this.activateHour,
       activateMinute: this.activateMinute,
-      incrementMinute: this.incrementMinute,
-      decrementMinute: this.decrementMinute,
-      incrementHour: this.incrementHour,
-      decrementHour: this.decrementHour
+      incMinute: this.incMinute,
+      decMinute: this.decMinute,
+      incHour: this.incHour,
+      decHour: this.decHour
     }
 
     return (

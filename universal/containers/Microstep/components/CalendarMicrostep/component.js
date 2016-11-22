@@ -1,7 +1,7 @@
 import React from 'react'
 import marked from 'marked'
 import styles from './styles'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 function renderDescription (description) {
   return (
@@ -25,8 +25,8 @@ function formatMinutes (minutes) {
 }
 
 export default function (props: any) {
-  const increment = (props.hourActive) ? props.incrementHour : props.incrementMinute
-  const decrement = (props.hourActive) ? props.decrementHour : props.decrementMinute
+  const inc = (props.hourActive) ? props.incHour : props.incMinute
+  const dec = (props.hourActive) ? props.decHour : props.decMinute
 
   const hourClass = (props.hourActive) ? styles.active : undefined
   const minuteClass = (!props.hourActive) ? styles.active : undefined
@@ -35,31 +35,37 @@ export default function (props: any) {
     <div className={styles.container}>
       <div className={styles.content}>
         {renderDescription(props.microstep.description)}
-        <div className={styles.timeBar}>
-          <Button
-            handleClick={decrement}
+        <div id={`cal-${props.microstep.id}-actions`} className={styles.timeBar}>
+          <ExternalLink
+            id={`cal-${props.microstep.id}-dec-link`}
+            handleClick={dec}
             linkTo={null}
           >-
-          </Button>
+          </ExternalLink>
           <section className={styles.digits}>
             <span
-              className={`${hourClass} ${styles.hours}`} onClick={props.activateHour}
+              id={`cal-${props.microstep.id}-active-hours`}
+              className={`${hourClass} ${styles.hours}`}
+              onClick={props.activateHour}
             >
               {formatHours(props.hours)}
             </span>
             <span>:</span>
             <span
-              className={`${minuteClass} ${styles.minutes}`} onClick={props.activateMinute}
+              id={`cal-${props.microstep.id}-active-min`}
+              className={`${minuteClass} ${styles.minutes}`}
+              onClick={props.activateMinute}
             >
               {formatMinutes(props.minutes)}
             </span>
             <span>{formatAMPM(props.hours)}</span>
           </section>
-          <Button
-            handleClick={increment}
+          <ExternalLink
+            id={`cal-${props.microstep.id}-inc-link`}
+            handleClick={inc}
             linkTo={null}
           >+
-          </Button>
+          </ExternalLink>
         </div>
 
         <ul
@@ -84,9 +90,11 @@ export default function (props: any) {
           </li>
         </ul>
         <div className={styles.button}>
-          <Button
+          <ExternalLink
             buttonText={props.microstep.cta_text || 'Download Reminder'}
             linkTo={props.downloadLink}
+            id={`calendar-${props.microstep.id}-download-link`}
+            download
             buttonStyle='violet'
           />
         </div>
