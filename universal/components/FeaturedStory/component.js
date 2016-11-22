@@ -1,12 +1,13 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   author: string,
   details: string,
-  title: string
+  title: string,
+  image: string
 }
 
 const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
@@ -16,13 +17,15 @@ const defaultTitle = "It's Time To Say Goodbye."
 
 const defaultAuthor = 'Koby Bryant'
 
+const image = "background-image: url('./assets/kobe.jpg')"
+
 const FeaturedStory = ({
   title = defaultTitle,
   author = defaultAuthor,
-  details = defaultDetails
+  details = defaultDetails,
 }: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={`${image} ${styles.container}`}>
       <section className={styles.content}>
         <label className={styles.label}>STORIES</label>
         <h2 className={styles.header}>{title}</h2>
@@ -30,10 +33,10 @@ const FeaturedStory = ({
           {details}
           <span className={styles.author}>{author}</span>
         </p>
-        <Button
-          buttonText='READ STORY'
+        <ExternalLink
+          linkText='READ STORY'
           linkTo='/'
-          buttonStyle='white'
+          linkStyle='white'
         />
       </section>
     </section>

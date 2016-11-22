@@ -7,8 +7,8 @@
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {
-  background: url('./assets/kobe.jpg') no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   background-color: ThriveBlurple;
 }
