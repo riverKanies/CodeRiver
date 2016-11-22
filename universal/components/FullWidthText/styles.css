@@ -53,7 +53,7 @@
 }
 
 .columns {
-  lost-center: 1;
+  width: 100%;
   @media bp-mama-bear {
     lost-center: 9;
   }
@@ -61,6 +61,30 @@
     lost-center: 7;
   }
 }
+.defaultWidth {
+  composes: columns;
+}
+.fullWidth {
+  lost-column: 1;
+}
+.twoThirdsWidth {
+  lost-column: 1;
+  @media bp-mama-bear {
+    width: 66%;
+    margin: 0 17%;
+  }
+  @media bp-papa-bear {
+
+  }
+}
+.halfWidth {
+  lost-column: 1;
+  @media bp-mama-bear {
+    width: 50%;
+    margin: 0 25%;
+  }
+}
+
 
 .header {
   width: 100%;

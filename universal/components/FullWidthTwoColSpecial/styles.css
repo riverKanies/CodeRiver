@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand, babyHeader, mamaHeader, papaHeader from 'all';
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
 @value Mon, Play from 'all';
 
@@ -151,10 +151,16 @@
 }
 .header {
   width: 100%;
-  margin: 0 0;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   float: left;
   text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto mamaBear auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaBear auto;
+  }
 }
 
 /* Label True/False */
@@ -180,6 +186,7 @@
 .buttonTrue {
   composes: hasButton;
   display: block;
+  margin-top: babyHeader;
 }
 .buttonFalse {
   composes: hasButton;

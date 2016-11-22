@@ -17,9 +17,11 @@ const bannerProps = {
   bannerText: 'Ad sea vidisse appetere evertitur, cu pro ridens efficiendi, duo.',
   bannerImage: bannerImage,
   bannerImageOverlay: 'overlayFalse',
-  height: 'halfHeight'
+  height: 'twoThirdsHeight'
 }
-
+// const pathwaysIntro = {
+//   'Thrive Global has created a series of Pathways -- Joy, Calm, Productivity, Well-being, and Unplugging -- that you can use to start changing the way you live and work today. Each pathway is broken down into microsteps -- the small changes you can make in your daily life right now that, when taken together over a period of time, lead to sustainable, transformational new habits. Each microstep will lead you to an action -- to sign up for an e-course, watch a video, read an article, set a daily reminder or opt-in for messaging, create a new challenge, connect with a Thrive Tribe, or buy a product to help you on your journey. And beyond the steps that you take in your pathway, we have curated a selection of e-courses for a continued learning experience, touching on everything from a new skill you want to learn, like cooking or playing guitar, to a subject area you’re fascinated by, like art history or neuroscience.'
+// }
 const howToGrowOne = {
   sectionClass: 'white',
   title: 'How to Grow?',
