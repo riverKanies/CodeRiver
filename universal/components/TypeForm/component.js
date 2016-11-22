@@ -1,7 +1,6 @@
 import React from 'react'
 
 const typeFormURL = (key, urlParams = '') => {
-  const creds = JSON.parse(window.localStorage.getItem('thrive_user_headers'))
   return `https://thriveglobal.typeform.com/to/${key}?typeform-embed=embed-fullpage${urlParams}`
 }
 
@@ -11,7 +10,8 @@ const styles = {
 }
 
 type Props = {
-  key: string
+  urlParams: string,
+  typeformkey: string
 }
 
 // Engage Page Layout
