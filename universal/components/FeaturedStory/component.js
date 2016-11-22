@@ -7,7 +7,7 @@ type Props = {
   author: string,
   details: string,
   title: string,
-  image: string
+  asset: string
 }
 
 const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
@@ -17,15 +17,14 @@ const defaultTitle = "It's Time To Say Goodbye."
 
 const defaultAuthor = 'Koby Bryant'
 
-const image = "background-image: url('./assets/kobe.jpg')"
-
 const FeaturedStory = ({
   title = defaultTitle,
   author = defaultAuthor,
   details = defaultDetails,
+  asset = 'kobe.jpg'
 }: Props) => {
   return (
-    <section className={`${image} ${styles.container}`}>
+    <section className={styles.container} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
         <label className={styles.label}>STORIES</label>
         <h2 className={styles.header}>{title}</h2>
