@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
 @value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
 @value Mon, Playfair from 'all';
 
@@ -81,6 +81,9 @@
 .sectionContent {
   lost-column: 1;
   @media bp-papa-bear {
+    lost-column: 1 flex;
+    flex-direction: column;
+    height: 1;
     padding: 0 10%;
   }
   > i {
@@ -89,7 +92,6 @@
     clear: both;
   }
   p {
-    display: block;
     width: 100%;
     float: left;
     clear: both;
@@ -102,10 +104,17 @@
 
 .header {
   width: 100%;
-  margin: 0 0;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   float: left;
   text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-header {
+    display: flex;
+    margin: 0 auto papaHeader auto;
+  }
 }
 
 /* Label True/False */

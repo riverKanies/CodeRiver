@@ -18,8 +18,15 @@ mattis consectetur purus sit amet fermentum.`]
 const props = {
   sectionClass: [
     'default',
+    'white',
     'blue',
     'gray'
+  ],
+  sectionWidth: [
+    'defaultWidth',
+    'fullWidth',
+    'twoThirdsWidth',
+    'halfWidth'
   ],
   title: 'h2 Title',
   sectionText: defaultText
@@ -32,6 +39,7 @@ storiesOf('FullWidthText', module)
       <WithNotes notes={notes}>
         <FullWidthText
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
+          sectionWidth={select('Section Content Width', props.sectionWidth, props.sectionWidth[0])}
           title={text('Section Title', props.title)}
           sectionText={text('Section Text', props.sectionText)}
         />
