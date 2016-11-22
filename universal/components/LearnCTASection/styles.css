@@ -3,6 +3,7 @@
 
 .container {
   background-color: lightgray;
+  text-align: left;
 }
 
 .content {
@@ -13,4 +14,9 @@
 .button {
   lost-column: 1;
   padding-top: 2rem;
+}
+
+.center {
+  composes: container;
+  text-align: center;
 }
