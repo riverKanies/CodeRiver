@@ -230,7 +230,10 @@
     "karma-mocha": "^1.1.1",
     "karma-mocha-reporter": "^2.2.0",
     "karma-phantomjs-launcher": "^1.0.2",
-    "karma-webpack-with-fast-source-maps": "^1.10.0"
+    "karma-webpack-with-fast-source-maps": "^1.10.0",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.1.1"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/tests/preprocessor",

@@ -12,6 +12,7 @@ import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
 import Pathway from 'layouts/Pathway'
+import About from 'layouts/About'
 
 export const createRoutes = (store) => ([
   {
@@ -34,6 +35,10 @@ export const createRoutes = (store) => ([
       {
         path: 'learn',
         component: Learn
+      },
+      {
+        path:'about',
+        component: About
       },
       {
         path: 'thrive',
