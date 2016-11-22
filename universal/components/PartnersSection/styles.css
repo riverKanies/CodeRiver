@@ -14,10 +14,3 @@
   lost-column: 1;
   margin-bottom: 1rem;
 }
-.SectionContainer{
-lost-column: 1 flex;
-  z-index: 4;
-  padding-left:10vh;
-  height: 90vh;
-  align-self: flex-end;
-}

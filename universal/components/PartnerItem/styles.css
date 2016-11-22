@@ -1,7 +1,7 @@
 @value breakpoints: 'all';
 @value bp-mama-bear, bp-grand-bear from breakpoints;
 
-.scienceContainer {
+.PartnerContainer {
 
   @media bp-mama-bear {
     lost-column: 1/2;

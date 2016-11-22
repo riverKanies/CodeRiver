@@ -3,6 +3,7 @@ import styles from './styles'
 import TeamSection from 'components/TeamSection'
 import ScienceSection from 'components/ScienceSection'
 import OfferSection from 'components/OfferSection'
+import PartnerSection from 'components/PartnerSection'
 
 export const AboutUsSection = () => {
   return (
@@ -21,6 +22,7 @@ export const AboutView = () => {
       <ScienceSection />
       <OfferSection />
       <TeamSection />
+      <PartnerSection/>
 
     </main>
   )

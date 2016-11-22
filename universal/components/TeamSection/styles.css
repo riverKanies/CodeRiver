@@ -9,3 +9,26 @@
 .row {
   lost-center: containerWidth;
 }
+@value breakpoints: 'all';
+@value containerWidth, containerPadding from breakpoints;
+
+.container {
+  lost-center: containerWidth flex;
+  padding: 2rem 1rem;
+}
+
+.content {
+  lost-center: 1160px;
+}
+
+.title {
+  lost-column: 1;
+  margin-bottom: 1rem;
+}
+.SectionContainer{
+lost-column: 1 flex;
+  z-index: 4;
+  padding-left:10vh;
+  height: 90vh;
+  align-self: flex-end;
+}

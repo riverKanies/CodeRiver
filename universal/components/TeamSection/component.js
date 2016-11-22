@@ -20,8 +20,10 @@ const members = [{
 
 const TeamSection = ({ title = 'Team' }: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.SectionContainer, styles.container}>
+
       <section className={styles.row} >
+        <h2> Our Team </h2>
         {members.map(
           member =>
           <TeamBio {...member} />
