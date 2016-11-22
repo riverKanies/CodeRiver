@@ -91,7 +91,7 @@ export default function (props: any) {
         </ul>
         <div className={styles.button}>
           <ExternalLink
-            buttonText={props.microstep.cta_text || 'Download Reminder'}
+            linkText={props.microstep.cta_text || 'Download Reminder'}
             linkTo={props.downloadLink}
             id={`calendar-${props.microstep.id}-download-link`}
             download
