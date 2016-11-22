@@ -21,4 +21,10 @@ This is the stylesheet for: Pathways
     margin-left: auto;
     margin-right: auto;
   }
+  margin-bottom: 0;
+}
+
+.outerContainer {
+  margin: 0;
+  padding: 0;
 }

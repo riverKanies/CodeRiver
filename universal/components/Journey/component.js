@@ -18,12 +18,14 @@ export default function ({ journey, microsteps = [] }: Props) {
       <PageHeader title={journey.title} />
       <div>
         {microsteps.map(m => (
-          <div className={styles.microstepContainer}>
-            <Microstep microstep={m} type={m.type} />
+          <div className={styles.outerContainer}>
+            <div className={styles.microstepContainer}>
+              <Microstep microstep={m} type={m.type} />
+            </div>
+            <a className="twitter-share-button" data-size='small' href={`https://twitter.com/intent/tweet?text=${m.share_text} ${document.location.href}`}>Share</a>
           </div>
         ))}
       </div>
     </section>
   )
 }
-
