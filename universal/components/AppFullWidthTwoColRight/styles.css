@@ -45,22 +45,25 @@
 }
 
 /* Column Styling */
-.column {
+.columnRight {
   lost-column: 1;
   position: relative;
   @media bp-papa-bear {
     lost-column: 1/2 flex;
+    float: right;
   }
 }
 
-.columnRight {
+.columnLeft {
+  lost-column: 1;
   position: relative;
   margin-top: 40px;
   @media bp-papa-bear {
     lost-column: 1/2 flex;
     position: absolute;
     bottom: 31px;
-    right: 0;
+    left: 0;
+    float: left;
   }
 }
 
@@ -91,10 +94,8 @@
 }
 .sectionContent {
   lost-column: 1;
-  margin-top: 40px;
   @media bp-papa-bear {
     padding: 0 10%;
-    margin-top: 0;
   }
   > i {
     display: inline-block;
