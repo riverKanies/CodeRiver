@@ -16,31 +16,63 @@ type Props = {
 export default class CalendarContainer extends React.Component {
   state: any;
   props: Props;
+  state = {
+    hours: 22,
+    minutes: 0,
+    frequency: 'DAILY',
+    hourActive: true
+  }
 
   constructor (props: any) {
     super(props)
 
-    this.state = {
-      hours: 22,
-      minutes: 0,
-      frequency: 'DAILY'
-    }
-    _.bindAll(this, ['onChangeFrequency', 'onChangeMinutes', 'onChangeHours', 'updateTime'])
+    _.bindAll(this, [
+      'onChangeFrequency',
+      'updateTime',
+      'incHour',
+      'decHour',
+      'incMinute',
+      'decMinute',
+      'activateMinute',
+      'activateHour'
+    ])
   }
 
-  onChangeMinutes (e: any) {
-    const minutes = e.target.value
-    this.setState({ minutes })
+  activateHour (e: any) {
+    this.setState({ hourActive: true })
+  }
+
+  activateMinute (e: any) {
+    this.setState({ hourActive: false })
+  }
+
+  incHour () {
+    const next = this.state.hours + 1
+
+    this.setState({ hours: next % 24 })
+  }
+
+  decHour () {
+    const next = (this.state.hours - 1 < 0) ? 23 : this.state.hours - 1
+
+    this.setState({ hours: next })
+  }
+
+  incMinute () {
+    const next = this.state.minutes + 1
+
+    this.setState({ minutes: next % 60 })
+  }
+
+  decMinute () {
+    const next = (this.state.minutes - 1 < 0) ? 59 : this.state.minutes - 1
+
+    this.setState({ minutes: next })
   }
 
   onChangeFrequency (e: any) {
     const frequency = e.target.value
     this.setState({ frequency })
-  }
-
-  onChangeHours (e: any) {
-    const hours = e.target.value
-    this.setState({ hours })
   }
 
   updateTime () {
@@ -61,11 +93,15 @@ export default class CalendarContainer extends React.Component {
     const props = {
       ...this.state,
       ...this.props,
-      onChangeHours: this.onChangeHours,
-      onChangeMinutes: this.onChangeMinutes,
       microstep: this.props.microstep,
       onChangeFrequency: this.onChangeFrequency,
-      downloadLink: this.downloadLink()
+      downloadLink: this.downloadLink(),
+      activateHour: this.activateHour,
+      activateMinute: this.activateMinute,
+      incMinute: this.incMinute,
+      decMinute: this.decMinute,
+      incHour: this.incHour,
+      decHour: this.decHour
     }
 
     return (
