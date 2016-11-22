@@ -33,4 +33,20 @@ export const pulseSelector = createSelector(
       creds: { accesstoken, client, uid }
     }
   }
+
+)
+
+export const getScoreData = createSelector(
+  [ sessionSelector ],
+  (sessionData) => {
+    if (!sessionData.userData) return { }
+
+    const { userData } = sessionData
+    const score = userData['pulse_score']
+
+    return {
+      scoreAvailable: !!score,
+      score
+    }
+  }
 )
