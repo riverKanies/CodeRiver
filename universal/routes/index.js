@@ -7,6 +7,7 @@ import Learn from 'layouts/Learn'
 import SignUp from 'layouts/SignUp'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
+import PulseScore from 'containers/PulseScore'
 import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
@@ -47,6 +48,10 @@ export const createRoutes = (store) => ([
       {
         path: 'pulse',
         component: Pulse
+      },
+      {
+        path: 'pulsescore',
+        component: PulseScore
       },
       {
         path: 'signup',
