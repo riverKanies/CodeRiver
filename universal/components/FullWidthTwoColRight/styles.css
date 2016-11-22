@@ -56,7 +56,6 @@
 
 .columnLeft {
   lost-column: 1;
-  position: relative;
   margin-top: 40px;
   @media bp-papa-bear {
     lost-column: 1/2 flex;
