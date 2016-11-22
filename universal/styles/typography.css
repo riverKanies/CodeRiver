@@ -24,22 +24,22 @@ h1 {
   font-size: 2em;
   line-height: 86%;
   @media bp-mama-bear {
-    font-size: 3.25em;
+    font-size: 2.125rem;
   }
   @media bp-papa-bear {
-    font-size: 4.5em;
+    font-size: 2.75rem;
   }
 }
 h2 {
   margin-bottom: 2em;
   font-family: MonBold;
-  font-size: 1.5em;
+  font-size: 1.25em;
   line-height: 100%;
   @media bp-mama-bear {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   @media bp-papa-bear {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 h3 {
@@ -48,7 +48,7 @@ h3 {
   font-size: 1em;
   line-height: 125%;
   @media bp-mama-bear {
-    font-size: 2em;
+    font-size: 1.25em;
   }
   @media bp-papa-bear {
     font-size: 1.5em;
