@@ -6,18 +6,16 @@ type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
-  colTextOne: Array<string>,
-  colTextTwo: Array<string>
+  colTextOne: string,
+  colTextTwo: string
 }
-
-const defaultText = ['Hello, I am some text!']
 
 const TwoColText = ({
   bgColor = 'default',
   hasTitle = 'titleFalse',
   title = 'TwoColText',
-  colTextOne = defaultText,
-  colTextTwo = defaultText
+  colTextOne = 'Hello, I am some text!',
+  colTextTwo = 'Hello, I am some text!'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
@@ -25,11 +23,13 @@ const TwoColText = ({
         <header className={styles[hasTitle]}>
           <h2>{title}</h2>
         </header>
-        <section className={styles.column}>
-          {colTextOne.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-        </section>
-        <section className={styles.column}>
-          {colTextTwo.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+        <section className={styles.columnWrap}>
+          <div className={styles.column}>
+            <p>{colTextOne}</p>
+          </div>
+          <div className={styles.column}>
+            <p>{colTextTwo}</p>
+          </div>
         </section>
       </div>
     </section>

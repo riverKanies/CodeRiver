@@ -1,22 +1,22 @@
 /*
   This is the stylesheet for: TwoColText
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
-  lost-utility: clearfix;
-  lost-flex-container: column;
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: babyMargin auto;
   padding: babyPadding;
   position: relative;
   text-align: left;
   @media bp-mama-bear {
+    margin: mamaMargin auto;
     padding: mamaPadding;
   }
   @media bp-papa-bear {
+    margin: papaMargin auto;
     padding: papaPadding;
   }
 }
@@ -60,9 +60,14 @@
   lost-column: 1;
   margin: 0 auto;
   padding: 0 0;
+  float: left;
+  clear: both;
   position: relative;
   text-align: left;
   color: inherit;
+  @media bp-mama-bear {
+    width: 100%;
+  }
   h2 {
     text-align: inherit;
     color: inherit;
@@ -76,8 +81,17 @@
 }
 
 /* Column Styles */
+.columnWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+}
 .column {
   lost-column: 1;
+  float: left;
   text-align: inherit;
   color: inherit;
   @media bp-papa-bear {
@@ -87,6 +101,7 @@
     display: block;
     width: 100%;
     float: left;
+    word-wrap: break-word;
     text-align: inherit;
     color: inherit;
   }
