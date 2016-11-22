@@ -9,17 +9,13 @@ import CalendarMicrostep from './index'
 const notes = 'This story demonstrates the props that can be passed to CalendarMicrostep'
 
 const markdown = `
-Paragraphs are separated by a blank line.
+##### We Recommend
 
-2nd paragraph. *Italic*, **bold**. Itemized lists
-look like:
+# Start Getting The Sleep You Need
 
-  * this one
-  * that one
-  * the other one
-
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+When you’re ready, add another 5 minutes until you are consistently going to bed 30 minutes earlier.
+Observe what a difference this will make to the quality of your day and the quality of your life.
+The reward will keep you coming back for more until you get all the sleep you need.
 `
 
 const microstep = {

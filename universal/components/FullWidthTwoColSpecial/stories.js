@@ -27,8 +27,10 @@ const defaultLabel = {
 const props = {
   sectionClass: ['default', 'lightGray', 'transparent'],
   title: 'I am a Title',
+  hasLabel: ['labelTrue', 'labelFalse'],
   sectionText: defaultText,
-  image: dummyImage
+  image: dummyImage,
+  hasButton: ['buttonTrue', 'buttonFalse']
 }
 
 storiesOf('FullWidthTwoColSpecial', module)
@@ -39,8 +41,10 @@ storiesOf('FullWidthTwoColSpecial', module)
         <FullWidthTwoColSpecial
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           title={text('Section Title', props.title)}
+          hasLabel={select('Need a Label?', props.hasLabel, props.hasLabel[0])}
           label={defaultLabel}
           sectionText={text('Section Text', props.sectionText)}
+          hasButton={select('Need a Button?', props.hasButton, props.hasButton[0])}
           button={defaultButton}
         />
       </WithNotes>

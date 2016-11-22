@@ -3,9 +3,8 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: 'default' | 'blue',
+  sectionClass: 'default' | 'blue' | 'gray',
   title: string,
-  subTitle: string,
   sectionText: Array<string>,
 };
 
@@ -16,7 +15,6 @@ mattis consectetur purus sit amet fermentum.`]
 const FullWidthText = ({
   sectionClass = 'default',
   title = 'Title',
-  subTitle = 'Subtitle',
   sectionText = defaultText
 }: Props) => {
   return (
@@ -25,7 +23,6 @@ const FullWidthText = ({
         <div className={styles.columns}>
           <header className={styles.header}>
             <h2>{title}</h2>
-            <h3>{subTitle}</h3>
           </header>
           <section className={styles.sectionContent}>
             <p>{sectionText}</p>

@@ -57,10 +57,12 @@ function MicrostepListItem ({ id, type, search_field }: Microstep) {
 }
 
 export default function MicrostepList ({ list }: Props) {
+  if (list.length === 0) return null
+
   return (
     <div>
       <div className={styles.listContainer}>
-        <ul>
+        <ul id='microstepList'>
           {list.map(MicrostepListItem)}
         </ul>
       </div>

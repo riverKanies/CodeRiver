@@ -1,0 +1,96 @@
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
+@value Mon from 'all';
+@value ThriveViolet, ThriveTeal, ThriveBlurple from 'all';
+
+.link {
+  border: 2px solid;
+  border-radius: 1px;
+  font-family: Mon;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 120px;
+  padding: 10px 20px 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 200ms cubic-bezier(.33,.89,.34,.98);
+}
+
+.violet {
+  composes: link;
+  border-color: ThriveViolet;
+  color: ThriveViolet;
+
+  &-medium {
+    composes: violet;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: violet;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveBlurple;
+    border-color: ThriveBlurple;
+    color: #fff;
+  }
+}
+
+.white {
+  composes: link;
+  border-color: #fff;
+  color: #fff;
+
+  &-medium {
+    composes: white;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: white;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveViolet;
+    color: #fff;
+    border-color: ThriveViolet;
+  }
+}
+
+.teal {
+  composes: link;
+  border-color: ThriveTeal;
+  color: ThriveTeal;
+
+  &-medium {
+    composes: teal;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: teal;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveTeal;
+    color: #fff;
+    border-color: ThriveTeal;
+  }
+}
+
+.bannerLink {
+  @media bp-baby-bear {
+    composes: link;
+    background-color: rgba(0, 0, 0, 1);
+    color: #000;
+  }
+  @media bp-mama-bear {
+    background-color: rgba(255, 255, 255, 1);
+    color: #fff;
+  }
+}

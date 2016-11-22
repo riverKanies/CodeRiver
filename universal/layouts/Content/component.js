@@ -34,7 +34,7 @@ export const ContentView = (props: Props) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div id='contentView' className={styles.container}>
       <Banner {...bannerProps} />
       <div className={styles.pageContainer}>
         <Page />

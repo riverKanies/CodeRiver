@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, lightGray from 'all';
 
 .fullWidthText {
   lost-utility: clearfix;
@@ -6,23 +6,42 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  padding: babyPadding;
   position: relative;
   text-align: center;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
 }
-
 .default {
   composes: fullWidthText;
-  background: gray;
+  background: transparent;
+  * {
+    color: bodyCopy;
+  }
 }
-
+.gray {
+  composes: fullWidthText;
+  background: lightGray;
+  * {
+    color: bodyCopy;
+  }
+}
 .blue {
   composes: fullWidthText;
-  background: blue;
+  background: ThriveBlue;
+  * {
+    color: white;
+  }
 }
 
 .container {
-  lost-center: containerWidth containerPadding;
+  lost-center: containerWidth;
   margin: 0 auto;
+  padding: containerPadding;
   float: none;
 }
 
@@ -42,10 +61,9 @@
   padding: 0 0;
   position: relative;
   text-align: center;
-  h2, h3 {
+  h2 {
     display: inline-block;
     width: 100%;
-    margin: 0 0;
     padding: 0 0;
     float: left;
     text-align: center;

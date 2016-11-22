@@ -12,22 +12,23 @@ type Props = {
   }
 }
 
-const LinkMicrostep = ({ microstep }: Props) => {
-  const {
-    description = '',
-    cta_link = 'http://www.google.com',
-    cta_text = 'click!'
-  } = microstep
+const LinkMicrostep = ({ microstep: {
+  description = '',
+  cta_link = 'http://www.google.com',
+  cta_text = 'click!'
+}}: Props) => {
+  const buttonProps = {
+    buttonText: cta_text,
+    linkTo: cta_link,
+    buttonStyle: 'violet'
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <div dangerouslySetInnerHTML={{__html: marked(description)}} />
         <div className={styles.button}>
-          <Button>
-            buttonText: {cta_text},
-            linkTo: {cta_link},
-            buttonStyle: 'violet'
-          </Button>
+          <Button {...buttonProps} />
         </div>
       </div>
     </div>

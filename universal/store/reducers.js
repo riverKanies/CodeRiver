@@ -1,3 +1,4 @@
+import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import { combineReducers } from 'redux'
 import { toast } from 'modules/Toast'
 import { reducer as formReducer } from 'redux-form'
@@ -8,13 +9,14 @@ import * as microstepsFilter from 'modules/MicrostepsFilter'
 import * as session from 'modules/UserSession'
 import * as signup from 'modules/SignUp'
 import * as pathways from 'modules/Pathways'
+import * as journeys from 'modules/Journeys'
 
 const locationState = {
   location: null
 }
 
 const locationReducer = (state = locationState, action) => {
-  return action.type === 'LOCATION_CHANGE'
+  return action.type === analyticsActions.locationChange
     ? action.location
     : state
 }
@@ -29,6 +31,7 @@ export const makeRootReducer = (asyncReducers) => {
     [microstepsFilter.KEY]: microstepsFilter.reducer,
     [session.KEY]: session.reducer,
     [pathways.KEY]: pathways.reducer,
+    [journeys.KEY]: journeys.reducer,
     [signup.KEY]: signup.reducer,
     location: locationReducer,
     form: formReducer,

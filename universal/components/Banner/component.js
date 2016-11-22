@@ -1,44 +1,38 @@
 /* @flow */
-// Fullscreen Banner Component
 import React from 'react'
 import styles from './styles'
 import dummyImage from 'assets/bg.jpg'
 
 type Props = {
+  contentPosition: 'defaultPosition' | 'bottomLeft',
   title: string,
-  subTitle: string,
-  bannerText: Array<string>,
+  bannerText: string,
   bannerImage: string,
+  bannerImageOverlay: 'overlayTrue' | 'overlayFalse',
   height: 'fullHeight' | 'halfHeight' | 'quarterHeight' | 'thirdHeight' | 'twoThirdsHeight'
 };
-
-const defaultText = [`Using a mobile first approach, we start with a block
-display at small viewports so our copy content doesn't float on the image at
-small sizes. Then as we size up we switch to flex so that we can position the
-text on top of the image. This is in lieu of using a background image and
-background image size.`]
 
 const defaultImage = dummyImage
 
 const FullscreenBanner = ({
+  contentPosition = 'defaultPosition',
   title = 'Title',
-  subTitle = 'Subtitle',
-  bannerText = defaultText,
+  bannerText = 'Hello, I am text!',
   bannerImage = defaultImage,
+  bannerImageOverlay = 'overlayTrue',
   height = 'fullHeight'
 }: Props) => {
   return (
     <section className={styles[height]}>
-      <span className={styles.bannerImageWrap}>
-        <img className={styles.bannerImage} src={bannerImage} />
+      <span className={styles[bannerImageOverlay]}>
+        <img className={styles.bannerImage} src={bannerImage} alt={title} />
       </span>
-      <div className={styles.bannerContent}>
+      <div className={styles[contentPosition]}>
         <header className={styles.bannerHeader}>
-          <h1>{title}</h1>
-          <h2>{subTitle}</h2>
+          <h1 className={styles.h1}>{title}</h1>
         </header>
         <section className={styles.bannerText}>
-          {bannerText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+          <p>{bannerText}</p>
         </section>
       </div>
     </section>

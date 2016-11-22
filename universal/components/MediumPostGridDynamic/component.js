@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 import MediumPostDynamic from 'components/MediumPostDynamic'
 import EmailCaptureMini from 'components/EmailCaptureMini'
-require('masonry-layout')
+import Masonry from 'masonry-layout'
 
 const featuredHalfImage = {
   cardType: 'half',
@@ -26,26 +26,27 @@ const featuredQuarterBlue = {
   hasSynopsis: 'synopsisFalse'
 }
 
-// const msnry = new MasonryLayout('.posts', {
-//   itemSelector: ['article', 'section']
-// })
+export default class MediumPostGridDynamic extends React.Component {
+  componentDidMount () {
+    /* eslint-disable */
+    new Masonry('.MediumPostGridDynamicMasonry')
+    /* eslint-enable */
+  }
 
-// Masonry being initialized in HTML with 'data-masonry'
-const msnryArgs = "{'itemSelector': 'article'}"
+  render () {
+    const masonizeStyles = `${styles.posts} MediumPostGridDynamicMasonry`
 
-const MediumPostGridDynamic = () => {
-  return (
-    <section className={styles.featuredMediumPosts}>
-      <section data-masonry={msnryArgs} className={styles.posts}>
-        <MediumPostDynamic {...featuredHalfImage} />
-        <EmailCaptureMini />
-        <MediumPostDynamic {...featuredHalfNoImage} />
-        <MediumPostDynamic {...featuredHalfImage} />
-        <MediumPostDynamic {...featuredQuarterWhite} />
-        <MediumPostDynamic {...featuredQuarterBlue} />
+    return (
+      <section className={styles.featuredMediumPosts}>
+        <section className={masonizeStyles}>
+          <MediumPostDynamic {...featuredHalfImage} />
+          <EmailCaptureMini />
+          <MediumPostDynamic {...featuredHalfImage} />
+          <MediumPostDynamic {...featuredHalfNoImage} />
+          <MediumPostDynamic {...featuredQuarterWhite} />
+          <MediumPostDynamic {...featuredQuarterBlue} />
+        </section>
       </section>
-    </section>
-  )
+    )
+  }
 }
-
-export default MediumPostGridDynamic

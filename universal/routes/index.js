@@ -12,6 +12,7 @@ import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
 import Pathway from 'layouts/Pathway'
+import Journey from 'layouts/Journey'
 
 export const createRoutes = (store) => ([
   {
@@ -26,6 +27,10 @@ export const createRoutes = (store) => ([
       {
         path: 'microsteps',
         component: Microsteps
+      },
+      {
+        path: 'pathways/:pathwayId/journeys/:journeyId',
+        component: Journey
       },
       {
         path: 'pathways/:id',

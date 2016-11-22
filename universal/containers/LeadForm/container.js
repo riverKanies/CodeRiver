@@ -1,4 +1,5 @@
 import { reduxForm } from 'redux-form'
+import { actions } from 'modules/Middleware/analytics'
 import { createValidator, required, email } from 'lib/validate'
 
 import LeadForm from './component'
@@ -9,7 +10,7 @@ const validate = createValidator({
 
 const handleSubmit = (values, dispatch) => {
   // dispatch event to be caught by middleware
-  dispatch({ type: 'LEAD_FORM_SUBMITTED', track: { email: values.email } })
+  dispatch({ type: actions.leadFormSubmitted, track: { email: values.email } })
 
   // reset the lead form
   values.email = ''

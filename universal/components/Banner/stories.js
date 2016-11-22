@@ -7,8 +7,19 @@ import FullscreenBanner from './component'
 import dummyImage from 'assets/bg.jpg'
 
 const notes = 'This story demonstrates the props that can be passed to FullscreenBanner.'
+
 const props = {
+  contentPosition: [
+    'defaultPosition',
+    'bottomLeft'
+  ],
+  title: 'Title',
+  bannerText: 'Hello, I am text!',
   bannerImage: dummyImage,
+  bannerImageOverlay: [
+    'overlayTrue',
+    'overlayFalse'
+  ],
   height: [
     'fullHeight',
     'halfHeight',
@@ -25,9 +36,11 @@ storiesOf('Banner', module)
       <WithNotes notes={notes}>
         <FullscreenBanner
           height={select('Banner Height', props.height, props.height[0])}
+          contentPosition={select('Content Position', props.contentPosition, props.contentPosition[0])}
           title={text('Banner Title', props.title)}
-          subTitle={text('Banner Sub Title', props.subTitle)}
+          bannerText={text('Banner Content Text', props.bannerText)}
           bannerImage={text('Banner Image URL', props.bannerImage)}
+          bannerImageOverlay={select('Banner Image Overlay', props.bannerImageOverlay, props.bannerImageOverlay[0])}
         />
       </WithNotes>
     )
