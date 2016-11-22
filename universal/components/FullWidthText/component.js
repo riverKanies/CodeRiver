@@ -5,6 +5,7 @@ import styles from './styles'
 type Props = {
   sectionClass: 'default' | 'white' | 'blue' | 'gray',
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
+  header: 'headerTrue' | 'headerFalse',
   title: string,
   sectionText: any,
 };
@@ -16,6 +17,7 @@ mattis consectetur purus sit amet fermentum.`]
 const FullWidthText = ({
   sectionClass = 'default',
   sectionWidth = 'defaultWidth',
+  header = 'headerTrue',
   title = 'Title',
   sectionText = defaultText
 }: Props) => {
@@ -23,7 +25,7 @@ const FullWidthText = ({
     <section className={styles[sectionClass]}>
       <section className={styles.container}>
         <div className={styles[sectionWidth]}>
-          <header className={styles.header}>
+          <header className={styles[header]}>
             <h2>{title}</h2>
           </header>
           <section className={styles.sectionContent}>

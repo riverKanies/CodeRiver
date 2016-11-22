@@ -27,8 +27,9 @@ const bannerProps = {
   height: 'twoThirdsHeight'
 }
 const learnIntro = {
-  sectionClass: 'default',
+  sectionClass: 'white',
   sectionWidth: 'twoThirdsWidth',
+  header: 'headerFalse',
   title: '',
   sectionText: [
     'Welcome to the Thrive Global Pathways. There are five pathways built of ' +
@@ -147,8 +148,8 @@ export const LearnView = () => (
     <section className={styles.content}>
       <Banner {...bannerProps} />
       <FullWidthText {...learnIntro} />
-      <TwoColText {...howToGrowTwo} />
       <PathwaySection />
+      <TwoColText {...howToGrowTwo} />
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
       <TwoColText {...eCourse} />

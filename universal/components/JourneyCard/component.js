@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import placeholder from '../../assets/thrivin.jpg'
+import defaultImage from './assets/pathFPO.jpg'
 import { Link } from 'react-router'
 
 type Props = {
@@ -15,18 +15,18 @@ type Props = {
 export default function ({
   title = 'Don\'t stop believing',
   description = 'Vestibulum id ligula porta felis euismod semper.',
-  image = placeholder,
+  image = defaultImage,
   pathwayId,
   id }: Props) {
   return (
     <Link to={`/pathways/${pathwayId}/journeys/${id}`} className={styles.card}>
-      <section>
+      <section className={styles.cardContainer}>
         <span className={styles.imageWrap}>
           <img className={styles.image} src={image} />
         </span>
         <section className={styles.description}>
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <h3 className={styles.header}>{title}</h3>
+          <p className={styles.synopsis}>{description}</p>
         </section>
       </section>
     </Link>

@@ -1,18 +1,17 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
 .quoteContainer {
   width: 100%;
   height: auto;
-  margin: 0 auto babyMargin;
+  margin: 0 auto;
   padding: babyPadding;
   float: left;
+  clear: both;
   @media bp-mama-bear {
-    margin: 0 auto mamaMargin;
     padding: mamaPadding;
   }
   @media bp-papa-bear {
-    margin: 0 auto papaMargin;
     padding: papaPadding;
   }
 }

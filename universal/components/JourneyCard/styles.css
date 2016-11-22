@@ -1,33 +1,75 @@
-@value breakpoints: 'all';
-@value bp-mama-bear, bp-papa-bear from breakpoints;
+@value bp-mama-bear, bp-papa-bear, MonBold, bodyCopy, darkGray from 'all';
 
 .card {
   lost-column: 1;
-  height: 23.75rem;
-  padding: 0 0 1rem 0;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, .20);
+  margin-bottom: 1.25rem;
+  background: white;
+  text-align: left;
   @media bp-mama-bear {
-    max-width: 19rem;
     lost-column: 1/2;
+    margin-bottom: 1.5rem;
   }
   @media bp-papa-bear {
     lost-column: 1/3;
+    margin-bottom: 2rem;
   }
 }
 
-.image {
+.cardContainer {
+  display: block;
   width: 100%;
-  height: 11rem;
-  object-fit: cover;
-  object-position: 50% 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+}
+
+.imageWrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+}
+.image {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
 }
 
 .description {
+  display: block;
   width: 100%;
-  padding: 1em;
+  height: auto;
+  margin: 0 auto;
+  padding: 1.875rem 1.25rem;
+  float: left;
+}
 
-  p {
-    width: 100%;
-  }
+.header {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0 0;
+  float: left;
+  font-family: MonBold;
+  font-size: 1.5rem;
+  text-align: left;
+  text-transform: capitalize;
+  color: bodyCopy;
+}
+
+.synopsis{
+  display: block;
+  width: 100%;
+  margin: 0 0 0 0;
+  margin-bottom: 0;
+  padding: 0 0 0 0!important;
+  float: left;
+  font-family: MonBold;
+  text-align: left;
+  color: darkGray;
 }

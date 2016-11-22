@@ -1,12 +1,12 @@
 @value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
 
 .fullWidthText {
-  lost-utility: clearfix;
-  lost-flex-container: column;
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
   padding: babyPadding;
+  float: left;
   position: relative;
   text-align: center;
   @media bp-mama-bear {
@@ -102,6 +102,12 @@
     float: left;
     text-align: center;
   }
+}
+.headerTrue {
+  composes: header;
+}
+.headerFalse {
+  display: none;
 }
 
 .sectionContent {
