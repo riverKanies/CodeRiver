@@ -8,6 +8,7 @@ import SignUp from 'layouts/SignUp'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import PulseScore from 'containers/PulseScore'
+import GlassDoor from 'layouts/GlassDoor'
 import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
@@ -52,6 +53,10 @@ export const createRoutes = (store) => ([
       {
         path: 'pulsescore',
         component: PulseScore
+      },
+      {
+        path: 'pledge',
+        component: GlassDoor
       },
       {
         path: 'signup',
