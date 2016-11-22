@@ -85,6 +85,7 @@
 
 .squareImage {
   composes: roundImage;
+  width: auto;
   border-radius: 0;
   border: none;
 }
