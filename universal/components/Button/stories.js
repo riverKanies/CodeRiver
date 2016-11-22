@@ -24,7 +24,10 @@ const styles = [
   'white-large',
   'teal',
   'teal-medium',
-  'teal-large'
+  'teal-large',
+  'blue',
+  'blue-medium',
+  'blue-large'
 ]
 const background = [
   'light',
