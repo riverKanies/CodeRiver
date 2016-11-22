@@ -1,16 +1,23 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+
+// Components
 import Banner from 'components/Banner'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import TwoColText from 'components/TwoColText'
+import TwoColImage from 'components/TwoColImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
 
+// Content Import
 import bannerImage from './assets/learnBanner.jpg'
+import kobeImage from './assets/kobe.jpg'
+import ahImage from './assets/ah.jpg'
 
+// Page Content
 const bannerProps = {
   contentPosition: 'bottomLeft',
   title: 'Learn & Grow',
@@ -102,6 +109,7 @@ const library = {
 }
 const eCourse = {
   bgColor: 'transparent',
+  marginBottom: 'marginFalse',
   hasTitle: 'titleTrue',
   title: 'E-Course',
   colTextOne: [
@@ -119,6 +127,12 @@ const eCourse = {
     'Guest teachers include Kobe Bryant, Wharton Professor Adam Grant, ' +
     'Warby Parker CEO Dave Gilboa, and more.']
 }
+const images = {
+  bgColor: 'transparent',
+  hasTitle: 'titleFalse',
+  colOneImg: kobeImage,
+  colTwoImg: ahImage
+}
 const quote = {
   bgColor: 'white',
   quote: [
@@ -129,7 +143,7 @@ const quote = {
 }
 
 export const LearnView = () => (
-  <section className={styles.container}>
+  <article className={styles.learnPage}>
     <section className={styles.content}>
       <Banner {...bannerProps} />
       <FullWidthText {...learnIntro} />
@@ -138,9 +152,10 @@ export const LearnView = () => (
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
       <TwoColText {...eCourse} />
+      <TwoColImage {...images} />
       <QuoteSection {...quote} />
     </section>
-  </section>
+  </article>
 )
 
 export default LearnView

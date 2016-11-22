@@ -50,6 +50,11 @@
   position: relative;
   @media bp-papa-bear {
     lost-column: 1/2 flex;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 }
 
@@ -82,8 +87,7 @@
   lost-column: 1;
   @media bp-papa-bear {
     lost-column: 1 flex;
-    flex-direction: column;
-    height: 1;
+    height: 100%;
     padding: 0 10%;
   }
   > i {
@@ -140,6 +144,7 @@
 .buttonTrue {
   composes: hasButton;
   display: block;
+  margin-top: babyHeader;
 }
 .buttonFalse {
   composes: hasButton;

@@ -53,6 +53,14 @@
   float: none;
   color: inherit;
 }
+.marginTrue {
+  composes: container;
+}
+.marginFalse {
+  composes: container;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 /* Title True/False */
 .hasTitle {

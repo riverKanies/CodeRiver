@@ -2,18 +2,17 @@
   This is the stylesheet for: TwoColImage
 */
 
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyMargin, babyHeader, mamaHeader, papaHeader, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
   width: 100%;
   height: auto;
-  margin: babyMargin auto;
+  margin: 0 auto;
   padding: babyPadding;
   position: relative;
-  text-align: left;
+  text-align: center;
   @media bp-mama-bear {
-    margin: 0 auto;
     padding: mamaPadding;
   }
   @media bp-papa-bear {
@@ -95,11 +94,16 @@
 }
 .column {
   lost-column: 1;
+  margin-bottom: babyMargin;
   float: left;
   text-align: inherit;
   color: inherit;
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media bp-mama-bear {
     lost-column: 1/2;
+    margin-bottom: 0;
   }
   > img {
     display: block;
