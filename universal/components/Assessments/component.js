@@ -7,7 +7,7 @@ type Props = {
   loggedIn: boolean,
   requestPending: boolean,
   creds: Object,
-  key: String
+  typeformKey: String
 }
 
 function genUrl (creds) {
@@ -15,7 +15,7 @@ function genUrl (creds) {
 }
 
 // Engage Page Layout
-export default function AssessmentsView ({ loggedIn, requestPending, creds, key }: Props) {
+export default function AssessmentsView ({ loggedIn, requestPending, creds, typeformKey }: Props) {
   if (requestPending) return null
 
   if (!loggedIn) {
@@ -29,7 +29,7 @@ export default function AssessmentsView ({ loggedIn, requestPending, creds, key 
   const url = genUrl(creds)
 
   return <TypeForm
-    typeformkey={key}
+    typeformkey={typeformKey}
     urlParams={url}
     />
 }
