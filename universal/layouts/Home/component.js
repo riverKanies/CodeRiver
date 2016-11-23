@@ -20,9 +20,9 @@ const featuredStory = {
 const goodLife = {
   sectionClass: 'transparent',
   title: 'The Science Behind Thrive',
-  label: {
+  postLabel: {
     label: 'Editorial',
-    labelColor: 'defaultLabel'
+    labelColor: 'whiteLabel'
   },
   sectionText: [
     'Science shows that there is no trade-off between well-being ' +
@@ -50,9 +50,13 @@ const homeQuote = {
   imageShape: 'roundImage'
 }
 const thriveFoundation = {
-  sectionClass: 'transparent',
+  sectionClass: 'default',
   title: 'Thrive Foundation',
-  hasLabel: 'labelFalse',
+  hasLabel: 'labeltrue',
+  label: {
+    label: 'Thrive',
+    labelColor: 'defaultLabel'
+  },
   sectionText: [
     'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
   ],
@@ -65,7 +69,7 @@ const thriveFoundation = {
   }
 }
 const thriveEcho = {
-  sectionClass: 'default',
+  sectionClass: 'transparent',
   title: 'Thrive for Amazon Echo',
   hasLabel: 'labelTrue',
   label: {
@@ -84,7 +88,7 @@ const thriveEcho = {
   }
 }
 const thriveScience = {
-  sectionClass: 'transparent',
+  sectionClass: 'default',
   title: 'The Science Behind Thrive',
   hasLabel: 'labelTrue',
   label: {
@@ -108,12 +112,12 @@ const thriveScience = {
   }
 }
 const thrivePulse = {
-  sectionClass: 'default',
+  sectionClass: 'transparent',
   title: 'What\'s Your Thrive Pulse?',
   hasLabel: 'labelTrue',
   label: {
     label: 'Thrive',
-    labelColor: 'tealLabel'
+    labelColor: 'blueLabel'
   },
   sectionText: [
     'Cras mattis consectetur purus sit amet fermentum.'
@@ -123,7 +127,7 @@ const thrivePulse = {
   button: {
     buttonText: 'Find Out',
     linkTo: 'javascript:void(0)',
-    buttonStyle: 'teal'
+    buttonStyle: 'blue'
   }
 }
 export const HomeView = () => {
@@ -134,10 +138,10 @@ export const HomeView = () => {
       <FeaturedStory {...featuredStory} />
       <HalfTextOverlay {...goodLife} />
       <QuoteSection {...homeQuote} />
-      <FullWidthTwoColSpecial {...thriveFoundation} />
-      <FullWidthTwoCol {...thriveEcho} />
-      <FullWidthTwoColSpecial {...thriveScience} />
-      <FullWidthTwoCol {...thrivePulse} />
+      <FullWidthTwoCol {...thriveFoundation} />
+      <FullWidthTwoColSpecial {...thriveEcho} />
+      <FullWidthTwoCol {...thriveScience} />
+      <FullWidthTwoColSpecial {...thrivePulse} />
     </main>
   )
 }
