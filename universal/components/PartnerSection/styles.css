@@ -13,11 +13,11 @@
 .title {
   lost-column: 1;
   margin-bottom: 1rem;
+  padding-left: 5vh;
 }
 
 .SectionContainer{
 	lost-column: 1;
-	lost-center: containerWidth;
-	padding: 2rem 1rem 0rem 1rem;
+	padding: 2rem 1rem 1rem 1rem;
 
 }

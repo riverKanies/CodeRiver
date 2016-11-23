@@ -21,12 +21,13 @@ const Fakeitems =
   description:"description........"
 }];
 
+
 const FakeDescription = "Here are our Partners"
 
 export const PartnerSection = () => {
     return (
     <section className={styles.SectionContainer}>
-      <h2>Our Partners</h2>
+      <h2 styles={styles.title}>Our Partners</h2>
       <p>Partners</p>
       <section>
         {Fakeitems.map(

@@ -4,8 +4,7 @@ import TeamSection from 'components/TeamSection'
 import ScienceSection from 'components/ScienceSection'
 import OfferSection from 'components/OfferSection'
 import PartnerSection from 'components/PartnerSection'
-
-
+import BrowseSection from 'components/BrowseSection'
 
 
 const AboutUsContent  = "Here is a couple paragraphs about us."
@@ -29,6 +28,7 @@ export const AboutView = () => {
       <OfferSection />
       <TeamSection />
       <PartnerSection/>
+      <BrowseSection/>
      </main>
   )
 }
