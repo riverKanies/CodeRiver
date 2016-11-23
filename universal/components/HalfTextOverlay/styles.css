@@ -5,15 +5,16 @@
 
 .gridWrap {
   lost-center: containerWidth;
-  margin: babyMargin auto;
+  margin: babyMargin auto 0 auto;
   padding: containerPadding;
   float: none;
+  clear: both;
   position: relative;
   @media bp-mama-bear {
-    margin: mamaMargin auto;
+    margin: mamaMargin auto 0 auto;
   }
   @media bp-papa-bear {
-    margin: papaMargin auto;
+    margin: papaMargin auto 0 auto;
   }
 }
 

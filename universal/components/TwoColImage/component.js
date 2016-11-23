@@ -1,38 +1,35 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import defaultImage from './assets/defaultImage.png'
 
 type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue',
-  marginBottom: 'marginTrue' | 'marginFalse',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
-  colTextOne: any,
-  colTextTwo: any
+  colOneImg: any,
+  colTwoImg: any
 }
 
-const defaultText = ['Hello, I am some text!', 'I am also text!']
-
-const TwoColText = ({
+const TwoColImage = ({
   bgColor = 'default',
-  marginBottom = 'marginTrue',
   hasTitle = 'titleFalse',
   title = 'TwoColText',
-  colTextOne = defaultText,
-  colTextTwo = defaultText
+  colOneImg = defaultImage,
+  colTwoImg = defaultImage
 }: Props) => {
   return (
-    <section className={styles[bgColor][marginBottom]}>
+    <section className={styles[bgColor]}>
       <div className={styles.container}>
         <header className={styles[hasTitle]}>
           <h2>{title}</h2>
         </header>
         <section className={styles.columnWrap}>
           <div className={styles.column}>
-            {colTextOne.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            <img src={colOneImg} />
           </div>
           <div className={styles.column}>
-            {colTextTwo.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            <img src={colTwoImg} />
           </div>
         </section>
       </div>
@@ -40,4 +37,4 @@ const TwoColText = ({
   )
 }
 
-export default TwoColText
+export default TwoColImage
