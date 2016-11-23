@@ -24,7 +24,7 @@
     padding: 2rem 2rem;
   }
   @media bp-papa-bear {
-    lost-masonry-column: 1/2 mediumGutterHalf;
+    lost-masonry-column: 1/2 8px;
     margin-bottom: mediumGutter;
   }
 }
