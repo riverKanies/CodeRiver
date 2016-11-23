@@ -14,7 +14,7 @@ import thriveAwayImage from './assets/thriveAwayImage.jpg'
 
 const bannerProps = {
   contentPosition: 'bottomLeft',
-  title: 'Tech Page',
+  title: 'Apps',
   bannerText: 'Thrive is in the process of creating technology to enrich your life.',
   bannerImage: bannerImage,
   height: 'halfHeight'
@@ -105,7 +105,7 @@ const thriveAway = {
   }
 }
 
-export const ThriveTechView = () => (
+export const AppsView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
       <Banner {...bannerProps} />
@@ -117,4 +117,4 @@ export const ThriveTechView = () => (
   </section>
 )
 
-export default ThriveTechView
+export default AppsView
