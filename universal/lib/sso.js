@@ -1,14 +1,13 @@
 import { httpPost } from 'lib/http'
 
-export function linkToShopify () {
-  return httpPost('/api/sso/shopify')
+export function linkToShopify (return_to) {
+  return httpPost(`/api/sso/shopify?return_to=${return_to}`)
     .then(result => {
       const { redirect_to } = result
       window.location = redirect_to
     })
     .catch(e => {
-      // not authenticated, just send them to shopify
-      window.location = process.env.SHOPIFY_URL
+      window.location = return_to
     })
 }
 

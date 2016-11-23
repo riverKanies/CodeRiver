@@ -48,7 +48,7 @@ class Header extends React.Component {
             <Link
               id='navShop'
               className={styles.link}
-              onClick={linkToShopify}
+              onClick={() => { linkToShopify(process.env.SHOPIFY_URL) }}
               activeClassName={styles.activeRoute}>
               Shop
             </Link>
