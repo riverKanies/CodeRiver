@@ -14,11 +14,11 @@ export default function ({ journey, microsteps = [] }: Props) {
   if (!journey) return null
 
   return (
-    <section id='journeys' className={styles.container}>
+    <section className={styles.container}>
       <PageHeader title={journey.title} />
-      <div className={styles.outerContainer}>
+      <div id='journeys' className={styles.outerContainer}>
         {microsteps.map(m => (
-          <div id='journey_microstep' className={styles.outerContainer}>
+          <div className={styles.outerContainer}>
             <div className={styles.microstepContainer}>
               <Microstep microstep={m} type={m.type} />
             </div>

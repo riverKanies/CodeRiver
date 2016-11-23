@@ -12,11 +12,11 @@ export default function ({ pathway, journeys = [] }: Props) {
   if (!pathway) return null
 
   return (
-    <section id='pathway_container' className={styles.container}>
+    <section className={styles.container}>
       <section className={styles.title}>
         <h2>{pathway.title}</h2>
       </section>
-      <section className={styles.row}>
+      <section id='pathway_container' className={styles.row}>
         {journeys.map(j => <JourneyCard {...j} pathwayId={pathway.id} />)}
       </section>
     </section>

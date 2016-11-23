@@ -9,11 +9,11 @@ describe('Pathway', () => {
       .goto(baseUrl + '/pathways/1')
       .wait('#pathway_container')
       .evaluate(function () {
-        return document.querySelector('#journey_link').href
+        return document.querySelectorAll('#pathway_container > a').length
       })
       .end()
-      .then(function (link) {
-        expect(link).toContain(`pathways/1/journey`)
+      .then(function (links_count) {
+        expect(links_count).toBeGreaterThan(0)
         done()
       })
       .catch(function (error) {
