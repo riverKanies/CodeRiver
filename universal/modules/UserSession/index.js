@@ -25,9 +25,14 @@ export const initialState = {
 
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
+    case actions.deletePending:
     case actions.fetchPending:
     case actions.createPending:
       return { ...state, requestPending: true }
+
+    case actions.deleteFailure:
+    case actions.deleteSuccess:
+      return initialState
 
     case actions.fetchSuccess:
     case actions.createSuccess:

@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Profile from './component'
-import { checkSession, deleteSession } from 'modules/UserSession'
+import { deleteSession } from 'modules/UserSession'
 import { loginSelector as selector } from 'modules/UserSession/selectors'
 import LoginForm from 'components/LoginForm'
 
@@ -19,14 +19,6 @@ export class ProfileContainer extends React.Component {
   constructor () {
     super(...arguments)
     this.logOutUser = this.logOutUser.bind(this)
-  }
-
-  componentWillMount () {
-    this.props.dispatch(checkSession())
-      .catch(e => {
-        // ssshhhhhhh, its ok....
-        return undefined
-      })
   }
 
   logOutUser () {
