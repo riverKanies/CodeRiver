@@ -8,7 +8,6 @@ import image4 from './assets/phone-bed-square.jpg'
 
 type Props = {
   productTitle: string,
-  price: string,
   productImage: any,
   productLink: string
 }
