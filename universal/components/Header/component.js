@@ -1,8 +1,7 @@
 /* @flow */
 // Site Header
 import React from 'react'
-import { linkToShopify } from 'lib/sso'
-
+import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
@@ -48,7 +47,7 @@ class Header extends React.Component {
             <Link
               id='navShop'
               className={styles.link}
-              onClick={linkToShopify}
+              onClick={redirectToShopify}
               activeClassName={styles.activeRoute}>
               Shop
             </Link>

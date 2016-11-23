@@ -2,9 +2,11 @@
 import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
+import { genRedirectToShopify } from 'lib/sso'
 
 type Props = {
   microstep: {
+    cta_text: string,
     title: string,
     body_html: string,
     link: string,
@@ -47,9 +49,10 @@ const ProductMicrostep = ({ microstep }: Props) => {
         </section>
 
         <div className={styles.button}>
-          <Button>
-            buttonText: 'Learn More',
-            linkTo: {microstep.link}
+          <Button
+            handleClick={genRedirectToShopify(microstep.link)}
+          >
+            {microstep.cta_text}
           </Button>
         </div>
 
