@@ -16,10 +16,19 @@ export default function ({ journey, microsteps = [] }: Props) {
   return (
     <section id='journeys' className={styles.container}>
       <PageHeader title={journey.title} />
-      <div>
+      <div className={styles.outerContainer}>
         {microsteps.map(m => (
-          <div id='journey_microstep' className={styles.microstepContainer}>
-            <Microstep microstep={m} type={m.type} />
+          <div className={styles.outerContainer}>
+            <div className={styles.microstepContainer}>
+              <Microstep microstep={m} type={m.type} />
+            </div>
+            <a
+              className='twitter-share-button'
+              data-size='small'
+              href={`https://twitter.com/intent/tweet?text=${m.share_text}`}
+            >
+              Share
+            </a>
           </div>
         ))}
       </div>

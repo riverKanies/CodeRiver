@@ -3,6 +3,7 @@
 
 /* Global Typography Styles */
 h1, h2, h3, h4, h5 {
+  margin-top: 0;
   -webkit-margin-before: 0;
   text-align: inherit;
   color: inherit;
@@ -24,22 +25,22 @@ h1 {
   font-size: 2em;
   line-height: 86%;
   @media bp-mama-bear {
-    font-size: 3.25em;
+    font-size: 2.125rem;
   }
   @media bp-papa-bear {
-    font-size: 4.5em;
+    font-size: 2.75rem;
   }
 }
 h2 {
   margin-bottom: 2em;
   font-family: MonBold;
-  font-size: 1.5em;
+  font-size: 1.25em;
   line-height: 100%;
   @media bp-mama-bear {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   @media bp-papa-bear {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 h3 {
@@ -48,7 +49,7 @@ h3 {
   font-size: 1em;
   line-height: 125%;
   @media bp-mama-bear {
-    font-size: 2em;
+    font-size: 1.25em;
   }
   @media bp-papa-bear {
     font-size: 1.5em;
@@ -66,7 +67,8 @@ a {
   background: transparent;
 }
 p {
-  margin-bottom: 2em;
+  margin-top: 0;
+  margin-bottom: 1em;
   font-family: MonLight;
   font-size: .88em;
   line-height: 150%;

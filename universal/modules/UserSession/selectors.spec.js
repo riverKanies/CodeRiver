@@ -1,10 +1,10 @@
-import selector from './selector'
+import { loginSelector, pulseSelector } from './selectors'
 import { KEY } from 'modules/UserSession'
 
-describe("session selector", () => {
+describe("session loginSelector", () => {
   context("renderLoginForm", () => {
     it("should return true if requestPending and userData are both false", () => {
-      const selected = selector({
+      const selected = loginSelector({
         [KEY]: {
           requestPending: false,
           userData: false
@@ -15,7 +15,7 @@ describe("session selector", () => {
     })
 
     it("should return false if requestPending and userData are both true", () => {
-      const selected = selector({
+      const selected = loginSelector({
         [KEY]: {
           requestPending: true,
           userData: true
@@ -26,7 +26,7 @@ describe("session selector", () => {
     })
 
     it("should return false if requestPending is false and userData is true", () => {
-      const selected = selector({
+      const selected = loginSelector({
         [KEY]: {
           requestPending: false,
           userData: true
@@ -37,7 +37,7 @@ describe("session selector", () => {
     })
 
     it("should return false if requestPending is true userData is false", () => {
-      const selected = selector({
+      const selected = loginSelector({
         [KEY]: {
           requestPending: true,
           userData: false

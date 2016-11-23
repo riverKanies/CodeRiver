@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
 
 .fullWidthText {
   lost-utility: clearfix;
@@ -19,6 +19,13 @@
 .default {
   composes: fullWidthText;
   background: transparent;
+  * {
+    color: bodyCopy;
+  }
+}
+.white {
+  composes: fullWidthText;
+  background: white;
   * {
     color: bodyCopy;
   }
@@ -46,7 +53,7 @@
 }
 
 .columns {
-  lost-center: 1;
+  width: 100%;
   @media bp-mama-bear {
     lost-center: 9;
   }
@@ -54,13 +61,43 @@
     lost-center: 7;
   }
 }
+.defaultWidth {
+  composes: columns;
+}
+.fullWidth {
+  lost-column: 1;
+}
+.twoThirdsWidth {
+  lost-column: 1;
+  @media bp-mama-bear {
+    width: 66%;
+    margin: 0 17%;
+  }
+  @media bp-papa-bear {
+
+  }
+}
+.halfWidth {
+  lost-column: 1;
+  @media bp-mama-bear {
+    width: 50%;
+    margin: 0 25%;
+  }
+}
+
 
 .header {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   position: relative;
   text-align: center;
+  @media bp-mama-bear {
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
   h2 {
     display: inline-block;
     width: 100%;
