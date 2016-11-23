@@ -7,7 +7,8 @@ type Props = {
   author: string,
   details: string,
   title: string,
-  asset: string
+  asset: string,
+  externalLink: any
 }
 
 const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
@@ -21,6 +22,7 @@ const FeaturedStory = ({
   title = defaultTitle,
   author = defaultAuthor,
   details = defaultDetails,
+  externalLink = {},
   asset = 'kobe.jpg'
 }: Props) => {
   return (
@@ -32,10 +34,7 @@ const FeaturedStory = ({
           {details}
           <span className={styles.author}>{author}</span>
         </p>
-        <ExternalLink
-          linkText='READ STORY'
-          linkTo='/'
-          linkStyle='white'
+        <ExternalLink {...externalLink}
         />
       </section>
     </section>

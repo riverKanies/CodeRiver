@@ -9,6 +9,7 @@ type Props = {
   sectionText: Array<string>,
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   title: string,
+  button: any
 }
 
 const defaultText = [
@@ -16,13 +17,12 @@ const defaultText = [
   eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare`
 ]
 
-const hello = `Let's Thrive`
-
 const CTASection = ({
   alignment = 'defaultLeft',
   colorScheme = 'default',
   sectionWidth = 'defaultWidth',
   title = 'Section Title',
+  button = {},
   sectionText = defaultText
 }: Props) => {
   return (
@@ -36,10 +36,7 @@ const CTASection = ({
             <p>{sectionText}</p>
           </section>
           <section className={styles.button}>
-            <Button
-              buttonText={hello}
-              buttonStyle='violet-medium'
-            />
+            <Button {...button} />
           </section>
         </section>
       </section>
