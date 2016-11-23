@@ -1,15 +1,25 @@
 /* @flow */
 // Site Header
 import React from 'react'
-import { linkToShopify } from 'lib/sso'
-
+import { connect } from 'react-redux'
+import { isLoggedIn } from 'modules/UserSession/selectors'
+import { deleteSession } from 'modules/UserSession'
+import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
 import mark from './assets/thriveLogo.png'
 
+type Props = {
+  isLoggedIn: boolean,
+  dispatch: Function
+}
+
 class Header extends React.Component {
   toggleActive: Function;
+  logOutUser: Function;
+
+  props: Props
   state = {
     active: false
   }
@@ -17,10 +27,38 @@ class Header extends React.Component {
     super(...arguments)
 
     this.toggleActive = this.toggleActive.bind(this)
+    this.logOutUser = this.logOutUser.bind(this)
+  }
+
+  logOutUser () {
+    this.props.dispatch(deleteSession())
   }
 
   toggleActive () {
     this.setState({active: !this.state.active})
+  }
+
+  renderLoginLogout () {
+    const { isLoggedIn } = this.props
+
+    if (isLoggedIn) {
+      return (
+        <Link
+          id='navLogin'
+          to='/'
+          onClick={this.logOutUser}
+          className={styles.linkUtility}
+          activeClassName={styles.activeRoute}>
+          Log Out
+        </Link>
+      )
+    }
+
+    return (
+      <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        Log In
+      </Link>
+    )
   }
 
   render () {
@@ -48,7 +86,7 @@ class Header extends React.Component {
             <Link
               id='navShop'
               className={styles.link}
-              onClick={linkToShopify}
+              onClick={redirectToShopify}
               activeClassName={styles.activeRoute}>
               Shop
             </Link>
@@ -64,9 +102,7 @@ class Header extends React.Component {
             <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
               Sign Up
             </Link>
-            <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-              Log In
-            </Link>
+            {this.renderLoginLogout()}
             <a className={styles.search} href='javascript:void'>
               <svg className={styles.searchIcon} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
                 <title>Search</title>
@@ -92,4 +128,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+export default connect(isLoggedIn)(Header)

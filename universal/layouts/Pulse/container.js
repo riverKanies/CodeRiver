@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import Pulse from 'components/Pulse'
 import { pulseSelector } from 'modules/UserSession/selectors'
-import { checkSession } from 'modules/UserSession'
 
 type Props = {
   dispatch: Function,
@@ -14,10 +13,6 @@ type Props = {
 
 export class PulseLayout extends React.Component {
   props: Props
-
-  componentWillMount () {
-    this.props.dispatch(checkSession())
-  }
 
   render () {
     return <Pulse {...this.props} />

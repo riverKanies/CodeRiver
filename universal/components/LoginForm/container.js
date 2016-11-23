@@ -4,6 +4,7 @@ import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required } from 'lib/validate'
 
 import { createSession } from 'modules/UserSession'
+import { actions as ssoMiddlewareActions } from 'modules/Middleware/sso'
 import component from './component'
 
 const validate = createValidator({
@@ -11,7 +12,8 @@ const validate = createValidator({
   password: [required]
 })
 
-function onSuccess () {
+function onSuccess (result, dispatch) {
+  dispatch({ type: ssoMiddlewareActions.checkForRedirect })
   browserHistory.push('profile')
 }
 

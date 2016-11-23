@@ -29,7 +29,10 @@ const featuredQuarterBlue = {
 export default class MediumPostGridDynamic extends React.Component {
   componentDidMount () {
     /* eslint-disable */
-    new Masonry('.MediumPostGridDynamicMasonry')
+    var element = document.querySelector('.MediumPostGridDynamicMasonry')
+    if (element) {
+      new Masonry(element)
+    }
     /* eslint-enable */
   }
 
