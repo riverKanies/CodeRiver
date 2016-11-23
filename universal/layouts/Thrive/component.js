@@ -31,3 +31,4 @@ export const ThriveView = () => (
 )
 
 export default ThriveView
+    

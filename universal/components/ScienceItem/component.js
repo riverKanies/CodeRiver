@@ -10,15 +10,17 @@ type Props = {
 
 const defaultTitle ="Science Title"
 const defaultDescription = '.....science stuff'
+const defaultImage= imagePlaceholder;
 
 const ScienceItemView = ({
   title = defaultTitle,
-  description = defaultDescription
+  description = defaultDescription,
+  uri: imagePlaceholder
 }: Props) => {
   return (
     <section className={styles.scienceContainer}>
         <div className={styles.text}>
-          <h3>{title}</h3>
+          <img src={imagePlaceholder} styles={styles.imageContainer}/>
           <p>{description}</p>
       </div>
     </section>

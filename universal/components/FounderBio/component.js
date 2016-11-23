@@ -20,7 +20,6 @@ const FounderBio = ({
     <section className={styles.container}>
       <section className={styles.content}>
         <section className={styles.title}>
-          <h2>{title}</h2>
           <p>{details}</p>
         </section>
         <section className={styles.image}>

@@ -7,7 +7,6 @@ type Props = {
   title: string,
   name: string,
   image: any,
-  wide: boolean
 };
 
 const defaultName = 'Team Member'
@@ -17,8 +16,7 @@ const TeamBio = ({
   name = defaultName,
   title = defaultTitle,
   image = imagePlaceholder,
-  wide = false}: Props) => {
-  const isWide = wide? '.is-Wide': ''
+  }: Props) => {
   return (
     <section className={styles.bio}>
       <div className={styles.image}>

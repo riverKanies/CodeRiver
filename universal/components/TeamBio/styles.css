@@ -2,10 +2,13 @@
 @value bp-mama-bear, bp-grand-bear from breakpoints;
 
 .bio {
-  lost-flex-container: row;
   width: 22rem;
   height: 23.75rem;
   margin-bottom: 1.5rem;
+  lost-column: 1 flex;
+  z-index: 1;
+  padding: 0 0 1rem 1rem;
+  align-self: flex-end;
   @media bp-mama-bear {
     lost-column: 1/2;
   }
@@ -33,4 +36,5 @@
   padding: 0 0 1rem 1rem;
   color: white;
   align-self: flex-end;
+  font-family: Montserrat;
 }

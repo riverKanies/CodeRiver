@@ -16,7 +16,7 @@ const PartnerItemView = ({
   description = defaultDescription
 }: Props) => {
   return (
-    <section className={styles.PartnerContainer}>
+    <section className={styles.partnerContainer}>
         <div className={styles.text}>
           <h3>{title}</h3>
           <p>{description}</p>

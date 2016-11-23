@@ -11,7 +11,15 @@ const Fakeitems =
 {
 	title:"Science item 2",
 	description:"description........"
-}]
+},
+{
+  title: "Science Item 3",
+  description: "description........"
+},
+{
+  title:"Science item 4",
+  description:"description........"
+},]
 export const ScienceSection = () => {
     return (
     <div className={styles.SectionContainer}>

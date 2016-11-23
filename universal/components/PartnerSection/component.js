@@ -11,11 +11,21 @@ const Fakeitems =
 {
   title:"Partner item 2",
   description:"description........"
+},
+{
+  title: "Partner Item 3",
+  description: "description........"
+},
+{
+  title:"Partner item 4",
+  description:"description........"
 }];
+
+const FakeDescription = "Here are our Partners"
 
 export const PartnerSection = () => {
     return (
-    <div className={styles.SectionContainer}>
+    <section className={styles.SectionContainer}>
       <h2>Our Partners</h2>
       <p>Partners</p>
       <section>
@@ -24,7 +34,7 @@ export const PartnerSection = () => {
           <PartnerItem {...item} />
           )}
       </section>
-    </div> 
+    </section> 
 
   )
 }

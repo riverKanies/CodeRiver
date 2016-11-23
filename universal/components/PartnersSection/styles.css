@@ -1,3 +1,4 @@
+
 @value breakpoints: 'all';
 @value containerWidth, containerPadding from breakpoints;
 
@@ -13,4 +14,14 @@
 .title {
   lost-column: 1;
   margin-bottom: 1rem;
+}
+.SectionContainer{
+lost-column: 1;
+  z-index: 4;
+  padding-left:10vh;
+  min-height: 120vh;
+  align-self: flex-end;
+  padding-top: 10vh;
+  clear: both;
+
 }
