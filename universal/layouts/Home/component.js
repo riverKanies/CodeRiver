@@ -27,7 +27,7 @@ const twoColScience = {
   button: {
     buttonText: 'Read More',
     linkTo: 'javascript:void(0)',
-    buttonColor: 'dark'
+    buttonStyle: 'violet'
   }
 }
 const twoColLife = {
@@ -47,7 +47,7 @@ const twoColLife = {
   button: {
     buttonText: 'Read More',
     linkTo: 'javascript:void(0)',
-    buttonColor: 'dark'
+    buttonStyle: 'violet'
   }
 }
 const featuredStory = {
@@ -66,6 +66,8 @@ export const HomeView = () => {
       <FeaturedStory {...featuredStory} />
       <HalfTextOverlay />
       <QuoteSection />
+      <FullWidthTwoCol {...twoColScience} />
+      <FullWidthTwoColSpecial {...twoColLife} />
       <FullWidthTwoCol {...twoColScience} />
       <FullWidthTwoColSpecial {...twoColLife} />
     </main>
