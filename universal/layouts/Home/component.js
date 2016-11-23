@@ -51,8 +51,10 @@ const twoColLife = {
   }
 }
 const featuredStory = {
-  button: {
-    linkto: 'https://medium.com/@myleik/lessons-from-kobe-bryant-5efdf8e54a12#.gz9vb8907'
+  externalLink: {
+    linkText: 'Read Story',
+    linkTo: 'https://medium.com/@myleik/lessons-from-kobe-bryant-5efdf8e54a12#.ork0vw64p',
+    linkStyle: 'white'
   }
 }
 
