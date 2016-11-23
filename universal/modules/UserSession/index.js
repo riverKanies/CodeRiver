@@ -6,13 +6,21 @@ import baseActions from 'modules/baseActions'
 export const KEY = 'user-session'
 
 // Action Creators
-export const actions = { ...baseActions(KEY) }
+export const actions = {
+  ...baseActions(KEY),
+  registerPostLoginSSO: `${KEY}/register-post-login-sso`,
+  clearPostLoginSSO: `${KEY}/clear-post-login-sso`
+}
 
 // Reducer
 export const initialState = {
   sessionAlive: false,
   userData: null,
-  requestPending: false
+  requestPending: false,
+  postLoginSSO: {
+    provider: null,
+    redirectTo: null
+  }
 }
 
 export function reducer (state: any = initialState, action: any) {
@@ -35,7 +43,22 @@ export function reducer (state: any = initialState, action: any) {
       return {
         ...state,
         requestPending: false,
-        userData: false
+        userData: null
+      }
+
+    case actions.clearPostLoginSSO:
+      return {
+        ...state,
+        postLoginSSO: initialState.postLoginSSO
+      }
+
+    case actions.registerPostLoginSSO:
+      return {
+        ...state,
+        postLoginSSO: {
+          provider: action.provider,
+          returnTo: action.returnTo
+        }
       }
 
     default:
@@ -76,5 +99,19 @@ export function deleteSession () {
     ],
     callAPI: () => httpDelete('/api/auth/sign_out'),
     successCallback: () => clearHeaders()
+  }
+}
+
+export function clearPostLoginSSO () {
+  return {
+    type: actions.clearPostLoginSSO
+  }
+}
+
+export function registerPostLoginSSO (returnTo: string, provider: string = 'shopify') {
+  return {
+    type: actions.registerPostLoginSSO,
+    provider,
+    returnTo
   }
 }

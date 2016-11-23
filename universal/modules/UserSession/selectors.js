@@ -50,3 +50,16 @@ export const getScoreData = createSelector(
     }
   }
 )
+
+export const getSSORedirect = createSelector(
+  [ sessionSelector ],
+  (sessionData) => {
+    const { provider, returnTo } = sessionData.postLoginSSO
+
+    return {
+      shouldRedirect: !!provider && !!returnTo,
+      provider,
+      returnTo
+    }
+  }
+)
