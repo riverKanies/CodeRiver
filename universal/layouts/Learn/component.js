@@ -113,14 +113,14 @@ const library = {
 }
 
 const linkToAssessment = {
-  colorScheme: 'default',
-  title: 'Take our assessment',
-  sectionWidth: 'twoThirdsWidth',
-  sectionText: ['Interested in bringing Thrive trainings to your workplace? ' +
-  'Email our director of trainings Joey Hubbard at jh@thriveglobal.com'],
+  colorScheme: 'white',
+  sectionWidth: 'fullWidth',
+  title: 'Are You Thriving?',
+  sectionText: [
+    `Do you thrive? Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.`],
   button: {
     buttonText: 'Get your Thrive Pulse',
-    linkTo: 'mailto:jh@thriveglobal.com',
+    linkTo: '/pulse',
     buttonStyle: 'teal'
   }
 }
