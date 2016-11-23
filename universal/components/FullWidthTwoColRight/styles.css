@@ -71,6 +71,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  margin-top: 30px;
   padding: 0 0;
   float: left;
   text-align: center;
@@ -79,6 +80,7 @@
     display: flex;
     height: 100%;
     float: none;
+    margin-top: 0;
   }
 }
 .image {
@@ -88,7 +90,7 @@
   text-align: center;
   @media bp-papa-bear {
     object-fit: cover;
-    object-position: center center;
+    object-position: center right;
   }
 }
 .sectionContent {
@@ -107,6 +109,10 @@
     width: 100%;
     float: left;
     clear: both;
+    margin-bottom: 1em;
+    @media bp-papa-bear {
+      margin-bottom: 2em;
+    }
   }
   > a {
     float: left;
@@ -116,8 +122,11 @@
 
 .header {
   width: 100%;
-  margin: 0 0;
+  margin: 0 0 20px 0;
   padding: 0 0;
   float: left;
   text-align: left;
+  @media bp-papa-bear {
+    margin: 0 0 30px 0;
+  }
 }
