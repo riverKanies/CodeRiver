@@ -126,7 +126,7 @@ const thrivePulse = {
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Find Out',
-    linkTo: 'javascript:void(0)',
+    linkTo: '/pulse',
     buttonStyle: 'blue'
   }
 }
