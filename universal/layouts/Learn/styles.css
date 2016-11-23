@@ -1,1 +1,10 @@
-.container {}
+.learnPage {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}

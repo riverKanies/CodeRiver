@@ -1,12 +1,12 @@
 @value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
 
 .fullWidthText {
-  lost-utility: clearfix;
-  lost-flex-container: column;
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
   padding: babyPadding;
+  float: left;
   position: relative;
   text-align: center;
   @media bp-mama-bear {
@@ -73,9 +73,6 @@
     width: 66%;
     margin: 0 17%;
   }
-  @media bp-papa-bear {
-
-  }
 }
 .halfWidth {
   lost-column: 1;
@@ -106,6 +103,12 @@
     text-align: center;
   }
 }
+.headerTrue {
+  composes: header;
+}
+.headerFalse {
+  display: none;
+}
 
 .sectionContent {
   lost-utility: clearfix;
@@ -118,7 +121,6 @@
   p {
     display: block;
     width: 100%;
-    margin: 0 auto;
     padding: 0 0;
     float: left;
     position: relative;
