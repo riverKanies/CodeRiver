@@ -16,7 +16,7 @@ export default function ({ pathway, journeys = [] }: Props) {
       <section className={styles.title}>
         <h2>{pathway.title}</h2>
       </section>
-      <section className={styles.row}>
+      <section id='pathway_container' className={styles.row}>
         {journeys.map(j => <JourneyCard {...j} pathwayId={pathway.id} />)}
       </section>
     </section>
