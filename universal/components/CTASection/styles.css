@@ -1,0 +1,138 @@
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, babyMargin, mamaPadding, mamaMargin, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
+
+.ctaSection {
+  lost-utility: clearfix;
+  lost-flex-container: column;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  text-align: left;
+  position: relative;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: ctaSection;
+  background: transparent;
+  * {
+    color: bodyCopy;
+  }
+}
+.white {
+  composes: ctaSection;
+  background: white;
+  * {
+    color: bodyCopy;
+  }
+}
+.gray {
+  composes: ctaSection;
+  background: lightGray;
+  * {
+    color: bodyCopy;
+  }
+}
+.blue {
+  composes: ctaSection;
+  background: ThriveBlue;
+  * {
+    color: white;
+  }
+}
+
+.defaultLeft {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+
+.center {
+  composes: defaultLeft;
+  text-align: center;
+}
+
+.columns {
+  width: 100%;
+  @media bp-mama-bear {
+    lost-center: 9;
+  }
+  @media bp-papa-bear {
+    lost-center: 7;
+  }
+}
+.defaultWidth {
+  composes: columns;
+}
+.fullWidth {
+  lost-column: 1;
+}
+.twoThirdsWidth {
+  lost-column: 1;
+  @media bp-mama-bear {
+    width: 66%;
+    margin: 0 17%;
+  }
+  @media bp-papa-bear {
+
+  }
+}
+.halfWidth {
+  lost-column: 1;
+  @media bp-mama-bear {
+    width: 50%;
+    margin: 0 25%;
+  }
+}
+
+
+.header {
+  width: 100%;
+  margin: 0 auto babyHeader auto;
+  padding: 0 0;
+  text-align: inherit;
+  position: relative;
+  @media bp-mama-bear {
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
+  h2 {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0;
+    float: left;
+  }
+}
+
+.sectionContent {
+  lost-utility: clearfix;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  p {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+    position: relative;
+  }
+}
+
+.button {
+  display: inline-block;
+  margin: babyMargin 0 auto;
+
+  @media bp-papa-bear {
+    margin: mamaMargin 0 auto;
+  }
+}

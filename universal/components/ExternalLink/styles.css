@@ -83,6 +83,28 @@
   }
 }
 
+.blue {
+  composes: link;
+  border-color: ThriveBlue;
+  color: ThriveBlue;
+
+  &-medium {
+    composes: blue;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: blue;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: ThriveBlue;
+    color: #fff;
+    border-color: ThriveBlue;
+  }
+}
+
 .bannerLink {
   @media bp-baby-bear {
     composes: link;

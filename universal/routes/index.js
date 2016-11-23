@@ -1,6 +1,7 @@
 import Content from 'layouts/Content'
 import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
 import Microsteps from 'layouts/Microsteps'
+import Give from 'layouts/Give'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import Learn from 'layouts/Learn'
@@ -41,6 +42,10 @@ export const createRoutes = (store) => ([
       {
         path: 'learn',
         component: Learn
+      },
+      {
+        path: 'give',
+        component: Give
       },
       {
         path: 'thrive',

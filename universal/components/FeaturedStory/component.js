@@ -1,12 +1,14 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   author: string,
   details: string,
-  title: string
+  title: string,
+  asset: string,
+  externalLink: any
 }
 
 const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
@@ -19,10 +21,12 @@ const defaultAuthor = 'Koby Bryant'
 const FeaturedStory = ({
   title = defaultTitle,
   author = defaultAuthor,
-  details = defaultDetails
+  details = defaultDetails,
+  externalLink = {},
+  asset = 'kobe.jpg'
 }: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
         <label className={styles.label}>STORIES</label>
         <h2 className={styles.header}>{title}</h2>
@@ -30,10 +34,7 @@ const FeaturedStory = ({
           {details}
           <span className={styles.author}>{author}</span>
         </p>
-        <Button
-          buttonText='READ STORY'
-          linkTo='/'
-          buttonStyle='white'
+        <ExternalLink {...externalLink}
         />
       </section>
     </section>

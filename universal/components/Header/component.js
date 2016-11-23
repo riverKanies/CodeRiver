@@ -52,7 +52,7 @@ class Header extends React.Component {
               activeClassName={styles.activeRoute}>
               Shop
             </Link>
-            <Link id='navGive' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+            <Link id='navGive' to='/give' className={styles.link} activeClassName={styles.activeRoute}>
               Give
             </Link>
             <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>

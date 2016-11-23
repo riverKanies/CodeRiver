@@ -7,7 +7,8 @@ type Props = {
   bgColor: 'default' | 'white' | 'gray' | 'purple',
   quote: Array<string>,
   citation: string,
-  quoteImage: string,
+  quoteImage: any,
+  imageShape: 'roundImage' | 'squareImage'
 };
 
 const defaultQuote = [
@@ -21,14 +22,15 @@ const QuoteSection = ({
   bgColor = 'default',
   quote = defaultQuote,
   citation = 'Arriana Huffington',
-  quoteImage = defaultImage
+  quoteImage = defaultImage,
+  imageShape = 'roundImage'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
       <div className={styles.container}>
 
         <section className={styles.quoteImage}>
-          <img className={styles.image} src={quoteImage} />
+          <img className={styles[imageShape]} src={quoteImage} />
         </section>
 
         <section className={styles.quoteSection}>
