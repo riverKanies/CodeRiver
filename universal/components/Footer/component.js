@@ -51,6 +51,9 @@ const Footer = ({
               <Link to='/'>Advertise</Link>
             </li>
             <li className={styles.footerLinks}>
+              <Link to='/thrivetech'>Tech</Link>
+            </li>
+            <li className={styles.footerLinks}>
               <Link to='/'>Careers</Link>
             </li>
             <li className={styles.footerLinks}>
