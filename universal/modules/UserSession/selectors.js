@@ -25,7 +25,7 @@ export const loginSelector = createSelector(
   }
 )
 
-export const pulseSelector = createSelector(
+export const assessmentsSelector = createSelector(
   [ sessionSelector, isLoggedIn ],
   (store, { isLoggedIn }) => {
     const { requestPending } = store

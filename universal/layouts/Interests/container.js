@@ -11,12 +11,12 @@ type Props = {
   creds: Object
 }
 
-export class PulseLayout extends React.Component {
+export class InterestsLayout extends React.Component {
   props: Props
 
   render () {
-    return <Assessments {...this.props} key="sKzAso" />
+    return <Assessments {...this.props} key="G3NSR5" />
   }
 }
 
-export default connect(assessmentsSelector)(PulseLayout)
+export default connect(assessmentsSelector)(InterestsLayout)

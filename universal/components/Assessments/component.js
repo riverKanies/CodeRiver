@@ -6,7 +6,8 @@ type Props = {
   dispatch: Function,
   loggedIn: boolean,
   requestPending: boolean,
-  creds: Object
+  creds: Object,
+  key: String
 }
 
 function genUrl (creds) {
@@ -14,12 +15,12 @@ function genUrl (creds) {
 }
 
 // Engage Page Layout
-export default function PulseView ({ loggedIn, requestPending, creds }: Props) {
+export default function AssessmentsView ({ loggedIn, requestPending, creds, key }: Props) {
   if (requestPending) return null
 
   if (!loggedIn) {
     return (
-      <div className={styles.PulseLogin}>
+      <div className={styles.AssessmentsLogin}>
         <h3> You must be logged in to do assessment </h3>
       </div>
     )
@@ -28,7 +29,7 @@ export default function PulseView ({ loggedIn, requestPending, creds }: Props) {
   const url = genUrl(creds)
 
   return <TypeForm
-    typeformkey='sKzAso'
+    typeformkey={key}
     urlParams={url}
     />
 }
