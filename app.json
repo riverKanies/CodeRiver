@@ -20,6 +20,9 @@
     },
     "SEGMENT": {
       "required": true
+    },
+    "SHOPIFY_URL": {
+      "required": true
     }
   },
   "formation": {
