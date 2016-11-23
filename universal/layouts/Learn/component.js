@@ -11,6 +11,7 @@ import TwoColText from 'components/TwoColText'
 import TwoColImage from 'components/TwoColImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
+import Button from 'components/Button'
 
 // Content Import
 import bannerImage from './assets/learnBanner.jpg'
@@ -29,6 +30,7 @@ const bannerProps = {
 const learnIntro = {
   sectionClass: 'white',
   sectionWidth: 'twoThirdsWidth',
+  textAlign: 'textLeft',
   header: 'headerFalse',
   title: '',
   sectionText: [
@@ -128,6 +130,11 @@ const eCourse = {
     'Guest teachers include Kobe Bryant, Wharton Professor Adam Grant, ' +
     'Warby Parker CEO Dave Gilboa, and more.']
 }
+const eCourseBTN = {
+  buttonText: 'Go To E-Course',
+  linkTo: 'http://learn.thriveglobal.com',
+  buttonStyle: 'violet'
+}
 const images = {
   bgColor: 'transparent',
   hasTitle: 'titleFalse',
@@ -153,6 +160,9 @@ export const LearnView = () => (
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
       <TwoColText {...eCourse} />
+      <span className={styles.buttonWrap}>
+        <Button {...eCourseBTN} />
+      </span>
       <TwoColImage {...images} />
       <QuoteSection {...quote} />
     </section>
