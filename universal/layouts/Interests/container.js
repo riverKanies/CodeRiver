@@ -15,7 +15,7 @@ export class InterestsLayout extends React.Component {
   props: Props
 
   render () {
-    return <Assessments {...this.props} key="G3NSR5" />
+    return <Assessments {...this.props} key='G3NSR5' />
   }
 }
 

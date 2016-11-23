@@ -74,7 +74,7 @@ export const createRoutes = (store) => ([
       {
         path: 'interests',
         component: Interests
-      },      
+      },
       {
         path: 'pulsescore',
         component: PulseScore

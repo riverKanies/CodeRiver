@@ -15,7 +15,7 @@ export class PulseLayout extends React.Component {
   props: Props
 
   render () {
-    return <Assessments {...this.props} key="sKzAso" />
+    return <Assessments {...this.props} key='sKzAso' />
   }
 }
 
