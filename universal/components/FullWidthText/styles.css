@@ -51,9 +51,22 @@
   padding: containerPadding;
   float: none;
 }
+.textLeft {
+  composes: container;
+  text-align: left;
+}
+.textCenter {
+  composes: container;
+  text-align: center;
+}
+.textRight {
+  composes: container;
+  text-align: right;
+}
 
 .columns {
   width: 100%;
+  text-align: inherit;
   @media bp-mama-bear {
     lost-center: 9;
   }
@@ -88,7 +101,7 @@
   margin: 0 auto babyHeader auto;
   padding: 0 0;
   position: relative;
-  text-align: center;
+  text-align: inherit;
   @media bp-mama-bear {
     margin: 0 auto mamaHeader auto;
   }
@@ -100,7 +113,7 @@
     width: 100%;
     padding: 0 0;
     float: left;
-    text-align: center;
+    text-align: inherit;
   }
 }
 .headerTrue {
@@ -117,12 +130,13 @@
   margin: 0 auto;
   padding: 0 0;
   position: relative;
-  text-align: center;
+  text-align: inherit;
   p {
     display: block;
     width: 100%;
     padding: 0 0;
     float: left;
     position: relative;
+    text-align: inherit;
   }
 }
