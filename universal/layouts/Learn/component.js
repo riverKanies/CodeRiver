@@ -4,6 +4,7 @@ import styles from './styles'
 
 // Components
 import Banner from 'components/Banner'
+import CTASection from 'components/CTASection'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
@@ -110,6 +111,19 @@ const library = {
     linkTo: 'javascript:void(0)'
   }
 }
+
+const linkToAssessment = {
+  colorScheme: 'default',
+  title: 'Take our assessment',
+  sectionWidth: 'twoThirdsWidth',
+  sectionText: ['Interested in bringing Thrive trainings to your workplace? ' +
+  'Email our director of trainings Joey Hubbard at jh@thriveglobal.com'],
+  button: {
+    buttonText: 'Get your Thrive Pulse',
+    linkTo: 'mailto:jh@thriveglobal.com',
+    buttonStyle: 'teal'
+  }
+}
 const eCourse = {
   bgColor: 'transparent',
   marginBottom: 'marginFalse',
@@ -159,6 +173,7 @@ export const LearnView = () => (
       <TwoColText {...howToGrowTwo} />
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
+      <CTASection {...linkToAssessment} />
       <TwoColText {...eCourse} />
       <span className={styles.buttonWrap}>
         <ExternalLink {...eCourseLink} />
