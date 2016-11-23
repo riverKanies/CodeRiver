@@ -11,6 +11,7 @@ type Props = {
     body_html: string,
     link: string,
     price: string,
+    share_text: string;
     image: {
       src: string
     }
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const ProductMicrostep = ({ microstep }: Props) => {
+  const { share_text = 'I just completed a microstep' } = microstep
   return (
     <div className={styles.container}>
 
@@ -57,6 +59,15 @@ const ProductMicrostep = ({ microstep }: Props) => {
         </div>
 
       </section>
+      <div className={styles.twitter}>
+        <a
+          className='twitter-share-button'
+          data-size='small'
+          href={`https://twitter.com/intent/tweet?text=${share_text}`}
+        >
+          Share
+        </a>
+      </div>
     </div>
   )
 }

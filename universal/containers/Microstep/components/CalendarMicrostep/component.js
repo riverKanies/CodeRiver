@@ -30,6 +30,7 @@ export default function (props: any) {
 
   const hourClass = (props.hourActive) ? styles.active : undefined
   const minuteClass = (!props.hourActive) ? styles.active : undefined
+  const { share_text = 'I just completed a microstep' } = props.microstep
 
   return (
     <div className={styles.container}>
@@ -98,6 +99,15 @@ export default function (props: any) {
             buttonStyle='violet'
           />
         </div>
+      </div>
+      <div className={styles.twitter}>
+        <a
+          className='twitter-share-button'
+          data-size='small'
+          href={`https://twitter.com/intent/tweet?text=${share_text}`}
+        >
+          Share
+        </a>
       </div>
     </div>
   )
