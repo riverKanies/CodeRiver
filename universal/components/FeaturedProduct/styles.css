@@ -1,7 +1,6 @@
 /*
   This is the stylesheet for: FeaturedProduct
 */
-
 @value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear, ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray, Mon, MonLight from 'all';
 
 .container {
@@ -29,6 +28,13 @@
   }
   @media bp-papa-bear {
     lost-column: 2/8 8 12px;
+  }
+}
+
+.productTitle {
+  color: #111;
+  &:hover {
+    color: #999;
   }
 }
 
@@ -74,7 +80,6 @@
     }
   }
 }
-
 
 .description {
   clear: both;
