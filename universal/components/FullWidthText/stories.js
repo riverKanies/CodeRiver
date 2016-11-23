@@ -28,6 +28,11 @@ const props = {
     'twoThirdsWidth',
     'halfWidth'
   ],
+  textAlign: [
+    'textLeft',
+    'textCenter',
+    'textRight'
+  ],
   header: [
     'headerTrue',
     'headerFalse'
@@ -44,6 +49,7 @@ storiesOf('FullWidthText', module)
         <FullWidthText
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           sectionWidth={select('Section Content Width', props.sectionWidth, props.sectionWidth[0])}
+          textAlign={select('Text Alignment', props.textAlign, props.textAlign[1])}
           header={select('Need a title?', props.header, props.header[0])}
           title={text('Section Title', props.title)}
           sectionText={text('Section Text', props.sectionText)}
