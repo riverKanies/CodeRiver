@@ -57,6 +57,7 @@ const RichardDavidson = {
   details: ['this the details Cras justo odio, dapibus ac ' +
   'facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.'],
   title: 'Why Giving is Good',
+  asset: 'richard.jpg',
   externalLink: {
     linkText: 'Get in Touch',
     linkTo: 'http://www.richardjdavidson.com',
