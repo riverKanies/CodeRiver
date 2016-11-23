@@ -11,7 +11,7 @@ import TwoColText from 'components/TwoColText'
 import TwoColImage from 'components/TwoColImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 // Content Import
 import bannerImage from './assets/learnBanner.jpg'
@@ -130,10 +130,10 @@ const eCourse = {
     'Guest teachers include Kobe Bryant, Wharton Professor Adam Grant, ' +
     'Warby Parker CEO Dave Gilboa, and more.']
 }
-const eCourseBTN = {
-  buttonText: 'Go To E-Course',
+const eCourseLink = {
+  linkText: 'Go To E-Course',
   linkTo: 'http://learn.thriveglobal.com',
-  buttonStyle: 'violet'
+  linkStyle: 'violet'
 }
 const images = {
   bgColor: 'transparent',
@@ -161,7 +161,7 @@ export const LearnView = () => (
       <FullWidthTwoColSpecial {...library} />
       <TwoColText {...eCourse} />
       <span className={styles.buttonWrap}>
-        <Button {...eCourseBTN} />
+        <ExternalLink {...eCourseLink} />
       </span>
       <TwoColImage {...images} />
       <QuoteSection {...quote} />
