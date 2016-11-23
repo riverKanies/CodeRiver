@@ -27,7 +27,7 @@ const twoColScience = {
   button: {
     buttonText: 'Read More',
     linkTo: 'javascript:void(0)',
-    buttonStyle: 'violet'
+    buttonColor: 'dark'
   }
 }
 const twoColLife = {
@@ -47,13 +47,13 @@ const twoColLife = {
   button: {
     buttonText: 'Read More',
     linkTo: 'javascript:void(0)',
-    buttonStyle: 'violet'
+    buttonColor: 'dark'
   }
 }
 const featuredStory = {
   externalLink: {
-    linkText: 'Read Story',
-    linkTo: 'https://medium.com/@myleik/lessons-from-kobe-bryant-5efdf8e54a12#.ork0vw64p',
+    inkText: 'Get in Touch',
+    linkTo: 'https://medium.com/@myleik/lessons-from-kobe-bryant-5efdf8e54a12#.gz9vb8907',
     linkStyle: 'white'
   }
 }
@@ -66,8 +66,6 @@ export const HomeView = () => {
       <FeaturedStory {...featuredStory} />
       <HalfTextOverlay />
       <QuoteSection />
-      <FullWidthTwoCol {...twoColScience} />
-      <FullWidthTwoColSpecial {...twoColLife} />
       <FullWidthTwoCol {...twoColScience} />
       <FullWidthTwoColSpecial {...twoColLife} />
     </main>
