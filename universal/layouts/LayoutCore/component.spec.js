@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount, shallow } from 'enzyme'
-import LayoutCore from 'layouts/LayoutCore'
+import { LayoutCore } from 'layouts/LayoutCore/component'
 import Header from 'components/Header'
 import { toast } from 'modules/Toast'
 

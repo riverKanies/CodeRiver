@@ -16,10 +16,19 @@ export const loginSelector = createSelector(
   }
 )
 
-export const pulseSelector = createSelector(
+export const isLoggedIn = createSelector(
   [ sessionSelector ],
   (store) => {
-    const { userData, requestPending } = store
+    const { userData } = store
+
+    return { isLoggedIn: !!userData }
+  }
+)
+
+export const pulseSelector = createSelector(
+  [ sessionSelector, isLoggedIn ],
+  (store, { isLoggedIn }) => {
+    const { requestPending } = store
 
     const creds = getLocalStorageHeaders()
 
@@ -29,7 +38,7 @@ export const pulseSelector = createSelector(
 
     return {
       requestPending,
-      loggedIn: !!userData,
+      loggedIn: isLoggedIn,
       creds: { accesstoken, client, uid }
     }
   }

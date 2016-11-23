@@ -8,6 +8,8 @@ import React from 'react'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Helmet from 'react-helmet'
+import { connect } from 'react-redux'
+import { checkSession } from 'modules/UserSession'
 
 import styles from './styles'
 import headers from 'lib/headers'
@@ -18,13 +20,19 @@ import { toast } from 'modules/Toast'
 const ToastContainer = toast.container
 
 type Props = {
-  children: any
+  children: any,
+  dispatch: Function
 }
 
-class LayoutCore extends React.Component {
+export class LayoutCore extends React.Component {
   props: Props
 
   componentDidMount () {
+    this.props.dispatch(checkSession())
+      .catch(e => {
+        // ssshhhhhhh, its ok....
+        return undefined
+      })
     segment.load(process.env.SEGMENT)
     segment.page()
   }
@@ -47,4 +55,4 @@ class LayoutCore extends React.Component {
   }
 }
 
-export default LayoutCore
+export default connect(() => ({}))(LayoutCore)
