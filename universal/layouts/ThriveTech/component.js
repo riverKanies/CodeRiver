@@ -41,7 +41,7 @@ const alexa = {
   },
   label: {
     label: 'Alexa App',
-    labelColor: 'defaultLabel'
+    labelColor: 'violetLabel'
   }
 }
 
@@ -61,7 +61,7 @@ const joyTrigger = {
   },
   label: {
     label: 'Google Chrome Extension',
-    labelColor: 'violetLabel'
+    labelColor: 'blurpleLabel'
   }
 }
 
@@ -76,7 +76,7 @@ const silo = {
   ],
   image: siloImage,
   button: {
-    buttonText: 'Get the App',
+    buttonText: 'Learn More',
     linkTo: 'http://www.google.com',
     buttonStyle: 'violet'
   },
@@ -95,13 +95,13 @@ const thriveAway = {
   ],
   image: thriveAwayImage,
   button: {
-    buttonText: 'Get the App',
+    buttonText: 'Learn More',
     linkTo: 'http://www.google.com',
     buttonStyle: 'violet'
   },
   label: {
-    label: 'Android & iOS',
-    labelColor: 'violetLabel'
+    label: 'Web App',
+    labelColor: 'blurpleLabel'
   }
 }
 
