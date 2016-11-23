@@ -56,7 +56,7 @@ class FeaturedProduct extends React.Component {
           />
           <Product
             productTitle={'Phone Bed'}
-            productLink='https://shop.thriveglobal.com/products/the-thrive-pillow-by-hill-house-home'
+            productLink='https://shop.thriveglobal.com/products/the-phone-bed'
             productImage={image4}
           />
         </section>
