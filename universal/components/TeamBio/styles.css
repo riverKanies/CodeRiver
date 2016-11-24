@@ -6,8 +6,10 @@
   height: 23.75rem;
   margin-bottom: 1.5rem;
   lost-column: 1 flex;
+    lost-center: containerWidth flex;
+
   z-index: 1;
-  padding: 0 0 1rem 1rem;
+   padding: 2rem 1rem 1rem 1rem;
   align-self: flex-end;
   @media bp-mama-bear {
     lost-column: 1/2;
@@ -28,6 +30,7 @@
     url('./assets/team-placeholder.jpg') no-repeat;
   background-position: center;
   background-size: cover;
+
 }
 
 .text {
