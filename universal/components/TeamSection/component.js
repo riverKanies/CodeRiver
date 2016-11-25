@@ -10,99 +10,46 @@ type Props = {
 }
 
 
-function getMembers(){
-    console.log("hello")
-    let member =[]
-    fetch('/Team/team.json')
-    .then(function(response) {
-      let team = response.json()
-      team.then(function(json){
-          return json 
-          console.log(json)    
-      })
-  })
-
+function getTeamMembers(){
+  return fetch('/Team/team.json')
 }
 
-
-let members = [
-  {
-  title:"Founder & CEO",
-  name:"Arianna Huffington",
-  },
-  {
-  title:"CTO",
-  name:"Rajiv"
-  },
-  {
-  title:" Job title",
-  name:"Person",
-  },
-  {
-  title:" Job title",
-  name:"Person",
-  },
-  {
-  title:" Job title",
-  name:"Person",
-  },
-  {
-  title:" Job Title",
-  name:"Person",
-  }]; 
-
-const TeamSection2 = ({ title = 'Team' }: Props) => {
-  return (
-    <section className={styles.SectionContainer}>
-
-      <section className={styles.row} >
-        <h2 className={styles.title}> Our Team </h2>
-        <FounderBio />
-        <section className={styles.biosRow}>
-          {members.map(
-           member =>
-          <TeamBio {...member} />
-          )}
-        </section>
-      </section>
-    </section>
-  )
-}
 
 export class TeamSection extends React.Component {
-  getInitialState(){
-    return({
-      memberArray: members
-    })
-  }
-  componentWillMount(){
-    getMembers()
-    this.setState({
-      memberArray: members
-    })
+  
+  constructor (props) {
+    super(props);
+    this.state = {
+      teamMembers: []
+    }
   }
 
+  componentWillMount(){
+    getTeamMembers().then( response => {
+      let team = response.json()
+      team.then( json => {
+        this.setState({
+          teamMembers: json
+        })  
+      })
+    })
+  }
 
   render () {
     return (
-    <section className={styles.SectionContainer}>
-
-      <section className={styles.row} >
-        <h2 className={styles.title}> Our Team </h2>
-        <FounderBio />
-        <section className={styles.biosRow}>
-          {members.map(
-          member =>
-          <TeamBio {...member} />
-          )}
+      <section className={styles.SectionContainer}>
+        <section className={styles.row} >
+          <h2 className={styles.title}> Our Team </h2>
+          <FounderBio />
+          <section className={styles.biosRow}>
+            {this.state.teamMembers.map( member =>
+              <TeamBio {...member} />
+            )}
+          </section>
         </section>
       </section>
-    </section>
-      )
+    )
   }
 }
-
-
-
 
 export default TeamSection
