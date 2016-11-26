@@ -58,10 +58,10 @@ export class TeamSection extends React.Component {
     return (
       <section className={styles.SectionContainer}>
         <section className={styles.row} >
-          <h2 className={styles.title}> Our Team </h2>
-          <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)} content={this.state.modalContent} />
-          <FounderBio {...founder}/>
           <section className={styles.biosRow}>
+            <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)} content={this.state.modalContent} />
+            <h2 className={styles.title}> Our Team </h2>
+            <FounderBio {...founder}/>
             {team.map(member =>
               <TeamBio {...member} onClick={()=>this.handleClick.call(this, member)} key={member.name} />
             )}

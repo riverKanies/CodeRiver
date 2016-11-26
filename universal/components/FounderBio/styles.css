@@ -29,8 +29,15 @@
 }
 
 .text {
-  lost-column: 1;
-  padding: 0 0 1rem 1rem;
+  lost-column: 1 flex;
+  z-index: 1;
+  padding: 20px;
   color: white;
   align-self: flex-end;
+  background: linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.4));  
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+
+ h3 {
+   margin-bottom: 2px;
+ }
 }
