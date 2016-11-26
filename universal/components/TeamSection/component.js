@@ -62,9 +62,11 @@ export class TeamSection extends React.Component {
             <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)} content={this.state.modalContent} />
             <h2 className={styles.title}> Our Team </h2>
             <FounderBio {...founder}/>
-            {team.map(member =>
-              <TeamBio {...member} onClick={()=>this.handleClick.call(this, member)} key={member.name} />
-            )}
+            <section>
+              {team.map(member =>
+                <TeamBio {...member} onClick={()=>this.handleClick.call(this, member)} key={member.name} />
+              )}
+            </section>
           </section>
         </section>
       </section>
