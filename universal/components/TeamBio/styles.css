@@ -39,4 +39,9 @@
   padding: 0 0 1rem 1rem;
   color: white;
   align-self: flex-end;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    )
 }
