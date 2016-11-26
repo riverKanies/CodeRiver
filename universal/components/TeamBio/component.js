@@ -16,9 +16,10 @@ const TeamBio = ({
   name = defaultName,
   title = defaultTitle,
   image = imagePlaceholder,
+  onClick = () => {}
   }: Props) => {
   return (
-    <section className={styles.bio}>
+    <section className={styles.bio} onClick={onClick}>
       <div className={styles.image}>
         <div className={styles.text}>
           <h3>{name}</h3>

@@ -5,11 +5,11 @@
   width: 22rem;
   height: 23.75rem;
   margin-bottom: 1.5rem;
+  cursor: pointer;
   lost-column: 1 flex;
-    lost-center: containerWidth flex;
-
+  lost-center: containerWidth flex;
   z-index: 1;
-   padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   align-self: flex-end;
   @media bp-mama-bear {
     lost-column: 1/2;

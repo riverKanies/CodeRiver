@@ -130,6 +130,7 @@
     "chai-as-promised": "^5.1.0",
     "chai-enzyme": "^0.5.1",
     "cheerio": "^0.22.0",
+    "classnames": "^2.2.5",
     "codacy-coverage": "^2.0.0",
     "codecov": "^1.0.1",
     "connect-history-api-fallback": "^1.3.0",
