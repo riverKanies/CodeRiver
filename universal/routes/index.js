@@ -11,6 +11,7 @@ import Apps from 'layouts/Apps'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
+import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
 import Welcome from 'components/Welcome'
@@ -88,6 +89,10 @@ export const createRoutes = (store) => ([
       {
         path: 'corporate-pledge',
         component: GlassDoor
+      },
+      {
+        path: 'popup',
+        component: PopupStore
       },
       {
         path: 'signup',
