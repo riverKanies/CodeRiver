@@ -45,7 +45,7 @@ export class TeamSection extends React.Component {
         <div>
           <h3> {member.name} </h3>
           <h4> {member.title} </h4>
-          <p> {member.bio} </p>
+          <div dangerouslySetInnerHTML={{__html: member.bio}} />
         </div>
       )
     })
