@@ -25,22 +25,15 @@
 }
 
 .middleWrapper {
-    
 }
 
 .modalContent {
-  overflow-y: scroll;
-  box-sizing: border-box;
-  padding: 20px;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
-  margin-top: -200px;
-  margin-left: -300px;
-  width: 600px;
-  min-height: 400px;
-  max-height: 600px;
-  background-color: #fff;
+  transform: translateY(-50%) translateX(-50%);
+  width: 95%;
+  height: 95%;
   box-shadow: 0 1px 3px rgba(0,0,0,.4);
   transition: top .2s ease-in-out;
 }

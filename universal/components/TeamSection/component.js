@@ -42,10 +42,15 @@ export class TeamSection extends React.Component {
     this.setState({
       showModal: !this.state.showModal,
       modalContent: (
-        <div>
-          <h3> {member.name} </h3>
-          <h4> {member.title} </h4>
-          <div dangerouslySetInnerHTML={{__html: member.bio}} />
+        <div className={styles.bioModal}>
+          <div className={styles.modalImageWrapper}>
+            <div className={styles.modalImage} style={{backgroundImage: `url(${member.image})`}}/>
+          </div>
+          <div className={styles.modalText}>
+            <h3> {member.name} </h3>
+            <h4> {member.title} </h4>
+            <div dangerouslySetInnerHTML={{__html: member.bio}} />
+          </div>
         </div>
       )
     })
