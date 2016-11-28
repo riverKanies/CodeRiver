@@ -25,12 +25,12 @@ export const loginSelector = createSelector(
   }
 )
 
-export const pulseSelector = createSelector(
+export const assessmentsSelector = createSelector(
   [ sessionSelector, isLoggedIn ],
   (store, { isLoggedIn }) => {
     const { requestPending } = store
 
-    const creds = getLocalStorageHeaders()
+    const creds = getLocalStorageHeaders() || {}
 
     const accesstoken = creds['access-token']
     const client = creds['client']
