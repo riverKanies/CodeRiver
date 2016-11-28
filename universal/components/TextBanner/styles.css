@@ -85,7 +85,7 @@
     color: inherit;
     font-family: MonBold;
     @media bp-papa-bear {
-      margin-top: 80px;
+      margin-top: 3rem;
     }
   }
 }
@@ -95,14 +95,13 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  margin-top: 40px;
   padding: 0 0;
   float: left;
   clear: both;
 }
 .column {
-  lost-column: 1;
-  float: left;
+  lost-center: containerWidth;
+  max-width: 40rem;
   text-align: inherit;
   color: inherit;
   h3 {
