@@ -19,9 +19,15 @@
   margin: 0 auto;
   padding: 0 0;
   float: left;
+  clear: both;
   position: relative;
   color: bodyCopy;
+  background: gradientCardThrive;
+  border-bottom: 1px solid white;
   overflow: hidden;
+  @media bp-mama-bear {
+    clear: none;
+  }
   @media bp-papa-bear {
     margin-right: 0!important;
     margin-left: 0!important;
@@ -29,15 +35,18 @@
   }
   /* Card Label */
   > i {
-   display: block;
-   width: auto;
-   height: auto;
-   margin: 0 0;
-   float: left;
-   position: absolute;
-   top: 1.25rem;
-   left: 1.25rem;
- }
+    display: none;
+    @media bp-mama-bear {
+      display: block;
+      width: auto;
+      height: auto;
+      margin: 0 0;
+      float: left;
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+    }
+  }
 }
 /* Composed cardType(s) at End of File for Scoping Reasons */
 
@@ -45,7 +54,7 @@
 .imageContainer {
   display: block;
   width: 100%;
-  height: imgCardBaby;
+  height: 100;
   position: absolute;
   top: 0;
   left: 0;
@@ -64,6 +73,7 @@
   display: inline-block;
   width: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 /* Image True/False Composed */
 .imageTrue {
@@ -86,10 +96,9 @@
 }
 .imageFalse {
   composes: imageContainer;
-  background-color: gradientCardThrive;
   background-image: url('./assets/thriveVines.png');
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: right top;
   .image {
     display: none;
   }
@@ -166,9 +175,8 @@
 .half {
   composes: postCard;
   width: 100%;
-  height: imgCardbaby;
+  height: imgCardBaby;
   float: left;
-  background: gradientCardThrive;
   @media bp-mama-bear {
     height: imgCardMama;
   }
@@ -187,10 +195,13 @@
   }
   .footer {
     width: 100%;
-    margin: 2.5rem auto;
-    padding: .625rem 1.25rem;
-    background: rgba(0, 0, 0, .2);
-    border-radius: .25rem;
+    margin: 1.25rem auto;
+    @media bp-mama-bear {
+      margin: 2.5rem auto;
+      padding: .625rem 1.25rem;
+      background: rgba(0, 0, 0, .2);
+      border-radius: .25rem;
+    }
   }
   .authorWrap {
     display: block;
@@ -207,20 +218,22 @@
 .halfHeight{
   composes: postCard;
   width: 100%;
-  height: auto;
+  height: imgCardBaby;
   float: left;
-  background: gradientCardThrive;
   @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
     width: 50%;
+    height: imgCardHalfPapa
   }
   .postContent {
-    height: imgCardHalfBaby;
     padding: 0 2rem;
     @media bp-mama-bear {
       padding: 0 25%%;
-      height: imgCardHalfPapa;
     }
     @media bp-papa-bear {
+      height: imgCardHalfPapa;
       padding: 0 5.125rem;
     }
   }
