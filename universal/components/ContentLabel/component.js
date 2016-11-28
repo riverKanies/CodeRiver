@@ -9,9 +9,12 @@ labelColor: 'defaultLabel' | 'tealLabel' | 'blueLabel' | 'darkBlueLabel' |
 };
 
 const ContentLabel = ({
-  label = 'Label',
+  label,
   labelColor = 'defaultLabel'
 }: Props) => {
+  if (!label) {
+    return false
+  }
   return (
     <i className={styles[labelColor]}>{label}</i>
   )

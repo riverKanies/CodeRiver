@@ -35,9 +35,14 @@ const featuredQuarterBlue = {
   hasImage: 'imageTrue',
   hasSynopsis: 'synopsisFalse'
 }
+type Props = {
+  posts: Array<Object>
+}
 
 export default class MediumPostGridDynamic extends React.Component {
-  componentDidMount () {
+  props: Props
+
+  componentDidUpdate () {
     /* eslint-disable */
     var element = document.querySelector('.MediumPostGridDynamicMasonry')
     if (element) {
@@ -46,25 +51,48 @@ export default class MediumPostGridDynamic extends React.Component {
     /* eslint-enable */
   }
 
+  renderPost (index: number) {
+    const { posts } = this.props
+
+    const s = [
+      featuredHalfImage,
+      featuredHalfHeightImage,
+      featuredHalfImage,
+      featuredHalfNoImage,
+      featuredQuarterWhite,
+      featuredQuarterBlue,
+      featuredQuarterWhite,
+      featuredQuarterBlue,
+      featuredHalfHeightImage,
+      featuredHalfHeightNoImage
+    ]
+
+    if (!posts[index] || !s[index]) {
+      return null
+    }
+
+    return <MediumPostDynamic {...s[index]} {...posts[index]} />
+  }
+
   render () {
     const masonizeStyles = `${styles.posts} MediumPostGridDynamicMasonry`
 
     return (
       <section className={styles.featuredMediumPosts}>
         <section className={masonizeStyles}>
-          <MediumPostDynamic {...featuredHalfImage} />
-          <MediumPostDynamic {...featuredHalfHeightImage} />
-          <MediumPostDynamic {...featuredHalfImage} />
-          <MediumPostDynamic {...featuredHalfNoImage} />
+          {this.renderPost(0)}
+          {this.renderPost(1)}
+          {this.renderPost(2)}
+          {this.renderPost(3)}
           <EmailCaptureMini />
         </section>
         <section className={styles.clear}>
-          <MediumPostDynamic {...featuredQuarterWhite} />
-          <MediumPostDynamic {...featuredQuarterBlue} />
-          <MediumPostDynamic {...featuredQuarterWhite} />
-          <MediumPostDynamic {...featuredQuarterBlue} />
-          <MediumPostDynamic {...featuredHalfHeightImage} />
-          <MediumPostDynamic {...featuredHalfHeightNoImage} />
+          {this.renderPost(4)}
+          {this.renderPost(5)}
+          {this.renderPost(6)}
+          {this.renderPost(7)}
+          {this.renderPost(8)}
+          {this.renderPost(9)}
         </section>
       </section>
     )
