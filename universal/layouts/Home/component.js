@@ -18,6 +18,7 @@ import foundationImg from './assets/foundation.jpg'
 import eCourseImg from './assets/ecourse.png'
 import deathOverDinnerImg from './assets/deathOverDinner.png'
 import poetryImg from './assets/poetry.png'
+import { browserHistory } from 'react-router'
 
 const popUpImg = 'http://placekitten.com/g/647/470'
 const pulseImg = 'http://placekitten.com/g/647/470'
@@ -254,6 +255,11 @@ const thrivePulse = {
     linkTo: '/pulse',
     linkStyle: 'white'
   }
+}
+
+// TODO: GET RID OF THIS POST LAUNCH
+if (window.location.pathname === '/') {
+  browserHistory.push('/coming-soon')
 }
 export const HomeView = () => {
   return (

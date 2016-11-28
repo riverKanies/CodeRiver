@@ -3,86 +3,136 @@
 import React from 'react'
 import styles from './styles'
 import Banner from 'components/Banner'
-import CTASection from 'components/CTASection'
 import QuoteSection from 'components/QuoteSection'
+import FullWidthText from 'components/FullWidthText'
+import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FeaturedStory from 'components/FeaturedStory'
 
 import bannerImage from './assets/givingBanner.jpg'
-import quoteImage from './assets/GPPLogo.jpg'
+import thriveFoundationImage from './assets/thriveFoundation.jpg'
+import hughImage from './assets/hugh.jpg'
 
 const bannerProps = {
   contentPosition: 'bottomLeft',
   title: 'Don\'t Just Be a Go-Getter, Be a Go-Giver',
-  bannerText: 'Donec sed odio dui.',
+  bannerText: 'Giving is a fundamental part of a healthy, full life.',
   bannerImage: bannerImage,
   bannerImageOverlay: 'overlayFalse',
   height: 'halfHeight'
 }
 
-const theThriveFoundation = {
-  colorScheme: 'white',
-  title: 'The Thrive Foundation',
-  sectionWidth: 'twoThirdsWidth',
-  sectionText: ['Hello there... ' +
-  'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
-  'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
-  'Curabitur blandit tempus porttitor.']
+const thriveFoundation = {
+  sectionClass: 'default',
+  title: 'Thrive Foundation',
+  image: thriveFoundationImage,
+  hasLabel: 'labelFalse',
+  label: {
+    label: 'Thrive',
+    labelColor: 'defaultLabel'
+  },
+  sectionText: [
+    `The Thrive Foundation is a 501(c)3 organization that brings free Thrive trainings to
+    nonprofit and civic leaders who are on the front lines of serving others.
+    Leaders in the public and nonprofit sectors are at particular risk of burnout,
+    believing that the world rests on their shoulders and thus they have to work around
+    the clock to solve the world's problems. The Thrive Foundation helps teach
+    these people that putting their own oxygen mask on first will make them
+    more effective at helping others. You can donate to the Thrive Foundation
+    on Crowdrise below.`
+  ],
+  hasButton: 'buttonTrue',
+  button: {
+    buttonText: 'Donate Now',
+    linkTo: 'https://www.crowdrise.com/',
+    buttonStyle: 'violet-medium'
+  }
 }
 
 const trainNonProfits = {
-  alignment: 'center',
-  colorScheme: 'default',
-  title: 'We Train Non-Profits',
-  sectionWidth: 'twoThirdsWidth',
-  sectionText: ['Interested in bringing Thrive trainings to your workplace? ' +
-  'Email our director of trainings Joey Hubbard at jh@thriveglobal.com'],
-  button: {
-    buttonText: 'Get in Touch',
-    linkTo: 'mailto:jh@thriveglobal.com',
-    buttonStyle: 'teal'
-  }
+  sectionClass: 'white',
+  sectionWidth: 'halfWidth',
+  divider: 'dividerTrue',
+  textAlign: 'textCenter',
+  title: 'Thrive Global\'s Nonprofit Trainings',
+  sectionText: [
+    `Thrive Global is proud to support nonprofit organizations including Khan Academy,
+    Global Citizen, Alliance for Children's Rights, EduCare Foundation
+    and Lean In with free trainings to enhance well-being and performance.`
+  ]
 }
 
 const globalPovertyProject = {
   bgColor: 'white',
-  imageShape: 'squareImage',
-  quoteImage: quoteImage,
-  citation: 'Hugh Evans - CEO Global Poverty Project',
+  quoteFont: 'Playfair',
+  containerBorders: 'bordersTrue',
+  quoteImage: hughImage,
+  citation: 'Hugh Evans, CEO Global Poverty Project',
   quote: ['The training was truly an eye opener as it reminded us of the importance of ' +
   'living out our true purpose, and doing so in a way that will ensure our team is sustainable in the long-term.']
 }
 
-const RichardDavidson = {
-  author: 'Richard Davidson',
-  details: ['this the details Cras justo odio, dapibus ac ' +
-  'facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.'],
-  title: 'Why Giving is Good',
+const nonProfitEmail = {
+  sectionClass: 'tagalong',
+  sectionWidth: 'halfWidth',
+  textAlign: 'textCenter',
+  header: 'headerFalse',
+  sectionText: [
+    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail mailto:nonprofits@thriveglobal.com'
+  ]
+}
+
+const GivingisGood = {
+  details: [
+    `Whether it's volunteering, donating or just smiling at someone on the street,
+    giving is a scientifically-proven way to increase your well-being.
+    Read more stories at Thrive Global's Giving section. `
+  ],
+  hasAuthor: 'authorFalse',
+  title: 'Why Giving is Good For You',
   asset: 'richard.jpg',
   externalLink: {
-    linkText: 'Get in Touch',
-    linkTo: 'http://www.richardjdavidson.com',
+    linkText: 'Read More',
+    linkTo: '//stories.thriveglobal.com/giving/',
     linkStyle: 'white'
   }
 }
 
-const minneapolisQuote = {
-  bgColor: 'white',
-  citation: 'Quote Source - Minneapolis',
-  quote: ['Through our Foundation, Thrive Global offers free Thrive trainings to non-profit and civic ' +
-  'leaders who are on the front lines of serving others, including Khan Academy, Global Citizen, ' +
-  'Alliance for Children\'s Rights, EduCare Foundation, and Lean In, as well as mayors ' +
-  '(along with their teams) around the world. First up are the mayors of Boston, Minneapolis, Oakland, and Providence.']
+const mayorHeading = {
+  sectionClass: 'default',
+  sectionWidth: 'halfWidth',
+  divider: 'dividerTrue',
+  textAlign: 'textCenter',
+  title: 'Mayors',
+  sectionText: [
+    `Thrive Global is pleased to be working with the following U.S. mayors and their teams
+     to support civic leaders on the front lines of serving others, beginning with:`
+  ]
+}
+
+const mayorQuote = {
+  bgColor: 'gray',
+  quoteFont: 'Playfair',
+  containerBorders: 'bordersTrue',
+  hasImage: 'imageFalse',
+  citation: 'Jorge Elorza, Mayor of Providence',
+  quote: [
+    `I have seen firsthand the hard work that non-profit and public sectors employees
+    put into their work and I know that providing them with the resources and trainings
+    they need is critical to supporting their quality of life both at work and at home.`
+  ]
 }
 
 export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
       <Banner {...bannerProps} />
-      <CTASection {...theThriveFoundation} />
-      <CTASection {...trainNonProfits} />
+      <FullWidthTwoCol {...thriveFoundation} />
+      <FullWidthText {...trainNonProfits} />
       <QuoteSection {...globalPovertyProject} />
-      <FeaturedStory {...RichardDavidson} />
-      <QuoteSection {...minneapolisQuote} />
+      <FullWidthText {...nonProfitEmail} />
+      <FullWidthText {...mayorHeading} />
+      <QuoteSection {...mayorQuote} />
+      <FeaturedStory {...GivingisGood} />
     </section>
   </section>
 )

@@ -4,24 +4,24 @@ import { getLocalStorageHeaders } from 'lib/http'
 
 const sessionSelector = state => state[KEY]
 
-export const loginSelector = createSelector(
-  [ sessionSelector ],
-  (store) => {
-    const { requestPending, userData } = store
-
-    return {
-      renderLoginForm: !requestPending && !userData,
-      userData
-    }
-  }
-)
-
 export const isLoggedIn = createSelector(
   [ sessionSelector ],
   (store) => {
     const { userData } = store
 
     return { isLoggedIn: !!userData }
+  }
+)
+
+export const loginSelector = createSelector(
+  [ sessionSelector, isLoggedIn ],
+  (store, { isLoggedIn }) => {
+    const { userData, requestPending } = store
+
+    return {
+      renderLoginForm: !isLoggedIn && !requestPending,
+      userData
+    }
   }
 )
 
