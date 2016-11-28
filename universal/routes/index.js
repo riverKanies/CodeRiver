@@ -10,6 +10,7 @@ import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
+import Interests from 'layouts/Interests'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
 // import Engage from 'layouts/Engage'
@@ -69,6 +70,10 @@ export const createRoutes = (store) => ([
       {
         path: 'pulse',
         component: Pulse
+      },
+      {
+        path: 'interests',
+        component: Interests
       },
       {
         path: 'pulsescore',

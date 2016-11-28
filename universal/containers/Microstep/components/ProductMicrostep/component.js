@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
 import { genRedirectToShopify } from 'lib/sso'
+import TwitterShare from 'components/TwitterShare'
 
 type Props = {
   microstep: {
@@ -11,6 +12,7 @@ type Props = {
     body_html: string,
     link: string,
     price: string,
+    share_text: string;
     image: {
       src: string
     }
@@ -22,6 +24,7 @@ type Props = {
 };
 
 const ProductMicrostep = ({ microstep }: Props) => {
+  const { share_text = 'I just completed a microstep' } = microstep
   return (
     <div className={styles.container}>
 
@@ -57,6 +60,7 @@ const ProductMicrostep = ({ microstep }: Props) => {
         </div>
 
       </section>
+      <TwitterShare share_text={share_text} />
     </div>
   )
 }
