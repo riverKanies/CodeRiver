@@ -45,7 +45,7 @@
 
   @media bp-mama-bear {
     max-width: 40rem;
-    line-height: 86%;
+    line-height: 94%;
     padding: 1rem;
     font-size: 3.25em;
     margin: 0 auto;
@@ -64,25 +64,33 @@
   margin-top: 0;
   font-family: MonLight;
 
-  .author {
-    display: block;
-    clear: both;
-    width: 100%;
-
-    &::before {
-      content: 'by';
-      display: inline-block;
-      margin: 0 .25rem 0 0;
-      padding: 0 0;
-      font-family: Playfair;
-      font-style: italic;
-      text-transform: none;
-    }
-  }
-
   @media bp-mama-bear {
     max-width: 40rem;
     margin: 1rem auto 1.5rem auto;
     line-height: 2rem;
   }
+}
+
+.author {
+  display: block;
+  clear: both;
+  width: 100%;
+
+  &::before {
+    content: 'by';
+    display: inline-block;
+    margin: 0 .25rem 0 0;
+    padding: 0 0;
+    font-family: Playfair;
+    font-style: italic;
+    text-transform: none;
+  }
+}
+
+.authorTrue {
+  composes: author;
+}
+
+.authorFalse {
+  display: none;
 }
