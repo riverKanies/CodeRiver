@@ -1,5 +1,5 @@
 import React from 'react'
-import TwoColText from './component'
+import TwoColHeader from './component'
 
 describe('(Component) TwoColText', () => {
   it('should exist', () => {

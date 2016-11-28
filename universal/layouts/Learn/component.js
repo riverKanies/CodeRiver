@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 // Components
-import Banner from 'components/Banner'
+import TwoColHeader from 'components/TwoColHeader'
 import CTASection from 'components/CTASection'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
@@ -15,18 +15,13 @@ import QuoteSection from 'components/QuoteSection'
 import ExternalLink from 'components/ExternalLink'
 
 // Content Import
-import bannerImage from './assets/learnBanner.jpg'
 import kobeImage from './assets/kobe.jpg'
 import ahImage from './assets/ah.jpg'
 
 // Page Content
-const bannerProps = {
-  contentPosition: 'bottomLeft',
-  title: 'Learn & Grow',
-  bannerText: 'Ad sea vidisse appetere evertitur, cu pro ridens efficiendi, duo.',
-  bannerImage: bannerImage,
-  bannerImageOverlay: 'overlayFalse',
-  height: 'twoThirdsHeight'
+const TwoColHeaderProps = {
+  title: 'Grow',
+  subTitle: 'Donec sed odio dui.'
 }
 const learnIntro = {
   sectionClass: 'white',
@@ -167,7 +162,7 @@ const quote = {
 export const LearnView = () => (
   <article className={styles.learnPage}>
     <section className={styles.content}>
-      <Banner {...bannerProps} />
+      <TwoColHeader {...TwoColHeaderProps} />
       <FullWidthText {...learnIntro} />
       <PathwaySection />
       <TwoColText {...howToGrowTwo} />

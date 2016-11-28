@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TwoColHeader
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
@@ -45,6 +45,14 @@
   color: white;
 }
 
+.divider {
+  border-bottom: 1px solid #3c3d41;
+  width: 4rem;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+}
+
 /* Container Styles */
 .container {
   lost-center: containerWidth;
@@ -61,16 +69,19 @@
   margin-bottom: 0;
   padding-bottom: 0;
 }
+.sectionHeader {
+  margin-top: 160px;
+}
 
-/* Title True/False */
+/* Titles True/False */
 .hasTitle {
   lost-column: 1;
   margin: 0 auto babyHeader auto;
   padding: 0 0;
-  float: left;
+  float: none;
   clear: both;
   position: relative;
-  text-align: left;
+  text-align: center;
   color: inherit;
   @media bp-mama-bear {
     width: 100%;
@@ -82,12 +93,39 @@
   h2 {
     text-align: inherit;
     color: inherit;
+    font-family: MonBold;
+    @media bp-papa-bear {
+      margin-top: 100px;
+    }
+  }
+}
+.hasSubTitle {
+  lost-column: 1;
+  margin: 0 auto;
+  padding: 0 0;
+  float: none;
+  clear: both;
+  position: relative;
+  text-align: center;
+  color: inherit;
+  font-family: PlayBlackItalic;
+  h4 {
+    text-align: inherit;
+    color: inherit;
+    font-family: PlayBlackItalic;
+    font-style: italic;
   }
 }
 .titleTrue {
   composes: hasTitle;
 }
 .titleFalse {
+  display: none;
+}
+.subTitleTrue {
+  composes: hasSubTitle;
+}
+.subTitleFalse {
   display: none;
 }
 
