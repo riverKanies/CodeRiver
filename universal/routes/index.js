@@ -12,7 +12,7 @@ import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
-import Engage from 'layouts/Engage'
+// import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -45,6 +45,10 @@ export const createRoutes = (store) => ([
       {
         path: 'pathways/:pathwayId/journeys/:journeyId',
         component: Journey
+      },
+      {
+        path: 'pathways/:id',
+        component: Pathway
       },
       {
         path: 'grow',
