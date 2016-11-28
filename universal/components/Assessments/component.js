@@ -22,7 +22,7 @@ export default function AssessmentsView ({ loggedIn, requestPending, creds, type
   if (!loggedIn) {
     return (
       <div className={styles.AssessmentsLogin}>
-        <p> You must be logged in to do this assessment. <Link to="/login">Click here to login</Link> </p>
+        <p> You must be logged in to do this assessment. <Link to='/login'>Click here to login</Link> </p>
       </div>
     )
   }
