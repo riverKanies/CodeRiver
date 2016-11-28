@@ -36,7 +36,7 @@ const popUpShop = {
   image: popUpImg,
   button: {
     buttonText: 'Learn More',
-    linkTo: 'https://www.thriveglobal.com/popup',
+    linkTo: '/popup',
     buttonStyle: 'violet'
   }
 }
