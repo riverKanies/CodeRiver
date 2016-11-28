@@ -30,7 +30,7 @@ export const assessmentsSelector = createSelector(
   (store, { isLoggedIn }) => {
     const { requestPending } = store
 
-    const creds = getLocalStorageHeaders()
+    const creds = getLocalStorageHeaders() || {}
 
     const accesstoken = creds['access-token']
     const client = creds['client']
