@@ -15,7 +15,7 @@ import hughImage from './assets/hugh.jpg'
 const bannerProps = {
   contentPosition: 'bottomLeft',
   title: 'Don\'t Just Be a Go-Getter, Be a Go-Giver',
-  bannerText: 'Donec sed odio dui.',
+  bannerText: 'Giving is a fundamental part of a healthy, full life.',
   bannerImage: bannerImage,
   bannerImageOverlay: 'overlayFalse',
   height: 'halfHeight'
