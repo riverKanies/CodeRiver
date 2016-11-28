@@ -1,6 +1,7 @@
 @value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
+
 .quoteContainer {
   width: 100%;
   height: auto;
@@ -61,6 +62,17 @@
   }
 }
 
+.bordersTrue {
+  composes: container;
+  border-top: 2px solid lightGray;
+  border-bottom: 2px solid lightGray;
+}
+
+.bordersFalse {
+  composes: container;
+  border-style: none
+}
+
 /* Image Styling */
 .quoteImage {
   lost-column: 1;
@@ -75,10 +87,12 @@
   height: 6.25rem;
   margin: 0 0 1rem 0;
   padding: 0 0;
-  border: 1px solid lightGray;
   border-radius: 3.125rem;
   @media bp-mama-bear {
     margin: 0 0 0 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 4rem;
   }
 }
 
@@ -87,6 +101,14 @@
   width: auto;
   border-radius: 0;
   border: none;
+}
+
+.imageTrue {
+  composes: quoteImage;
+}
+
+.imageFalse {
+  display: none;
 }
 
 /* Quote Section */
@@ -104,17 +126,11 @@
   padding: 0 0;
   float: left;
   position: relative;
-  font-family: MonBold;
   font-size: 1.25em;
   line-height: 160%;
   text-align: left;
   color: bodyCopy;
-  @media bp-mama-bear {
-    font-size: 1.5em;
-  }
-  @media bp-papa-bear {
-    font-size: 1.875em;
-  }
+
   &::before {
     content: '“';
     display: block;
@@ -148,13 +164,35 @@
     }
   }
 }
+
+.Mon {
+  font-family: MonBold;
+
+  @media bp-mama-bear {
+    font-size: 1.5em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.875em;
+  }
+}
+.Playfair {
+  font-family: Playfair;
+
+  @media bp-mama-bear {
+    font-size: 1.5em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.875em;
+  }
+}
+
 .citation {
   width: 100%;
   margin: 0 0;
   padding: 0 0;
   float: left;
   font-family: Mon;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-style: normal;
   line-height: 100%;
   text-align: left;
@@ -168,5 +206,8 @@
     font-family: Playfair;
     font-style: italic;
     text-transform: none;
+  }
+  @media bp-mama-bear {
+    font-size: 1rem;
   }
 }
