@@ -27,7 +27,7 @@ class LoginLayout extends React.Component {
     }
   }
 
-  componentWillUpdate () {
+  componentDidUpdate () {
     const { isLoggedIn } = this.props
     if (isLoggedIn) {
       browserHistory.push('/profile')
@@ -36,7 +36,7 @@ class LoginLayout extends React.Component {
 
   render () {
     return (
-      <LoginForm />
+      <LoginForm {...this.props} />
     )
   }
 }

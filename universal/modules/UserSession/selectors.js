@@ -16,15 +16,14 @@ export const isLoggedIn = createSelector(
 export const loginSelector = createSelector(
   [ sessionSelector, isLoggedIn ],
   (store, { isLoggedIn }) => {
-    const { userData } = store
+    const { userData, requestPending } = store
 
     return {
-      renderLoginForm: !isLoggedIn,
+      renderLoginForm: !isLoggedIn && !requestPending,
       userData
     }
   }
 )
-
 
 export const pulseSelector = createSelector(
   [ sessionSelector, isLoggedIn ],
