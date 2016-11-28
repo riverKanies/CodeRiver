@@ -5,6 +5,7 @@ import dummyImage from './assets/quote_imagePlaceholder.png'
 
 type Props = {
   bgColor: 'default' | 'white' | 'gray' | 'purple',
+  containerBorders: 'bordersTrue' | 'bordersFalse',
   quoteText: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: string,
@@ -21,6 +22,7 @@ const defaultQuote = [
 const defaultImage = dummyImage
 
 const QuoteSection = ({
+  containerBorders = 'bordersFalse',
   bgColor = 'default',
   quote = defaultQuote,
   quoteText = 'Mon',
@@ -31,7 +33,7 @@ const QuoteSection = ({
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
-      <div className={styles.container}>
+      <div className={styles[containerBorders]}>
 
         <section className={styles[hasImage]}>
           <img className={styles[imageShape]} src={quoteImage} />
@@ -47,6 +49,7 @@ const QuoteSection = ({
         </section>
       </div>
     </section>
+
   )
 }
 

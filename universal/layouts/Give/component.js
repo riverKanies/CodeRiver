@@ -63,6 +63,7 @@ const trainNonProfits = {
 const globalPovertyProject = {
   bgColor: 'white',
   imageShape: 'squareImage',
+  containerBorders: 'bordersTrue',
   quoteImage: quoteImage,
   citation: 'Hugh Evans - CEO Global Poverty Project',
   quote: ['The training was truly an eye opener as it reminded us of the importance of ' +
@@ -85,6 +86,7 @@ const RichardDavidson = {
 const minneapolisQuote = {
   bgColor: 'white',
   quoteText: 'Playfair',
+  containerBorders: 'bordersTrue',
   hasImage: 'imageFalse',
   citation: 'Quote Source - Minneapolis',
   quote: ['Through our Foundation, Thrive Global offers free Thrive trainings to non-profit and civic ' +

@@ -1,6 +1,7 @@
 @value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
+
 .quoteContainer {
   width: 100%;
   height: auto;
@@ -59,6 +60,17 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.bordersTrue {
+  composes: container;
+  border-top: 2px solid lightGray;
+  border-bottom: 2px solid lightGray;
+}
+
+.bordersFalse {
+  composes: container;
+  border-style: none
 }
 
 /* Image Styling */
