@@ -89,11 +89,19 @@ class Header extends React.Component {
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <Link id='navEngage' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
-              Engage
+            <Link
+              id='navJournal'
+              to='https://journal.thriveglobal.com/'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Journal
             </Link>
-            <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
-              Learn
+            <Link
+              id='navGrow'
+              to='/grow'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Grow
             </Link>
             <Link
               id='navShop'
@@ -102,11 +110,26 @@ class Header extends React.Component {
               activeClassName={styles.activeRoute}>
               Shop
             </Link>
-            <Link id='navGive' to='/give' className={styles.link} activeClassName={styles.activeRoute}>
+            <Link
+              id='navGive'
+              to='/give'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
               Give
             </Link>
-            <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
-              Thrive
+            <Link
+              id='navGive'
+              to='/give'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Give
+            </Link>
+            <Link
+              id='navApps'
+              to='/apps'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Apps
             </Link>
           </nav>
 
