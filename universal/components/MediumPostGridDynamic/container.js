@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { loadMediumPosts, KEY } from 'modules/MediumPosts'
-import MediumPostGridDynamic from './component'
+import MediumPostGrid from './component'
 import type { MediumPost } from 'lib/types'
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
   requestPending: boolean
 }
 
-export class MediumPostsContainer extends React.Component {
+export class Container extends React.Component {
   props: Props;
 
   componentWillMount () {
@@ -21,7 +21,7 @@ export class MediumPostsContainer extends React.Component {
   }
 
   render () {
-    return <MediumPostGridDynamic
+    return <MediumPostGrid
       posts={this.props.mediumPosts}
       requestPending={this.props.requestPending}
     />
@@ -37,4 +37,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-)(MediumPostsContainer)
+)(Container)
