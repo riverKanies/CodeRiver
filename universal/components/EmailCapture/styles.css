@@ -73,7 +73,11 @@
   padding: 0 0;
   text-align: center;
   color: white;
+  z-index: 500;
   @media bp-mama-bear {
     margin: 0 auto mamaMargin auto;
+  }
+  h2 {
+    color: white;
   }
 }
