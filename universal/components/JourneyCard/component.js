@@ -20,7 +20,7 @@ export default function ({
   id }: Props) {
   return (
     <Link to={`/pathways/${pathwayId}/journeys/${id}`} className={styles.card}>
-      <section className={styles.cardContainer}>
+      <section>
         <span className={styles.imageWrap}>
           <img className={styles.image} src={image} />
         </span>

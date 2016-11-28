@@ -8,6 +8,7 @@ type Props = {
   details: string,
   title: string,
   asset: string,
+  label: string,
   externalLink: any
 }
 
@@ -23,16 +24,17 @@ const FeaturedStory = ({
   author = defaultAuthor,
   details = defaultDetails,
   externalLink = {},
+  label = 'Stories',
   asset = 'kobe.jpg'
 }: Props) => {
   return (
     <section className={styles.container} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
-        <label className={styles.label}>STORIES</label>
+        <label className={styles.label}>{label}</label>
         <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
-          <span className={styles.author}>{author}</span>
+          { author ? <span className={styles.author}>{author}</span> : '' }
         </p>
         <ExternalLink {...externalLink}
         />

@@ -5,7 +5,7 @@ import dummyImage from './assets/postFPO.jpg'
 import ContentLabel from 'components/ContentLabel'
 
 type Props = {
-  cardType: 'half' | 'quarterWhite' | 'quarterBlue',
+  cardType: 'half' | 'halfHeight' | 'quarterWhite' | 'quarterBlue',
   hasImage: 'imageTrue' | 'imageFalse',
   hasSynopsis: 'synopsisTrue' | 'synopsisFalse',
   postTitle: string,
