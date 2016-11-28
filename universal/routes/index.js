@@ -85,7 +85,7 @@ export const createRoutes = (store) => ([
         component: GlassDoor
       },
       {
-        path: 'popupstore',
+        path: 'popup',
         component: PopupStore
       },      
       {
