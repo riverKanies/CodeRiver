@@ -25,7 +25,6 @@ export const loginSelector = createSelector(
   }
 )
 
-
 export const pulseSelector = createSelector(
   [ sessionSelector, isLoggedIn ],
   (store, { isLoggedIn }) => {
