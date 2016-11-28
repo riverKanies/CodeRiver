@@ -4,6 +4,7 @@ import styles from './styles'
 
 type Props = {
   sectionClass: 'default' | 'white' | 'blue' | 'gray',
+  divider: 'dividerFalse' | 'dividerTrue',
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   textAlign: 'textLeft'| 'textCenter' | 'textRight',
   header: 'headerTrue' | 'headerFalse',
@@ -17,6 +18,7 @@ mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
   sectionClass = 'default',
+  divider = 'dividerFalse',
   sectionWidth = 'defaultWidth',
   textAlign = 'textCenter',
   header = 'headerTrue',
@@ -30,6 +32,7 @@ const FullWidthText = ({
           <header className={styles[header]}>
             <h2>{title}</h2>
           </header>
+          <div className={styles[divider]} />
           <section className={styles.sectionContent}>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>

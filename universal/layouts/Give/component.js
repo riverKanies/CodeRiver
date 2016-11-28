@@ -3,8 +3,8 @@
 import React from 'react'
 import styles from './styles'
 import Banner from 'components/Banner'
-import CTASection from 'components/CTASection'
 import QuoteSection from 'components/QuoteSection'
+import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FeaturedStory from 'components/FeaturedStory'
 
@@ -49,17 +49,16 @@ const thriveFoundation = {
 }
 
 const trainNonProfits = {
-  alignment: 'center',
-  colorScheme: 'default',
-  title: 'We Train Non-Profits',
-  sectionWidth: 'twoThirdsWidth',
-  sectionText: ['Interested in bringing Thrive trainings to your workplace? ' +
-  'Email our director of trainings Joey Hubbard at jh@thriveglobal.com'],
-  button: {
-    buttonText: 'Get in Touch',
-    linkTo: 'mailto:jh@thriveglobal.com',
-    buttonStyle: 'teal'
-  }
+  sectionClass: 'default',
+  sectionWidth: 'halfWidth',
+  divider: 'dividerTrue',
+  textAlign: 'textCenter',
+  title: 'Thrive Global\'s Nonprofit Trainings',
+  sectionText: [
+    `Thrive Global is proud to support nonprofit organizations including Khan Academy,
+    Global Citizen, Alliance for Children's Rights, EduCare Foundation
+    and Lean In with free trainings to enhance well-being and performance.`
+  ]
 }
 
 const globalPovertyProject = {
@@ -70,6 +69,16 @@ const globalPovertyProject = {
   citation: 'Hugh Evans, CEO Global Poverty Project',
   quote: ['The training was truly an eye opener as it reminded us of the importance of ' +
   'living out our true purpose, and doing so in a way that will ensure our team is sustainable in the long-term.']
+}
+
+const nonProfitEmail = {
+  sectionClass: 'white',
+  sectionWidth: 'halfWidth',
+  textAlign: 'textCenter',
+  header: 'headerFalse',
+  sectionText: [
+    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail nonprofits@thriveglobal.com'
+  ]
 }
 
 const GivingisGood = {
@@ -106,8 +115,9 @@ export const GiveView = () => (
     <section className={styles.content}>
       <Banner {...bannerProps} />
       <FullWidthTwoCol {...thriveFoundation} />
-      <CTASection {...trainNonProfits} />
+      <FullWidthText {...trainNonProfits} />
       <QuoteSection {...globalPovertyProject} />
+      <FullWidthText {...nonProfitEmail} />
       <FeaturedStory {...GivingisGood} />
       <QuoteSection {...minneapolisQuote} />
     </section>
