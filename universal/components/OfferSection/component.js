@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles'
-import OfferItem from 'components/OfferItem'
+import IconWithText from 'components/IconWithText'
 
 
 const Fakeitems = 
@@ -11,19 +11,23 @@ const Fakeitems =
 {
   title:"Offer item 2",
   description:"description........"
-}]
+},
+{
+  title: "Offer Item 3",
+  description: "description........"
+},
+]
 export const OfferSection = () => {
     return (
-    <div className={styles.SectionContainer}>
-      <h2>What We Offer</h2>
-      <p>Product/Services We Offer</p>
-      <section>
+    <section className={styles.SectionContainer}>
+      <h2 className={styles.title}>What We Offer</h2>
+      <section className={styles.content}>
         {Fakeitems.map(
           item =>
-          <OfferItem {...item} />
+          <IconWithText {...item} />
           )}
       </section>
-    </div> 
+    </section> 
 
   )
 }

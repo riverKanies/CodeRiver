@@ -1,24 +1,16 @@
 import React from 'react'
 import styles from './styles'
-import PartnerItem from 'components/PartnerItem'
+import PartnerDetail from 'components/PartnerDetail'
 
 
 const Fakeitems = 
 [{
-  title: "Partner Item 1",
-  description: "description........"
+  name: "Partner Item 1",
+  detail: "detail........"
 },
 {
-  title:"Partner item 2",
-  description:"description........"
-},
-{
-  title: "Partner Item 3",
-  description: "description........"
-},
-{
-  title:"Partner item 4",
-  description:"description........"
+  name:"Partner item 2",
+  detail:"detail........"
 }];
 
 
@@ -27,12 +19,11 @@ const FakeDescription = "Here are our Partners"
 export const PartnerSection = () => {
     return (
     <section className={styles.SectionContainer}>
-      <h2 styles={styles.title}>Our Partners</h2>
-      <p>Partners</p>
-      <section>
+      <h2 className={styles.title}>Our Partners</h2>
+      <section className={styles.content}>
         {Fakeitems.map(
           item =>
-          <PartnerItem {...item} />
+          <PartnerDetail {...item} />
           )}
       </section>
     </section> 

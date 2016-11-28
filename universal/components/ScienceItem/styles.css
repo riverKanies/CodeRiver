@@ -2,23 +2,18 @@
 @value bp-mama-bear, bp-grand-bear from breakpoints;
 
 .scienceContainer {
-
   @media bp-mama-bear {
     lost-column: 1/2;
   }
   @media bp-grand-bear {
     lost-column: 1/2;
-    padding:5vh
   }
-  max-width:50%;
 }
 
 
 .text {
   lost-column: 1 flex;
-  z-index: 1;
   padding: 0 0 1rem 1rem;
-  align-self: flex-end;
 }
 .image {
   lost-flex-container: row;

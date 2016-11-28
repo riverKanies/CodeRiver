@@ -1,0 +1,17 @@
+.SectionContainer{
+	lost-column: 1 flex;
+	lost-center: containerWidth flex;
+	background-color: white;
+	padding: 2rem 1rem;
+
+
+}
+.title{
+  text-align: center;
+  text-decoration: underline;
+
+}
+.content{
+	width:100%;
+	text-align: center;
+}

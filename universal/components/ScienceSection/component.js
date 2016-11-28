@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './styles'
-import ScienceItem from 'components/ScienceItem'
-
+import IconWithText from 'components/IconWithText'
 
 const Fakeitems = 
 [{
@@ -22,16 +21,10 @@ const Fakeitems =
 },]
 export const ScienceSection = () => {
     return (
-    <div className={styles.SectionContainer}>
+    <section className={styles.SectionContainer}>
       <h2>Science Section</h2>
       <p>Some Science Stuff.......</p>
-      <section>
-        {Fakeitems.map(
-          item =>
-          <ScienceItem {...item} />
-          )}
-      </section>
-    </div> 
+    </section> 
 
   )
 }

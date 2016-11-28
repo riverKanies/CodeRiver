@@ -8,16 +8,21 @@
 
 .content {
   lost-center: 1160px;
+  padding-top:20vh;
 }
 
 .title {
   lost-column: 1;
   margin-bottom: 1rem;
-  padding-left: 5vh;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .SectionContainer{
-	lost-column: 1;
-	padding: 2rem 1rem 1rem 1rem;
+  lost-column: 1;
+  padding: 2rem 1rem;
+  background-color: white;
+
+
 
 }
