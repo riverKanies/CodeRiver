@@ -25,11 +25,16 @@ export const createRoutes = (store) => ([
     component: EmbeddedMicrostep
   },
   {
-    path: '/',
+    path: '/coming-soon',
     component: TempHomePage
   },
   {
-    path: '/main',
+    path: '/home',
+    component: LayoutCore,
+    indexRoute: Home,
+  },
+  {
+    path: '/',
     component: LayoutCore,
     indexRoute: Home,
     childRoutes: [

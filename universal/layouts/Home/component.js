@@ -255,6 +255,10 @@ const thrivePulse = {
     linkStyle: 'white'
   }
 }
+
+if (window.location.pathname == '/') {
+  window.location = '/coming-soon';
+}
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
