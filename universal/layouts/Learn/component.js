@@ -21,7 +21,7 @@ import ahImage from './assets/ah.jpg'
 // Page Content
 const TwoColHeaderProps = {
   title: 'Grow',
-  subTitle: 'Donec sed odio dui.'
+  subTitle: 'It\'s time to go from knowing what to do to actually doing it.'
 }
 const learnIntro = {
   sectionClass: 'white',

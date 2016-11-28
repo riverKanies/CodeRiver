@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TwoColHeader
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack, medGray from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
@@ -154,6 +154,6 @@
     float: left;
     word-wrap: break-word;
     text-align: inherit;
-    color: inherit;
+    color: medGray;
   }
 }
