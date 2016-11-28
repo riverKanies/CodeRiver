@@ -118,13 +118,6 @@ class Header extends React.Component {
               Give
             </Link>
             <Link
-              id='navGive'
-              to='/give'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Give
-            </Link>
-            <Link
               id='navApps'
               to='/apps'
               className={styles.link}

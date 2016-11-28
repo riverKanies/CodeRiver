@@ -47,11 +47,7 @@ export const createRoutes = (store) => ([
         component: Journey
       },
       {
-        path: 'pathways/:id',
-        component: Pathway
-      },
-      {
-        path: 'learn',
+        path: 'grow',
         component: Learn
       },
       {
@@ -85,10 +81,6 @@ export const createRoutes = (store) => ([
       {
         path: 'welcome',
         component: Welcome
-      },
-      {
-        path: 'engage',
-        component: Engage
       },
       {
         path: 'profile',
