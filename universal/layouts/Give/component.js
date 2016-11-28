@@ -2,23 +2,19 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Banner from 'components/Banner'
 import QuoteSection from 'components/QuoteSection'
+import TextBanner from 'components/TextBanner'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FeaturedStory from 'components/FeaturedStory'
 
-import bannerImage from './assets/givingBanner.jpg'
 import thriveFoundationImage from './assets/thriveFoundation.jpg'
 import hughImage from './assets/hugh.jpg'
 
-const bannerProps = {
-  contentPosition: 'bottomLeft',
-  title: 'Don\'t Just Be a Go-Getter, Be a Go-Giver',
-  bannerText: 'Giving is a fundamental part of a healthy, full life.',
-  bannerImage: bannerImage,
-  bannerImageOverlay: 'overlayFalse',
-  height: 'halfHeight'
+const giveBanner = {
+  hasTitle: 'titleTrue',
+  subTitle: 'Giving is a fundamental part of a healthy, full life.' + ' Don\'t Just Be A Go-Getter. Be A Go-Giver.',
+  title: 'Give'
 }
 
 const thriveFoundation = {
@@ -125,7 +121,7 @@ const mayorQuote = {
 export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
-      <Banner {...bannerProps} />
+      <TextBanner {...giveBanner} />
       <FullWidthTwoCol {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
       <QuoteSection {...globalPovertyProject} />
