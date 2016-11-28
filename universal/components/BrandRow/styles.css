@@ -32,13 +32,6 @@
   }
 }
 
-.productTitle {
-  color: #111;
-  &:hover {
-    color: #999;
-  }
-}
-
 .imageWrap {
   position: relative;
   lost-column: 1;
@@ -49,24 +42,5 @@
   }
   @media bp-mama-bear {
     margin-left: 2em;
-  }
-}
-
-.description {
-  clear: both;
-  width: 100%;
-  text-align: center;
-  padding: 1em;
-  color: black;
-
-  h4 {
-    font-family: Mon;
-    font-size: 1.1em;
-  }
-
-  p {
-    font-family: MonLight;
-    width: 100%;
-    margin-top: 0
   }
 }
