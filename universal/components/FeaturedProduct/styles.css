@@ -86,9 +86,11 @@
   width: 100%;
   text-align: center;
   padding: 1em;
+  color: black;
 
   h4 {
     font-family: Mon;
+    font-size: 1.1em;
   }
 
   p {
