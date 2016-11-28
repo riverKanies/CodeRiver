@@ -90,7 +90,7 @@
   @media bp-papa-bear {
     margin: 0 auto papaHeader auto;
   }
-  h2 {
+  h1 {
     text-align: inherit;
     color: inherit;
     font-family: MonBold;

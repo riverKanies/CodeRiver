@@ -37,7 +37,7 @@ const TwoColHeader = ({
     <section className={styles[bgColor][marginBottom]}>
       <div className={styles.container}>
         <header className={styles[hasTitle]}>
-          <h2>{title}</h2>
+          <h1>{title}</h1>
         </header>
         <div className={styles.divider} />
         <div className={styles[hasSubTitle]}>
