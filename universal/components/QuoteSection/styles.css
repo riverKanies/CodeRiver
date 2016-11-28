@@ -104,17 +104,11 @@
   padding: 0 0;
   float: left;
   position: relative;
-  font-family: MonBold;
   font-size: 1.25em;
   line-height: 160%;
   text-align: left;
   color: bodyCopy;
-  @media bp-mama-bear {
-    font-size: 1.5em;
-  }
-  @media bp-papa-bear {
-    font-size: 1.875em;
-  }
+
   &::before {
     content: '“';
     display: block;
@@ -148,6 +142,28 @@
     }
   }
 }
+
+.Mon {
+  font-family: MonBold;
+
+  @media bp-mama-bear {
+    font-size: 1.5em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.875em;
+  }
+}
+.Playfair {
+  font-family: Playfair;
+
+  @media bp-mama-bear {
+    font-size: 1.5em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.875em;
+  }
+}
+
 .citation {
   width: 100%;
   margin: 0 0;

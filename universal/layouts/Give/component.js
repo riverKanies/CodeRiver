@@ -38,7 +38,6 @@ const thriveFoundation = {
     more effective at helping others. You can donate to the Thrive Foundation
     on Crowdrise below.`
   ],
-  // image: 'string',
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Donate Now',
@@ -85,6 +84,7 @@ const RichardDavidson = {
 
 const minneapolisQuote = {
   bgColor: 'white',
+  quoteText: 'Playfair',
   citation: 'Quote Source - Minneapolis',
   quote: ['Through our Foundation, Thrive Global offers free Thrive trainings to non-profit and civic ' +
   'leaders who are on the front lines of serving others, including Khan Academy, Global Citizen, ' +
