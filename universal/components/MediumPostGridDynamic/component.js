@@ -51,7 +51,7 @@ export default class MediumPostGridDynamic extends React.Component {
     /* eslint-enable */
   }
 
-  renderPost (index) {
+  renderPost (index: number) {
     const { posts } = this.props
 
     const s = [
