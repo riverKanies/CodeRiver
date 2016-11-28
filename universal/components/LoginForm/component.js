@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react'
+import FacebookAuth from 'components/FacebookAuth'
 import { Field } from 'redux-form'
 import Button from 'components/Button'
 import Input from 'components/Input'
@@ -27,6 +28,7 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
 type signupProps = {
   renderField: string,
   handleSubmit: Function,
+  handleFacebook: Function,
   submitting: boolean,
   valid: boolean,
 };
@@ -36,6 +38,9 @@ const LoginForm = (props: signupProps) => {
     <section className={styles.container}>
       <div className={styles.headerRow}>
         <h2>Log In</h2>
+      </div>
+      <div className={styles.headerRow}>
+        <FacebookAuth />
       </div>
       <form>
         <GenericFormError {...props} />

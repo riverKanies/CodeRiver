@@ -1,14 +1,17 @@
 /* @flow */
 import React from 'react'
 import LoginForm from 'components/LoginForm'
+import { isLoggedIn } from 'modules/UserSession/selectors'
 import { registerPostLoginSSO } from 'modules/UserSession'
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router'
 
 type Props = {
   location: {
     query: Object
   },
-  dispatch: Function
+  dispatch: Function,
+  isLoggedIn: boolean
 }
 
 class LoginLayout extends React.Component {
@@ -24,11 +27,18 @@ class LoginLayout extends React.Component {
     }
   }
 
+  componentDidUpdate () {
+    const { isLoggedIn } = this.props
+    if (isLoggedIn) {
+      browserHistory.push('/profile')
+    }
+  }
+
   render () {
     return (
-      <LoginForm />
+      <LoginForm {...this.props} />
     )
   }
 }
 
-export default connect(() => ({}))(LoginLayout)
+export default connect(isLoggedIn)(LoginLayout)

@@ -5,6 +5,7 @@ import GenericFormError from 'components/GenericFormError'
 import Button from 'components/Button'
 import Input from 'components/Input'
 import styles from './styles'
+import FacebookAuth from 'components/FacebookAuth'
 
 type renderSubmitField = {
   valid: boolean,
@@ -27,6 +28,7 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
 type signupProps = {
   renderField: string,
   handleSubmit: Function,
+  handleFacebook: Function,
   submitting: boolean,
   valid: boolean,
   message: string
@@ -37,6 +39,9 @@ const SignUpForm = (props: signupProps) => {
     <section className={styles.container}>
       <div className={styles.headerRow}>
         <h2>Sign up to start thriving</h2>
+      </div>
+      <div className={styles.headerRow}>
+        <FacebookAuth />
       </div>
       <form>
         <GenericFormError {...props} />
