@@ -219,7 +219,7 @@
       height: imgCardHalfMama;
     }
     @media bp-papa-bear {
-      height: imgCardHalfBaby;
+      height: 4.375rem;
     }
     &::after {
       position: relative;
@@ -299,7 +299,7 @@
       height: imgCardHalfMama;
     }
     @media bp-papa-bear {
-      height: imgCardHalfBaby;
+      height: 4.375rem;
     }
     &::after {
       position: relative;
