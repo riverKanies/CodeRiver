@@ -4,6 +4,7 @@ import Microsteps from 'layouts/Microsteps'
 import Give from 'layouts/Give'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
+import TempHomePage from 'layouts/TempHomePage'
 import Learn from 'layouts/Learn'
 import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
@@ -25,6 +26,10 @@ export const createRoutes = (store) => ([
   },
   {
     path: '/',
+    component: TempHomePage
+  },
+  {
+    path: '/main',
     component: LayoutCore,
     indexRoute: Home,
     childRoutes: [
