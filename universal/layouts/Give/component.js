@@ -5,6 +5,7 @@ import styles from './styles'
 import Banner from 'components/Banner'
 import CTASection from 'components/CTASection'
 import QuoteSection from 'components/QuoteSection'
+import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FeaturedStory from 'components/FeaturedStory'
 
 import bannerImage from './assets/givingBanner.jpg'
@@ -19,14 +20,31 @@ const bannerProps = {
   height: 'halfHeight'
 }
 
-const theThriveFoundation = {
-  colorScheme: 'white',
-  title: 'The Thrive Foundation',
-  sectionWidth: 'twoThirdsWidth',
-  sectionText: ['Hello there... ' +
-  'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
-  'Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. ' +
-  'Curabitur blandit tempus porttitor.']
+const thriveFoundation = {
+  sectionClass: 'default',
+  title: 'Thrive Foundation',
+  hasLabel: 'labelFalse',
+  label: {
+    label: 'Thrive',
+    labelColor: 'defaultLabel'
+  },
+  sectionText: [
+    `The Thrive Foundation is a 501(c)3 organization that brings free Thrive trainings to
+    nonprofit and civic leaders who are on the front lines of serving others.
+    Leaders in the public and nonprofit sectors are at particular risk of burnout,
+    believing that the world rests on their shoulders and thus they have to work around
+    the clock to solve the world's problems. The Thrive Foundation helps teach
+    these people that putting their own oxygen mask on first will make them
+    more effective at helping others. You can donate to the Thrive Foundation
+    on Crowdrise below.`
+  ],
+  // image: 'string',
+  hasButton: 'buttonTrue',
+  button: {
+    buttonText: 'Donate Now',
+    linkTo: 'https://www.crowdrise.com/',
+    buttonStyle: 'violet-medium'
+  }
 }
 
 const trainNonProfits = {
@@ -78,7 +96,7 @@ export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
       <Banner {...bannerProps} />
-      <CTASection {...theThriveFoundation} />
+      <FullWidthTwoCol {...thriveFoundation} />
       <CTASection {...trainNonProfits} />
       <QuoteSection {...globalPovertyProject} />
       <FeaturedStory {...RichardDavidson} />
