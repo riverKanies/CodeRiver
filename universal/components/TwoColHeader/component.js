@@ -13,7 +13,7 @@ type Props = {
 
 const defaultText = ['Hello, I am some text!', 'I am also text!']
 
-const TwoColText = ({
+const TwoColHeader = ({
   bgColor = 'default',
   marginBottom = 'marginTrue',
   hasTitle = 'titleFalse',
@@ -40,4 +40,4 @@ const TwoColText = ({
   )
 }
 
-export default TwoColText
+export default TwoColHeader
