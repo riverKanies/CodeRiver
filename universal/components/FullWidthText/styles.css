@@ -45,6 +45,15 @@
   }
 }
 
+.tagalong {
+  composes: fullWidthText;
+  padding-top: 0;
+  background: white;
+  * {
+    color: bodyCopy;
+  }
+}
+
 .container {
   lost-center: containerWidth;
   margin: 0 auto;
@@ -121,6 +130,17 @@
 }
 .headerFalse {
   display: none;
+}
+
+.dividerFalse {
+  display: none;
+}
+
+.dividerTrue {
+  display: inline-block;
+  width: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid black;
 }
 
 .sectionContent {

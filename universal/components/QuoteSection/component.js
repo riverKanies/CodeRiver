@@ -5,8 +5,11 @@ import dummyImage from './assets/quote_imagePlaceholder.png'
 
 type Props = {
   bgColor: 'default' | 'white' | 'gray' | 'purple',
+  containerBorders: 'bordersTrue' | 'bordersFalse',
+  quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: string,
+  hasImage: 'imageTrue' | 'imageFalse',
   quoteImage: any,
   imageShape: 'roundImage' | 'squareImage'
 };
@@ -19,27 +22,29 @@ const defaultQuote = [
 const defaultImage = dummyImage
 
 const QuoteSection = ({
+  containerBorders = 'bordersFalse',
   bgColor = 'default',
   quote = defaultQuote,
+  quoteFont = 'Mon',
   citation = 'Arriana Huffington',
+  hasImage = 'imageTrue',
   quoteImage = defaultImage,
   imageShape = 'roundImage'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
-      <div className={styles.container}>
-
-        <section className={styles.quoteImage}>
+      <div className={styles[containerBorders]}>
+        <section className={styles[hasImage]}>
           <img className={styles[imageShape]} src={quoteImage} />
         </section>
-
         <section className={styles.quoteSection}>
-          <q className={styles.quote}>
-            {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
-          </q>
-          <cite className={styles.citation}>{citation}</cite>
+          <section className={styles[quoteFont]}>
+            <q className={styles.quote}>
+              {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
+            </q>
+            <cite className={styles.citation}>{citation}</cite>
+          </section>
         </section>
-
       </div>
     </section>
   )
