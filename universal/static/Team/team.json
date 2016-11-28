@@ -92,7 +92,7 @@
   {
     "name": "Maria Ciaravino",
     "title": "Executive Assistant",
-    "image": "/Team/images/image",
+    "image": "/Team/images/Maria_C.jpg",
     "bio": "Maria is the Executive Assistant to Arianna Huffington at Thrive Global. A New York native, Maria spent the last 16 years in Los Angeles executive assisting at companies such as the Carsey Werner Company and Wonderful Company. She is a Rutgers University alumni and enjoys golf and photography in her spare time. She believes in 8 hours of sleep for optimum health!"
   },
   {
@@ -134,7 +134,7 @@
   {
     "name": "Renee Wong",
     "title": "Director of Commerce",
-    "image": "/Team/images/image",
+    "image": "/Team/images/Renee_Wong.jpg",
     "bio": "Renée is the Director of Commerce at Thrive Global. She has over 10 years of experience in management advisory, implementation, logistics, and finance with the United Nations (New York), Standard Chartered Bank (Shanghai), Clinton Health Access Initiative (Malawi & New York), Merrill Lynch (New York), and KPMG (Vancouver). Most recently, she accelerated the launch of health commodity and technology products in over 30 countries as Team Lead on a joint initiative between the Clinton Health Access Initiative's Global Markets Team and the Gates Foundation. In her spare time, she loves playing squash, traveling, and reading."
   },  
   {
@@ -146,13 +146,25 @@
   {
     "name": "Samantha Felix",
     "title": "Head of Audience and Analytics",
-    "image": "/Team/images/image",
+    "image": "/Team/images/Samantha_felix_2.jpg",
     "bio": "Samantha is the Head of Audience and Analytics at Thrive Global. She has ten years of experience running digital media strategy for companies and publishers of various sizes. Previously she was head of audience for Mic Network, managing a team of 13 people covering strategy across all platforms. Before Mic, she was the social media managing editor for Thrillist Media Group and spent five years in management consulting. Samantha has a master of arts in comparative literature and a bachelor of arts in literature from Chapman University."
   },  
   {
     "name": "Samantha Winkelman",
     "title": "Head of Media Operations",
     "image": "/Team/images/Samantha_Winkelman.jpg",
+    "bio": "<p>Samantha Winkelman is the Head of Media Operations at Thrive Global, where she collaborates across teams to create processes and growth strategies for the editorial and business arms of the media platform.</p><p>Prior to this, Samantha was at Gawker Media for over six years, where she built their advertising strategy team, worked with revenue and editorial teams to drive partnerships with key advertisers, and established processes to scale creative development. She also spent time at Redscout, a strategy firm, where she led brand and innovation projects.</p><p>Samantha’s obsessions range from beautiful design and typography to business literature about ownership mentality to insidery media tweets to cheese.</p>"
+  },
+  {
+    "name": "Agapi S",
+    "title": "Title Goes Here" ,
+    "image": "/Team/images/Agapi_S.jpg",
+    "bio": "<p>Samantha Winkelman is the Head of Media Operations at Thrive Global, where she collaborates across teams to create processes and growth strategies for the editorial and business arms of the media platform.</p><p>Prior to this, Samantha was at Gawker Media for over six years, where she built their advertising strategy team, worked with revenue and editorial teams to drive partnerships with key advertisers, and established processes to scale creative development. She also spent time at Redscout, a strategy firm, where she led brand and innovation projects.</p><p>Samantha’s obsessions range from beautiful design and typography to business literature about ownership mentality to insidery media tweets to cheese.</p>"
+  },
+   {
+    "name": "Dana Zucker",
+    "title": "Title Goes Here",
+    "image": "/Team/images/Dana_Zucker.png",
     "bio": "<p>Samantha Winkelman is the Head of Media Operations at Thrive Global, where she collaborates across teams to create processes and growth strategies for the editorial and business arms of the media platform.</p><p>Prior to this, Samantha was at Gawker Media for over six years, where she built their advertising strategy team, worked with revenue and editorial teams to drive partnerships with key advertisers, and established processes to scale creative development. She also spent time at Redscout, a strategy firm, where she led brand and innovation projects.</p><p>Samantha’s obsessions range from beautiful design and typography to business literature about ownership mentality to insidery media tweets to cheese.</p>"
   }
 ]
