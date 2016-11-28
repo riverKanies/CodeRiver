@@ -21,6 +21,7 @@
   float: left;
   position: relative;
   color: bodyCopy;
+  overflow: hidden;
   /* Card Label */
   > i {
    display: block;
@@ -183,6 +184,52 @@
   .footer {
     width: 100%;
     margin: 2.5rem auto;
+    padding: .625rem 1.25rem;
+    background: rgba(0, 0, 0, .2);
+    border-radius: .25rem;
+  }
+  .authorWrap {
+    display: block;
+    float: right;
+    text-align: right;
+    color: white;
+  }
+  &:hover {
+    p {
+      color: rgba( 255, 255, 255, 1);
+    }
+  }
+}
+.halfHeight{
+  composes: postCard;
+  width: 100%;
+  height: auto;
+  float: left;
+  background: gradientCardThrive;
+  @media bp-papa-bear {
+    lost-masonry-column: 1/2 8px;
+    margin-bottom: mediumGutter;
+  }
+  > i {
+    top: 1.25rem;
+    right: 1.25rem;
+    left: auto;
+  }
+  .postContent {
+    height: imgCardHalfBaby;
+    padding: 0 2rem;
+    @media bp-mama-bear {
+      height: imgCardHalfMama;
+      padding: 0 25%%;
+    }
+    @media bp-papa-bear {
+      height: imgCardHalfPapa;
+      padding: 0 5.125rem;
+    }
+  }
+  .footer {
+    width: 100%;
+    margin: 0 auto 2.5rem auto;
     padding: .625rem 1.25rem;
     background: rgba(0, 0, 0, .2);
     border-radius: .25rem;

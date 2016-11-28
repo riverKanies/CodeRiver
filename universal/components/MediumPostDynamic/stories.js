@@ -9,6 +9,7 @@ const notes = 'This story demonstrates the props that can be passed to MediumPos
 
 const cardType = [
   'half',
+  'halfHeight',
   'quarterWhite',
   'quarterBlue'
 ]
