@@ -6,6 +6,7 @@ import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
+import MayorSection from 'components/MayorSection'
 import FeaturedStory from 'components/FeaturedStory'
 
 import thriveFoundationImage from './assets/thriveFoundation.jpg'
@@ -94,7 +95,7 @@ const GivingisGood = {
 }
 
 const mayorHeading = {
-  sectionClass: 'default',
+  sectionClass: 'gray',
   sectionWidth: 'halfWidth',
   divider: 'dividerTrue',
   textAlign: 'textCenter',
@@ -127,6 +128,7 @@ export const GiveView = () => (
       <QuoteSection {...globalPovertyProject} />
       <FullWidthText {...nonProfitEmail} />
       <FullWidthText {...mayorHeading} />
+      <MayorSection />
       <QuoteSection {...mayorQuote} />
       <FeaturedStory {...GivingisGood} />
     </section>

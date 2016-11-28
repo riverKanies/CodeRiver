@@ -3,9 +3,9 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
-import TwoColHeader from './component'
+import TextBanner from './component'
 
-const notes = 'This story demonstrates the props that can be passed to TwoColHeader'
+const notes = 'This story demonstrates the props that can be passed to TextBanner'
 
 const props = {
   bgColor: [
@@ -15,10 +15,6 @@ const props = {
     'purple',
     'blue'
   ],
-  marginBottom: [
-    'marginTrue',
-    'marginFalse'
-  ],
   hasTitle: [
     'titleTrue',
     'titleFalse'
@@ -26,18 +22,14 @@ const props = {
   title: 'Title'
 }
 
-storiesOf('TwoColHeader', module)
+storiesOf('TextBanner', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <TwoColHeader
+        <TextBanner
           bgColor={select('Background Color', props.bgColor, props.bgColor[0])}
-          marginBottom={select('Need a bottom margin?', props.marginBottom, props.marginBottom[0])}
-          hasTitle={select('Does This Need a Title', props.hasTitle, props.hasTitle[0])}
           title={text('Title', props.title)}
-          colTextOne={text('Column One Text', props.title)}
-          colTextTwo={text('Column Two Text', props.title)}
         />
       </WithNotes>
     )
