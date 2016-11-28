@@ -257,7 +257,7 @@ const thrivePulse = {
   }
 }
 
-//TODO: GET RID OF THIS POST LAUNCH
+// TODO: GET RID OF THIS POST LAUNCH
 if (window.location.pathname === '/') {
   browserHistory.push('/coming-soon')
 }
