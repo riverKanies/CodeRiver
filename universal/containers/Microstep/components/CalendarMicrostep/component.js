@@ -2,6 +2,7 @@ import React from 'react'
 import marked from 'marked'
 import styles from './styles'
 import ExternalLink from 'components/ExternalLink'
+import TwitterShare from 'components/TwitterShare'
 
 function renderDescription (description) {
   return (
@@ -100,15 +101,7 @@ export default function (props: any) {
           />
         </div>
       </div>
-      <div className={styles.twitter}>
-        <a
-          className='twitter-share-button'
-          data-size='small'
-          href={`https://twitter.com/intent/tweet?text=${share_text}`}
-        >
-          Share
-        </a>
-      </div>
+      <TwitterShare share_text={share_text} />
     </div>
   )
 }

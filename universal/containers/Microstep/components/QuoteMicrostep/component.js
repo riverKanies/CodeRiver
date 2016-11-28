@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import marked from 'marked'
+import TwitterShare from 'components/TwitterShare'
 
 type Props = {
   microstep: {
@@ -15,15 +16,7 @@ const QuoteMicrostep = ({ microstep }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.content} dangerouslySetInnerHTML={{__html: marked(description)}} />
-      <div className={styles.twitter}>
-        <a
-          className='twitter-share-button'
-          data-size='small'
-          href={`https://twitter.com/intent/tweet?text=${share_text}`}
-        >
-          Share
-        </a>
-      </div>
+      <TwitterShare share_text={share_text} />
     </div>
   )
 }

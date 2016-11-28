@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
 import { genRedirectToShopify } from 'lib/sso'
+import TwitterShare from 'components/TwitterShare'
 
 type Props = {
   microstep: {
@@ -59,15 +60,7 @@ const ProductMicrostep = ({ microstep }: Props) => {
         </div>
 
       </section>
-      <div className={styles.twitter}>
-        <a
-          className='twitter-share-button'
-          data-size='small'
-          href={`https://twitter.com/intent/tweet?text=${share_text}`}
-        >
-          Share
-        </a>
-      </div>
+      <TwitterShare share_text={share_text} />
     </div>
   )
 }
