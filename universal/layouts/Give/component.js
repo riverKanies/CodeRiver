@@ -85,6 +85,7 @@ const RichardDavidson = {
 const minneapolisQuote = {
   bgColor: 'white',
   quoteText: 'Playfair',
+  hasImage: 'imageFalse',
   citation: 'Quote Source - Minneapolis',
   quote: ['Through our Foundation, Thrive Global offers free Thrive trainings to non-profit and civic ' +
   'leaders who are on the front lines of serving others, including Khan Academy, Global Citizen, ' +

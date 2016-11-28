@@ -89,6 +89,14 @@
   border: none;
 }
 
+.imageTrue {
+  composes: quoteImage;
+}
+
+.imageFalse {
+  display: none;
+}
+
 /* Quote Section */
 .quoteSection {
   lost-column: 1;

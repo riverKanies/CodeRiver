@@ -8,6 +8,7 @@ type Props = {
   quoteText: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: string,
+  hasImage: 'imageTrue' | 'imageFalse',
   quoteImage: any,
   imageShape: 'roundImage' | 'squareImage'
 };
@@ -24,6 +25,7 @@ const QuoteSection = ({
   quote = defaultQuote,
   quoteText = 'Mon',
   citation = 'Arriana Huffington',
+  hasImage = 'imageTrue',
   quoteImage = defaultImage,
   imageShape = 'roundImage'
 }: Props) => {
@@ -31,7 +33,7 @@ const QuoteSection = ({
     <section className={styles[bgColor]}>
       <div className={styles.container}>
 
-        <section className={styles.quoteImage}>
+        <section className={styles[hasImage]}>
           <img className={styles[imageShape]} src={quoteImage} />
         </section>
 
