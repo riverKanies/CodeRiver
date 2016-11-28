@@ -41,7 +41,7 @@ const TwoColHeader = ({
         </header>
         <div className={styles.divider} />
         <div className={styles[hasSubTitle]}>
-          <h4>{subTitle}</h4>
+          <h3>{subTitle}</h3>
         </div>
         <section className={styles.columnWrap}>
           <div className={styles.column}>

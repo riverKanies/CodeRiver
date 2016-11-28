@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TwoColHeader
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack, medGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
 
 /* Base Section Styling + Composed Styles */
 .twoColText {
@@ -109,11 +109,12 @@
   text-align: center;
   color: inherit;
   font-family: PlayBlackItalic;
-  h4 {
+  h3 {
     text-align: inherit;
     color: inherit;
     font-family: PlayBlackItalic;
     font-style: italic;
+    color: medGray;
   }
 }
 .titleTrue {
