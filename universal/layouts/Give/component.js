@@ -9,7 +9,8 @@ import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FeaturedStory from 'components/FeaturedStory'
 
 import bannerImage from './assets/givingBanner.jpg'
-import quoteImage from './assets/GPPLogo.jpg'
+import thriveFoundationImage from './assets/thriveFoundation.jpg'
+import hughImage from './assets/hugh.jpg'
 
 const bannerProps = {
   contentPosition: 'bottomLeft',
@@ -23,6 +24,7 @@ const bannerProps = {
 const thriveFoundation = {
   sectionClass: 'default',
   title: 'Thrive Foundation',
+  image: thriveFoundationImage,
   hasLabel: 'labelFalse',
   label: {
     label: 'Thrive',
@@ -62,37 +64,41 @@ const trainNonProfits = {
 
 const globalPovertyProject = {
   bgColor: 'white',
-  imageShape: 'squareImage',
+  quoteFont: 'Playfair',
   containerBorders: 'bordersTrue',
-  quoteImage: quoteImage,
-  citation: 'Hugh Evans - CEO Global Poverty Project',
+  quoteImage: hughImage,
+  citation: 'Hugh Evans, CEO Global Poverty Project',
   quote: ['The training was truly an eye opener as it reminded us of the importance of ' +
   'living out our true purpose, and doing so in a way that will ensure our team is sustainable in the long-term.']
 }
 
-const RichardDavidson = {
-  author: 'Richard Davidson',
-  details: ['this the details Cras justo odio, dapibus ac ' +
-  'facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.'],
-  title: 'Why Giving is Good',
+const GivingisGood = {
+  details: [
+    `Whether it's volunteering, donating or just smiling at someone on the street,
+    giving is a scientifically-proven way to increase your well-being.
+    Read more stories at Thrive Global's Giving section. `
+  ],
+  hasAuthor: 'authorFalse',
+  title: 'Why Giving is Good For You',
   asset: 'richard.jpg',
   externalLink: {
-    linkText: 'Get in Touch',
-    linkTo: 'http://www.richardjdavidson.com',
+    linkText: 'Read More',
+    linkTo: '//stories.thriveglobal.com/giving/',
     linkStyle: 'white'
   }
 }
 
 const minneapolisQuote = {
   bgColor: 'white',
-  quoteText: 'Playfair',
+  quoteFont: 'Playfair',
   containerBorders: 'bordersTrue',
   hasImage: 'imageFalse',
-  citation: 'Quote Source - Minneapolis',
-  quote: ['Through our Foundation, Thrive Global offers free Thrive trainings to non-profit and civic ' +
-  'leaders who are on the front lines of serving others, including Khan Academy, Global Citizen, ' +
-  'Alliance for Children\'s Rights, EduCare Foundation, and Lean In, as well as mayors ' +
-  '(along with their teams) around the world. First up are the mayors of Boston, Minneapolis, Oakland, and Providence.']
+  citation: 'Jorge Elorza, Mayor of Providence',
+  quote: [
+    `I have seen firsthand the hard work that non-profit and public sectors employees
+    put into their work and I know that providing them with the resources and trainings
+    they need is critical to supporting their quality of life both at work and at home.`
+  ]
 }
 
 export const GiveView = () => (
@@ -102,7 +108,7 @@ export const GiveView = () => (
       <FullWidthTwoCol {...thriveFoundation} />
       <CTASection {...trainNonProfits} />
       <QuoteSection {...globalPovertyProject} />
-      <FeaturedStory {...RichardDavidson} />
+      <FeaturedStory {...GivingisGood} />
       <QuoteSection {...minneapolisQuote} />
     </section>
   </section>

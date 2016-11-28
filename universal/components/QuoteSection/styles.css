@@ -87,10 +87,12 @@
   height: 6.25rem;
   margin: 0 0 1rem 0;
   padding: 0 0;
-  border: 1px solid lightGray;
   border-radius: 3.125rem;
   @media bp-mama-bear {
     margin: 0 0 0 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 4rem;
   }
 }
 
@@ -190,7 +192,7 @@
   padding: 0 0;
   float: left;
   font-family: Mon;
-  font-size: .75rem;
+  font-size: 1rem;
   font-style: normal;
   line-height: 100%;
   text-align: left;

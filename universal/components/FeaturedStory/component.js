@@ -5,6 +5,7 @@ import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   author: string,
+  hasAuthor: 'authorTrue' | 'authorFalse',
   details: string,
   title: string,
   asset: string,
@@ -20,6 +21,7 @@ const defaultAuthor = 'Koby Bryant'
 
 const FeaturedStory = ({
   title = defaultTitle,
+  hasAuthor = 'authorTrue',
   author = defaultAuthor,
   details = defaultDetails,
   externalLink = {},
@@ -32,7 +34,7 @@ const FeaturedStory = ({
         <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
-          <span className={styles.author}>{author}</span>
+          <span className={styles[hasAuthor]}>{author}</span>
         </p>
         <ExternalLink {...externalLink}
         />

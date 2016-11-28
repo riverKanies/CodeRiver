@@ -6,7 +6,7 @@ import dummyImage from './assets/quote_imagePlaceholder.png'
 type Props = {
   bgColor: 'default' | 'white' | 'gray' | 'purple',
   containerBorders: 'bordersTrue' | 'bordersFalse',
-  quoteText: 'Mon' | 'Playfair',
+  quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: string,
   hasImage: 'imageTrue' | 'imageFalse',
@@ -25,7 +25,7 @@ const QuoteSection = ({
   containerBorders = 'bordersFalse',
   bgColor = 'default',
   quote = defaultQuote,
-  quoteText = 'Mon',
+  quoteFont = 'Mon',
   citation = 'Arriana Huffington',
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
@@ -34,13 +34,11 @@ const QuoteSection = ({
   return (
     <section className={styles[bgColor]}>
       <div className={styles[containerBorders]}>
-
         <section className={styles[hasImage]}>
           <img className={styles[imageShape]} src={quoteImage} />
         </section>
-
         <section className={styles.quoteSection}>
-          <section className={styles[quoteText]}>
+          <section className={styles[quoteFont]}>
             <q className={styles.quote}>
               {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
             </q>
@@ -49,7 +47,6 @@ const QuoteSection = ({
         </section>
       </div>
     </section>
-
   )
 }
 
