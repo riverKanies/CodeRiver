@@ -5,8 +5,7 @@ import GenericFormError from 'components/GenericFormError'
 import Button from 'components/Button'
 import Input from 'components/Input'
 import styles from './styles'
-import FacebookLogin from 'react-facebook-login'
-import { httpPost } from 'lib/http'
+import FacebookAuth from 'components/FacebookAuth'
 
 type renderSubmitField = {
   valid: boolean,
@@ -35,28 +34,14 @@ type signupProps = {
   message: string
 };
 
-const responseFacebook = (response) => {
-  return httpPost('/api/auth/facebook/callback', response).then(result => {
-    window.handleFacebook(result)
-  });
-}
-
 const SignUpForm = (props: signupProps) => {
-  window.handleFacebook = props.handleFacebook
   return (
     <section className={styles.container}>
-     <div className={styles.headerRow}>
+      <div className={styles.headerRow}>
         <h2>Sign up to start thriving</h2>
       </div>
       <div className={styles.headerRow}>
-        <FacebookLogin
-          appId='232613377159246'
-          autoLoad={true}
-          fields="email"
-          callback={responseFacebook}
-          cssClass="my-facebook-button-class"
-          icon="fa-facebook"
-        />
+        <FacebookAuth />
       </div>
       <form>
         <GenericFormError {...props} />
