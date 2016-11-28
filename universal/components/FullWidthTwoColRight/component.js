@@ -27,11 +27,6 @@ const FullWidthTwoColRight = ({
   return (
     <section className={styles[sectionClass]}>
       <section className={styles.container}>
-        <div className={styles.columnRight}>
-          <figure className={styles.imageWrap}>
-            <img className={styles.image} src={image} alt={title} />
-          </figure>
-        </div>
         <div className={styles.columnLeft}>
           <section className={styles.sectionContent}>
             <header className={styles.header}>
@@ -40,6 +35,11 @@ const FullWidthTwoColRight = ({
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             <Button {...button} />
           </section>
+        </div>
+        <div className={styles.columnRight}>
+          <figure className={styles.imageWrap}>
+            <img className={styles.image} src={image} alt={title} />
+          </figure>
         </div>
       </section>
     </section>

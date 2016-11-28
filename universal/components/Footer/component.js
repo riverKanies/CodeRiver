@@ -42,13 +42,13 @@ const Footer = ({
           </div>
           <ul>
             <li className={styles.footerLinks}>
+              <Link to='/'>Advertise</Link>
+            </li>
+            <li className={styles.footerLinks}>
               <Link to='/'>Press</Link>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/'>Become a Contributor</Link>
-            </li>
-            <li className={styles.footerLinks}>
-              <Link to='/'>Advertise</Link>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/apps'>Apps</Link>
