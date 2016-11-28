@@ -51,7 +51,7 @@ const Footer = ({
               <Link to='/'>Become a Contributor</Link>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/thrivetech'>Tech</Link>
+              <Link to='/apps'>Apps</Link>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/'>Careers</Link>
