@@ -8,44 +8,99 @@ import FeaturedStory from 'components/FeaturedStory'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 
-import thriveScienceImg from './assets/thriveScience.jpg'
+// import thriveScienceImg from './assets/thriveScience.jpg'
+// import pulseImg from './assets/pulse.jpg'
+import pathwayImg from './assets/pathway.jpg'
+import pathwaysImg from './assets/pathways.png'
+import listenImg from './assets/listen.jpg'
+import foundationImg from './assets/foundation.jpg'
+// import popUpImg from './assets/popup.jpg'
+import eCourseImg from './assets/ecourse.png'
+import deathOverDinnerImg from './assets/deathOverDinner.png'
+import poetryImg from './assets/poetry.png'
 
-const featuredStory = {
-  externalLink: {
-    linkText: 'Read Story',
-    linkTo: 'https://medium.com/@myleik/lessons-from-kobe-bryant-5efdf8e54a12#.ork0vw64p',
-    linkStyle: 'white'
+const popUpImg = 'http://placekitten.com/g/647/470'
+const pulseImg = 'http://placekitten.com/g/647/470'
+
+const popUpShop = {
+  sectionClass: 'transparent',
+  title: 'The Thrive Pop-Up Shop',
+  label: {
+    label: 'Happy Holidays!',
+    labelColor: 'defaultLabel'
+  },
+  sectionText: [
+    `Thrive Global's retail pop-up store in New York City offers live 
+    demonstrations, education and trials of the latest products and 
+    technologies across the categories of mind, body, sleep, productivity, 
+    recharging, creativity and giving. Visit us at 419 Broome Street seven
+    days a week, from 10:00am to 7:00pm, December 1 through January 15, 2017.`
+  ],
+  image: popUpImg,
+  button: {
+    buttonText: 'Learn More',
+    linkTo: 'https://www.thriveglobal.com/popup',
+    buttonStyle: 'violet'
   }
 }
-const goodLife = {
+const eCourse = {
+  bgImage: eCourseImg,
+  url: 'https://learn.thriveglobal.com',
   sectionClass: 'transparent',
-  title: 'The Science Behind Thrive',
+  title: 'The Thrive E-Course',
   postLabel: {
-    label: 'Editorial',
+    label: 'Grow',
     labelColor: 'whiteLabel'
   },
   sectionText: [
-    'Science shows that there is no trade-off between well-being ' +
-    'and high performance. Thrive Global, through its trainings, seminars, ' +
-    'e-courses, coaching, ongoing support, and e-commerce, all based on ' +
-    'scientific findings from experts in the fields of neuroscience, ' +
-    'psychology, productivity, sports, and sleep, is changing the way we ' +
-    'work and live.'
+    `The six-week online course with Arianna Huffington helps you move from
+     surviving to thriving. The course uses scientifically proven methods to 
+     decrease stress and burnout and improve your overall health, happiness
+     and well-being. Guest teachers include Kobe Bryant, Wharton Professor
+     Adam Grant, Warby Parker CEO Dave Gilboa, and more.`
   ],
-  image: thriveScience,
+  image: eCourseImg,
+  // TODO: fix button. Why isn't it showing up?
   button: {
-    buttonText: 'Read More',
-    linkTo: 'javascript:void(0)',
+    buttonText: 'Take the e-Course',
+    linkTo: 'https://learn.thriveglobal.com',
+    buttonStyle: 'violet'
+  }
+}
+const deathOverDinner = {
+  bgImage: deathOverDinnerImg,
+  url: 'https://learn.thriveglobal.com',
+  sectionClass: 'transparent',
+  title: 'Let\'s Have Dinner and Talk About Death',
+  postLabel: {
+    label: 'Wonder',
+    labelColor: 'whiteLabel'
+  },
+  sectionText: [
+    `Yes, really.  We have, if we’re lucky, about thirty thousand days to play
+    the game of life. How we play it will be determined by what we value. 
+    Thrive and VICE are partnering with not-for-profit Death Over Dinner to
+    launch a global conversation about mortality and life's biggest questions.`
+  ],
+  image: eCourseImg,
+  // TODO: fix button. Why isn't it showing up? Wrong props prolly.
+  button: {
+    buttonText: 'Learn More',
+    linkTo: 'https://learn.thriveglobal.com',
     buttonStyle: 'violet'
   }
 }
 const homeQuote = {
   bgColor: 'default',
   quote: [
-    'Intention is one of the most powerful forces there is. What you mean when ' +
-    'you do a thing will always determine the outcome.'
+    `It’s no mystery that healthier workforces make for better corporate 
+    financial health and higher performing employees all around.`
   ],
-  citation: 'Arriana Huffington',
+  // TODO: How do I newline?!
+  citation: `Dr. David Agus, 
+    \n Professor of Medicine & Engineering USC, 
+    \n Thrive Global board member`,
+
   // quoteImage: any,
   imageShape: 'roundImage'
 }
@@ -58,76 +113,146 @@ const thriveFoundation = {
     labelColor: 'defaultLabel'
   },
   sectionText: [
-    'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+    `Giving is not only a fundamental part of a full life – it is a 
+    scientifically proven way to increase our well-being and happiness. The
+     Thrive Foundation will offer free Thrive Global trainings to non-profit
+     and civic leaders who are on the front line of serving others.`
   ],
-  // image: 'string',
-  hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Read More',
-    linkTo: 'javascript:void(0)',
-    buttonStyle: 'violet'
-  }
-}
-const thriveEcho = {
-  sectionClass: 'transparent',
-  title: 'Thrive for Amazon Echo',
-  hasLabel: 'labelTrue',
-  label: {
-    label: 'Thrive',
-    labelColor: 'defaultLabel'
-  },
-  sectionText: [
-    'Cras mattis consectetur purus sit amet fermentum.'
-  ],
-  // image: 'string',
+  image: foundationImg,
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Learn More',
-    linkTo: 'javascript:void(0)',
+    linkTo: '/give',
     buttonStyle: 'violet'
   }
 }
-const thriveScience = {
-  sectionClass: 'default',
-  title: 'The Science Behind Thrive',
+const thriveAmazon = {
+  sectionClass: 'transparent',
+  title: 'Thrive & Amazon: Audible & Echo',
   hasLabel: 'labelTrue',
   label: {
-    label: 'Science',
+    label: 'Apps',
     labelColor: 'defaultLabel'
   },
   sectionText: [
-    'Science shows that there is no trade-off between well-being ' +
-    'and high performance. Thrive Global, through its trainings, seminars, ' +
-    'e-courses, coaching, ongoing support, and e-commerce, all based on ' +
-    'scientific findings from experts in the fields of neuroscience, ' +
-    'psychology, productivity, sports, and sleep, is changing the way we ' +
-    'work and live.'
+    `Thrive's series of signature apps helps you unplug, recharge, and set 
+    boundaries in your relationship with technology. So you can disconnect
+    from technology and reconnect with what really matters.`
   ],
-  image: thriveScienceImg,
+  image: listenImg,
   hasButton: 'buttonTrue',
   button: {
-    buttonText: 'Read More',
+    buttonText: 'Get the Apps',
+    linkTo: '/apps',
+    buttonStyle: 'violet'
+  }
+}
+
+const thrivePoetry = {
+  sectionClass: 'default',
+  title: 'Poetry & Philosophy',
+  hasLabel: 'labelTrue',
+  label: {
+    label: 'Wisdom',
+    labelColor: 'defaultLabel'
+  },
+  sectionText: [
+    `Philosophy is not an academic exercise. “What is a good life?” has been a 
+    question asked by philosophers going back to the ancient Greeks. But 
+    somewhere along the line we abandoned that question and shifted our 
+    attention to success, and over time our society’s notion of success 
+    has been reduced to money and status. Both philosophy and poetry add 
+    perspective to our lives and remind us to ask life’s bigger questions. 
+    They’ll both be featured prominently in The Thrive Journal. Read the 
+    poetry of Mark Nepo at The Thrive Journal.`
+  ],
+  image: poetryImg,
+  hasButton: 'buttonTrue',
+  button: {
+    buttonText: 'Read more.',
+    linkTo: 'https://journal.thriveglobal.com/search?q=poetry',
+    buttonStyle: 'violet'
+  }
+}
+const thriveArt = {
+  sectionClass: 'default',
+  title: 'Art & Wonder',
+  hasLabel: 'labelTrue',
+  label: {
+    label: 'Wonder',
+    labelColor: 'defaultLabel'
+  },
+  sectionText: [
+    `Art, as philosopher Alain de Botton says, is "an apothecary for the soul."
+     It  ignites a deeper truth and awakens the sense of wonder that slumbers 
+     within us. The Thrive Journal will proudly feature art and artists from 
+     around the world to inspire that connectedness. See work from artists 
+     Tris hla Jain and Isabella Huffington at The Thrive Journal.`
+  ],
+  image: pulseImg
+}
+const thriveStyle = {
+  sectionClass: 'default',
+  title: 'Thrive Style',
+  hasLabel: 'labelTrue',
+  label: {
+    label: 'Thrive Style',
+    labelColor: 'defaultLabel'
+  },
+  sectionText: [
+    `Thrive Style is all about helping women close the style gap and open up 
+    more time for productivity, creativity and recharging. ThriveStyle is 
+    about redefining conventions so that women can feel confident, 
+    professional and great in something other than 5-inch heels and a new 
+    outfit for every occasion. Our first campaign: to normalize – actually 
+    celebrate – repeats, helping women feel as comfortable as men do repeating
+    outfits.`
+  ],
+  image: pathwayImg,
+  hasButton: 'buttonTrue',
+  button: {
+    buttonText: 'Get Style',
     linkTo: 'javascript:void(0)',
     buttonStyle: 'violet'
   }
 }
-const thrivePulse = {
-  sectionClass: 'transparent',
-  title: 'What\'s Your Thrive Pulse?',
+
+const pathways = {
+  sectionClass: 'default',
+  title: 'Pathways, Journeys, & Microsteps',
   hasLabel: 'labelTrue',
   label: {
-    label: 'Thrive',
-    labelColor: 'blueLabel'
+    label: 'Grow',
+    labelColor: 'defaultLabel'
   },
   sectionText: [
-    'Cras mattis consectetur purus sit amet fermentum.'
+    `Pathway to Joy Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+    ex ea commodo consequat.`
   ],
-  // image: 'string',
+  image: pathwaysImg,
   hasButton: 'buttonTrue',
   button: {
-    buttonText: 'Find Out',
+    buttonText: 'Take the first step',
     linkTo: 'javascript:void(0)',
-    buttonStyle: 'blue'
+    buttonStyle: 'violet'
+  }
+}
+
+const thrivePulse = {
+  // TODO: fix "stories" label. Should be "Get Started"
+  // sectionClass: 'transparent',
+  author: '',
+  label: 'Get Started',
+  title: 'What\'s Your Thrive Pulse?',
+  asset: 'pulseImg',
+  details: `Begin with the Thrive Pulse, our 10-question assessment that will 
+    help you take stock of your life and identify areas of improvement.`,
+  externalLink: {
+    linkText: 'Get Your Thrive Pulse',
+    linkTo: '/pulse',
+    linkStyle: 'white'
   }
 }
 export const HomeView = () => {
@@ -135,13 +260,17 @@ export const HomeView = () => {
     <main role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
       <FeaturedProduct />
-      <FeaturedStory {...featuredStory} />
-      <HalfTextOverlay {...goodLife} />
+      <FeaturedStory {...thrivePulse} />
+      <HalfTextOverlay {...eCourse} />
       <QuoteSection {...homeQuote} />
+      <FullWidthTwoCol {...pathways} />
+      <FullWidthTwoColSpecial {...thriveAmazon} />
+      <FullWidthTwoCol {...thriveStyle} />
+      <FullWidthTwoCol {...thrivePoetry} />
+      <HalfTextOverlay {...deathOverDinner} />
+      <FullWidthTwoCol {...thriveArt} />
       <FullWidthTwoCol {...thriveFoundation} />
-      <FullWidthTwoColSpecial {...thriveEcho} />
-      <FullWidthTwoCol {...thriveScience} />
-      <FullWidthTwoColSpecial {...thrivePulse} />
+      <FullWidthTwoCol {...popUpShop} />
     </main>
   )
 }

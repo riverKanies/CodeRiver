@@ -6,7 +6,7 @@ import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import Learn from 'layouts/Learn'
 import SignUp from 'layouts/SignUp'
-import ThriveTech from 'layouts/ThriveTech'
+import Apps from 'layouts/Apps'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import PulseScore from 'containers/PulseScore'
@@ -49,8 +49,8 @@ export const createRoutes = (store) => ([
         component: Give
       },
       {
-        path: 'thrivetech',
-        component: ThriveTech
+        path: 'apps',
+        component: Apps
       },
       {
         path: 'thrive',
