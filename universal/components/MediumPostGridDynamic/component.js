@@ -15,6 +15,16 @@ const featuredHalfNoImage = {
   hasImage: 'imageFalse',
   hasSynopsis: 'synopsisTrue'
 }
+const featuredHalfHeightImage = {
+  cardType: 'halfHeight',
+  hasImage: 'imageTrue',
+  hasSynopsis: 'synopsisTrue'
+}
+const featuredHalfHeightNoImage = {
+  cardType: 'halfHeight',
+  hasImage: 'imageFalse',
+  hasSynopsis: 'synopsisTrue'
+}
 const featuredQuarterWhite = {
   cardType: 'quarterWhite',
   hasImage: 'imageTrue',
@@ -43,11 +53,18 @@ export default class MediumPostGridDynamic extends React.Component {
       <section className={styles.featuredMediumPosts}>
         <section className={masonizeStyles}>
           <MediumPostDynamic {...featuredHalfImage} />
-          <EmailCaptureMini />
+          <MediumPostDynamic {...featuredHalfHeightImage} />
           <MediumPostDynamic {...featuredHalfImage} />
           <MediumPostDynamic {...featuredHalfNoImage} />
+          <EmailCaptureMini />
+        </section>
+        <section className={styles.clear}>
           <MediumPostDynamic {...featuredQuarterWhite} />
           <MediumPostDynamic {...featuredQuarterBlue} />
+          <MediumPostDynamic {...featuredQuarterWhite} />
+          <MediumPostDynamic {...featuredQuarterBlue} />
+          <MediumPostDynamic {...featuredHalfHeightImage} />
+          <MediumPostDynamic {...featuredHalfHeightNoImage} />
         </section>
       </section>
     )
