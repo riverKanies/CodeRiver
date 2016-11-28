@@ -89,11 +89,19 @@ class Header extends React.Component {
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <Link id='navEngage' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
-              Engage
+            <Link
+              id='navJournal'
+              to='https://journal.thriveglobal.com/'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Journal
             </Link>
-            <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
-              Learn
+            <Link
+              id='navGrow'
+              to='/grow'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Grow
             </Link>
             <Link
               id='navShop'
@@ -102,25 +110,25 @@ class Header extends React.Component {
               activeClassName={styles.activeRoute}>
               Shop
             </Link>
-            <Link id='navGive' to='/give' className={styles.link} activeClassName={styles.activeRoute}>
+            <Link
+              id='navGive'
+              to='/give'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
               Give
             </Link>
-            <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
-              Thrive
+            <Link
+              id='navApps'
+              to='/apps'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Apps
             </Link>
           </nav>
 
           <nav role='navigation' className={styles.utilityNav}>
             {this.renderSignupLink()}
             {this.renderLoginLogout()}
-            <a className={styles.search} href='javascript:void'>
-              <svg className={styles.searchIcon} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
-                <title>Search</title>
-                <path className={styles.search} d='M31.4,28.6l-5.07-5.07A9.84,9.84,0,0,0,28,18,10,10,0,1,0,
-                  18,28a9.84,9.84,0,0,0,5.53-1.67L28.6,31.4a2,2,0,0,0,2.8-2.8ZM18,
-                  24.07A6.07,6.07,0,1,1,24.07,18,6.09,6.09,0,0,1,18,24.07Z' />
-              </svg>
-            </a>
           </nav>
         </section>
 

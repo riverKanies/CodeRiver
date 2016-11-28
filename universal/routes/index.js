@@ -4,14 +4,16 @@ import Microsteps from 'layouts/Microsteps'
 import Give from 'layouts/Give'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
+import TempHomePage from 'layouts/TempHomePage'
 import Learn from 'layouts/Learn'
 import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
+import Interests from 'layouts/Interests'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
-import Engage from 'layouts/Engage'
+// import Engage from 'layouts/Engage'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -22,6 +24,15 @@ export const createRoutes = (store) => ([
   {
     path: '/steps/:id',
     component: EmbeddedMicrostep
+  },
+  {
+    path: '/coming-soon',
+    component: TempHomePage
+  },
+  {
+    path: '/home',
+    component: LayoutCore,
+    indexRoute: Home
   },
   {
     path: '/',
@@ -41,7 +52,7 @@ export const createRoutes = (store) => ([
         component: Pathway
       },
       {
-        path: 'learn',
+        path: 'grow',
         component: Learn
       },
       {
@@ -61,11 +72,15 @@ export const createRoutes = (store) => ([
         component: Pulse
       },
       {
+        path: 'interests',
+        component: Interests
+      },
+      {
         path: 'pulsescore',
         component: PulseScore
       },
       {
-        path: 'pledge',
+        path: 'corporate-pledge',
         component: GlassDoor
       },
       {
@@ -75,10 +90,6 @@ export const createRoutes = (store) => ([
       {
         path: 'welcome',
         component: Welcome
-      },
-      {
-        path: 'engage',
-        component: Engage
       },
       {
         path: 'profile',

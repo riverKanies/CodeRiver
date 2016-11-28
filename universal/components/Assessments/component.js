@@ -1,12 +1,14 @@
 import React from 'react'
 import TypeForm from 'components/TypeForm'
+import { Link } from 'react-router'
 import styles from './styles'
 
 type Props = {
   dispatch: Function,
   loggedIn: boolean,
   requestPending: boolean,
-  creds: Object
+  creds: Object,
+  typeformKey: String
 }
 
 function genUrl (creds) {
@@ -14,13 +16,13 @@ function genUrl (creds) {
 }
 
 // Engage Page Layout
-export default function PulseView ({ loggedIn, requestPending, creds }: Props) {
+export default function AssessmentsView ({ loggedIn, requestPending, creds, typeformKey }: Props) {
   if (requestPending) return null
 
   if (!loggedIn) {
     return (
-      <div className={styles.PulseLogin}>
-        <h3> You must be logged in to do assessment </h3>
+      <div className={styles.AssessmentsLogin}>
+        <p> You must be logged in to do this assessment. <Link to='/login'>Click here to login</Link> </p>
       </div>
     )
   }
@@ -28,7 +30,7 @@ export default function PulseView ({ loggedIn, requestPending, creds }: Props) {
   const url = genUrl(creds)
 
   return <TypeForm
-    typeformkey='sKzAso'
+    typeformkey={typeformKey}
     urlParams={url}
     />
 }

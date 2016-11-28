@@ -1,8 +1,0 @@
-@value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
-
-.posts {
-  lost-center: containerWidth containerPadding;
-  margin: 0 auto;
-  float: none;
-}

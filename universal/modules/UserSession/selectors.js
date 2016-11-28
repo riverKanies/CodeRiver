@@ -4,18 +4,6 @@ import { getLocalStorageHeaders } from 'lib/http'
 
 const sessionSelector = state => state[KEY]
 
-export const loginSelector = createSelector(
-  [ sessionSelector ],
-  (store) => {
-    const { requestPending, userData } = store
-
-    return {
-      renderLoginForm: !requestPending && !userData,
-      userData
-    }
-  }
-)
-
 export const isLoggedIn = createSelector(
   [ sessionSelector ],
   (store) => {
@@ -25,12 +13,24 @@ export const isLoggedIn = createSelector(
   }
 )
 
-export const pulseSelector = createSelector(
+export const loginSelector = createSelector(
+  [ sessionSelector, isLoggedIn ],
+  (store, { isLoggedIn }) => {
+    const { userData, requestPending } = store
+
+    return {
+      renderLoginForm: !isLoggedIn && !requestPending,
+      userData
+    }
+  }
+)
+
+export const assessmentsSelector = createSelector(
   [ sessionSelector, isLoggedIn ],
   (store, { isLoggedIn }) => {
     const { requestPending } = store
 
-    const creds = getLocalStorageHeaders()
+    const creds = getLocalStorageHeaders() || {}
 
     const accesstoken = creds['access-token']
     const client = creds['client']

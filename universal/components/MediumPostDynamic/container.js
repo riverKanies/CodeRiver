@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react'
 import { connect } from 'react-redux'
 import { loadMediumPosts, KEY } from 'modules/MediumPosts'
@@ -11,7 +10,7 @@ type Props = {
   requestPending: boolean
 }
 
-export class MediumPostsContainer extends React.Component {
+export class Container extends React.Component {
   props: Props;
 
   componentWillMount () {
@@ -37,4 +36,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps,
-)(MediumPostsContainer)
+)(Container)
