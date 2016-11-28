@@ -13,8 +13,15 @@ type Props = {
   colTextTwo: any
 }
 
-const colTextOneText = ['Welcome to the Thrive Global Growth Center. Here you\'ll find everything you need to begin the Thrive journey and go from surviving to thriving. Start by taking your Thrive Pulse with the 5-minute assessment below. Explore our Pathways, each built of multiple microsteps that']
-const colTextOneTwo = ['make a transformational impact on your day-to-day well-being and performance. Go deeper with our six-week e-Course. Whatever your entry point is, take it. One of Thrive Global\'s core principles is a bias for action. It\'s time to go from knowing what to do to actually doing it.']
+const colTextOneText =
+  ['Welcome to the Thrive Global Growth Center. Here you\'ll find everything ' +
+  'you need to begin the Thrive journey and go from surviving to thriving. Start ' +
+  'by taking your Thrive Pulse with the 5-minute assessment below. Explore our  ' +
+  'Pathways, each built of multiple microsteps that']
+const colTextOneTwo = ['make a transformational impact on your day-to-day well-being ' +
+  'and performance. Go deeper with our six-week e-Course. Whatever your entry point is, ' +
+  'take it. One of Thrive Global\'s core principles is a bias for action. It\'s time to ' +
+  'go from knowing what to do to actually doing it.']
 
 const TwoColHeader = ({
   bgColor = 'default',
