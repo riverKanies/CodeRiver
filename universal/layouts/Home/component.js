@@ -256,8 +256,8 @@ const thrivePulse = {
   }
 }
 
-if (window.location.pathname == '/') {
-  window.location = '/coming-soon';
+if (window.location.pathname === '/') {
+  window.location = '/coming-soon'
 }
 export const HomeView = () => {
   return (

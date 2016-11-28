@@ -31,7 +31,7 @@ export const createRoutes = (store) => ([
   {
     path: '/home',
     component: LayoutCore,
-    indexRoute: Home,
+    indexRoute: Home
   },
   {
     path: '/',
@@ -75,7 +75,7 @@ export const createRoutes = (store) => ([
         component: PulseScore
       },
       {
-        path: 'pledge',
+        path: 'corporate-pledge',
         component: GlassDoor
       },
       {
