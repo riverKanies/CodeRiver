@@ -104,7 +104,7 @@ const homeQuote = {
 const thriveFoundation = {
   sectionClass: 'default',
   title: 'Thrive Foundation',
-  hasLabel: 'labeltrue',
+  hasLabel: 'labelTrue',
   label: {
     label: 'Thrive',
     labelColor: 'defaultLabel'
