@@ -45,6 +45,15 @@
   }
 }
 
+.tagalong {
+  composes: fullWidthText;
+  padding-top: 0;
+  background: white;
+  * {
+    color: bodyCopy;
+  }
+}
+
 .container {
   lost-center: containerWidth;
   margin: 0 auto;

@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: 'default' | 'white' | 'blue' | 'gray',
+  sectionClass: 'default' | 'white' | 'blue' | 'gray' | 'tagalong',
   divider: 'dividerFalse' | 'dividerTrue',
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   textAlign: 'textLeft'| 'textCenter' | 'textRight',

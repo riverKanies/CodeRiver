@@ -72,12 +72,12 @@ const globalPovertyProject = {
 }
 
 const nonProfitEmail = {
-  sectionClass: 'white',
+  sectionClass: 'tagalong',
   sectionWidth: 'halfWidth',
   textAlign: 'textCenter',
   header: 'headerFalse',
   sectionText: [
-    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail nonprofits@thriveglobal.com'
+    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail mailto:nonprofits@thriveglobal.com'
   ]
 }
 
