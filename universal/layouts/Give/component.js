@@ -77,7 +77,6 @@ const minneapolisQuote = {
 export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
-      {/* <Banner {...bannerProps} /> */}
       <Banner {...bannerProps} />
       <CTASection {...theThriveFoundation} />
       <CTASection {...trainNonProfits} />
