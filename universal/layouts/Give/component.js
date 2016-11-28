@@ -49,7 +49,7 @@ const thriveFoundation = {
 }
 
 const trainNonProfits = {
-  sectionClass: 'default',
+  sectionClass: 'white',
   sectionWidth: 'halfWidth',
   divider: 'dividerTrue',
   textAlign: 'textCenter',
@@ -97,8 +97,20 @@ const GivingisGood = {
   }
 }
 
-const minneapolisQuote = {
-  bgColor: 'white',
+const mayorHeading = {
+  sectionClass: 'default',
+  sectionWidth: 'halfWidth',
+  divider: 'dividerTrue',
+  textAlign: 'textCenter',
+  title: 'Mayors',
+  sectionText: [
+    `Thrive Global is pleased to be working with the following U.S. mayors and their teams
+     to support civic leaders on the front lines of serving others, beginning with:`
+  ]
+}
+
+const mayorQuote = {
+  bgColor: 'gray',
   quoteFont: 'Playfair',
   containerBorders: 'bordersTrue',
   hasImage: 'imageFalse',
@@ -118,8 +130,9 @@ export const GiveView = () => (
       <FullWidthText {...trainNonProfits} />
       <QuoteSection {...globalPovertyProject} />
       <FullWidthText {...nonProfitEmail} />
+      <FullWidthText {...mayorHeading} />
+      <QuoteSection {...mayorQuote} />
       <FeaturedStory {...GivingisGood} />
-      <QuoteSection {...minneapolisQuote} />
     </section>
   </section>
 )
