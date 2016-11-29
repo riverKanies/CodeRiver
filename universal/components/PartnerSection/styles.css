@@ -18,7 +18,7 @@
 }
 
 .SectionContainer{
-  lost-center: containerWidth flex;
+  lost-column: 1;
   padding: 2rem 1rem;
   background-color: white;
 

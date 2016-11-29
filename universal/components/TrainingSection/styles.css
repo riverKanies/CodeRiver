@@ -2,6 +2,21 @@
 	lost-center: containerWidth flex;
 	background-color: white;
 	padding: 2rem 1rem;
+	h2 { 
+    	position: relative;
+    	text-align: center
+	  }
+
+	h2:before{
+	      content: '';
+	      position: absolute;
+	      top: 150%;
+	      left: 50%;
+	      bottom: -6px;
+	      width: 130px;
+	      height: 2px;
+	      transform:translateX(-65px) /*    width/2    */
+	  }
 
 
 }

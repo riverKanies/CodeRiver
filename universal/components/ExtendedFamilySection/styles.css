@@ -4,16 +4,15 @@
 	text-align: center;
 	padding-top: 20vh;
 	h2 { 
-    	position: relative;
-    	text-align: center
+    position: relative;
+      text-align: center
   }
 
   h2:before{
       content: '';
       position: absolute;
-      top: 150%;
       left: 50%;
-      bottom: -6px;
+      bottom: -16px;
       width: 130px;
       height: 2px;
       background: black;

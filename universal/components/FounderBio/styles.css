@@ -1,7 +1,7 @@
 @value bp-mama-bear, containerWidth, containerPadding from 'all';
 
 .container {
-  lost-center: containerWidth;
+  lost-column: 1;
   padding: 2rem 1rem 0rem 0rem;
   media bp-mama-bear {
     lost-column: 1/1;
@@ -13,6 +13,7 @@
 .subTitle{
   padding:0 0 5vh 5vh;
   font-weight: bold;
+  text-align: center;
 }
 .title {
   margin-bottom: 1rem;
@@ -27,7 +28,7 @@
 
 .image {
   lost-flex-container: row;
-  height: 475px;
+  height: 575px;
   width: 100%;
   background: linear-gradient(45deg, rgba(0,192,201,0.6), rgba(81,45,168,0.8)),
     url('./assets/arianna.jpg') no-repeat;

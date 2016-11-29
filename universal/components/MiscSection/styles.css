@@ -8,7 +8,7 @@
 
 .content {
   padding-top: 10vh;
-  lost-center: 1160px;
+  lost-center: 960px;
 }
 
 .title {
@@ -18,8 +18,9 @@
   text-decoration: underline;
 }
 .SectionContainer{
- lost-center: containerWidth flex;
+ lost-column:1;
   padding: 2rem 1rem;
   background-color: white;
+  text-align: center;
 
 }

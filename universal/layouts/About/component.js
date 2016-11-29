@@ -13,15 +13,15 @@ import CareerSection from 'components/CareerSection'
 import ContactSection from 'components/ContactSection'
 import BecomeAContributorSection from 'components/BecomeAContributorSection'
 import MiscSection from 'components/MiscSection'
-
+import ExtendedFamilySection from 'components/ExtendedFamilySection'
 
 export const AboutView = () => {
   return (
     <main role='main' className={styles.homePage}>
       <AboutSection />
       <TeamSection />
+      <ExtendedFamilySection />
       <CareerSection />
-      <PartnerSection/>
       <BecomeAContributorSection/>
       <TrainingSection/>
       <MiscSection />
