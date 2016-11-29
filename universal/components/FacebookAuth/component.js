@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './styles'
 import FacebookLogin from 'react-facebook-login'
 
 type Props = {
@@ -12,8 +13,7 @@ export default function ({ handleResponse } : Props) {
       autoLoad={false}
       fields='email'
       callback={handleResponse}
-      cssClass='my-facebook-button-class'
-      icon='fa-facebook'
+      cssClass={styles.fbButton}
     />
   )
 }
