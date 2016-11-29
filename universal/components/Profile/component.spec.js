@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 
 describe('(Component) Profile', () => {
   it('should display the users username', () => {
-    const props = { userName: 'billzebub', email: 'email@test.com', logOutAction: () => {} }
+    const props = { name: 'billzebub', email: 'email@test.com' }
     const wrapper = shallow(<Profile {...props} />)
     const element = wrapper.find('header')
 
