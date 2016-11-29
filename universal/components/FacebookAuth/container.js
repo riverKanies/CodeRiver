@@ -28,7 +28,7 @@ class FacebookAuthContainer extends React.Component {
         return Promise.all([
           saveHeaders(result),
           this.props.dispatch(checkSession()),
-          browserHistory.push('/profile')
+          browserHistory.push('/')
         ])
       })
       .catch(e => {
