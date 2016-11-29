@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 // Components
-import TwoColHeader from 'components/TwoColHeader'
+import TextBanner from 'components/TextBanner'
 import CTASection from 'components/CTASection'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
@@ -19,9 +19,11 @@ import kobeImage from './assets/kobe.jpg'
 import ahImage from './assets/ah.jpg'
 
 // Page Content
-const TwoColHeaderProps = {
+const banner = {
+  bgColor: 'gradient',
   title: 'Grow',
-  subTitle: 'It\'s time to go from knowing what to do to actually doing it.'
+  subTitle: `Begin your journey from living to thriving with our Pathways, Journeys
+  and Microsteps. It's time to go from knowing what to do to actually doing it.`
 }
 const learnIntro = {
   sectionClass: 'white',
@@ -159,10 +161,10 @@ const quote = {
   citation: 'Arianna Huffington'
 }
 
-export const LearnView = () => (
+export const GrowView = () => (
   <article className={styles.learnPage}>
     <section className={styles.content}>
-      <TwoColHeader {...TwoColHeaderProps} />
+      <TextBanner {...banner} />
       <FullWidthText {...learnIntro} />
       <PathwaySection />
       <TwoColText {...howToGrowTwo} />
@@ -179,4 +181,4 @@ export const LearnView = () => (
   </article>
 )
 
-export default LearnView
+export default GrowView
