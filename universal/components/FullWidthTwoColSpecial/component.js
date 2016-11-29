@@ -6,9 +6,10 @@ import ContentLabel from 'components/ContentLabel'
 import Button from 'components/Button'
 
 type Props = {
-  sectionClass: 'default' | 'lightGray' | 'transparent',
+  sectionClass: 'default' | 'lightGray' | 'transparent' | 'fade',
   title: string,
   hasLabel: 'labelTrue' | 'labelFalse',
+  hasColorBar: 'colorBarTrue' | 'colorBarFalse',
   label: Object,
   sectionText: Array<string>,
   image: string,
@@ -24,6 +25,7 @@ const FullWidthTwoColSpecial = ({
   sectionClass = 'default',
   title = 'Title',
   hasLabel = 'labelTrue',
+  hasColorBar = 'colorBarTrue',
   label = {},
   sectionText = defaultText,
   image = dummyImage,
@@ -33,7 +35,7 @@ const FullWidthTwoColSpecial = ({
   return (
     <section className={styles[sectionClass]}>
       <section className={styles.container}>
-        <div className={styles.column}>
+        <div className={styles[hasColorBar]}>
           <section className={styles.sectionContent}>
             <span className={styles[hasLabel]}>
               <ContentLabel {...label} />

@@ -2,60 +2,55 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Banner from 'components/Banner'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
+import TextBanner from 'components/TextBanner'
 
-import bannerImage from './assets/techBanner.jpg'
-import alexaImage from './assets/alexaImage.png'
-import joyTriggerImage from './assets/joyTriggerImage.jpg'
-import siloImage from './assets/siloImage.jpg'
-import thriveAwayImage from './assets/thriveAwayImage.jpg'
+import alexaImage from './assets/alexa.jpg'
+import joyTriggerImage from './assets/joyTrigger.jpg'
+import siloImage from './assets/silo.jpg'
+import thriveAwayImage from './assets/thriveAway.jpg'
 
-const bannerProps = {
-  contentPosition: 'bottomLeft',
-  title: 'Apps',
-  bannerText: 'Thrive is in the process of creating technology to enrich your life.',
-  bannerImage: bannerImage,
-  height: 'halfHeight'
+const appsBanner = {
+  bgColor: 'gradient',
+  hasTitle: 'titleTrue',
+  subTitle: `A series of signature apps that help you unplug, recharge, and set
+  boundaries in your relationship with technology`,
+  title: 'Apps'
 }
 
-const alexa = {
-  sectionClass: 'default',
-  title: 'Alexa knows how to Thrive',
+const thriveAway = {
+  sectionClass: 'fade',
+  title: 'Thrive Away',
+  hasColorBar: 'colorBarFalse',
   sectionText: [
-    `Sleep is deeply connected to every aspect of our well-being,
-    from our physical and mental health to our productivity and creativity. And
-    meditation has been proven to help people get people get to sleep more
-    quickly and sleep more soundly.
-    Thrive for Alexa from Thrive Global offers an eight-minute guided
-    meditation from Agapi Stassinopoulos to help you get a good night’s sleep
-    and wake up refreshed. Make it a regular part of your bedtime routine, or
-    use it whenever you need to relax and recharge.`
+    `Take a proper vacation from your inbox.
+    Truly unplug with Thrive Away, the vacation e-mail tool that automatically
+    deletes new emails until you're back in the office.`
   ],
-  image: alexaImage,
+  image: thriveAwayImage,
   button: {
-    buttonText: 'Get the App',
-    linkTo: 'http://www.amazon.com',
+    buttonText: 'Learn More',
+    linkTo: 'http://thriveaway.thriveglobal.com',
     buttonStyle: 'violet'
   },
   label: {
-    label: 'Alexa App',
-    labelColor: 'violetLabel'
+    label: 'Web App & iOS',
+    labelColor: 'blurpleLabel'
   }
 }
 
 const joyTrigger = {
-  sectionClass: 'default',
-  title: 'Healthy Living, In Every Tab',
+  sectionClass: 'fade',
+  title: 'Joy Trigger',
   sectionText: [
-    `The cutest reminders for healthy living, in every new tab.
-    Get treated to a cute animal GIF every time you open a new tab, as well as
-    a simple and actionable health tip based on the time of day.`
+    `Bring more joy (and actionable tips) to your browsing.
+    Each time you open a new tab, you'll see an adorable animal GIF alongside
+    information for bringing more well-being and productivity to your life.`
   ],
   image: joyTriggerImage,
   button: {
-    buttonText: 'Download',
+    buttonText: 'Learn More',
     linkTo: 'http://www.google.com',
     buttonStyle: 'violet'
   },
@@ -65,19 +60,40 @@ const joyTrigger = {
   }
 }
 
+const alexa = {
+  sectionClass: 'fade',
+  hasColorBar: 'colorBarFalse',
+  title: 'Thrive for Alexa Skill',
+  sectionText: [
+    `Thrive for Alexa, available on Amazon Echo, helps you power down for a good
+    night's sleep – without any screens in the bedroom.
+    Ask Alexa and she'll help you unwind with a guided meditation from
+    Agapi Stassinopoulos.`
+  ],
+  image: alexaImage,
+  button: {
+    buttonText: 'Learn More',
+    linkTo: 'http://www.amazon.com',
+    buttonStyle: 'violet'
+  },
+  label: {
+    label: 'Amazon Alexa Skill',
+    labelColor: 'violetLabel'
+  }
+}
+
 const silo = {
-  sectionClass: 'default',
+  sectionClass: 'fade',
   title: 'Take Back Your Phone',
   sectionText: [
-    `Silo empowers users by giving them information on their usage, and provides them
-    with AI assistants to manage activity while in Silo Mode. There will also be an
-    administrator option, giving tools to parents, school, and event organizers to establish
-    more effective smartphone policies.`
+    `By selectively blocking distractions, alerts, and notifications on your phone,
+    while ensuring you don't miss important calls, Silo allows you to reclaim space
+    in your life for focus, creativity, and truly connecting with the world, those around you, and yourself.`
   ],
   image: siloImage,
   button: {
     buttonText: 'Learn More',
-    linkTo: 'http://www.google.com',
+    linkTo: 'http://silo.thriveglobal.com/',
     buttonStyle: 'violet'
   },
   label: {
@@ -86,33 +102,14 @@ const silo = {
   }
 }
 
-const thriveAway = {
-  sectionClass: 'default',
-  title: 'Thrive on Vacation',
-  sectionText: [
-    `Reclaim your time off. Have a more relaxing vacation by letting everyone
-    know you are away and automatically deleting new emails until you are back.`
-  ],
-  image: thriveAwayImage,
-  button: {
-    buttonText: 'Learn More',
-    linkTo: 'http://www.google.com',
-    buttonStyle: 'violet'
-  },
-  label: {
-    label: 'Web App',
-    labelColor: 'blurpleLabel'
-  }
-}
-
 export const AppsView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
-      <Banner {...bannerProps} />
-      <FullWidthTwoCol {...alexa} />
-      <FullWidthTwoColSpecial {...joyTrigger} />
-      <FullWidthTwoCol {...silo} />
+      <TextBanner {...appsBanner} />
       <FullWidthTwoColSpecial {...thriveAway} />
+      <FullWidthTwoCol {...joyTrigger} />
+      <FullWidthTwoColSpecial {...alexa} />
+      <FullWidthTwoCol {...silo} />
     </section>
   </section>
 )

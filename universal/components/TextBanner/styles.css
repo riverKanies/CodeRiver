@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TextBanner
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
 
 /* Base Section Styling + Composed Styles */
 .textBanner {
@@ -44,6 +44,12 @@
   composes: textBanner;
   background: ThriveBlue;
   color: white;
+}
+
+.gradient {
+  composes: textBanner;
+  background: TheFader;
+  color: bodyCopy;
 }
 
 .divider {
