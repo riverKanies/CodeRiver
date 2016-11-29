@@ -14,7 +14,6 @@ import QuoteSection from 'components/QuoteSection'
 import pulseImg from './assets/pulse.jpg'
 import pathwaysImg from './assets/pathways.png'
 import listenImg from './assets/listen.jpg'
-// import foundationImg from './assets/foundation.jpg'
 import popUpImg from './assets/popup.jpg'
 import eCourseImg from './assets/ecourse.png'
 import deathOverDinnerImg from './assets/deathOverDinner.png'
@@ -24,8 +23,6 @@ import styleImg from './assets/style.png'
 
 // Content Definitions
 const thrivePulse = {
-  // TODO: fix "stories" label. Should be "Get Started"
-  // sectionClass: 'transparent',
   author: '',
   label: 'Get Started',
   title: 'What\'s Your Thrive Pulse?',
@@ -73,7 +70,6 @@ const homeQuote = {
     \n Professor of Medicine & Engineering USC,
     \n Thrive Global board member`,
 
-  // quoteImage: any,
   imageShape: 'roundImage'
 }
 const pathways = {
@@ -274,7 +270,7 @@ export const HomeView = () => {
       <FullWidthTwoCol {...thrivePoetry} />
       <HalfTextOverlay {...deathOverDinner} />
       <FullWidthTwoCol {...thriveArt} />
-      <FullWidthTwoCol {...thriveFoundation} />
+      <FullWidthTwoColSpecial {...thriveFoundation} />
       <FullWidthTwoCol {...popUpShop} />
     </main>
   )
