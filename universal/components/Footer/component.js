@@ -43,7 +43,7 @@ const Footer = ({
           </div>
           <ul>
             <li className={styles.footerLinks}>
-              <Link to='https://www.journal.thriveglobal.com/'>Journal</Link>
+              <a href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/grow'>Grow</Link>
@@ -71,18 +71,18 @@ const Footer = ({
             {heading2}
           </div>
           <div className={styles.socialIcons}>
-            <Link to='https://www.facebook.com/thriveglbl/'>
+            <a href='https://www.facebook.com/thriveglbl/' target='_blank'>
               <Facebook />
-            </Link>
-            <Link to='https://twitter.com/thrive'>
+            </a>
+            <a href='https://twitter.com/thrive' target='_blank'>
               <Twitter />
-            </Link>
-            <Link to='https://www.instagram.com/thrive/'>
+            </a>
+            <a href='https://www.instagram.com/thrive/' target='_blank'>
               <Instagram />
-            </Link>
-            <Link to='https://journal.thriveglobal.com/@thriveglobal'>
+            </a>
+            <a to='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
               <Medium />
-            </Link>
+            </a>
           </div>
           <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
         </section>
