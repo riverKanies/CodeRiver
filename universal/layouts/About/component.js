@@ -11,20 +11,20 @@ import PressSection from 'components/PressSection'
 import TrainingSection from 'components/TrainingSection'
 import CareerSection from 'components/CareerSection'
 import ContactSection from 'components/ContactSection'
+import BecomeAContributorSection from 'components/BecomeAContributorSection'
+import MiscSection from 'components/MiscSection'
+
 
 export const AboutView = () => {
   return (
     <main role='main' className={styles.homePage}>
       <AboutSection />
-      <OfferSection />
       <TeamSection />
-      <PartnerSection/>
-      <AdvertiseSection />
-      <PressSection />
-      <TrainingSection/>
       <CareerSection />
-      <ContactSection />
-      <BrowseSection/>
+      <PartnerSection/>
+      <BecomeAContributorSection/>
+      <TrainingSection/>
+      <MiscSection />
      </main>
   )
 }

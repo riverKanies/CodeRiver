@@ -14,8 +14,10 @@
   lost-column: 1;
   margin-bottom: 1rem;
   text-align: center;
-  text-decoration: underline;
+  padding-top: 10vh;
   padding-bottom: 10vh;
+
+
 }
 .SectionContainer{
   lost-center: containerWidth;

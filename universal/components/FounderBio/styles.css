@@ -10,7 +10,10 @@
     lost-column: 1/1;
   }
 }
-
+.subTitle{
+  padding:0 0 5vh 5vh;
+  font-weight: bold;
+}
 .title {
   margin-bottom: 1rem;
 

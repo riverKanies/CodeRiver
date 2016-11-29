@@ -8,7 +8,7 @@ export const AdvertiseSection = () => {
     return (
     <section className={styles.SectionContainer}>
         <section className={styles.content}>
-          <FullWidthTwoCol title={title} sectionText={text} postLabel={label}/> 
+          <FullWidthTwoCol title={title} sectionText={text} label={label}/> 
         </section>
     </section> 
 

@@ -1,6 +1,20 @@
 .SectionContainer{
 	lost-column: 1 flex;
 	background-color: white;
-
+	text-align: center;
+	padding-top: 20vh;
 
 } 
+
+.title{
+}
+
+.missionStatement{
+	padding: 1vh;
+	font-family: 'playfair display';
+	font-style: italic;
+
+}
+.content{
+	padding: 5vh;
+}

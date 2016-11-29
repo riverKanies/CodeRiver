@@ -6,7 +6,7 @@ import ContentLabel from 'components/ContentLabel'
 import Button from 'components/Button'
 
 type Props = {
-  sectionClass: 'default' | 'lightGray',
+  sectionClass: 'default' | 'lightGray' ,
   title: string,
   label: Object,
   sectionText: Array<string>,

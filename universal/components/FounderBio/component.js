@@ -22,7 +22,7 @@ const FounderBio = ({
     <section className={styles.container}>
       <section className={styles.content}>
         <section className={styles.title}>
-          <p>{details}</p>
+          <p className={styles.subTitle }>{details}</p>
         </section>
         <section className={styles.image} style={{backgroundImage: `url(${image})`}}>
           <section className={styles.text}>
