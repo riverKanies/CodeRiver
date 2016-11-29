@@ -1,4 +1,3 @@
-require('newrelic')
 import config from '../config'
 import server from './express'
 import _debug from 'debug'
