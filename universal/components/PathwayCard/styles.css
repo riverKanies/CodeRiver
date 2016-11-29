@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, MonBold, bodyCopy, darkGray, gradientCardThrive from 'all';
+@value bp-mama-bear, bp-papa-bear, MonBold, Mon, bodyCopy, darkGray, gradientCardThrive, gradientPurpleTeal, white from 'all';
 
 .card {
   lost-column: 1;
@@ -8,6 +8,7 @@
   @media bp-mama-bear {
     lost-column: 1/2;
     margin-bottom: 1.5rem;
+    float: left;
   }
   @media bp-papa-bear {
     lost-column: 1/3;
@@ -18,35 +19,13 @@
 .cardContainer {
   display: block;
   width: 100%;
+  min-height: 20rem;
   height: auto;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 5rem;
   float: left;
-}
-
-.imageWrap {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 0;
-  float: left;
-}
-.image {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 0;
-  float: left;
-}
-
-.description {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 1.875rem 1.25rem!important;
-  float: left;
+  outline: 1px solid white;
+  outline-offset: -2rem;
 }
 
 .header {
@@ -54,22 +33,32 @@
   width: 100%;
   margin-bottom: 1em;
   padding: 0 0;
-  float: left;
   font-family: MonBold;
+  letter-spacing: 1px;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
-  color: bodyCopy;
+  color: white;
 }
 
 .synopsis {
   display: block;
   width: 100%;
-  margin: 0 0 0 0;
+  margin: 1.2rem 0;
   margin-bottom: 0;
   padding: 0 0 0 0!important;
   float: left;
-  font-family: MonBold;
-  text-align: left;
-  color: darkGray;
+  font-family: Mon;
+  font-size: .8rem;
+  text-align: center;
+  color: white;
+}
+
+.divider {
+  width: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+  margin: 0 auto;
 }
