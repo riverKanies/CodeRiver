@@ -16,13 +16,13 @@ export default ({
   input,
   label,
   type,
-  theme = 'teal',
+  theme = 'thriveInput',
   meta: { touched, error, warning }
 }
   : FieldType) => (
     <div className={styles[theme]}>
-      <label>{label}</label>
-      <div>
+      <div className={styles.inputWrap}>
+        <label className={styles.label}>{label}</label>
         <input {...input} placeholder={label} type={type} />
         {
           touched && (
