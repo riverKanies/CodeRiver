@@ -20,7 +20,6 @@ import popUpImg from './assets/popup.jpg'
 import eCourseImg from './assets/ecourse.png'
 import deathOverDinnerImg from './assets/deathOverDinner.png'
 import poetryImg from './assets/poetry.png'
-import { browserHistory } from 'react-router'
 
 // Content Definitions
 const thrivePulse = {
@@ -260,10 +259,6 @@ const popUpShop = {
   }
 }
 
-// GET RID OF THIS POST LAUNCH
-if (window.location.pathname === '/') {
-  browserHistory.push('/coming-soon')
-}
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
