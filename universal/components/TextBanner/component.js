@@ -13,7 +13,7 @@ const TextBanner = ({
   bgColor = 'default',
   hasTitle = 'titleTrue',
   subTitle = 'Sub Title',
-  title = 'Title',
+  title = 'Title'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
