@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, babyMargin, mamaPadding, mamaMargin, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, babyMargin, mamaPadding, mamaMargin, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, gradientPurpleTeal, ThriveBlue, lightGray from 'all';
 
 .ctaSection {
   lost-utility: clearfix;
@@ -40,6 +40,13 @@
 .blue {
   composes: ctaSection;
   background: ThriveBlue;
+  * {
+    color: white;
+  }
+}
+.purpleTealGradient {
+  composes: ctaSection;
+  background: gradientPurpleTeal;
   * {
     color: white;
   }
