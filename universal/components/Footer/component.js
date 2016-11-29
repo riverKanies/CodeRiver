@@ -18,13 +18,13 @@ type Props = {
   logoFooter: any
 };
 
-const footerQuote = [`People look for retreats for themselves,
-                      in the country, by the coast, or in the hills . . .
-                      There is nowhere that a person can find a more peaceful
-                      and trouble-free retreat than in his own mind. . . .
-                      So constantly give yourself this retreat, and renew yourself.`]
-
-// const logoFooter = logo
+const footerQuote = [
+  `People look for retreats for themselves,
+  in the country, by the coast, or in the hills . . .
+  There is nowhere that a person can find a more peaceful
+  and trouble-free retreat than in his own mind. . . .
+  So constantly give yourself this retreat, and renew yourself.`
+]
 
 const Footer = ({
   quote = footerQuote,
@@ -58,7 +58,7 @@ const Footer = ({
               <Link to='/apps'>Apps</Link>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/'>Contact</Link>
+              <Link to='/contact'>Contact</Link>
             </li>
           </ul>
         </section>
@@ -80,7 +80,7 @@ const Footer = ({
             <Link to='https://www.instagram.com/thrive/'>
               <Instagram />
             </Link>
-            <Link to='https://journal.thriveglobal.com/'>
+            <Link to='https://journal.thriveglobal.com/@thriveglobal'>
               <Medium />
             </Link>
           </div>
@@ -88,11 +88,11 @@ const Footer = ({
         </section>
         <section className={styles.copyright}>
           <p>Thrive Global © 2016</p>
-          <Link to='/' className={styles.link}>
+          <Link to='/privacy' className={styles.link}>
             Privacy
           </Link>
           <p>&</p>
-          <Link to='/' className={styles.link}>
+          <Link to='/privacy' className={styles.link}>
             Terms
           </Link>
         </section>
