@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import ContentLabel from 'components/ContentLabel'
+import Button from 'components/Button'
 import dummyImage from './assets/arrianaH.jpg'
 
 type Props = {
@@ -9,7 +10,9 @@ type Props = {
   title: string,
   sectionText: Array<string>,
   url: string,
-  bgImage: string
+  bgImage: string,
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  button: Object
 }
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -26,7 +29,9 @@ const HalfTextOverlay = ({
   title = 'Headline',
   sectionText = defaultText,
   url = 'javascript:void(0)',
-  bgImage = dummyImage
+  bgImage = dummyImage,
+  hasButton = 'buttonFalse',
+  button = {}
 }: Props) => {
   return (
     <section className={styles.gridWrap}>
@@ -44,6 +49,9 @@ const HalfTextOverlay = ({
                 </header>
                 {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
               </a>
+              <span className={styles[hasButton]}>
+                <Button {...button} />
+              </span>
             </section>
           </div>
         </section>
