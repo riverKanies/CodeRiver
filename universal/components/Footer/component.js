@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react'
+import { redirectToShopify } from 'lib/sso'
 import EmailCapture from 'components/EmailCapture'
 import logo from './assets/logo-footer.png'
 import { Link } from 'react-router'
@@ -42,22 +43,19 @@ const Footer = ({
           </div>
           <ul>
             <li className={styles.footerLinks}>
-              <Link to='/'>Advertise</Link>
+              <Link to='https://www.journal.thriveglobal.com/'>Journal</Link>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/'>Press</Link>
+              <Link to='/grow'>Grow</Link>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/'>Become a Contributor</Link>
+              <Link onClick={redirectToShopify}>Shop</Link>
+            </li>
+            <li className={styles.footerLinks}>
+              <Link to='/give'>Give</Link>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/apps'>Apps</Link>
-            </li>
-            <li className={styles.footerLinks}>
-              <Link to='/'>Careers</Link>
-            </li>
-            <li className={styles.footerLinks}>
-              <Link to='/'>Site Map</Link>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/'>Contact</Link>
@@ -73,16 +71,16 @@ const Footer = ({
             {heading2}
           </div>
           <div className={styles.socialIcons}>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            <Link to='https://www.facebook.com/thriveglbl/'>
               <Facebook />
             </Link>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            <Link to='https://twitter.com/thrive'>
               <Twitter />
             </Link>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            <Link to='https://www.instagram.com/thrive/'>
               <Instagram />
             </Link>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            <Link to='https://journal.thriveglobal.com/'>
               <Medium />
             </Link>
           </div>
