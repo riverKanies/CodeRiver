@@ -87,7 +87,7 @@ export const createRoutes = (store) => ([
       {
         path: 'popup',
         component: PopupStore
-      },      
+      },
       {
         path: 'signup',
         component: SignUp
