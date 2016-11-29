@@ -3,6 +3,7 @@
 .buttonWrap {
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 4rem;
   padding: containerPadding;
   float: left;
   clear: both;
@@ -12,7 +13,6 @@
     text-align: center;
   }
 }
-
 .learnPage {
   width: 100%;
   margin: 0 auto;

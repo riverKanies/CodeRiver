@@ -36,6 +36,15 @@
   text-transform: uppercase;
 }
 
+.labelTrue {
+  composes: label;
+}
+
+.labelFalse {
+  display: none;
+}
+
+
 .header {
   font-family: PlayfairBlack;
   font-size: 2em;

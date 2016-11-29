@@ -51,7 +51,7 @@ const joyTrigger = {
   image: joyTriggerImage,
   button: {
     buttonText: 'Learn More',
-    linkTo: 'http://www.google.com',
+    linkTo: 'http://www.mschf.xyz/sandbox/thrive/',
     buttonStyle: 'violet'
   },
   label: {
@@ -73,7 +73,7 @@ const alexa = {
   image: alexaImage,
   button: {
     buttonText: 'Learn More',
-    linkTo: 'http://www.amazon.com',
+    linkTo: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=201602060',
     buttonStyle: 'violet'
   },
   label: {
