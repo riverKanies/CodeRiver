@@ -32,7 +32,7 @@
 }
 .gray {
   composes: fullWidthText;
-  background: lightGray;
+  background: #f0f0f0;
   * {
     color: bodyCopy;
   }

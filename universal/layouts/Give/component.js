@@ -2,23 +2,21 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Banner from 'components/Banner'
+import BrandRow from 'components/BrandRow'
 import QuoteSection from 'components/QuoteSection'
+import TextBanner from 'components/TextBanner'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
+import MayorSection from 'components/MayorSection'
 import FeaturedStory from 'components/FeaturedStory'
 
-import bannerImage from './assets/givingBanner.jpg'
 import thriveFoundationImage from './assets/thriveFoundation.jpg'
 import hughImage from './assets/hugh.jpg'
 
-const bannerProps = {
-  contentPosition: 'bottomLeft',
-  title: 'Don\'t Just Be a Go-Getter, Be a Go-Giver',
-  bannerText: 'Giving is a fundamental part of a healthy, full life.',
-  bannerImage: bannerImage,
-  bannerImageOverlay: 'overlayFalse',
-  height: 'halfHeight'
+const giveBanner = {
+  hasTitle: 'titleTrue',
+  subTitle: 'Giving is a fundamental part of a healthy, full life.' + ' Don\'t Just Be A Go-Getter. Be A Go-Giver.',
+  title: 'Give'
 }
 
 const thriveFoundation = {
@@ -77,7 +75,7 @@ const nonProfitEmail = {
   textAlign: 'textCenter',
   header: 'headerFalse',
   sectionText: [
-    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail mailto:nonprofits@thriveglobal.com'
+    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail nonprofits@thriveglobal.com'
   ]
 }
 
@@ -98,7 +96,7 @@ const GivingisGood = {
 }
 
 const mayorHeading = {
-  sectionClass: 'default',
+  sectionClass: 'gray',
   sectionWidth: 'halfWidth',
   divider: 'dividerTrue',
   textAlign: 'textCenter',
@@ -125,12 +123,14 @@ const mayorQuote = {
 export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
-      <Banner {...bannerProps} />
+      <TextBanner {...giveBanner} />
       <FullWidthTwoCol {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
+      <BrandRow />
       <QuoteSection {...globalPovertyProject} />
       <FullWidthText {...nonProfitEmail} />
       <FullWidthText {...mayorHeading} />
+      <MayorSection />
       <QuoteSection {...mayorQuote} />
       <FeaturedStory {...GivingisGood} />
     </section>
