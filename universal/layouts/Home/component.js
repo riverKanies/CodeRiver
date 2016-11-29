@@ -12,14 +12,15 @@ import QuoteSection from 'components/QuoteSection'
 
 // Content Import
 import pulseImg from './assets/pulse.jpg'
-import pathwayImg from './assets/pathway.jpg'
 import pathwaysImg from './assets/pathways.png'
 import listenImg from './assets/listen.jpg'
-import foundationImg from './assets/foundation.jpg'
+// import foundationImg from './assets/foundation.jpg'
 import popUpImg from './assets/popup.jpg'
 import eCourseImg from './assets/ecourse.png'
 import deathOverDinnerImg from './assets/deathOverDinner.png'
 import poetryImg from './assets/poetry.png'
+import artImg from './assets/art.png'
+import styleImg from './assets/style.png'
 
 // Content Definitions
 const thrivePulse = {
@@ -135,7 +136,7 @@ const thriveStyle = {
     celebrate – repeats, helping women feel as comfortable as men do repeating
     outfits.`
   ],
-  image: pathwayImg,
+  image: styleImg,
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Get Style',
@@ -207,7 +208,7 @@ const thriveArt = {
      around the world to inspire that connectedness. See work from artists
      Tris hla Jain and Isabella Huffington at The Thrive Journal.`
   ],
-  image: pulseImg,
+  image: artImg,
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Learn More',
@@ -229,7 +230,7 @@ const thriveFoundation = {
      Thrive Foundation will offer free Thrive Global trainings to non-profit
      and civic leaders who are on the front line of serving others.`
   ],
-  image: foundationImg,
+  image: pulseImg,
   hasButton: 'buttonTrue',
   button: {
     buttonText: 'Learn More',
