@@ -72,3 +72,23 @@ export const getSSORedirect = createSelector(
     }
   }
 )
+
+export const passwordFormSelector = createSelector(
+  [ sessionSelector ],
+  (store) => {
+    return {
+      message: store.passwordMessage
+    }
+  }
+)
+export const profileFormSelector = createSelector(
+  [ sessionSelector ],
+  (store) => {
+    const { userData } = store
+
+    return {
+      initialValues: { ...userData },
+      message: store.userMessage
+    }
+  }
+)

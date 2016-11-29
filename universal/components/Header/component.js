@@ -38,10 +38,16 @@ class Header extends React.Component {
     this.setState({active: !this.state.active})
   }
 
-  renderSignupLink () {
+  renderSignupOrProfile () {
     const { isLoggedIn } = this.props
 
-    if (isLoggedIn) return null
+    if (isLoggedIn) {
+      return (
+        <Link id='navSignUp' to='/profile' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+          Profile
+        </Link>
+      )
+    }
 
     return (
       <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
@@ -124,7 +130,7 @@ class Header extends React.Component {
           </nav>
 
           <nav role='navigation' className={styles.utilityNav}>
-            {this.renderSignupLink()}
+            {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
           </nav>
         </section>
