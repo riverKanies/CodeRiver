@@ -13,7 +13,7 @@ import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
-import PartnerWithUs, { PWUOverview, PWUCorporate, PWUContent, PWUCommerce } from 'layouts/PartnerWithUs'  
+import { PWUOverview, PWUCorporate, PWUContent, PWUCommerce } from 'layouts/PartnerWithUs'  
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -41,8 +41,7 @@ export const createRoutes = (store) => ([
     childRoutes: [
       {
         path: 'partnerwithus',
-        component: PartnerWithUs,
-        indexRoute: PWUOverview,
+        indexRoute: { component: PWUOverview },
         childRoutes: [
           {
             path: 'corporate',
