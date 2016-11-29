@@ -2,8 +2,14 @@
 import React from 'react'
 import Profile from 'components/Profile'
 
+// const pulse = {
+//
+// }
+
 export default function () {
   return (
-    <Profile />
+    <div>
+      <Profile />
+    </div>
   )
 }
