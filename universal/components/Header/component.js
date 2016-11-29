@@ -8,7 +8,7 @@ import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
-import mark from './assets/thriveLogo.png'
+import mark from './assets/thriveLogo.svg'
 
 type Props = {
   isLoggedIn: boolean,
