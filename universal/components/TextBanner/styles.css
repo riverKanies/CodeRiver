@@ -87,6 +87,7 @@
     margin: 0 auto papaHeader auto;
   }
   h1 {
+    font-size: 4rem;
     text-align: inherit;
     color: inherit;
     font-family: MonBold;
