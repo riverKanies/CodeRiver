@@ -6,6 +6,7 @@
 .verticalTimeline {
   display: flex;
   background: gradientTeal;
+  position: relative;
   color: white;
   width: 100%;
   height: auto;
@@ -17,6 +18,19 @@
   }
   @media bp-papa-bear {
     padding: papaPadding;
+  }
+}
+
+.verticalLine {
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  width: 0;
+  height: 90%;
+  border-left: 2px solid lightGray;
+
+  @media bp-papa-bear {
+    left: 50%;
   }
 }
 

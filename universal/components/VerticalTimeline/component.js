@@ -48,6 +48,7 @@ class VerticalTimeline extends React.Component {
   render () {
     return (
       <section className={styles.verticalTimeline}>
+        <section className={styles.verticalLine} />
         <section className={styles.container}>
           <VerticalTimelineLeft
             title={'Pathways'}
