@@ -11,36 +11,30 @@
   lost-center: containerWidth;
 }
 
-.header {
-  font-family: Mon;
-  color: ThriveGray;
-  font-size: 1.5rem;
-  padding-bottom: 2rem;
-}
-
 .brands {
   background-color: white;
   margin-bottom: 0.5rem;
   lost-column: 1;
   @media bp-mama-bear {
-    lost-column: 1;
-    vertical-align: middle;
+    lost-column: 1/2;
   }
   @media bp-papa-bear {
     lost-column: 1/5;
-    vertical-align: middle;
   }
 }
 
 .imageWrap {
   position: relative;
   lost-column: 1;
-  vertical-align: middle;
   .image {
-    width: 100%;
+    lost-column: 1;
+    height: 6rem;
     object-fit: none;
+    @media bp-mama-bear {
+      height: auto;
+    }
   }
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     margin-left: 2em;
   }
 }

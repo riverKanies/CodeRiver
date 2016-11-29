@@ -2,6 +2,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import BrandRow from 'components/BrandRow'
 import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
 import FullWidthText from 'components/FullWidthText'
@@ -125,6 +126,7 @@ export const GiveView = () => (
       <TextBanner {...giveBanner} />
       <FullWidthTwoCol {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
+      <BrandRow />
       <QuoteSection {...globalPovertyProject} />
       <FullWidthText {...nonProfitEmail} />
       <FullWidthText {...mayorHeading} />
