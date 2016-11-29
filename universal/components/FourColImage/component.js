@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react'
+import Mayor from './mayor.js'
 import styles from './styles'
 import Boston from './assets/marty-walsh.jpg'
 import Minneapolis from './assets/betsy-hodges.jpg'
@@ -8,28 +9,7 @@ import Providence from './assets/jorge-elorza.jpg'
 
 type Props = {
   bgColor: 'default' | 'white' | 'blue' | 'gray' | 'fade',
-  gutters: 'guttersTrue' | 'guttersFalse',
-  image: string,
-  name: string,
-  location: string
-}
-
-const Mayor = ({
-  image = Minneapolis,
-  name = 'Name',
-  location = 'Location'
-}: Props) => {
-  return (
-    <figure className={styles.column}>
-      <span className={styles.imageWrap}>
-        <img src={image} alt={name} />
-      </span>
-      <figcaption className={styles.theInfo}>
-        <h4 className={styles.h4}>{name}</h4>
-        <h5 className={styles.h5}> Mayor of {location}</h5>
-      </figcaption>
-    </figure>
-  )
+  gutters: 'guttersTrue' | 'guttersFalse'
 }
 
 const FourColImage = ({
