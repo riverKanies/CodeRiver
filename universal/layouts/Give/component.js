@@ -74,7 +74,7 @@ const nonProfitEmail = {
   textAlign: 'textCenter',
   header: 'headerFalse',
   sectionText: [
-    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail mailto:nonprofits@thriveglobal.com'
+    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail nonprofits@thriveglobal.com'
   ]
 }
 
