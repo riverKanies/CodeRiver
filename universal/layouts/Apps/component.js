@@ -20,8 +20,9 @@ const appsBanner = {
 }
 
 const thriveAway = {
-  sectionClass: 'default',
+  sectionClass: 'fade',
   title: 'Thrive Away',
+  hasColorBar: 'colorBarFalse',
   sectionText: [
     `Take a proper vacation from your inbox.
     Truly unplug with Thrive Away, the vacation e-mail tool that automatically
@@ -40,7 +41,7 @@ const thriveAway = {
 }
 
 const joyTrigger = {
-  sectionClass: 'default',
+  sectionClass: 'fade',
   title: 'Joy Trigger',
   sectionText: [
     `Bring more joy (and actionable tips) to your browsing.
@@ -60,7 +61,8 @@ const joyTrigger = {
 }
 
 const alexa = {
-  sectionClass: 'default',
+  sectionClass: 'fade',
+  hasColorBar: 'colorBarFalse',
   title: 'Thrive for Alexa Skill',
   sectionText: [
     `Thrive for Alexa, available on Amazon Echo, helps you power down for a good
@@ -81,7 +83,7 @@ const alexa = {
 }
 
 const silo = {
-  sectionClass: 'default',
+  sectionClass: 'fade',
   title: 'Take Back Your Phone',
   sectionText: [
     `By selectively blocking distractions, alerts, and notifications on your phone,
@@ -105,8 +107,8 @@ export const AppsView = () => (
     <section className={styles.content}>
       <TextBanner {...appsBanner} />
       <FullWidthTwoColSpecial {...thriveAway} />
-      <FullWidthTwoColSpecial {...joyTrigger} />
-      <FullWidthTwoCol {...alexa} />
+      <FullWidthTwoCol {...joyTrigger} />
+      <FullWidthTwoColSpecial {...alexa} />
       <FullWidthTwoCol {...silo} />
     </section>
   </section>
