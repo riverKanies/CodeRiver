@@ -92,13 +92,7 @@ class Header extends React.Component {
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <Link
-              id='navJournal'
-              to='https://journal.thriveglobal.com/'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Journal
-            </Link>
+            <a className={styles.link} href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
             <Link
               id='navGrow'
               to='/grow'
