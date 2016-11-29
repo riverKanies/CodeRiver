@@ -10,6 +10,7 @@ import alexaImage from './assets/alexa.jpg'
 import joyTriggerImage from './assets/joyTrigger.jpg'
 import siloImage from './assets/silo.jpg'
 import thriveAwayImage from './assets/thriveAway.jpg'
+import goodnightImg from './assets/goodnight.jpg'
 
 const appsBanner = {
   bgColor: 'gradient',
@@ -102,6 +103,32 @@ const silo = {
   }
 }
 
+const goodnightSmartphone = {
+  sectionClass: 'fade',
+  title: 'Goodnight Smartphone',
+  sectionText: [
+    `Sleep is central to every part of our lives, and a good night's sleep 
+    begins by putting aside the day's worries. But in today's technology-
+    saturated world, saying good night to the day is harder than ever. 
+    Allow author Arianna Huffington (Thrive, The Sleep Revolution) to guide 
+    you to a peaceful night's slumber as she performs Goodnight Smartphone: 
+    a classic tale reborn for the modern age, when the hardest thing to say 
+    good night to is not the moon but our phones, our email, our social media, 
+    our always-on digital selves.`
+  ],
+  image: goodnightImg,
+  button: {
+    buttonText: 'Get the Audiobook',
+    linkTo: `http://www.audible.com/pd/Self-Development/Goodnight-Smartphone-
+    Audiobook/B01MXMW4KV?source_code=AUDORWS1121169IYG`,
+    buttonStyle: 'violet'
+  },
+  label: {
+    label: 'Audible exclusive',
+    labelColor: 'violetLabel'
+  }
+}
+
 export const AppsView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
@@ -110,6 +137,7 @@ export const AppsView = () => (
       <FullWidthTwoCol {...joyTrigger} />
       <FullWidthTwoColSpecial {...alexa} />
       <FullWidthTwoCol {...silo} />
+      <FullWidthTwoColSpecial {...goodnightSmartphone} />
     </section>
   </section>
 )
