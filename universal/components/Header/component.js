@@ -38,10 +38,16 @@ class Header extends React.Component {
     this.setState({active: !this.state.active})
   }
 
-  renderSignupLink () {
+  renderSignupOrProfile () {
     const { isLoggedIn } = this.props
 
-    if (isLoggedIn) return null
+    if (isLoggedIn) {
+      return (
+        <Link id='navSignUp' to='/profile' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+          Profile
+        </Link>
+      )
+    }
 
     return (
       <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
@@ -92,13 +98,7 @@ class Header extends React.Component {
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <Link
-              id='navJournal'
-              to='https://journal.thriveglobal.com/'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Journal
-            </Link>
+            <a className={styles.link} href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
             <Link
               id='navGrow'
               to='/grow'
@@ -130,7 +130,7 @@ class Header extends React.Component {
           </nav>
 
           <nav role='navigation' className={styles.utilityNav}>
-            {this.renderSignupLink()}
+            {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
           </nav>
         </section>
