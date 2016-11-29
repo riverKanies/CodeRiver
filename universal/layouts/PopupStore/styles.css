@@ -2,5 +2,23 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
 
 .popupStore {
-  
+}
+
+dt {
+  float: left;
+  margin-right: 3rem;
+}
+
+dd {
+  font-family: "MontserratBold";
+  margin-left: 7rem;
+}
+
+ul {
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
 }
