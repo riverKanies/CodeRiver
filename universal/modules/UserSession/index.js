@@ -78,8 +78,7 @@ export function reducer (state: any = initialState, action: any) {
         ...state,
         requestPending: false,
         userData: action.data.data,
-        sessionAlive: true,
-        message: 'update success!'
+        sessionAlive: true
       }
 
     case actions.fetchSuccess:
@@ -186,26 +185,26 @@ export function deleteSession () {
   }
 }
 
-export function clearUserMessage (message) {
+export function clearUserMessage () {
   return {
     type: actions.clearUserMessage
   }
 }
 
-export function clearPasswordMessage (message) {
+export function clearPasswordMessage () {
   return {
     type: actions.clearPasswordMessage
   }
 }
 
-export function setUserMessage (message) {
+export function setUserMessage (message: string) {
   return {
     type: actions.setUserMessage,
     message
   }
 }
 
-export function setPasswordMessage (message) {
+export function setPasswordMessage (message: string) {
   return {
     type: actions.setPasswordMessage,
     message

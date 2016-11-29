@@ -6,13 +6,13 @@ import styles from './styles'
 
 type Props = {
   email: string,
-  userName: string,
+  name: string,
   logOutAction: Function
 }
 
 const Profile = ({
   email,
-  name,
+  name
 }: Props) => {
   if (!email) return null
   const displayName = name || email
