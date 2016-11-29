@@ -22,6 +22,7 @@ export class Container extends React.Component {
 
   render () {
     return <MediumPostGrid
+      dispatch={this.props.dispatch}
       posts={this.props.mediumPosts}
       requestPending={this.props.requestPending}
     />
