@@ -8,7 +8,7 @@ import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
-import mark from './assets/thriveLogo.png'
+import mark from './assets/thriveLogo.svg'
 
 type Props = {
   isLoggedIn: boolean,
@@ -81,21 +81,18 @@ class Header extends React.Component {
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
 
-        <figure className={styles.brand}>
-          <IndexLink id='linkHome' to='/'>
-            <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
-          </IndexLink>
-        </figure>
+        <section className={styles.forehead}>
+          <figure className={styles.brand}>
+            <IndexLink id='linkHome' to='/'>
+              <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+            </IndexLink>
+          </figure>
+          <span className={styles.tagline}>More Than living. Thriving.</span>
+        </section>
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <Link
-              id='navJournal'
-              to='https://journal.thriveglobal.com/'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Journal
-            </Link>
+            <a className={styles.link} href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
             <Link
               id='navGrow'
               to='/grow'
