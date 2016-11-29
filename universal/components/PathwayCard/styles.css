@@ -1,9 +1,9 @@
-@value bp-mama-bear, bp-papa-bear, MonBold, bodyCopy, darkGray from 'all';
+@value bp-mama-bear, bp-papa-bear, MonBold, bodyCopy, darkGray, gradientCardThrive from 'all';
 
 .card {
   lost-column: 1;
   margin-bottom: 1.25rem;
-  background: white;
+  background: gradientCardThrive;
   text-align: left;
   @media bp-mama-bear {
     lost-column: 1/2;
