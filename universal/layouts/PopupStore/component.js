@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import HalfTextOverlay from 'components/HalfTextOverlay'
+import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import TwoColImage from 'components/TwoColImage'
 import Banner from 'components/Banner'
 import FullWidthText from 'components/FullWidthText'
@@ -22,6 +23,8 @@ const banner = {
 
 const storeDescrip = {
   title: 'The Destination for Well-Being',
+  hasButton: 'buttonFalse',
+  image: ourPic2,
   sectionText: [`Thrive Global offers a curated selection of the best technology
    and products - including our own, newly developed Thrive products - for
    well-being and performance. In collaboration with our scientific advisory
@@ -51,7 +54,6 @@ const storeInfo = {
   title: 'Welcome to the Store',
   sectionText: [
   (<div>
-
     <dl>
       <dt>Date</dt>
       <dd>December 1 to January 15</dd>
@@ -150,7 +152,7 @@ export const PopupStoreView = () => (
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
     <FullWidthText {...mapUnit} />
-    <FullWidthText {...storeDescrip} />
+    <FullWidthTwoCol {...storeDescrip} />
     <TwoColImage {...ourPics} />
     <FullWidthText {...ourBrands} />
   </main>
