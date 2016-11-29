@@ -1,13 +1,15 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
-@value navItem from 'all';
-@value white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
+@value navItem, MonLight from 'all';
+@value gradientHeader, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
+
+@value babyHeaderPadding: 1.25rem 1.25rem;
+@value papaHeaderPadding: 0 3rem 0 1.25rem;
 
 .siteHeader {
   display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 1.25rem 1.25rem;
   float: left;
   position: relative;
   background: rgba(255, 255, 255, 1);
@@ -16,11 +18,36 @@
   overflow-y: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   @media bp-papa-bear {
-    padding: 0 3rem 0 1.25rem;
     border-bottom: .25rem solid ThriveTeal;
     text-align: center;
     overflow: hidden;
   }
+}
+
+.forehead {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  background: gradientHeader url('./assets/thriveVines.png') no-repeat;
+  background-position: top right;
+  color: white;
+}
+.tagline {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: MonLight;
+  font-size: 1.25rem;
+  line-height: 100%;
+  text-align: right;
 }
 
 .brand {
@@ -39,7 +66,6 @@
     height: auto;
     margin: 0 0;
     padding: 1.25rem 0;
-    position: relative;
     top: auto;
     left: auto;
   }
@@ -68,6 +94,7 @@
   margin: 0 auto;
   padding: 1.25rem 1.25rem 1.25rem;
   float: left;
+  clear: both;
   position: absolute;
   top: 0;
   right: -100%;
@@ -78,10 +105,11 @@
     display: block;
     height: auto;
     padding: 0 0;
-    top: 2rem;
+    position: relative;
+    top: auto;
     right: auto;
     overflow: visible;
-    background: none;
+    background: white;
   }
 }
 

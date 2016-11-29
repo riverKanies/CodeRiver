@@ -81,11 +81,14 @@ class Header extends React.Component {
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
 
-        <figure className={styles.brand}>
-          <IndexLink id='linkHome' to='/'>
-            <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
-          </IndexLink>
-        </figure>
+        <section className={styles.forehead}>
+          <figure className={styles.brand}>
+            <IndexLink id='linkHome' to='/'>
+              <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+            </IndexLink>
+          </figure>
+          <span className={styles.tagline}>More Than living. Thriving.</span>
+        </section>
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
