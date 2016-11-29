@@ -30,7 +30,8 @@ const HalfTextOverlay = ({
   sectionText = defaultText,
   url = 'javascript:void(0)',
   bgImage = dummyImage,
-  hasButton = 'buttonFalse'
+  hasButton = 'buttonFalse',
+  button = {}
 }: Props) => {
   return (
     <section className={styles.gridWrap}>
@@ -49,7 +50,7 @@ const HalfTextOverlay = ({
                 {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
               </a>
               <span className={styles[hasButton]}>
-                <Button />
+                <Button {...button} />
               </span>
             </section>
           </div>
