@@ -55,9 +55,9 @@ const FourColImage = ({
           location='Oakland'
         />
         <Mayor
-          image={Oakland}
+          image={Providence}
           name='Jorge Elorza'
-          location='Oakland'
+          location='Providence'
         />
       </section>
     </section>
