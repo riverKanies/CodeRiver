@@ -105,23 +105,25 @@ const silo = {
 
 const goodnightSmartphone = {
   sectionClass: 'fade',
+  hasColorBar: 'colorBarFalse',
   title: 'Goodnight Smartphone',
   sectionText: [
-    `Sleep is central to every part of our lives, and a good night's sleep 
+    `Sleep is central to every part of our lives, and a good night's sleep
     begins by putting aside the day's worries. But in today's technology-
-    saturated world, saying good night to the day is harder than ever. 
-    Allow author Arianna Huffington (Thrive, The Sleep Revolution) to guide 
-    you to a peaceful night's slumber as she performs Goodnight Smartphone: 
-    a classic tale reborn for the modern age, when the hardest thing to say 
-    good night to is not the moon but our phones, our email, our social media, 
+    saturated world, saying good night to the day is harder than ever.
+    Allow author Arianna Huffington (Thrive, The Sleep Revolution) to guide
+    you to a peaceful night's slumber as she performs Goodnight Smartphone:
+    a classic tale reborn for the modern age, when the hardest thing to say
+    good night to is not the moon but our phones, our email, our social media,
     our always-on digital selves.`
   ],
   image: goodnightImg,
-  button: {
-    buttonText: 'Get the Audiobook',
-    linkTo: `http://www.audible.com/pd/Self-Development/Goodnight-Smartphone-
-    Audiobook/B01MXMW4KV?source_code=AUDORWS1121169IYG`,
-    buttonStyle: 'violet'
+  link: {
+    linkText: 'Get the Audiobook',
+    linkTo:
+    'http://www.audible.com/pd/Self-Development/Goodnight-Smartphone-' +
+    'Audiobook/B01MXMW4KV?source_code=AUDORWS1121169IYG',
+    linkStyle: 'violet'
   },
   label: {
     label: 'Audible exclusive',
