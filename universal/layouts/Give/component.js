@@ -120,9 +120,9 @@ export const GiveView = () => (
       <TextBanner {...giveBanner} />
       <FeaturedStory {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
+      <FullWidthText {...nonProfitEmail} />
       <BrandRow />
       <QuoteSection {...globalPovertyProject} />
-      <FullWidthText {...nonProfitEmail} />
       <FeaturedStory {...GivingisGood} />
       <FullWidthText {...mayorHeading} />
       <MayorSection />

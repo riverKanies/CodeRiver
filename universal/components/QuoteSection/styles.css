@@ -169,20 +169,20 @@
   font-family: MonBold;
 
   @media bp-mama-bear {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   @media bp-papa-bear {
-    font-size: 1.875em;
+    font-size: 1.55em;
   }
 }
 .Playfair {
   font-family: Playfair;
 
   @media bp-mama-bear {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   @media bp-papa-bear {
-    font-size: 1.875em;
+    font-size: 1.5em;
   }
 }
 
