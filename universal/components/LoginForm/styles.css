@@ -80,3 +80,13 @@
 }
 
 /* FB Login Styles */
+.socialSignIn {
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  border: 0px;
+}
