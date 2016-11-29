@@ -6,7 +6,6 @@ import BrandRow from 'components/BrandRow'
 import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
 import FullWidthText from 'components/FullWidthText'
-import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import MayorSection from 'components/MayorSection'
 import FeaturedStory from 'components/FeaturedStory'
 
