@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue',
+  bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
   subTitle: string,

@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, lightGray from 'all';
 
 .fullWidthText {
   display: block;
@@ -42,6 +42,14 @@
   background: ThriveBlue;
   * {
     color: white;
+  }
+}
+
+.fade {
+  composes: fullWidthText;
+  background: TheFader;
+  * {
+    color: bodyCopy;
   }
 }
 

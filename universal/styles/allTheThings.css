@@ -63,6 +63,7 @@
 @value ThriveViolet: #3f17A8;
 @value ThriveGray: #303030;
 
+@value TheFader: linear-gradient(rgba(193,193,193,0.6), rgba(255,255,255,0.4), rgba(255,255,255,0));
 @value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061A4 100%);
 @value gradientEmailCap: linear-gradient(-136deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
 @value gradientCardThrive: linear-gradient(0deg, #207AD0 0%, #4EB4CA 100%);

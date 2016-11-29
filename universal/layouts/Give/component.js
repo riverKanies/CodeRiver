@@ -14,6 +14,7 @@ import thriveFoundationImage from './assets/thriveFoundation.jpg'
 import hughImage from './assets/hugh.jpg'
 
 const giveBanner = {
+  bgColor: 'gradient',
   hasTitle: 'titleTrue',
   subTitle: 'Giving is a fundamental part of a healthy, full life.' + ' Don\'t Just Be A Go-Getter. Be A Go-Giver.',
   title: 'Give'
@@ -47,7 +48,7 @@ const thriveFoundation = {
 }
 
 const trainNonProfits = {
-  sectionClass: 'white',
+  sectionClass: 'fade',
   sectionWidth: 'halfWidth',
   divider: 'dividerTrue',
   textAlign: 'textCenter',
