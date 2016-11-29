@@ -32,27 +32,6 @@ const Mayor = ({
   )
 }
 
-const mayorOne = {
-  image: Boston,
-  name: 'Marty Walsh',
-  location: 'Boston'
-}
-const mayorTwo = {
-  image: Minneapolis,
-  name: 'Betsy Hodges',
-  location: 'Minneapolis'
-}
-const mayorThree = {
-  image: Oakland,
-  name: 'Libby Schaaf',
-  location: 'Oakland'
-}
-const mayorFour = {
-  image: Providence,
-  name: 'Jorge Elorza',
-  location: 'Providence'
-}
-
 const FourColImage = ({
   bgColor = 'default',
   gutters = 'guttersFalse'
@@ -60,10 +39,26 @@ const FourColImage = ({
   return (
     <section className={styles[bgColor]}>
       <section className={styles[gutters]}>
-        <Mayor {...mayorOne} />
-        <Mayor {...mayorTwo} />
-        <Mayor {...mayorThree} />
-        <Mayor {...mayorFour} />
+        <Mayor
+          image={Boston}
+          name='Marty Walsh'
+          location='Boston'
+        />
+        <Mayor
+          image={Minneapolis}
+          name='Betsy Hodges'
+          location='Minneapolis'
+        />
+        <Mayor
+          image={Oakland}
+          name='Libby Schaaf'
+          location='Oakland'
+        />
+        <Mayor
+          image={Oakland}
+          name='Jorge Elorza'
+          location='Oakland'
+        />
       </section>
     </section>
   )
