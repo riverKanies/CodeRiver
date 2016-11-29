@@ -18,6 +18,9 @@
     "NODE_ENV": {
       "required": true
     },
+    "FACEBOOK_ID": {
+      "required": false
+    },
     "SEGMENT": {
       "required": true
     },

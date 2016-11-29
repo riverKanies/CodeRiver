@@ -4,10 +4,11 @@ import styles from './styles'
 import ExternalLink from 'components/ExternalLink'
 
 type Props = {
+  bgColor: 'default' | 'blue' | 'teal' | 'blurple',
   author: string,
   hasAuthor: 'authorTrue' | 'authorFalse',
   hasLabel: 'labelTrue' | 'labelFalse',
-  details: string,
+  details: any,
   title: string,
   asset: string,
   label: string,
@@ -22,6 +23,7 @@ const defaultTitle = "It's Time To Say Goodbye."
 const defaultAuthor = 'Koby Bryant'
 
 const FeaturedStory = ({
+  bgColor = 'default',
   title = defaultTitle,
   hasAuthor = 'authorTrue',
   hasLabel = 'labelTrue',
@@ -32,7 +34,7 @@ const FeaturedStory = ({
   asset = 'kobe.jpg'
 }: Props) => {
   return (
-    <section className={styles.container} style={{backgroundImage: `url('./assets/${asset}')`}} >
+    <section className={styles[bgColor]} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
         <label className={styles[hasLabel]}>{label}</label>
         <h2 className={styles.header}>{title}</h2>

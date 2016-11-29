@@ -118,7 +118,8 @@ config.globals = {
     'NODE_ENV' : JSON.stringify(config.env),
     'SEGMENT'  : JSON.stringify(process.env.SEGMENT),
     'ROLLBAR'  : JSON.stringify(process.env.ROLLBAR),
-    'ROLLBAR_ENV'  : JSON.stringify(process.env.ROLLBAR_ENV)
+    'ROLLBAR_ENV'  : JSON.stringify(process.env.ROLLBAR_ENV),
+    'FACEBOOK_ID'  : JSON.stringify(process.env.FACEBOOK_ID)
   },
   'NODE_ENV'     : config.env,
   '__DEV__'      : config.env === 'development',
