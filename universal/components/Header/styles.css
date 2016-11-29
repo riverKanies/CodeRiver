@@ -47,25 +47,28 @@
   }
 }
 .tagline {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 0;
-  position: absolute;
-  bottom: 1rem;
-  right: 2rem;
-  font-family: MonLight;
-  font-size: 1.25rem;
-  line-height: 100%;
-  text-align: right;
+  display: none;
+  @media bp-papa-bear {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    font-family: MonLight;
+    font-size: 1.25rem;
+    line-height: 100%;
+    text-align: right;
+  }
 }
 
 .brand {
   display: inline-block;
-  width: 76%;
+  width: 40%;
   height: auto;
-  margin: 0 12%;
+  margin: 0 30%;
   padding: 0 0;
   float: left;
   position: relative;
@@ -110,11 +113,26 @@
   position: absolute;
   top: 0;
   right: -100%;
-  background: rgba(255, 255, 255, .98);
-  border-bottom: .25rem solid ThriveTeal;
+  background: gradientHeader;
   text-align: center;
   overflow: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
+  &::before {
+    content: '';
+    display: block;
+    width: 7.3125rem;
+    height: 6.25rem;
+    margin: 0 0;
+    padding: 0 0;
+    float: right;
+    background-image: url('./assets/thriveVines.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
   @media bp-papa-bear {
     display: block;
     height: auto;
@@ -124,6 +142,11 @@
     right: auto;
     overflow: visible;
     background: white;
+    border-bottom: .25rem solid ThriveTeal;
+    &::before {
+      content: '';
+      display: none;
+    }
   }
 }
 
@@ -154,7 +177,7 @@
   letter-spacing: .01rem;
   text-align: center;
   text-transform: uppercase;
-  color: ThriveGray;
+  color: white;
   cursor: pointer;
   transition: all 150ms ease-in-out;
   @media bp-papa-bear {
@@ -164,6 +187,7 @@
     margin: 0 .75rem;
     float: none;
     background: transparent;
+    color: ThriveGray;
   }
 }
 
@@ -193,14 +217,14 @@
   float: left;
   clear: both;
   background: transparent;
-  border: 1px solid ThriveTeal;
+  border: 1px solid white;
   border-radius: 1.3125rem;
   font-family: navItem;
   font-size: 0.75rem;
   letter-spacing: .01rem;
   text-align: center;
   text-transform: uppercase;
-  color: ThriveTeal;
+  color: white;
   cursor: pointer;
   transition: all 150ms ease-in-out;
   @media bp-papa-bear {
@@ -334,7 +358,7 @@
   transition: all 150ms cubic-bezier(.04,.39,.94,.53);
 }
 .topLine, .middleLine, .bottomLine {
-  fill: ThriveTeal;
+  fill: white;
   opacity: 1;
   transform-origin: center center;
   transition: all 150ms cubic-bezier(.04,.39,.94,.53);
@@ -365,6 +389,9 @@
   }
   .button {
     transform: rotate(45deg);
+    .topLine, .middleLine, .bottomLine {
+      fill: white;
+    }
     .topLine {
       transform: translateY(.625rem) rotate(90deg);
     }
