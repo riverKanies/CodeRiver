@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/postFPO.jpg'
@@ -28,7 +29,6 @@ const MediumPostDynamic = ({
   postURL = 'javascript:void(0)',
   cover_image = dummyImage
 }: Props) => {
-  Props
   return (
     <article className={styles[cardType]}>
       <ContentLabel label={tags[0]} />
