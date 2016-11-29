@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand, babyHeader, mamaHeader, papaHeader from 'all';
 @value lightGray, ThriveTeal, ThriveBlue, TheFader, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
-@value Mon, Play from 'all';
+@value Mon, Playfair from 'all';
 
 /* Parent Most Container + BG Color Variants */
 .fullWidthTwoColSpecial {

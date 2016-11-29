@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, Playfair from 'all';
 
 .container {
   display: block;
@@ -6,6 +6,7 @@
   margin: 0 auto;
   padding: babyPadding;
   float: left;
+  background-color: white;
   @media bp-mama-bear {
     padding: mamaPadding;
   }
@@ -36,6 +37,7 @@
   }
   > h2 {
     text-align: left;
+    font-family: Playfair;
   }
 }
 
