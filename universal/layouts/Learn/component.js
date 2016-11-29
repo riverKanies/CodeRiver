@@ -8,8 +8,8 @@ import CTASection from 'components/CTASection'
 import FullWidthText from 'components/FullWidthText'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
+import TwoColTextImage from 'components/TwoColTextImage'
 import TwoColText from 'components/TwoColText'
-import TwoColImage from 'components/TwoColImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
 import ExternalLink from 'components/ExternalLink'
@@ -123,7 +123,10 @@ const eCourse = {
   bgColor: 'transparent',
   marginBottom: 'marginFalse',
   hasTitle: 'titleTrue',
-  title: 'E-Course',
+  titleCenter: 'centerTrue',
+  title: 'E-Courses',
+  colOneImg: kobeImage,
+  colTwoImg: ahImage,
   colTextOne: [
     'The six-week online course with Arianna Huffington helps you move ' +
     'from surviving to thriving. The course uses scientifically proven methods to ' +
@@ -144,12 +147,6 @@ const eCourseLink = {
   linkTo: 'http://learn.thriveglobal.com',
   linkStyle: 'violet'
 }
-const images = {
-  bgColor: 'transparent',
-  hasTitle: 'titleFalse',
-  colOneImg: kobeImage,
-  colTwoImg: ahImage
-}
 const quote = {
   bgColor: 'white',
   quote: [
@@ -169,11 +166,10 @@ export const LearnView = () => (
       <FullWidthTwoCol {...behaviorChange} />
       <FullWidthTwoColSpecial {...library} />
       <CTASection {...linkToAssessment} />
-      <TwoColText {...eCourse} />
+      <TwoColTextImage {...eCourse} />
       <span className={styles.buttonWrap}>
         <ExternalLink {...eCourseLink} />
       </span>
-      <TwoColImage {...images} />
       <QuoteSection {...quote} />
     </section>
   </article>
