@@ -1,0 +1,45 @@
+@value all: 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
+@value bodyCopy, ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
+
+.changePassword,
+.password, {
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  border: 0px;
+}
+
+.submit {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0 0 0;
+  padding: 1.25rem 1.25rem;
+  float: left;
+  background: white;
+  outline: none;
+  border: 1px solid bodyCopy;
+  border-radius: .125rem;
+  font-family: MonLight;
+  font-size: .88rem;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 150ms cubic-bezier(.33,.89,.34,.98);
+  @media bp-mama-bear {
+    width: auto;
+    float: right;
+  }
+  &:hover, &:active {
+    background: ThriveTeal;
+    border-color: ThriveTeal;
+    color: white;
+  }
+}
