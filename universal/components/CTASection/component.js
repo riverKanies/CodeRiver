@@ -5,7 +5,7 @@ import Button from 'components/Button'
 
 type Props = {
   alignment: 'defaultLeft' | 'center',
-  colorScheme: 'default' | 'white' | 'blue' | 'gray',
+  colorScheme: 'default' | 'white' | 'blue' | 'gray' | 'gradientPurpleTeal',
   sectionText: Array<string>,
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   title: string,

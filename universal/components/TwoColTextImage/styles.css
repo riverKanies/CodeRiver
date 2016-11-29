@@ -6,10 +6,10 @@
 /* Base Section Styling + Composed Styles */
 .twoColText {
   width: 100%;
+  lost-center: containerWidth;
   height: auto;
   margin: babyMargin auto;
   padding: babyPadding;
-  position: relative;
   text-align: left;
   @media bp-mama-bear {
     margin: 0 auto;
@@ -49,22 +49,10 @@
 .container {
   lost-center: containerWidth;
   margin: 0 auto;
+  background: inherit;
   padding: containerPadding;
-  float: none;
+  float: left;
   color: inherit;
-  padding-top: 6rem;
-  padding-bottom: 1rem;
-  @media bp-papa-bear {
-    padding-bottom: 4rem;
-  }
-}
-.marginTrue {
-  composes: container;
-}
-.marginFalse {
-  composes: container;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 /* Title True/False */
@@ -145,4 +133,28 @@ img {
     color: inherit;
     margin-bottom: 2rem;
   }
+}
+
+.buttonWrap {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: containerPadding;
+  float: left;
+  clear: both;
+  text-align: center;
+  > a {
+    display: inline-block;
+    text-align: center;
+  }
+}
+.learnPage {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
 }
