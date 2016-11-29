@@ -30,6 +30,7 @@ const thriveFoundation = {
     on Crowdrise below.`
   ],
   hasAuthor: 'authorFalse',
+  hasLabel: 'labelFalse',
   title: 'Thrive Foundation',
   asset: 'thriveFoundation.jpg',
   externalLink: {
