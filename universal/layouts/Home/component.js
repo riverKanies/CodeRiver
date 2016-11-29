@@ -12,17 +12,15 @@ import QuoteSection from 'components/QuoteSection'
 
 // Content Import
 import pulseImg from './assets/pulse.jpg'
-import pathwaysImg from './assets/pathways.png'
-import listenImg from './assets/listen.jpg'
-import popUpImg from './assets/popup.jpg'
+import appsImg from './assets/thrive-apps.jpg'
+import popUpImg from './assets/thrive-popup.jpg'
 import eCourseImg from './assets/ecourse.png'
-import deathOverDinnerImg from './assets/deathOverDinner.png'
-import poetryImg from './assets/poetry.png'
-import artImg from './assets/art.png'
+import artImg from './assets/thrive-art.jpg'
 import styleImg from './assets/style.png'
 
 // Content Definitions
 const thrivePulse = {
+  bgColor: 'teal',
   author: '',
   label: 'Get Started',
   title: 'What\'s Your Thrive Pulse?',
@@ -52,11 +50,11 @@ const eCourse = {
      Adam Grant, Warby Parker CEO Dave Gilboa, and more.`
   ],
   image: eCourseImg,
-  // TODO: fix button. Why isn't it showing up?
-  link: {
-    linkText: 'Take the e-Course',
+  hasButton: 'buttonTrue',
+  button: {
+    buttonText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
-    linkStyle: 'blue'
+    buttonStyle: 'white'
   }
 }
 const homeQuote = {
@@ -65,7 +63,6 @@ const homeQuote = {
     `It’s no mystery that healthier workforces make for better corporate
     financial health and higher performing employees all around.`
   ],
-  // TODO: How do I newline?!
   citation: `Dr. David Agus,
     \n Professor of Medicine & Engineering USC,
     \n Thrive Global board member`,
@@ -73,30 +70,29 @@ const homeQuote = {
   imageShape: 'roundImage'
 }
 const pathways = {
-  sectionClass: 'default',
-  title: 'Pathways, Journeys, & Microsteps',
+  bgColor: 'blue',
+  author: '',
+  hasAuthor: 'authorFalse',
   hasLabel: 'labelTrue',
-  label: {
-    label: 'Grow',
-    labelColor: 'blueLabel'
-  },
-  sectionText: [
-    `Pathway to Joy Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-    ex ea commodo consequat.`
+  details: [
+    `Thrive Global is all about action – going from knowing what to do to actually
+    doing it.  Begin by taking your Thrive Pulse.  Explore our pathways, journeys
+    and microsteps that will collectively make a transformational impact on your
+    day-to-day well-being and performance.  Go deeper with our e-course.
+    Whatever your entry point is, take it.`
   ],
-  image: pathwaysImg,
-  hasButton: 'buttonTrue',
-  link: {
-    linkText: 'Take the first step',
+  title: 'Pathways, Journeys, & Microsteps',
+  asset: 'string',
+  label: 'Grow',
+  externalLink: {
+    linkText: 'Take the First Step',
     linkTo: '/grow',
-    linkStyle: 'blue'
+    linkStyle: 'white'
   }
 }
-const thriveAmazon = {
-  sectionClass: 'transparent',
-  title: 'Thrive & Amazon: Audible & Echo',
+const thriveApps = {
+  sectionClass: 'default',
+  title: 'Thrive Apps & Podcasts',
   hasLabel: 'labelTrue',
   label: {
     label: 'Apps',
@@ -107,7 +103,7 @@ const thriveAmazon = {
     boundaries in your relationship with technology. So you can disconnect
     from technology and reconnect with what really matters.`
   ],
-  image: listenImg,
+  image: appsImg,
   hasButton: 'buttonTrue',
   link: {
     linkText: 'Get the Apps',
@@ -116,7 +112,7 @@ const thriveAmazon = {
   }
 }
 const thriveStyle = {
-  sectionClass: 'default',
+  sectionClass: 'transparent',
   title: 'Thrive Style',
   hasLabel: 'labelTrue',
   label: {
@@ -135,20 +131,18 @@ const thriveStyle = {
   image: styleImg,
   hasButton: 'buttonTrue',
   link: {
-    linkText: 'Get Style',
-    linkTo: 'javascript:void(0)',
+    linkText: 'Read More',
+    linkTo: 'https://medium.com/@ariannahuff/7585234da618#.t2phr2e2o',
     linkStyle: 'blue'
   }
 }
 const thrivePoetry = {
-  sectionClass: 'default',
+  bgColor: 'teal',
+  author: '',
+  label: 'Wisdom',
   title: 'Poetry & Philosophy',
-  hasLabel: 'labelTrue',
-  label: {
-    label: 'Wisdom',
-    labelColor: 'defaultLabel'
-  },
-  sectionText: [
+  asset: '',
+  details: [
     `Philosophy is not an academic exercise. “What is a good life?” has been a
     question asked by philosophers going back to the ancient Greeks. But
     somewhere along the line we abandoned that question and shifted our
@@ -158,35 +152,30 @@ const thrivePoetry = {
     They’ll both be featured prominently in The Thrive Journal. Read the
     poetry of Mark Nepo at The Thrive Journal.`
   ],
-  image: poetryImg,
-  hasButton: 'buttonTrue',
-  link: {
-    linkText: 'Read more.',
+  externalLink: {
+    linkText: 'Read More',
     linkTo: 'https://journal.thriveglobal.com/search?q=poetry',
-    linkStyle: 'blue'
+    linkStyle: 'white'
   }
 }
 const deathOverDinner = {
-  bgImage: deathOverDinnerImg,
-  url: 'https://learn.thriveglobal.com',
-  sectionClass: 'transparent',
-  title: 'Let\'s Have Dinner and Talk About Death',
-  postLabel: {
-    label: 'Wonder',
-    labelColor: 'whiteLabel'
-  },
-  sectionText: [
+  bgColor: 'blurple',
+  author: '',
+  hasAuthor: 'authorFalse',
+  hasLabel: 'labelFalse',
+  details: [
     `Yes, really.  We have, if we’re lucky, about thirty thousand days to play
     the game of life. How we play it will be determined by what we value.
     Thrive and VICE are partnering with not-for-profit Death Over Dinner to
     launch a global conversation about mortality and life's biggest questions.`
   ],
-  image: eCourseImg,
-  // TODO: fix button. Why isn't it showing up? Wrong props prolly.
-  link: {
+  title: 'Let\'s Have Dinner and Talk About Death',
+  asset: 'string',
+  label: 'Wonder',
+  externalLink: {
     linkText: 'Learn More',
     linkTo: 'https://learn.thriveglobal.com',
-    linkStyle: 'blue'
+    linkStyle: 'white'
   }
 }
 const thriveArt = {
@@ -208,7 +197,7 @@ const thriveArt = {
   hasButton: 'buttonTrue',
   link: {
     linkText: 'Learn More',
-    linkTo: 'http://journal.thriveglobal.com',
+    linkTo: 'https://medium.com/@ariannahuff/30d21640ab0b#.bkyick4i5',
     linkStyle: 'blue'
   }
 }
@@ -264,14 +253,14 @@ export const HomeView = () => {
       <FeaturedStory {...thrivePulse} />
       <HalfTextOverlay {...eCourse} />
       <QuoteSection {...homeQuote} />
-      <FullWidthTwoCol {...pathways} />
-      <FullWidthTwoColSpecial {...thriveAmazon} />
-      <FullWidthTwoCol {...thriveStyle} />
-      <FullWidthTwoCol {...thrivePoetry} />
-      <HalfTextOverlay {...deathOverDinner} />
+      <FeaturedStory {...pathways} />
+      <FullWidthTwoCol {...thriveApps} />
+      <FullWidthTwoColSpecial {...thriveStyle} />
+      <FeaturedStory {...deathOverDinner} />
       <FullWidthTwoCol {...thriveArt} />
-      <FullWidthTwoColSpecial {...thriveFoundation} />
-      <FullWidthTwoCol {...popUpShop} />
+      <FeaturedStory {...thrivePoetry} />
+      <FullWidthTwoCol {...thriveFoundation} />
+      <FullWidthTwoColSpecial {...popUpShop} />
     </main>
   )
 }

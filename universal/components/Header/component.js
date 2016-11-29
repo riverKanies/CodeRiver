@@ -93,7 +93,7 @@ class Header extends React.Component {
               <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
             </IndexLink>
           </figure>
-          <span className={styles.tagline}>More Than living. Thriving.</span>
+          <span className={styles.tagline}>More than living. Thriving.</span>
         </section>
 
         <section className={styles.navContainer}>

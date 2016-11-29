@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
 import HalfTextOverlay from './component'
 import dummyImage from './assets/arrianaH.jpg'
@@ -18,7 +18,11 @@ const props = {
   title: 'Title',
   sectionText: defaultText,
   url: 'javascript:void',
-  bgImage: dummyImage
+  bgImage: dummyImage,
+  hasButton: [
+    'buttonTrue',
+    'buttonFalse'
+  ]
 }
 
 const defaultLabel = {
@@ -36,6 +40,7 @@ storiesOf('HalfTextOverlay', module)
           title={text('Card Title', props.title)}
           sectionText={text('Section Text', props.sectionText)}
           url={text('Where does this link to?', props.url)}
+          hasButton={select('Need a button?', props.hasButton, props.hasButton[1])}
           bgImage={text('What image goes here? Paste the URL here', props.bgImage)}
         />
       </WithNotes>
