@@ -55,10 +55,10 @@ const eCourse = {
   ],
   image: eCourseImg,
   // TODO: fix button. Why isn't it showing up?
-  button: {
-    buttonText: 'Take the e-Course',
+  link: {
+    linkText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const homeQuote = {
@@ -91,10 +91,10 @@ const pathways = {
   ],
   image: pathwaysImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Take the first step',
+  link: {
+    linkText: 'Take the first step',
     linkTo: '/grow',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const thriveAmazon = {
@@ -112,10 +112,10 @@ const thriveAmazon = {
   ],
   image: listenImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Get the Apps',
+  link: {
+    linkText: 'Get the Apps',
     linkTo: '/apps',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const thriveStyle = {
@@ -137,10 +137,10 @@ const thriveStyle = {
   ],
   image: pathwayImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Get Style',
+  link: {
+    linkText: 'Get Style',
     linkTo: 'javascript:void(0)',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const thrivePoetry = {
@@ -163,10 +163,10 @@ const thrivePoetry = {
   ],
   image: poetryImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Read more.',
+  link: {
+    linkText: 'Read more.',
     linkTo: 'https://journal.thriveglobal.com/search?q=poetry',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const deathOverDinner = {
@@ -186,10 +186,10 @@ const deathOverDinner = {
   ],
   image: eCourseImg,
   // TODO: fix button. Why isn't it showing up? Wrong props prolly.
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: 'https://learn.thriveglobal.com',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const thriveArt = {
@@ -209,10 +209,10 @@ const thriveArt = {
   ],
   image: pulseImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: 'http://journal.thriveglobal.com',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const thriveFoundation = {
@@ -231,10 +231,10 @@ const thriveFoundation = {
   ],
   image: foundationImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: '/give',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const popUpShop = {
@@ -252,10 +252,10 @@ const popUpShop = {
     days a week, from 10:00am to 7:00pm, December 1 through January 15, 2017.`
   ],
   image: popUpImg,
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: '/popup',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 

@@ -1,6 +1,6 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
 @value Mon from 'all';
-@value ThriveViolet, ThriveTeal, ThriveBlurple from 'all';
+@value ThriveViolet, ThriveBlue, ThriveTeal, ThriveBlurple from 'all';
 
 .link {
   border: 2px solid;
