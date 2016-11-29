@@ -35,7 +35,7 @@
 }
 .gray {
   composes: fourColImg;
-  background: lightGray;
+  background: #f0f0f0;
 }
 .fade {
   composes: fourColImg;
