@@ -29,10 +29,10 @@ const thriveAway = {
     deletes new emails until you're back in the office.`
   ],
   image: thriveAwayImage,
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: 'http://thriveaway.thriveglobal.com',
-    buttonStyle: 'violet'
+    linkStyle: 'violet'
   },
   label: {
     label: 'Web App & iOS',
@@ -49,10 +49,10 @@ const joyTrigger = {
     information for bringing more well-being and productivity to your life.`
   ],
   image: joyTriggerImage,
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: 'http://www.mschf.xyz/sandbox/thrive/',
-    buttonStyle: 'violet'
+    linkStyle: 'violet'
   },
   label: {
     label: 'Google Chrome Extension',
@@ -71,10 +71,10 @@ const alexa = {
     Agapi Stassinopoulos.`
   ],
   image: alexaImage,
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=201602060',
-    buttonStyle: 'violet'
+    linkStyle: 'violet'
   },
   label: {
     label: 'Amazon Alexa Skill',
@@ -91,10 +91,10 @@ const silo = {
     in your life for focus, creativity, and truly connecting with the world, those around you, and yourself.`
   ],
   image: siloImage,
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: 'http://silo.thriveglobal.com/',
-    buttonStyle: 'violet'
+    linkStyle: 'violet'
   },
   label: {
     label: 'Android & iOS',

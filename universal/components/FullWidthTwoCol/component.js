@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/thriveScience.jpg'
 import ContentLabel from 'components/ContentLabel'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   sectionClass: 'default' | 'lightGray' | 'fade',
@@ -13,7 +13,7 @@ type Props = {
   sectionText: Array<string>,
   image: string,
   hasButton: 'buttonTrue' | 'buttonFalse',
-  button: Object
+  link: Object
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -28,7 +28,7 @@ const FullWidthTwoCol = ({
   sectionText = defaultText,
   image = dummyImage,
   hasButton = 'buttonTrue',
-  button = {}
+  link = {}
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
@@ -48,7 +48,7 @@ const FullWidthTwoCol = ({
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             <span className={styles[hasButton]}>
-              <Button {...button} />
+              <ExternalLink {...link} />
             </span>
           </section>
         </div>
