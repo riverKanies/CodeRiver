@@ -7,13 +7,17 @@
   float: none;
 }
 
-.card {
-  lost-column: 1;
+.cardContainer {
+  display: block;
+  height: 20rem;
+  margin: 0 auto;
+  padding: 4rem;
+  float: left;
+	lost-column: 1;
   margin-bottom: 1.25rem;
   background: gradientCardThrive;
   text-align: center;
-  outline: 1px solid white;
-  outline-offset: -2rem;
+	position: relative;
   @media bp-mama-bear {
     lost-column: 1/2;
     margin-bottom: 1.5rem;
@@ -25,14 +29,11 @@
   }
 }
 
-.cardContainer {
-  display: block;
-  width: 100%;
-  min-height: 20rem;
-  height: auto;
-  margin: 0 auto;
-  padding: 5rem;
-  float: left;
+.content {
+	position: absolute;
+	top: 50%;
+	height: 20rem;
+	margin-top: 100px;
 }
 
 .header {
@@ -59,13 +60,4 @@
   font-size: .8rem;
   text-align: center;
   color: white;
-}
-
-.divider {
-  width: 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-  text-align: center;
-  margin-top: .8rem;
-  margin-bottom: 1rem;
-  margin: 0 auto;
 }
