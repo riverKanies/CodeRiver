@@ -62,7 +62,7 @@ const eCourse = {
     'Warby Parker CEO Dave Gilboa, and more.']
 }
 const eCourseLink = {
-  linkText: 'Go To E-Course',
+  linkText: 'Go To E-Courses',
   linkTo: 'http://learn.thriveglobal.com',
   linkStyle: 'violet'
 }
