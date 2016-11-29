@@ -5,8 +5,8 @@ import styles from './styles'
 import BrandRow from 'components/BrandRow'
 import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
+import FourColImage from 'components/FourColImage'
 import FullWidthText from 'components/FullWidthText'
-import MayorSection from 'components/MayorSection'
 import FeaturedStory from 'components/FeaturedStory'
 
 import hughImage from './assets/hugh.jpg'
@@ -101,6 +101,11 @@ const mayorHeading = {
   ]
 }
 
+const mayorSection = {
+  bgColor: 'gray',
+  gutters: 'guttersFalse'
+}
+
 const mayorQuote = {
   bgColor: 'gray',
   quoteFont: 'Playfair',
@@ -120,12 +125,12 @@ export const GiveView = () => (
       <TextBanner {...giveBanner} />
       <FeaturedStory {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
+      <FullWidthText {...nonProfitEmail} />
       <BrandRow />
       <QuoteSection {...globalPovertyProject} />
-      <FullWidthText {...nonProfitEmail} />
       <FeaturedStory {...GivingisGood} />
       <FullWidthText {...mayorHeading} />
-      <MayorSection />
+      <FourColImage {...mayorSection} />
       <QuoteSection {...mayorQuote} />
     </section>
   </section>

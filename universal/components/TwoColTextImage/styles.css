@@ -4,12 +4,12 @@
 @value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
 
 /* Base Section Styling + Composed Styles */
-.twoColText {
-  width: 100%;
+.twoColTextImage {
   height: auto;
+  width: 100%;
+  float: left;
   margin: babyMargin auto;
   padding: babyPadding;
-  position: relative;
   text-align: left;
   @media bp-mama-bear {
     margin: 0 auto;
@@ -20,27 +20,27 @@
   }
 }
 .default {
-  composes: twoColText;
+  composes: twoColTextImage;
   background: white;
   color: bodyCopy;
 }
 .transparent {
-  composes: twoColText;
+  composes: twoColTextImage;
   background: transparent;
   color: bodyCopy;
 }
 .lightGray {
-  composes: twoColText;
+  composes: twoColTextImage;
   background: lightGray;
   color: bodyCopy;
 }
 .purple {
-  composes: twoColText;
+  composes: twoColTextImage;
   background: ThriveBlurple;
   color: white;
 }
 .blue {
-  composes: twoColText;
+  composes: twoColTextImage;
   background: ThriveBlue;
   color: white;
 }
@@ -48,23 +48,11 @@
 /* Container Styles */
 .container {
   lost-center: containerWidth;
-  margin: 0 auto;
-  padding: containerPadding;
   float: none;
+  margin: 0 auto;
+  background: inherit;
+  padding: containerPadding;
   color: inherit;
-  padding-top: 6rem;
-  padding-bottom: 1rem;
-  @media bp-papa-bear {
-    padding-bottom: 4rem;
-  }
-}
-.marginTrue {
-  composes: container;
-}
-.marginFalse {
-  composes: container;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 /* Title True/False */
@@ -145,4 +133,28 @@ img {
     color: inherit;
     margin-bottom: 2rem;
   }
+}
+
+.buttonWrap {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: containerPadding;
+  float: left;
+  clear: both;
+  text-align: center;
+  > a {
+    display: inline-block;
+    text-align: center;
+  }
+}
+.learnPage {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
 }

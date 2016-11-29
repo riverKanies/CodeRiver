@@ -1,0 +1,112 @@
+/*
+  This is the stylesheet for: VerticalTimeline
+*/
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, gradientTeal, lightGray from 'all';
+
+.verticalTimeline {
+  display: flex;
+  background: gradientTeal;
+  position: relative;
+  color: white;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+
+.verticalLine {
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  width: 0;
+  height: 90%;
+  border-left: 2px solid lightGray;
+
+  @media bp-papa-bear {
+    left: 50%;
+  }
+}
+
+.container {
+  lost-center: containerWidth flex;
+  margin: 0 auto;
+  padding: containerPadding;
+}
+
+.row {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: babyPadding;
+  height: auto;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+
+
+.header {
+  margin: 0 auto babyHeader auto;
+  padding: 0 0;
+  float: left;
+  @media bp-mama-bear {
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/4;
+  }
+  h2 {
+    display: inline-block;
+    padding: 0 0;
+    float: left;
+    text-align: inherit;
+  }
+}
+
+.headerRight {
+  composes: header;
+
+  @media bp-papa-bear {
+    float: right !important;
+  }
+}
+
+.sectionContent {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: inherit;
+  p {
+    display: inline-block;
+    padding: 0 0;
+    float: left;
+    position: relative;
+    text-align: inherit;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/2;
+  }
+}
+
+.sectionContentRight {
+  composes: sectionContent;
+  lost-utility: clearfix;
+  float: left !important;
+  text-align: left;
+
+  @media bp-papa-bear {
+    lost-offset: 1/5;
+    text-align: right;
+  }
+}

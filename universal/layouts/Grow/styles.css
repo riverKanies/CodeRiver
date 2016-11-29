@@ -1,25 +1,3 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin from 'all';
-
-.buttonWrap {
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 4rem;
-  padding: containerPadding;
-  float: left;
-  clear: both;
-  text-align: center;
-  > a {
-    display: inline-block;
-    text-align: center;
-  }
-}
 .learnPage {
-  width: 100%;
-  margin: 0 auto;
-  float: left;
-}
-.content {
-  width: 100%;
-  margin: 0 auto;
-  float: left;
+  background-color: white;
 }
