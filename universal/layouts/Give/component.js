@@ -10,7 +10,6 @@ import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import MayorSection from 'components/MayorSection'
 import FeaturedStory from 'components/FeaturedStory'
 
-import thriveFoundationImage from './assets/thriveFoundation.jpg'
 import hughImage from './assets/hugh.jpg'
 
 const giveBanner = {
@@ -21,15 +20,7 @@ const giveBanner = {
 }
 
 const thriveFoundation = {
-  sectionClass: 'default',
-  title: 'Thrive Foundation',
-  image: thriveFoundationImage,
-  hasLabel: 'labelFalse',
-  label: {
-    label: 'Thrive',
-    labelColor: 'defaultLabel'
-  },
-  sectionText: [
+  details: [
     `The Thrive Foundation is a 501(c)3 organization that brings free Thrive trainings to
     nonprofit and civic leaders who are on the front lines of serving others.
     Leaders in the public and nonprofit sectors are at particular risk of burnout,
@@ -39,11 +30,13 @@ const thriveFoundation = {
     more effective at helping others. You can donate to the Thrive Foundation
     on Crowdrise below.`
   ],
-  hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Donate Now',
+  hasAuthor: 'authorFalse',
+  title: 'Thrive Foundation',
+  asset: 'thriveFoundation.jpg',
+  externalLink: {
+    linkText: 'Donate Now',
     linkTo: 'https://www.crowdrise.com/',
-    buttonStyle: 'violet-medium'
+    linkStyle: 'white'
   }
 }
 
@@ -125,15 +118,15 @@ export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
       <TextBanner {...giveBanner} />
-      <FullWidthTwoCol {...thriveFoundation} />
+      <FeaturedStory {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
       <BrandRow />
       <QuoteSection {...globalPovertyProject} />
       <FullWidthText {...nonProfitEmail} />
+      <FeaturedStory {...GivingisGood} />
       <FullWidthText {...mayorHeading} />
       <MayorSection />
       <QuoteSection {...mayorQuote} />
-      <FeaturedStory {...GivingisGood} />
     </section>
   </section>
 )
