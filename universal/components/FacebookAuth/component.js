@@ -9,9 +9,9 @@ type Props = {
 export default function ({ handleResponse } : Props) {
   return (
     <FacebookLogin
-      appId='232613377159246'
+      appId={process.env.FACEBOOK_ID}
       autoLoad={false}
-      fields='email'
+      fields='email,name'
       callback={handleResponse}
       cssClass={styles.fbButton}
     />
