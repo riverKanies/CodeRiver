@@ -30,7 +30,7 @@
     lost-column: 1;
     height: 6rem;
     object-fit: none;
-    @media bp-mama-bear {
+    @media bp-papa-bear {
       height: auto;
     }
   }
