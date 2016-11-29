@@ -6,6 +6,7 @@ import ExternalLink from 'components/ExternalLink'
 type Props = {
   author: string,
   hasAuthor: 'authorTrue' | 'authorFalse',
+  hasLabel: 'labelTrue' | 'labelFalse',
   details: string,
   title: string,
   asset: string,
@@ -23,6 +24,7 @@ const defaultAuthor = 'Koby Bryant'
 const FeaturedStory = ({
   title = defaultTitle,
   hasAuthor = 'authorTrue',
+  hasLabel = 'labelTrue',
   author = defaultAuthor,
   details = defaultDetails,
   externalLink = {},
@@ -32,7 +34,7 @@ const FeaturedStory = ({
   return (
     <section className={styles.container} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
-        <label className={styles.label}>{label}</label>
+        <label className={styles[hasLabel]}>{label}</label>
         <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
