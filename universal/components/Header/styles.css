@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 @value navItem, MonLight from 'all';
-@value gradientHeader, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
+@value gradientTeal, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
 
 .siteHeader {
   display: block;
@@ -27,7 +27,7 @@
   padding: 1rem 2rem;
   float: left;
   position: relative;
-  background: gradientHeader;
+  background: gradientTeal;
   color: white;
   &::before {
     content: '';
@@ -113,7 +113,7 @@
   position: absolute;
   top: 0;
   right: -100%;
-  background: gradientHeader;
+  background: gradientTeal;
   text-align: center;
   overflow: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
