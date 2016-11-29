@@ -45,11 +45,11 @@ const Profile = ({
               </div>
               <div className={styles.inputWrap}>
                 <input className={styles.check} type='checkbox' name='emailsThrive' />
-                <label className={styles.label}>Send me occasional emails from Thrive Global</label>
+                <label className={styles.label}>Send occasional emails from Thrive Global</label>
               </div>
             </fieldset>
             <fieldset className={styles.save}>
-              <input className={styles.input} type='submit' />
+              <input className={styles.submit} type='submit' />
             </fieldset>
           </form>
 
@@ -73,7 +73,7 @@ const Profile = ({
               </div>
             </fieldset>
             <fieldset className={styles.save}>
-              <input className={styles.input} type='submit' value='Change' />
+              <input className={styles.submit} type='submit' value='Change' />
             </fieldset>
           </form>
 
