@@ -1,18 +1,18 @@
 import React from 'react'
 import styles from './styles'
-import FullWidthTwoCol from 'components/FullWidthTwoCol'
-const title ="Advertise With Us"
-const text = ["Interested in learning more about brand partnerships and sponsorships with Thrive Global? Email Sam Winkelman at sw@thriveglobal.com to learn more."]
-const label = {"label":"Advertisers"}
-export const AdvertiseSection = () => {
+import HalfTextOverlay from 'components/HalfTextOverlay'
+const title ="Join The Thrive Tribe"
+const text = ["Join the team that is changing the way we work and live. Thrive Global is looking for innovative and passionate employees across all our teams--technology and engineering, media, sales and marketing, and more. Email us with your resume attached at jobs@thriveglobal.com to learn about joining our Thrive Tribe!"]
+const label = {"label":"Careers"}
+export const CareerSection = () => {
     return (
     <section className={styles.SectionContainer}>
         <section className={styles.content}>
-          <FullWidthTwoCol title={title} sectionText={text} postLabel={label}/> 
+          <HalfTextOverlay title={title} sectionText={text} postLabel={label}/> 
         </section>
     </section> 
 
   )
 }
 
-export default AdvertiseSection
+export default CareerSection

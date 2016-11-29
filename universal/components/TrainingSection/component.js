@@ -1,18 +1,18 @@
 import React from 'react'
 import styles from './styles'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
-const title ="Advertise With Us"
-const text = ["Interested in learning more about brand partnerships and sponsorships with Thrive Global? Email Sam Winkelman at sw@thriveglobal.com to learn more."]
-const label = {"label":"Advertisers"}
-export const AdvertiseSection = () => {
+const title ="Train With Us"
+const text = ["Interested in bringing Thrive trainings to your workplace or nonprofit organization? Email our director of trainings Joey Hubbard at jh@thriveglobal.com."]
+const label = {"label":"Training"}
+export const TrainingSection = () => {
     return (
     <section className={styles.SectionContainer}>
         <section className={styles.content}>
-          <FullWidthTwoCol title={title} sectionText={text} postLabel={label}/> 
+          <FullWidthTwoCol title={title} sectionText={text} label={label}/> 
         </section>
     </section> 
 
   )
 }
 
-export default AdvertiseSection
+export default TrainingSection

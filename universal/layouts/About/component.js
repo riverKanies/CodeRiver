@@ -8,6 +8,8 @@ import BrowseSection from 'components/BrowseSection'
 import AboutSection from 'components/AboutSection'
 import AdvertiseSection from 'components/AdvertiseSection'
 import PressSection from 'components/PressSection'
+import TrainingSection from 'components/TrainingSection'
+import CareerSection from 'components/CareerSection'
 
 export const AboutView = () => {
   return (
@@ -18,6 +20,8 @@ export const AboutView = () => {
       <PartnerSection/>
       <AdvertiseSection />
       <PressSection />
+      <TrainingSection/>
+      <CareerSection />
       <BrowseSection/>
      </main>
   )
