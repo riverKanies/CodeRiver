@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import { Link } from 'react-router'
 
 type Props = {
   title: string,
@@ -16,15 +17,13 @@ const PathwayCard = ({
   description = 'Vestibulum id ligula porta felis euismod semper.',
   id }: Props) => {
   return (
-    <section className={styles.container}>
-      <section className={styles.card}>
-        <section className={styles.cardContainer}>
-          <h3 className={styles.header}>{title}</h3>
-          <div className={styles.divider} />
-          <p className={styles.synopsis}>{description}</p>
-        </section>
+    <Link to={`/pathways/${id}`} className={styles.card}>
+      <section className={styles.cardContainer}>
+        <h3 className={styles.header}>{title}</h3>
+        <div className={styles.divider} />
+        <p className={styles.synopsis}>{description}</p>
       </section>
-    </section>
+    </Link>
   )
 }
 
