@@ -24,7 +24,7 @@ const FullWidthTwoCol = ({
   label = {},
   sectionText = defaultText,
   image = dummyImage,
-  button = {}
+  button = null
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
@@ -41,7 +41,7 @@ const FullWidthTwoCol = ({
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-            <Button {...button} />
+            {button ? <Button {...button} />: ''} 
           </section>
         </div>
       </section>
