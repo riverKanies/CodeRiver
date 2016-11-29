@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles'
 import IconWithText from 'components/IconWithText'
-
+import PathwayCard from 'components/PathwayCard'
 
 const Fakeitems = 
 [{
@@ -24,7 +24,7 @@ export const OfferSection = () => {
       <section className={styles.content}>
         {Fakeitems.map(
           item =>
-          <IconWithText {...item} />
+          <PathwayCard {...item} />
           )}
       </section>
     </section> 

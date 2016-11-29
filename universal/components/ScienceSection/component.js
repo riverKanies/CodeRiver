@@ -2,31 +2,33 @@ import React from 'react'
 import styles from './styles'
 import IconWithText from 'components/IconWithText'
 
+
 const Fakeitems = 
 [{
-	title: "Science Item 1",
-	description: "description........"
-},
-{
-	title:"Science item 2",
-	description:"description........"
-},
-{
-  title: "Science Item 3",
+  title: "Section Item 1",
   description: "description........"
 },
 {
-  title:"Science item 4",
+  title:"Section item 2",
   description:"description........"
-},]
-export const ScienceSection = () => {
+},
+{
+  title: "Section Item 3",
+  description: "description........"
+}]
+export const SectionSection = () => {
     return (
     <section className={styles.SectionContainer}>
-      <h2>Science Section</h2>
-      <p>Some Science Stuff.......</p>
+      <h2 className={styles.title}>Science Behind Thrive</h2>
+      <section className={styles.content}>
+        {Fakeitems.map(
+          item =>
+          <IconWithText {...item} />
+          )}
+      </section>
     </section> 
 
   )
 }
 
-export default ScienceSection
+export default SectionSection

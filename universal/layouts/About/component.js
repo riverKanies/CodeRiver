@@ -10,6 +10,7 @@ import AdvertiseSection from 'components/AdvertiseSection'
 import PressSection from 'components/PressSection'
 import TrainingSection from 'components/TrainingSection'
 import CareerSection from 'components/CareerSection'
+import ContactSection from 'components/ContactSection'
 
 export const AboutView = () => {
   return (
@@ -22,6 +23,7 @@ export const AboutView = () => {
       <PressSection />
       <TrainingSection/>
       <CareerSection />
+      <ContactSection />
       <BrowseSection/>
      </main>
   )
