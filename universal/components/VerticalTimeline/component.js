@@ -7,13 +7,33 @@ type Props = {
   sectionText: any,
 };
 
-const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
-eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
-mattis consectetur purus sit amet fermentum.`]
+const pathwayText = [
+  `There are five pathways built of multiple microsteps you can practice
+   in a sustainable way. The steps are small and very easy to integrate into your life,
+   but the impact is transformational. This is the part where we go from knowing
+   what to do to actually doing it. Choose the Pathway you want to begin with--
+   Joy, Calm, Productivity, Well-Being and Purpose.`
+]
+
+const journeyText = [
+  `The purpose of a microstep, simply stated, is the tiniest step you can
+  take to put you on the path towards what you want to achieve. Once you are on
+  the path, myriad opportunities open up for you to improve your health, productivity,
+  and happiness. Our microsteps are practical and they work! Pick the microstep
+  that becomes your cornerstone habit, and keep adding in the order that works best for you.`
+]
+
+const microStepText = [
+  `There are five Pathway Protocols -- experiment with them, discover what most resonates with you,
+   and return to it again and again. You can do these at any time -- as you begin your pathways,
+   on your commute, during a break in your day, or before you go to bed at night. We have bracketed
+   in italics commentary to help you practice the protocols the first few times, after
+   which it will become second nature.`
+]
 
 const VerticalTimelineLeft = ({
   title = 'Title',
-  sectionText = defaultText
+  sectionText = ''
 }: Props) => {
   return (
     <div className={styles.row}>
@@ -29,7 +49,7 @@ const VerticalTimelineLeft = ({
 
 const VerticalTimelineRight = ({
   title = 'Title',
-  sectionText = defaultText
+  sectionText = ''
 }: Props) => {
   return (
     <div className={styles.row}>
@@ -52,15 +72,15 @@ class VerticalTimeline extends React.Component {
         <section className={styles.container}>
           <VerticalTimelineLeft
             title={'Pathways'}
-            sectionText={'There are five pathways built of multiple microsteps you can practice in a sustainable way. The steps are small and very easy to integrate into your life, but the impact is transformational. This is the part where we go from knowing what to do to actually doing it. Choose the Pathway you want to begin with--Joy, Calm, Productivity, Well-Being and Purpose.'}
+            sectionText={pathwayText}
           />
           <VerticalTimelineRight
             title={'Journeys'}
-            sectionText={'The purpose of a microstep, simply stated, is the tiniest step you can take to put you on the path towards what you want to achieve. Once you are on the path, myriad opportunities open up for you to improve your health, productivity, and happiness. Our microsteps are practical and they work! Pick the microstep that becomes your cornerstone habit, and keep adding in the order that works best for you.'}
+            sectionText={journeyText}
           />
           <VerticalTimelineLeft
             title={'Microsteps'}
-            sectionText={'There are five Pathway Protocols -- experiment with them, discover what most resonates with you, and return to it again and again. You can do these at any time -- as you begin your pathways, on your commute, during a break in your day, or before you go to bed at night. We have bracketed in italics commentary to help you practice the protocols the first few times, after which it will become second nature.'}
+            sectionText={microStepText}
           />
         </section>
       </section>
