@@ -7,7 +7,6 @@ import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
 import FourColImage from 'components/FourColImage'
 import FullWidthText from 'components/FullWidthText'
-import MayorSection from 'components/MayorSection'
 import FeaturedStory from 'components/FeaturedStory'
 
 import hughImage from './assets/hugh.jpg'
