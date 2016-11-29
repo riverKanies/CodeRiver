@@ -1,5 +1,5 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand, babyHeader, mamaHeader, papaHeader from 'all';
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
+@value lightGray, ThriveTeal, ThriveBlue, TheFader, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
 @value Mon, Play from 'all';
 
 /* Parent Most Container + BG Color Variants */
@@ -26,6 +26,14 @@
 .transparent {
   composes: fullWidthTwoColSpecial;
   background: none;
+}
+
+.fade {
+  composes: fullWidthTwoColSpecial;
+  background: TheFader;
+  * {
+    color: bodyCopy;
+  }
 }
 
 /* Column Container Styles */
@@ -100,8 +108,32 @@
   }
 }
 
+.colorBarTrue {
+  composes: column;
+
+  &:first-child {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.colorBarFalse {
+  composes: column;
+
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.colorBarFalse {
+  composes: column;
+}
+
 .imageWrap {
-  display: flex;
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -110,12 +142,14 @@
   text-align: center;
   overflow: hidden;
   @media bp-papa-bear {
+    display: flex;
     height: 100%;
     float: none;
   }
 }
 .image {
-  display: flex;
+  display: inline-block;
+  max-height: 32rem;
   width: 100%;
   height: auto;
   text-align: center;

@@ -1,5 +1,5 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
+@value lightGray, ThriveTeal, ThriveBlue, TheFader, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
 @value Mon, Playfair from 'all';
 
 /* Parent Most Container + BG Color Variants */
@@ -28,6 +28,14 @@
 .lightGray {
   composes: fullWidthTwoCol;
   background: lightGray;
+}
+
+.fade {
+  composes: fullWidthTwoCol;
+  background: TheFader;
+  * {
+    color: bodyCopy;
+  }
 }
 
 /* Column Container Styles */
