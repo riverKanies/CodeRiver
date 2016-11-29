@@ -133,7 +133,7 @@
 }
 
 .imageWrap {
-  display: flex;
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -142,12 +142,14 @@
   text-align: center;
   overflow: hidden;
   @media bp-papa-bear {
+    display: flex;
     height: 100%;
     float: none;
   }
 }
 .image {
-  display: flex;
+  display: inline-block;
+  max-height: 32rem;
   width: 100%;
   height: auto;
   text-align: center;
