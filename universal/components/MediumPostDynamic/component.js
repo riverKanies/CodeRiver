@@ -14,7 +14,8 @@ type Props = {
   tags: Array<string>,
   postLabel: Object,
   medium_uid: 'string',
-  cover_image: 'string'
+  cover_image: 'string',
+  trackClick: Function
 };
 
 function Author ({ name }: { name: string }) {
@@ -36,17 +37,20 @@ const MediumPostDynamic = ({
   author = 'Thrive Contributor',
   tags = [],
   medium_uid = '',
-  cover_image = dummyImage
+  cover_image = dummyImage,
+  trackClick
 }: Props) => {
   return (
     <article className={styles[cardType]}>
       <ContentLabel label={tags[0]} />
       <section className={styles.postContent}>
         <div className={styles[hasImage]}>
-          <a href={medium_uid}><img className={styles.image} src={cover_image} alt={title} /></a>
+          <a onClick={trackClick} href={medium_uid} target='_blank'>
+            <img className={styles.image} src={cover_image} alt={title} />
+          </a>
         </div>
         <header className={styles.header}>
-          <h2><a href={medium_uid}>{title}</a></h2>
+          <h2><a onClick={trackClick} href={medium_uid} target='_blank'>{title}</a></h2>
         </header>
         <section className={styles.synopsisFalse} />
         <Author name={author} />
