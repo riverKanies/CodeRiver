@@ -372,9 +372,9 @@
    */
 
   fieldset {
-    border: 1px solid #C0C0C0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    border: none;
+    margin: 0 0;
+    padding: 0 0;
   }
 
   /**

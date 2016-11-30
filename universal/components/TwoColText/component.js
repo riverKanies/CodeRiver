@@ -6,6 +6,9 @@ type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue',
   marginBottom: 'marginTrue' | 'marginFalse',
   hasTitle: 'titleTrue' | 'titleFalse',
+  titleCenter: 'centerTrue' | 'centerFalse',
+  hasDivider: 'dividerTrue' | 'dividerFalse',
+  divider: any,
   title: string,
   colTextOne: any,
   colTextTwo: any
@@ -18,6 +21,8 @@ const TwoColText = ({
   marginBottom = 'marginTrue',
   hasTitle = 'titleFalse',
   title = 'TwoColText',
+  hasDivider = 'dividerTrue',
+  divider = {},
   colTextOne = defaultText,
   colTextTwo = defaultText
 }: Props) => {
@@ -27,6 +32,7 @@ const TwoColText = ({
         <header className={styles[hasTitle]}>
           <h2>{title}</h2>
         </header>
+        <div className={styles[hasDivider]} />
         <section className={styles.columnWrap}>
           <div className={styles.column}>
             {colTextOne.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}

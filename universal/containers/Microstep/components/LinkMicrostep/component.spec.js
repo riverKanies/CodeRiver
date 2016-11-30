@@ -14,7 +14,7 @@ const props = {
 describe('(Component) LinkMicrostep', () => {
   it('should render a <Button /> with the correct properties', () => {
     const wrapper = mount(<LinkMicrostep {...props} />)
-    const element = wrapper.find('Button')
+    const element = wrapper.find('ExternalLink')
 
     expect(element.length).toBe(1)
     expect(element.props().buttonText).toBe(props.microstep.cta_text)

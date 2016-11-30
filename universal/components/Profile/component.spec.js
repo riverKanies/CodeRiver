@@ -3,11 +3,11 @@ import Profile from './component'
 import { shallow } from 'enzyme'
 
 describe('(Component) Profile', () => {
-  it('should display the users email', () => {
-    const props = { email: 'test@test.com', logOutAction: () => {} }
+  it('should display the users username', () => {
+    const props = { name: 'billzebub', email: 'email@test.com' }
     const wrapper = shallow(<Profile {...props} />)
-    const element = wrapper.find('div')
+    const element = wrapper.find('header')
 
-    expect(element.contains('test@test.com')).toBe(true)
+    expect(element.contains('billzebub')).toBe(true)
   })
 })

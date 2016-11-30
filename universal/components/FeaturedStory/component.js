@@ -4,9 +4,12 @@ import styles from './styles'
 import ExternalLink from 'components/ExternalLink'
 
 type Props = {
+  bgColor: 'default' | 'blue' | 'teal' | 'blurple',
   author: string,
   hasAuthor: 'authorTrue' | 'authorFalse',
-  details: string,
+  hasLabel: 'labelTrue' | 'labelFalse',
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  details: any,
   title: string,
   asset: string,
   label: string,
@@ -21,8 +24,11 @@ const defaultTitle = "It's Time To Say Goodbye."
 const defaultAuthor = 'Koby Bryant'
 
 const FeaturedStory = ({
+  bgColor = 'default',
   title = defaultTitle,
   hasAuthor = 'authorTrue',
+  hasLabel = 'labelTrue',
+  hasButton = 'buttonTrue',
   author = defaultAuthor,
   details = defaultDetails,
   externalLink = {},
@@ -30,16 +36,17 @@ const FeaturedStory = ({
   asset = 'kobe.jpg'
 }: Props) => {
   return (
-    <section className={styles.container} style={{backgroundImage: `url('./assets/${asset}')`}} >
+    <section className={styles[bgColor]} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
-        <label className={styles.label}>{label}</label>
+        <label className={styles[hasLabel]}>{label}</label>
         <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
           { author ? <span className={styles[hasAuthor]}>{author}</span> : '' }
         </p>
-        <ExternalLink {...externalLink}
-        />
+        <div className={styles[hasButton]}>
+          <ExternalLink {...externalLink} />
+        </div>
       </section>
     </section>
   )

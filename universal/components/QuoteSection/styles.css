@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, backgroundGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
 
@@ -19,6 +19,12 @@
 .default {
   composes: quoteContainer;
   background: transparent;
+}
+.pattern {
+  composes: quoteContainer;
+  background-color: backgroundGray;
+  background-image: url('./assets/growAriannaPattern.png');
+  background-repeat: repeat;
 }
 .white {
   composes: quoteContainer;
@@ -169,20 +175,20 @@
   font-family: MonBold;
 
   @media bp-mama-bear {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   @media bp-papa-bear {
-    font-size: 1.875em;
+    font-size: 1.55em;
   }
 }
 .Playfair {
   font-family: Playfair;
 
   @media bp-mama-bear {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   @media bp-papa-bear {
-    font-size: 1.875em;
+    font-size: 1.5em;
   }
 }
 

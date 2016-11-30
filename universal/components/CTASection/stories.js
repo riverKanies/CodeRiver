@@ -17,7 +17,8 @@ const props = {
     'default',
     'white',
     'blue',
-    'gray'
+    'gray',
+    'purpleTealGradient'
   ],
   sectionWidth: [
     'defaultWidth',

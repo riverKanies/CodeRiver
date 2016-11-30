@@ -3,13 +3,14 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: 'default' | 'white' | 'blue' | 'gray' | 'tagalong',
+  sectionClass: 'default' | 'white' | 'blue' | 'gray' | 'tagalong' | 'fade',
   divider: 'dividerFalse' | 'dividerTrue',
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   textAlign: 'textLeft'| 'textCenter' | 'textRight',
   header: 'headerTrue' | 'headerFalse',
   title: string,
   sectionText: any,
+  overrideStyles: {}
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -23,11 +24,12 @@ const FullWidthText = ({
   textAlign = 'textCenter',
   header = 'headerTrue',
   title = 'Title',
-  sectionText = defaultText
+  sectionText = defaultText,
+  overrideStyles = {}
 }: Props) => {
   return (
-    <section className={styles[sectionClass]}>
-      <section className={styles[textAlign]}>
+    <section style={overrideStyles} className={styles[sectionClass]}>
+      <section style={overrideStyles} className={styles[textAlign]}>
         <div className={styles[sectionWidth]}>
           <header className={styles[header]}>
             <h2>{title}</h2>

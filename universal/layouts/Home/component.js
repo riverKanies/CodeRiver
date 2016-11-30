@@ -11,27 +11,22 @@ import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 
 // Content Import
-import pulseImg from './assets/pulse.jpg'
-import pathwayImg from './assets/pathway.jpg'
-import pathwaysImg from './assets/pathways.png'
-import listenImg from './assets/listen.jpg'
-import foundationImg from './assets/foundation.jpg'
-import popUpImg from './assets/popup.jpg'
-import eCourseImg from './assets/ecourse.png'
-import deathOverDinnerImg from './assets/deathOverDinner.png'
-import poetryImg from './assets/poetry.png'
-import { browserHistory } from 'react-router'
+import foundationImg from './assets/thrive-foundation.png'
+import appsImg from './assets/thrive-apps.jpg'
+import popUpImg from './assets/thrive-popup.jpg'
+import eCourseImg from './assets/thrive-ecourse.png'
+import artImg from './assets/thrive-art.jpg'
+import styleImg from './assets/thrive-style.jpg'
 
 // Content Definitions
 const thrivePulse = {
-  // TODO: fix "stories" label. Should be "Get Started"
-  // sectionClass: 'transparent',
+  bgColor: 'teal',
   author: '',
   label: 'Get Started',
   title: 'What\'s Your Thrive Pulse?',
   asset: 'pulseImg',
   details: `Begin with the Thrive Pulse, our 10-question assessment that will
-    help you take stock of your life and identify areas of improvement.`,
+    help you take stock of your life and identify ways you can thrive.`,
   externalLink: {
     linkText: 'Get Your Thrive Pulse',
     linkTo: '/pulse',
@@ -55,11 +50,11 @@ const eCourse = {
      Adam Grant, Warby Parker CEO Dave Gilboa, and more.`
   ],
   image: eCourseImg,
-  // TODO: fix button. Why isn't it showing up?
+  hasButton: 'buttonTrue',
   button: {
     buttonText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
-    buttonStyle: 'blue'
+    buttonStyle: 'white'
   }
 }
 const homeQuote = {
@@ -68,39 +63,36 @@ const homeQuote = {
     `It’s no mystery that healthier workforces make for better corporate
     financial health and higher performing employees all around.`
   ],
-  // TODO: How do I newline?!
   citation: `Dr. David Agus,
     \n Professor of Medicine & Engineering USC,
     \n Thrive Global board member`,
 
-  // quoteImage: any,
   imageShape: 'roundImage'
 }
 const pathways = {
-  sectionClass: 'default',
-  title: 'Pathways, Journeys, & Microsteps',
+  bgColor: 'blurple',
+  author: '',
+  hasAuthor: 'authorFalse',
   hasLabel: 'labelTrue',
-  label: {
-    label: 'Grow',
-    labelColor: 'blueLabel'
-  },
-  sectionText: [
-    `Pathway to Joy Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-    ex ea commodo consequat.`
+  details: [
+    `Thrive Global is all about action – going from knowing what to do to actually
+    doing it.  Begin by taking your Thrive Pulse.  Explore our pathways, journeys
+    and microsteps that together will make a transformational impact on your
+    day-to-day well-being and performance.  Go deeper with our e-course.
+    Whatever your entry point is, take it.`
   ],
-  image: pathwaysImg,
-  hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Take the first step',
+  title: 'Pathways, Journeys, & Microsteps',
+  asset: 'pathway.jpg',
+  label: 'Grow',
+  externalLink: {
+    linkText: 'Take the First Step',
     linkTo: '/grow',
-    buttonStyle: 'blue'
+    linkStyle: 'white'
   }
 }
-const thriveAmazon = {
-  sectionClass: 'transparent',
-  title: 'Thrive & Amazon: Audible & Echo',
+const thriveApps = {
+  sectionClass: 'default',
+  title: 'Thrive Apps & Podcasts',
   hasLabel: 'labelTrue',
   label: {
     label: 'Apps',
@@ -111,17 +103,17 @@ const thriveAmazon = {
     boundaries in your relationship with technology. So you can disconnect
     from technology and reconnect with what really matters.`
   ],
-  image: listenImg,
+  image: appsImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Get the Apps',
+  link: {
+    linkText: 'Get the Apps',
     linkTo: '/apps',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const thriveStyle = {
-  sectionClass: 'default',
-  title: 'Thrive Style',
+  sectionClass: 'transparent',
+  title: 'Thrive Style: Repeats — The New Power Dressing',
   hasLabel: 'labelTrue',
   label: {
     label: 'Thrive Style',
@@ -129,30 +121,28 @@ const thriveStyle = {
   },
   sectionText: [
     `Thrive Style is all about helping women close the style gap and open up
-    more time for productivity, creativity and recharging. ThriveStyle is
+    more time for productivity, creativity and recharging. Thrive Style is
     about redefining conventions so that women can feel confident,
     professional and great in something other than 5-inch heels and a new
     outfit for every occasion. Our first campaign: to normalize – actually
     celebrate – repeats, helping women feel as comfortable as men do repeating
     outfits.`
   ],
-  image: pathwayImg,
+  image: styleImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Get Style',
-    linkTo: 'javascript:void(0)',
-    buttonStyle: 'blue'
+  link: {
+    linkText: 'Read More',
+    linkTo: 'https://medium.com/@ariannahuff/7585234da618#.t2phr2e2o',
+    linkStyle: 'blue'
   }
 }
 const thrivePoetry = {
-  sectionClass: 'default',
+  bgColor: 'blurple',
+  author: '',
+  label: 'Wisdom',
   title: 'Poetry & Philosophy',
-  hasLabel: 'labelTrue',
-  label: {
-    label: 'Wisdom',
-    labelColor: 'defaultLabel'
-  },
-  sectionText: [
+  asset: '',
+  details: [
     `Philosophy is not an academic exercise. “What is a good life?” has been a
     question asked by philosophers going back to the ancient Greeks. But
     somewhere along the line we abandoned that question and shifted our
@@ -162,35 +152,30 @@ const thrivePoetry = {
     They’ll both be featured prominently in The Thrive Journal. Read the
     poetry of Mark Nepo at The Thrive Journal.`
   ],
-  image: poetryImg,
-  hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Read more.',
-    linkTo: 'https://journal.thriveglobal.com/search?q=poetry',
-    buttonStyle: 'blue'
+  externalLink: {
+    linkText: 'Read More',
+    linkTo: 'https://journal.thriveglobal.com/in-muir-woods-fb35c3180c62#.bdq2lchsm',
+    linkStyle: 'white'
   }
 }
 const deathOverDinner = {
-  bgImage: deathOverDinnerImg,
-  url: 'https://learn.thriveglobal.com',
-  sectionClass: 'transparent',
-  title: 'Let\'s Have Dinner and Talk About Death',
-  postLabel: {
-    label: 'Wonder',
-    labelColor: 'whiteLabel'
-  },
-  sectionText: [
-    `Yes, really.  We have, if we’re lucky, about thirty thousand days to play
+  bgColor: 'teal',
+  author: '',
+  hasAuthor: 'authorFalse',
+  hasLabel: 'labelFalse',
+  details: [
+    `Yes, really.  We have, if we’re lucky, about 30,000 days to play
     the game of life. How we play it will be determined by what we value.
     Thrive and VICE are partnering with not-for-profit Death Over Dinner to
-    launch a global conversation about mortality and life's biggest questions.`
+    launch a global conversation about death and life's biggest questions.`
   ],
-  image: eCourseImg,
-  // TODO: fix button. Why isn't it showing up? Wrong props prolly.
-  button: {
-    buttonText: 'Learn More',
-    linkTo: 'https://learn.thriveglobal.com',
-    buttonStyle: 'blue'
+  title: 'Let\'s Have Dinner and Talk About Death',
+  asset: 'string',
+  label: 'Wonder',
+  externalLink: {
+    linkText: 'Learn More',
+    linkTo: 'https://journal.thriveglobal.com/michael-hebb-death-over-dinner-38ae6553d21b#.meoi8cu4n',
+    linkStyle: 'white'
   }
 }
 const thriveArt = {
@@ -206,14 +191,14 @@ const thriveArt = {
      It  ignites a deeper truth and awakens the sense of wonder that slumbers
      within us. The Thrive Journal will proudly feature art and artists from
      around the world to inspire that connectedness. See work from artists
-     Tris hla Jain and Isabella Huffington at The Thrive Journal.`
+     Trishla Jain and Isabella Huffington at The Thrive Journal.`
   ],
-  image: pulseImg,
+  image: artImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Learn More',
-    linkTo: 'http://journal.thriveglobal.com',
-    buttonStyle: 'blue'
+  link: {
+    linkText: 'Learn More',
+    linkTo: 'https://medium.com/@ariannahuff/30d21640ab0b#.bkyick4i5',
+    linkStyle: 'blue'
   }
 }
 const thriveFoundation = {
@@ -232,10 +217,10 @@ const thriveFoundation = {
   ],
   image: foundationImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: '/give',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 const popUpShop = {
@@ -253,17 +238,13 @@ const popUpShop = {
     days a week, from 10:00am to 7:00pm, December 1 through January 15, 2017.`
   ],
   image: popUpImg,
-  button: {
-    buttonText: 'Learn More',
+  link: {
+    linkText: 'Learn More',
     linkTo: '/popup',
-    buttonStyle: 'blue'
+    linkStyle: 'blue'
   }
 }
 
-// GET RID OF THIS POST LAUNCH
-if (window.location.pathname === '/') {
-  browserHistory.push('/coming-soon')
-}
 export const HomeView = () => {
   return (
     <main role='main' className={styles.homePage}>
@@ -272,14 +253,14 @@ export const HomeView = () => {
       <FeaturedStory {...thrivePulse} />
       <HalfTextOverlay {...eCourse} />
       <QuoteSection {...homeQuote} />
-      <FullWidthTwoCol {...pathways} />
-      <FullWidthTwoColSpecial {...thriveAmazon} />
-      <FullWidthTwoCol {...thriveStyle} />
-      <FullWidthTwoCol {...thrivePoetry} />
-      <HalfTextOverlay {...deathOverDinner} />
+      <FeaturedStory {...pathways} />
+      <FullWidthTwoCol {...thriveApps} />
+      <FullWidthTwoColSpecial {...thriveStyle} />
+      <FeaturedStory {...deathOverDinner} />
       <FullWidthTwoCol {...thriveArt} />
+      <FeaturedStory {...thrivePoetry} />
       <FullWidthTwoCol {...thriveFoundation} />
-      <FullWidthTwoCol {...popUpShop} />
+      <FullWidthTwoColSpecial {...popUpShop} />
     </main>
   )
 }

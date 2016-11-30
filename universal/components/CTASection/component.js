@@ -5,7 +5,7 @@ import Button from 'components/Button'
 
 type Props = {
   alignment: 'defaultLeft' | 'center',
-  colorScheme: 'default' | 'white' | 'blue' | 'gray',
+  colorScheme: 'default' | 'white' | 'blue' | 'gray' | 'gradientPurpleTeal',
   sectionText: Array<string>,
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
   title: string,
@@ -33,7 +33,7 @@ const CTASection = ({
             <h2>{title}</h2>
           </header>
           <section className={styles.sectionContent}>
-            <p>{sectionText}</p>
+            {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>
           <section className={styles.button}>
             <Button {...button} />

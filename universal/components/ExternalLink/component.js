@@ -12,7 +12,8 @@ type Props = {
   disabled: boolean,
   linkText: String,
   download: boolean,
-  id: String
+  id: string,
+  target: string
 }
 
 export const ExternalLink = ({
@@ -23,6 +24,7 @@ export const ExternalLink = ({
   handleClick,
   segmentProps,
   disabled,
+  target = '_self',
   download = false,
   id
  }: Props) => {
@@ -32,6 +34,7 @@ export const ExternalLink = ({
     disabled,
     href: linkTo,
     download,
+    target,
     id
   }
 

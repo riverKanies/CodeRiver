@@ -3,7 +3,7 @@
 */
 
 @value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value ThriveBlurple, backgroundGray, ThriveGray from 'all';
+@value ThriveBlue, ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray from 'all';
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {
@@ -12,7 +12,22 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: ThriveBlurple;
+  background-color: transparent;
+}
+.default {
+  composes: container;
+}
+.blue {
+  composes: container;
+  background-color: ThriveBlue;
+}
+.teal {
+  composes: container;
+  background-color: ThriveTeal;
+}
+.blurple {
+  composes: container;
+  background-color: ThriveBlurple
 }
 
 .content {
@@ -35,6 +50,15 @@
   padding: 1rem;
   text-transform: uppercase;
 }
+
+.labelTrue {
+  composes: label;
+}
+
+.labelFalse {
+  display: none;
+}
+
 
 .header {
   font-family: PlayfairBlack;
@@ -92,5 +116,13 @@
 }
 
 .authorFalse {
+  display: none;
+}
+
+.buttonTrue {
+  display: block
+}
+
+.buttonFalse {
   display: none;
 }

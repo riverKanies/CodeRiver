@@ -1,26 +1,41 @@
 /* @flow */
 import React from 'react'
+import ProfileForm from 'components/ProfileForm'
+import PasswordForm from 'components/PasswordForm'
 import styles from './styles'
-import Button from 'components/Button'
 
 type Props = {
   email: string,
+  name: string,
   logOutAction: Function
 }
 
-const Profile = ({ email, logOutAction }: Props) => {
+const Profile = ({
+  email,
+  name
+}: Props) => {
   if (!email) return null
+  const displayName = name || email
+
   return (
-    <div className={styles.container}>
-      <div className={styles.greeting}>
-        <p>
-          Hi {email}
-        </p>
-      </div>
-      <div className={styles.logout}>
-        <Button handleClick={logOutAction} buttonText={'Log Out'} />
-      </div>
-    </div>
+    <section className={styles.profile}>
+      <header className={styles.greeting}>
+        <h1 className={styles.h1}>Welcome, {displayName}</h1>
+        <h4 className={styles.h4}>Here you can edit your account settings</h4>
+      </header>
+      <section className={styles.myAccount}>
+        <div className={styles.container}>
+          <header className={styles.accountHeader}>
+            <h3>My Account</h3>
+          </header>
+          <ProfileForm />
+          <header className={styles.accountHeader}>
+            <h3>Change Password</h3>
+          </header>
+          <PasswordForm />
+        </div>
+      </section>
+    </section>
   )
 }
 

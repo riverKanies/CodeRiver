@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react'
+import { redirectToShopify } from 'lib/sso'
 import EmailCapture from 'components/EmailCapture'
 import logo from './assets/logo-footer.png'
 import { Link } from 'react-router'
@@ -17,13 +18,13 @@ type Props = {
   logoFooter: any
 };
 
-const footerQuote = [`People look for retreats for themselves,
-                      in the country, by the coast, or in the hills . . .
-                      There is nowhere that a person can find a more peaceful
-                      and trouble-free retreat than in his own mind. . . .
-                      So constantly give yourself this retreat, and renew yourself.`]
-
-// const logoFooter = logo
+const footerQuote = [
+  `People look for retreats for themselves,
+  in the country, by the coast, or in the hills . . .
+  There is nowhere that a person can find a more peaceful
+  and trouble-free retreat than in his own mind. . . .
+  So constantly give yourself this retreat, and renew yourself.`
+]
 
 const Footer = ({
   quote = footerQuote,
@@ -42,25 +43,22 @@ const Footer = ({
           </div>
           <ul>
             <li className={styles.footerLinks}>
-              <Link to='/'>Advertise</Link>
+              <a href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/'>Press</Link>
+              <Link to='/grow'>Grow</Link>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/'>Become a Contributor</Link>
+              <Link onClick={redirectToShopify}>Shop</Link>
+            </li>
+            <li className={styles.footerLinks}>
+              <Link to='/give'>Give</Link>
             </li>
             <li className={styles.footerLinks}>
               <Link to='/apps'>Apps</Link>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/'>Careers</Link>
-            </li>
-            <li className={styles.footerLinks}>
-              <Link to='/'>Site Map</Link>
-            </li>
-            <li className={styles.footerLinks}>
-              <Link to='/'>Contact</Link>
+              <Link to='/contact'>Contact</Link>
             </li>
           </ul>
         </section>
@@ -73,28 +71,28 @@ const Footer = ({
             {heading2}
           </div>
           <div className={styles.socialIcons}>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            <a href='https://www.facebook.com/thriveglbl/' target='_blank'>
               <Facebook />
-            </Link>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            </a>
+            <a href='https://twitter.com/thrive' target='_blank'>
               <Twitter />
-            </Link>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            </a>
+            <a href='https://www.instagram.com/thrive/' target='_blank'>
               <Instagram />
-            </Link>
-            <Link to='https://www.facebook.com/AriannaHuffington/'>
+            </a>
+            <a href='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
               <Medium />
-            </Link>
+            </a>
           </div>
           <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
         </section>
         <section className={styles.copyright}>
           <p>Thrive Global © 2016</p>
-          <Link to='/' className={styles.link}>
+          <Link to='/privacy' className={styles.link}>
             Privacy
           </Link>
           <p>&</p>
-          <Link to='/' className={styles.link}>
+          <Link to='/privacy' className={styles.link}>
             Terms
           </Link>
         </section>

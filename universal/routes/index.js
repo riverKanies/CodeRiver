@@ -5,20 +5,28 @@ import Give from 'layouts/Give'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import TempHomePage from 'layouts/TempHomePage'
-import Learn from 'layouts/Learn'
+import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
 import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
+import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
 import { PWUOverview, PWUCorporate, PWUContent, PWUCommerce } from 'layouts/PartnerWithUs'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
+import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
 import Journey from 'layouts/Journey'
+
+function handleUpdate (prevState, nextState) {
+  if (nextState.location.action !== 'POP') {
+    window.scrollTo(0, 0)
+  }
+}
 
 export const createRoutes = (store) => ([
   {
@@ -30,14 +38,18 @@ export const createRoutes = (store) => ([
     component: TempHomePage
   },
   {
-    path: '/home',
-    component: LayoutCore,
-    indexRoute: Home
-  },
-  {
     path: '/',
     component: LayoutCore,
     indexRoute: Home,
+    onChange: handleUpdate,
+    // TODO: remove this post launch
+    onEnter: (nextState, replace, callback) => {
+      const { location } = nextState
+      if (location.pathname === '/') {
+        replace('/coming-soon')
+      }
+      callback()
+    },
     childRoutes: [
       {
         path: 'partners',
@@ -58,6 +70,10 @@ export const createRoutes = (store) => ([
         ]
       },
       {
+        path: '/home',
+        component: Home.component
+      },
+      {
         path: 'microsteps',
         component: Microsteps
       },
@@ -71,7 +87,7 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'grow',
-        component: Learn
+        component: Grow
       },
       {
         path: 'give',
@@ -102,6 +118,10 @@ export const createRoutes = (store) => ([
         component: GlassDoor
       },
       {
+        path: 'popup',
+        component: PopupStore
+      },
+      {
         path: 'signup',
         component: SignUp
       },
@@ -116,6 +136,10 @@ export const createRoutes = (store) => ([
       {
         path: 'login',
         component: Login
+      },
+      {
+        path: 'registration-success',
+        component: RegistrationSuccess
       },
       {
         path: ':page_id',

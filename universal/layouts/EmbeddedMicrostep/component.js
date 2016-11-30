@@ -22,7 +22,8 @@ const EmbeddedMicrostep = ({ params: { id }, location: { query } } : Props) => {
     id,
     stepType: query.type || 'informational'
   }
-  return <Microstep {...params} />
+
+  return <Microstep {...params} showLabel />
 }
 
 export default EmbeddedMicrostep

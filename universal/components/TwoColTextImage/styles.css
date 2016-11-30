@@ -1,0 +1,160 @@
+/*
+  This is the stylesheet for: TwoColTextImage
+*/
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray from 'all';
+
+/* Base Section Styling + Composed Styles */
+.twoColTextImage {
+  height: auto;
+  width: 100%;
+  float: left;
+  margin: babyMargin auto;
+  padding: babyPadding;
+  text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto;
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: twoColTextImage;
+  background: white;
+  color: bodyCopy;
+}
+.transparent {
+  composes: twoColTextImage;
+  background: transparent;
+  color: bodyCopy;
+}
+.lightGray {
+  composes: twoColTextImage;
+  background: lightGray;
+  color: bodyCopy;
+}
+.purple {
+  composes: twoColTextImage;
+  background: ThriveBlurple;
+  color: white;
+}
+.blue {
+  composes: twoColTextImage;
+  background: ThriveBlue;
+  color: white;
+}
+
+/* Container Styles */
+.container {
+  lost-center: containerWidth;
+  float: none;
+  margin: 0 auto;
+  background: inherit;
+  padding: containerPadding;
+  color: inherit;
+}
+
+/* Title True/False */
+.hasTitle {
+  lost-column: 1;
+  margin: 0 auto babyHeader auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  position: relative;
+  text-align: center;
+  color: inherit;
+  @media bp-mama-bear {
+    width: 100%;
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
+  h2 {
+    text-align: inherit;
+    color: inherit;
+  }
+}
+.titleTrue {
+  composes: hasTitle;
+}
+.titleFalse {
+  display: none;
+}
+.titleCenter {
+  text-align: center;
+}
+.centerTrue {
+  composes: titleCenter;
+}
+.centerFalse {
+  display: none;
+}
+.divider {
+  border-bottom: 1px solid #999999;
+  width: 3rem;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+img {
+  margin-bottom: 1rem;
+  width: 100%;
+  @media bp-papa-bear {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Column Styles */
+.columnWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0 0;
+  float: left;
+  clear: both;
+}
+.column {
+  lost-column: 1;
+  float: left;
+  text-align: inherit;
+  color: inherit;
+  @media bp-papa-bear {
+    lost-column: 1/2;
+  }
+  p {
+    display: block;
+    width: 100%;
+    float: left;
+    word-wrap: break-word;
+    text-align: inherit;
+    color: inherit;
+    margin-bottom: 2rem;
+  }
+}
+
+.buttonWrap {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: containerPadding;
+  float: left;
+  clear: both;
+  text-align: center;
+  > a {
+    display: inline-block;
+    text-align: center;
+  }
+}
+.learnPage {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}

@@ -2,22 +2,23 @@
 import React from 'react'
 import styles from './styles'
 import marked from 'marked'
-import TwitterShare from 'components/TwitterShare'
+import MicrostepLabel from 'components/MicrostepLabel'
 
 type Props = {
   microstep: {
-    description: string, share_text: string
-  }
+    description: string,
+  },
+  showLabel: boolean
 }
 
-const ContentMicrostep = ({ microstep }: Props) => {
-  const { description = '', share_text = 'I just completed a microstep' } = microstep
+const ContentMicrostep = ({ microstep, showLabel = false }: Props) => {
+  const { description = '' } = microstep
   return (
     <div className={styles.container}>
+      <MicrostepLabel title='Thrive Message' visible={showLabel} />
       <div className={styles.content}>
         <div dangerouslySetInnerHTML={{__html: marked(description)}} />
       </div>
-      <TwitterShare share_text={share_text} />
     </div>
   )
 }
