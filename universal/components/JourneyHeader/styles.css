@@ -3,7 +3,7 @@
 */
 
 @value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value ThriveBlue, ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray from 'all';
+@value ThriveBlue, ThriveTeal, gradientEmailCap, ThriveBlurple, backgroundGray, ThriveGray from 'all';
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {
@@ -12,22 +12,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: transparent;
-}
-.default {
-  composes: container;
-}
-.blue {
-  composes: container;
-  background-color: ThriveBlue;
-}
-.teal {
-  composes: container;
-  background-color: ThriveTeal;
-}
-.blurple {
-  composes: container;
-  background-color: ThriveBlurple
+  background: gradientEmailCap;
 }
 
 .content {
@@ -88,10 +73,9 @@
 }
 
 .divider {
-  border-bottom: 1px solid #3c3d41;
+  border-bottom: 2px solid #fff;
   width: 4rem;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 3rem auto;
   display: flex;
 }
 

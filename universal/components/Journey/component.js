@@ -15,7 +15,7 @@ export default function ({ journey, microsteps = [] }: Props) {
 
   return (
     <section className={styles.container}>
-      <JourneyHeader title={journey.title} />
+      <JourneyHeader {...journey} />
       <div id='journeys' className={styles.outerContainer}>
         {microsteps.map(m => (
           <div className={styles.outerContainer}>
@@ -28,3 +28,5 @@ export default function ({ journey, microsteps = [] }: Props) {
     </section>
   )
 }
+
+// title={journey.title}
