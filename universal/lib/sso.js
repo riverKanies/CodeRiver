@@ -10,10 +10,10 @@ export function genRedirectToShopify (return_to = SHOPIFY_URL) {
     return httpPost('/api/sso/shopify', { return_to })
     .then(result => {
       const { redirect_to } = result
-      window.open(redirect_to, '_blank')
+      window.location = redirect_to
     })
     .catch(e => {
-      window.open(return_to, '_blank')
+      window.location = return_to
     })
   }
 }
