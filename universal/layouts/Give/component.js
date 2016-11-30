@@ -41,7 +41,7 @@ const trainNonProfits = {
   sectionText: [
     `Thrive Global is proud to support nonprofit organizations including Khan Academy,
     Global Citizen, Alliance for Children's Rights, EduCare Foundation
-    and Lean In with free trainings to enhance well-being and performance.` +
+    and Lean In with free trainings to enhance well-being and performance.`,
     ` Interested in bringing Thrive to your nonprofit?
     E-mail nonprofits@thriveglobal.com`
   ]
