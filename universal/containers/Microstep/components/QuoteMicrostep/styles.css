@@ -141,6 +141,18 @@
     border-radius: 2.5rem;
   }
 }
+.attributionWrap {
+  display: block;
+  width: 90%;
+  height: 100%;
+  margin: 0 5%;
+  padding: 4rem 1rem;
+  text-align: center;
+  @media bp-mama-bear {
+    width: 60%;
+    margin: 0 20%;
+  }
+}
 .attribution {
   display: inline-block;
   width: 100%;
@@ -151,6 +163,7 @@
   font-size: 62.5%;
   line-height: 100%;
   text-transform: uppercase;
+  text-align: center;
   & em {
     font-family: Playfair;
     font-style: italic;
