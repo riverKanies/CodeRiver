@@ -31,6 +31,17 @@
   @media bp-papa-bear {
     height: 100%;
     left: 50%;
+    &::before {
+      content: '';
+      display: block;
+      width: .5rem;
+      height: .5rem;
+      background: lightGray;
+      border-radius: .25rem;
+      position: absolute;
+      top: 0;
+      left: -.3125rem;
+    }
     &::after {
       content: '';
       display: block;
