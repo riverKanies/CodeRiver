@@ -1,11 +1,26 @@
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
+
 .container {
   lost-utility: clearfix;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papapadding;
+  }
 }
 
 .pageContainer {
-  lost-utility: clearfix;
+  lost-center: containerWidth;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: containerPadding;
+  float: none;
 }
 
 h1 {

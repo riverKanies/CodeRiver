@@ -52,20 +52,23 @@ const Footer = ({
               <a href='/partners'>Partner With Us</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href="/about#careers">Careers </a>
+              <a href='/about#careers'>Careers </a>
             </li>
             <li className={styles.footerLinks}>
-              <a href="/popup">Popup Store</a>
+              <a href='/popup'>Popup Store</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href="/about#press">Press</a>
+              <a href='/about#press'>Press</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href="/about#advertise">Advertise</a>
+              <a href='/press'>Press Releases</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href="/about#contact">Contact </a>
-            </li>  
+              <a href='/about#advertise'>Advertise</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href='/about#contact'>Contact </a>
+            </li>
           </ul>
         </section>
         <section className={styles.footerQuote}>
