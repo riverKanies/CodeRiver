@@ -52,9 +52,7 @@ const ProductMicrostep = ({ microstep }: Props) => {
         </section>
 
         <div className={styles.button}>
-          <Button
-            handleClick={genRedirectToShopify(microstep.link)}
-          >
+          <Button handleClick={genRedirectToShopify(microstep.link)} >
             {microstep.cta_text}
           </Button>
         </div>

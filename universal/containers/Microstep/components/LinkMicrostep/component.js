@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import marked from 'marked'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 import TwitterShare from 'components/TwitterShare'
 
 type Props = {
@@ -31,7 +31,7 @@ const LinkMicrostep = ({ microstep: {
       <div className={styles.content}>
         <div dangerouslySetInnerHTML={{__html: marked(description)}} />
         <div className={styles.button}>
-          <Button {...buttonProps} />
+          <ExternalLink {...buttonProps} />
         </div>
       </div>
       <TwitterShare share_text={share_text} />
