@@ -4,7 +4,6 @@ import ContentMicrostep from './components/ContentMicrostep'
 import LinkMicrostep from './components/LinkMicrostep'
 import ProductMicrostep from './components/ProductMicrostep'
 import QuoteMicrostep from './components/QuoteMicrostep'
-import MissingMicrostep from './components/MissingMicrostep'
 
 type Props = {
   microstep: Object,
@@ -15,7 +14,7 @@ type Props = {
 export default function Microstep (props: Props) {
   const type = props.type || ''
 
-  switch (type) {
+  switch (type.toLowerCase()) {
     case 'quote':
       return <QuoteMicrostep {...props} />
 
@@ -32,6 +31,6 @@ export default function Microstep (props: Props) {
       return <ProductMicrostep {...props} />
 
     default:
-      return <MissingMicrostep {...props} />
+      return null
   }
 }
