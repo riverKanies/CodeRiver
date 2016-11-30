@@ -2,13 +2,10 @@
 title: Terms
 ---
 
-# Thrive Global
+# Thrive Global Terms and Conditions Agreement
 
-## Terms and Conditions Agreement
-
-### Effective Date: November 30, 2016
-
-### Last Revised: November 30, 2016
+- Effective Date: November 30, 2016
+- Last Revised: November 30, 2016
 
 ### Who we are and what this Agreement does
 
@@ -195,7 +192,7 @@ consent, such as contests, sweepstakes, barter, advertising, or
 pyramid schemes; or (v) impersonates any person or entity,
 including any employee or representative of Thrive Global.
 
-## 3. Feedback 
+## 3. Feedback
 You agree that your submission of any ideas,
 suggestions, documents, and/or proposals to Thrive Global
 (**“Feedback”**) is at your own risk and that Thrive Global has no
@@ -581,7 +578,7 @@ appropriate or available for use in other locations. Those who
 access or use the Services from other countries do so at their own
 volition and are responsible for compliance with local law.
 
-## 15. Dispute Resolution. 
+## 15. Dispute Resolution.
 *Please read the following arbitration agreement in this Section (“**Arbitration Agreement**”) carefully.  It requires you to arbitrate disputes with Thrive Global and limits the manner in which you can seek relief from us.*
 
 ### 15.1 Applicability of Arbitration Agreement.
