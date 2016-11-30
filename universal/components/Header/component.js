@@ -17,6 +17,8 @@ type Props = {
 
 class Header extends React.Component {
   toggleActive: Function;
+  redirectToShopify: Function;
+  hideMenu: Function;
   logOutUser: Function;
 
   props: Props
@@ -27,11 +29,23 @@ class Header extends React.Component {
     super(...arguments)
 
     this.toggleActive = this.toggleActive.bind(this)
+    this.hideMenu = this.hideMenu.bind(this)
     this.logOutUser = this.logOutUser.bind(this)
+    this.redirectToShopify = this.redirectToShopify.bind(this)
   }
 
   logOutUser () {
+    this.hideMenu()
     this.props.dispatch(deleteSession())
+  }
+
+  redirectToShopify () {
+    this.hideMenu()
+    redirectToShopify()
+  }
+
+  hideMenu () {
+    this.setState({active: false})
   }
 
   toggleActive () {
@@ -43,14 +57,26 @@ class Header extends React.Component {
 
     if (isLoggedIn) {
       return (
-        <Link id='navSignUp' to='/profile' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        <Link
+          id='navSignUp'
+          onClick={this.hideMenu}
+          to='/profile'
+          className={styles.linkUtility}
+          activeClassName={styles.activeRoute}
+        >
           Profile
         </Link>
       )
     }
 
     return (
-      <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+      <Link
+        id='navSignUp'
+        onClick={this.hideMenu}
+        to='/signup'
+        className={styles.linkUtility}
+        activeClassName={styles.activeRoute}
+      >
         Sign Up
       </Link>
     )
@@ -62,18 +88,25 @@ class Header extends React.Component {
     if (isLoggedIn) {
       return (
         <Link
-          id='navLogin'
-          to='/'
-          onClick={this.logOutUser}
+          activeClassName={styles.activeRoute}
           className={styles.linkUtility}
-          activeClassName={styles.activeRoute}>
+          id='navLogin'
+          onClick={this.logOutUser}
+          to='/'
+        >
           Log Out
         </Link>
       )
     }
 
     return (
-      <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+      <Link
+        onClick={this.hideMenu}
+        id='navLogin'
+        to='/login'
+        className={styles.linkUtility}
+        activeClassName={styles.activeRoute}
+      >
         Log In
       </Link>
     )
@@ -89,7 +122,11 @@ class Header extends React.Component {
 
         <section className={styles.forehead}>
           <figure className={styles.brand}>
-            <IndexLink id='linkHome' to='/'>
+            <IndexLink
+              onClick={this.hideMenu}
+              id='linkHome'
+              to='/'
+            >
               <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
             </IndexLink>
           </figure>
@@ -98,8 +135,16 @@ class Header extends React.Component {
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <a className={styles.link} href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
+            <a
+              className={styles.link}
+              onClick={this.hideMenu}
+              href='https://journal.thriveglobal.com/'
+              target='_blank'
+            >
+              Journal
+            </a>
             <Link
+              onClick={this.hideMenu}
               id='navGrow'
               to='/grow'
               className={styles.link}
@@ -109,18 +154,19 @@ class Header extends React.Component {
             <Link
               id='navShop'
               className={styles.link}
-              onClick={redirectToShopify}
-              activeClassName={styles.activeRoute}>
+              onClick={this.redirectToShopify}
+              activeClassName={styles.activeRoute}
+            >
               Shop
             </Link>
-            <Link
+            <Link onClick={this.hideMenu}
               id='navGive'
               to='/give'
               className={styles.link}
               activeClassName={styles.activeRoute}>
               Give
             </Link>
-            <Link
+            <Link onClick={this.hideMenu}
               id='navApps'
               to='/apps'
               className={styles.link}
