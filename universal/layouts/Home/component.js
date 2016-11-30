@@ -11,7 +11,7 @@ import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 
 // Content Import
-import foundationImg from './assets/thrive-foundation.jpg'
+import foundationImg from './assets/thrive-foundation.png'
 import appsImg from './assets/thrive-apps.jpg'
 import popUpImg from './assets/thrive-popup.jpg'
 import eCourseImg from './assets/thrive-ecourse.png'
@@ -26,7 +26,7 @@ const thrivePulse = {
   title: 'What\'s Your Thrive Pulse?',
   asset: 'pulseImg',
   details: `Begin with the Thrive Pulse, our 10-question assessment that will
-    help you take stock of your life and identify areas of improvement.`,
+    help you take stock of your life and identify ways you can thrive.`,
   externalLink: {
     linkText: 'Get Your Thrive Pulse',
     linkTo: '/pulse',
@@ -70,14 +70,14 @@ const homeQuote = {
   imageShape: 'roundImage'
 }
 const pathways = {
-  bgColor: 'blue',
+  bgColor: 'blurple',
   author: '',
   hasAuthor: 'authorFalse',
   hasLabel: 'labelTrue',
   details: [
     `Thrive Global is all about action – going from knowing what to do to actually
     doing it.  Begin by taking your Thrive Pulse.  Explore our pathways, journeys
-    and microsteps that will collectively make a transformational impact on your
+    and microsteps that together will make a transformational impact on your
     day-to-day well-being and performance.  Go deeper with our e-course.
     Whatever your entry point is, take it.`
   ],
@@ -113,7 +113,7 @@ const thriveApps = {
 }
 const thriveStyle = {
   sectionClass: 'transparent',
-  title: 'Thrive Style',
+  title: 'Thrive Style: Repeats — The New Power Dressing',
   hasLabel: 'labelTrue',
   label: {
     label: 'Thrive Style',
@@ -121,7 +121,7 @@ const thriveStyle = {
   },
   sectionText: [
     `Thrive Style is all about helping women close the style gap and open up
-    more time for productivity, creativity and recharging. ThriveStyle is
+    more time for productivity, creativity and recharging. Thrive Style is
     about redefining conventions so that women can feel confident,
     professional and great in something other than 5-inch heels and a new
     outfit for every occasion. Our first campaign: to normalize – actually
@@ -137,7 +137,7 @@ const thriveStyle = {
   }
 }
 const thrivePoetry = {
-  bgColor: 'teal',
+  bgColor: 'blurple',
   author: '',
   label: 'Wisdom',
   title: 'Poetry & Philosophy',
@@ -154,20 +154,20 @@ const thrivePoetry = {
   ],
   externalLink: {
     linkText: 'Read More',
-    linkTo: 'https://journal.thriveglobal.com/search?q=poetry',
+    linkTo: 'https://journal.thriveglobal.com/in-muir-woods-fb35c3180c62#.bdq2lchsm',
     linkStyle: 'white'
   }
 }
 const deathOverDinner = {
-  bgColor: 'blurple',
+  bgColor: 'teal',
   author: '',
   hasAuthor: 'authorFalse',
   hasLabel: 'labelFalse',
   details: [
-    `Yes, really.  We have, if we’re lucky, about thirty thousand days to play
+    `Yes, really.  We have, if we’re lucky, about 30,000 days to play
     the game of life. How we play it will be determined by what we value.
     Thrive and VICE are partnering with not-for-profit Death Over Dinner to
-    launch a global conversation about mortality and life's biggest questions.`
+    launch a global conversation about death and life's biggest questions.`
   ],
   title: 'Let\'s Have Dinner and Talk About Death',
   asset: 'string',
@@ -191,7 +191,7 @@ const thriveArt = {
      It  ignites a deeper truth and awakens the sense of wonder that slumbers
      within us. The Thrive Journal will proudly feature art and artists from
      around the world to inspire that connectedness. See work from artists
-     Tris hla Jain and Isabella Huffington at The Thrive Journal.`
+     Trishla Jain and Isabella Huffington at The Thrive Journal.`
   ],
   image: artImg,
   hasButton: 'buttonTrue',
