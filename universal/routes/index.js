@@ -8,7 +8,6 @@ import TempHomePage from 'layouts/TempHomePage'
 import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
-import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
@@ -70,10 +69,6 @@ export const createRoutes = (store) => ([
       {
         path:'about',
         component: About
-      },
-      {
-        path: 'thrive',
-        component: Thrive
       },
       {
         path: 'pulse',
