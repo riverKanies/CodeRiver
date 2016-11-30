@@ -1,8 +1,7 @@
 @value bp-mama-bear, containerWidth, containerPadding from 'all';
 
 .container {
-  lost-column: 1;
-  padding: 2rem 1rem 0rem 0rem;
+  lost-column: 1 flex;
   media bp-mama-bear {
     lost-column: 1/1;
   }
