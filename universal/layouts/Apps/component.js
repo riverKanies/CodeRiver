@@ -52,7 +52,7 @@ const joyTrigger = {
   image: joyTriggerImage,
   link: {
     linkText: 'Learn More',
-    linkTo: 'http://www.mschf.xyz/sandbox/thrive/',
+    linkTo: 'http://joytrigger.thriveglobal.com',
     linkStyle: 'violet'
   },
   label: {
