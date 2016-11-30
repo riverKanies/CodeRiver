@@ -17,8 +17,15 @@ import GlassDoor from 'layouts/GlassDoor'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
+import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
 import Journey from 'layouts/Journey'
+
+function handleUpdate (prevState, nextState) {
+  if (nextState.location.action !== 'POP') {
+    window.scrollTo(0, 0)
+  }
+}
 
 export const createRoutes = (store) => ([
   {
@@ -33,6 +40,7 @@ export const createRoutes = (store) => ([
     path: '/',
     component: LayoutCore,
     indexRoute: Home,
+    onChange: handleUpdate,
     // TODO: remove this post launch
     onEnter: (nextState, replace, callback) => {
       const { location } = nextState
@@ -109,6 +117,10 @@ export const createRoutes = (store) => ([
       {
         path: 'login',
         component: Login
+      },
+      {
+        path: 'registration-success',
+        component: RegistrationSuccess
       },
       {
         path: ':page_id',
