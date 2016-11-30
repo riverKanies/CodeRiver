@@ -7,3 +7,9 @@
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+h1 {
+  padding-top: 3rem;
+  clear: both;
+  text-align: center !important;
+}

@@ -3,6 +3,8 @@ title: Privacy Policy
 published: 2017-12-01
 ---
 
+# Thrive Global Privacy Policy
+
 Thrive Global Holdings, LLC (“Company”) is committed to protecting your privacy.
 We have prepared this Privacy Policy to describe to you our practices regarding
 the Personal Data we collect from users of our website, located at

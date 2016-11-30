@@ -15,9 +15,6 @@
     margin: 0 auto;
     padding: mamaPadding;
   }
-  @media bp-papa-bear {
-    padding: papaPadding;
-  }
 }
 .default {
   composes: twoColTextImage;
@@ -111,7 +108,7 @@ img {
   display: block;
   width: 100%;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   padding: 0 0;
   float: left;
   clear: both;

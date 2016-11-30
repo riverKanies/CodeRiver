@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, Playfair, PlayBlackItalic from 'all';
 
 .container {
   display: block;
@@ -36,8 +36,25 @@
     margin-bottom: papaHeader;
   }
   > h2 {
-    text-align: left;
-    font-family: Playfair;
+    font-size: 1.75rem;
+    text-align: center;
+    font-family: PlayfairBlackItalic;
+
+    @media bp-papa-bear {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.details {
+  lost-utility: clearfix;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  @media bp-papa-bear {
+    width: 70%;
+    padding-bottom: 2.5rem;
   }
 }
 
