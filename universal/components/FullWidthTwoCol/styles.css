@@ -71,7 +71,7 @@
 .image {
   display: inline-block;
   width: 100%;
-  height: auto;
+  height: 100%;
   text-align: center;
   @media bp-papa-bear {
     object-fit: cover;
