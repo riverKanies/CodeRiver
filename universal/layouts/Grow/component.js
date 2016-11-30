@@ -56,7 +56,7 @@ const eCourse = {
   bgColor: 'default',
   hasTitle: 'titleTrue',
   titleCenter: 'centerTrue',
-  title: 'E-Courses',
+  title: 'The Thrive E-Courses',
   colOneImg: kobeImage,
   colTwoImg: ahImage,
   colTextOne: [

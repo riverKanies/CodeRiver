@@ -10,7 +10,7 @@ type Props = {
 };
 
 const PathwaySection = ({
-  title = 'Pathways',
+  title = 'The Thrive Global Pathways',
   pathways = []
 }: Props) => {
   return (

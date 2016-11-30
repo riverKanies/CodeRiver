@@ -4,15 +4,8 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: babyPadding;
   float: left;
   background-color: white;
-  @media bp-mama-bear {
-    padding: mamaPadding;
-  }
-  @media bp-papa-bear {
-    padding: papaPadding;
-  }
 }
 
 .content {
@@ -47,5 +40,8 @@
     display: inline-block;
     float: none;
     text-align: center;
+  }
+  @media bp-papa-bear {
+    padding-top: 2rem;
   }
 }
