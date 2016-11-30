@@ -41,19 +41,7 @@ export const createRoutes = (store) => ([
     component: LayoutCore,
     indexRoute: Home,
     onChange: handleUpdate,
-    // TODO: remove this post launch
-    onEnter: (nextState, replace, callback) => {
-      const { location } = nextState
-      if (location.pathname === '/') {
-        replace('/coming-soon')
-      }
-      callback()
-    },
     childRoutes: [
-      {
-        path: '/home',
-        component: Home.component
-      },
       {
         path: 'microsteps',
         component: Microsteps
