@@ -41,21 +41,24 @@ const MediumPostDynamic = ({
   trackClick
 }: Props) => {
   return (
-    <article className={styles[cardType]}>
+    <a
+      onClick={trackClick}
+      href={medium_uid}
+      target='_blank'
+      className={styles[cardType]}
+    >
       <ContentLabel label={tags[0]} />
       <section className={styles.postContent}>
         <div className={styles[hasImage]}>
-          <a onClick={trackClick} href={medium_uid} target='_blank'>
-            <img className={styles.image} src={cover_image} alt={title} />
-          </a>
+          <img className={styles.image} src={cover_image} alt={title} />
         </div>
         <header className={styles.header}>
-          <h2 className={styles.h2}><a onClick={trackClick} href={medium_uid} target='_blank'>{title}</a></h2>
+          <h2>{title}</h2>
         </header>
         <section className={styles.synopsisFalse} />
         <Author name={author} />
       </section>
-    </article>
+    </a>
   )
 }
 
