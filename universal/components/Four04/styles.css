@@ -1,0 +1,100 @@
+/*
+  This is the stylesheet for: Four04
+*/
+
+@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
+@value ThriveBlue, ThriveTeal, ThriveBlurple, backgroundGray, darkGray, ThrivinRock from 'all';
+@value PlayBlack, Playfair, MonLight, Mon from 'all';
+
+.container {
+  float: left;
+  width: 100%;
+  background-color: white;
+}
+
+.content {
+  lost-center: containerWidth;
+  padding: 4rem containerPadding;
+  text-align: center;
+  @media bp-mama-bear {
+    padding: 6rem containerPadding;
+  }
+}
+
+.brand {
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: center;
+  @media bp-papa-bear {
+    display: block;
+    width: 20rem;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.thriveLogo {
+  width: 40%;
+  height: auto;
+  margin: 0 0 0 0;
+  padding: 0 0;
+  float: none;
+}
+
+.label {
+  color: ThrivinRock;
+  display: block;
+  clear: both;
+  font-family: Mon;
+  font-size: .75rem;
+  font-style: normal;
+  letter-spacing: .1rem;
+  line-height: 100%;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+
+.header {
+  font-family: PlayfairBlack;
+  font-size: 2em;
+  padding: 0.75rem;
+  clear: both;
+  margin-bottom: 0;
+  color: ThrivinRock;
+
+  @media bp-mama-bear {
+    max-width: 40rem;
+    line-height: 94%;
+    padding: 1rem;
+    font-size: 3.25em;
+    margin: 0 auto;
+  }
+
+  @media bp-papa-bear {
+    font-size: 4.5em;
+  }
+}
+
+.author {
+  display: block;
+  font-family: Mon;
+  padding: 2rem 0;
+  clear: both;
+  color: ThrivinRock;
+  width: 100%;
+
+  &::before {
+    content: 'by';
+    display: inline-block;
+    margin: 0 .25rem 0 0;
+    padding: 0 0;
+    font-family: Playfair;
+    font-style: italic;
+    text-transform: none;
+  }
+}
