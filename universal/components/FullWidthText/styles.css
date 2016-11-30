@@ -11,9 +11,11 @@
   text-align: center;
   @media bp-mama-bear {
     padding: mamaPadding;
+    padding-bottom: 0;
   }
   @media bp-papa-bear {
     padding: papaPadding;
+    padding-bottom: 0;
   }
 }
 .default {

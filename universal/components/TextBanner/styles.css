@@ -12,6 +12,7 @@
   padding: babyPadding;
   position: relative;
   text-align: left;
+  background-image: url("/giveBannerPattern.png") repeat;
   @media bp-mama-bear {
     margin: 0 auto;
     padding: mamaPadding;

@@ -4,6 +4,7 @@ import styles from './styles'
 
 type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
+  bgImage: 'static/assets/giveBannerPattern.png',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
   subTitle: string,
@@ -11,6 +12,7 @@ type Props = {
 
 const TextBanner = ({
   bgColor = 'default',
+  bgImage = './static/assets/giveBannerPattern.png',
   hasTitle = 'titleTrue',
   subTitle = 'Sub Title',
   title = 'Title'
