@@ -33,7 +33,7 @@ const MediumPostDynamic = ({
   cardType = 'half',
   hasImage = 'imageTrue',
   hasSynopsis = 'synopsisTrue',
-  title = 'Arianna Huffington’s Sleep Revolution Starts at Home',
+  title = 'This is a super long placeholder title that should clip with and ellipses on the lil guys.',
   author = 'Thrive Contributor',
   tags = [],
   medium_uid = '',
@@ -50,7 +50,7 @@ const MediumPostDynamic = ({
           </a>
         </div>
         <header className={styles.header}>
-          <h2><a onClick={trackClick} href={medium_uid} target='_blank'>{title}</a></h2>
+          <h2 className={styles.h2}><a onClick={trackClick} href={medium_uid} target='_blank'>{title}</a></h2>
         </header>
         <section className={styles.synopsisFalse} />
         <Author name={author} />
