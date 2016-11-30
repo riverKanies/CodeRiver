@@ -152,6 +152,7 @@ export const PopupStoreView = () => (
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
     <FullWidthText {...mapUnit} />
+    <FullWidthText overrideStyles={{margin: '0', padding: '1px'}} {...mapUnit} />
     <FullWidthTwoCol {...storeDescrip} />
     <TwoColImage {...ourPics} />
     <FullWidthText {...ourBrands} />
