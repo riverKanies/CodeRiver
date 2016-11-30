@@ -1,0 +1,42 @@
+.SectionContainer{
+	lost-column: 1 flex;
+	background-color: white;
+	text-align: left;
+	margin-top: 100px;
+	padding-top: 20vh;
+
+	h2 { 
+    	position: relative;
+    	text-align: center
+  }
+
+  h2:before{
+      content: '';
+      position: absolute;
+      top: 150%;
+      left: 50%;
+      bottom: -6px;
+      width: 130px;
+      height: 2px;
+      background: black;
+      transform:translateX(-65px) /*    width/2    */
+  }
+} 
+
+.title{
+	border-bottom:50%;
+}
+
+
+.missionStatement{
+	padding-left: 10vh;
+	padding-right: 10vh;
+	font-family: 'playfair display';
+	font-style:italic;
+
+}
+.content{
+	font-size: 130%;
+	padding-left: 10vh;
+	padding-right: 10vh;
+}

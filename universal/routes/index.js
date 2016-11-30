@@ -8,7 +8,6 @@ import TempHomePage from 'layouts/TempHomePage'
 import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
-import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
@@ -20,6 +19,7 @@ import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
+import About from 'layouts/About'
 import Journey from 'layouts/Journey'
 
 function handleUpdate (prevState, nextState) {
@@ -90,8 +90,8 @@ export const createRoutes = (store) => ([
         component: Apps
       },
       {
-        path: 'thrive',
-        component: Thrive
+        path:'about',
+        component: About
       },
       {
         path: 'pulse',
