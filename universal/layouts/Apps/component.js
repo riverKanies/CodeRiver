@@ -85,7 +85,7 @@ const alexa = {
 
 const silo = {
   sectionClass: 'fade',
-  title: 'Take Back Your Phone',
+  title: 'Silo',
   sectionText: [
     `By selectively blocking distractions, alerts, and notifications on your phone,
     while ensuring you don't miss important calls, Silo allows you to reclaim space
