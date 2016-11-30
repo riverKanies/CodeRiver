@@ -92,7 +92,7 @@ const Footer = ({
             Privacy
           </Link>
           <p>&</p>
-          <Link to='/privacy' className={styles.link}>
+          <Link to='/terms' className={styles.link}>
             Terms
           </Link>
         </section>
