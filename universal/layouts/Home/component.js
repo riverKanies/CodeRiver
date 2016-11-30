@@ -174,7 +174,7 @@ const deathOverDinner = {
   label: 'Wonder',
   externalLink: {
     linkText: 'Learn More',
-    linkTo: '',
+    linkTo: 'https://journal.thriveglobal.com/michael-hebb-death-over-dinner-38ae6553d21b#.meoi8cu4n',
     linkStyle: 'white'
   }
 }
