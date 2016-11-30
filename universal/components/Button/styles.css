@@ -1,6 +1,6 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
 @value Mon from 'all';
-@value ThriveViolet, ThriveBlue, ThriveTeal, ThriveBlurple from 'all';
+@value ThriveViolet, gradientCardThrive, ThriveBlue, ThriveTeal, ThriveBlurple from 'all';
 
 .button {
   border: 2px solid;
@@ -104,6 +104,19 @@
     border-color: ThriveBlue;
   }
 }
+
+.special {
+  composes: button;
+  color: #fff;
+  background: gradientCardThrive;
+
+  &:hover {
+    background: ThriveViolet;
+    color: #fff;
+    border: 2px solid ThriveViolet;
+  }
+}
+
 
 .bannerButton {
   @media bp-baby-bear {

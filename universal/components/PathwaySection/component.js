@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import PathwayCard from 'components/PathwayCard'
+import PathwayCardLinked from 'components/PathwayCardLinked'
 import productivityImage from '../../assets/thrivin.jpg'
 
 type Props = {
@@ -28,6 +29,7 @@ const PathwaySection = ({
               id={pathway.id}
             />
           )}
+          <PathwayCardLinked />
         </section>
       </section>
     </section>
