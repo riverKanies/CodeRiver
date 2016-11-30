@@ -20,22 +20,19 @@ const giveBanner = {
 
 const thriveFoundation = {
   details: [
-    `The Thrive Foundation is a 501(c)3 organization that brings free Thrive trainings to
-    nonprofit and civic leaders who are on the front lines of serving others.
-    Leaders in the public and nonprofit sectors are at particular risk of burnout,
-    believing that the world rests on their shoulders and thus they have to work around
-    the clock to solve the world's problems. The Thrive Foundation helps teach
-    these people that putting their own oxygen mask on first will make them
-    more effective at helping others. You can donate to the Thrive Foundation
-    on Crowdrise below.`
+    `The Thrive Foundation is a 501(c)3 organization that brings free Thrive trainings to nonprofit
+    and civic leaders who are on the front lines of service others and at particular risk of burnout.
+    The Thrive trainings teach these leaders that when they put their own oxygen masks on first,
+    they are more effective at helping others.`
   ],
   hasAuthor: 'authorFalse',
   hasLabel: 'labelFalse',
+  hasButton: 'buttonFalse',
   title: 'Thrive Foundation',
   asset: 'thriveFoundation.jpg',
   externalLink: {
-    linkText: 'Donate Now',
-    linkTo: 'https://www.crowdrise.com/',
+    linkText: 'Learn More',
+    linkTo: 'https://journal.thriveglobal.com/giving/home',
     linkStyle: 'white'
   }
 }
@@ -80,11 +77,12 @@ const GivingisGood = {
     Read more stories at Thrive Global's Giving section. `
   ],
   hasAuthor: 'authorFalse',
+  label: 'Journal',
   title: 'Why Giving is Good For You',
   asset: 'richard.jpg',
   externalLink: {
     linkText: 'Read More',
-    linkTo: '//stories.thriveglobal.com/giving/',
+    linkTo: 'https://journal.thriveglobal.com/giving/home',
     linkStyle: 'white'
   }
 }
