@@ -7,27 +7,25 @@ import fetch from 'isomorphic-fetch'
 import Modal from 'components/Modal'
 
 type Props = {
-  title: string,
+  title: string
 }
 
-
-function getTeamMembers() {
+function getTeamMembers () {
   return fetch('/Team/team.json')
 }
 
-
 export class TeamSection extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       teamMembers: [],
       showModal: false,
-      modalContent: <div></div>
+      modalContent: <div />
     }
   }
 
-  componentWillMount() {
+  componentWillMount () {
     getTeamMembers().then(response => {
       let team = response.json()
       team.then(json => {
@@ -38,13 +36,13 @@ export class TeamSection extends React.Component {
     })
   }
 
-  handleClick(member) {
+  handleClick (member) {
     this.setState({
       showModal: !this.state.showModal,
       modalContent: (
         <div className={styles.bioModal}>
           <div className={styles.modalImageWrapper}>
-            <div className={styles.modalImage} style={{backgroundImage: `url(${member.image})`}}/>
+            <div className={styles.modalImage} style={{backgroundImage: `url(${member.image})`}} />
           </div>
           <div className={styles.modalText}>
             <h3> {member.name} </h3>
@@ -56,20 +54,21 @@ export class TeamSection extends React.Component {
     })
   }
 
-  render() {
-    const founder = this.state.teamMembers[0];
-    const team = this.state.teamMembers.slice(1);
+  render () {
+    const founder = this.state.teamMembers[0]
+    const team = this.state.teamMembers.slice(1)
 
     return (
-      <section className={styles.SectionContainer} id="team">
+      <section className={styles.SectionContainer} id='team'>
         <section className={styles.row} >
           <section className={styles.biosRow}>
-            <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)} content={this.state.modalContent} />
+            <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)}
+              content={this.state.modalContent} />
             <h2 className={styles.title}> Our Team </h2>
-            <FounderBio {...founder} onClick={()=>this.handleClick.call(this, founder)}/>
+            <FounderBio {...founder} onClick={() => this.handleClick.call(this, founder)}/>
             <section>
               {team.map(member =>
-                <TeamBio {...member} onClick={()=>this.handleClick.call(this, member)} key={member.name} />
+                <TeamBio {...member} onClick={() => this.handleClick.call(this, member)} key={member.name} />
               )}
             </section>
           </section>
