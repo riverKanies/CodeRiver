@@ -17,9 +17,11 @@
   color: bodyCopy;
   @media bp-mama-bear {
     padding: mamaPadding;
+    padding-top: 0;
   }
   @media bp-papa-bear {
     padding: papaPadding;
+    padding-top: 0;
   }
 }
 .default {
