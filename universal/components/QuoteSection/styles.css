@@ -20,6 +20,11 @@
   composes: quoteContainer;
   background: transparent;
 }
+.pattern {
+  composes: quoteContainer;
+  background-image: url('./assets/growAriannaPattern.png');
+  background-repeat: repeat;
+}
 .white {
   composes: quoteContainer;
   background: white;
