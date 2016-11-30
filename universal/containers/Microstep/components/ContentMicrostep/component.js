@@ -16,9 +16,7 @@ const ContentMicrostep = ({ microstep, showLabel = false }: Props) => {
   return (
     <div className={styles.container}>
       <MicrostepLabel title='Thrive Message' visible={showLabel} />
-      <div className={styles.content}>
-        <div dangerouslySetInnerHTML={{__html: marked(description)}} />
-      </div>
+      <div className={styles.content} dangerouslySetInnerHTML={{__html: marked(description)}} />
     </div>
   )
 }
