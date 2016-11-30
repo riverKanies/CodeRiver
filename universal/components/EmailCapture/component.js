@@ -12,7 +12,7 @@ type Props = {
 };
 
 const EmailCapture = ({
-  title = 'Thrive with us today!',
+  title = 'Sign up for the #thrivenow newsletter',
   handleSubmit = () => null,
   pristine = false,
   submitting = false
