@@ -14,7 +14,7 @@ import QuoteSection from 'components/QuoteSection'
 import foundationImg from './assets/thrive-foundation.jpg'
 import appsImg from './assets/thrive-apps.jpg'
 import popUpImg from './assets/thrive-popup.jpg'
-import eCourseImg from './assets/ecourse.png'
+import eCourseImg from './assets/thrive-ecourse.png'
 import artImg from './assets/thrive-art.jpg'
 import styleImg from './assets/thrive-style.jpg'
 
