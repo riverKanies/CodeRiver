@@ -17,7 +17,7 @@ import ariannaQuote from './assets/ariannaQuote.jpg'
 
 // Page Content
 const banner = {
-  bgColor: 'imageBlue',
+  asset: 'giveBannerPattern.png',
   title: 'Grow',
   subTitle: `Begin your journey from living to thriving with our Pathways, Journeys
   and Microsteps. It's time to go from knowing what to do to actually doing it.`
