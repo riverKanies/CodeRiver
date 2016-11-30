@@ -29,12 +29,7 @@ const thriveFoundation = {
   hasLabel: 'labelFalse',
   hasButton: 'buttonFalse',
   title: 'Thrive Foundation',
-  asset: 'thriveFoundation.jpg',
-  externalLink: {
-    linkText: 'Learn More',
-    linkTo: 'https://journal.thriveglobal.com/giving/home',
-    linkStyle: 'white'
-  }
+  asset: 'thriveFoundation.jpg'
 }
 
 const trainNonProfits = {
@@ -46,7 +41,9 @@ const trainNonProfits = {
   sectionText: [
     `Thrive Global is proud to support nonprofit organizations including Khan Academy,
     Global Citizen, Alliance for Children's Rights, EduCare Foundation
-    and Lean In with free trainings to enhance well-being and performance.`
+    and Lean In with free trainings to enhance well-being and performance.` +
+    ` Interested in bringing Thrive to your nonprofit?
+    E-mail nonprofits@thriveglobal.com`
   ]
 }
 
@@ -55,19 +52,9 @@ const globalPovertyProject = {
   quoteFont: 'Playfair',
   containerBorders: 'bordersTrue',
   quoteImage: hughImage,
-  citation: 'Hugh Evans, CEO Global Poverty Project',
+  citation: 'Hugh Evans, CEO Global Citizen',
   quote: ['The training was truly an eye opener as it reminded us of the importance of ' +
   'living out our true purpose, and doing so in a way that will ensure our team is sustainable in the long-term.']
-}
-
-const nonProfitEmail = {
-  sectionClass: 'tagalong',
-  sectionWidth: 'halfWidth',
-  textAlign: 'textCenter',
-  header: 'headerFalse',
-  sectionText: [
-    'Interested in bringing Thrive to your nonprofit? ' + 'E-mail nonprofits@thriveglobal.com'
-  ]
 }
 
 const GivingisGood = {
@@ -123,7 +110,6 @@ export const GiveView = () => (
       <TextBanner {...giveBanner} />
       <FeaturedStory {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
-      <FullWidthText {...nonProfitEmail} />
       <BrandRow />
       <QuoteSection {...globalPovertyProject} />
       <FeaturedStory {...GivingisGood} />
