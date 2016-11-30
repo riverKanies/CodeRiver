@@ -136,7 +136,7 @@ const ourBrands = {
       <li>Vida Health</li>
       <li>Vinaya</li>
       <li>Withings</li>
-      <li>Zee</li>
+      <li>Zeel</li>
     </ul>)
   ]
 }
