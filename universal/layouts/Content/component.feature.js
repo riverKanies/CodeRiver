@@ -6,17 +6,35 @@ describe('ContentView', () => {
   it('should render markdown', (done) => {
     var browser = Nightmare(browserConfig)
     browser
-      .goto(baseUrl + '/privacy')
+      .goto(baseUrl + '/thrive/privacy')
       .wait('#contentView')
-      .evaluate(function () {
+      .evaluate(() => {
         return document.querySelector('h1').innerText
       })
       .end()
-      .then(function (link) {
+      .then((link) => {
         expect(link).toContain(`Privacy`)
         done()
       })
-      .catch(function (error) {
+      .catch((error) => {
+        console.error('Failed:', error)
+      })
+  })
+
+  xit('should handle a 404 request', (done) => {
+    var browser = Nightmare(browserConfig)
+    browser
+      .goto(baseUrl + '/thrive/nothinghere')
+      .wait('#pageNotFound')
+      .evaluate(() => {
+        return document.querySelector('#pageNotFound').innerText
+      })
+      .end()
+      .then((pageNotFound) => {
+        expect(pageNotFound).toContain(`Page Not Found`)
+        done()
+      })
+      .catch((error) => {
         console.error('Failed:', error)
       })
   })

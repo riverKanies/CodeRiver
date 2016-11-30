@@ -6,7 +6,7 @@ import cx from 'classnames'
 type Props = {
   show: boolean,
   onClick: Function,
-  content: React.PropTypes.element
+  content: any
 };
 
 const Modal = ({
@@ -17,7 +17,7 @@ const Modal = ({
   const classes = cx({
     [styles.show]: show,
     [styles.modal]: true
-  });
+  })
 
   return (
     <div className={classes} onClick={onClick}>

@@ -4,8 +4,11 @@ import styles from './styles'
 
 type Props = {
   title: string,
-};
-
+  name: string,
+  image: any,
+  bio: string,
+  onClick: Function
+}
 
 const FounderBio = ({
   name,

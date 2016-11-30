@@ -8,6 +8,13 @@ const debug = _debug('app:server:express')
 const app = express()
 const paths = config.utils_paths
 
+app.use((req, res, next) => {
+  if (req.originalUrl.match(/404/)) {
+    res.status(404)
+  }
+  next()
+})
+
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement universal
 // rendering, you'll want to remove this middleware.

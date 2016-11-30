@@ -5,12 +5,13 @@ import imagePlaceholder from './assets/team-placeholder.jpg'
 
 type Props = {
   title: string,
-  description: string
+  description: string,
+  uri: string
 };
 
-const defaultTitle ="Science Title"
+const defaultTitle = 'Science Title'
 const defaultDescription = '.....science stuff'
-const defaultImage= imagePlaceholder;
+const defaultImage = imagePlaceholder
 
 const ScienceItemView = ({
   title = defaultTitle,
@@ -19,9 +20,9 @@ const ScienceItemView = ({
 }: Props) => {
   return (
     <section className={styles.scienceContainer}>
-        <div className={styles.text}>
-          <img src={imagePlaceholder} styles={styles.imageContainer}/>
-          <p>{description}</p>
+      <div className={styles.text}>
+        <img src={defaultImage} styles={styles.imageContainer} />
+        <p>{description}</p>
       </div>
     </section>
   )

@@ -1,6 +1,5 @@
 /* @flow */
 import React from 'react'
-import { redirectToShopify } from 'lib/sso'
 import EmailCapture from 'components/EmailCapture'
 import logo from './assets/logo-footer.png'
 import { Link } from 'react-router'
@@ -52,7 +51,7 @@ const Footer = ({
               <a href='/partners'>Partner With Us</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#careers'>Careers </a>
+              <a href='/about#careers'>Careers</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/popup'>Popup Store</a>
@@ -61,13 +60,13 @@ const Footer = ({
               <a href='/about#press'>Press</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/press'>Press Releases</a>
+              <a href='thrive/press'>Press Releases</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/about#advertise'>Advertise</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#contact'>Contact </a>
+              <a href='/about#contact'>Contact</a>
             </li>
           </ul>
         </section>
@@ -97,11 +96,11 @@ const Footer = ({
         </section>
         <section className={styles.copyright}>
           <p>Thrive Global © 2016</p>
-          <Link to='/privacy' className={styles.link}>
+          <Link to='/thrive/privacy' className={styles.link}>
             Privacy
           </Link>
           <p>&</p>
-          <Link to='/terms' className={styles.link}>
+          <Link to='/thrive/terms' className={styles.link}>
             Terms
           </Link>
         </section>

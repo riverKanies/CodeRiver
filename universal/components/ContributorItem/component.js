@@ -10,10 +10,10 @@ type Props = {
   title: string
 }
 
-const defaultDetails = ['this the details Cras justo odio, dapibus ac' +
-' facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.']
+const defaultDetails = `this the details Cras justo odio, dapibus ac
+  facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.`
 
-const defaultTitle = "Become A Contributor"
+const defaultTitle = 'Become A Contributor'
 
 const defaultAuthor = 'Koby Bryant'
 const defaultLink = '#'

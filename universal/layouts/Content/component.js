@@ -17,20 +17,38 @@ export function fetchPageById (pageId: string) {
     }
   }
   return {
-    Page: pages.notfound.default
+    Page: undefined
   }
 }
 
-export const ContentView = (props: Props) => {
-  const { Page } = fetchPageById(props.params.page_id)
+class ContentView extends React.Component {
+  props: Props
+  state = {
+    Page: null
+  }
 
-  return (
-    <div id='contentView' className={styles.container}>
-      <div className={styles.pageContainer}>
-        <Page />
+  componentWillMount () {
+    const { Page } = fetchPageById(this.props.params.page_id)
+    if (!Page) {
+      window.location = '/404'
+    } else {
+      this.setState({ Page })
+    }
+  }
+
+  render () {
+    const { Page } = this.state
+
+    if (!Page) return null
+
+    return (
+      <div id='contentView' className={styles.container}>
+        <div className={styles.pageContainer}>
+          <Page />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default ContentView

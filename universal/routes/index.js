@@ -13,10 +13,10 @@ import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
-import PWUOverview  from 'layouts/PartnerWithUs/Overview'
-import PWUCorporate  from 'layouts/PartnerWithUs/Corporate'
-import PWUContent  from 'layouts/PartnerWithUs/Content'
-import PWUCommerce  from 'layouts/PartnerWithUs/Commerce'
+import PWUOverview from 'layouts/PartnerWithUs/Overview'
+import PWUCorporate from 'layouts/PartnerWithUs/Corporate'
+import PWUContent from 'layouts/PartnerWithUs/Content'
+import PWUCommerce from 'layouts/PartnerWithUs/Commerce'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -24,6 +24,7 @@ import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
 import About from 'layouts/About'
 import Journey from 'layouts/Journey'
+import NotFound from 'layouts/NotFound'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -93,7 +94,7 @@ export const createRoutes = (store) => ([
         component: Apps
       },
       {
-        path:'about',
+        path: 'about',
         component: About
       },
       {
@@ -137,8 +138,12 @@ export const createRoutes = (store) => ([
         component: RegistrationSuccess
       },
       {
-        path: ':page_id',
+        path: 'thrive/:page_id',
         component: Content
+      },
+      {
+        path: '*',
+        component: NotFound
       }
     ]
   }
