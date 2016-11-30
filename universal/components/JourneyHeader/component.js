@@ -13,7 +13,7 @@ type Props = {
 const JourneyHeader = ({
   title = '',
   description = '',
-  logo = mark,
+  logo = mark
 }: Props) => {
   return (
     <section className={styles.container}>
