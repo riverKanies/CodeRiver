@@ -1,7 +1,7 @@
 @value all: 'all';
 
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter, mediumGutterHalf from all;
-@value bodyCopy, ThriveBlue, darkGray, gradientCardThrive from all;
+@value bodyCopy, ThriveBlue, ThriveViolet, darkGray, gradientCardThrive from all;
 @value MonBold, MonBlack, Playfair, PlayBlack from all;
 
 @value imgCardBaby: 20rem;
@@ -336,6 +336,11 @@
         text-overflow: ellipsis;
         white-space: wrap;
         overflow: hidden;
+      }
+      &:hover {
+        h2 {
+          color: ThriveBlue;
+        }
       }
     }
   }
