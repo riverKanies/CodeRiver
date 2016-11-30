@@ -277,9 +277,6 @@
     @media bp-mama-bear {
       height: imgCardHalfMama;
     }
-    @media bp-papa-bear {
-      height: 4.375rem;
-    }
     &::after {
       position: relative;
       top: auto;
@@ -359,9 +356,6 @@
     background: ThriveBlue;
     @media bp-mama-bear {
       height: imgCardHalfMama;
-    }
-    @media bp-papa-bear {
-      height: 4.375rem;
     }
     &::after {
       position: relative;
