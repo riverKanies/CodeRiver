@@ -10,14 +10,9 @@ type Props = {
   logo: any,
 }
 
-const defaultDescription = `this the details Cras justo odio, dapibus ac
-facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.`
-
-const defaultTitle = "It's Time To Say Goodbye."
-
 const JourneyHeader = ({
-  title = defaultTitle,
-  description = defaultDescription,
+  title = '',
+  description = '',
   logo = mark,
 }: Props) => {
   return (
