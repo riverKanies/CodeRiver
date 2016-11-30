@@ -54,7 +54,8 @@ const eCourse = {
   button: {
     buttonText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
-    buttonStyle: 'white'
+    buttonStyle: 'white',
+    handleClick: () => { window.location = 'https://learn.thriveglobal.com' }
   }
 }
 const homeQuote = {
