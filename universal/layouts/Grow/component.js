@@ -77,7 +77,7 @@ const eCourse = {
 }
 
 const quote = {
-  bgColor: 'gray',
+  bgColor: 'pattern',
   quoteImage: ariannaQuote,
   quote: [
     'Intention is one of the most powerful forces there is. What you mean when ' +

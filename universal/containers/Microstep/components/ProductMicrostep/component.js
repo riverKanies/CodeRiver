@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
 import { genRedirectToShopify } from 'lib/sso'
+import MicrostepLabel from 'components/MicrostepLabel'
 
 type Props = {
   microstep: {
@@ -15,18 +16,18 @@ type Props = {
       src: string
     }
   },
+  showLabel: boolean,
   button: {
     buttonText: string,
     buttonStyle: string
   }
 };
 
-const ProductMicrostep = ({ microstep }: Props) => {
+const ProductMicrostep = ({ microstep, showLabel = false }: Props) => {
   return (
     <div className={styles.container}>
-
+      <MicrostepLabel title='Thrive Goods' visible={showLabel} />
       <section className={styles.content}>
-
         <header className={styles.header}>
           <h5 className={styles.label}>We Recommend</h5>
           <h1 className={styles.msTitle}>{microstep.title}</h1>

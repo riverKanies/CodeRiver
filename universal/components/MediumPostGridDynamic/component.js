@@ -11,11 +11,6 @@ const featuredHalfImage = {
   hasImage: 'imageTrue',
   hasSynopsis: 'synopsisTrue'
 }
-const featuredHalfNoImage = {
-  cardType: 'half',
-  hasImage: 'imageFalse',
-  hasSynopsis: 'synopsisTrue'
-}
 const featuredHalfHeightImage = {
   cardType: 'halfHeight',
   hasImage: 'imageTrue',
@@ -76,7 +71,7 @@ export default class MediumPostGridDynamic extends React.Component {
       featuredHalfImage,
       featuredHalfHeightImage,
       featuredHalfImage,
-      featuredHalfNoImage,
+      featuredHalfImage,
       featuredQuarterWhite,
       featuredQuarterBlue,
       featuredQuarterWhite,
