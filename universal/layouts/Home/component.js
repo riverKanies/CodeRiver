@@ -82,7 +82,7 @@ const pathways = {
     Whatever your entry point is, take it.`
   ],
   title: 'Pathways, Journeys, & Microsteps',
-  asset: 'string',
+  asset: 'pathway.jpg',
   label: 'Grow',
   externalLink: {
     linkText: 'Take the First Step',
