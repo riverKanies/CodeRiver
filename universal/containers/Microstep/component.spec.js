@@ -18,15 +18,6 @@ describe('(Component) MicrostepList', () => {
     type: undefined
   }
 
-  it('Should render as a <MissingMicrostep /> when no request pending and no Microstep present', () => {
-    const props = { ...defaultProps, fetchPending: false, microstep: undefined}
-
-    const wrapper = shallow(<Microstep {...props} />)
-    const element = wrapper.find('MissingMicrostep')
-
-    expect(element.length).toBe(1)
-  })
-
   it('Should render as a <ProductMicrostep /> when we have one to render.', () => {
     const props = {
       ...defaultProps,
