@@ -80,7 +80,7 @@ const Footer = ({
             <a href='https://www.instagram.com/thrive/' target='_blank'>
               <Instagram />
             </a>
-            <a to='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
+            <a href='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
               <Medium />
             </a>
           </div>
