@@ -10,7 +10,7 @@ type Props = {
 };
 
 const buttonProps = {
-  buttonText: 'FIND YOUR THRIVE PULSE',
+  buttonText: 'Learn More',
   linkTo: '/pulse',
   buttonStyle: 'special'
 }

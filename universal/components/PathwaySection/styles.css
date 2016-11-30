@@ -46,6 +46,18 @@
   }
 }
 
+.details {
+  lost-utility: clearfix;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  @media bp-papa-bear {
+    width: 70%;
+    padding-bottom: 2.5rem;
+  }
+}
+
 .row {
   lost-column: 1;
   float: left;
