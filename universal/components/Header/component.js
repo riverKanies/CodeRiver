@@ -1,13 +1,25 @@
 /* @flow */
 // Site Header
 import React from 'react'
+import { connect } from 'react-redux'
+import { isLoggedIn } from 'modules/UserSession/selectors'
+import { deleteSession } from 'modules/UserSession'
+import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
 
 import styles from './styles'
-import mark from './assets/thriveLogo.png'
+import mark from './assets/thriveLogo.svg'
+
+type Props = {
+  isLoggedIn: boolean,
+  dispatch: Function
+}
 
 class Header extends React.Component {
   toggleActive: Function;
+  logOutUser: Function;
+
+  props: Props
   state = {
     active: false
   }
@@ -15,10 +27,58 @@ class Header extends React.Component {
     super(...arguments)
 
     this.toggleActive = this.toggleActive.bind(this)
+    this.logOutUser = this.logOutUser.bind(this)
   }
+
+  logOutUser () {
+    this.props.dispatch(deleteSession())
+  }
+
   toggleActive () {
     this.setState({active: !this.state.active})
   }
+
+  renderSignupOrProfile () {
+    const { isLoggedIn } = this.props
+
+    if (isLoggedIn) {
+      return (
+        <Link id='navSignUp' to='/profile' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+          Profile
+        </Link>
+      )
+    }
+
+    return (
+      <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        Sign Up
+      </Link>
+    )
+  }
+
+  renderLoginLogout () {
+    const { isLoggedIn } = this.props
+
+    if (isLoggedIn) {
+      return (
+        <Link
+          id='navLogin'
+          to='/'
+          onClick={this.logOutUser}
+          className={styles.linkUtility}
+          activeClassName={styles.activeRoute}>
+          Log Out
+        </Link>
+      )
+    }
+
+    return (
+      <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
+        Log In
+      </Link>
+    )
+  }
+
   render () {
     const { active } = this.state
 
@@ -27,46 +87,51 @@ class Header extends React.Component {
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
 
-        <figure className={styles.brand}>
-          <IndexLink id='linkHome' to='/'>
-            <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
-          </IndexLink>
-        </figure>
+        <section className={styles.forehead}>
+          <figure className={styles.brand}>
+            <IndexLink id='linkHome' to='/'>
+              <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+            </IndexLink>
+          </figure>
+          <span className={styles.tagline}>More than living. Thriving.</span>
+        </section>
 
         <section className={styles.navContainer}>
           <nav role='navigation' className={styles.mainNav}>
-            <Link id='navEngage' to='/engage' className={styles.link} activeClassName={styles.activeRoute}>
-              Engage
+            <a className={styles.link} href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
+            <Link
+              id='navGrow'
+              to='/grow'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Grow
             </Link>
-            <Link id='navLearn' to='/learn' className={styles.link} activeClassName={styles.activeRoute}>
-              Learn
-            </Link>
-            <Link id='navShop' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+            <Link
+              id='navShop'
+              className={styles.link}
+              onClick={redirectToShopify}
+              activeClassName={styles.activeRoute}>
               Shop
             </Link>
-            <Link id='navGive' to='javascript:void(0)' className={styles.link} activeClassName={styles.activeRoute}>
+            <Link
+              id='navGive'
+              to='/give'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
               Give
             </Link>
-            <Link id='navThrive' to='/thrive' className={styles.link} activeClassName={styles.activeRoute}>
-              Thrive
+            <Link
+              id='navApps'
+              to='/apps'
+              className={styles.link}
+              activeClassName={styles.activeRoute}>
+              Apps
             </Link>
           </nav>
 
           <nav role='navigation' className={styles.utilityNav}>
-            <Link id='navSignUp' to='/signup' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-              Sign Up
-            </Link>
-            <Link id='navLogin' to='/login' className={styles.linkUtility} activeClassName={styles.activeRoute}>
-              Log In
-            </Link>
-            <a className={styles.search} href='javascript:void'>
-              <svg className={styles.searchIcon} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
-                <title>Search</title>
-                <path className={styles.search} d='M31.4,28.6l-5.07-5.07A9.84,9.84,0,0,0,28,18,10,10,0,1,0,
-                18,28a9.84,9.84,0,0,0,5.53-1.67L28.6,31.4a2,2,0,0,0,2.8-2.8ZM18,
-                24.07A6.07,6.07,0,1,1,24.07,18,6.09,6.09,0,0,1,18,24.07Z' />
-              </svg>
-            </a>
+            {this.renderSignupOrProfile()}
+            {this.renderLoginLogout()}
           </nav>
         </section>
 
@@ -84,4 +149,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+export default connect(isLoggedIn)(Header)

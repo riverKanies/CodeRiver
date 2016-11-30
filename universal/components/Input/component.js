@@ -16,14 +16,25 @@ export default ({
   input,
   label,
   type,
-  theme = 'teal',
+  theme = 'thriveInput',
   meta: { touched, error, warning }
-}
-  : FieldType) => (
+}: FieldType) => {
+  if (type === 'checkbox') {
+    return (
+      <div className={styles[theme]}>
+        <div className={styles.inputWrap}>
+          <input className={styles.check} {...input} placeholder={label} type={type} />
+          <label className={styles.label}>{label}</label>
+        </div>
+      </div>
+    )
+  }
+
+  return (
     <div className={styles[theme]}>
-      <label>{label}</label>
-      <div>
-        <input {...input} placeholder={label} type={type} />
+      <div className={styles.inputWrap}>
+        <label className={styles.label}>{label}</label>
+        <input className={styles.text} {...input} placeholder={label} type={type} />
         {
           touched && (
             (error && <Error error={error} />) ||
@@ -33,3 +44,4 @@ export default ({
       </div>
     </div>
   )
+}

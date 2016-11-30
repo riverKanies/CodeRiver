@@ -1,5 +1,5 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from 'all';
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from 'all';
+@value lightGray, ThriveTeal, ThriveBlue, TheFader, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet from 'all';
 @value Mon, Playfair from 'all';
 
 /* Parent Most Container + BG Color Variants */
@@ -30,6 +30,14 @@
   background: lightGray;
 }
 
+.fade {
+  composes: fullWidthTwoCol;
+  background: TheFader;
+  * {
+    color: bodyCopy;
+  }
+}
+
 /* Column Container Styles */
 .container {
   display: block;
@@ -50,6 +58,11 @@
   position: relative;
   @media bp-papa-bear {
     lost-column: 1/2 flex;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 }
 
@@ -70,6 +83,7 @@
 }
 .image {
   display: inline-block;
+  max-height: 32rem;
   width: 100%;
   height: auto;
   text-align: center;
@@ -81,16 +95,16 @@
 .sectionContent {
   lost-column: 1;
   @media bp-papa-bear {
+    lost-column: 1 flex;
+    height: 100%;
     padding: 0 10%;
   }
   > i {
     display: inline-block;
-    margin: 2rem 0;
     float: left;
     clear: both;
   }
   p {
-    display: block;
     width: 100%;
     float: left;
     clear: both;
@@ -103,8 +117,45 @@
 
 .header {
   width: 100%;
-  margin: 0 0;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   float: left;
   text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-header {
+    display: flex;
+    margin: 0 auto papaHeader auto;
+  }
+}
+
+/* Label True/False */
+.hasLabel {
+  width: 100%;
+  margin: 2rem 0;
+  float: left;
+}
+.labelTrue {
+  composes: hasLabel;
+  display: block;
+}
+.labelFalse {
+  composes: hasLabel;
+  display: none;
+}
+
+/* Button True/False */
+.hasButton {
+  width: 100%;
+  float: left;
+}
+.buttonTrue {
+  composes: hasButton;
+  display: block;
+  margin-top: babyHeader;
+}
+.buttonFalse {
+  composes: hasButton;
+  display: none;
 }

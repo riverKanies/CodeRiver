@@ -38,6 +38,11 @@
 @value mediumGutter: .375rem;
 @value mediumGutterHalf: .1875rem;
 
+/* Header Element Bottom Margins */
+@value babyHeader: 1.5rem;
+@value mamaHeader: 2.3125rem;
+@value papaHeader: 3.125rem;
+
 /* colors */
 
 @value white: #ffffff;
@@ -53,14 +58,18 @@
 @value ThriveBlue: #0053D4;
 @value ThriveDarkBlue: #144085;
 @value ThriveRoyalBlue: #3F17A8;
+@value ThriveDarkPurple: #222270;
 @value ThriveLightBlurple: #403EB8;
 @value ThriveBlurple: #4600D4;
 @value ThriveViolet: #3f17A8;
 @value ThriveGray: #303030;
 
+@value gradientTeal: linear-gradient(to right, #096e77 0%, ThriveTeal 100%);
+@value TheFader: linear-gradient(rgba(230,230,230,1), rgba(255,255,255,1) 6rem, rgba(255,255,255,1));
 @value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061A4 100%);
 @value gradientEmailCap: linear-gradient(-136deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
-@value gradientCardThrive: linear-gradient(0deg, #207AD0 0%, #4EB4CA 100%);
+@value gradientCardThrive: linear-gradient(to right, #007a98 0%, ThriveTeal 100%);
+@value gradientPurpleTeal: linear-gradient(to right, #432d76 0%, ThriveTeal 100%);
 
  /* fonts */
 

@@ -3,15 +3,17 @@ import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/thriveScience.jpg'
 import ContentLabel from 'components/ContentLabel'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
-  sectionClass: 'default' | 'lightGray' ,
+  sectionClass: 'default' | 'lightGray' | 'fade',
   title: string,
+  hasLabel: 'labelTrue' | 'labelFalse',
   label: Object,
   sectionText: Array<string>,
   image: string,
-  button: Object
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  link: Object
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -21,10 +23,14 @@ mattis consectetur purus sit amet fermentum.`]
 const FullWidthTwoCol = ({
   sectionClass = 'default',
   title = 'Title',
+  hasLabel = 'labelTrue',
   label = {},
   sectionText = defaultText,
   image = dummyImage,
-  button = null
+  button = null,
+  hasButton = 'buttonTrue',
+  link = {}
+
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
@@ -36,12 +42,17 @@ const FullWidthTwoCol = ({
         </div>
         <div className={styles.column}>
           <section className={styles.sectionContent}>
-            <ContentLabel {...label} />
+            <span className={styles[hasLabel]}>
+              <ContentLabel {...label} />
+            </span>
             <header className={styles.header}>
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-            {button ? <Button {...button} />: ''} 
+            {button ? <Button {...button} /> : ''} 
+            <span className={styles[hasButton]}>
+              <ExternalLink {...link} />
+            </span>
           </section>
         </div>
       </section>

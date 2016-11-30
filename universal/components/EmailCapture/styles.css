@@ -2,8 +2,6 @@
 @value ThriveTeal, gradientEmailCap from 'all';
 @value Mon, Play from 'all';
 
-/* Form is styled in typography.css. Position form stuff is in here. */
-
 .emailCapture {
   display: block;
   width: 100%;
@@ -11,7 +9,8 @@
   padding: babyPadding;
   background: url('./assets/emailBG.png') repeat;
   position: relative;
-  &::before {
+  z-index: 500;
+  &::after {
     content: '';
     display: block;
     width: 100%;
@@ -29,20 +28,56 @@
   @media bp-papa-bear {
     padding: papaPadding
   }
-  @media bp-grand-bear {
-    padding: grandPadding;
-  }
 }
 
 .container {
   lost-center: containerWidth containerPadding;
   margin: 0 auto;
   float: none;
+  position: relative;
+  z-index: 1000;
   > form {
     lost-center: 95% 2.5%;
     height: auto;
     @media bp-papa-bear {
       lost-center: 80% 10%;
+    }
+    /* Standard Form Styles */
+    input {
+      appearance: none;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: .75rem 1.25rem;
+      float: left;
+      background: transparent;
+      border: .125rem solid rgba(255, 255, 255, .3);
+      outline: none;
+      font-family: Mon;
+      font-size: .88rem;
+      line-height: 100%;
+      color: rgba(255, 255, 255, 1);
+      &::placeholder {
+        color: rgba(255, 255, 255, .7);
+      }
+    }
+    button {
+      appearance: none;
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      border: none;
+      outline: none;
+      font-family: Mon;
+      font-size: .75rem;
+      line-height: 100%;
+      letter-spacing: .15rem;
+      text-transform: uppercase;
+      color: white;
+      @media bp-papa-bear {
+        padding: 0 2rem;
+      }
     }
     input, button {
       display: block;
@@ -76,4 +111,8 @@
   @media bp-mama-bear {
     margin: 0 auto mamaMargin auto;
   }
+}
+.h2 {
+  display: inline-block;
+  color: white;
 }

@@ -35,6 +35,10 @@ export function saveHeaderObject (h) {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(h))
 }
 
+export function getLocalStorageHeaders () {
+  return JSON.parse(localStorage.getItem('thrive_user_headers'))
+}
+
 export const clearHeaders = () => localStorage.setItem(LOCAL_STORAGE_KEY, null)
 
 function parseResponse (response) {
@@ -53,7 +57,7 @@ export function loadHeaders () {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   }
-  const keys = window.localStorage.getItem('thrive_user_headers')
+  const keys = localStorage.getItem(LOCAL_STORAGE_KEY)
 
   return (keys) ? { ...defaultHeaders, ...JSON.parse(keys) } : defaultHeaders
 }

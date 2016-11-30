@@ -1,19 +1,20 @@
 /*
   This is the stylesheet for: HalfTextOverlay
 */
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, Mon, MonBold, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, babyHeader, lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, Mon, MonBold, Playfair from 'all';
 
 .gridWrap {
   lost-center: containerWidth;
-  margin: babyMargin auto;
+  margin: babyMargin auto 0 auto;
   padding: containerPadding;
   float: none;
+  clear: both;
   position: relative;
   @media bp-mama-bear {
-    margin: mamaMargin auto;
+    margin: mamaMargin auto 0 auto;
   }
   @media bp-papa-bear {
-    margin: papaMargin auto;
+    margin: papaMargin auto 0 auto;
   }
 }
 
@@ -25,6 +26,7 @@
   float: left;
   position: relative;
 }
+
 
 .imageWrap {
   display: block;
@@ -41,7 +43,6 @@
   display: block;
   width: 100%;
   min-width: 100%;
-  min-height: 100%;
   margin: 0 0;
   padding: 0 0;
   float: left;
@@ -60,6 +61,31 @@
     top: 0;
     left: 0;
     background: rgba(0, 83, 212, .8);
+  }
+  > i {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 0;
+    float: left;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+}
+.postContentRight {
+  width: 100%;
+  height: auto;
+  float: left;
+  overflow: hidden;
+  background: ThriveViolet;
+  opacity: 0.9;
+  @media bp-papa-bear {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   > i {
     display: block;
@@ -115,4 +141,19 @@
   padding: 0 0;
   text-align: left;
   color: white;
+}
+
+/* Button True/False */
+.hasButton {
+  width: 100%;
+  float: left;
+}
+.buttonTrue {
+  composes: hasButton;
+  display: block;
+  margin-top: babyHeader;
+}
+.buttonFalse {
+  composes: hasButton;
+  display: none;
 }

@@ -1,0 +1,31 @@
+@value containerWidth, containerPadding from 'all';
+/*
+This is the stylesheet for: Pathways
+ */
+
+.container {
+}
+
+.row {
+  lost-center: containerWidth;
+}
+
+.microstepContainer {
+  margin: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  margin-bottom: 0;
+}
+
+.outerContainer {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2rem 0;
+  padding: 0 0.5rem;
+  width: 100%;
+}

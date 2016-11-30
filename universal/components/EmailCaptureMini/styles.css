@@ -15,17 +15,20 @@
 .emailCaptureMini {
   display: block;
   width: 100%;
-  margin: 0 auto ;
+  margin: 0 auto 0 auto;
   padding: 1.25rem 1.25rem;
   float: left;
   background: ThriveTeal url('./assets/emailMiniBG.png') repeat;
   position: relative;
+  overflow: hidden;
   @media bp-mama-bear {
+    height: imgCardHalfMama;
     padding: 2rem 2rem;
   }
   @media bp-papa-bear {
-    lost-masonry-column: 1/2 mediumGutterHalf;
-    margin-bottom: mediumGutter;
+    lost-masonry-column: 1/2 0px;
+    height: imgCardHalfPapa;
+    border: 4px solid #f0f0f0;
   }
 }
 
@@ -39,15 +42,45 @@
   height: auto;
   position: relative;
   z-index: 100;
-  @media bp-mama-bear {
-    height: imgCardHalfMama;
-  }
-  @media bp-papa-bear {
-    height: imgCardHalfPapa;
-  }
   > form {
     width: 100%;
     height: auto;
+    input {
+      appearance: none;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: .75rem 1.25rem;
+      float: left;
+      background: transparent;
+      border: .125rem solid rgba(255, 255, 255, .3);
+      outline: none;
+      font-family: Mon;
+      font-size: .88rem;
+      line-height: 100%;
+      color: rgba(255, 255, 255, 1);
+      &::placeholder {
+        color: rgba(255, 255, 255, .7);
+      }
+    }
+    button {
+      appearance: none;
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      border: none;
+      outline: none;
+      font-family: Mon;
+      font-size: .75rem;
+      line-height: 100%;
+      letter-spacing: .15rem;
+      text-transform: uppercase;
+      color: white;
+      @media bp-papa-bear {
+        padding: 0 2rem;
+      }
+    }
     input, button {
       display: block;
       float: left;

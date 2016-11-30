@@ -19,19 +19,34 @@
   margin: 0 auto;
   padding: 0 0;
   float: left;
+  clear: both;
   position: relative;
   color: bodyCopy;
+  background: gradientCardThrive;
+  border-bottom: 1px solid white;
+  overflow: hidden;
+  @media bp-mama-bear {
+    clear: none;
+  }
+  @media bp-papa-bear {
+    margin-right: 0!important;
+    margin-left: 0!important;
+    border: 4px solid #f0f0f0;
+  }
   /* Card Label */
   > i {
-   display: block;
-   width: auto;
-   height: auto;
-   margin: 0 0;
-   float: left;
-   position: absolute;
-   top: 1.25rem;
-   left: 1.25rem;
- }
+    display: none;
+    @media bp-mama-bear {
+      display: block;
+      width: auto;
+      height: auto;
+      margin: 0 0;
+      float: left;
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+    }
+  }
 }
 /* Composed cardType(s) at End of File for Scoping Reasons */
 
@@ -39,7 +54,7 @@
 .imageContainer {
   display: block;
   width: 100%;
-  height: imgCardBaby;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -57,7 +72,9 @@
 .image {
   display: inline-block;
   width: 100%;
+  min-height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 /* Image True/False Composed */
 .imageTrue {
@@ -80,10 +97,9 @@
 }
 .imageFalse {
   composes: imageContainer;
-  background-color: gradientCardThrive;
   background-image: url('./assets/thriveVines.png');
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: right top;
   .image {
     display: none;
   }
@@ -160,16 +176,14 @@
 .half {
   composes: postCard;
   width: 100%;
-  height: imgCardbaby;
+  height: imgCardBaby;
   float: left;
-  background: gradientCardThrive;
   @media bp-mama-bear {
     height: imgCardMama;
   }
   @media bp-papa-bear {
-    lost-masonry-column: 1/2 mediumGutterHalf;
+    width: 50%;
     height: imgCardPapa;
-    margin-bottom: mediumGutter;
   }
   .postContent {
     padding: 0 2rem;
@@ -182,9 +196,52 @@
   }
   .footer {
     width: 100%;
-    margin: 2.5rem auto;
+    margin: 1.25rem auto;
+    @media bp-mama-bear {
+      margin: 2.5rem auto;
+      padding: .625rem 1.25rem;
+      background: rgba(0, 0, 0, .2);
+      border-radius: .25rem;
+    }
+  }
+  .authorWrap {
+    display: block;
+    float: right;
+    text-align: right;
+    color: white;
+  }
+  &:hover {
+    p {
+      color: rgba( 255, 255, 255, 1);
+    }
+  }
+}
+.halfHeight{
+  composes: postCard;
+  width: 100%;
+  height: imgCardBaby;
+  float: left;
+  @media bp-mama-bear {
+    height: imgCardMama;
+  }
+  @media bp-papa-bear {
+    width: 50%;
+    height: imgCardHalfPapa
+  }
+  .postContent {
+    padding: 0 2rem;
+    @media bp-mama-bear {
+      padding: 0 25%%;
+    }
+    @media bp-papa-bear {
+      height: imgCardHalfPapa;
+      padding: 0 5.125rem;
+    }
+  }
+  .footer {
+    width: 100%;
+    margin: 0 auto 2.5rem auto;
     padding: .625rem 1.25rem;
-    background: rgba(0, 0, 0, .2);
     border-radius: .25rem;
   }
   .authorWrap {
@@ -203,10 +260,13 @@
   composes: postCard;
   width: 100%;
   height: auto;
+  float: left;
   background: white;
+  @media bp-mama-bear {
+    width: 50%;
+  }
   @media bp-papa-bear {
-    lost-masonry-column: 3/12 mediumGutterHalf;
-    margin-bottom: mediumGutter;
+    width: 25%;
   }
   .imageTrue {
     display: block;
@@ -217,9 +277,6 @@
     background: white;
     @media bp-mama-bear {
       height: imgCardHalfMama;
-    }
-    @media bp-papa-bear {
-      height: imgCardHalfBaby;
     }
     &::after {
       position: relative;
@@ -256,12 +313,30 @@
     background: white;
     text-align: center;
     h2 {
+      display: block;
+      width: 100%;
+      height: auto;
       margin-bottom: 0;
+      float: left;
       font-family: MonBold;
       font-size: .88rem;
       line-height: 166%;
       text-align: center;
-      color: black;
+      color: bodyCopy;
+      @media bp-mama-bear {
+        height: 2.9rem;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+        padding: 0 0;
+        float: left;
+        text-overflow: ellipsis;
+        white-space: wrap;
+        overflow: hidden;
+      }
     }
   }
   .footer {
@@ -281,12 +356,15 @@
 }
 .quarterBlue {
   composes: postCard;
-  lost-column: 1;
+  width: 100%;
   height: auto;
+  float: left;
   background: ThriveBlue;
+  @media bp-mama-bear {
+    width: 50%;
+  }
   @media bp-papa-bear {
-    lost-masonry-column: 3/12 mediumGutterHalf;
-    margin-bottom: mediumGutter;
+    width: 25%;
   }
   .imageTrue {
     display: block;
@@ -297,9 +375,6 @@
     background: ThriveBlue;
     @media bp-mama-bear {
       height: imgCardHalfMama;
-    }
-    @media bp-papa-bear {
-      height: imgCardHalfBaby;
     }
     &::after {
       position: relative;
@@ -336,12 +411,30 @@
     background: ThriveBlue;
     text-align: center;
     h2 {
+      display: block;
+      width: 100%;
+      height: auto;
       margin-bottom: 0;
+      float: left;
       font-family: MonBold;
       font-size: .88rem;
       line-height: 166%;
       text-align: center;
       color: white;
+      @media bp-mama-bear {
+        height: 2.9rem;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+        padding: 0 0;
+        float: left;
+        text-overflow: ellipsis;
+        white-space: wrap;
+        overflow: hidden;
+      }
     }
   }
   .footer {

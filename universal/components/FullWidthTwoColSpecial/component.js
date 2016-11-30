@@ -3,15 +3,18 @@ import React from 'react'
 import styles from './styles'
 import dummyImage from './assets/thriveScience.jpg'
 import ContentLabel from 'components/ContentLabel'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
-  sectionClass: 'default' | 'lightGray' | 'transparent',
+  sectionClass: 'default' | 'lightGray' | 'transparent' | 'fade',
   title: string,
+  hasLabel: 'labelTrue' | 'labelFalse',
+  hasColorBar: 'colorBarTrue' | 'colorBarFalse',
   label: Object,
   sectionText: Array<string>,
   image: string,
-  button: Object
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  link: Object
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -21,22 +24,29 @@ mattis consectetur purus sit amet fermentum.`]
 const FullWidthTwoColSpecial = ({
   sectionClass = 'default',
   title = 'Title',
+  hasLabel = 'labelTrue',
+  hasColorBar = 'colorBarTrue',
   label = {},
   sectionText = defaultText,
   image = dummyImage,
-  button = {}
+  hasButton = 'buttonTrue',
+  link = {}
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
       <section className={styles.container}>
-        <div className={styles.column}>
+        <div className={styles[hasColorBar]}>
           <section className={styles.sectionContent}>
-            <ContentLabel {...label} />
+            <span className={styles[hasLabel]}>
+              <ContentLabel {...label} />
+            </span>
             <header className={styles.header}>
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-            <Button {...button} />
+            <span className={styles[hasButton]}>
+              <ExternalLink {...link} />
+            </span>
           </section>
         </div>
         <div className={styles.column}>

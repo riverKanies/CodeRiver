@@ -1,0 +1,55 @@
+@value all: 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
+@value bodyCopy, ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
+
+.buttonWrapper { 
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+  text-align: center;
+  > a { 
+    display: inline-block; 
+  }
+}
+
+.loginDialogue {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+
+/* Profile Styles */
+.login {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  position: relative;
+  background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+  form {
+    fieldset {
+      margin-bottom: .25rem;
+    }
+  }
+}
+
+/* Greeting Styles */
+.greeting {
+  lost-column: 1;
+  margin-bottom: 5.5rem;
+  float: left;
+  clear: both;
+  text-align: center;
+}
+

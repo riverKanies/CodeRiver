@@ -1,0 +1,40 @@
+/*
+  This is the stylesheet for: BrandRow
+*/
+@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear, ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray, Mon, MonLight from 'all';
+
+.container {
+  background-color: white;
+}
+
+.content {
+  lost-center: containerWidth;
+}
+
+.brands {
+  background-color: white;
+  margin-bottom: 0.5rem;
+  lost-column: 1;
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/5;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  lost-column: 1;
+  .image {
+    lost-column: 1;
+    height: 6rem;
+    object-fit: none;
+    @media bp-papa-bear {
+      height: auto;
+    }
+  }
+  @media bp-papa-bear {
+    margin-left: 2em;
+  }
+}

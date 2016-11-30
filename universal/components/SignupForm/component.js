@@ -5,6 +5,7 @@ import GenericFormError from 'components/GenericFormError'
 import Button from 'components/Button'
 import Input from 'components/Input'
 import styles from './styles'
+import FacebookAuth from 'components/FacebookAuth'
 
 type renderSubmitField = {
   valid: boolean,
@@ -27,6 +28,7 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
 type signupProps = {
   renderField: string,
   handleSubmit: Function,
+  handleFacebook: Function,
   submitting: boolean,
   valid: boolean,
   message: string
@@ -34,38 +36,45 @@ type signupProps = {
 
 const SignUpForm = (props: signupProps) => {
   return (
-    <section className={styles.container}>
-      <div className={styles.headerRow}>
-        <h2>Sign up to start thriving</h2>
-      </div>
-      <form>
-        <GenericFormError {...props} />
-        <div className={styles.fieldRow}>
-          <Field
-            component={Input}
-            name='email'
-            type='email'
-            label='Email Address' />
+    <section className={styles.signUp}>
+      <header className={styles.greeting}>
+        <h1>Sign up to start thriving</h1>
+      </header>
+      <section className={styles.signUpDialogue}>
+        <div className={styles.container}>
+          <section className={styles.socialSignIn}>
+            <FacebookAuth />
+          </section>
+          <form className={styles.signUpForm}>
+            <fieldset className={styles.timeToThrive}>
+              <GenericFormError {...props} />
+              <Field
+                component={Input}
+                name='email'
+                type='email'
+                label='Email Address'
+                theme='thriveInput'
+              />
+              <Field
+                component={Input}
+                name='password'
+                type='password'
+                label='Password'
+                theme='thriveInput'
+              />
+              <Field
+                component={Input}
+                name='password_confirmation'
+                type='password'
+                label='Confirm Password'
+                theme='thriveInput'
+                />
+              {renderSubmit(props)}
+              {(props.message) ? <p>{props.message}</p> : null }
+            </fieldset>
+          </form>
         </div>
-        <div className={styles.fieldRow}>
-          <Field
-            component={Input}
-            name='password'
-            type='password'
-            label='Password' />
-        </div>
-        <div className={styles.fieldRow}>
-          <Field
-            component={Input}
-            name='password_confirmation'
-            type='password'
-            label='Confirm Password' />
-        </div>
-        <div className={styles.buttonRow}>
-          {renderSubmit(props)}
-        </div>
-        {(props.message) ? <p>{props.message}</p> : null }
-      </form>
+      </section>
     </section>
   )
 }

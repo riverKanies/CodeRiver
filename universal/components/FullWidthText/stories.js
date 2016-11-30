@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
 import FullWidthText from './component'
 
@@ -16,9 +16,28 @@ eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
 const props = {
-  sectionClass: 'default',
+  sectionClass: [
+    'default',
+    'white',
+    'blue',
+    'gray'
+  ],
+  sectionWidth: [
+    'defaultWidth',
+    'fullWidth',
+    'twoThirdsWidth',
+    'halfWidth'
+  ],
+  textAlign: [
+    'textLeft',
+    'textCenter',
+    'textRight'
+  ],
+  header: [
+    'headerTrue',
+    'headerFalse'
+  ],
   title: 'h2 Title',
-  subTitle: 'h3 Subtitle',
   sectionText: defaultText
 }
 
@@ -28,9 +47,11 @@ storiesOf('FullWidthText', module)
     return (
       <WithNotes notes={notes}>
         <FullWidthText
-          sectionClass={text('Section Class', props.sectionClass)}
+          sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
+          sectionWidth={select('Section Content Width', props.sectionWidth, props.sectionWidth[0])}
+          textAlign={select('Text Alignment', props.textAlign, props.textAlign[1])}
+          header={select('Need a title?', props.header, props.header[0])}
           title={text('Section Title', props.title)}
-          subTitle={text('Section Subtitle', props.subTitle)}
           sectionText={text('Section Text', props.sectionText)}
         />
       </WithNotes>

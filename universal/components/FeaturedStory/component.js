@@ -1,12 +1,19 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
+  bgColor: 'default' | 'blue' | 'teal' | 'blurple',
   author: string,
-  details: string,
-  title: string
+  hasAuthor: 'authorTrue' | 'authorFalse',
+  hasLabel: 'labelTrue' | 'labelFalse',
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  details: any,
+  title: string,
+  asset: string,
+  label: string,
+  externalLink: any
 }
 
 const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
@@ -17,24 +24,29 @@ const defaultTitle = "It's Time To Say Goodbye."
 const defaultAuthor = 'Koby Bryant'
 
 const FeaturedStory = ({
+  bgColor = 'default',
   title = defaultTitle,
+  hasAuthor = 'authorTrue',
+  hasLabel = 'labelTrue',
+  hasButton = 'buttonTrue',
   author = defaultAuthor,
-  details = defaultDetails
+  details = defaultDetails,
+  externalLink = {},
+  label = 'Stories',
+  asset = 'kobe.jpg'
 }: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={styles[bgColor]} style={{backgroundImage: `url('./assets/${asset}')`}} >
       <section className={styles.content}>
-        <label className={styles.label}>STORIES</label>
+        <label className={styles[hasLabel]}>{label}</label>
         <h2 className={styles.header}>{title}</h2>
         <p className={styles.details}>
           {details}
-          <span className={styles.author}>{author}</span>
+          { author ? <span className={styles[hasAuthor]}>{author}</span> : '' }
         </p>
-        <Button
-          buttonText='READ STORY'
-          linkTo='/'
-          buttonStyle='white'
-        />
+        <div className={styles[hasButton]}>
+          <ExternalLink {...externalLink} />
+        </div>
       </section>
     </section>
   )

@@ -1,5 +1,6 @@
 /* @flow */
 import React from 'react'
+import FacebookAuth from 'components/FacebookAuth'
 import { Field } from 'redux-form'
 import Button from 'components/Button'
 import Input from 'components/Input'
@@ -27,36 +28,44 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
 type signupProps = {
   renderField: string,
   handleSubmit: Function,
+  handleFacebook: Function,
   submitting: boolean,
   valid: boolean,
 };
 
 const LoginForm = (props: signupProps) => {
   return (
-    <section className={styles.container}>
-      <div className={styles.headerRow}>
-        <h2>Log In</h2>
-      </div>
-      <form>
-        <GenericFormError {...props} />
-        <div className={styles.fieldRow}>
-          <Field
-            component={Input}
-            name='email'
-            type='email'
-            label='Email Address' />
+    <section className={styles.login}>
+      <header className={styles.greeting}>
+        <h1>Log In</h1>
+      </header>
+      <section className={styles.loginDialogue}>
+        <div className={styles.container}>
+          <section className={styles.socialSignIn}>
+            <FacebookAuth />
+          </section>
+          <form className={styles.loginForm}>
+            <fieldset className={styles.getInHere}>
+              <GenericFormError {...props} />
+              <Field
+                component={Input}
+                name='email'
+                type='email'
+                label='Email Address'
+                theme='thriveInput'
+              />
+              <Field
+                component={Input}
+                name='password'
+                type='password'
+                label='Password'
+                theme='thriveInput'
+              />
+              {renderSubmit(props)}
+            </fieldset>
+          </form>
         </div>
-        <div className={styles.fieldRow}>
-          <Field
-            component={Input}
-            name='password'
-            type='password'
-            label='Password' />
-        </div>
-        <div className={styles.buttonRow}>
-          {renderSubmit(props)}
-        </div>
-      </form>
+      </section>
     </section>
   )
 }

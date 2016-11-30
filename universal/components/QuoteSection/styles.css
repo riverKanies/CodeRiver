@@ -1,24 +1,30 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, Mon, MonBold, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, backgroundGray, Mon, MonBold, Playfair from 'all';
 
 /* Full Width Container + composed BGColor Classes */
+
 .quoteContainer {
   width: 100%;
   height: auto;
-  margin: 0 auto babyMargin;
+  margin: 0 auto;
   padding: babyPadding;
   float: left;
+  clear: both;
   @media bp-mama-bear {
-    margin: 0 auto mamaMargin;
     padding: mamaPadding;
   }
   @media bp-papa-bear {
-    margin: 0 auto papaMargin;
     padding: papaPadding;
   }
 }
 .default {
   composes: quoteContainer;
   background: transparent;
+}
+.pattern {
+  composes: quoteContainer;
+  background-color: backgroundGray;
+  background-image: url('./assets/growAriannaPattern.png');
+  background-repeat: repeat;
 }
 .white {
   composes: quoteContainer;
@@ -62,6 +68,17 @@
   }
 }
 
+.bordersTrue {
+  composes: container;
+  border-top: 2px solid lightGray;
+  border-bottom: 2px solid lightGray;
+}
+
+.bordersFalse {
+  composes: container;
+  border-style: none
+}
+
 /* Image Styling */
 .quoteImage {
   lost-column: 1;
@@ -70,17 +87,34 @@
     lost-column: 1/4 flex;
   }
 }
-.image {
+.roundImage {
   display: inline-block;
   width: 6.25rem;
   height: 6.25rem;
   margin: 0 0 1rem 0;
   padding: 0 0;
-  border: 1px solid lightGray;
   border-radius: 3.125rem;
   @media bp-mama-bear {
     margin: 0 0 0 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 4rem;
   }
+}
+
+.squareImage {
+  composes: roundImage;
+  width: auto;
+  border-radius: 0;
+  border: none;
+}
+
+.imageTrue {
+  composes: quoteImage;
+}
+
+.imageFalse {
+  display: none;
 }
 
 /* Quote Section */
@@ -98,17 +132,11 @@
   padding: 0 0;
   float: left;
   position: relative;
-  font-family: MonBold;
   font-size: 1.25em;
   line-height: 160%;
   text-align: left;
   color: bodyCopy;
-  @media bp-mama-bear {
-    font-size: 1.5em;
-  }
-  @media bp-papa-bear {
-    font-size: 1.875em;
-  }
+
   &::before {
     content: '“';
     display: block;
@@ -142,13 +170,35 @@
     }
   }
 }
+
+.Mon {
+  font-family: MonBold;
+
+  @media bp-mama-bear {
+    font-size: 1.2em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.55em;
+  }
+}
+.Playfair {
+  font-family: Playfair;
+
+  @media bp-mama-bear {
+    font-size: 1.2em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.5em;
+  }
+}
+
 .citation {
   width: 100%;
   margin: 0 0;
   padding: 0 0;
   float: left;
   font-family: Mon;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-style: normal;
   line-height: 100%;
   text-align: left;
@@ -162,5 +212,8 @@
     font-family: Playfair;
     font-style: italic;
     text-transform: none;
+  }
+  @media bp-mama-bear {
+    font-size: 1rem;
   }
 }

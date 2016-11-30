@@ -1,4 +1,3 @@
-import Nightmare from 'nightmare'
 import path from 'path'
 import config from '../../config'
 
@@ -6,7 +5,7 @@ import config from '../../config'
 jasmine.DEFAULT_TIMEOUT_INTERVAL = config.jasmine_timeout
 /* eslint-enable */
 
-export const browser = Nightmare({
+export const browserConfig = {
   show: false,
   webPreferences: {
     preload: path.resolve(__dirname, 'preload.js')
@@ -15,6 +14,6 @@ export const browser = Nightmare({
   gotoTimeout: config.nightmare_goto_timeout,
   loadTimeout: config.nightmare_load_timeout,
   typeInterval: 20
-})
+}
 
 export const baseUrl = config.test_server

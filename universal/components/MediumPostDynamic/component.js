@@ -5,49 +5,55 @@ import dummyImage from './assets/postFPO.jpg'
 import ContentLabel from 'components/ContentLabel'
 
 type Props = {
-  cardType: 'half' | 'quarterWhite' | 'quarterBlue',
+  cardType: 'half' | 'halfHeight' | 'quarterWhite' | 'quarterBlue',
   hasImage: 'imageTrue' | 'imageFalse',
   hasSynopsis: 'synopsisTrue' | 'synopsisFalse',
-  postTitle: string,
-  postAuthor: string,
-  postSynopsis: Array<string>,
+  title: string,
+  author: string,
+  synopsis: Array<string>,
+  tags: Array<string>,
   postLabel: Object,
-  postURL: 'string',
-  postImage: 'string'
+  medium_uid: 'string',
+  cover_image: 'string',
+  trackClick: Function
 };
 
-const postImage = dummyImage
-
-const defaultText = ['When providing a health benefits strategy, employers too often focus solely on physical health.']
+function Author ({ name }: { name: string }) {
+  const byline = (name.length > 0) ? name : 'Thrive Contributor'
+  return (
+    <footer className={styles.footer}>
+      <span className={styles.authorWrap}>
+        <i>by</i> {byline}
+      </span>
+    </footer>
+  )
+}
 
 const MediumPostDynamic = ({
   cardType = 'half',
   hasImage = 'imageTrue',
   hasSynopsis = 'synopsisTrue',
-  postTitle = 'Post Title',
-  postAuthor = 'Post Author',
-  postSynopsis = defaultText,
-  postLabel = {},
-  postURL = 'javascript:void(0)'
+  title = 'This is a super long placeholder title that should clip with and ellipses on the lil guys.',
+  author = 'Thrive Contributor',
+  tags = [],
+  medium_uid = '',
+  cover_image = dummyImage,
+  trackClick
 }: Props) => {
   return (
     <article className={styles[cardType]}>
-      <ContentLabel {...postLabel} />
+      <ContentLabel label={tags[0]} />
       <section className={styles.postContent}>
         <div className={styles[hasImage]}>
-          <a href={postURL}><img className={styles.image} src={postImage} alt={postTitle} /></a>
+          <a onClick={trackClick} href={medium_uid} target='_blank'>
+            <img className={styles.image} src={cover_image} alt={title} />
+          </a>
         </div>
         <header className={styles.header}>
-          <h2><a href={postURL}>{postTitle}</a></h2>
+          <h2 className={styles.h2}><a onClick={trackClick} href={medium_uid} target='_blank'>{title}</a></h2>
         </header>
-        <section className={styles[hasSynopsis]}>
-          <p><a href={postURL}>{postSynopsis}</a></p>
-        </section>
-        <footer className={styles.footer}>
-          <span className={styles.authorWrap}>
-            <i>by</i> {postAuthor}
-          </span>
-        </footer>
+        <section className={styles.synopsisFalse} />
+        <Author name={author} />
       </section>
     </article>
   )

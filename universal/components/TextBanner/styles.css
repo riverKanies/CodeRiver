@@ -1,0 +1,150 @@
+/*
+  This is the stylesheet for: TextBanner
+*/
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, ThriveDarkPurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+
+/* Base Section Styling + Composed Styles */
+.textBanner {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 auto;
+  padding: babyPadding;
+  position: relative;
+  text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto;
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: textBanner;
+  background-color: white;
+  color: bodyCopy;
+}
+.image {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPattern.png');
+  background-repeat: repeat;
+}
+.imageTeal {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPatternTeal.png');
+  background-repeat: repeat;
+}
+.imageGrey {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPatternGrey.png');
+  background-repeat: repeat;
+}
+.imageBlue {
+  composes: textBanner;
+  background-image: url('./assets/growPatternBlue.png');
+  background-repeat: repeat;
+}
+.imageDark {
+  composes: textBanner;
+  color: white;
+  background-color: ThriveDarkPurple;
+  background-image: url('./assets/giveBannerPatternBlue.png');
+  background-repeat: repeat;
+  .divider {
+    border-bottom: 1px solid #fff;
+  }
+}
+.transparent {
+  composes: textBanner;
+  background: transparent;
+  color: bodyCopy;
+}
+.lightGray {
+  composes: textBanner;
+  background: lightGray;
+  color: bodyCopy;
+}
+.purple {
+  composes: textBanner;
+  background: ThriveBlurple;
+  color: white;
+}
+.blue {
+  composes: textBanner;
+  background: ThriveBlue;
+  color: white;
+}
+
+.gradient {
+  composes: textBanner;
+  background: TheFader;
+  color: bodyCopy;
+}
+
+.divider {
+  border-bottom: 1px solid #3c3d41;
+  width: 4rem;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+/* Container Styles */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  color: inherit;
+}
+
+/* Titles True/False */
+.title {
+  lost-column: 1;
+  margin: 0 auto babyHeader auto;
+  padding: 0 0;
+  float: none;
+  clear: both;
+  position: relative;
+  text-align: center;
+  color: inherit;
+  @media bp-mama-bear {
+    width: 100%;
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
+  h1 {
+    font-size: 4rem;
+    text-align: inherit;
+    color: inherit;
+    font-family: MonBold;
+    @media bp-papa-bear {
+      margin-top: 3rem;
+    }
+  }
+}
+
+/* Column Styles */
+.columnWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+}
+.column {
+  lost-center: containerWidth;
+  max-width: 40rem;
+  text-align: inherit;
+  color: inherit;
+  h3 {
+    text-align: center;
+    color: inherit;
+    font-family: PlayBlackItalic;
+    font-style: italic;
+  }
+}

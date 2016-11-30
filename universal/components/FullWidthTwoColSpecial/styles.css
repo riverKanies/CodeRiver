@@ -1,6 +1,6 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand from 'all';
-@value lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
-@value Mon, Play from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, negGrand, babyHeader, mamaHeader, papaHeader from 'all';
+@value lightGray, ThriveTeal, ThriveBlue, TheFader, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, gradientBlurple from 'all';
+@value Mon, Playfair from 'all';
 
 /* Parent Most Container + BG Color Variants */
 .fullWidthTwoColSpecial {
@@ -26,6 +26,14 @@
 .transparent {
   composes: fullWidthTwoColSpecial;
   background: none;
+}
+
+.fade {
+  composes: fullWidthTwoColSpecial;
+  background: TheFader;
+  * {
+    color: bodyCopy;
+  }
 }
 
 /* Column Container Styles */
@@ -100,8 +108,32 @@
   }
 }
 
+.colorBarTrue {
+  composes: column;
+
+  &:first-child {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.colorBarFalse {
+  composes: column;
+
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.colorBarFalse {
+  composes: column;
+}
+
 .imageWrap {
-  display: flex;
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -110,12 +142,14 @@
   text-align: center;
   overflow: hidden;
   @media bp-papa-bear {
+    display: flex;
     height: 100%;
     float: none;
   }
 }
 .image {
-  display: flex;
+  display: inline-block;
+  max-height: 32rem;
   width: 100%;
   height: auto;
   text-align: center;
@@ -151,8 +185,44 @@
 }
 .header {
   width: 100%;
-  margin: 0 0;
+  margin: 0 auto babyHeader auto;
   padding: 0 0;
   float: left;
   text-align: left;
+  @media bp-mama-bear {
+    margin: 0 auto mamaBear auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaBear auto;
+  }
+}
+
+/* Label True/False */
+.hasLabel {
+  width: 100%;
+  margin: 2rem 0;
+  float: left;
+}
+.labelTrue {
+  composes: hasLabel;
+  display: block;
+}
+.labelFalse {
+  composes: hasLabel;
+  display: none;
+}
+
+/* Button True/False */
+.hasButton {
+  width: 100%;
+  float: left;
+}
+.buttonTrue {
+  composes: hasButton;
+  display: block;
+  margin-top: babyHeader;
+}
+.buttonFalse {
+  composes: hasButton;
+  display: none;
 }

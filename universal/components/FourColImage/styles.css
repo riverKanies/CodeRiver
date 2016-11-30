@@ -1,0 +1,120 @@
+/*
+  This is the stylesheet for: FourColImage
+*/
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, lightGray from 'all';
+
+/* Base Styling + Color Composed */
+.fourColImg {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  clear: both;
+  position: relative;
+  background: transparent;
+  text-align: center;
+  color: bodyCopy;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+    padding-top: 0;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+    padding-top: 0;
+  }
+}
+.default {
+  composes: fourColImg;
+}
+.white {
+  composes: fourColImg;
+  background: white;
+}
+.blue {
+  composes: fourColImg;
+  background: ThriveBlue;
+}
+.gray {
+  composes: fourColImg;
+  background: #f0f0f0;
+}
+.fade {
+  composes: fourColImg;
+  background: TheFader;
+}
+
+/* Gutters True/False */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+.guttersTrue {
+  composes: container;
+  .column {
+    lost-column: 1;
+    @media bp-mama-bear {
+      lost-column: 1/2;
+    }
+    @media bp-papa-bear {
+      lost-column: 1/4;
+    }
+  }
+}
+.guttersFalse {
+  composes: container;
+  .column {
+    display: block;
+    width: 100%;
+    @media bp-mama-bear {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      margin-right: 0;
+      float: left;
+    }
+    @media bp-papa-bear {
+      width: 25%;
+    }
+  }
+}
+.column {
+  margin: 0 auto 1.5rem auto;
+  @media bp-mama-bear {
+    margin: 0 auto;
+  }
+}
+
+.imageWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto 1.25rem auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+    text-align: center;
+  }
+}
+.theInfo {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+}
+.h4 {
+  margin-bottom: 0;
+}
+.h5 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}

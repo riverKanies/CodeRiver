@@ -1,16 +1,52 @@
-@value breakpoints: 'all';
-@value containerWidth, containerPadding from breakpoints;
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, Playfair from 'all';
 
 .container {
-  lost-center: containerWidth flex;
-  padding: 2rem 1rem;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  background-color: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+
+.content {
+  lost-utility: clearfix;
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  text-align: center;
 }
 
 .title {
   lost-column: 1;
+  margin-bottom: babyHeader;
+  float: left;
   text-align: center;
+  @media bp-mama-bear {
+    margin-bottom: mamaHeader;
+  }
+  @media bp-papa-bear {
+    margin-bottom: papaHeader;
+  }
+  > h2 {
+    text-align: left;
+    font-family: Playfair;
+  }
 }
 
 .row {
-  lost-center: containerWidth;
+  lost-column: 1;
+  float: left;
+  a {
+    display: inline-block;
+    float: none;
+    text-align: center;
+  }
 }

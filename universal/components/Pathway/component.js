@@ -1,17 +1,26 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import JourneyCard from 'components/JourneyCard'
 
 type Props = {
-  title: string
+  journeys: Array<any>,
+  pathway: Object
 }
 
-const Pathway = ({ title = 'Pathway' }: Props) => {
+export default function ({ pathway, journeys = [] }: Props) {
+  if (!pathway) return null
+
   return (
-    <div className={styles.container}>
-      {title}
-    </div>
+    <section className={styles.container}>
+      <section className={styles.content}>
+        <section className={styles.title}>
+          <h2>{pathway.title}</h2>
+        </section>
+        <section id='pathway_container' className={styles.row}>
+          {journeys.map(j => <JourneyCard {...j} pathwayId={pathway.id} />)}
+        </section>
+      </section>
+    </section>
   )
 }
-
-export default Pathway

@@ -3,10 +3,14 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  sectionClass: 'default' | 'blue' | 'white',
+  sectionClass: 'default' | 'white' | 'blue' | 'gray' | 'tagalong' | 'fade',
+  divider: 'dividerFalse' | 'dividerTrue',
+  sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
+  textAlign: 'textLeft'| 'textCenter' | 'textRight',
+  header: 'headerTrue' | 'headerFalse',
   title: string,
-  subTitle: string,
-  sectionText: Array<string>,
+  sectionText: any,
+  overrideStyles: {}
 };
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -15,20 +19,24 @@ mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
   sectionClass = 'default',
+  divider = 'dividerFalse',
+  sectionWidth = 'defaultWidth',
+  textAlign = 'textCenter',
+  header = 'headerTrue',
   title = 'Title',
-  subTitle = 'Subtitle',
-  sectionText = defaultText
+  sectionText = defaultText,
+  overrideStyles = {}
 }: Props) => {
   return (
-    <section className={styles[sectionClass]}>
-      <section className={styles.container}>
-        <div className={styles.columns}>
-          <header className={styles.header}>
+    <section style={overrideStyles} className={styles[sectionClass]}>
+      <section style={overrideStyles} className={styles[textAlign]}>
+        <div className={styles[sectionWidth]}>
+          <header className={styles[header]}>
             <h2>{title}</h2>
-            <h3>{subTitle}</h3>
           </header>
+          <div className={styles[divider]} />
           <section className={styles.sectionContent}>
-            <p>{sectionText}</p>
+            {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>
         </div>
       </section>
