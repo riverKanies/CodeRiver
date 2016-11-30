@@ -13,7 +13,7 @@ import thriveAwayImage from './assets/thriveAway.jpg'
 import goodnightImg from './assets/goodnight.jpg'
 
 const appsBanner = {
-  bgColor: 'gradient',
+  bgColor: 'imageDark',
   hasTitle: 'titleTrue',
   subTitle: `A series of signature apps that help you unplug, recharge, and set
   boundaries in your relationship with technology`,

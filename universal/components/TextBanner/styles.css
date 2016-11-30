@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TextBanner
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, ThriveDarkPurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
 
 /* Base Section Styling + Composed Styles */
 .textBanner {
@@ -24,6 +24,36 @@
   composes: textBanner;
   background-color: white;
   color: bodyCopy;
+}
+.image {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPattern.png');
+  background-repeat: repeat;
+}
+.imageTeal {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPatternTeal.png');
+  background-repeat: repeat;
+}
+.imageGrey {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPatternGrey.png');
+  background-repeat: repeat;
+}
+.imageBlue {
+  composes: textBanner;
+  background-image: url('./assets/growPatternBlue.png');
+  background-repeat: repeat;
+}
+.imageDark {
+  composes: textBanner;
+  color: white;
+  background-color: ThriveDarkPurple;
+  background-image: url('./assets/giveBannerPatternBlue.png');
+  background-repeat: repeat;
+  .divider {
+    border-bottom: 1px solid #fff;
+  }
 }
 .transparent {
   composes: textBanner;
@@ -116,6 +146,5 @@
     color: inherit;
     font-family: PlayBlackItalic;
     font-style: italic;
-    color: medGray;
   }
 }
