@@ -14,7 +14,7 @@ export const AboutView = () => {
       <ExtendedFamilySection />
       <CareerSection />
       <MiscSection />
-     </main>
+    </main>
   )
 }
 
