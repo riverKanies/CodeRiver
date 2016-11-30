@@ -141,6 +141,22 @@
     border-radius: 2.5rem;
   }
 }
+.attribution {
+  display: inline-block;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0 0;
+  font-family: MonBold;
+  font-size: 62.5%;
+  line-height: 100%;
+  text-transform: uppercase;
+  & em {
+    font-family: Playfair;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+}
 
 /* Container */
 .container {
