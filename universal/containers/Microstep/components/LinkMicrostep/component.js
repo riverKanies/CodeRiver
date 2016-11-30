@@ -3,20 +3,17 @@ import React from 'react'
 import styles from './styles'
 import marked from 'marked'
 import ExternalLink from 'components/ExternalLink'
-import TwitterShare from 'components/TwitterShare'
 
 type Props = {
   microstep: {
     description: string,
     cta_link: string,
     cta_text: string,
-    share_text: string
   }
 }
 
 const LinkMicrostep = ({ microstep: {
   description = '',
-  share_text = 'I just completed a microstep',
   cta_link = 'http://www.google.com',
   cta_text = 'click!'
 }}: Props) => {
@@ -34,7 +31,6 @@ const LinkMicrostep = ({ microstep: {
           <ExternalLink {...buttonProps} />
         </div>
       </div>
-      <TwitterShare share_text={share_text} />
     </div>
   )
 }
