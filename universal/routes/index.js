@@ -40,7 +40,7 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     childRoutes: [
       {
-        path: 'partnerwithus',
+        path: 'partners',
         indexRoute: { component: PWUOverview },
         childRoutes: [
           {
