@@ -13,6 +13,10 @@ import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
+import PWUOverview  from 'layouts/PartnerWithUs/Overview'
+import PWUCorporate  from 'layouts/PartnerWithUs/Corporate'
+import PWUContent  from 'layouts/PartnerWithUs/Content'
+import PWUCommerce  from 'layouts/PartnerWithUs/Commerce'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -42,6 +46,28 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
+      {
+        path: 'partners',
+        indexRoute: { component: PWUOverview },
+        childRoutes: [
+          {
+            path: 'corporate',
+            component: PWUCorporate
+          },
+          {
+            path: 'content',
+            component: PWUContent
+          },
+          {
+            path: 'commerce',
+            component: PWUCommerce
+          }
+        ]
+      },
+      {
+        path: '/home',
+        component: Home.component
+      },
       {
         path: 'microsteps',
         component: Microsteps
