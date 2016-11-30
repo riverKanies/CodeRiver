@@ -8,22 +8,10 @@ const debug = _debug('app:server:express')
 const app = express()
 const paths = config.utils_paths
 
-function redirectMiddleware (req, res, next) {
-  if (!config.force_https) {
-    return next()
-  }
-
-  if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
-    return next()
-  }
-  res.redirect('https://' + req.hostname + req.originalUrl)
-}
-
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement universal
 // rendering, you'll want to remove this middleware.
 app.use(require('connect-history-api-fallback')())
-app.use(redirectMiddleware)
 
 // ------------------------------------
 // Apply Webpack HMR Middleware
@@ -57,7 +45,7 @@ if (config.env === 'development') {
     'section in the README for more information on deployment strategies.'
   )
 
-  app.use(express.static(paths.dist()))
+  app.use(express.static(paths.dist(), {'maxAge': '1h'}))
 }
 
 export default app
