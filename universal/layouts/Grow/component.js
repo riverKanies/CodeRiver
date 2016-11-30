@@ -42,7 +42,7 @@ const eCourse = {
   bgColor: 'default',
   hasTitle: 'titleTrue',
   titleCenter: 'centerTrue',
-  title: 'The Thrive E-Courses',
+  title: 'The Thrive E-Course',
   colOneImg: kobeImage,
   colTwoImg: ahImage,
   colTextOne: [
