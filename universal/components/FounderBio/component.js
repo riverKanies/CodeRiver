@@ -16,10 +16,11 @@ const FounderBio = ({
   name,
   title,
   image,
-  bio
+  bio,
+  onClick = () => {}
 }: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} onClick={onClick}>
       <section className={styles.content}>
         <section className={styles.title}>
           <p className={styles.subTitle}>{details}</p>
