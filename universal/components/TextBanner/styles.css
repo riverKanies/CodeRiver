@@ -29,7 +29,6 @@
   composes: textBanner;
   background-image: url('./assets/giveBannerPattern.png');
   background-repeat: repeat;
-  background-size:
 }
 .transparent {
   composes: textBanner;
