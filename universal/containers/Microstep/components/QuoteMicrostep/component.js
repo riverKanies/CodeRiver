@@ -12,7 +12,6 @@ type Props = {
   },
   showLabel: boolean
 }
-
 const QuoteMicrostep = (props: Props) => {
   const { microstep, showLabel } = props
   const { description = '', attribution = 'Name' } = microstep

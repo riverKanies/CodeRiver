@@ -3,7 +3,6 @@ import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
 import { genRedirectToShopify } from 'lib/sso'
-import TwitterShare from 'components/TwitterShare'
 import MicrostepLabel from 'components/MicrostepLabel'
 
 type Props = {
@@ -13,7 +12,6 @@ type Props = {
     body_html: string,
     link: string,
     price: string,
-    share_text: string;
     image: {
       src: string
     }
@@ -26,7 +24,6 @@ type Props = {
 };
 
 const ProductMicrostep = ({ microstep, showLabel = false }: Props) => {
-  const { share_text = 'I just completed a microstep' } = microstep
   return (
     <div className={styles.container}>
       <MicrostepLabel title='Thrive Goods' visible={showLabel} />
@@ -59,7 +56,6 @@ const ProductMicrostep = ({ microstep, showLabel = false }: Props) => {
         </div>
 
       </section>
-      <TwitterShare share_text={share_text} />
     </div>
   )
 }

@@ -24,7 +24,6 @@ This is the stylesheet for: Pathways
 
 .outerContainer {
   display: flex;
-  background-color: white;
   flex-flow: row wrap;
   margin: 0;
   padding: 0;
