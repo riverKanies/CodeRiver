@@ -7,7 +7,6 @@ type Props = {
   title: string,
   description: string,
   id: number,
-  image: any,
 };
 
 const defaultText = [`Pathway Title`]

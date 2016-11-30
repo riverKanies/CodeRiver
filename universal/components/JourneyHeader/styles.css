@@ -1,0 +1,119 @@
+/*
+  This is the stylesheet for: JourneyHeader
+*/
+
+@value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
+@value ThriveBlue, ThriveTeal, gradientEmailCap, ThriveBlurple, backgroundGray, ThriveGray from 'all';
+@value PlayBlack, Playfair, MonLight, Mon from 'all';
+
+.container {
+  float: left;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: gradientEmailCap;
+}
+
+.content {
+  lost-center: containerWidth;
+  padding: 4rem containerPadding;
+  text-align: center;
+  @media bp-mama-bear {
+    padding: 6rem containerPadding;
+  }
+}
+
+.brand {
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: center;
+  @media bp-papa-bear {
+    width: 100%;
+    display: block;
+    width: 9rem;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.thriveLogo {
+  width: 100%;
+  height: auto;
+  margin: 0 0 0 0;
+  padding: 3rem 0;
+  float: none;
+  @media bp-papa-bear {
+    float: left;
+  }
+}
+
+.header {
+  font-family: PlayfairBlack;
+  font-size: 2em;
+  padding: 0.75rem;
+  margin-bottom: 0;
+  color: white;
+
+  @media bp-mama-bear {
+    max-width: 40rem;
+    line-height: 94%;
+    padding: 1rem;
+    font-size: 3.25em;
+    margin: 0 auto;
+  }
+
+  @media bp-papa-bear {
+    font-size: 4.5em;
+  }
+}
+
+.divider {
+  border-bottom: 2px solid #fff;
+  width: 4rem;
+  margin: 3rem auto;
+  display: flex;
+}
+
+.details {
+  clear: both;
+  width: 100%;
+  color: white;
+  padding: 1em;
+  margin-top: 0;
+  font-family: MonLight;
+
+  @media bp-mama-bear {
+    max-width: 40rem;
+    margin: 1rem auto 1.5rem auto;
+    line-height: 2rem;
+  }
+}
+
+.author {
+  display: block;
+  clear: both;
+  width: 100%;
+
+  &::before {
+    content: 'by';
+    display: inline-block;
+    margin: 0 .25rem 0 0;
+    padding: 0 0;
+    font-family: Playfair;
+    font-style: italic;
+    text-transform: none;
+  }
+}
+
+.authorTrue {
+  composes: author;
+}
+
+.authorFalse {
+  display: none;
+}
