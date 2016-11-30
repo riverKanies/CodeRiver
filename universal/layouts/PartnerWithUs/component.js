@@ -50,45 +50,43 @@ const OverviewContent = {
   header: {
     text: 'More than living. Thriving.'
   },
-  node1: `Thrive Global’s mission is to end the stress and burnout 
-          epidemic by offering companies and individuals sustainable, 
-          science-based solutions to enhance both well-being and 
-          performance. Recent science has shown that the pervasive 
-          belief that burnout is the price we must pay for success 
-          is a delusion. We know, instead, that when we prioritize our 
-          well-being, our decision-making, creativity, and productivity 
-          improve dramatically. Thrive Global is committed to 
-          accelerating the culture shift that allows people to 
+  node1: `Thrive Global’s mission is to end the stress and burnout
+          epidemic by offering companies and individuals sustainable,
+          science-based solutions to enhance both well-being and
+          performance. Recent science has shown that the pervasive
+          belief that burnout is the price we must pay for success
+          is a delusion. We know, instead, that when we prioritize our
+          well-being, our decision-making, creativity, and productivity
+          improve dramatically. Thrive Global is committed to
+          accelerating the culture shift that allows people to
           reclaim their lives and move from merely surviving to thriving.`,
   headerNode1: 'Our Core Components',
   node2: [
     {
       header: 'Corporate',
       link: '/partners/corporate',
-      body: `Thrive’s corporate program brings the latest
-            strategies and tools around health and
-            well-being to organizations, inspiring and 
+      body: `Thrive’s corporate program brings the latest strategies and
+            tools around health and well-being to organizations, inspiring and
             accelerating a thriving corporate culture.`
     },
     {
       header: 'Content',
       link: '/partners/content',
-      body: `Thrive’s corporate program brings the latest
-            strategies and tools around health and
-            well-being to organizations, inspiring and 
-            accelerating a thriving corporate culture.`
+      body: `Thrive’s media platform serves as the global hub for
+            the conversation about well-being and performance, with an
+            emphasis on action and featuring original, expert, and
+            community content.`
     },
     {
       header: 'Commerce',
       link: '/partners/commerce',
-      body: `Thrive’s corporate program brings the latest
-            strategies and tools around health and
-            well-being to organizations, inspiring and 
-            accelerating a thriving corporate culture.`
+      body: `Thrive’s e-commerce platform offers a curated selection of
+            the best technology and products to equip consumers with the most
+            effective tools for well-being.`
     }
   ],
-  node3: `The combination of corporate, content, and commerce differentiates 
-          Thrive Global by reaching people at work, at home, and through 
+  node3: `The combination of corporate, content, and commerce differentiates
+          Thrive Global by reaching people at work, at home, and through
           the technology they use. More than living. Thriving.`,
   headerNode2: 'A New Approach to Well-Being',
   headerNode3: 'Our Experts'
