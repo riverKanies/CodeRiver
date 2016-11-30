@@ -7,7 +7,7 @@
   padding: 0 0;
   float: left;
   @media bp-papa-bear {
-    margin: papaMargin auto 0 auto;
+    margin: 0 auto;
   }
 }
 
