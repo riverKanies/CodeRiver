@@ -61,7 +61,7 @@ export class TeamSection extends React.Component {
     const team = this.state.teamMembers.slice(1);
 
     return (
-      <section className={styles.SectionContainer}>
+      <section className={styles.SectionContainer} id="team">
         <section className={styles.row} >
           <section className={styles.biosRow}>
             <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)} content={this.state.modalContent} />

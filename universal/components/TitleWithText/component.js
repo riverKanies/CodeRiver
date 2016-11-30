@@ -13,7 +13,7 @@ const TitleWithText = ({
   description = 'Description goes here...',
   }: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={title.toLowerCase()}>
       <span className={styles.iconWrap}>
       <h2>{title}</h2>
       </span>

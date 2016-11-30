@@ -1,13 +1,7 @@
 @value bp-mama-bear, containerWidth, containerPadding from 'all';
 
 .container {
-  lost-column: 1 flex;
-  media bp-mama-bear {
-    lost-column: 1/1;
-  }
-  @media bp-grand-bear {
-    lost-column: 1/1;
-  }
+  margin-left: 1rem;
 }
 .subTitle{
   padding:0 0 5vh 5vh;

@@ -8,7 +8,7 @@ const text = ["Join the team that is changing the way we work and live. Thrive G
 const label = {"label":"Careers"}
 export const CareerSection = () => {
     return (
-    <section className={styles.SectionContainer}>
+    <section className={styles.SectionContainer} id="careers">
         <section className={styles.content}>
           <HalfTextOverlay title={title} sectionText={text} postLabel={label} bgImage={team} /> 
         </section>
