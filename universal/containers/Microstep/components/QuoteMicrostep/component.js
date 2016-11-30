@@ -2,7 +2,6 @@
 import React from 'react'
 import styles from './styles'
 import marked from 'marked'
-import TwitterShare from 'components/TwitterShare'
 import MicrostepLabel from 'components/MicrostepLabel'
 
 type Props = {
@@ -15,12 +14,12 @@ type Props = {
 
 const QuoteMicrostep = (props: Props) => {
   const { microstep, showLabel } = props
-  const { description = '', share_text = 'I just completed a microstep' } = microstep
+  const { description = '', attribution = 'Name' } = microstep
   return (
     <div className={styles.container}>
       <MicrostepLabel title='Thrive Passage' visible={showLabel} />
       <div className={styles.content} dangerouslySetInnerHTML={{__html: marked(description)}} />
-      <TwitterShare share_text={share_text} />
+      <h4 className={styles.attribution}><em>by</em> {attribution}</h4>
     </div>
   )
 }
