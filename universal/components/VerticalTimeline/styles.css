@@ -26,11 +26,22 @@
   position: absolute;
   left: 0.5rem;
   width: 0;
-  height: 90%;
-  border-left: 2px solid lightGray;
-
+  height: 91%;
+  border-left: .125rem solid lightGray;
   @media bp-papa-bear {
+    height: 100%;
     left: 50%;
+    &::after {
+      content: '';
+      display: block;
+      width: .5rem;
+      height: .5rem;
+      background: lightGray;
+      border-radius: .25rem;
+      position: absolute;
+      bottom: 0;
+      left: -.3125rem;
+    }
   }
 }
 
@@ -38,6 +49,7 @@
   lost-center: containerWidth flex;
   margin: 0 auto;
   padding: containerPadding;
+  float: none;
 }
 
 .row {
@@ -54,7 +66,7 @@
   }
 }
 
-
+/* Header Styles + Composed Left/Right Styles */
 .header {
   margin: 0 auto babyHeader auto;
   padding: 0 0;
@@ -63,24 +75,42 @@
     margin: 0 auto mamaHeader auto;
   }
   @media bp-papa-bear {
-    lost-column: 1/4;
+    width: 50%;
   }
   h2 {
     display: inline-block;
     padding: 0 0;
-    float: left;
     text-align: inherit;
   }
 }
-
 .headerRight {
   composes: header;
-
   @media bp-papa-bear {
-    float: right !important;
+    float: right;
+    text-align: right;
+  }
+  h2 {
+    @media bp-papa-bear {
+      float: left;
+      padding-left: 1.5rem;
+    }
+  }
+}
+.headerLeft {
+  composes: header;
+  @media bp-papa-bear {
+    float: left;
+    text-align: left;
+  }
+  h2 {
+    @media bp-papa-bear {
+      float: right;
+      padding-right: 1.5rem;
+    }
   }
 }
 
+/* Section Content + Composed Left/Right Styles */
 .sectionContent {
   display: inline-block;
   margin: 0 auto;
@@ -89,24 +119,64 @@
   text-align: inherit;
   p {
     display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
     padding: 0 0;
-    float: left;
     position: relative;
     text-align: inherit;
+    &::before {
+      content: '';
+      display: block;
+      width: .5rem;
+      height: .5rem;
+      background: white;
+      border-radius: .25rem;
+      position: absolute;
+      top: -2.625rem;
+      left: -1.54rem;
+      @media bp-mama-bear {
+        top: -3.625rem;
+        left: -1.5625rem;
+      }
+      @media bp-papa-bear {
+        top: .5rem;
+      }
+    }
   }
   @media bp-papa-bear {
-    lost-column: 1/2;
+    width: 50%;
   }
 }
-
 .sectionContentRight {
   composes: sectionContent;
-  lost-utility: clearfix;
-  float: left !important;
+  float: left;
   text-align: left;
-
   @media bp-papa-bear {
-    lost-offset: 1/5;
+    padding-right: 1.5rem;
     text-align: right;
+  }
+  p {
+    &::before {
+      @media bp-papa-bear {
+        right: -1.825rem;
+        left: auto;
+      }
+    }
+  }
+}
+.sectionContentLeft {
+  composes: sectionContent;
+  float: left;
+  text-align: left;
+  @media bp-papa-bear {
+    padding-left: 1.5rem;
+    float: right;
+  }
+  p {
+    &::before {
+      @media bp-papa-bear {
+        left: -1.6875rem;
+      }
+    }
   }
 }

@@ -37,11 +37,11 @@ const VerticalTimelineLeft = ({
 }: Props) => {
   return (
     <div className={styles.row}>
-      <header className={styles.header}>
+      <header className={styles.headerLeft}>
         <h2>{title}</h2>
       </header>
-      <section className={styles.sectionContent}>
-        {sectionText}
+      <section className={styles.sectionContentLeft}>
+        <p>{sectionText}</p>
       </section>
     </div>
   )
@@ -57,7 +57,7 @@ const VerticalTimelineRight = ({
         <h2>{title}</h2>
       </header>
       <section className={styles.sectionContentRight}>
-        {sectionText}
+        <p>{sectionText}</p>
       </section>
     </div>
   )
@@ -68,7 +68,7 @@ class VerticalTimeline extends React.Component {
   render () {
     return (
       <section className={styles.verticalTimeline}>
-        <section className={styles.verticalLine} />
+        <div className={styles.verticalLine} />
         <section className={styles.container}>
           <VerticalTimelineLeft
             title={'Pathways'}
