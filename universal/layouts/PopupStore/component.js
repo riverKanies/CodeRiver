@@ -7,7 +7,7 @@ import Banner from 'components/Banner'
 import FullWidthText from 'components/FullWidthText'
 
 // Assets
-import streetImg from './assets/419broomeStreetscape.jpg'
+import streetImg from './assets/419BroomeStreetscape.jpg'
 import ourPic1 from './assets/goodnightSmartphoneWindow.jpg'
 
 // Content
