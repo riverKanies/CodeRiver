@@ -12,11 +12,26 @@
   background-size: cover;
   background-position: center center;
   background-color: ThriveBlurple;
+  h2 { 
+    position: relative;
+      text-align: center
+  }
+
+  h2:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -16px;
+      width: 130px;
+      height: 2px;
+      background: white;
+      transform:translateX(-65px) /*    width/2    */
+  }
 }
 
 .content {
   lost-center: containerWidth;
-  padding: 4rem containerPadding;
+  padding: 10rem containerPadding;
   text-align: center;
   @media bp-mama-bear {
     padding: 6rem containerPadding;
@@ -42,7 +57,7 @@
   color: white;
 
   @media bp-mama-bear {
-    max-width: 40rem;
+    max-width: 80rem;
     line-height: 86%;
     padding: 1rem;
     font-size: 3.25em;

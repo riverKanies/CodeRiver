@@ -6,15 +6,17 @@ import Button from 'components/Button'
 type Props = {
   author: string,
   details: string,
+  link: string,
   title: string
 }
 
-const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
-' facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.'
+const defaultDetails = ['this the details Cras justo odio, dapibus ac' +
+' facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.']
 
 const defaultTitle = "Become A Contributor"
 
 const defaultAuthor = 'Koby Bryant'
+const defaultLink = '#'
 
 const FeaturedStory = ({
   title = defaultTitle,
@@ -30,7 +32,7 @@ const FeaturedStory = ({
         </p>
         <Button
           buttonText='Contribute'
-          linkTo='/'
+          linkTo={defaultLink}
           buttonStyle='white'
         />
       </section>

@@ -14,6 +14,7 @@ import ContactSection from 'components/ContactSection'
 import BecomeAContributorSection from 'components/BecomeAContributorSection'
 import MiscSection from 'components/MiscSection'
 import ExtendedFamilySection from 'components/ExtendedFamilySection'
+import AboutOurLogoSection from 'components/AboutOurLogoSection'
 
 export const AboutView = () => {
   return (
@@ -23,7 +24,7 @@ export const AboutView = () => {
       <ExtendedFamilySection />
       <CareerSection />
       <BecomeAContributorSection/>
-      <TrainingSection/>
+      <AboutOurLogoSection/>
       <MiscSection />
      </main>
   )

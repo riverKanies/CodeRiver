@@ -25,11 +25,17 @@
 	border-bottom:50%;
 }
 
+
 .missionStatement{
-	padding: 5vh;
-	font-family: 'playfair display'
+	padding-left: 10vh;
+	padding-right: 10vh;
+	font-family: 'playfair display';
+	font-style:italic;
 
 }
 .content{
-	padding: 5vh;
+	font-size: 130%;
+	padding-left: 10vh;
+	padding-right: 10vh;
+	padding: 10vh;
 }
