@@ -3,14 +3,15 @@ import React from 'react'
 import styles from './styles'
 
 type Props = {
-  bgColor: 'default' | 'image' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
+  bgColor: 'default' | 'image' | 'imageTeal' | 'imageGrey' | 'imageDark' |
+  'imageBlue' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
   subTitle: string,
 }
 
 const TextBanner = ({
-  bgColor = 'image',
+  bgColor = 'imageTeal',
   hasTitle = 'titleTrue',
   subTitle = 'Sub Title',
   title = 'Title'
