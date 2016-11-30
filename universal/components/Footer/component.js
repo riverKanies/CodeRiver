@@ -45,13 +45,16 @@ const Footer = ({
               <a href='/about'>About Us</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#team'>Our Team</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/partners'>Partner With Us</a>
+              <a href='/about#advertise'>Advertise</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/about#careers'>Careers</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href='/about#contact'>Contact</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href='/partners'>Partner With Us</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/popup'>Popup Store</a>
@@ -63,10 +66,7 @@ const Footer = ({
               <a href='thrive/press'>Press Releases</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#advertise'>Advertise</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/about#contact'>Contact</a>
+              <a href='/about#team'>Team</a>
             </li>
           </ul>
         </section>
