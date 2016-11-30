@@ -1,12 +1,9 @@
-@value breakpoints: 'all';
-@value containerWidth, containerPadding from breakpoints;
+@value containerWidth, containerPadding from 'all';
 /*
 This is the stylesheet for: Pathways
  */
 
 .container {
-  lost-center: containerWidth flex;
-  padding: 2rem 1rem;
 }
 
 .row {
@@ -27,6 +24,7 @@ This is the stylesheet for: Pathways
 }
 
 .outerContainer {
+  lost-center: containerWidth flex;
   margin: 0;
   padding: 0;
   width: 100%;
