@@ -15,13 +15,15 @@ const defaultTitle = 'Position'
 const TeamBio = ({
   name = defaultName,
   title = defaultTitle,
-  image = imagePlaceholder }: Props) => {
+  image = imagePlaceholder,
+  onClick = () => {}
+  }: Props) => {
   return (
-    <section className={styles.bio}>
-      <div className={styles.image}>
+    <section className={styles.bio} onClick={onClick}>
+      <div className={styles.image} style={{backgroundImage: `url(${image})`}}>
         <div className={styles.text}>
           <h3>{name}</h3>
-          <p>{title}</p>
+          <h4>{title}</h4>
         </div>
       </div>
     </section>

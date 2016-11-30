@@ -10,8 +10,8 @@ test:
   pre:
     - npm run heroku-postbuild
   override:
-    - npm run lint
-    - npm run analyze
+    # - npm run lint
+    # - npm run analyze
     - npm run test:configs
     - npm run test:specs
     - npm run start:test:
