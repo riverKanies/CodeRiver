@@ -8,7 +8,7 @@ jest.mock('./pages', () => {
     // notfound: { default: 'not-found-component', meta: 'ohai' },
     // happypath: { default: 'found-component', meta: 'ohai' },
     notfound: { default: 'not-found-component'},
-    happypath: { default: 'found-component'},
+    happypath: { default: 'found-component'}
   }
 })
 
