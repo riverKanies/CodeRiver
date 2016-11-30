@@ -8,17 +8,21 @@ import TempHomePage from 'layouts/TempHomePage'
 import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
 import Apps from 'layouts/Apps'
-import Thrive from 'layouts/Thrive'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
+import PWUOverview  from 'layouts/PartnerWithUs/Overview'
+import PWUCorporate  from 'layouts/PartnerWithUs/Corporate'
+import PWUContent  from 'layouts/PartnerWithUs/Content'
+import PWUCommerce  from 'layouts/PartnerWithUs/Commerce'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
+import About from 'layouts/About'
 import Journey from 'layouts/Journey'
 
 function handleUpdate (prevState, nextState) {
@@ -41,15 +45,25 @@ export const createRoutes = (store) => ([
     component: LayoutCore,
     indexRoute: Home,
     onChange: handleUpdate,
-    // TODO: remove this post launch
-    onEnter: (nextState, replace, callback) => {
-      const { location } = nextState
-      if (location.pathname === '/') {
-        replace('/coming-soon')
-      }
-      callback()
-    },
     childRoutes: [
+      {
+        path: 'partners',
+        indexRoute: { component: PWUOverview },
+        childRoutes: [
+          {
+            path: 'corporate',
+            component: PWUCorporate
+          },
+          {
+            path: 'content',
+            component: PWUContent
+          },
+          {
+            path: 'commerce',
+            component: PWUCommerce
+          }
+        ]
+      },
       {
         path: '/home',
         component: Home.component
@@ -79,8 +93,8 @@ export const createRoutes = (store) => ([
         component: Apps
       },
       {
-        path: 'thrive',
-        component: Thrive
+        path:'about',
+        component: About
       },
       {
         path: 'pulse',

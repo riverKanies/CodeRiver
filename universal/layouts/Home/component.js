@@ -7,14 +7,13 @@ import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import FeaturedProduct from 'components/FeaturedProduct'
 import FeaturedStory from 'components/FeaturedStory'
-import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 
 // Content Import
 import foundationImg from './assets/thrive-foundation.png'
 import appsImg from './assets/thrive-apps.jpg'
 import popUpImg from './assets/thrive-popup.jpg'
-import eCourseImg from './assets/thrive-ecourse.png'
+import eCourseImg from './assets/ecourses.jpg'
 import artImg from './assets/thrive-art.jpg'
 import styleImg from './assets/thrive-style.jpg'
 
@@ -33,15 +32,12 @@ const thrivePulse = {
     linkStyle: 'white'
   }
 }
+
 const eCourse = {
-  bgImage: eCourseImg,
-  url: 'https://learn.thriveglobal.com',
+  image: eCourseImg,
   sectionClass: 'transparent',
   title: 'The Thrive E-Course',
-  postLabel: {
-    label: 'Grow',
-    labelColor: 'whiteLabel'
-  },
+  label: 'E-course',
   sectionText: [
     `The six-week online course with Arianna Huffington helps you move from
      surviving to thriving. The course uses scientifically proven methods to
@@ -49,12 +45,11 @@ const eCourse = {
      and well-being. Guest teachers include Kobe Bryant, Wharton Professor
      Adam Grant, Warby Parker CEO Dave Gilboa, and more.`
   ],
-  image: eCourseImg,
   hasButton: 'buttonTrue',
-  button: {
-    buttonText: 'Take the e-Course',
+  link: {
+    linkText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
-    buttonStyle: 'white'
+    linkStyle: 'violet'
   }
 }
 const homeQuote = {
@@ -251,7 +246,7 @@ export const HomeView = () => {
       <MediumPostGridDynamic />
       <FeaturedProduct />
       <FeaturedStory {...thrivePulse} />
-      <HalfTextOverlay {...eCourse} />
+      <FullWidthTwoColSpecial {...eCourse} />
       <QuoteSection {...homeQuote} />
       <FeaturedStory {...pathways} />
       <FullWidthTwoCol {...thriveApps} />

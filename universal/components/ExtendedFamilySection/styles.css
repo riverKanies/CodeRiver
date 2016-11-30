@@ -1,0 +1,34 @@
+.SectionContainer{
+	lost-column: 1 flex;
+	background-color: white;
+	text-align: center;
+	padding-top: 20vh;
+	h2 { 
+    position: relative;
+      text-align: center
+  }
+
+  h2:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -16px;
+      width: 130px;
+      height: 2px;
+      background: black;
+      transform:translateX(-65px) /*    width/2    */
+  }
+} 
+
+.title{
+	border-bottom:50%;
+}
+
+.missionStatement{
+	padding: 5vh;
+	font-family: 'playfair display'
+
+}
+.content{
+	padding: 5vh;
+}

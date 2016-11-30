@@ -1,0 +1,27 @@
+@value breakpoints: 'all';
+@value containerWidth, containerPadding from breakpoints;
+
+.container {
+  lost-center: containerWidth flex;
+  padding: 2rem 1rem;
+}
+
+.content {
+  lost-center: 1160px;
+  padding-top:20vh;
+}
+
+.title {
+  lost-column: 1;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.SectionContainer{
+  lost-column: 1;
+  padding: 2rem 1rem;
+  background-color: white;
+
+
+
+}

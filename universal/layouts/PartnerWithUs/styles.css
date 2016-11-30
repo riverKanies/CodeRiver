@@ -1,0 +1,288 @@
+@value breakpoints: 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+
+
+.partnerWithUs {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 648px;
+  width: 100%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .3; 
+  }
+  
+
+  .text {
+    position: absolute;
+    bottom: 30px;
+    left: 189px;
+    width: 555px;;
+    font-family: Playfair;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.0;
+    text-align: left;
+    color: #ffffff;
+
+    &:before {
+      content: '';
+      width: 101px;
+      height: 10px;      
+      position: absolute;
+      top: -20px;
+      left: 0;
+      background: #fff;
+    }    
+  }
+}
+
+.leftBorder {
+  border-left: solid 1px rgba(0,0,0,.4);
+  padding-left: 15px;
+}
+
+.marginLeft1 {
+  margin-left: 251px;
+}
+
+.marginLeft2 {
+  margin-left: 189px;
+}
+
+.marginTop1 {
+  margin-top: 30px;
+}
+
+.marginTop2 {
+ margin-top: 62px;
+}
+
+.marginTop3 {
+ margin-top: 100px;
+}
+
+.headerText1 {
+	width: 415px;
+	font-family: Playfair;
+	font-size: 48px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.0;
+	color: #333333;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 101px;
+    height: 10px;      
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: #333333;
+  }      
+}
+
+.normalText {
+  font-family: MontserratLight;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+.serifItalicText {
+  font-family: Playfair;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: italic;
+  line-height: 2rem;
+}
+
+.serifText {
+  font-family: Playfair;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+  line-height: 2rem;
+}
+
+.smallNode {
+  width: 800px;
+	color: #333333;
+}
+
+.rectangleShape {
+  width: 461px;
+	height: 241px;
+  padding-top: 0;
+  padding-left: 30px;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.bgGray {
+  background-color: #f0f0f0;
+}
+
+.bgWhite {
+  background-color: #fff;
+}
+
+.pullUp {
+  margin-top: -50px;
+}
+
+.p1 {
+  composes: smallNode marginLeft1 marginTop1 normalText;
+}
+
+.p2 {
+  composes: serifItalicText marginLeft2 marginTop2;
+}
+
+.h2_1 {
+  composes: headerText1 marginLeft2 marginTop2;
+  margin-bottom: 48px;
+}
+
+.h2_2 {
+  composes: headerText1 marginTop2;
+}
+
+.threeCol {
+  composes: marginLeft1 marginTop1;
+  li {
+    display: inline-block;
+    width: 310px;
+    padding-right: 10px;  
+  }
+
+  h4 {
+    font-family: Playfair;
+    font-size: 37px;
+  }  
+}
+
+.fourCol {
+  composes: marginLeft1 marginTop1;
+
+  li {
+    display: inline-block;
+    width: 210px;
+    padding-right: 10px;  
+  }
+
+  h4 {
+    font-family: Playfair;
+    font-size: 24px;
+  }  
+}
+
+.twoCol {
+
+}
+
+.rectangle1 {
+  composes: rectangleShape floatRight bgGray pullUp;
+}
+
+.rectangle2 {
+  composes: rectangleShape floatLeft marginLeft2 pullUp bgWhite;
+  width: 360px;
+}
+
+.container1 {
+  composes: bgGray marginTop3;
+}
+
+.container2 {
+  composes: bgWhite;
+}
+
+.container3 {
+  composes: bgGray;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.container4 {
+  composes: bgWhite;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+
+.p3 {
+  composes: serifText;
+  text-align: center;
+  margin-top: 30px;
+
+  a {
+    font-style: italic;
+  }
+}
+
+.bgNoRepeat {
+  background-position: 0;
+  background-repeat:no-repeat;
+  background-size: 100%; 
+}
+
+.newApproach {
+  composes: bgNoRepeat;
+  height: 1000px;
+}
+
+.ourExperts {
+  composes: bgNoRepeat;
+  height: 1150px;
+}
+
+.corpTxt {
+  composes: bgNoRepeat;
+  height: 1700px;
+}
+
+.contentTxt {
+  composes: bgNoRepeat;
+  height: 918px;
+}
+
+.commerceTxt {
+  composes: bgNoRepeat;
+  height: 1170px;
+}
+
+.Overview {
+  composes: bgWhite;
+
+  a {
+    color: #333;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}

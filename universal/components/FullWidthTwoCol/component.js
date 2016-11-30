@@ -27,8 +27,10 @@ const FullWidthTwoCol = ({
   label = {},
   sectionText = defaultText,
   image = dummyImage,
+  button = null,
   hasButton = 'buttonTrue',
   link = {}
+
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
@@ -47,6 +49,7 @@ const FullWidthTwoCol = ({
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            {button ? <Button {...button} /> : ''} 
             <span className={styles[hasButton]}>
               <ExternalLink {...link} />
             </span>

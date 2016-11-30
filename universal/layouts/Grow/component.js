@@ -5,7 +5,6 @@ import styles from './styles'
 // Components
 import TextBanner from 'components/TextBanner'
 import CTASection from 'components/CTASection'
-import VerticalTimeline from 'components/VerticalTimeline'
 import TwoColTextImage from 'components/TwoColTextImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
@@ -39,24 +38,11 @@ const linkToAssessment = {
   }
 }
 
-const vertTimeline = {
-  alignment: 'center',
-  sectionClass: 'blue',
-  sectionWidth: 'twoThirdsWidth',
-  title: 'Pathways',
-  sectionText: [
-    `There are five pathways built of multiple microsteps you can practice in a sustainable way.
-    The steps are small and very easy to integrate into your life, but the impact is transformational.
-    This is the part where we go from knowing what to do to actually doing it. Choose the Pathway
-    you want to begin with--Joy, Calm, Productivity, Well-Being and Purpose.`
-  ]
-}
-
 const eCourse = {
   bgColor: 'default',
   hasTitle: 'titleTrue',
   titleCenter: 'centerTrue',
-  title: 'E-Courses',
+  title: 'The Thrive E-Course',
   colOneImg: kobeImage,
   colTwoImg: ahImage,
   colTextOne: [
@@ -92,7 +78,6 @@ export const GrowView = () => (
       <TextBanner {...banner} />
       <CTASection {...linkToAssessment} />
       <PathwaySection />
-      <VerticalTimeline {...vertTimeline} />
       <TwoColTextImage {...eCourse} />
       <QuoteSection {...quote} />
     </section>

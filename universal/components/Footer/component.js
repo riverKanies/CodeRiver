@@ -43,23 +43,29 @@ const Footer = ({
           </div>
           <ul>
             <li className={styles.footerLinks}>
-              <a href='https://journal.thriveglobal.com/' target='_blank'>Journal</a>
+              <a href='/about'>About Us</a>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/grow'>Grow</Link>
+              <a href='/about#team'>Our Team</a>
             </li>
             <li className={styles.footerLinks}>
-              <Link onClick={redirectToShopify}>Shop</Link>
+              <a href='/partners'>Partner With Us</a>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/give'>Give</Link>
+              <a href="/about#careers">Careers </a>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/apps'>Apps</Link>
+              <a href="/popup">Popup Store</a>
             </li>
             <li className={styles.footerLinks}>
-              <Link to='/contact'>Contact</Link>
+              <a href="/about#press">Press</a>
             </li>
+            <li className={styles.footerLinks}>
+              <a href="/about#advertise">Advertise</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href="/about#contact">Contact </a>
+            </li>  
           </ul>
         </section>
         <section className={styles.footerQuote}>
@@ -92,7 +98,7 @@ const Footer = ({
             Privacy
           </Link>
           <p>&</p>
-          <Link to='/privacy' className={styles.link}>
+          <Link to='/terms' className={styles.link}>
             Terms
           </Link>
         </section>

@@ -1,0 +1,39 @@
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, bodyCopy from 'all';
+
+.modal {
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;  
+  background-color: rgba(0,0,0,.5);
+  z-index: 100000;
+  opacity: 0;
+  transition: visibility 0s, opacity .2s ease-in-out;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+
+    .modalContent {
+      top: 50%;
+    }
+  }
+}
+
+.middleWrapper {
+}
+
+.modalContent {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 95%;
+  height: 95%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  transition: top .2s ease-in-out;
+}
