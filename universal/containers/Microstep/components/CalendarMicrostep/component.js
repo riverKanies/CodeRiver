@@ -2,6 +2,7 @@ import React from 'react'
 import marked from 'marked'
 import styles from './styles'
 import ExternalLink from 'components/ExternalLink'
+import MicrostepLabel from 'components/MicrostepLabel'
 import TwitterShare from 'components/TwitterShare'
 
 function renderDescription (description) {
@@ -35,6 +36,7 @@ export default function (props: any) {
 
   return (
     <div className={styles.container}>
+      <MicrostepLabel title='Thrive Prompt' visible={props.showLabel} />
       <div className={styles.content}>
         {renderDescription(props.microstep.description)}
         <div id={`cal-${props.microstep.id}-actions`} className={styles.timeBar}>

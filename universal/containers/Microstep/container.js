@@ -14,7 +14,8 @@ type Props = {
   fetchPending: boolean,
   id: string,
   microstep: any,
-  stepType: string
+  stepType: string,
+  showLabel: boolean
 }
 
 export class Microstep extends React.Component {
@@ -27,13 +28,18 @@ export class Microstep extends React.Component {
   }
 
   renderMicrostep (microstep: any) {
-    const { fetchPending, stepType } = this.props
+    const { fetchPending, showLabel, stepType } = this.props
 
     if (!microstep) {
       return (fetchPending) ? <LoadingMicrostep /> : <MissingMicrostep />
     }
 
-    return <MicrostepComponent microstep={microstep} type={stepType} />
+    return (
+      <MicrostepComponent
+        microstep={microstep}
+        type={stepType}
+        showLabel={showLabel} />
+    )
   }
 
   render () {
