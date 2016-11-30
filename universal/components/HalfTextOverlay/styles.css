@@ -27,6 +27,7 @@
   position: relative;
 }
 
+
 .imageWrap {
   display: block;
   width: 100%;
@@ -61,6 +62,31 @@
     top: 0;
     left: 0;
     background: rgba(0, 83, 212, .8);
+  }
+  > i {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 0;
+    float: left;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+}
+.postContentRight {
+  width: 100%;
+  height: auto;
+  float: left;
+  overflow: hidden;
+  background: ThriveViolet;
+  opacity: 0.9;
+  @media bp-papa-bear {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   > i {
     display: block;
