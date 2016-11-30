@@ -17,7 +17,7 @@ const appsBanner = {
   hasTitle: 'titleTrue',
   subTitle: `A series of signature apps that help you unplug, recharge, and set
   boundaries in your relationship with technology`,
-  title: 'Apps'
+  title: 'Apps & Podcasts'
 }
 
 const thriveAway = {
@@ -74,7 +74,7 @@ const alexa = {
   image: alexaImage,
   link: {
     linkText: 'Learn More',
-    linkTo: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=201602060',
+    linkTo: 'https://www.amazon.com/gp/product/B01MYNPU4S',
     linkStyle: 'violet'
   },
   label: {
