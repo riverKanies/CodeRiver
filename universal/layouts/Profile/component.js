@@ -7,8 +7,8 @@ const pulse = {
   alignment: 'center',
   colorScheme: 'purpleTealGradient',
   sectionText: [
-    `Begin with the Thrive Pulse, our TK-question assessment that will help you
-    take stockof your life and identify areas of improvement.`
+    `Begin with the Thrive Pulse, our 10-question assessment that will help you
+    take stock of your life and identify areas of improvement.`
   ],
   sectionWidth: 'twoThirdsWidth',
   title: 'What\'s My Thrive Pulse?',
