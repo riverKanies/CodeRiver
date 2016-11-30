@@ -12,7 +12,6 @@
   padding: babyPadding;
   position: relative;
   text-align: left;
-  background-image: url("/giveBannerPattern.png") repeat;
   @media bp-mama-bear {
     margin: 0 auto;
     padding: mamaPadding;
@@ -25,6 +24,12 @@
   composes: textBanner;
   background-color: white;
   color: bodyCopy;
+}
+.image {
+  composes: textBanner;
+  background-image: url('./assets/giveBannerPattern.png');
+  background-repeat: repeat;
+  background-size:
 }
 .transparent {
   composes: textBanner;
