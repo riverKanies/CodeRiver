@@ -174,7 +174,7 @@ const deathOverDinner = {
   label: 'Wonder',
   externalLink: {
     linkText: 'Learn More',
-    linkTo: 'https://learn.thriveglobal.com',
+    linkTo: '',
     linkStyle: 'white'
   }
 }
