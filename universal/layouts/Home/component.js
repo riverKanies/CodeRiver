@@ -11,12 +11,12 @@ import HalfTextOverlay from 'components/HalfTextOverlay'
 import QuoteSection from 'components/QuoteSection'
 
 // Content Import
-import pulseImg from './assets/pulse.jpg'
+import foundationImg from './assets/thrive-foundation.jpg'
 import appsImg from './assets/thrive-apps.jpg'
 import popUpImg from './assets/thrive-popup.jpg'
 import eCourseImg from './assets/ecourse.png'
 import artImg from './assets/thrive-art.jpg'
-import styleImg from './assets/style.png'
+import styleImg from './assets/thrive-style.jpg'
 
 // Content Definitions
 const thrivePulse = {
@@ -215,7 +215,7 @@ const thriveFoundation = {
      Thrive Foundation will offer free Thrive Global trainings to non-profit
      and civic leaders who are on the front line of serving others.`
   ],
-  image: pulseImg,
+  image: foundationImg,
   hasButton: 'buttonTrue',
   link: {
     linkText: 'Learn More',
