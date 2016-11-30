@@ -1,8 +1,10 @@
 .SectionContainer{
 	lost-column: 1 flex;
 	background-color: white;
-	text-align: center;
+	text-align: left;
+	margin-top: 100px;
 	padding-top: 20vh;
+
 	h2 { 
     	position: relative;
     	text-align: center
@@ -37,5 +39,4 @@
 	font-size: 130%;
 	padding-left: 10vh;
 	padding-right: 10vh;
-	padding: 10vh;
 }

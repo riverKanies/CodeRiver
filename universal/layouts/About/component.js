@@ -23,8 +23,6 @@ export const AboutView = () => {
       <TeamSection />
       <ExtendedFamilySection />
       <CareerSection />
-      <BecomeAContributorSection/>
-      <AboutOurLogoSection/>
       <MiscSection />
      </main>
   )
