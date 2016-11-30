@@ -8,6 +8,7 @@ type Props = {
   author: string,
   hasAuthor: 'authorTrue' | 'authorFalse',
   hasLabel: 'labelTrue' | 'labelFalse',
+  hasButton: 'buttonTrue' | 'buttonFalse',
   details: any,
   title: string,
   asset: string,
@@ -27,6 +28,7 @@ const FeaturedStory = ({
   title = defaultTitle,
   hasAuthor = 'authorTrue',
   hasLabel = 'labelTrue',
+  hasButton = 'buttonTrue',
   author = defaultAuthor,
   details = defaultDetails,
   externalLink = {},
@@ -42,8 +44,9 @@ const FeaturedStory = ({
           {details}
           { author ? <span className={styles[hasAuthor]}>{author}</span> : '' }
         </p>
-        <ExternalLink {...externalLink}
-        />
+        <div className={styles[hasButton]}>
+          <ExternalLink {...externalLink} />
+        </div>
       </section>
     </section>
   )

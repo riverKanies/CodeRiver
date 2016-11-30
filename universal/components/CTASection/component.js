@@ -33,7 +33,7 @@ const CTASection = ({
             <h2>{title}</h2>
           </header>
           <section className={styles.sectionContent}>
-            <p>{sectionText}</p>
+            {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>
           <section className={styles.button}>
             <Button {...button} />

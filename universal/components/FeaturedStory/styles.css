@@ -118,3 +118,11 @@
 .authorFalse {
   display: none;
 }
+
+.buttonTrue {
+  display: block
+}
+
+.buttonFalse {
+  display: none;
+}
