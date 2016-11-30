@@ -145,7 +145,7 @@ export const PWUOverview = ({ text } = OverviewProps) => (
     <div className={styles.container3}>
       <p className={styles.p3}> Interested in learning more? </p>
       <p className={styles.p3}> Please direct inquiries to
-        <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+        <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
       </p>
     </div>
   </Wrapper>
@@ -159,7 +159,7 @@ export const PWUCorporate = () => (
       <div className={styles.container4}>
         <p className={styles.p3}> Interested in learning more? </p>
         <p className={styles.p3}> Please direct inquiries to
-          <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+          <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
         </p>
       </div>
     </div>
@@ -174,7 +174,7 @@ export const PWUContent = () => (
       <div className={styles.container3}>
         <p className={styles.p3}> Interested in learning more? </p>
         <p className={styles.p3}> Please direct inquiries to
-          <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+          <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
         </p>
       </div>
     </div>
@@ -189,7 +189,7 @@ export const PWUCommerce = () => (
       <div className={styles.container3}>
         <p className={styles.p3}> Interested in learning more? </p>
         <p className={styles.p3}> Please direct inquiries to
-          <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+          <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
         </p>
       </div>
     </div>
