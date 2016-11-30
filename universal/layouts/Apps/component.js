@@ -13,7 +13,7 @@ import thriveAwayImage from './assets/thriveAway.jpg'
 import goodnightImg from './assets/goodnight.jpg'
 
 const appsBanner = {
-  bgColor: 'gradient',
+  bgColor: 'imageDark',
   hasTitle: 'titleTrue',
   subTitle: `A series of signature apps that help you unplug, recharge, and set
   boundaries in your relationship with technology`,
@@ -85,7 +85,7 @@ const alexa = {
 
 const silo = {
   sectionClass: 'fade',
-  title: 'Take Back Your Phone',
+  title: 'Silo',
   sectionText: [
     `By selectively blocking distractions, alerts, and notifications on your phone,
     while ensuring you don't miss important calls, Silo allows you to reclaim space

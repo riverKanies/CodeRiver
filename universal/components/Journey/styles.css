@@ -14,7 +14,6 @@ This is the stylesheet for: Pathways
   margin: 5em;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
   width: fit-content;
   div {
     margin-left: auto;
@@ -24,7 +23,9 @@ This is the stylesheet for: Pathways
 }
 
 .outerContainer {
-  lost-center: containerWidth flex;
+  display: flex;
+  background-color: white;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
   width: 100%;
