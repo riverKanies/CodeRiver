@@ -8,28 +8,38 @@ import mark from './assets/thriveLogo.svg'
 type Props = {
   author: string,
   quote: string,
+  details: string,
   logo: any,
   label: string,
   button: any
 }
 
-const defaultQuote = "It's Time To Say Goodbye."
+const button = {
+  buttonText: 'Return to Thrive Global',
+  linkTo: '/',
+  buttonStyle: 'violet'
+}
+
+const defaultQuote = 'Failure is not the opposite of success but a stepping stone to success.'
 
 const defaultAuthor = 'Arianna Huffington'
 
 const Four04 = ({
   quote = defaultQuote,
   author = defaultAuthor,
-  button = {},
+  details = '',
   label = 'Page Not Found',
   logo = mark
 }: Props) => {
   return (
     <section className={styles.container}>
       <section className={styles.content}>
-        <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+        <figure className={styles.brand}>
+          <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+        </figure>
         <label className={styles.label}>{label}</label>
         <h2 className={styles.header}>{quote}</h2>
+        <span className={styles.author}>{author}</span>
         <Button {...button} />
       </section>
     </section>

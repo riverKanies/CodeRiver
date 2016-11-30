@@ -3,15 +3,12 @@
 */
 
 @value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value ThriveBlue, ThriveTeal, ThriveBlurple, backgroundGray, ThriveGray from 'all';
+@value ThriveBlue, ThriveTeal, ThriveBlurple, backgroundGray, darkGray, ThrivinRock from 'all';
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {
   float: left;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   background-color: white;
 }
 
@@ -24,21 +21,34 @@
   }
 }
 
-.thriveLogo {
-  width: 100%;
-  clear: both;
+.brand {
+  display: inline-block;
+  width: 40%;
   height: auto;
-  margin: 0 0 0 0;
-  padding: 3rem 0;
-  float: none;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  text-align: center;
   @media bp-papa-bear {
-    float: left;
+    display: block;
+    width: 20rem;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
+.thriveLogo {
+  width: 40%;
+  height: auto;
+  margin: 0 0 0 0;
+  padding: 0 0;
+  float: none;
+}
+
 .label {
-  color: white;
+  color: ThrivinRock;
   display: block;
+  clear: both;
   font-family: Mon;
   font-size: .75rem;
   font-style: normal;
@@ -53,8 +63,9 @@
   font-family: PlayfairBlack;
   font-size: 2em;
   padding: 0.75rem;
+  clear: both;
   margin-bottom: 0;
-  color: white;
+  color: ThrivinRock;
 
   @media bp-mama-bear {
     max-width: 40rem;
@@ -71,7 +82,10 @@
 
 .author {
   display: block;
+  font-family: Mon;
+  padding: 2rem 0;
   clear: both;
+  color: ThrivinRock;
   width: 100%;
 
   &::before {

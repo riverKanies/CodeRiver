@@ -63,6 +63,7 @@
 @value ThriveBlurple: #4600D4;
 @value ThriveViolet: #3f17A8;
 @value ThriveGray: #303030;
+@value ThrivinRock: #2E313A;
 
 @value gradientTeal: linear-gradient(to right, #096e77 0%, ThriveTeal 100%);
 @value TheFader: linear-gradient(rgba(230,230,230,1), rgba(255,255,255,1) 6rem, rgba(255,255,255,1));

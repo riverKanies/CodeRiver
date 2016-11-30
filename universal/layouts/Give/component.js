@@ -5,6 +5,7 @@ import styles from './styles'
 import BrandRow from 'components/BrandRow'
 import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
+import Four04 from 'components/Four04'
 import FourColImage from 'components/FourColImage'
 import FullWidthText from 'components/FullWidthText'
 import FeaturedStory from 'components/FeaturedStory'
@@ -108,6 +109,7 @@ export const GiveView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
       <TextBanner {...giveBanner} />
+      <Four04 />
       <FeaturedStory {...thriveFoundation} />
       <FullWidthText {...trainNonProfits} />
       <BrandRow />
