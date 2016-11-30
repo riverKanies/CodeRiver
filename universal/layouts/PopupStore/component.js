@@ -3,14 +3,12 @@ import React from 'react'
 import styles from './styles'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
-import TwoColImage from 'components/TwoColImage'
 import Banner from 'components/Banner'
 import FullWidthText from 'components/FullWidthText'
 
 // Assets
 import streetImg from './assets/419broomeStreetscape.jpg'
-import ourPic1 from './assets/sign.jpg'
-import ourPic2 from './assets/popUpWindow.jpg'
+import ourPic1 from './assets/goodnightSmartphoneWindow.jpg'
 
 // Content
 const banner = {
@@ -24,7 +22,7 @@ const banner = {
 const storeDescrip = {
   title: 'The Destination for Well-Being',
   hasButton: 'buttonFalse',
-  image: ourPic2,
+  image: ourPic1,
   sectionText: [`Thrive Global offers a curated selection of the best technology
    and products - including our own, newly developed Thrive products - for
    well-being and performance. In collaboration with our scientific advisory
@@ -37,7 +35,7 @@ const storeDescrip = {
 }
 
 const mapUnit = {
-  title: 'Map',
+  title: 'Where to Find Us',
   sectionText: [
    (<iframe src={('https://www.google.com/maps/embed?pb=' +
      '!1m18!1m12!1m3!1d3023.861884042863!2d-74.00099998459477!' +
@@ -51,7 +49,9 @@ const mapUnit = {
 
 const storeInfo = {
   sectionClass: 'default',
-  title: 'Welcome to the Store',
+  postContentStyle: 'postContentRight',
+  title: 'Open Through the Holidays',
+  postLabel: {},
   sectionText: [
   (<div>
     <dl>
@@ -141,20 +141,13 @@ const ourBrands = {
   ]
 }
 
-const ourPics = {
-  colOneImg: ourPic1,
-  colTwoImg: ourPic2
-}
-
 // Popup Page Layout
 export const PopupStoreView = () => (
   <main role='main' className={styles.popupStore}>
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
-    <FullWidthText {...mapUnit} />
     <FullWidthText overrideStyles={{margin: '0', padding: '1px'}} {...mapUnit} />
     <FullWidthTwoCol {...storeDescrip} />
-    <TwoColImage {...ourPics} />
     <FullWidthText {...ourBrands} />
   </main>
 )
