@@ -8,29 +8,30 @@ import MissingMicrostep from './components/MissingMicrostep'
 
 type Props = {
   microstep: Object,
-  type: string
+  type: string,
+  showLabel: boolean
 }
 
-export default function Microstep ({ microstep, type = '' } : Props) {
-  const stepType = type.toLowerCase()
+export default function Microstep (props: Props) {
+  const type = props.type || ''
 
-  switch (stepType) {
+  switch (type) {
     case 'quote':
-      return <QuoteMicrostep microstep={microstep} />
+      return <QuoteMicrostep {...props} />
 
     case 'link':
-      return <LinkMicrostep microstep={microstep} />
+      return <LinkMicrostep {...props} />
 
     case 'content':
-      return <ContentMicrostep microstep={microstep} />
+      return <ContentMicrostep {...props} />
 
     case 'calendar':
-      return <CalendarMicrostep microstep={microstep} />
+      return <CalendarMicrostep {...props} />
 
     case 'product':
-      return <ProductMicrostep microstep={microstep} />
+      return <ProductMicrostep {...props} />
 
     default:
-      return <MissingMicrostep microstep={microstep} />
+      return <MissingMicrostep {...props} />
   }
 }
