@@ -12,12 +12,16 @@ import content1050 from './assets/content_1050.png'
 import commerceHero from './assets/commerce_hero.png'
 import commerceTxt from './assets/commerce_1340.png'
 
+type Props = {
+  children: Object
+}
 
 class Wrapper extends React.Component {
-  
+  props: Props
+
   componentWillMount () {
-    document.body.style.backgroundColor = '#fff';
-    document.body.style.minWidth = '1400px';
+    document.body.style.backgroundColor = '#fff'
+    document.body.style.minWidth = '1400px'
   }
 
   render () {
@@ -29,7 +33,12 @@ class Wrapper extends React.Component {
   }
 }
 
-const Header = ({ image, text }) => (
+type HeaderProps = {
+  image: string,
+  text: string
+}
+
+const Header = ({ image, text } = HeaderProps) => (
   <header className={styles.header} style={{ backgroundImage: `url(${image})` }}>
     <div className={styles.text}>
       {text}
@@ -41,11 +50,16 @@ const OverviewContent = {
   header: {
     text: 'More than living. Thriving.'
   },
-  node1: `Thrive Global’s mission is to end the stress and burnout epidemic by offering companies and individuals sustainable, 
-          science-based solutions to enhance both well-being and performance. Recent science has shown that the pervasive 
-          belief that burnout is the price we must pay for success is a delusion. We know, instead, that when we prioritize our 
-          well-being, our decision-making, creativity, and productivity improve dramatically. Thrive Global is committed to 
-          accelerating the culture shift that allows people to reclaim their lives and move from merely surviving to thriving.`,
+  node1: `Thrive Global’s mission is to end the stress and burnout 
+          epidemic by offering companies and individuals sustainable, 
+          science-based solutions to enhance both well-being and 
+          performance. Recent science has shown that the pervasive 
+          belief that burnout is the price we must pay for success 
+          is a delusion. We know, instead, that when we prioritize our 
+          well-being, our decision-making, creativity, and productivity 
+          improve dramatically. Thrive Global is committed to 
+          accelerating the culture shift that allows people to 
+          reclaim their lives and move from merely surviving to thriving.`,
   headerNode1: 'Our Core Components',
   node2: [
     {
@@ -78,56 +92,61 @@ const OverviewContent = {
           the technology they use. More than living. Thriving.`,
   headerNode2: 'A New Approach to Well-Being',
   headerNode3: 'Our Experts'
-};
+}
 
 const ContentContent = {
   text: 'Thrive Global’s Media Platform, The Hub for Thriving.'
-};
+}
 
 const CorporateContent = {
   text: 'When your people thrive, your business thrives.'
-};
+}
 
 const CommerceContent = {
   text: 'The Destination for Well-Being Products.'
-};
+}
 
-export const PWUOverview = ({text}) => (
+type OverviewProps = {
+  text: string
+}
+export const PWUOverview = ({ text } = OverviewProps) => (
   <Wrapper>
     <div className={styles.Overview}>
       <Header image={Arianna} text={OverviewContent.header.text} />
       <p className={styles.p1}> {OverviewContent.node1} </p>
       <h2 className={styles.h2_1}> {OverviewContent.headerNode1}</h2>
       <ul className={styles.threeCol}>
-      {
-        OverviewContent.node2.map( node =>
-           <li key={node.header} className={styles.leftBorder}>
-            <Link to={node.link}>
-              <h4> {node.header} </h4>
-              <p className={styles.normalText}> {node.body} </p>
-            </Link>
-           </li>
-        )
-      }
+        {
+          OverviewContent.node2.map(node =>
+            <li key={node.header} className={styles.leftBorder}>
+              <Link to={node.link}>
+                <h4> {node.header} </h4>
+                <p className={styles.normalText}> {node.body} </p>
+              </Link>
+            </li>
+          )
+        }
       </ul>
       <p className={styles.p2}> {OverviewContent.node3} </p>
       <div className={styles.container1}>
         <div className={styles.rectangle1}>
           <h2 className={styles.h2_2}> {OverviewContent.headerNode2}</h2>
         </div>
-        <div className={styles.newApproach} style={{ backgroundImage: `url(${newApproach})` }}></div>
+        <div className={styles.newApproach} style={{ backgroundImage: `url(${newApproach})` }} />
       </div>
 
       <div className={styles.container2}>
         <div className={styles.rectangle2}>
           <h2 className={styles.h2_2}> {OverviewContent.headerNode3}</h2>
         </div>
-        <div className={styles.ourExperts} style={{ backgroundImage: `url(${ourExperts})` }}></div>
-      </div>      
+        <div className={styles.ourExperts} style={{ backgroundImage: `url(${ourExperts})` }} />
+      </div>
     </div>
     <div className={styles.container3}>
       <p className={styles.p3}> Interested in learning more? </p>
-      <p className={styles.p3}> Please direct inquiries to <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a> </p>
+      <p className={styles.p3}> Please direct inquiries to
+        <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+      </p>
     </div>
   </Wrapper>
 )
@@ -136,11 +155,13 @@ export const PWUCorporate = () => (
   <Wrapper>
     <div className={styles.Corporate}>
       <Header image={corpPic} text={CorporateContent.text} />
-      <div className={styles.corpTxt} style={{ backgroundImage: `url(${stats})` }}></div>
+      <div className={styles.corpTxt} style={{ backgroundImage: `url(${stats})` }} />
       <div className={styles.container4}>
         <p className={styles.p3}> Interested in learning more? </p>
-        <p className={styles.p3}> Please direct inquiries to <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a> </p>
-      </div>            
+        <p className={styles.p3}> Please direct inquiries to
+          <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+        </p>
+      </div>
     </div>
   </Wrapper>
 )
@@ -149,11 +170,13 @@ export const PWUContent = () => (
   <Wrapper>
     <div className={styles.Content}>
       <Header image={mockUp} text={ContentContent.text} />
-      <div className={styles.contentTxt} style={{ backgroundImage: `url(${content1050})` }}></div>
+      <div className={styles.contentTxt} style={{ backgroundImage: `url(${content1050})` }} />
       <div className={styles.container3}>
         <p className={styles.p3}> Interested in learning more? </p>
-        <p className={styles.p3}> Please direct inquiries to <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a> </p>
-      </div>        
+        <p className={styles.p3}> Please direct inquiries to
+          <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+        </p>
+      </div>
     </div>
   </Wrapper>
 )
@@ -162,11 +185,13 @@ export const PWUCommerce = () => (
   <Wrapper>
     <div className={styles.Commerce}>
       <Header image={commerceHero} text={CommerceContent.text} />
-      <div className={styles.commerceTxt} style={{ backgroundImage: `url(${commerceTxt})` }}></div>
-        <div className={styles.container3}>
-          <p className={styles.p3}> Interested in learning more? </p>
-          <p className={styles.p3}> Please direct inquiries to <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a> </p>
-        </div>
-      </div>      
+      <div className={styles.commerceTxt} style={{ backgroundImage: `url(${commerceTxt})` }} />
+      <div className={styles.container3}>
+        <p className={styles.p3}> Interested in learning more? </p>
+        <p className={styles.p3}> Please direct inquiries to
+          <a href='mailto:kfriedrich@thriveglobal.com'>kfriedrich@thriveglobal.com</a>
+        </p>
+      </div>
+    </div>
   </Wrapper>
 )
