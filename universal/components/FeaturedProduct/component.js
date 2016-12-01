@@ -42,7 +42,7 @@ class FeaturedProduct extends React.Component {
         <section className={styles.content}>
           <h3 className={styles.header}>Shop</h3>
           <Product
-            productTitle={'The Phone Bed'}
+            productTitle={'The Phone Bed Charging Station'}
             productLink='https://shop.thriveglobal.com/products/the-phone-bed'
             productImage={image_phone_bed}
             productSlug={'Make putting your phone to bed a regular part of your nightly ritual.'}
