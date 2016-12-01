@@ -10,19 +10,30 @@ type Props = {
   title: string
 }
 
+type memberProps = {
+  image: any,
+  name: string,
+  title: string,
+  bio: string
+}
+
 function getTeamMembers () {
   return fetch('/Team/team.json')
 }
 
 export class TeamSection extends React.Component {
+  props: Props
+  state: any
+  toggleModal: Function
 
-  constructor (props) {
+  constructor (props: any) {
     super(props)
     this.state = {
       teamMembers: [],
       showModal: false,
       modalContent: <div />
     }
+    this.toggleModal = this.toggleModal.bind(this)
   }
 
   componentWillMount () {
@@ -36,8 +47,14 @@ export class TeamSection extends React.Component {
     })
   }
 
-  handleClick (member) {
+  toggleModal () {
     this.setState({
+      showModal: !this.state.showModal
+    })
+  }
+
+  handleClick (element: Object, member: memberProps) {
+    element.setState({
       showModal: !this.state.showModal,
       modalContent: (
         <div className={styles.bioModal}>
@@ -62,13 +79,13 @@ export class TeamSection extends React.Component {
       <section className={styles.SectionContainer} id='team'>
         <section className={styles.row} >
           <section className={styles.biosRow}>
-            <Modal show={this.state.showModal} onClick={this.handleClick.bind(this)}
+            <Modal show={this.state.showModal} onClick={this.toggleModal}
               content={this.state.modalContent} />
             <h2 className={styles.title}> Our Team </h2>
-            <FounderBio {...founder} onClick={() => this.handleClick.call(this, founder)}/>
+            <FounderBio {...founder} onClick={() => this.handleClick(this, founder)} />
             <section>
               {team.map(member =>
-                <TeamBio {...member} onClick={() => this.handleClick.call(this, member)} key={member.name} />
+                <TeamBio {...member} onClick={() => this.handleClick(this, member)} key={member.name} />
               )}
             </section>
           </section>
