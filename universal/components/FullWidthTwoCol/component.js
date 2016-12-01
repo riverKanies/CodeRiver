@@ -4,6 +4,7 @@ import styles from './styles'
 import dummyImage from './assets/thriveScience.jpg'
 import ContentLabel from 'components/ContentLabel'
 import ExternalLink from 'components/ExternalLink'
+import Button from 'components/Button'
 
 type Props = {
   sectionClass: 'default' | 'lightGray' | 'fade',
@@ -12,6 +13,7 @@ type Props = {
   label: Object,
   sectionText: Array<string>,
   image: string,
+  button: any,
   hasButton: 'buttonTrue' | 'buttonFalse',
   link: Object
 };
@@ -49,7 +51,7 @@ const FullWidthTwoCol = ({
               <h2>{title}</h2>
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-            {button ? <Button {...button} /> : ''} 
+            {button ? <Button {...button} /> : ''}
             <span className={styles[hasButton]}>
               <ExternalLink {...link} />
             </span>
