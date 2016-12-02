@@ -56,7 +56,7 @@ const homeQuote = {
   bgColor: 'default',
   quote: [
     `It’s no mystery that healthier workforces make for better corporate
-    financial health and higher performing employees all around.`
+    financial health and higher-performing employees all around.`
   ],
   citation: `Dr. David Agus,
     \n Professor of Medicine & Engineering USC,

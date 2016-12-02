@@ -54,7 +54,7 @@ class FeaturedProduct extends React.Component {
             productSlug={'The sound machine, sleep monitor and smart alarm.'}
           />
           <Product
-            productTitle={'Muse: The Brain Sensing Headband'}
+            productTitle={'Muse: The Brain-Sensing Headband'}
             productLink='https://shop.thriveglobal.com/products/muse-the-brain-sensing-headband'
             productImage={image_muse}
             productSlug={'Make meditation easier.'}
