@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import imagePlaceholder from './assets/team-placeholder.jpg'
 import Button from 'components/Button'
 
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
   description: string
 };
 
-const defaultTitle ="Partner Name"
+const defaultTitle = 'Partner Name'
 const defaultDescription = '.....science stuff'
 
 const BrowseItemView = ({
@@ -18,10 +17,10 @@ const BrowseItemView = ({
 }: Props) => {
   return (
     <section className={styles.browseContainer}>
-        <div className={styles.text}>
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <Button buttonText={title}/>
+      <div className={styles.text}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <Button buttonText={title} />
       </div>
     </section>
   )

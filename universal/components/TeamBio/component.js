@@ -7,6 +7,7 @@ type Props = {
   title: string,
   name: string,
   image: any,
+  onClick: Function
 };
 
 const defaultName = 'Team Member'
