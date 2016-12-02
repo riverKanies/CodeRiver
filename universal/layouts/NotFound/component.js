@@ -1,4 +1,5 @@
 import React from 'react'
+import Four04 from 'components/Four04'
 
 type Props = {
   location: {
@@ -18,7 +19,7 @@ class NotFoundLayout extends React.Component {
 
   render () {
     return (
-      <h1 id='pageNotFound'>Page Not Found</h1>
+      <Four04 />
     )
   }
 }
