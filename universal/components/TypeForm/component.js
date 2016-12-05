@@ -1,7 +1,7 @@
 import React from 'react'
 
 const typeFormURL = (key, urlParams = '') => {
-  return `https://thriveglobal.typeform.com/to/${key}?typeform-embed=embed-fullpage${urlParams}`
+  return `https://thriveglobal.typeform.com/to/${key}?typeform-embed=embed-fullpage&${urlParams}`
 }
 
 const styles = {
