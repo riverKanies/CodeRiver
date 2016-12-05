@@ -14,6 +14,18 @@ type Props = {
 
 const defaultText = 'Sign up to receive the best tips and articles right in your email.'
 
+export function FormHeader ({
+  title,
+  message
+}: Props) {
+  return (
+    <header className={`${styles.header} momo`}>
+      <h3>{title}</h3>
+      {(message && <p id='emailCaptureMiniMessage'>{message}</p>)}
+    </header>
+  )
+}
+
 export default function ({
   title = 'Newsletter',
   handleSubmit = () => null,
@@ -24,10 +36,7 @@ export default function ({
   return (
     <section className={styles.emailCaptureMini}>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h3>{title}</h3>
-          <p>{message}</p>
-        </header>
+        <FormHeader title={title} message={message} />
         <form onSubmit={handleSubmit}>
           <span className={styles.inputWrap}>
             <Field
