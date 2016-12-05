@@ -6,6 +6,7 @@ import Input from 'components/BasicInput'
 
 type Props = {
   title: string,
+  message: string,
   handleSubmit: Function,
   pristine: boolean,
   submitting: boolean
@@ -14,6 +15,7 @@ type Props = {
 const EmailCapture = ({
   title = 'Sign up for the #thrivenow newsletter',
   handleSubmit = () => null,
+  message,
   pristine = false,
   submitting = false
 }: Props) => {
@@ -21,7 +23,7 @@ const EmailCapture = ({
     <section className={styles.emailCapture}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h2 className={styles.h2}>{title}</h2>
+          <h2 className={styles.h2}>{message || title}</h2>
         </header>
         <form onSubmit={handleSubmit}>
           <span className={styles.inputWrap}>
