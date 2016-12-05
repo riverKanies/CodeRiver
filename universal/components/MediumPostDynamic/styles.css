@@ -1,7 +1,7 @@
 @value all: 'all';
 
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, mediumGutter, mediumGutterHalf from all;
-@value bodyCopy, ThriveBlue, ThriveViolet, darkGray, gradientCardThrive from all;
+@value bodyCopy, ThriveTeal, ThriveBlue, ThriveViolet, darkGray, gradientCardThrive from all;
 @value MonBold, MonBlack, Playfair, PlayBlack from all;
 
 @value imgCardBaby: 20rem;
@@ -291,9 +291,10 @@
   width: 100%;
   height: auto;
   float: left;
-  background: white;
+  background: #fff;
   @media bp-mama-bear {
     width: 50%;
+    transition: background 200ms ease-in-out;
   }
   @media bp-papa-bear {
     width: 25%;
@@ -304,8 +305,7 @@
     height: auto;
     float: left;
     clear: both;
-    background: white;
-    transition: background 200ms ease-in-out;
+    background: transparent;
     @media bp-mama-bear {
       height: imgCardHalfMama;
     }
@@ -324,7 +324,7 @@
     float: left;
     clear: both;
     color: bodyCopy;
-    background: white;
+    background: inherit;
   }
   .imageContainer {
     position: relative;
@@ -336,12 +336,12 @@
     p {
       font-size: .88rem;
       text-align: center;
-      color: bodyCopy;
+      color: white;
     }
   }
   .header {
     padding: 1.625rem 1.625rem 0 1.625rem;
-    background: white;
+    background: transparent;
     text-align: center;
     h2 {
       display: block;
@@ -364,11 +364,21 @@
   }
   .footer {
     padding: 0 1.625rem 1.625rem 1.625rem;
-    background: white;
+    background: transparent;
     text-align: center;
   }
   .authorWrap {
     color: bodyCopy;
+    transition: color 100ms ease-in-out;
+  }
+  &:hover {
+    @media bp-mama-bear {
+      background: ThriveViolet;
+      .authorWrap,
+      .header h2 {
+        color: #fff;
+      }
+    }
   }
 }
 /* One Quarter Blue Card */
@@ -380,6 +390,7 @@
   background: ThriveBlue;
   @media bp-mama-bear {
     width: 50%;
+    transition: background 200ms ease-in-out;
   }
   @media bp-papa-bear {
     width: 25%;
@@ -390,8 +401,7 @@
     height: auto;
     float: left;
     clear: both;
-    background: ThriveBlue;
-    transition: background 200ms ease-in-out;
+    background: transparent;
     @media bp-mama-bear {
       height: imgCardHalfMama;
     }
@@ -410,7 +420,7 @@
     float: left;
     clear: both;
     color: white;
-    background: ThriveBlue;
+    background: inherit;
   }
   .imageContainer {
     position: relative;
@@ -427,7 +437,7 @@
   }
   .header {
     padding: 1.625rem 1.625rem 0 1.625rem;
-    background: ThriveBlue;
+    background: transparent;
     text-align: center;
     h2 {
       display: block;
@@ -450,7 +460,7 @@
   }
   .footer {
     padding: 0 1.625rem 1.625rem 1.625rem;
-    background: ThriveBlue;
+    background: transparent;
     text-align: center;
   }
   .authorWrap {
@@ -460,9 +470,6 @@
   &:hover {
     @media bp-mama-bear {
       background: ThriveTeal;
-      * {
-        color: white;
-      }
     }
   }
 }
