@@ -18,7 +18,8 @@ const Props = {
     'default',
     'white',
     'gray',
-    'purple'
+    'purple',
+    'pattern'
   ],
   isLink: [
     true,
