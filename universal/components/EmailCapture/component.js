@@ -12,6 +12,17 @@ type Props = {
   submitting: boolean
 };
 
+export function FormHeader ({
+  title,
+  message
+}: Props) {
+  return (
+    <header className={styles.header}>
+      <h2 className={styles.h2} id='emailCaptureTitleLine'>{message || title}</h2>
+    </header>
+  )
+}
+
 const EmailCapture = ({
   title = 'Sign up for the #thrivenow newsletter',
   handleSubmit = () => null,
@@ -22,9 +33,7 @@ const EmailCapture = ({
   return (
     <section className={styles.emailCapture}>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h2 className={styles.h2}>{message || title}</h2>
-        </header>
+        <FormHeader title={title} message={message} />
         <form onSubmit={handleSubmit}>
           <span className={styles.inputWrap}>
             <Field

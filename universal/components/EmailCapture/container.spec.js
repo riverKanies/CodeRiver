@@ -9,12 +9,12 @@ import { actions as analyticsActions } from 'modules/Middleware/analytics'
 
 import { WithProvider } from 'lib/testHelpers'
 
-import EmailCaptureMini, { handleSubmit } from './container'
+import EmailCapture, { handleSubmit } from './container'
 import { FormHeader } from './component'
 
-describe('(Container) EmailCaptureMini', () => {
-  context('ReduxForm validations', () => {
-    const wrapper = shallow(<EmailCaptureMini />)
+describe('(Container) EmailCapture', () => {
+  context('redux form helpers', () => {
+    const wrapper = shallow(<EmailCapture />)
 
     it('should require a valid email', () => {
       const expectedResult = wrapper.props().validate()
@@ -29,29 +29,23 @@ describe('(Container) EmailCaptureMini', () => {
     })
   })
 
-  context('Form Header Component attributes', () => {
-    it("should not render a message if we don't pass one in", () => {
-      const subject = shallow(
-        <FormHeader title="title" />
-      )
-
-      expect(subject.find('#emailCaptureMiniMessage').length).toEqual(0)
-
+  context('component specs', () => {
+    it('renders a message when we pass the message', () => {
+      const subject = shallow(<FormHeader message='message!' title='title' />)
+      const titleLine = subject.find('#emailCaptureTitleLine').first()
+      expect(titleLine.text()).toEqual('message!')
     })
 
-    it('should render a message when we pass one in', () => {
-      const subject = shallow(
-        <FormHeader message="message" title="title" />
-      )
-
-      expect(subject.find('#emailCaptureMiniMessage').length).toEqual(1)
-
+    it("renders a title when we don't pass the message", () => {
+      const subject = shallow(<FormHeader title='title' />)
+      const titleLine = subject.find('#emailCaptureTitleLine').first()
+      expect(titleLine.text()).toEqual('title')
     })
 
-    it('renders a form header', () => {
+    it('the container renders the form header', () => {
       const subject = mount(
         <WithProvider>
-          <EmailCaptureMini />
+          <EmailCapture />
         </WithProvider>
       )
 
@@ -68,7 +62,7 @@ describe('(Container) EmailCaptureMini', () => {
       const props = { onSubmit }
       subject = mount(
         <WithProvider>
-          <EmailCaptureMini {...props} />
+          <EmailCapture {...props} />
         </WithProvider>
       )
     })
@@ -113,7 +107,7 @@ describe('(Container) EmailCaptureMini', () => {
 
     it('dispatches specific action types', () => {
       const actionTypes = [
-        analyticsActions.newsletterFormSubmitted,
+        analyticsActions.leadFormSubmitted,
         messageActions.createMessage
       ]
       handleSubmit(values, store.dispatch)
@@ -124,4 +118,3 @@ describe('(Container) EmailCaptureMini', () => {
     })
   })
 })
-

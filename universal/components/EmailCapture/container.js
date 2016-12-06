@@ -9,7 +9,7 @@ const validate = createValidator({
   email: [required, email]
 })
 
-const handleSubmit = (values, dispatch) => {
+export function handleSubmit (values, dispatch) {
   // dispatch event to be caught by middleware
   dispatch({
     type: actions.leadFormSubmitted,
