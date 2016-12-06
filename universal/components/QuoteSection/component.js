@@ -11,6 +11,8 @@ type Props = {
   citation: string,
   hasImage: 'imageTrue' | 'imageFalse',
   quoteImage: any,
+  quoteLink: 'quoteTrue' | 'quoteFalse',
+  quoteURL: string,
   imageShape: 'roundImage' | 'squareImage'
 };
 
@@ -20,6 +22,30 @@ const defaultQuote = [
 ]
 
 const defaultImage = dummyImage
+
+function QuoteLinkTrue (props) {
+  return (
+    <q className={styles.quote}>
+      <a href={quoteURL} target='_blank'>{quote.map((paragraph, index) => <span key={index}>{quote}</span>)}</a>
+    </q>
+  )
+}
+
+function QuoteLinkFalse (props) {
+  return (
+    <q className={styles.quote}>
+      {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
+    </q>
+  )
+}
+
+function QuoteLinked (props) {
+  const quoteTrue = props.quoteLink
+  if (quoteTrue) {
+    return <QuoteLinkTrue />
+  }
+  return <QuoteLinkFalse />
+}
 
 const QuoteSection = ({
   containerBorders = 'bordersFalse',
