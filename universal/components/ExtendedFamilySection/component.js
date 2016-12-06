@@ -21,12 +21,12 @@ const text = `Thrive Global is so grateful to the amazing team who helped get us
  Daniel Searles, Gabe Weaver, Beau Wingfield, and Brian Zambrano.`
 
 const title2 = 'Our Trainers & Facilitators'
-const text2 = `And thank you to our incredible Thrive facilitators around the world: Veronica Alweiss,
-              Kathy Andersen, Danny Bader, Mithra Bindhu, Jose Caraball, Peter Felsmann, Cesar Gamio,
-              Kerry Held, Els van der Helm, Shveta Suri Kohli, Amber Krzys, LeeAnn Mallorie, John Marin,
-              Kyoko Miyagawa, Chiharu Onishi, David Raynr, Mary Ann Somerville, Agapi Stassinopoulos, Steven Terry,
-              Noriko Tsutagawa, Rob Ungar, Christopher Vincent, Kim Vincent,
-              Margalit Ward, Cindy Whiston, and Sam Wigan.`
+const text2 = `And thank you to our incredible Thrive facilitators around the world:
+Veronica Alweiss, Kathy Anderson, Danny Bader, Mithra Bindhu, Jose Caraball,
+Peter Felsmann, Cesar Gamio, Kerry Held, Els van der Helm,
+Shveta Suri Kohli, Amber Krzys, LeeAnn Mallorie, John Marin, Kyoko Miyagawa,
+Chiharu Onishi, David Raynr, Mary Ann Somerville, Steven Terry, Noriko Tsutagawa,
+Rob Ungar, Christopher Vincent, Kim Vincent, Margalit Ward, Cindy Whiston, and Sam Wigan.`
 
 export const ExtendedFamilySection = () => {
   return (
