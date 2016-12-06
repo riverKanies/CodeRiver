@@ -10,7 +10,7 @@ type Props = {
   quote: Array<string>,
   citation: string,
   quoteImage: any,
-  quoteLink: 'quoteTrue' | 'quoteFalse',
+  isLink: boolean,
   quoteURL: string,
   hasImage: 'imageTrue' | 'imageFalse',
   imageShape: 'roundImage' | 'squareImage'
@@ -23,28 +23,23 @@ const defaultQuote = [
 
 const defaultImage = dummyImage
 
-// JSX Logic For Linked Quote
-function QuoteLinkTrue (
-  { quoteLink }: { quoteLink: string }, { quoteURL }: { quoteURL: string }, { quote }: {quote: Array<string> }) {
-  return (
-    <q className={styles.quote}>
-      <a href={quoteURL} target='_blank'>{quote.map((paragraph, index) => <span key={index}>{quote}</span>)}</a>
-    </q>
-  )
-}
-function QuoteLinkFalse ({ quote }: {quote: Array<string> }) {
-  return (
-    <q className={styles.quote}>
-      {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
-    </q>
-  )
-}
-function QuoteLinked ({ quoteLink }: { quoteLink: string}) {
-  const quoteTrue = Props.quoteLink
-  if (quoteTrue) {
-    return <QuoteLinkTrue />
+function Quote ({
+  isLink,
+  quote,
+  quoteURL
+}: { isLink: boolean, quote: Array<string>, quoteURL: string }) {
+  if (isLink) {
+    return (
+      <q className={styles.quote}>
+        <a href={quoteURL} target='_blank'>{quote.map((paragraph, index) => <span key={index}>{paragraph}</span>)}</a>
+      </q>
+    )
   }
-  return <QuoteLinkFalse />
+  return (
+    <q className={styles.quote}>
+      {quote.map((paragraph, index) => <span key={index}>{paragraph}</span>)}
+    </q>
+  )
 }
 
 const QuoteSection = ({
@@ -56,7 +51,7 @@ const QuoteSection = ({
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
   imageShape = 'roundImage',
-  quoteLink = 'quoteFalse',
+  isLink = false,
   quoteURL = 'https://journal.thriveglobal.com'
 }: Props) => {
   return (
@@ -67,7 +62,7 @@ const QuoteSection = ({
         </section>
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
-            <QuoteLinked />
+            <Quote isLink={isLink} quote={quote} quoteURL={quoteURL} />
             <cite className={styles.citation}>{citation}</cite>
           </section>
         </section>

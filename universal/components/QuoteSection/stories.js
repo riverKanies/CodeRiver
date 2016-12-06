@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select, boolean } from '@kadira/storybook-addon-knobs'
 import dummyImage from './assets/quote_imagePlaceholder.png'
 
 import QuoteSection from './component'
@@ -20,9 +20,9 @@ const Props = {
     'gray',
     'purple'
   ],
-  quoteLink: [
-    'quoteTrue',
-    'quoteFalse'
+  isLink: [
+    true,
+    false
   ],
   quoteUrl: 'string'
 }
@@ -37,7 +37,7 @@ storiesOf('QuoteSection', module)
           quote={text('Quote Text', defaultQuote)}
           citation={text('Cite', 'Arriana Huffington')}
           quoteImage={text('Quote Image', dummyImage)}
-          quoteLink={select('Does this need to link out?', Props.quoteLink, [1])}
+          isLink={boolean('Does this need to link out?', false)}
           quoteURL={text('URL For Quote', Props.quoteUrl)}
         />
       </WithNotes>
