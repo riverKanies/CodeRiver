@@ -9,7 +9,7 @@ const validate = createValidator({
   email: [required, email]
 })
 
-const handleSubmit = (values, dispatch) => {
+export const handleSubmit = (values, dispatch) => {
   // dispatch event to be caught by middleware
   const successMessage = `Thank you for subscribing to the thrive newsletter.`
   dispatch({ type: actions.newsletterFormSubmitted, track: { email: values.email } })

@@ -1,9 +1,15 @@
 import React from 'react'
-import { WithProvider } from 'lib/testHelpers'
+import sinon from 'sinon'
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
 import { shallow, render, mount } from 'enzyme'
-import { createMessage } from 'modules/Messages'
 
-import EmailCaptureMini from './container'
+import { actions as messageActions } from 'modules/Messages'
+import { actions as analyticsActions } from 'modules/Middleware/analytics'
+
+import { WithProvider } from 'lib/testHelpers'
+
+import EmailCaptureMini, { handleSubmit } from './container'
 import { FormHeader } from './component'
 
 describe('(Container) EmailCaptureMini', () => {
@@ -50,6 +56,71 @@ describe('(Container) EmailCaptureMini', () => {
       )
 
       expect(subject.find('FormHeader').length).toEqual(1)
+    })
+  })
+
+  context('form integration tests', () => {
+    let onSubmit;
+    let subject;
+
+    beforeEach(() => {
+      onSubmit = sinon.stub().returns(Promise.resolve())
+      const props = { onSubmit }
+      subject = mount(
+        <WithProvider>
+          <EmailCaptureMini {...props} />
+        </WithProvider>
+      )
+    })
+
+    it('fails to submit when we have an in-valid email address', () => {
+      const form = subject.find('form')
+      const input = subject.find('input').first()
+
+      input.simulate('change', { target: { value: 'blueberry' } })
+      form.simulate('submit')
+
+      expect(onSubmit.callCount).toEqual(0)
+    })
+
+    it('submits when we have a valid email address', () => {
+      const form = subject.find('form')
+      const input = subject.find('input').first()
+
+      input.simulate('change', { target: { value: 'test@email.com' } })
+      form.simulate('submit')
+
+      expect(onSubmit.callCount).toEqual(1)
+    })
+  })
+
+  context('handleSubmit redux action side-effects', () => {
+    const middlewares = [ thunk ]
+    const mockStore = configureMockStore(middlewares)
+    let store;
+    let values;
+
+    beforeEach(() => {
+      store = mockStore({})
+      values = { email: 'bill@email.com' }
+    })
+
+    it('resets the email to an empty string', () => {
+      handleSubmit(values, store.dispatch)
+
+      expect(values.email).toEqual('')
+    })
+
+    it('dispatches specific action types', () => {
+      const actionTypes = [
+        analyticsActions.newsletterFormSubmitted,
+        messageActions.createMessage
+      ]
+      handleSubmit(values, store.dispatch)
+
+      const resultingActionTypes = store.getActions().map(a => a.type)
+
+      expect(resultingActionTypes).toEqual(actionTypes)
     })
   })
 })
