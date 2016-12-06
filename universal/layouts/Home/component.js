@@ -16,6 +16,7 @@ import popUpImg from './assets/thrive-popup.jpg'
 import eCourseImg from './assets/ecourses.jpg'
 import artImg from './assets/thrive-art.jpg'
 import styleImg from './assets/thrive-style.jpg'
+import communityImg from './assets/thriveCommunity.jpg'
 
 // Content Definitions
 const thrivePulse = {
@@ -64,6 +65,23 @@ const homeQuote = {
   imageShape: 'roundImage',
   isLink: true,
   quoteURL: 'https://journal.thriveglobal.com/why-we-need-corporate-well-being-programs-more-than-ever-56bcbe0f52f1'
+}
+const thriveCommunity = {
+  sectionClass: 'default',
+  title: ' Join the Thrive Global Community',
+  hasLabel: 'labelFalse',
+  sectionText: [
+    `Changing the collective delusion that burnout is the price we must pay for` +
+    `success requires collective action. It requires the collective stories of ` +
+    `how people are changing the way they work and live. We want to hear yours.`
+  ],
+  image: communityImg,
+  hasButton: 'buttonTrue',
+  link: {
+    linkText: 'Read More',
+    linkTo: 'https://journal.thriveglobal.com/join-the-thrive-global-community-3aa96f08423e#.nz1xe912c',
+    linkStyle: 'blue'
+  }
 }
 const pathways = {
   bgColor: 'blurple',
@@ -249,6 +267,7 @@ export const HomeView = () => {
       <FeaturedStory {...thrivePulse} />
       <FullWidthTwoColSpecial {...eCourse} />
       <QuoteSection {...homeQuote} />
+      <FullWidthTwoCol {...thriveCommunity} />
       <FeaturedStory {...pathways} />
       <FullWidthTwoCol {...thriveApps} />
       <FullWidthTwoColSpecial {...thriveStyle} />
