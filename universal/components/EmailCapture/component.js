@@ -12,10 +12,15 @@ type Props = {
   submitting: boolean
 };
 
+type HeaderProps = {
+  title: string,
+  message: string
+}
+
 export function FormHeader ({
   title,
   message
-}: Props) {
+}: HeaderProps) {
   return (
     <header className={styles.header}>
       <h2 className={styles.h2} id='emailCaptureTitleLine'>{message || title}</h2>

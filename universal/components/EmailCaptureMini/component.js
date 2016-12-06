@@ -12,12 +12,17 @@ type Props = {
   submitting: boolean
 };
 
+type HeaderProps = {
+  title: string,
+  message: string
+}
+
 const defaultText = 'Sign up to receive the best tips and articles right in your email.'
 
 export function FormHeader ({
   title,
   message
-}: Props) {
+}: HeaderProps) {
   return (
     <header className={`${styles.header} momo`}>
       <h3>{title}</h3>
