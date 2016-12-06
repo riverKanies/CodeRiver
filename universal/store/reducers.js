@@ -3,6 +3,7 @@ import { combineReducers } from 'redux'
 import { toast } from 'modules/Toast'
 import { reducer as formReducer } from 'redux-form'
 import * as microsteps from 'modules/Microsteps'
+import * as messages from 'modules/Messages'
 import * as microstep from 'modules/Microstep'
 import * as mediumPosts from 'modules/MediumPosts'
 import * as microstepsFilter from 'modules/MicrostepsFilter'
@@ -26,6 +27,7 @@ export const makeRootReducer = (asyncReducers) => {
     // Add sync reducers here
     [toast.KEY]: toast.reducer,
     [microsteps.KEY]: microsteps.reducer,
+    [messages.KEY]: messages.reducer,
     [microstep.KEY]: microstep.reducer,
     [mediumPosts.KEY]: mediumPosts.reducer,
     [microstepsFilter.KEY]: microstepsFilter.reducer,
