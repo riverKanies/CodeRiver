@@ -13,28 +13,28 @@
 
 .brands {
   background-color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   lost-column: 1;
   @media bp-mama-bear {
     lost-column: 1/2;
+    margin-bottom: 0.5rem
   }
   @media bp-papa-bear {
     lost-column: 1/5;
   }
 }
 
-.imageWrap {
-  position: relative;
-  lost-column: 1;
-  .image {
-    lost-column: 1;
-    height: 6rem;
-    object-fit: none;
-    @media bp-papa-bear {
-      height: auto;
-    }
-  }
-  @media bp-papa-bear {
-    margin-left: 2em;
-  }
+.image {
+  max-width: 100%;
+}
+
+img {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+}
+
+.container {
+  padding: 0 3rem;
 }
