@@ -4,7 +4,7 @@
   text-align: center;
   padding-top: 100px;
 
-  h2 { 
+  h2 {
     position: relative;
     text-align: center;
     margin-bottom: 1em;
@@ -20,7 +20,7 @@
     background: black;
     transform: translateX(-65px);
   }
-} 
+}
 
 .title{
   border-bottom:50%;
@@ -32,5 +32,6 @@
 
 }
 .content{
-  padding: 20px;
+  padding: 20px 2rem;
+  text-align: left;
 }
