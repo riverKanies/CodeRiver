@@ -106,7 +106,7 @@ describe('(Container) EmailCapture', () => {
 
     it('dispatches specific action types', () => {
       const actionTypes = [
-        analyticsActions.leadFormSubmitted,
+        analyticsActions.newsletterFormSubmitted,
         messageActions.createMessage
       ]
       handleSubmit(values, store.dispatch)

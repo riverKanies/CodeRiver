@@ -12,7 +12,10 @@ const validate = createValidator({
 export function handleSubmit (values, dispatch) {
   // dispatch event to be caught by middleware
   const successMessage = `Thank you for subscribing to the thrive newsletter.`
-  dispatch({ type: actions.newsletterFormSubmitted, track: { email: values.email } })
+  dispatch({
+    type: actions.newsletterFormSubmitted,
+    track: { email: values.email }
+  })
   dispatch(createMessage('email-capture-mini', successMessage))
   setTimeout(() => dispatch(clearMessages()), 5000)
 
