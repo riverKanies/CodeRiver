@@ -16,9 +16,7 @@ const Logo = ({
 }: Props) => {
   return (
     <section className={styles.brands}>
-      {/* <figure className={styles.imageWrap}> */}
       <img className={styles.image} src={logoImage} />
-      {/* </figure> */}
     </section>
   )
 }
