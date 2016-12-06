@@ -9,8 +9,10 @@ type Props = {
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: string,
-  hasImage: 'imageTrue' | 'imageFalse',
   quoteImage: any,
+  isLink: boolean,
+  quoteURL: string,
+  hasImage: 'imageTrue' | 'imageFalse',
   imageShape: 'roundImage' | 'squareImage'
 };
 
@@ -21,6 +23,25 @@ const defaultQuote = [
 
 const defaultImage = dummyImage
 
+function Quote ({
+  isLink,
+  quote,
+  quoteURL
+}: { isLink: boolean, quote: Array<string>, quoteURL: string }) {
+  if (isLink) {
+    return (
+      <q className={styles.quote}>
+        <a href={quoteURL} target='_blank'>{quote.map((paragraph, index) => <span key={index}>{paragraph}</span>)}</a>
+      </q>
+    )
+  }
+  return (
+    <q className={styles.quote}>
+      {quote.map((paragraph, index) => <span key={index}>{paragraph}</span>)}
+    </q>
+  )
+}
+
 const QuoteSection = ({
   containerBorders = 'bordersFalse',
   bgColor = 'default',
@@ -29,7 +50,9 @@ const QuoteSection = ({
   citation = 'Arriana Huffington',
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
-  imageShape = 'roundImage'
+  imageShape = 'roundImage',
+  isLink = false,
+  quoteURL = 'https://journal.thriveglobal.com'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
@@ -39,9 +62,7 @@ const QuoteSection = ({
         </section>
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
-            <q className={styles.quote}>
-              {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
-            </q>
+            <Quote isLink={isLink} quote={quote} quoteURL={quoteURL} />
             <cite className={styles.citation}>{citation}</cite>
           </section>
         </section>

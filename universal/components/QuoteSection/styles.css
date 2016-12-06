@@ -16,42 +16,7 @@
     padding: papaPadding;
   }
 }
-.default {
-  composes: quoteContainer;
-  background: transparent;
-}
-.pattern {
-  composes: quoteContainer;
-  background-color: backgroundGray;
-  background-image: url('./assets/growAriannaPattern.png');
-  background-repeat: repeat;
-}
-.white {
-  composes: quoteContainer;
-  background: white;
-}
-.gray {
-  composes: quoteContainer;
-  background: #f0f0f0;
-}
-.purple {
-  composes: quoteContainer;
-  background: ThriveBlurple;
-  * {
-    color: white;
-  }
-  .quote {
-    &::before, &::after {
-      color: white;
-    }
-  }
-  .citation {
-    color: white;
-    &::before {
-      color: white;
-    }
-  }
-}
+/* Composed Styles At Bottom Of Stylesheet so Overrides Work */
 
 /* Content Grid Container */
 .container {
@@ -136,7 +101,6 @@
   line-height: 160%;
   text-align: left;
   color: bodyCopy;
-
   &::before {
     content: '“';
     display: block;
@@ -150,6 +114,7 @@
     font-family: Playfair;
     font-size: 150%;
     color: darkGray;
+    transition: color 150ms ease-in-out;
     @media bp-mama-bear {
       top: .5rem;
       left: -2rem;
@@ -165,9 +130,17 @@
     font-family: Playfair;
     font-size: 150%;
     color: darkGray;
+    transition: color 150ms ease-in-out;
     @media bp-mama-bear {
       margin: -1em 0 0 .25em;
     }
+  }
+  > a {
+    font-family: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: none;
+    transition: color 150ms ease-in-out;
   }
 }
 
@@ -215,5 +188,91 @@
   }
   @media bp-mama-bear {
     font-size: 1rem;
+  }
+}
+
+/* Quote Section Composed Styles */
+.default {
+  composes: quoteContainer;
+  background: transparent;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.pattern {
+  composes: quoteContainer;
+  background-color: backgroundGray;
+  background-image: url('./assets/growAriannaPattern.png');
+  background-repeat: repeat;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.white {
+  composes: quoteContainer;
+  background: white;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.gray {
+  composes: quoteContainer;
+  background: #f0f0f0;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.purple {
+  composes: quoteContainer;
+  background: ThriveBlurple;
+  * {
+    color: white;
+  }
+  .quote {
+    &::before, &::after {
+      color: white;
+    }
+  }
+  .citation {
+    color: white;
+    &::before {
+      color: white;
+    }
+  }
+  &:hover {
+    .quote {
+      > a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
   }
 }
