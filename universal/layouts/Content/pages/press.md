@@ -318,11 +318,11 @@ Thrive Global’s mission is to end the epidemic of stress and burnout by offeri
 
 <hr />
 
-#### Media Contacts
+### Media Contacts
 **Monica Lee**
 *Head of Communications, Thrive Global*
-monica@thriveglobal.com
+[monica@thriveglobal.com](mailto:monica@thriveglobal.com)
 
 **Krista Eccleston**
 *Edelman*
-krista.eccleston@edelman.com
+[krista.eccleston@edelman.com](mailto:krista.eccleston@edelman.com)

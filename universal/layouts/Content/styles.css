@@ -23,8 +23,14 @@
   float: none;
 }
 
-h1 {
-  padding-top: 3rem;
+h1, h2, h3 {
+  line-height: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   clear: both;
   text-align: center !important;
+}
+
+a:hover {
+  color: #444;
 }
