@@ -1,3 +1,5 @@
+@value Playfair from 'all';
+
 .SectionContainer{
   lost-column: 1 flex;
   background-color: white;
@@ -28,10 +30,10 @@
 
 .missionStatement{
   padding: 5vh;
-  font-family: 'playfair display'
+  font-family: Playfair;
 
 }
 .content{
-  padding: 20px 2rem;
+  padding: 1.25rem 2rem;
   text-align: left;
 }
