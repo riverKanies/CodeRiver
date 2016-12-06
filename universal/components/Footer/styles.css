@@ -46,7 +46,7 @@
 		letter-spacing: 1px;
 
 		&.quote {
-			@media bp-grand-bear {
+			@media bp-mama-bear {
 				text-align: left;
 				font-size: 1.25rem;
 			}
@@ -62,7 +62,7 @@
 		margin: 0;
 		text-align: center;
 
-		@media bp-grand-bear {
+		@media bp-mama-bear {
 			float: left;
 			margin: .625rem 1.25rem 0 -2.5rem;
 			text-align: left;
