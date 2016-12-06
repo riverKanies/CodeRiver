@@ -69,11 +69,7 @@ const homeQuote = {
 const thriveCommunity = {
   sectionClass: 'default',
   title: ' Join the Thrive Global Community',
-  hasLabel: 'labelTrue',
-  label: {
-    label: 'Community',
-    labelColor: 'defaultLabel'
-  },
+  hasLabel: 'labelFalse',
   sectionText: [
     `Changing the collective delusion that burnout is the price we must pay for` +
     `success requires collective action. It requires the collective stories of ` +
