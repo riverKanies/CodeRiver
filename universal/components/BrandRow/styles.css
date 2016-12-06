@@ -13,28 +13,57 @@
 
 .brands {
   background-color: white;
-  margin-bottom: 0.5rem;
   lost-column: 1;
+  float: none;
+  margin: 0 auto;
+  margin-bottom: 0;
+  text-align: center;
+  &:first-child {
+    margin-left: 1rem;
+    @media bp-mama-bear {
+      margin-left: inherit;
+    }
+    @media bp-papa-bear {
+      margin-left: 0;
+    }
+  }
+  &:last-child {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    @media bp-mama-bear {
+      float: left;
+    }
+    @media bp-papa-bear {
+      float: left;
+    }
+  }
   @media bp-mama-bear {
     lost-column: 1/2;
+    float: left;
   }
   @media bp-papa-bear {
     lost-column: 1/5;
+    float: left;
   }
 }
 
-.imageWrap {
-  position: relative;
-  lost-column: 1;
-  .image {
-    lost-column: 1;
-    height: 6rem;
-    object-fit: none;
-    @media bp-papa-bear {
-      height: auto;
-    }
-  }
+.image {
+  max-width: 100%;
+  width: 50%;
   @media bp-papa-bear {
-    margin-left: 2em;
+    width: auto;
   }
+}
+
+img {
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 0;
+  text-align: center;
+  float: none;
+}
+
+.container {
+  padding: 0 3rem;
 }
