@@ -6,23 +6,39 @@ import Input from 'components/BasicInput'
 
 type Props = {
   title: string,
+  message: string,
   handleSubmit: Function,
   pristine: boolean,
   submitting: boolean
 };
 
+type HeaderProps = {
+  title: string,
+  message: string
+}
+
+export function FormHeader ({
+  title,
+  message
+}: HeaderProps) {
+  return (
+    <header className={styles.header}>
+      <h2 className={styles.h2} id='emailCaptureTitleLine'>{message || title}</h2>
+    </header>
+  )
+}
+
 const EmailCapture = ({
   title = 'Sign up for the #thrivenow newsletter',
   handleSubmit = () => null,
+  message,
   pristine = false,
   submitting = false
 }: Props) => {
   return (
     <section className={styles.emailCapture}>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h2 className={styles.h2}>{title}</h2>
-        </header>
+        <FormHeader title={title} message={message} />
         <form onSubmit={handleSubmit}>
           <span className={styles.inputWrap}>
             <Field

@@ -9,6 +9,7 @@ type Props = {
   microstep: {
     cta_text: string,
     title: string,
+    vendor: string,
     body_html: string,
     link: string,
     price: string,
@@ -33,8 +34,8 @@ const ProductMicrostep = ({ microstep, showLabel = false }: Props) => {
           <h1 className={styles.msTitle}>{microstep.title}</h1>
         </header>
 
-        <span className={styles.productBy}>
-          <h4><em>by</em> NAME</h4>
+        <span id='microstep-name' className={styles.productBy}>
+          <h4><em>by</em> {microstep.vendor}</h4>
         </span>
 
         <div dangerouslySetInnerHTML={{__html: microstep.body_html}} />
@@ -64,6 +65,7 @@ ProductMicrostep.defaultProps = {
   microstep: {
     title: 'Product',
     body_html: 'Stuff',
+    vendor: 'Thrive Global',
     link: 'link/to/store',
     price: '$0.00',
     image: {

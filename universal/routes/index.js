@@ -17,6 +17,7 @@ import PWUOverview from 'layouts/PartnerWithUs/Overview'
 import PWUCorporate from 'layouts/PartnerWithUs/Corporate'
 import PWUContent from 'layouts/PartnerWithUs/Content'
 import PWUCommerce from 'layouts/PartnerWithUs/Commerce'
+import CognitoForm from 'layouts/Cognito'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
@@ -116,6 +117,10 @@ export const createRoutes = (store) => ([
       {
         path: 'popup',
         component: PopupStore
+      },
+      {
+        path: 'product-information-request',
+        component: CognitoForm
       },
       {
         path: 'signup',

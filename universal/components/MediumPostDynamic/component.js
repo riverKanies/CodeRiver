@@ -32,7 +32,7 @@ function Author ({ name }: { name: string }) {
 const MediumPostDynamic = ({
   cardType = 'half',
   hasImage = 'imageTrue',
-  hasSynopsis = 'synopsisTrue',
+  hasSynopsis = 'synopsisFalse',
   title = 'This is a super long placeholder title that should clip with and ellipses on the lil guys.',
   author = 'Thrive Contributor',
   tags = [],
@@ -48,16 +48,16 @@ const MediumPostDynamic = ({
       className={styles[cardType]}
     >
       <ContentLabel label={tags[0]} />
-      <section className={styles.postContent}>
+      <article className={styles.postContent}>
         <div className={styles[hasImage]}>
           <img className={styles.image} src={cover_image} alt={title} />
         </div>
         <header className={styles.header}>
           <h2>{title}</h2>
         </header>
-        <section className={styles.synopsisFalse} />
+        <section className={styles[hasSynopsis]} />
         <Author name={author} />
-      </section>
+      </article>
     </a>
   )
 }
