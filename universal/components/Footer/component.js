@@ -40,7 +40,7 @@ const Footer = ({
           <div className={styles.heading}>
             {heading}
           </div>
-          <ul>
+          <ul className={styles.list}>
             <li className={styles.footerLinks}>
               <a href='/about'>About Us</a>
             </li>
