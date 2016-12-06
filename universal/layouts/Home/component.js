@@ -70,10 +70,6 @@ const thriveCommunity = {
   sectionClass: 'default',
   title: ' Join the Thrive Global Community',
   hasLabel: 'labelFalse',
-  label: {
-    label: 'Apps',
-    labelColor: 'defaultLabel'
-  },
   sectionText: [
     `Changing the collective delusion that burnout is the price we must pay for` +
     `success requires collective action. It requires the collective stories of ` +
@@ -82,8 +78,8 @@ const thriveCommunity = {
   image: communityImg,
   hasButton: 'buttonTrue',
   link: {
-    linkText: 'Learn More',
-    externalLink: 'https://journal.thriveglobal.com/join-the-thrive-global-community-3aa96f08423e#.nz1xe912c',
+    linkText: 'Read More',
+    linkTo: 'https://journal.thriveglobal.com/join-the-thrive-global-community-3aa96f08423e#.nz1xe912c',
     linkStyle: 'blue'
   }
 }
