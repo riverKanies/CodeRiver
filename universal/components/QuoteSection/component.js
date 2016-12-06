@@ -9,10 +9,10 @@ type Props = {
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: string,
-  hasImage: 'imageTrue' | 'imageFalse',
   quoteImage: any,
   quoteLink: 'quoteTrue' | 'quoteFalse',
   quoteURL: string,
+  hasImage: 'imageTrue' | 'imageFalse',
   imageShape: 'roundImage' | 'squareImage'
 };
 
@@ -23,24 +23,24 @@ const defaultQuote = [
 
 const defaultImage = dummyImage
 
-function QuoteLinkTrue (props) {
+// JSX Logic For Linked Quote
+function QuoteLinkTrue (
+  { quoteLink }: { quoteLink: string }, { quoteURL }: { quoteURL: string }, { quote }: {quote: Array<string> }) {
   return (
     <q className={styles.quote}>
       <a href={quoteURL} target='_blank'>{quote.map((paragraph, index) => <span key={index}>{quote}</span>)}</a>
     </q>
   )
 }
-
-function QuoteLinkFalse (props) {
+function QuoteLinkFalse ({ quote }: {quote: Array<string> }) {
   return (
     <q className={styles.quote}>
       {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
     </q>
   )
 }
-
-function QuoteLinked (props) {
-  const quoteTrue = props.quoteLink
+function QuoteLinked ({ quoteLink }: { quoteLink: string}) {
+  const quoteTrue = Props.quoteLink
   if (quoteTrue) {
     return <QuoteLinkTrue />
   }
@@ -55,7 +55,9 @@ const QuoteSection = ({
   citation = 'Arriana Huffington',
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
-  imageShape = 'roundImage'
+  imageShape = 'roundImage',
+  quoteLink = 'quoteFalse',
+  quoteURL = 'https://journal.thriveglobal.com'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
@@ -65,9 +67,7 @@ const QuoteSection = ({
         </section>
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
-            <q className={styles.quote}>
-              {quote.map((paragraph, index) => <span key={index}>{quote}</span>)}
-            </q>
+            <QuoteLinked />
             <cite className={styles.citation}>{citation}</cite>
           </section>
         </section>

@@ -8,17 +8,24 @@ import QuoteSection from './component'
 
 const notes = 'This story demonstrates the props that can be passed to thw QuoteSection component.'
 
-const bgColor = [
-  'default',
-  'white',
-  'gray',
-  'purple'
-]
-
 const defaultQuote = [
   `Intention is one of the most powerful forces there is.
   What you mean when you do a thing will always determine the outcome.`
 ]
+
+const Props = {
+  bgColor: [
+    'default',
+    'white',
+    'gray',
+    'purple'
+  ],
+  quoteLink: [
+    'quoteTrue',
+    'quoteFalse'
+  ],
+  quoteUrl: 'string'
+}
 
 storiesOf('QuoteSection', module)
   .addDecorator(withKnobs)
@@ -26,10 +33,12 @@ storiesOf('QuoteSection', module)
     return (
       <WithNotes notes={notes}>
         <QuoteSection
-          bgColor={select('Background Color', bgColor, 'default')}
+          bgColor={select('Background Color', Props.bgColor, 'default')}
           quote={text('Quote Text', defaultQuote)}
           citation={text('Cite', 'Arriana Huffington')}
           quoteImage={text('Quote Image', dummyImage)}
+          quoteLink={select('Does this need to link out?', Props.quoteLink, [1])}
+          quoteURL={text('URL For Quote', Props.quoteUrl)}
         />
       </WithNotes>
     )
