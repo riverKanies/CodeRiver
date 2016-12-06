@@ -1,5 +1,4 @@
 import React from 'react'
-import sinon from 'sinon'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import { shallow, render, mount } from 'enzyme'
@@ -58,7 +57,7 @@ describe('(Container) EmailCapture', () => {
     let subject;
 
     beforeEach(() => {
-      onSubmit = sinon.stub().returns(Promise.resolve())
+      onSubmit = jest.fn(() => Promise.resolve())
       const props = { onSubmit }
       subject = mount(
         <WithProvider>
@@ -74,7 +73,7 @@ describe('(Container) EmailCapture', () => {
       input.simulate('change', { target: { value: 'blueberry' } })
       form.simulate('submit')
 
-      expect(onSubmit.callCount).toEqual(0)
+      expect(onSubmit.mock.calls.length).toBe(0)
     })
 
     it('submits when we have a valid email address', () => {
@@ -84,7 +83,7 @@ describe('(Container) EmailCapture', () => {
       input.simulate('change', { target: { value: 'test@email.com' } })
       form.simulate('submit')
 
-      expect(onSubmit.callCount).toEqual(1)
+      expect(onSubmit.mock.calls.length).toBe(1)
     })
   })
 
