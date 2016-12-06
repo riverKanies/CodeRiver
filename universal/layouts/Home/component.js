@@ -61,8 +61,9 @@ const homeQuote = {
   citation: `Dr. David Agus,
     \n Professor of Medicine & Engineering USC,
     \n Thrive Global board member`,
-
-  imageShape: 'roundImage'
+  imageShape: 'roundImage',
+  isLink: true,
+  quoteURL: 'https://journal.thriveglobal.com/why-we-need-corporate-well-being-programs-more-than-ever-56bcbe0f52f1'
 }
 const pathways = {
   bgColor: 'blurple',
