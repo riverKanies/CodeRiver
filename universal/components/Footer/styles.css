@@ -132,6 +132,13 @@
 			color: #666;
 			padding-left: 2px;
 		}
+
+		&.ampersand {
+
+			&::after {
+				display: none;
+			}
+		}
 	}
 }
 

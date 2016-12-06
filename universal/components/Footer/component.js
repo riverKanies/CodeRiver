@@ -99,7 +99,7 @@ const Footer = ({
           <Link to='/thrive/privacy' className={styles.link}>
             Privacy
           </Link>
-          <p>&</p>
+          <p className={styles.ampersand}>&</p>
           <Link to='/thrive/terms' className={styles.link}>
             Terms
           </Link>
