@@ -168,10 +168,15 @@ cite {
 
 /* ===== LINKS ===== */
 
-.link {
+a {
 	color: darkGray;
 	padding: 0 .313rem;
 	font-family: Mon;
+	&.link {
+		&:hover {
+			color: white;
+		}
+	}
 }
 
 .footerLinks {
@@ -214,12 +219,11 @@ cite {
 	  }
 		a {
 			color: darkGray;
+			&:hover {
+				color: white;
+			}
 		}
 	}
-}
-
-a:hover {
-	color: white;
 }
 
 /* ===== SOCIAL ===== */
