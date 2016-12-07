@@ -16,6 +16,8 @@ test:
     - npm run test:specs
     - npm run start:test:
         background: true
+    - java -jar bin/selenium-server-standalone-3.0.1.jar:
+        background: true
     - ./wait_for_server.sh
     - npm run test:features
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
