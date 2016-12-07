@@ -4,7 +4,7 @@
 	background-color: ThriveGray;
   margin: 0 auto;
   height: auto;
-  width: 100%;
+  lost-column: 1;
 
   @media bp-mama-bear {
     display: flex;
@@ -29,11 +29,11 @@
 	display: flex;
 	flex-direction: column;
 	flex-flow: center;
+	lost-column: 1;
 	align-items: center;
 	text-align: center;
 	margin-right: 0;
 	margin-bottom: 3.750rem;
-	width: 100%;
 	height: auto;
 
 	p {
@@ -46,7 +46,7 @@
 		letter-spacing: 1px;
 
 		&.quote {
-			@media bp-mama-bear {
+			@media bp-papa-bear {
 				text-align: left;
 				font-size: 1.25rem;
 			}
@@ -62,14 +62,14 @@
 		margin: 0;
 		text-align: center;
 
-		@media bp-mama-bear {
+		@media bp-papa-bear {
 			float: left;
 			margin: .625rem 1.25rem 0 -2.5rem;
 			text-align: left;
 	  }
 	}
 
-	@media bp-mama-bear {
+	@media bp-papa-bear {
 		text-align: left;
 		display: block;
 		lost-column: 3.6/6;
@@ -168,9 +168,9 @@ cite {
 
 /* ===== LINKS ===== */
 
-a {
+a.link {
 	color: darkGray;
-	padding: 0 .313rem;
+	padding: 0 0.313rem;
 	font-family: Mon;
 	&.link {
 		&:hover {
