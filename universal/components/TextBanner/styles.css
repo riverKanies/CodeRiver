@@ -146,5 +146,8 @@
     color: inherit;
     font-family: PlayBlackItalic;
     font-style: italic;
+    &:first-child {
+      margin-bottom: 0;
+    }
   }
 }
