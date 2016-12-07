@@ -6,18 +6,19 @@
   height: 23.75rem;
   margin-bottom: 1.5rem;
   padding: 0 0;
+  position: relative;
   z-index: 1;
   cursor: pointer;
   @media bp-mama-bear {
-    lost-column: 1/2 flex;
+    lost-column: 1/2;
   }
   @media bp-grand-bear {
-    lost-column: 1/4 flex;
+    lost-column: 1/4;
   }
 }
 .image {
   lost-flex-container: row;
-  width: 22rem;
+  width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;

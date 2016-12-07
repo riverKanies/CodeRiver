@@ -29,17 +29,18 @@
   }
 }
 
+/* Column Container */
 .row {
   lost-center: containerWidth;
   margin: 0 auto;
   padding: containerPadding;
   float: none;
 }
-
 .biosRow {
 	margin-top: 10vh;
 }
 
+/* Modal Styles */
 .bioModal {
   box-sizing: border-box;
   height: 100%;
