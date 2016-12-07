@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles'
 import TeamSection from 'components/TeamSection'
-import AboutSection from 'components/AboutSection'
+import OneColTextWithHeader from 'components/OneColTextWithHeader'
 import CareerSection from 'components/CareerSection'
 import MiscSection from 'components/MiscSection'
 import ExtendedFamilySection from 'components/ExtendedFamilySection'
@@ -13,6 +13,7 @@ const aboutInro = {
     `Thrive Global’s mission is to end the epidemic of stress
     and burnout by offering companies and individuals sustainable, science-based
     solutions to enhance both well-being and performance.`,
+  largeCopyContent: true,
   text: [
     `Recent science has shown that the pervasive belief that burnout is the price
      we must pay for success is a delusion. We know, instead, that when we prioritize
@@ -34,7 +35,7 @@ const aboutInro = {
 export const AboutView = () => {
   return (
     <main role='main' className={styles.homePage}>
-      <AboutSection {...aboutInro} />
+      <OneColTextWithHeader {...aboutInro} />
       <TeamSection />
       <ExtendedFamilySection />
       <CareerSection />

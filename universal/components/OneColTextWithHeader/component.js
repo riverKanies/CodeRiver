@@ -5,6 +5,7 @@ type Props = {
   title: string,
   hasSubtitle: boolean,
   subTitle: string,
+  largeCopyContent: boolean,
   text: Array<string>
 };
 
@@ -12,9 +13,8 @@ type Props = {
 function Header ({
   title,
   hasSubtitle,
-  subTitle,
-  text
-}: { title: string, hasSubtitle: boolean, subTitle: string, text: Array<string>, }) {
+  subTitle
+}: { title: string, hasSubtitle: boolean, subTitle: string }) {
   if (hasSubtitle) {
     return (
       <header className={styles.header}>
@@ -24,9 +24,28 @@ function Header ({
     )
   }
   return (
-    <header className={styles.header}>
+    <header className={styles.headerNoSub}>
       <h1 className={styles.h1}>{title}</h1>
     </header>
+  )
+}
+
+// JSX Logic, Large or Small Copy Text, True/False
+function CopyContent ({
+  largeCopyContent,
+  text
+}: { largeCopyContent: boolean, text: Array<string>, }) {
+  if (largeCopyContent) {
+    return (
+      <div className={styles.copyContentGrow}>
+        {text.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+      </div>
+    )
+  }
+  return (
+    <div className={styles.copyContent}>
+      {text.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+    </div>
   )
 }
 
@@ -36,10 +55,11 @@ const defaultText = [
   lacinia bibendum nulla sed consectetur.`
 ]
 
-const AboutSection = ({
+const OneColTextWithHeader = ({
   title = 'Title',
   hasSubtitle = false,
   subTitle = 'Sub Title',
+  largeCopyContent = false,
   text = defaultText
 }: Props) => {
   return (
@@ -47,13 +67,11 @@ const AboutSection = ({
       <div className={styles.container}>
         <section className={styles.content}>
           <Header title={title} hasSubtitle={hasSubtitle} subTitle={subTitle} text={text} />
-          <div className={styles.copyContent}>
-            {text.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-          </div>
+          <CopyContent largeCopyContent={largeCopyContent} text={text} />
         </section>
       </div>
     </section>
   )
 }
 
-export default AboutSection
+export default OneColTextWithHeader
