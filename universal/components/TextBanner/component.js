@@ -7,7 +7,7 @@ type Props = {
   'imageBlue' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
-  subTitle: Array<string> | string,
+  subTitle: any
 }
 
 function renderSubtitle (subTitle: Array<string> | string) {
