@@ -7,7 +7,7 @@ type Props = {
   'imageBlue' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
-  subTitle: string,
+  subTitle: any,
 }
 
 const TextBanner = ({
@@ -25,7 +25,7 @@ const TextBanner = ({
         <div className={styles.divider} />
         <section className={styles.columnWrap}>
           <div className={styles.column}>
-            <h3>{subTitle}</h3>
+            {subTitle.map((paragraph, i) => (<h3 key={i}>{paragraph}</h3>))}
           </div>
         </section>
       </div>
