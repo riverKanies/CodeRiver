@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="pathway"
+    errors="0" failures="1" hostname="" id="" package="pathway" skipped="0"
+    tests="1" time="2.004" timestamp="Wed, 07 Dec 2016 18:23:58 GMT">
+  
+    <testcase name="Pathway" time="2.004" assertions="1">  <failure message="Timed out while waiting for element &lt;#pathway_container&gt; to be present for 1000 milliseconds.">    at Object.Pathway (/Users/travispalmer/Development/Spartan/thrive-marketing/features/pathway.js:5:8)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)</failure>
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
