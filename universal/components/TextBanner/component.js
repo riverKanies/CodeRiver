@@ -7,13 +7,13 @@ type Props = {
   'imageBlue' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
   hasTitle: 'titleTrue' | 'titleFalse',
   title: string,
-  subTitle: any,
+  subTitle: Array<string>,
 }
 
 const TextBanner = ({
   bgColor = 'imageTeal',
   hasTitle = 'titleTrue',
-  subTitle = 'Sub Title',
+  subTitle = ['Sub Title'],
   title = 'Title'
 }: Props) => {
   return (
@@ -25,7 +25,7 @@ const TextBanner = ({
         <div className={styles.divider} />
         <section className={styles.columnWrap}>
           <div className={styles.column}>
-            {subTitle.map((paragraph, i) => (<h3 key={i}>{paragraph}</h3>))}
+            {subTitle.map((paragraph, index) => <h3 key={index}>{paragraph}</h3>)}
           </div>
         </section>
       </div>
