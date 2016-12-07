@@ -40,7 +40,7 @@ const Footer = ({
           <div className={styles.heading}>
             {heading}
           </div>
-          <ul>
+          <ul className={styles.list}>
             <li className={styles.footerLinks}>
               <a href='/about'>About Us</a>
             </li>
@@ -63,7 +63,7 @@ const Footer = ({
               <a href='/about#press'>Press</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='thrive/press'>Press Releases</a>
+              <a href='/press-releases'>Press Releases</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/about#team'>Team</a>
@@ -99,7 +99,7 @@ const Footer = ({
           <Link to='/thrive/privacy' className={styles.link}>
             Privacy
           </Link>
-          <p>&</p>
+          <p className={styles.ampersand}>&</p>
           <Link to='/thrive/terms' className={styles.link}>
             Terms
           </Link>

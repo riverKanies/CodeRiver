@@ -10,12 +10,13 @@ const text = [`Join the team that is changing the way we work and live.
   Email us with your resume attached at jobs@thriveglobal.com to learn about
   joining our Thrive Tribe!`]
 const label = { 'label': 'Careers' }
+const url = 'mailto:jobs@thriveglobal.com'
 
 export const CareerSection = () => {
   return (
     <section className={styles.SectionContainer} id='careers'>
       <section className={styles.content}>
-        <HalfTextOverlay title={title} sectionText={text} postLabel={label} bgImage={team} />
+        <HalfTextOverlay title={title} sectionText={text} url={url} postLabel={label} bgImage={team} />
       </section>
     </section>
   )

@@ -1,4 +1,5 @@
 import Content from 'layouts/Content'
+import PressReleases from 'layouts/Content/PressReleases'
 import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
 import Microsteps from 'layouts/Microsteps'
 import Give from 'layouts/Give'
@@ -145,6 +146,10 @@ export const createRoutes = (store) => ([
       {
         path: 'thrive/:page_id',
         component: Content
+      },
+      {
+        path: 'press-releases',
+        component: PressReleases
       },
       {
         path: '*',
