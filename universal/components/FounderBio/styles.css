@@ -2,6 +2,7 @@
 
 .container {
   margin-left: 1rem;
+  cursor: pointer;
 }
 .subTitle{
   padding:0 0 5vh 5vh;
@@ -35,7 +36,7 @@
   padding: 20px;
   color: white;
   align-self: flex-end;
-  background: linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.4));  
+  background: linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.4));
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
 
  h3 {
