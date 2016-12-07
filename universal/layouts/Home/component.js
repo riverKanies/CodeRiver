@@ -71,7 +71,7 @@ const thriveCommunity = {
   title: ' Join the Thrive Global Community',
   hasLabel: 'labelFalse',
   sectionText: [
-    `Changing the collective delusion that burnout is the price we must pay for` +
+    `Changing the collective delusion that burnout is the price we must pay for ` +
     `success requires collective action. It requires the collective stories of ` +
     `how people are changing the way they work and live. We want to hear yours.`
   ],

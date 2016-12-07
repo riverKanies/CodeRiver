@@ -40,7 +40,7 @@ const Footer = ({
           <div className={styles.heading}>
             {heading}
           </div>
-          <ul>
+          <ul className={styles.list}>
             <li className={styles.footerLinks}>
               <a href='/about'>About Us</a>
             </li>
@@ -99,7 +99,7 @@ const Footer = ({
           <Link to='/thrive/privacy' className={styles.link}>
             Privacy
           </Link>
-          <p>&</p>
+          <p className={styles.ampersand}>&</p>
           <Link to='/thrive/terms' className={styles.link}>
             Terms
           </Link>
