@@ -1,8 +1,18 @@
 @value bp-mama-bear, containerWidth, containerPadding from 'all';
 
 .container {
-  margin-left: 1rem;
-  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: babyPadding;
+  background-color: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media papa-bear {
+    padding: papaPadding;
+  }
 }
 .subTitle{
   padding:0 0 5vh 5vh;
@@ -18,6 +28,10 @@
 }
 
 .content {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
 }
 
 .image {

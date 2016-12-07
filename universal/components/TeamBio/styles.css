@@ -2,19 +2,17 @@
 @value bp-mama-bear, bp-grand-bear from breakpoints;
 
 .bio {
-  width: 22rem;
+  lost-column: 1 flex;
   height: 23.75rem;
   margin-bottom: 1.5rem;
-  lost-column: 1 flex;
-  lost-center: containerWidth flex;
+  padding: 0 0;
   z-index: 1;
-  padding: 2rem 0rem 1rem 1rem;
   cursor: pointer;
   @media bp-mama-bear {
-    lost-column: 1/2;
+    lost-column: 1/2 flex;
   }
   @media bp-grand-bear {
-    lost-column: 1/4;
+    lost-column: 1/4 flex;
   }
 }
 .image {
@@ -25,7 +23,7 @@
   background-size: cover;
 }
 .text {
-  lost-column: 1 flex;
+  width: 100%;
   z-index: 1;
   padding: 20px;
   color: white;
