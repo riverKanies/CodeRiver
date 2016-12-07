@@ -84,7 +84,7 @@ Thrive Global’s commerce platform offers a curated selection of the best techn
 
 Thrive Global is collaborating with Amazon on an Alexa skill, Power Down, to help customers incorporate well-being activities into their everyday lives – just in time for the busy holiday season. The Power Down skill helps customers relax before sleep with guided meditation. Starting November 30, Alexa device owners can enable the skill by saying, “Alexa, enable the Thrive skill.” Once enabled, customers can start their Power Down meditation by saying, *“Alexa, open Thrive,”* or *“Alexa, ask Thrive for a Power Down.” “The holiday season can sometimes be stressful with family to host, presents to buy and parties to attend, so we’re excited to collaborate with Ariana Huffington and Thrive to offer customers a way to escape the busyness and focus on their well-being,”* said Steve Rabuchin, Vice President, Amazon Alexa. *“The Thrive skill complements other Alexa capabilities – like timers, to do lists and smart home — to help make customers’ lives easier and more balanced year round.”*
 
-Arianna and Thrive Global have joined forces with Audible, the world’s largest producer of downloadable audiobooks and other spoken word entertainment, to create *“Goodnight Smartphone,”* a timely and soothing parody of the beloved children’s book *"Goodnight Moon"* that encourages listeners to eliminate distractions at bedtime in favor of better sleep. The story, which Arianna narrates, will be available as a free download exclusively at Audible this January. 
+Arianna and Thrive Global have joined forces with Audible, the world’s largest producer of downloadable audiobooks and other spoken word entertainment, to create *“Goodnight Smartphone,”* a timely and soothing parody of the beloved children’s book *"Goodnight Moon"* that encourages listeners to eliminate distractions at bedtime in favor of better sleep. The story, which Arianna narrates, will be available as a free download exclusively at Audible this January.
 In collaboration with its scientific advisory board, Thrive Global vetted hundreds of the latest and most cutting-edge health and well-being technologies, products, and services to curate those that meet standards for quality and impact. To see the complete curation visit shop.thriveglobal.com. Examples of our commerce partners are below, many of which are exclusive to Thrive Global or first-to-market.
 
 Thrive Global is partnering with Fitbit, the leader in the connected health and fitness category, to offer Thrive Global clients the Fitbit corporate wellness experience, which provides a custom company storefront, Fitbit activity trackers, a program dashboard and engaging corporate challenges to help companies promote employee well-being. In addition, Fitbit’s leading wearable devices that help people stay motivated and improve health and wellness by being more active, exercising more, eating smarter, managing weight, and tracking sleep, will be available to consumers through the Thrive Global online shop and pop-up retail store.
@@ -124,7 +124,8 @@ Thrive Global is proud to partner with best-in-class leaders in the health and w
 #### Acorns
 Acorns is the leading micro investing app that's automating saving and investing for more than 1 million people. Acorns smart portfolio algorithms automatically work in the background of life, helping users build wealth naturally, pennies at a time. Learn how easy it is to invest in your future at www.acorns.com.
 
-#### Amazon Amazon products support better sleep and well-being: Kindle is an anti-blue light reading device; Echo keeps screens out of the bedroom; and Audible spreads wisdom and wonder on the go. 
+#### Amazon 
+Amazon products support better sleep and well-being: Kindle is an anti-blue light reading device; Echo keeps screens out of the bedroom; and Audible spreads wisdom and wonder on the go.
 Thrive Global is partnering with Echo on a series of skills to help users integrate well-being measures into their everyday lives, starting with a sleep “Power Down” skill launching November 30. We are partnering with Audible on Goodnight Smartphone.
 
 #### Aros
@@ -151,14 +152,14 @@ As the world’s largest online platform dedicated to cause-based fundraising, C
 Deepstream VR is pioneering virtual reality games to relieve pain and improve healthcare. They are one of the longest standing innovators to use VR’s high bandwidth channel to the brain to boost physical and mental health. The Thrive Global Store brings this healthcare innovation - usually reserved for clinical settings - direct to consumers.
 
 #### Dermalogica
- Number one choice of skin care professionals worldwide. Developed by The International Dermal Institute, the brand provides Thrive consumers with bedtime and morning rituals to take nourish the health of your skin.  The Dermalogica Daily superfoilant is a new product (used prior to bedtime to remove pollution adhesions to smooth away the day/smooth away skin aging pollution. Removing pollution ahead of sleep as your skin transforms from its daytime defense mode to nighttime regenerate mode, pollution oxidizes the tissues if not washed away while your skin is trying to regenerate) 
+Number one choice of skin care professionals worldwide. Developed by The International Dermal Institute, the brand provides Thrive consumers with bedtime and morning rituals to take nourish the health of your skin.The Dermalogica Daily superfoilant is a new product (used prior to bedtime to remove pollution adhesions to smooth away the day/smooth away skin aging pollution. Removing pollution ahead of sleep as your skin transforms from its daytime defense mode to nighttime regenerate mode, pollution oxidizes the tissues if not washed away while your skin is trying to regenerate)
 
 #### Doctors on Demand
 Doctor On Demand is proud to partner with Thrive Global, another mission-driven organization that's as committed as we are to putting people back in charge of their own health and well-being.
 
 Doctor On Demand’s mission is to improve the world’s health through compassionate care and innovation. Through live video visits on a smartphone or computer, our hand-picked, US-trained doctors take patient history, perform an exam, and recommend a treatment plan. Prescriptions, if needed, go directly to the pharmacy of choice. While insurance isn’t required, tens of millions of Americans enjoy covered medical and mental health visits through employer and health plan partnerships.
 
-*“Doctors On Demand is honored to be selected as the video medicine partner for Thrive Global. We've found another mission-driven organization that's as committed as we are to disrupting healthcare-as-usual and putting people back in charge of their own health and well-being."* Hill Ferguson, CEO
+*“Doctors On Demand is honored to be selected as the video medicine partner for Thrive Global. We've found another mission-driven organization that's as committed as we are to disrupting healthcare-as-usual and putting people back in charge of their own health and well-being."* —Hill Ferguson, CEO
 
 #### Doppler Labs
 Here One™ is the first all-in-one, truly wireless listening system. With two smart earbuds and a connected app, you can stream music, take phone calls, reduce unwanted noise, amplify speech, access Siri and Google Assistant, and more. Improve your focus and productivity by selectively choosing what you want to hear and removing what you don’t using Here One’s proprietary Smart Noise Cancellation. Everything else is just a headphone. Consumers visiting the Thrive Global Store can learn more about and pre-order Here One, which will begin shipping in February 2017.
@@ -167,7 +168,7 @@ Here One™ is the first all-in-one, truly wireless listening system. With two s
 Creativity is one of the greatest source of wonder. Making creative thinking accessible is at the core of FiftyThree's mission and that's why this New York city based tool maker is a natural partner for Thrive Global. Millions of creative thinkers around the world have expressed their ideas in sketches, diagrams, notes, and illustrations using FiftyThree's award winning iPad and iPhone application "Paper" and digital stylus "Pencil". Together they transform a phone and tablet into a simple and beautiful tool for creation. Embraced by leading designers, architects, consultants, and teachers, FiftyThree's tools bring out creativity in everyone.
 
 #### Fitbit
-Fitbit's family of wearable fitness technology products help you stay motivated and improve your health by tracking your activity, exercise, food, weight and sleep. 
+Fitbit's family of wearable fitness technology products help you stay motivated and improve your health by tracking your activity, exercise, food, weight and sleep.
 Thrive Global is also partnering with Fitbit, the leader in the connected health and fitness category, to offer Thrive Global’s clients the Fitbit corporate wellness experience, which provides a custom company storefront, Fitbit activity trackers, a program dashboard and engaging corporate challenges to help companies promote employee well-being.
 
 #### Gunnar
@@ -182,10 +183,10 @@ Headspace is a course of guided meditation for 10 minutes a day, everyday, deliv
 Founded in 2010 by Rich Pierson and Andy Puddicombe, Headspace’s mission is to improve the health and happiness of the world. They offer guided meditations, animations, and videos via their website and mobile app, teaching users the skills of meditation and mindfulness. The Headspace app is one of the top-ranking Health & Fitness apps on iTunes, with over 10 million users in more than 190 countries.
 
 #### Health.io
- This innovative Israeli company uses color sensing technology to improve healthcare testing and data gathering. Their inaugural product is launching with Thrive Global, an at-home urine test that keeps data and privacy in consumer’s hands. 
+This innovative Israeli company uses color sensing technology to improve healthcare testing and data gathering. Their inaugural product is launching with Thrive Global, an at-home urine test that keeps data and privacy in consumer’s hands.
 
 #### Here
-Here One is the first all-in-one, truly wireless active listening system. With two smart earbuds and a connected app, you can reduce unwanted noise, amplify speech, stream music, take phone calls, access Siri and Google Now, and more. Selectively choose what you want to hear and remove what you don’t using Smart Noise Cancellation.  
+Here One is the first all-in-one, truly wireless active listening system. With two smart earbuds and a connected app, you can reduce unwanted noise, amplify speech, stream music, take phone calls, access Siri and Google Now, and more. Selectively choose what you want to hear and remove what you don’t using Smart Noise Cancellation.
 
 #### Heartmath
 Heartmath Inc. is a cutting-edge wellness company providing a range of unique services, products, and technology to improve well-being, while dramatically reducing stress and boosting resilience and performance. For more than 20 years HeartMath and the nonprofit HeartMath Institute have demonstrated through clinical studies the critical link between emotions, heart function, and cognitive performance. HeartMath's solutions for stress relief have been published in numerous peer-reviewed journals. HeartMath Inc., clients include Duke Medicine, Stanford Business School, Stanford Children’s Hospital, Blue Cross Blue Shield, the Gottman Institute, Cleveland Clinic,, Kaiser Permanente, Boeing, the US Military and Law Enforcement Agencies.
@@ -205,7 +206,7 @@ Humanscale is the leader in ergonomic modern office furniture design. Their desk
 Thrive Global has also partnered with the office furniture company Humanscale, both online and in the pop-up store, where the ergonomic design company's new-to-market OfficeIQ technology — that inspires active workplaces — will be showcased.
 
 #### Illuminage
- Illuminage offers luxury beauty solutions, advanced treatment. The Skin Rejuvenating Pillowcase and Eye Mask allow consumers to get much needed rest with products that are anti-bacterial, anti-fungal and anti-microbial.  The healthy environment this creates along with the patented copper technology embedded into each and every fiber helps maintain skin’s youthful appearance and minimizes the visible signs of aging – including fine lines and wrinkles. 
+Illuminage offers luxury beauty solutions, advanced treatment. The Skin Rejuvenating Pillowcase and Eye Mask allow consumers to get much needed rest with products that are anti-bacterial, anti-fungal and anti-microbial.  The healthy environment this creates along with the patented copper technology embedded into each and every fiber helps maintain skin’s youthful appearance and minimizes the visible signs of aging – including fine lines and wrinkles.
 
 #### Juice Beauty
 Juice Beauty and Thrive Global are the perfect match. Juice Beauty was founded by serial wellness entrepreneur, Karen Behnke, whose first business was a corporate wellness company in the 1980s when the concept of wellness was in its infancy. Fast forward two decades  and Karen - now pregnant - found herself reading for the first time the ingredient labels on her beauty products and being shocked by what was inside the formulas. Karen believed she could do it better and avoid fillers like water and petroleum glycols, and instead formulate with certified organic ingredients. A decade later, Juice Beauty delivers clinically validated skincare and vibrant plant-pigment makeup that exceed the efficacy of conventional chemical formulas for the ultimate in skin health and wellness.
@@ -231,26 +232,26 @@ Lighting Science is the global leader in patented human health-focused LED light
 La Roche Posay, a division of L’Oreal, is on a mission to Save Our Skin. To raise awareness, their UV sensitive technology, UV Patch, lets you track your UV exposure through the course of the day. It remits UV absorption to an accompanying app. The Thrive Global Store is giving away this cool, healthcare technology as a gift with purchase of one of La Roche Posay’s groundbreaking sunscreens.
 
 #### Lumoid
-[Lumoid] (https://lumoid.com) is excited to be partnering with Thrive Global. Lumoid is a try-before-you-buy service that brings the latest in consumer electronics to you, to try at home. We have delivered thousands of items across the US to consumers, so they can truly test-drive test-drive the latest, cutting edge consumer electronics items, including health and wellness devices such as fitness trackers and heart rate monitors, from the comfort of their home, and only keep the ones that they love. Lumoid is also a great gifting option for the holidays — simply send a Home Try-On box, so that the recipient can choose the perfect gear for their needs.
+[Lumoid](https://lumoid.com) is excited to be partnering with Thrive Global. Lumoid is a try-before-you-buy service that brings the latest in consumer electronics to you, to try at home. We have delivered thousands of items across the US to consumers, so they can truly test-drive test-drive the latest, cutting edge consumer electronics items, including health and wellness devices such as fitness trackers and heart rate monitors, from the comfort of their home, and only keep the ones that they love. Lumoid is also a great gifting option for the holidays — simply send a Home Try-On box, so that the recipient can choose the perfect gear for their needs.
 
 Backed by YCombinator, Lumoid is one of the top 25 hottest startups in San Francisco, and is founded by SERIAL ENTREPRENEUR Aarthi Ramamurthy.Prior to Lumoid, Aarthi built Xbox LIVE at Microsoft for 6 years, and then joined Netflix to build the video streaming SDK for various CE platforms such as Sony, Panasonic, Apple etc. She hails from India, and has a Masters in software engineering.
 
 #### Murad
- Murad — transforming skin care with its unique, results-driven products. Murad is launching their new City Skin Overnight Detox Moisturizer (it doesn’t launch in retail until January so this would be an opportunity for customers to buy it before it’s available elsewhere). In store, Murad will be offering experiences like special guest lectures and storytelling and tips to optimize total body hydration including Eat Your Water recipes To complement their Hydro-Dynamic Moisture Cream.
+Murad — transforming skin care with its unique, results-driven products. Murad is launching their new City Skin Overnight Detox Moisturizer (it doesn’t launch in retail until January so this would be an opportunity for customers to buy it before it’s available elsewhere). In store, Murad will be offering experiences like special guest lectures and storytelling and tips to optimize total body hydration including Eat Your Water recipes To complement their Hydro-Dynamic Moisture Cream.
 
 #### Peloton
 Thrive Global is one of the first retailers of Peloton, the ground-breaking fitness company that lets you join studio cycling classes from the comfort of your home. Equipped with a 22-inch high-definition, sweat-proof touchscreen, Peloton offers a completely immersive fitness experience, letting you access live and on-demand classes from world class instructors and combining technology, performance metrics, and social connectivity to make every workout both effective and addicting. Peloton is sold online and in showrooms. For more information, visit: www.pelotoncycle.com
 
 #### Philips
-Global technology company with product strengths in Sleep, Lighting and Consumer technology. We are featuring their Biological Clock that gently wakes you up, as well as their new Health Watch that continuously monitors your movement, heart rate and sleep and links to a comprehensive app. 
+Global technology company with product strengths in Sleep, Lighting and Consumer technology. We are featuring their Biological Clock that gently wakes you up, as well as their new Health Watch that continuously monitors your movement, heart rate and sleep and links to a comprehensive app.
 
 #### The Pil-ookie
 The Pil-ookie team in California is thrilled to be linking arms cross-country with Thrive Global in New York.
 
 The Pil-ookie is the patented sleeping pillow that combines health and beauty-sleep. We all spend a third of lives sleeping. But sleeping is a top extrinsic cause of facial wrinkles. The Pil-ookie's proprietary design helps protects your skin from being compressed, deformed, and wrinkled during sleep. Facial creams, serums, acne medications can do their max. The gentle built-in slope puts your head at slight elevation optimizing venous return and lymphatic drainage, so you wake up with less puffiness. Every stitch 100% made with pride in the USA..
 
-#### Quell 
-The only FDA approved, 100% drug free wearable technology for widespread relief from chronic pain can help the one-in-three Americans who suffer from chronic pain. The neurotechnology device can even be used in your sleep. A long time secret of doctors, consumers can purchase Quell Relief directly at the Thrive Global Store. 
+#### Quell
+The only FDA approved, 100% drug free wearable technology for widespread relief from chronic pain can help the one-in-three Americans who suffer from chronic pain. The neurotechnology device can even be used in your sleep. A long time secret of doctors, consumers can purchase Quell Relief directly at the Thrive Global Store.
 
 #### Sakara Life
 Sakara Life is a wellness company on a mission to help you become your best self through the transformational power of food as medicine. Our organic, plant-based, ready-to-eat meal delivery program is available nationwide. We also offer an array of foods, beverages and supplements in our Clean Boutique. Each meal and product we create is made with clean, organic, functional ingredients and designed to help you attain real results, like brighter skin, a clearer mind and a body you love living in.
@@ -278,7 +279,7 @@ Our tapestries and home accents speak to you as you go about your day. They remi
 For the launch of Thrive Global, Thrive Market has created custom Thrive kits for the Holidays – Relaxation, Sleep & Balance, Meditation, and Healthy Snacks. Thrive Market offers top-selling, organic groceries at wholesale prices, democratizing access to healthy foods for all.
 
 #### Tribute.co
- Create collaborative video montages to express gratitude and joy — and have them delivered online and now in a physical video card. The Thrive Global Store will be the first retailer to sell Tribute.co video cards, coming early December. 
+Create collaborative video montages to express gratitude and joy — and have them delivered online and now in a physical video card. The Thrive Global Store will be the first retailer to sell Tribute.co video cards, coming early December.
 
 #### Twist
 Twist is pleased to partner with Thrive Global in an effort to drive awareness around the impact of light on health and wellness. Twist set out to make the smart home simple without complicated wires, hubs or installation. By leveraging the power of the light socket, Twist enables people to adopt smart lighting and wireless, high-quality audio with the simple twist of a light bulb. Twist Adapt, our proprietary lighting technology, adjusts to mimic the sun’s biologically-correct patterns throughout the day, providing energizing white light in the morning and calming yellow light in the evening. Additionally, Twist’s patented real-time clock intelligently adjusts the color of the bulb when the light switch is turned on, requiring no use of an app to control the lights.
@@ -288,7 +289,7 @@ uBiome uses big data to analyze the microbiome, the trillions of microorganisms 
 
 We’re excited to support ThriveGlobal’s mission of offering companies and individuals sustainable, science-based solutions to enhance both well-being and performance. We’re looking forward to helping you explore your microbiome!
 
-#### Vida Health
+#### Vida Health
 Vida Health is a mobile platform for wellness and chronic care that helps people lose weight, lower stress, exercise more, eat better, and manage and reverse chronic conditions like pre-diabetes, diabetes, high blood pressure, high cholesterol, anxiety and depression. Vida pairs an individual 1:1 with a human health coach who guides him or her through a personalized plan, leveraging evidence-based methods and programs. Vida is unique in that it creates a truly personalized approach for each individual, and marries that with the power of data - integrating with 100+ apps and devices, biometrics, and claims data - which provides visibility into progress. Vida delivers real health outcomes and is deployed at leading medical institutions such as Stanford, Duke, MD Anderson and Partners Healthcare. 80% of people that use Vida consistently see positive improvements in their health and biometrics. Try our *“Thrive Through the Holidays”* which focuses on weight loss, stress reduction and exercise to help you be your best self. For more information and to download the app, visit: www.vida.com/thriveglobal
 
 #### Vinaya
@@ -317,11 +318,11 @@ Thrive Global’s mission is to end the epidemic of stress and burnout by offeri
 
 <hr />
 
-#### Media Contacts
+### Media Contacts
 **Monica Lee**
 *Head of Communications, Thrive Global*
-monica@thriveglobal.com
+[monica@thriveglobal.com](mailto:monica@thriveglobal.com)
 
 **Krista Eccleston**
 *Edelman*
-krista.eccleston@edelman.com
+[krista.eccleston@edelman.com](mailto:krista.eccleston@edelman.com)
