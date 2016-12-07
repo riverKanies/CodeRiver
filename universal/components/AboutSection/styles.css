@@ -1,42 +1,106 @@
-.SectionContainer{
-	lost-column: 1 flex;
-	background-color: white;
-	text-align: left;
-	margin-top: 100px;
-	padding-top: 20vh;
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, lightGray, Playfair from 'all';
 
-	h2 { 
-    	position: relative;
-    	text-align: center
+.sectionContainer{
+	display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  position: relative;
+	background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
   }
-
-  h2:before{
-      content: '';
-      position: absolute;
-      top: 150%;
-      left: 50%;
-      bottom: -6px;
-      width: 130px;
-      height: 2px;
-      background: black;
-      transform:translateX(-65px) /*    width/2    */
+  @media bp-papa-bear {
+    padding: papaPadding;
   }
-} 
-
-.title{
-	border-bottom:50%;
+}
+.container {
+	lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+.content {
+	lost-column: 1;
+	height: auto;
+	margin: 0 auto;
+	padding: 0 0;
+	float: left;
+	@media bp-mama-bear {
+		width: 80%;
+		margin: 0 10%;
+		margin-right: 0;
+	}
+	@media bp-papa-bear {
+		width: 80%;
+		margin: 0 10%;
+	}
 }
 
-
-.missionStatement{
-	padding-left: 10vh;
-	padding-right: 10vh;
-	font-family: 'playfair display';
-	font-style:italic;
-
+.header, .copyContent {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 0;
+	float: left;
+	color: bodyCopy;
 }
-.content{
+.header {
+	text-align: center;
+	padding: babyHeader;
+}
+.h1 {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	padding: 0 0;
+	float: left;
+	position: relative;
+	font-size: 1.25em;
+	line-height: 100%;
+	text-align: center;
+	border-bottom: 50%;
+  @media bp-mama-bear {
+    font-size: 1.75em;
+  }
+  @media bp-papa-bear {
+    font-size: 2em;
+  }
+	&:before {
+		content: '';
+		width: 8.125rem;
+		height: .125rem;
+		position: absolute;
+		top: 150%;
+		left: 50%;
+		background: bodyCopy;
+		transform: translateX(-4.0625rem);
+	}
+}
+.h2 {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: .5em;
+	padding: 0 0;
+	float: left;
+	font-family: Playfair;
+	font-style: italic;
+	font-size: 1em;
+	line-height: 125%;
+	@media bp-mama-bear {
+		font-size: 1.25em;
+	}
+	@media bp-papa-bear {
+		font-size: 1.5em;
+	}
+}
+
+/*.content{
 	font-size: 130%;
 	padding-left: 10vh;
 	padding-right: 10vh;
-}
+}*/

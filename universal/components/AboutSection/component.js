@@ -25,13 +25,21 @@ const text = [
 
 export const AboutSection = () => {
   return (
-    <section className={styles.SectionContainer}>
-      <h2 className={styles.title}>{title}</h2>
-      <h3 className={styles.missionStatement}>{missionStatement}</h3>
-      <div>
-        {text.map(node =>
-          <p className={styles.content}>{node}</p>
-        )}
+    <section className={styles.sectionContainer}>
+      <div className={styles.container}>
+        <section className={styles.content}>
+
+          <header className={styles.header}>
+            <h1 className={styles.h1}>{title}</h1>
+            <h2 className={styles.h2}>{missionStatement}</h2>
+          </header>
+          <div className={styles.copyContent}>
+            {text.map(node =>
+              <p>{node}</p>
+            )}
+          </div>
+
+        </section>
       </div>
     </section>
   )
