@@ -7,14 +7,15 @@
   lost-center: containerWidth;
   margin: babyMargin auto 0 auto;
   padding: containerPadding;
+  padding-bottom: 1.5rem;
   float: none;
   clear: both;
   position: relative;
   @media bp-mama-bear {
-    margin: mamaMargin auto 0 auto;
+    margin: mamaMargin auto;
   }
   @media bp-papa-bear {
-    margin: papaMargin auto 0 auto;
+    margin: papaMargin auto;
   }
 }
 
@@ -27,34 +28,46 @@
   position: relative;
 }
 
-
 .imageWrap {
   display: block;
   width: 100%;
+  height: auto;
   margin: 0 0;
   padding: 0 0;
   float: left;
   text-align: center;
+  overflow: hidden;
   @media bp-papa-bear {
     z-index: -100;
   }
 }
+.imgLinkWrap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  overflow: hidden;
+}
 .image {
   display: block;
   width: 100%;
-  min-width: 100%;
+  min-height: 100%;
   margin: 0 0;
   padding: 0 0;
   float: left;
 }
 
 .postContent {
+  display: block;
   width: 100%;
   height: auto;
   float: left;
   overflow: hidden;
   background: ThriveBlue;
   @media bp-papa-bear {
+    display: flex;
     width: 50%;
     height: 100%;
     position: absolute;
@@ -115,7 +128,8 @@
 }
 .content {
   width: 100%;
-  padding: containerPadding;
+  height: auto;
+  padding: 1.5rem 1.5rem;
   @media bp-papa-bear {
     padding: 0 10%;
   }
@@ -145,8 +159,13 @@
 
 /* Button True/False */
 .hasButton {
+  display: block;
   width: 100%;
+  height: auto;
   float: left;
+  @media bp-papa-bear {
+    display: flex;
+  }
 }
 .buttonTrue {
   composes: hasButton;

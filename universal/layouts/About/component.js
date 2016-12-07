@@ -88,7 +88,7 @@ const careers = {
   ],
   url: 'mailto:jobs@thriveglobal.com',
   bgImage: careersImg,
-  hasButton: 'buttonTrue',
+  hasButton: 'buttonFalse',
   button: {
     buttonText: 'Thrive With Us',
     linkTo: 'mailto:jobs@thriveglobal.com',
