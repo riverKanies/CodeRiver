@@ -5,6 +5,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+	margin-top: 0;
   padding: babyPadding;
   float: left;
   position: relative;
@@ -25,9 +26,6 @@
 .content {
 	lost-column: 1;
 	height: auto;
-	margin: 0 auto;
-	padding: 0 0;
-	float: left;
 	@media bp-mama-bear {
 		width: 80%;
 		margin: 0 10%;
@@ -39,21 +37,24 @@
 	}
 }
 
-.header, .copyContent {
-	display: block;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 0;
+.header,
+.copyContent {
+	lost-column: 1;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 	float: left;
+	clear: both;
 	color: bodyCopy;
 }
 .header {
+	margin: 0 auto;
 	text-align: center;
-	padding: babyHeader;
 }
 .h1 {
 	display: block;
 	width: 100%;
+	height: auto;
 	margin: 0 auto;
 	margin-bottom: 2em;
 	padding: 0 0;
@@ -74,17 +75,21 @@
 		width: 8.125rem;
 		height: .125rem;
 		position: absolute;
-		top: 150%;
+		top: 2.375rem;
 		left: 50%;
 		background: bodyCopy;
 		transform: translateX(-4.0625rem);
+		@media bp-mama-bear {
+			top: 3.75rem;
+		}
 	}
 }
 .h2 {
 	display: block;
 	width: 100%;
+	height: auto;
 	margin: 0 auto;
-	margin-bottom: .5em;
+	margin-bottom: 0;
 	padding: 0 0;
 	float: left;
 	font-family: Playfair;
@@ -96,6 +101,20 @@
 	}
 	@media bp-papa-bear {
 		font-size: 1.5em;
+	}
+}
+.copyContent {
+	display: block;
+	width: 100%;
+	margin: 1.25rem auto 0 auto;
+	padding: 0 0;
+	float: left;
+	@media bp-mama-bear {
+		margin: 2rem auto 0 auto;
+		font-size: 112.5%;
+	}
+	@media bp-papa-bear {
+		font-size: 125%
 	}
 }
 

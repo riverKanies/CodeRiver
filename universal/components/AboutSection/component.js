@@ -1,44 +1,55 @@
 import React from 'react'
 import styles from './styles'
 
-const missionStatement = `Thrive Global’s mission is to end the epidemic of stress
-  and burnout by offering companies and individuals sustainable, science-based
-  solutions to enhance both well-being and performance.`
+type Props = {
+  title: string,
+  hasSubtitle: boolean,
+  subTitle: string,
+  text: Array<string>
+};
 
-const title = 'About Thrive Global'
-const text = [
-  `Recent science has shown that the pervasive belief that burnout is the price
-   we must pay for success is a delusion. We know, instead, that when we prioritize
-   our well-being, our decision-making, creativity and productivity improve
-   dramatically.`,
-  `Thrive Global's three interconnected core components are: corporate trainings
-   and workshops that bring the latest strategies and tools around health and
-   well-being to organizations; a media platform that serves as the global hub
-   for the conversation about well-being and performance with an emphasis on
-   action; and, an e-commerce platform that offers a curated selection of the best
-   technology and products for well-being. Together, the three components create
-   an integrated platform that empowers people to make sustainable changes to
-   their daily lives, going from knowing what to do to actually doing it.`,
-  `Thrive Global is committed to accelerating the culture shift that allows
-   people to reclaim their lives and move from surviving to thriving.`
+// JSX Logic True/False Subtitle
+function Header ({
+  title,
+  hasSubtitle,
+  subTitle,
+  text
+}: { title: string, hasSubtitle: boolean, subTitle: string, text: Array<string>, }) {
+  if (hasSubtitle) {
+    return (
+      <header className={styles.header}>
+        <h1 className={styles.h1}>{title}</h1>
+        <h2 className={styles.h2}>{subTitle}</h2>
+      </header>
+    )
+  }
+  return (
+    <header className={styles.header}>
+      <h1 className={styles.h1}>{title}</h1>
+    </header>
+  )
+}
+
+const defaultText = [
+  `Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo,
+  tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean
+  lacinia bibendum nulla sed consectetur.`
 ]
 
-export const AboutSection = () => {
+const AboutSection = ({
+  title = 'Title',
+  hasSubtitle = false,
+  subTitle = 'Sub Title',
+  text = defaultText
+}: Props) => {
   return (
     <section className={styles.sectionContainer}>
       <div className={styles.container}>
         <section className={styles.content}>
-
-          <header className={styles.header}>
-            <h1 className={styles.h1}>{title}</h1>
-            <h2 className={styles.h2}>{missionStatement}</h2>
-          </header>
+          <Header title={title} hasSubtitle={hasSubtitle} subTitle={subTitle} text={text} />
           <div className={styles.copyContent}>
-            {text.map(node =>
-              <p>{node}</p>
-            )}
+            {text.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
           </div>
-
         </section>
       </div>
     </section>
