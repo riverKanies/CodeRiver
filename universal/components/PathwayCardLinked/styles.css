@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, MonBold, Mon, bodyCopy, darkGray, gradientCardThrive, gradientBlurple, ThriveTeal, white from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, MonBold, Mon, PlayBlack, bodyCopy, darkGray, gradientCardThrive, gradientBlurple, ThriveTeal, white from 'all';
 
 .card {
   lost-column: 1;
@@ -23,8 +23,9 @@
   width: 100%;
   min-height: 20rem;
   height: auto;
+  min-height: 370px;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 6rem;
   float: left;
 }
 
@@ -33,7 +34,7 @@
   width: 100%;
   margin-bottom: 1em;
   padding: 0 0;
-  font-family: MonBold;
+  font-family: PlayBlack;
   letter-spacing: 1px;
   font-size: 2rem;
   text-align: center;
