@@ -39,7 +39,7 @@
 }
 .blue {
   composes: fullWidthText;
-  background: blue;
+  background: ThriveBlue;
   color: white;
   height: 100%;
 }
@@ -50,7 +50,6 @@
     color: white;
   }
 }
-
 .fade {
   composes: fullWidthText;
   background: TheFader;
@@ -58,7 +57,6 @@
     color: bodyCopy;
   }
 }
-
 .tagalong {
   composes: fullWidthText;
   padding-top: 0;

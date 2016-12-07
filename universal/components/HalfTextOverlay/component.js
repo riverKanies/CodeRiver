@@ -13,7 +13,7 @@ type Props = {
   bgImage: string,
   hasButton: 'buttonTrue' | 'buttonFalse',
   button: Object,
-  postContentStyle: string
+  postContentStyle: 'postContent' | 'postContentRight'
 }
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -39,7 +39,7 @@ const HalfTextOverlay = ({
     <section className={styles.gridWrap}>
       <section className={styles.halfOverlay}>
         <span className={styles.imageWrap}>
-          <a href={url}><img className={styles.image} src={bgImage} alt={title} /></a>
+          <a className={styles.imgLinkWrap} href={url}><img className={styles.image} src={bgImage} alt={title} /></a>
         </span>
         <section className={styles[postContentStyle]}>
           <ContentLabel {...postLabel} />

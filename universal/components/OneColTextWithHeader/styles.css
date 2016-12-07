@@ -1,0 +1,129 @@
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, lightGray, Playfair from 'all';
+
+.sectionContainer{
+	display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+	margin-top: 0;
+  padding: babyPadding;
+  float: left;
+  position: relative;
+	background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.container {
+	lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+.content {
+	lost-column: 1;
+	height: auto;
+	@media bp-mama-bear {
+		width: 80%;
+		margin: 0 10%;
+		margin-right: 0;
+	}
+	@media bp-papa-bear {
+		width: 80%;
+		margin: 0 10%;
+	}
+}
+
+.header,
+.copyContent {
+	lost-column: 1;
+	height: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	float: left;
+	clear: both;
+	color: bodyCopy;
+}
+.header {
+	margin: 0 auto;
+	text-align: center;
+}
+.headerNoSub {
+	composes: header;
+	margin-bottom: 1.25rem;
+	@media bp-mama-bear {
+		margin-bottom: 2rem;
+	}
+}
+.h1 {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	padding: 0 0;
+	float: left;
+	position: relative;
+	font-size: 1.25em;
+	line-height: 100%;
+	text-align: center;
+	border-bottom: 50%;
+  @media bp-mama-bear {
+    font-size: 1.75em;
+  }
+  @media bp-papa-bear {
+    font-size: 2em;
+  }
+	&:before {
+		content: '';
+		width: 8.125rem;
+		height: .125rem;
+		position: absolute;
+		top: 2.375rem;
+		left: 50%;
+		background: bodyCopy;
+		transform: translateX(-4.0625rem);
+		@media bp-mama-bear {
+			top: 3.75rem;
+		}
+	}
+}
+.h2 {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 0;
+	padding: 0 0;
+	float: left;
+	font-family: Playfair;
+	font-style: italic;
+	font-size: 1em;
+	line-height: 125%;
+	@media bp-mama-bear {
+		font-size: 1.25em;
+	}
+	@media bp-papa-bear {
+		font-size: 1.5em;
+	}
+}
+.copyContent {
+	display: block;
+	width: 100%;
+	margin: 1.25rem auto 0 auto;
+	padding: 0 0;
+	float: left;
+}
+.copyContentGrow {
+	composes: copyContent;
+	@media bp-mama-bear {
+		margin: 2rem auto 0 auto;
+		font-size: 112.5%;
+	}
+	@media bp-papa-bear {
+		font-size: 125%
+	}
+}
