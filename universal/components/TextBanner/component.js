@@ -12,9 +12,9 @@ type Props = {
 
 function renderSubtitle (subTitle: Array<string> | string) {
   if (Array.isArray(subTitle)) {
-    return subTitle.map((paragraph, index) => <h3 key={index}>{paragraph}</h3>)
+    return subTitle.map((paragraph, index) => <h3 className='stSelect' key={index}>{paragraph}</h3>)
   }
-  return <h3>{subTitle}</h3>
+  return <h3 className='stSelect'>{subTitle}</h3>
 }
 
 const TextBanner = ({
@@ -27,7 +27,7 @@ const TextBanner = ({
     <section className={styles[bgColor]}>
       <div className={styles.container}>
         <header className={styles.title}>
-          <h1>{title}</h1>
+          <h1 id='textBannerTitle'>{title}</h1>
         </header>
         <div className={styles.divider} />
         <section className={styles.columnWrap}>
