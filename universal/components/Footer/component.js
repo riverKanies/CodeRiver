@@ -57,6 +57,15 @@ const Footer = ({
               <a href='/partners'>Partner With Us</a>
             </li>
             <li className={styles.footerLinks}>
+              <a href='/partners/corporate'>Partnerships - Corporate</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href='/partners/content'>Partnerships - Media</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href='/partners/commerce'>Partnerships - Commerce</a>
+            </li>
+            <li className={styles.footerLinks}>
               <a href='/popup'>Popup Store</a>
             </li>
             <li className={styles.footerLinks}>
