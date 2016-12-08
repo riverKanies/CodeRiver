@@ -76,12 +76,12 @@ export class TeamSection extends React.Component {
     const team = this.state.teamMembers.slice(1)
 
     return (
-      <section className={styles.sectionContainer} id='team'>
-        <section className={styles.row} >
+      <section className={styles.sectionContainer}>
+        <section className={styles.row}>
+          <Modal show={this.state.showModal} onClick={this.toggleModal}
+            content={this.state.modalContent} />
           <section className={styles.biosRow}>
-            <Modal show={this.state.showModal} onClick={this.toggleModal}
-              content={this.state.modalContent} />
-            <h2 className={styles.title}> Our Team </h2>
+            <h2 className={styles.title} id='team'> Our Team </h2>
             <FounderBio {...founder} onClick={() => this.handleClick(this, founder)} />
             <section className={styles.teamBios}>
               {team.map(member =>

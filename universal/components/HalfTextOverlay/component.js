@@ -13,7 +13,8 @@ type Props = {
   bgImage: string,
   hasButton: 'buttonTrue' | 'buttonFalse',
   button: Object,
-  postContentStyle: 'postContent' | 'postContentRight'
+  postContentStyle: 'postContent' | 'postContentRight',
+  id: string
 }
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
@@ -31,12 +32,13 @@ const HalfTextOverlay = ({
   sectionText = defaultText,
   url = 'javascript:void(0)',
   bgImage = dummyImage,
+  id = '',
   hasButton = 'buttonFalse',
   button = {},
   postContentStyle = 'postContent'
 }: Props) => {
   return (
-    <section className={styles.gridWrap}>
+    <section className={styles.gridWrap} id={id}>
       <section className={styles.halfOverlay}>
         <span className={styles.imageWrap}>
           <a className={styles.imgLinkWrap} href={url}><img className={styles.image} src={bgImage} alt={title} /></a>
