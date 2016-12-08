@@ -56,15 +56,15 @@ const eCourse = {
 const homeQuote = {
   bgColor: 'default',
   quote: [
-    `It’s no mystery that healthier workforces make for better corporate
-    financial health and higher-performing employees all around.`
+    `When I look back on mistakes I’ve made...they all have one thing in common.
+     I was tired.`
   ],
-  citation: `Dr. David Agus,
-    \n Professor of Medicine & Engineering USC,
-    \n Thrive Global board member`,
+  citation: `Kristin Lemkau,
+    \n Chief Marketing Officer
+    \n J.P. Morgan`,
   imageShape: 'roundImage',
   isLink: true,
-  quoteURL: 'https://journal.thriveglobal.com/why-we-need-corporate-well-being-programs-more-than-ever-56bcbe0f52f1'
+  quoteURL: 'https://journal.thriveglobal.com/jp-morgan-cmo-how-i-learned-to-put-my-own-oxygen-mask-on-first-61372b331141#.lakc0mwzc'
 }
 const thriveCommunity = {
   sectionClass: 'default',
