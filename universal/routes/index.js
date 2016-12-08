@@ -50,7 +50,7 @@ export const createRoutes = (store) => ([
     onChange: handleUpdate,
     childRoutes: [
       {
-        path: 'partners',
+        path: 'about',
         indexRoute: { component: PWUOverview },
         childRoutes: [
           {
@@ -96,7 +96,7 @@ export const createRoutes = (store) => ([
         component: Apps
       },
       {
-        path: 'about',
+        path: 'who-we-are',
         component: About
       },
       {

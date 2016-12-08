@@ -79,6 +79,7 @@ const careers = {
     label: 'Careers',
     labelColor: 'whiteLabel'
   },
+  id: 'careers',
   title: 'Join The Thrive Tribe',
   sectionText: [
     `Join the team that is changing the way we work and live. Thrive Global is

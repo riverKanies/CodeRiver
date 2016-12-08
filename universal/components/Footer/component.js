@@ -42,31 +42,31 @@ const Footer = ({
           </div>
           <ul className={styles.list}>
             <li className={styles.footerLinks}>
-              <a href='/about'>About Us</a>
+              <a href='/who-we-are'>Who We Are</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#advertise'>Advertise</a>
+              <a href='/who-we-are#advertise'>Advertise</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#careers'>Careers</a>
+              <a href='/who-we-are#careers'>Careers</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#contact'>Contact</a>
+              <a href='/who-we-are#contact'>Contact</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/partners'>Partner With Us</a>
+              <a href='/about'>About</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/popup'>Popup Store</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#press'>Press</a>
+              <a href='/who-we-are#press'>Press</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/press-releases'>Press Releases</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about#team'>Team</a>
+              <a href='/who-we-are#team'>Team</a>
             </li>
           </ul>
         </section>

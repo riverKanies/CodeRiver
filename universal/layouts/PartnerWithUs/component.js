@@ -64,14 +64,14 @@ const OverviewContent = {
   node2: [
     {
       header: 'Corporate',
-      link: '/partners/corporate',
+      link: '/about/corporate',
       body: `Thrive’s corporate program brings the latest strategies and
             tools around health and well-being to organizations, inspiring and
             accelerating a thriving corporate culture.`
     },
     {
       header: 'Content',
-      link: '/partners/content',
+      link: '/about/content',
       body: `Thrive’s media platform serves as the global hub for
             the conversation about well-being and performance, with an
             emphasis on action and featuring original, expert, and
@@ -79,7 +79,7 @@ const OverviewContent = {
     },
     {
       header: 'Commerce',
-      link: '/partners/commerce',
+      link: '/about/commerce',
       body: `Thrive’s e-commerce platform offers a curated selection of
             the best technology and products to equip consumers with the most
             effective tools for well-being.`
