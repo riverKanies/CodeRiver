@@ -50,6 +50,10 @@ export const createRoutes = (store) => ([
     onChange: handleUpdate,
     childRoutes: [
       {
+        path: 'partners**',
+        onEnter: (_, replace) => replace('/about' + _.params.splat)
+      },
+      {
         path: 'about',
         indexRoute: { component: PWUOverview },
         childRoutes: [
