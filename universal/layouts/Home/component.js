@@ -64,7 +64,8 @@ const homeQuote = {
     \n J.P. Morgan`,
   imageShape: 'roundImage',
   isLink: true,
-  quoteURL: 'https://journal.thriveglobal.com/jp-morgan-cmo-how-i-learned-to-put-my-own-oxygen-mask-on-first-61372b331141#.lakc0mwzc'
+  quoteURL: 'https://journal.thriveglobal.com/jp-morgan-cmo-how-i-learned-to-' +
+    'put-my-own-oxygen-mask-on-first-61372b331141#.lakc0mwzc'
 }
 const thriveCommunity = {
   sectionClass: 'default',
