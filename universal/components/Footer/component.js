@@ -42,7 +42,7 @@ const Footer = ({
           </div>
           <ul className={styles.list}>
             <li className={styles.footerLinks}>
-              <a href='/who-we-are'>Who We Are</a>
+              <a href='/about'>About</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/who-we-are#advertise'>Advertise</a>
@@ -54,16 +54,13 @@ const Footer = ({
               <a href='/who-we-are#contact'>Contact</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/about'>About</a>
+              <a href='/about/corporate'>Partnerships - Corporate</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/partners/corporate'>Partnerships - Corporate</a>
+              <a href='/about/content'>Partnerships - Media</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/partners/content'>Partnerships - Media</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/partners/commerce'>Partnerships - Commerce</a>
+              <a href='/about/commerce'>Partnerships - Commerce</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/popup'>Popup Store</a>
@@ -76,6 +73,9 @@ const Footer = ({
             </li>
             <li className={styles.footerLinks}>
               <a href='/who-we-are#team'>Team</a>
+            </li>
+            <li className={styles.footerLinks}>
+              <a href='/who-we-are'>Who We Are</a>
             </li>
           </ul>
         </section>
