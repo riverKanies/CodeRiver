@@ -1,6 +1,7 @@
 {
   "src_folders" : ["features"],
   "output_folder" : "reports",
+  "globals_path" : "config/nightwatch_globals.js",
 
   "selenium" : {
     "start_process" : true,

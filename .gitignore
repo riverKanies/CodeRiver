@@ -11,3 +11,5 @@ coverage
 todo.txt
 
 tests/config/generated/*.json
+
+reports

@@ -32,7 +32,7 @@ const Four04 = ({
   logo = mark
 }: Props) => {
   return (
-    <section className={styles.container}>
+    <section id='pageNotFound' className={styles.container}>
       <section className={styles.content}>
         <figure className={styles.brand}>
           <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
