@@ -5,9 +5,9 @@ import Microsteps from 'layouts/Microsteps'
 import Give from 'layouts/Give'
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
-import TempHomePage from 'layouts/TempHomePage'
 import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
+import Team from 'layouts/Team'
 import Apps from 'layouts/Apps'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
@@ -38,10 +38,6 @@ export const createRoutes = (store) => ([
   {
     path: '/steps/:id',
     component: EmbeddedMicrostep
-  },
-  {
-    path: '/coming-soon',
-    component: TempHomePage
   },
   {
     path: '/',
@@ -102,6 +98,10 @@ export const createRoutes = (store) => ([
       {
         path: 'who-we-are',
         component: About
+      },
+      {
+        path: 'team',
+        component: Team
       },
       {
         path: 'pulse',

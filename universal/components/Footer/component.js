@@ -72,7 +72,7 @@ const Footer = ({
               <a href='/press-releases'>Press Releases</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/who-we-are#team'>Team</a>
+              <a href='/team'>Team</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/who-we-are'>Who We Are</a>
