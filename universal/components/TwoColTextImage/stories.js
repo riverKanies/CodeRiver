@@ -15,10 +15,6 @@ const props = {
     'purple',
     'blue'
   ],
-  marginBottom: [
-    'marginTrue',
-    'marginFalse'
-  ],
   hasTitle: [
     'titleTrue',
     'titleFalse'
@@ -33,11 +29,8 @@ storiesOf('TwoColTextImage', module)
       <WithNotes notes={notes}>
         <TwoColTextImage
           bgColor={select('Background Color', props.bgColor, props.bgColor[0])}
-          marginBottom={select('Need a bottom margin?', props.marginBottom, props.marginBottom[0])}
           hasTitle={select('Does This Need a Title', props.hasTitle, props.hasTitle[0])}
           title={text('Title', props.title)}
-          colTextOne={text('Column One Text', props.title)}
-          colTextTwo={text('Column Two Text', props.title)}
         />
       </WithNotes>
     )
