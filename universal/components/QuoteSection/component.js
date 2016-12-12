@@ -8,7 +8,7 @@ type Props = {
   containerBorders: 'bordersTrue' | 'bordersFalse',
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
-  citation: Array<string>,
+  citation: Array<string> | string,
   quoteImage: any,
   isLink: boolean,
   quoteURL: string,
@@ -23,6 +23,7 @@ const defaultQuote = [
 
 const defaultImage = dummyImage
 
+// True/False Logic For Quote Link
 function Quote ({
   isLink,
   quote,
@@ -40,6 +41,14 @@ function Quote ({
       {quote.map((paragraph, index) => <span key={index}>{paragraph}</span>)}
     </q>
   )
+}
+
+// Render Citation Logic
+function renderCitation (citation: Array<string> | string) {
+  if (Array.isArray(citation)) {
+    return citation.map((paragraph, index) => <p className={styles.citationLine} key={index}>{paragraph}</p>)
+  }
+  return <p className={styles.citationLine}>{citation}</p>
 }
 
 const QuoteSection = ({
@@ -64,7 +73,7 @@ const QuoteSection = ({
           <section className={styles[quoteFont]}>
             <Quote isLink={isLink} quote={quote} quoteURL={quoteURL} />
             <cite className={styles.citation}>
-              {citation.map((paragraph, index) => <p className={styles.citationLine} key={index}>{paragraph}</p>)}
+              {renderCitation(citation)}
             </cite>
           </section>
         </section>
