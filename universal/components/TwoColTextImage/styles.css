@@ -53,7 +53,7 @@
 }
 
 /* Title True/False */
-.hasTitle {
+.title {
   lost-column: 1;
   margin: 0 auto babyHeader auto;
   padding: 0 0;
@@ -72,13 +72,20 @@
   h2 {
     text-align: inherit;
     color: inherit;
+    &::after {
+      content: '';
+  		width: 8.125rem;
+  		height: .0625rem;
+  		position: absolute;
+  		top: 2.375rem;
+  		left: 50%;
+  		background: bodyCopy;
+  		transform: translateX(-4.0625rem);
+  		@media bp-mama-bear {
+  			top: 3.75rem;
+  		}
+    }
   }
-}
-.titleTrue {
-  composes: hasTitle;
-}
-.titleFalse {
-  display: none;
 }
 .titleCenter {
   text-align: center;
@@ -88,12 +95,6 @@
 }
 .centerFalse {
   display: none;
-}
-.divider {
-  border-bottom: 1px solid #999999;
-  width: 3rem;
-  margin: 0 auto;
-  margin-top: 3.5rem;
 }
 img {
   margin-bottom: 1rem;
