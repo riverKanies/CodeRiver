@@ -29,7 +29,8 @@
     "test": "npm run test:configs && npm run test:specs",
     "test:all": "npm run test:configs && better-npm-run test --config tests/config/generated/tests.all.json",
     "test:configs": "better-npm-run test:configs",
-    "test:features": "nightwatch -c nightwatch.test.json",
+    "test:circle:features": "nightwatch -c nightwatch.test.json",
+    "test:features": "nightwatch",
     "test:specs": "better-npm-run test --config tests/config/generated/tests.specs.json",
     "test:watch": "npm run test:configs && better-npm-run test -- --watch --config tests/config/generated/tests.specs.json"
   },
