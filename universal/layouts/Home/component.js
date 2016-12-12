@@ -60,8 +60,7 @@ const homeQuote = {
   ],
   citation: [
     'Kristin Lemkau',
-    'Chief Marketing Officer',
-    'J.P. Morgan'
+    'Chief Marketing Officer, J.P. Morgan'
   ],
   imageShape: 'roundImage',
   isLink: true,

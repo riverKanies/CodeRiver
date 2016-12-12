@@ -47,7 +47,7 @@ const QuoteSection = ({
   bgColor = 'default',
   quote = defaultQuote,
   quoteFont = 'Mon',
-  citation = 'Arriana Huffington',
+  citation = ['Arriana Huffington'],
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
   imageShape = 'roundImage',
@@ -64,7 +64,7 @@ const QuoteSection = ({
           <section className={styles[quoteFont]}>
             <Quote isLink={isLink} quote={quote} quoteURL={quoteURL} />
             <cite className={styles.citation}>
-              {citation.map((paragraph, index) => <span key={index}>{paragraph}</span>)}
+              {citation.map((paragraph, index) => <p className={styles.citationLine} key={index}>{paragraph}</p>)}
             </cite>
           </section>
         </section>
