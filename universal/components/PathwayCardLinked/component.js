@@ -1,33 +1,41 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import Button from 'components/Button'
+import { Link } from 'react-router'
 
 type Props = {
   title: string,
+  handleClick: Function,
+  linkTo: string,
+  segmentProps: Object,
   id: number,
   image: any,
 };
 
-const buttonProps = {
-  buttonText: 'Learn More',
-  linkTo: '/pulse',
-  buttonStyle: 'special'
-}
-
 const defaultText = [`Are You Ready To Thrive?`]
 
-const PathwayCard = ({
+const text = `Start Assessment`
+
+const PathwayCardLinked = ({
   title = defaultText[0],
+  linkTo,
+  handleClick,
+  segmentProps,
   id }: Props) => {
+  const linkProps = {
+    onClick: handleClick,
+    activeClassName: styles.activeStyle,
+    to: '/pulse',
+    className: styles.card
+  }
   return (
-    <section className={styles.card}>
+    <Link {...linkProps}>
       <section className={styles.cardContainer}>
         <h3 className={styles.header}>{title}</h3>
-        <Button {...buttonProps} />
+        <p className={styles.getStarted}>{text}</p>
       </section>
-    </section>
+    </Link>
   )
 }
 
-export default PathwayCard
+export default PathwayCardLinked

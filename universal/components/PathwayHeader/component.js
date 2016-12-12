@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react'
 import styles from './styles'
 import HeaderQuote from 'components/HeaderQuote'
@@ -12,7 +11,7 @@ type Props = {
   author: string
 }
 
-const JourneyHeader = ({
+const PathwayHeader = ({
   title = '',
   logo = mark,
   quote,
@@ -24,7 +23,7 @@ const JourneyHeader = ({
         <figure className={styles.brand}>
           <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
         </figure>
-        <h2 id='journeyHeaderTitle' className={styles.header}>{title}</h2>
+        <h2 className={styles.header}>{title}</h2>
         <HeaderQuote
           quote={quote}
           author={author}
@@ -34,4 +33,4 @@ const JourneyHeader = ({
   )
 }
 
-export default JourneyHeader
+export default PathwayHeader

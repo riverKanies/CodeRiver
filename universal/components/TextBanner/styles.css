@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TextBanner
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, ThriveDarkPurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, ThriveDarkPurple, lightGray, medGray, Mon, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
 
 /* Base Section Styling + Composed Styles */
 .textBanner {
@@ -144,7 +144,7 @@
   h3 {
     text-align: center;
     color: inherit;
-    font-family: PlayBlackItalic;
+    font-family: PlayfairBold;
     font-style: italic;
     &:first-child {
       margin-bottom: 0;

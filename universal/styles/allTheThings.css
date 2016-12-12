@@ -68,8 +68,12 @@
 @value gradientTeal: linear-gradient(to right, #096e77 0%, ThriveTeal 100%);
 @value TheFader: linear-gradient(rgba(230,230,230,1), rgba(255,255,255,1) 6rem, rgba(255,255,255,1));
 @value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061A4 100%);
-@value gradientEmailCap: linear-gradient(-136deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
-@value gradientCardThrive: linear-gradient(to right, #007a98 0%, ThriveTeal 100%);
+@value gradientEmailCap: linear-gradient(-40deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
+@value gradientCardThrive: linear-gradient(136deg, #007a98 0%, ThriveTeal 100%);
+@value gradientPathwayCard: linear-gradient(-40deg, #007a98 0%, ThriveTeal 100%);
+@value gradientPathwayCardHover: linear-gradient(to top, #007a98 0%, ThriveTeal 90%);
+@value gradientJourneyCard: linear-gradient(-40deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
+@value gradientJourneyCardHover: linear-gradient(to top, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
 @value gradientPurpleTeal: linear-gradient(to right, #432d76 0%, ThriveTeal 100%);
 
  /* fonts */
@@ -82,6 +86,6 @@
 
 @value Playfair: Playfair;
 @value PlayBlack: PlayfairBlack;
-@value PlayBlackItalic: PlayfairBoldItalic;
+@value PlayBlackItalic: PlayfairBlackItalic;
 
 @value navItem: Mon;

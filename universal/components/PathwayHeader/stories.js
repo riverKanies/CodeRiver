@@ -3,23 +3,25 @@ import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
-import JourneyCard from './component'
+import PathwayHeader from './component'
 
-const notes = 'This story demonstrates the props that can be passed to JourneyCard'
+const notes = 'This story demonstrates the props that can be passed to PathwayHeader'
 
 const props = {
-  title: 'JourneyCard Title',
-  description: 'This is the description'
+  title: 'Pathway Title',
+  quote: 'this is where the quote goes',
+  author: 'John Smith'
 }
 
-storiesOf('JourneyCard', module)
+storiesOf('PathwayHeader', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
-        <JourneyCard
+        <PathwayHeader
           title={text('Title', props.title)}
-          description={text('Description', props.description)}
+          quote={text('Quote', props.quote)}
+          author={text('Author', props.author)}
         />
       </WithNotes>
     )

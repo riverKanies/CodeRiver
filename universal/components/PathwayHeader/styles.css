@@ -1,9 +1,9 @@
 /*
-  This is the stylesheet for: JourneyHeader
+  This is the stylesheet for: PathwayHeader
 */
 
 @value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value ThriveBlue, ThriveTeal, gradientJourneyCard, backgroundGray, ThriveGray from 'all';
+@value ThriveBlue, ThriveTeal, gradientPathwayCard, backgroundGray, ThriveGray from 'all';
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {
@@ -12,13 +12,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background: gradientJourneyCard;
+  color: white;
+  background: gradientPathwayCard;
 }
 
 .content {
   lost-center: containerWidth;
   padding: 4rem containerPadding;
-  color: white;
   text-align: center;
   @media bp-mama-bear {
     padding: 6rem containerPadding;

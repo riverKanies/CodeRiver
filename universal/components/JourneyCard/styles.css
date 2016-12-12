@@ -1,12 +1,13 @@
-@value bp-mama-bear, bp-papa-bear, MonBold, Mon, bodyCopy, darkGray, gradientCardThrive, gradientBlurple, white from 'all';
+@value bp-mama-bear, bp-papa-bear, PlayBlackItalic, MonBold, Mon, bodyCopy, darkGray, gradientJourneyCard, gradientJourneyCardHover, white from 'all';
 
 .card {
   lost-column: 1;
   margin-bottom: 1.25rem;
-  background: gradientCardThrive;
   text-align: center;
-  outline: 1px solid white;
   outline-offset: -2rem;
+  outline: 1px solid white;
+  color: white;
+  background: gradientJourneyCard;
   @media bp-mama-bear {
     lost-column: 1/2;
     margin-bottom: 1.5rem;
@@ -17,17 +18,17 @@
     margin-bottom: 2rem;
   }
 
-	&:hover {
-		background: gradientBlurple;
-    color: white;
-		outline: 1px solid white;
-	}
+  &:hover {
+    outline: 5px solid white;
+    background: gradientJourneyCardHover;
+    transition: all 200ms ease-in-out;
+  }
 }
 
 .cardContainer {
   display: block;
   width: 100%;
-  min-height: 20rem;
+  min-height: 24rem;
   height: auto;
   margin: 0 auto;
   padding: 5rem;
@@ -39,12 +40,9 @@
   width: 100%;
   margin-bottom: 1em;
   padding: 0 0;
-  font-family: MonBold;
-  letter-spacing: 1px;
   font-size: 2rem;
   text-align: center;
   text-transform: capitalize;
-  color: white;
 }
 
 .synopsis {
@@ -54,10 +52,7 @@
   margin-bottom: 0;
   padding: 0 0 0 0!important;
   float: left;
-  font-family: Mon;
-  font-size: .8rem;
   text-align: center;
-  color: white;
 }
 
 .divider {

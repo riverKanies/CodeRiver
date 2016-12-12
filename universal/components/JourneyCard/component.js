@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import defaultImage from './assets/pathFPO.jpg'
 import { Link } from 'react-router'
 
 type Props = {
@@ -15,7 +14,6 @@ type Props = {
 export default function ({
   title = 'Don\'t stop believing',
   description = 'Vestibulum id ligula porta felis euismod semper.',
-  image = defaultImage,
   pathwayId,
   id }: Props) {
   return (
