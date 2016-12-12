@@ -33,7 +33,6 @@ const thrivePulse = {
     linkStyle: 'white'
   }
 }
-
 const eCourse = {
   image: eCourseImg,
   sectionClass: 'transparent',
@@ -59,9 +58,10 @@ const homeQuote = {
     `When I look back on mistakes I’ve made...they all have one thing in common.
      I was tired.`
   ],
-  citation: `Kristin Lemkau,
-    \n Chief Marketing Officer
-    \n J.P. Morgan`,
+  citation: [
+    'Kristin Lemkau',
+    'Chief Marketing Officer, J.P. Morgan'
+  ],
   imageShape: 'roundImage',
   isLink: true,
   quoteURL: 'https://journal.thriveglobal.com/jp-morgan-cmo-how-i-learned-to-' +

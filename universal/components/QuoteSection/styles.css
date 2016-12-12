@@ -22,9 +22,9 @@
 .container {
   lost-center: containerWidth;
   margin: 0 auto;
-  padding: containerPadding;
+  padding: 0 containerPadding;
   float: none;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     display: flex;
     flex-direction: row;
     flex-flow: center;
@@ -48,7 +48,7 @@
 .quoteImage {
   lost-column: 1;
   text-align: center;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     lost-column: 1/4 flex;
   }
 }
@@ -59,7 +59,7 @@
   margin: 0 0 1rem 0;
   padding: 0 0;
   border-radius: 3.125rem;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     margin: 0 0 0 0;
     width: 8rem;
     height: 8rem;
@@ -85,7 +85,7 @@
 /* Quote Section */
 .quoteSection {
   lost-column: 1;
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     lost-column: 3/4 flex;
   }
 }
@@ -99,8 +99,11 @@
   position: relative;
   font-size: 1.25em;
   line-height: 160%;
-  text-align: left;
+  text-align: center;
   color: bodyCopy;
+  @media bp-papa-bear {
+    text-align: left;
+  }
   &::before {
     content: '“';
     display: block;
@@ -115,7 +118,7 @@
     font-size: 150%;
     color: darkGray;
     transition: color 150ms ease-in-out;
-    @media bp-mama-bear {
+    @media bp-papa-bear {
       top: .5rem;
       left: -2rem;
     }
@@ -131,7 +134,7 @@
     font-size: 150%;
     color: darkGray;
     transition: color 150ms ease-in-out;
-    @media bp-mama-bear {
+    @media bp-papa-bear {
       margin: -1em 0 0 .25em;
     }
   }
@@ -146,7 +149,6 @@
 
 .Mon {
   font-family: MonBold;
-
   @media bp-mama-bear {
     font-size: 1.2em;
   }
@@ -156,7 +158,6 @@
 }
 .Playfair {
   font-family: Playfair;
-
   @media bp-mama-bear {
     font-size: 1.2em;
   }
@@ -170,24 +171,54 @@
   margin: 0 0;
   padding: 0 0;
   float: left;
+  position: relative;
   font-family: Mon;
   font-size: 0.75rem;
   font-style: normal;
   line-height: 100%;
-  text-align: left;
+  text-align: center;
   color: darkGray;
   text-transform: uppercase;
-  &::before {
-    content: 'by';
-    display: inline-block;
-    margin: 0 .25rem 0 0;
-    padding: 0 0;
-    font-family: Playfair;
-    font-style: italic;
-    text-transform: none;
-  }
   @media bp-mama-bear {
     font-size: 1rem;
+  }
+  @media bp-papa-bear {
+    text-align: left;
+  }
+  .citationLine {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    float: left;
+    font-family: MonBold;
+    text-align: center;
+    @media bp-papa-bear {
+      width: 100%;
+      text-align: left;
+    }
+    &:first-child {
+      @media bp-papa-bear {
+        padding-left: 1.35rem;
+      }
+      &::before {
+        content: 'by';
+        display: inline-block;
+        margin: 0 .25rem 0 0;
+        padding: 0 0;
+        float: none;
+        font-family: Playfair;
+        font-style: italic;
+        text-transform: none;
+        @media bp-papa-bear {
+          margin: 0 0 0 0;
+          float: left;
+          position: absolute;
+          top: -.125rem;
+          left: 0;
+        }
+      }
+    }
   }
 }
 
