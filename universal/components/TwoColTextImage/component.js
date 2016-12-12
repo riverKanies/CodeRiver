@@ -34,7 +34,7 @@ const defaultText = ['Hello, I am some text!', 'I am also text!']
 
 const TwoColTextImage = ({
   bgColor = 'default',
-  hasTitle = false,
+  hasTitle = true,
   title = 'TwoColTextImage',
   link = {},
   colTextOne = defaultText,
