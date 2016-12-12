@@ -4,13 +4,11 @@ import styles from './styles'
 import iconPlaceholder from './assets/rocket.png'
 
 type Props = {
-  title: string,
   description: string,
   icon: any
 };
 
 const IconWithText = ({
-  title = 'IconWithText',
   description = 'Description goes here...',
   icon = iconPlaceholder
   }: Props) => {
