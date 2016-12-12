@@ -8,7 +8,7 @@ type Props = {
   containerBorders: 'bordersTrue' | 'bordersFalse',
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
-  citation: string,
+  citation: Array<string>,
   quoteImage: any,
   isLink: boolean,
   quoteURL: string,
@@ -63,7 +63,9 @@ const QuoteSection = ({
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
             <Quote isLink={isLink} quote={quote} quoteURL={quoteURL} />
-            <cite className={styles.citation}>{citation}</cite>
+            <cite className={styles.citation}>
+              {citation.map((paragraph, index) => <span key={index}>{paragraph}</span>)}
+            </cite>
           </section>
         </section>
       </div>
