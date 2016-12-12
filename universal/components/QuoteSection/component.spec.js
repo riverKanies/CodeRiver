@@ -7,7 +7,7 @@ describe('(Component) QuoteSection', () => {
   it('should render ok without any props, defaults to default', () => {
     const subject = shallow(<QuoteSection />)
 
-    const target = subject.find('.parentSection')
+    const target = subject.find('.quoteSection')
 
     expect(target.length).toEqual(1)
   })

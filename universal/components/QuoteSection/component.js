@@ -46,9 +46,6 @@ function renderQuote ({
 function renderCitation (citation: any) {
   const paragraphs = Array.isArray(citation) ? citation : [citation]
 
-<<<<<<< HEAD
-  return paragraphs.map((paragraph, index) => <p className={styles.citationLine} key={index}>{paragraph}</p>)
-=======
   return (
     <cite className={styles.citation}>
       {
@@ -57,7 +54,6 @@ function renderCitation (citation: any) {
       )}
     </cite>
   )
->>>>>>> 79cbd17be6f04b3f27467c98407797dc4b57e9b0
 }
 
 const QuoteSection = ({
@@ -73,7 +69,7 @@ const QuoteSection = ({
   quoteURL = 'https://journal.thriveglobal.com'
 }: Props) => {
   return (
-    <section className={`${styles[bgColor]} parentSection`}>
+    <section className={`${styles[bgColor]} quoteSection`}>
       <div className={styles[containerBorders]}>
         <section className={styles[hasImage]}>
           <img className={styles[imageShape]} src={quoteImage} />
