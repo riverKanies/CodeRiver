@@ -8,7 +8,7 @@ type Props = {
   containerBorders: 'bordersTrue' | 'bordersFalse',
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
-  citation: Array<string> | string,
+  citation: any,
   quoteImage: any,
   isLink: boolean,
   quoteURL: string,
@@ -20,7 +20,6 @@ const defaultQuote = [
   `Intention is one of the most powerful forces there is.
   What you mean when you do a thing will always determine the outcome.`
 ]
-
 const defaultImage = dummyImage
 
 // True/False Logic For Quote Link
@@ -44,11 +43,10 @@ function Quote ({
 }
 
 // Render Citation Logic
-function renderCitation (citation: Array<string> | string) {
-  if (Array.isArray(citation)) {
-    return citation.map((paragraph, index) => <p className={styles.citationLine} key={index}>{paragraph}</p>)
-  }
-  return <p className={styles.citationLine}>{citation}</p>
+function renderCitation (citation: any) {
+  const paragraphs = Array.isArray(citation) ? citation : [citation]
+
+  return paragraphs.map((paragraph, index) => <p className={styles.citationLine} key={index}>{paragraph}</p>)
 }
 
 const QuoteSection = ({
@@ -56,7 +54,7 @@ const QuoteSection = ({
   bgColor = 'default',
   quote = defaultQuote,
   quoteFont = 'Mon',
-  citation = ['Arriana Huffington'],
+  citation = 'Citation',
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
   imageShape = 'roundImage',
