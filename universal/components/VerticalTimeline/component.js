@@ -30,8 +30,8 @@ const TimelineItems = [
     itemPosition: 'itemLeft',
     title: 'Microsteps',
     sectionText: [
-      `There are five Pathway Protocols -- experiment with them, discover what most resonates with you,
-      and return to it again and again. You can do these at any time -- as you begin your pathways,
+      `There are five Pathway Protocols — experiment with them, discover what most resonates with you,
+      and return to it again and again. You can do these at any time — as you begin your pathways,
       on your commute, during a break in your day, or before you go to bed at night. We have bracketed
       in italics commentary to help you practice the protocols the first few times, after
       which it will become second nature.`
