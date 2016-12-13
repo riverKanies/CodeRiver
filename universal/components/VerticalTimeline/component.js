@@ -11,7 +11,7 @@ const TimelineItems = [
       `There are five pathways built of multiple microsteps you can practice
        in a sustainable way. The steps are small and very easy to integrate into your life,
        but the impact is transformational. This is the part where we go from knowing
-       what to do to actually doing it. Choose the Pathway you want to begin with--
+       what to do to actually doing it. Choose the Pathway you want to begin with —
        Joy, Calm, Productivity, Well-Being and Purpose.`
     ]
   },
