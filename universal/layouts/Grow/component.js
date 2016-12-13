@@ -8,7 +8,6 @@ import CTASection from 'components/CTASection'
 import TwoColTextImage from 'components/TwoColTextImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
-import VerticalTimeline from 'components/VerticalTimeline'
 
 // Content Import
 import kobeImage from './assets/kobe.jpg'
@@ -76,7 +75,6 @@ export const GrowView = () => (
     <section className={styles.content}>
       <TextBanner {...banner} />
       <CTASection {...linkToAssessment} />
-      <VerticalTimeline />
       <PathwaySection />
       <TwoColTextImage {...eCourse} />
       <QuoteSection {...quote} />
