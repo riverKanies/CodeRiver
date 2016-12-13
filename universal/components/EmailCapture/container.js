@@ -15,7 +15,7 @@ export function handleSubmit (values, dispatch) {
     type: actions.newsletterFormSubmitted,
     track: { email: values.email }
   })
-  const successMessage = `Thank you for subscribing to the thrive newsletter.`
+  const successMessage = `Welcome to The Thrive Tribe. We're so happy to have you.`
   dispatch(createMessage('email-capture', successMessage))
   setTimeout(() => dispatch(clearMessages()), 5000)
 
