@@ -1,20 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import { decorateAction } from '@kadira/storybook-addon-actions'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs'
-
-import { Button } from './component'
+import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
+import Button from './component'
 import StoryContainer from 'components/StoryContainer'
 
-const handleClick = 'Click has been handled'
+const notes = 'hi'
 
-const props = {
-  disabled: false,
-  linkTo: '/',
-  buttonStyle: 'violet-medium',
-  label: 'Button Story'
-}
 const styles = [
   'violet',
   'violet-medium',
@@ -24,23 +16,21 @@ const styles = [
   'white-large',
   'teal',
   'teal-medium',
-  'teal-large',
-  'blue',
-  'blue-medium',
-  'blue-large'
+  'teal-large'
 ]
+
 const background = [
   'light',
   'dark'
 ]
 
-const exampleAction = decorateAction([
-  args => args.slice(0, 1)
-])
-
-const notes = `Select the buttonStyle from the list of knobs`
-
-storiesOf('Button', module)
+const props = {
+  disabled: false,
+  linkTo: '/',
+  buttonStyle: 'violet-medium',
+  buttonText: 'Button Story'
+}
+storiesOf('Button A', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
@@ -49,13 +39,9 @@ storiesOf('Button', module)
           style={select('Background', background, 'light')}
         >
           <Button
-            disabled={boolean('Disabled', props.disabled)}
-            linkTo={text('Target', props.linkTo)}
-            buttonStyle={select('Style', styles, 'violet')}
-            handleClick={exampleAction(handleClick)}
-          >
-            {text('Label', props.label)}
-          </Button>
+            {...props}
+            buttonStyle={select('button style', styles, 'violet-medium')}
+          />
         </StoryContainer>
       </WithNotes>
     )

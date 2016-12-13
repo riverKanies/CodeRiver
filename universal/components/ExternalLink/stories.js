@@ -37,7 +37,7 @@ const exampleAction = decorateAction([
 
 const notes = `Select the buttonStyle from the list of knobs`
 
-storiesOf('Button', module)
+storiesOf('External Link', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
