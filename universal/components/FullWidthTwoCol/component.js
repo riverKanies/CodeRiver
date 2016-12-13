@@ -14,7 +14,7 @@ type Props = {
   sectionText: Array<string>,
   image: string,
   button: any,
-  hasButton: 'buttonTrue' | 'buttonFalse',
+  hasButton: boolean,
   link: Object
 };
 
@@ -37,6 +37,21 @@ function renderLabel ({
   return (null)
 }
 
+// True/False Logic For Button/Link
+function renderButton ({
+  hasButton,
+  link
+}: { hasButton: boolean, link: Object}) {
+  if (hasButton) {
+    return (
+      <span className={styles.button}>
+        <ExternalLink {...link} />
+      </span>
+    )
+  }
+  return (null)
+}
+
 const FullWidthTwoCol = ({
   sectionClass = 'default',
   title = 'Title',
@@ -45,7 +60,7 @@ const FullWidthTwoCol = ({
   sectionText = defaultText,
   image = dummyImage,
   button = null,
-  hasButton = 'buttonTrue',
+  hasButton = true,
   link = {}
 
 }: Props) => {
@@ -65,9 +80,7 @@ const FullWidthTwoCol = ({
             </header>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             {button ? <Button {...button} /> : ''}
-            <span className={styles[hasButton]}>
-              <ExternalLink {...link} />
-            </span>
+            {renderButton({hasButton, link})}
           </section>
         </div>
       </section>

@@ -34,8 +34,8 @@ const props = {
   sectionText: defaultText,
   image: dummyImage,
   hasButton: [
-    'buttonTrue',
-    'buttonFalse'
+    true,
+    false
   ]
 }
 
@@ -47,10 +47,10 @@ storiesOf('FullWidthTwoCol', module)
         <FullWidthTwoCol
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           title={text('Section Title', props.title)}
-          hasLabel={boolean('Need a Label?', props.hasLabel, props.hasLabel[1])}
+          hasLabel={boolean('Need a Label?', props.hasLabel, props.hasLabel[0])}
           label={defaultLabel}
           sectionText={text('Section Text', props.sectionText)}
-          hasButton={select('Need a Button?', props.hasButton, props.hasButton[0])}
+          hasButton={boolean('Need a Button?', props.hasButton, props.hasButton[0])}
         />
       </WithNotes>
     )
