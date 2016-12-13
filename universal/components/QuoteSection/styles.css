@@ -22,7 +22,7 @@
 .container {
   lost-center: containerWidth;
   margin: 0 auto;
-  padding: 5rem;
+  padding: containerPadding;
   float: none;
   @media bp-papa-bear {
     display: flex;
