@@ -130,19 +130,10 @@
   }
 }
 
-/* Label True/False */
-.hasLabel {
+.label {
   width: 100%;
   margin: 2rem 0;
   float: left;
-}
-.labelTrue {
-  composes: hasLabel;
-  display: block;
-}
-.labelFalse {
-  composes: hasLabel;
-  display: none;
 }
 
 /* Button True/False */
