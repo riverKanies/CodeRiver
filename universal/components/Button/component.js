@@ -11,7 +11,7 @@ type Props = {
   buttonStyle: string,
   segmentProps: Object,
   disabled: boolean,
-  buttonText: String,
+  buttonText: string,
   download: boolean
 }
 
