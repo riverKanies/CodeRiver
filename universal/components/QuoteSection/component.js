@@ -42,6 +42,23 @@ function renderQuote ({
   )
 }
 
+// True/False Logic For Quote image
+function renderImg ({
+  isLink,
+  quoteURL,
+  imageShape,
+  quoteImage
+}: { isLink: boolean, quoteURL: string, imageShape: string, quoteImage: string }) {
+  if (isLink) {
+    return (
+      <a href={quoteURL}><img className={styles[imageShape]} src={quoteImage} /></a>
+    )
+  }
+  return (
+    <img className={styles[imageShape]} src={quoteImage} />
+  )
+}
+
 // Render Citation Logic
 function renderCitation (citation: any) {
   const paragraphs = Array.isArray(citation) ? citation : [citation]
@@ -72,7 +89,7 @@ const QuoteSection = ({
     <section className={`${styles[bgColor]} quoteSection`}>
       <div className={styles[containerBorders]}>
         <section className={styles[hasImage]}>
-          <img className={styles[imageShape]} src={quoteImage} />
+          {renderImg({isLink, quoteURL, imageShape, quoteImage})}
         </section>
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
