@@ -29,7 +29,6 @@
   composes: fullWidthTwoCol;
   background: lightGray;
 }
-
 .fade {
   composes: fullWidthTwoCol;
   background: TheFader;
@@ -43,7 +42,7 @@
   display: block;
   max-width: containerWidth;
   margin: 0 auto;
-  padding: containerPadding;
+  padding: 0 containerPadding;
   float: left;
   position: relative;
   @media bp-papa-bear {

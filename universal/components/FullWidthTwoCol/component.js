@@ -26,7 +26,7 @@ mattis consectetur purus sit amet fermentum.`]
 function renderLabel ({
   hasLabel,
   label
-}: { hasLabel: boolean, label: Object}) {
+  }: { hasLabel: boolean, label: Object}) {
   if (hasLabel) {
     return (
       <span className={styles.label}>
@@ -41,7 +41,7 @@ function renderLabel ({
 function renderButton ({
   hasButton,
   link
-}: { hasButton: boolean, link: Object}) {
+  }: { hasButton: boolean, link: Object}) {
   if (hasButton) {
     return (
       <span className={styles.button}>
