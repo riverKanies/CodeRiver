@@ -23,13 +23,14 @@
 
 .verticalLine {
   display: block;
+  width: .125rem;
+  height: 90%;
   position: absolute;
   left: 0.5rem;
-  width: 0;
-  height: 91%;
-  border-left: .125rem solid lightGray;
+  background: lightGray;
   @media bp-papa-bear {
-    height: 100%;
+    height: 110%;
+    top: -5%;
     left: 50%;
     &::before {
       content: '';
@@ -40,7 +41,7 @@
       border-radius: .25rem;
       position: absolute;
       top: 0;
-      left: -.3125rem;
+      left: -.1875rem;;
     }
     &::after {
       content: '';
@@ -51,7 +52,7 @@
       border-radius: .25rem;
       position: absolute;
       bottom: 0;
-      left: -.3125rem;
+      left: -.1875rem;
     }
   }
 }

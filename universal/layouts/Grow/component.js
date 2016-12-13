@@ -67,7 +67,8 @@ const quote = {
     'Intention is one of the most powerful forces there is. What you mean when ' +
     'you do a thing will always determine the outcome.'
   ],
-  citation: 'Arianna Huffington'
+  citation: 'Arianna Huffington',
+  isLink: false
 }
 
 export const GrowView = () => (
@@ -75,8 +76,8 @@ export const GrowView = () => (
     <section className={styles.content}>
       <TextBanner {...banner} />
       <CTASection {...linkToAssessment} />
-      <PathwaySection />
       <VerticalTimeline />
+      <PathwaySection />
       <TwoColTextImage {...eCourse} />
       <QuoteSection {...quote} />
     </section>
