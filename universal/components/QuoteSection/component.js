@@ -8,7 +8,7 @@ type Props = {
   containerBorders: 'bordersTrue' | 'bordersFalse',
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
-  citation: string,
+  citation: any,
   quoteImage: any,
   isLink: boolean,
   quoteURL: string,
@@ -20,10 +20,10 @@ const defaultQuote = [
   `Intention is one of the most powerful forces there is.
   What you mean when you do a thing will always determine the outcome.`
 ]
-
 const defaultImage = dummyImage
 
-function Quote ({
+// True/False Logic For Quote Link
+function renderQuote ({
   isLink,
   quote,
   quoteURL
@@ -42,12 +42,26 @@ function Quote ({
   )
 }
 
+// Render Citation Logic
+function renderCitation (citation: any) {
+  const paragraphs = Array.isArray(citation) ? citation : [citation]
+
+  return (
+    <cite className={styles.citation}>
+      {
+        paragraphs.map((paragraph, index) =>
+          <p className={styles.citationLine} key={index}>{paragraph}</p>
+      )}
+    </cite>
+  )
+}
+
 const QuoteSection = ({
   containerBorders = 'bordersFalse',
   bgColor = 'default',
   quote = defaultQuote,
   quoteFont = 'Mon',
-  citation = 'Arriana Huffington',
+  citation = 'Citation',
   hasImage = 'imageTrue',
   quoteImage = defaultImage,
   imageShape = 'roundImage',
@@ -55,15 +69,15 @@ const QuoteSection = ({
   quoteURL = 'https://journal.thriveglobal.com'
 }: Props) => {
   return (
-    <section className={styles[bgColor]}>
+    <section className={`${styles[bgColor]} quoteSection`}>
       <div className={styles[containerBorders]}>
         <section className={styles[hasImage]}>
           <img className={styles[imageShape]} src={quoteImage} />
         </section>
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
-            <Quote isLink={isLink} quote={quote} quoteURL={quoteURL} />
-            <cite className={styles.citation}>{citation}</cite>
+            {renderQuote({isLink, quote, quoteURL})}
+            {renderCitation(citation)}
           </section>
         </section>
       </div>
