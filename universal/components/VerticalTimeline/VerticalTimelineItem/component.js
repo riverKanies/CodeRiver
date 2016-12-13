@@ -15,7 +15,7 @@ const defaultText = [`
 
 const VerticalTimelineItem = ({
   itemPosition = 'itemLeft',
-  title = 'VerticalTimelineItem',
+  title = 'Timeline Item Title',
   sectionText = defaultText
 }: Props) => {
   return (

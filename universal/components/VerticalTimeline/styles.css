@@ -166,6 +166,7 @@
     }
   }
 }
+
 .itemRight {
   composes: timelineItem;
   text-align: left;
