@@ -93,7 +93,6 @@
   }
   h2 {
     display: inline-block;
-    padding: 0 0;
     text-align: inherit;
   }
 }
@@ -104,12 +103,14 @@
   margin: 0 auto;
   padding: 0 0;
   position: relative;
-  text-align: inherit;
+  text-align: left;
+  @media bp-papa-bear {
+    text-align: inherit;
+  }
   p {
     display: inline-block;
     width: 100%;
     margin-bottom: 0;
-    padding: 0 0;
     position: relative;
     text-align: inherit;
     &::before {
@@ -121,7 +122,6 @@
       border-radius: .25rem;
       position: absolute;
       top: -2.625rem;
-      left: -1.54rem;
     }
   }
   @media bp-papa-bear {
@@ -135,25 +135,23 @@
   text-align: left;
   .header {
     @media bp-papa-bear {
-      float: right;
-      text-align: right;
+      float: left;
+      padding-right: 1.5rem;
     }
     h2 {
       @media bp-papa-bear {
-        float: left;
-        padding-left: 1.5rem;
+        float: right;
       }
     }
   }
   .sectionContent {
     float: left;
-    text-align: left;
     @media bp-papa-bear {
       padding-left: 1.5rem;
-      float: right;
     }
     p {
       &::before {
+        left: -1.54rem;
         @media bp-mama-bear {
           top: -3.625rem;
           left: -1.5625rem;
@@ -171,30 +169,36 @@
   composes: timelineItem;
   text-align: left;
   @media bp-papa-bear {
-    text-align: right
+    text-align: right;
   }
   .header {
     @media bp-papa-bear {
-      float: left;
-      text-align: left;
+      padding-left: 1.5rem;
+      float: right;
+      text-align: inherit;
     }
     h2 {
       @media bp-papa-bear {
-        float: right;
-        padding-right: 1.5rem;
+        float: left;
       }
     }
-    .sectionContent {
-      @media bp-papa-bear {
-        padding-right: 1.5rem;
-        text-align: right;
-      }
-      p {
-        &::before {
-          @media bp-papa-bear {
-            right: -1.825rem;
-            left: auto;
-          }
+  }
+  .sectionContent {
+    float: left;
+    @media bp-papa-bear {
+      padding-right: 1.5rem;
+    }
+    p {
+      &::before {
+        left: -1.54rem;
+        @media bp-mama-bear {
+          top: -3.625rem;
+          left: -1.5625rem;
+        }
+        @media bp-papa-bear {
+          top: .5rem;
+          right: -1.8125rem;
+          left: auto;
         }
       }
     }
