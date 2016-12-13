@@ -6,6 +6,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import postcssPlugins from './webpack.postcss'
 import config from '../config'
 import renderHtml from './html.config'
+import SitemapPlugin from './custom/SitemapPlugin'
 
 const commonsChunkOptions = (
   new webpack.optimize.CommonsChunkPlugin({
@@ -15,6 +16,7 @@ const commonsChunkOptions = (
 
 const webpackPlugins = {
   common: [
+    new SitemapPlugin({ path: config.utils_paths.universal('sitemap') }),
     new webpack.DefinePlugin(config.globals),
     new HtmlWebpackPlugin(renderHtml.index),
     new HtmlWebpackPlugin(renderHtml.twoHundred),
