@@ -1,11 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
+import { withKnobs, select, text } from '@kadira/storybook-addon-knobs'
 import Button from './component'
 import StoryContainer from 'components/StoryContainer'
 
-const notes = 'hi'
+const notes = 'This story demonstrates the props that can be passed to the Button Component'
+
+const label = 'Button Label'
 
 const styles = [
   'violet',
@@ -30,7 +32,7 @@ const props = {
   buttonStyle: 'violet-medium',
   buttonText: 'Button Story'
 }
-storiesOf('Button A', module)
+storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
@@ -41,6 +43,7 @@ storiesOf('Button A', module)
           <Button
             {...props}
             buttonStyle={select('button style', styles, 'violet-medium')}
+            buttonText={text('button text', label)}
           />
         </StoryContainer>
       </WithNotes>
