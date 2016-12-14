@@ -40,7 +40,7 @@ describe('(Component) FullWidthTwoCol', () => {
     it('renders an external link by default', () => {
       const target = subject.find('ExternalLink')
 
-      expect(target.length).toEqual(1)
+      expect(target.length).toEqual(0)
     })
   })
 
