@@ -23,8 +23,10 @@ export default ({
     return (
       <div className={styles[theme]}>
         <div className={styles.inputWrap}>
-          <input className={styles.check} {...input} placeholder={label} type={type} />
-          <label className={styles.label}>{label}</label>
+          <label className={styles.label}>
+            <input className={styles.check} {...input} placeholder={label} type={type} />
+            {label}
+          </label>
         </div>
       </div>
     )

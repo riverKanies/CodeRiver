@@ -25,6 +25,10 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
   )
 }
 
+// const Checkbox = () => (
+//   <Input type='checkbox' />
+// )
+
 type signupProps = {
   renderField: string,
   handleSubmit: Function,
@@ -67,6 +71,13 @@ const SignUpForm = (props: signupProps) => {
                 name='password_confirmation'
                 type='password'
                 label='Confirm Password'
+                theme='thriveInput'
+                />
+              <Field
+                component={Input}
+                name='newsletter_opt_in'
+                type='checkbox'
+                label='Would you like to signup for our newsletter?'
                 theme='thriveInput'
                 />
               {renderSubmit(props)}
