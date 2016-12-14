@@ -28,6 +28,13 @@ const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
   eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
   mattis consectetur purus sit amet fermentum.`]
 
+const linkDefaults = {
+  linkText: 'Link',
+  linkTo: '/',
+  linkStyle: 'violet',
+  target: '_blank'
+}
+
   // True/False Logic For Label
 function renderLabel ({
     hasLabel,
@@ -107,12 +114,7 @@ const FullWidthTwoCol = ({
   sectionText = defaultText,
   image = dummyImage,
   hasButton = true,
-  link = {
-    linkText: 'Link',
-    linkTo: '/',
-    linkStyle: 'violet',
-    target: '_blank'
-  }
+  link = linkDefaults
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
