@@ -3,9 +3,8 @@ import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
 
-const message = `
-Your account has been created, please check your email to activate your account.
-`
+const message = `Your account has been created, please check your email to activate your account.`
+
 export default class Layout extends React.Component {
   render () {
     return (
@@ -22,4 +21,3 @@ export default class Layout extends React.Component {
     )
   }
 }
-

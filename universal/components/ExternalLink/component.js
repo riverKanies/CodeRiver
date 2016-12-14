@@ -48,7 +48,8 @@ export const ExternalLink = ({
 ExternalLink.defaultProps = {
   linkText: 'Join Us',
   linkTo: '/',
-  linkStyle: 'violet'
+  linkStyle: 'violet',
+  target: '_blank'
 }
 
 export default ExternalLink
