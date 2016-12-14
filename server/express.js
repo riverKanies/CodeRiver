@@ -9,7 +9,7 @@ const app = express()
 const paths = config.utils_paths
 
 app.use((req, res, next) => {
-  if (req.originalUrl.match(/404/)) {
+  if (req.originalUrl.match(/404$/)) {
     res.status(404)
   }
   next()
