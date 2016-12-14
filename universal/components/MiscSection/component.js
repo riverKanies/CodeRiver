@@ -6,23 +6,23 @@ const Items = [
   {
     title: 'Partnerships: Corporate',
     description: `Interested in learning more about our corporate partnerships?
-                  Email us at corporate@thriveglobal.com.`
+                  Email us at corporate@thriveglobal.com`
   },
   {
     title: 'Partnerships: Media',
     description: `Interested in learning more about brand partnerships and
                   sponsorships with Thrive Global? Email us at
-                  media@thriveglobal.com.`
+                  media@thriveglobal.com`
   },
   {
     title: 'Partnerships: Commerce',
     description: `Interested in learning more about the Thrive Global store?
-                  Email us at commerce@thriveglobal.com.`
+                  Email us at commerce@thriveglobal.com`
   },
   {
     title: 'Press',
     description: `Are you a member of the press seeking information about
-                  Thrive Global? Email Monica Lee at monica@thriveglobal.com.`
+                  Thrive Global? Email Monica Lee at monica@thriveglobal.com`
   },
   {
     title: 'Contact',
