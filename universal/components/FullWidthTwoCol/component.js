@@ -110,7 +110,7 @@ const FullWidthTwoCol = ({
   link = {
     linkText: 'Link',
     linkTo: '/',
-    linkStyle: 'default',
+    linkStyle: 'violet',
     target: '_blank'
   }
 }: Props) => {
