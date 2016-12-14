@@ -38,7 +38,6 @@ const linkToAssessment = {
 }
 const eCourse = {
   bgColor: 'default',
-  hasTitle: 'titleTrue',
   titleCenter: 'centerTrue',
   title: 'The Thrive E-Course',
   colOneImg: kobeImage,

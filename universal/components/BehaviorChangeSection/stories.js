@@ -5,7 +5,7 @@ import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 
 import BehaviorChangeSection from './component'
 
-const notes = 'This story demonstrates the props that can be passed to BehaviorChangeSection'
+const notes = 'This component renders the IconWithText component'
 
 const props = {
   title: 'BehaviorChangeSection Title'
