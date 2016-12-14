@@ -7,7 +7,7 @@ import FullWidthTwoColSpecial from './component'
 import dummyImage from './assets/thriveScience.jpg'
 
 const notes = `This story demonstrates the props that can be passed to
-FullWidthTwoColSpecial.`
+FullWidthTwoColSpecial. When hasButton is checked, the image and title automatically become links to the same URL.`
 
 const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
