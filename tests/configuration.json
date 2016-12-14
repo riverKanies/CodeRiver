@@ -1,6 +1,6 @@
 {
-  "scriptPreprocessor": "<rootDir>/tests/config/preprocessor",
-  "setupFiles": ["<rootDir>/tests/config/envScript.js"],
+  "scriptPreprocessor": "<rootDir>/tests/scriptPreprocessor",
+  "setupFiles": ["<rootDir>/tests/setupFiles.js"],
   "globals": {
     "__DEV__": true,
     "__PROD__": false,
@@ -29,5 +29,6 @@
   },
   "testPathIgnorePatterns": [
     "(/blueprints/.*|\\.md$)"
-  ]
+  ],
+  "testRegex": "(/__tests__/.*|\\.(spec))\\.(js|jsx)$"
 }
