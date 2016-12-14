@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, MonBold, Mon, bodyCopy, darkGray, gradientPathwayCard, gradientPathwayCardHover, ThriveTeal, white from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-elder-bear, MonBold, Mon, bodyCopy, darkGray, gradientPathwayCard, gradientPathwayCardHover, ThriveTeal, white from 'all';
 
 .card {
   background: gradientPathwayCard;
@@ -9,12 +9,12 @@
   text-align: center;
   color: white;
 
-  @media bp-mama-bear {
+  @media bp-papa-bear {
     lost-column: 1/2;
     margin-bottom: 1.5rem;
     float: left;
   }
-  @media bp-grand-bear {
+  @media bp-elder-bear {
     lost-column: 1/3;
     margin-bottom: 2rem;
   }
