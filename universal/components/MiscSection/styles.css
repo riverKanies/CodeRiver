@@ -7,21 +7,19 @@
 }
 
 .content {
-  padding-top: 10vh;
   lost-center: 960px;
 }
 
 .title {
   lost-column: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
   text-decoration: underline;
 }
 
 .SectionContainer{
- lost-column:1;
+  lost-column: 1;
   padding: 2rem 1rem;
   background-color: white;
   text-align: center;
-
 }
