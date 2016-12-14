@@ -107,7 +107,12 @@ const FullWidthTwoCol = ({
   sectionText = defaultText,
   image = dummyImage,
   hasButton = true,
-  link = {}
+  link = {
+    linkText: 'Link',
+    linkTo: '/',
+    linkStyle: 'default',
+    target: '_blank'
+  }
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
