@@ -27,6 +27,7 @@ import Pathway from 'layouts/Pathway'
 import About from 'layouts/About'
 import Journey from 'layouts/Journey'
 import NotFound from 'layouts/NotFound'
+import Contact from 'layouts/Contact'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -154,6 +155,10 @@ export const createRoutes = (store) => ([
       {
         path: 'press-releases',
         component: PressReleases
+      },
+      {
+        path: 'contact',
+        component: Contact
       },
       {
         path: '*',

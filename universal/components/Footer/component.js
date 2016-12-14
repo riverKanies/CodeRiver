@@ -51,7 +51,7 @@ const Footer = ({
               <a href='/who-we-are#careers'>Careers</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/who-we-are#contact'>Contact</a>
+              <a href='/contact'>Contact</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/about/corporate'>Partnerships - Corporate</a>
