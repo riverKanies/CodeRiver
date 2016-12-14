@@ -1,13 +1,13 @@
-@value bp-mama-bear, bp-papa-bear, bp-elder-bear, MonBold, Mon, bodyCopy, darkGray, ThriveTeal, gradientPathwayCard, gradientPathwayCardHover, gradientBlurple, white from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, bp-elder-bear, MonBold, Mon, darkGray, ThriveTeal, gradientPathwayCard, gradientBlurple from 'all';
 
 .card {
   background: gradientPathwayCard;
+  color: white;
   lost-column: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   outline-offset: -2rem;
   outline: 1px solid white;
   text-align: center;
-  color: white;
 
   @media bp-papa-bear {
     lost-column: 1/2;
@@ -32,13 +32,18 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 24rem;
+  min-height: 20rem;
   height: auto;
   margin: 0 auto;
   padding: 0 3rem;
   float: left;
 
-  @media bp-papa-bear {
+  @media bp-mama-bear {
+    padding: 0 3rem;
+    min-height: 24rem;
+  }
+
+  @media bp-grand-bear {
     display: block;
     padding: 6rem 4rem 2rem 4rem;
   }
@@ -46,12 +51,12 @@
 
 .header {
   display: block;
-  width: 100%;
+  font-size: 1.75rem;
   margin-bottom: 0.5em;
   padding: 0 0;
-  font-size: 1.75rem;
   text-align: center;
   text-transform: capitalize;
+  width: 100%;
 
   &::after {
     content: '';
@@ -72,7 +77,14 @@
   width: 100%;
   margin: 1rem 0;
   margin-bottom: 0;
-  padding: 0 0 0 0!important;
   float: left;
   text-align: center;
+
+  @media bp-mama-bear {
+    padding: 0 3rem;
+  }
+
+  @media bp-papa-bear {
+    padding: 0;
+  }
 }

@@ -20,7 +20,6 @@ export default function ({
     <Link to={`/pathways/${pathwayId}/journeys/${id}`} className={styles.card}>
       <section className={styles.cardContainer}>
         <h3 className={styles.header}>{title}</h3>
-        <div className={styles.divider} />
         <p className={styles.synopsis}>{description}</p>
       </section>
     </Link>
