@@ -107,24 +107,24 @@ const FullWidthTwoColSpecial = ({
   label = {},
   sectionText = defaultText,
   image = dummyImage,
-  hasButton = true,
-  link = {}
+  hasButton = false,
+  link
 }: Props) => {
   return (
     <section className={styles[sectionClass]}>
-      <section className={styles.container}>
+      <div className={styles.container}>
         <div className={styles[hasColorBar]}>
-          <section className={styles.sectionContent}>
+          <div className={styles.sectionContent}>
             {renderLabel({hasLabel, label})}
             {renderHeader({hasButton, link, title})}
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             {renderButton({hasButton, link})}
-          </section>
+          </div>
         </div>
         <div className={styles.column}>
           {renderImage({ hasButton, image, title, link })}
         </div>
-      </section>
+      </div>
     </section>
   )
 }
