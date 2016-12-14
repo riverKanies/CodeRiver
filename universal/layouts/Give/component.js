@@ -45,7 +45,7 @@ const trainNonProfits = {
     Global Citizen, Alliance for Children's Rights, EduCare Foundation
     and Lean In with free trainings to enhance well-being and performance.`,
     ` Interested in bringing Thrive to your nonprofit?
-    E-mail nonprofits@thriveglobal.com`
+    E-mail <a href="mailto:nonprofits@thriveglobal.com">nonprofits@thriveglobal.com</a>`
   ]
 }
 

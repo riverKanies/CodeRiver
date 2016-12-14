@@ -35,13 +35,16 @@ const FullWidthText = ({
             <h2>{title}</h2>
           </header>
           <div className={styles[divider]} />
-          <section className={styles.sectionContent}>
-            {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-          </section>
+          <section className={styles.sectionContent} dangerouslySetInnerHTML={createHTMLContent(sectionText)} />
         </div>
       </section>
     </section>
   )
+}
+
+function createHTMLContent (strings) {
+  const paragraphs = strings.map((paragraph, i) => (`<p>${paragraph}</p>`)).join('\n')
+  return {__html: paragraphs}
 }
 
 export default FullWidthText
