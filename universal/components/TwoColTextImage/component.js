@@ -6,7 +6,7 @@ import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue',
-  hasTitle: 'titleTrue' | 'titleFalse',
+  hasTitle: boolean,
   titleCenter: 'centerTrue' | 'centerFalse',
   link: any,
   title: string,
@@ -15,11 +15,26 @@ type Props = {
   colTwoImg: any
 }
 
+// True/False Logic For Has Title
+function renderTitle ({
+  hasTitle,
+  title
+}: { hasTitle: boolean, title: string }) {
+  if (hasTitle) {
+    return (
+      <header className={styles.title}>
+        <h2>{title}</h2>
+      </header>
+    )
+  }
+  return null
+}
+
 const defaultText = ['Hello, I am some text!', 'I am also text!']
 
 const TwoColTextImage = ({
   bgColor = 'default',
-  hasTitle = 'titleFalse',
+  hasTitle = true,
   title = 'TwoColTextImage',
   link = {},
   colTextOne = defaultText,
@@ -29,10 +44,7 @@ const TwoColTextImage = ({
   return (
     <section className={styles[bgColor]}>
       <div className={styles.container}>
-        <header className={styles[hasTitle]}>
-          <h2>{title}</h2>
-        </header>
-        <div className={styles.divider} />
+        {renderTitle({hasTitle, title})}
         <section className={styles.columnWrap}>
           <div className={styles.column}>
             <img src={colOneImg} />

@@ -13,12 +13,6 @@ const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
 eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
 mattis consectetur purus sit amet fermentum.`]
 
-const defaultButton = {
-  buttonText: 'Read More',
-  linkTo: 'javascript:void(0)',
-  buttonStyle: 'violet'
-}
-
 const defaultLabel = {
   label: 'Label',
   labelColor: 'defaultLabel'
@@ -29,8 +23,7 @@ const props = {
   title: 'I am a Title',
   hasLabel: ['labelTrue', 'labelFalse'],
   sectionText: defaultText,
-  image: dummyImage,
-  hasButton: ['buttonTrue', 'buttonFalse']
+  image: dummyImage
 }
 
 storiesOf('FullWidthTwoCol', module)
@@ -44,8 +37,6 @@ storiesOf('FullWidthTwoCol', module)
           hasLabel={select('Need a Label?', props.hasLabel, props.hasLabel[0])}
           label={defaultLabel}
           sectionText={text('Section Text', props.sectionText)}
-          hasButton={select('Need a Button?', props.hasButton, props.hasButton[0])}
-          button={defaultButton}
         />
       </WithNotes>
     )

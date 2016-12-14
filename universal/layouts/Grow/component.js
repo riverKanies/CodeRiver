@@ -21,7 +21,6 @@ const banner = {
   subTitle: `Begin your journey from living to thriving with our Pathways, Journeys,
   and Microsteps. It's time to go from knowing what to do to actually doing it.`
 }
-
 const linkToAssessment = {
   alignment: 'center',
   colorScheme: 'purpleTealGradient',
@@ -37,10 +36,8 @@ const linkToAssessment = {
     buttonStyle: 'teal'
   }
 }
-
 const eCourse = {
   bgColor: 'default',
-  hasTitle: 'titleTrue',
   titleCenter: 'centerTrue',
   title: 'The Thrive E-Course',
   colOneImg: kobeImage,
@@ -61,7 +58,6 @@ const eCourse = {
     linkStyle: 'violet'
   }
 }
-
 const quote = {
   bgColor: 'pattern',
   quoteImage: ariannaQuote,
@@ -69,7 +65,8 @@ const quote = {
     'Intention is one of the most powerful forces there is. What you mean when ' +
     'you do a thing will always determine the outcome.'
   ],
-  citation: 'Arianna Huffington'
+  citation: 'Arianna Huffington',
+  isLink: false
 }
 
 export const GrowView = () => (

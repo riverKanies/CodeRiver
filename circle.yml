@@ -25,13 +25,12 @@ test:
   override:
     - npm run lint
     - npm run analyze
-    - npm run test:configs
-    - npm run test:specs
+    - npm test
     - npm run start:test:
         background: true
     - java -jar bin/selenium-server-standalone-3.0.1.jar:
         background: true
-    - ./wait_for_server.sh
+    - ./nightwatch/wait_for_server.sh
     - npm run test:circle:features
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
 

@@ -23,7 +23,7 @@ storiesOf('FeaturedStory', module)
     return (
       <WithNotes notes={notes}>
         <FeaturedStory
-          bgColor={select('Background Color', props.bgColor, props.bgColor[0])}
+          bgColor={select('Background Color', props.bgColor, props.bgColor[2])}
           title={text('Title', props.title)}
         />
       </WithNotes>

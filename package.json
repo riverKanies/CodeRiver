@@ -26,13 +26,11 @@
     "start:test": "better-npm-run start:test",
     "storybook:build": "build-storybook -c .storybook -0 .storybook-static",
     "storybook:start": "start-storybook -p 4003 -c .storybook",
-    "test": "npm run test:configs && npm run test:specs",
-    "test:all": "npm run test:configs && better-npm-run test --config tests/config/generated/tests.all.json",
-    "test:configs": "better-npm-run test:configs",
-    "test:circle:features": "nightwatch -c nightwatch.test.json",
-    "test:features": "nightwatch",
-    "test:specs": "better-npm-run test --config tests/config/generated/tests.specs.json",
-    "test:watch": "npm run test:configs && better-npm-run test -- --watch --config tests/config/generated/tests.specs.json"
+    "test": "better-npm-run test",
+    "test:all": "npm test && npm run test:features",
+    "test:features": "better-npm-run nightwatch",
+    "test:circle:features": "better-npm-run nightwatch --env circleci",
+    "test:watch": "better-npm-run test --watch"
   },
   "betterScripts": {
     "compile": {
@@ -90,17 +88,14 @@
       }
     },
     "test": {
-      "command": "jest",
+      "command": "jest --config tests/configuration.json",
       "env": {
         "NODE_ENV": "test",
         "DEBUG": "app:*"
       }
     },
-    "test:configs": {
-      "command": "rimraf tests/config/generated/* && json-concat tests/config/specs.config.json tests/config/common.config.json tests/config/generated/tests.specs.json && json-concat tests/config/features.config.json tests/config/common.config.json tests/config/generated/tests.features.json && json-concat tests/config/all.config.json tests/config/common.config.json tests/config/generated/tests.all.json ",
-      "env": {
-        "DEBUG": "app:*"
-      }
+    "nightwatch": {
+      "command": "nightwatch --config nightwatch/nightwatch.json"
     }
   },
   "repository": {
@@ -160,7 +155,6 @@
     "mocha": "^3.0.2",
     "mocha-lcov-reporter": "^1.2.0",
     "newrelic": "^1.34.0",
-    "nightmare": "^2.8.1",
     "nock": "^9.0.0",
     "node-sass": "^3.10.1",
     "nodemon": "^1.10.2",
@@ -184,6 +178,7 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^4.0.0",
     "react-router": "^3.0",
+    "react-router-sitemap": "^1.0.8",
     "react-storybook-addon-backgrounds": "0.0.4",
     "react-test-renderer": "^15.3.2",
     "reactdown": "^1.0.0-alpha14",
@@ -199,6 +194,7 @@
     "reselect": "^2.5.4",
     "rimraf": "^2.5.1",
     "shortid": "^2.2.6",
+    "sitemap": "^1.8.2",
     "storybook-addon-specifications": "^1.0.15",
     "style-loader": "^0.13.0",
     "stylelint": "^7.3.1",
@@ -219,6 +215,7 @@
     "@kadira/storybook-addon-knobs": "^1.2.2",
     "@kadira/storybook-addon-notes": "^1.0.1",
     "@kadira/storybook-addon-options": "^1.0.1",
+    "babel": "^6.5.2",
     "babel-jest": "16.0.0",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.1",
@@ -238,7 +235,8 @@
     "nightwatch": "^0.9.9",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-log-monitor": "^1.1.1"
+    "redux-devtools-log-monitor": "^1.1.1",
+    "sitemap-webpack-plugin": "^0.1.1"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/tests/preprocessor",

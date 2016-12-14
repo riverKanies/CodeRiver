@@ -11,27 +11,27 @@ type Props = {
   buttonStyle: string,
   segmentProps: Object,
   disabled: boolean,
-  buttonText: String,
+  buttonText: string,
   download: boolean
 }
 
 export const Button = ({
+  linkTo = '/',
+  buttonStyle = 'violet',
+  buttonText = 'Join Us',
+  download = true,
   children,
-  linkTo,
-  buttonStyle,
-  buttonText,
   handleClick,
   segmentProps,
-  disabled,
-  download = true
+  disabled
  }: Props) => {
   const linkProps = {
     className: styles[buttonStyle],
     onClick: handleClick,
     activeClassName: styles.activeStyle,
-    disabled,
+    disabled: disabled,
     to: linkTo,
-    download
+    download: download
   }
 
   return (
@@ -39,12 +39,6 @@ export const Button = ({
       {children || buttonText}
     </Link>
   )
-}
-
-Button.defaultProps = {
-  buttonText: 'Join Us',
-  linkTo: '/',
-  buttonStyle: 'violet'
 }
 
 export default Button

@@ -1,20 +1,26 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 import { WithProvider } from 'lib/testHelpers'
 
-import Header from './component'
+import SignupForm from './container'
 
-const notes = 'This story demonstrates the props that can be passed to Header'
+const notes = 'This story demonstrates the props that can be passed to SignupForm'
 
-storiesOf('Header', module)
+const props = {
+  title: 'SignupForm Title'
+}
+
+storiesOf('SignupForm', module)
   .addDecorator(withKnobs)
   .add('with props', () => {
     return (
       <WithNotes notes={notes}>
         <WithProvider>
-          <Header />
+          <SignupForm
+            title={text('Title', props.title)}
+          />
         </WithProvider>
       </WithNotes>
     )
