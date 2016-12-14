@@ -8,7 +8,14 @@ type Props = {
 }
 
 function HeaderQuote ({ quote, author }: Props) {
-  if (!quote || !author) return null
+  if ((!quote && !author) || (!quote && author)) return null
+  if (quote && !author) {
+    return (
+      <div>
+        <p className={styles.quote}>{quote}</p>
+      </div>
+    )
+  }
   return (
     <div>
       <p className={styles.quote}>{quote}</p>
