@@ -5,7 +5,6 @@ import HeaderQuote from './component'
 describe('(Component) HeaderQuote', () => {
   it('renders quote when we pass author and quote', () => {
     const props = {
-      title: 'title',
       author: 'bill',
       quote: 'this is the quote'
     }
@@ -22,27 +21,26 @@ describe('(Component) HeaderQuote', () => {
     expect(authorSpan.text()).toEqual('bill')
   })
 
-  it('does not render quote without an author', () => {
-    const props = {
-      title: 'title',
-      quote: 'this is the quote'
-    }
+  it('does not render without a quote and author', () => {
 
-    const subject = shallow(<HeaderQuote {...props} />)
+    const subject = shallow(<HeaderQuote />)
     const wrapper = subject.find('div')
 
     expect(wrapper.length).toBe(0)
   })
 
-  it('does not render quote without a quote', () => {
+  it('renders quote without an author', () => {
     const props = {
-      title: 'title',
-      author: 'bill'
+      quote: 'this is the quote'
     }
 
     const subject = shallow(<HeaderQuote {...props} />)
-    const wrapper = subject.find('div')
+    const wrapper = subject.find('p')
 
-    expect(wrapper.length).toBe(0)
+    expect(wrapper.length).toBe(1)
+
+    const authorSpan = subject.find('span')
+
+    expect(authorSpan.length).toBe(0)
   })
 })
