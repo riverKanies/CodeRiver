@@ -77,7 +77,7 @@ const thriveCommunity = {
     `how people are changing the way they work and live. We want to hear yours.`
   ],
   image: communityImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Read More',
     linkTo: 'https://journal.thriveglobal.com/join-the-thrive-global-community-3aa96f08423e#.nz1xe912c',
@@ -119,7 +119,7 @@ const thriveApps = {
     from technology and reconnect with what really matters.`
   ],
   image: appsImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Get the Apps',
     linkTo: '/apps',
@@ -209,7 +209,7 @@ const thriveArt = {
      Trishla Jain and Isabella Huffington at The Thrive Journal.`
   ],
   image: artImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: 'https://medium.com/@ariannahuff/30d21640ab0b#.bkyick4i5',
@@ -231,7 +231,7 @@ const thriveFoundation = {
      and civic leaders who are on the front line of serving others.`
   ],
   image: foundationImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: '/give',
