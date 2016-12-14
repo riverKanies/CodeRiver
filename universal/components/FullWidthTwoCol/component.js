@@ -73,10 +73,29 @@ function renderImage ({
   }
   return (
     <figure className={styles.imageWrap}>
-      <a href={link.linkTo} target={link.target || '_blank'} >
+      <a className={styles.imgLink} href={link.linkTo} target={link.target || '_blank'} >
         <img className={styles.image} src={image} alt={title} />
       </a>
     </figure>
+  )
+}
+
+function renderHeader ({
+  hasButton,
+  link,
+  title
+}: { hasButton: boolean, link: LinkProps, title: string }) {
+  if (!hasButton || !link) {
+    return (
+      <header className={styles.header}>
+        <h2>{title}</h2>
+      </header>
+    )
+  }
+  return (
+    <header className={styles.header}>
+      <h2><a href={link.linkTo} target={link.target || '_blank'}>{title}</a></h2>
+    </header>
   )
 }
 
@@ -99,9 +118,7 @@ const FullWidthTwoCol = ({
         <div className={styles.column}>
           <div className={styles.sectionContent}>
             {renderLabel({hasLabel, label})}
-            <header className={styles.header}>
-              <h2>{title}</h2>
-            </header>
+            {renderHeader({hasButton, link, title})}
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             {renderButton({hasButton, link})}
           </div>

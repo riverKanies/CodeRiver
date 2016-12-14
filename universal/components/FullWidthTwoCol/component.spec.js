@@ -93,4 +93,33 @@ describe('(Component) FullWidthTwoCol', () => {
       expect(link.length).toEqual(1)
     })
   })
+
+  context('rendering the component header with and without a link', () => {
+    const defaultProps = {
+      link: {
+        linkText: 'Read More',
+        linkTo: 'http://www.thriveglobal.com',
+        linkStyle: 'blue'
+      }
+    }
+    it('has no link when hasButton is false', () => {
+      const subject = shallow(
+        <FullWidthTwoCol {...defaultProps} hasButton={false} />
+      )
+      const target = subject.find('header')
+      const link = target.find('a')
+
+      expect(link.length).toEqual(0)
+    })
+
+    it('has a link when hasButton is true', () => {
+      const subject = shallow(
+        <FullWidthTwoCol {...defaultProps} hasButton={true} />
+      )
+      const target = subject.find('header')
+      const link = target.find('a')
+
+      expect(link.length).toEqual(1)
+    })
+  })
 })
