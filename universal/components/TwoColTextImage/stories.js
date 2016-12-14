@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
+import { withKnobs, text, select, boolean } from '@kadira/storybook-addon-knobs'
 
 import TwoColTextImage from './component'
 
@@ -15,13 +15,9 @@ const props = {
     'purple',
     'blue'
   ],
-  marginBottom: [
-    'marginTrue',
-    'marginFalse'
-  ],
   hasTitle: [
-    'titleTrue',
-    'titleFalse'
+    true,
+    false
   ],
   title: 'Title'
 }
@@ -33,11 +29,8 @@ storiesOf('TwoColTextImage', module)
       <WithNotes notes={notes}>
         <TwoColTextImage
           bgColor={select('Background Color', props.bgColor, props.bgColor[0])}
-          marginBottom={select('Need a bottom margin?', props.marginBottom, props.marginBottom[0])}
-          hasTitle={select('Does This Need a Title', props.hasTitle, props.hasTitle[0])}
+          hasTitle={boolean('Does This Need a Title?', props.hasTitle, props.hasTitle[0])}
           title={text('Title', props.title)}
-          colTextOne={text('Column One Text', props.title)}
-          colTextTwo={text('Column Two Text', props.title)}
         />
       </WithNotes>
     )

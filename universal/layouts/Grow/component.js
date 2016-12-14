@@ -5,10 +5,10 @@ import styles from './styles'
 // Components
 import TextBanner from 'components/TextBanner'
 import CTASection from 'components/CTASection'
+import VerticalTimeline from 'components/VerticalTimeline'
 import TwoColTextImage from 'components/TwoColTextImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
-import VerticalTimeline from 'components/VerticalTimeline'
 
 // Content Import
 import kobeImage from './assets/kobe.jpg'
@@ -39,7 +39,6 @@ const linkToAssessment = {
 }
 const eCourse = {
   bgColor: 'default',
-  hasTitle: 'titleTrue',
   titleCenter: 'centerTrue',
   title: 'The Thrive E-Course',
   colOneImg: kobeImage,

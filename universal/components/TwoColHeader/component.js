@@ -34,8 +34,8 @@ const TwoColHeader = ({
   colTextTwo = colTextOneTwo
 }: Props) => {
   return (
-    <section className={styles[bgColor][marginBottom]}>
-      <div className={styles.container}>
+    <section className={styles[bgColor]}>
+      <div className={styles[marginBottom]}>
         <header className={styles[hasTitle]}>
           <h1>{title}</h1>
         </header>
