@@ -45,10 +45,10 @@ storiesOf('FullWidthTwoColSpecial', module)
         <FullWidthTwoColSpecial
           sectionClass={select('Section Class', props.sectionClass, props.sectionClass[0])}
           title={text('Section Title', props.title)}
-          hasLabel={boolean('Need a Label?', props.hasLabel, props.hasLabel[0])}
+          hasLabel={boolean('Need a Label?', props.hasLabel, props.hasLabel[1])}
           label={defaultLabel}
           sectionText={text('Section Text', props.sectionText)}
-          hasButton={boolean('Need a Button?', props.hasButton, props.hasButton[0])}
+          hasButton={boolean('Need a Button?', props.hasButton, props.hasButton[1])}
         />
       </WithNotes>
     )

@@ -45,7 +45,7 @@ const eCourse = {
      and well-being. Guest teachers include Kobe Bryant, Wharton Professor
      Adam Grant, Warby Parker CEO Dave Gilboa, and more.`
   ],
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
@@ -88,7 +88,7 @@ const pathways = {
   bgColor: 'blurple',
   author: '',
   hasAuthor: 'authorFalse',
-  hasLabel: 'labelTrue',
+  hasButton: true,
   details: [
     `Thrive Global is all about action – going from knowing what to do to actually
     doing it.  Begin by taking your Thrive Pulse.  Explore our pathways, journeys
@@ -144,7 +144,7 @@ const thriveStyle = {
     outfits.`
   ],
   image: styleImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Read More',
     linkTo: 'https://medium.com/@ariannahuff/7585234da618#.t2phr2e2o',
@@ -253,6 +253,7 @@ const popUpShop = {
     days a week, from 10:00am to 7:00pm, December 1 through January 15, 2017.`
   ],
   image: popUpImg,
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: '/popup',

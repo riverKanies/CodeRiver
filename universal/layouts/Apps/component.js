@@ -30,6 +30,7 @@ const thriveAway = {
     deletes new emails until you're back in the office.`
   ],
   image: thriveAwayImage,
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: 'http://thriveaway.thriveglobal.com',
@@ -50,6 +51,7 @@ const joyTrigger = {
     information for bringing more well-being and productivity to your life.`
   ],
   image: joyTriggerImage,
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: 'http://joytrigger.thriveglobal.com',
@@ -72,6 +74,7 @@ const alexa = {
     Agapi Stassinopoulos.`
   ],
   image: alexaImage,
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: 'https://www.amazon.com/gp/product/B01MYNPU4S',
@@ -92,6 +95,7 @@ const silo = {
     in your life for focus, creativity, and truly connecting with the world, those around you, and yourself.`
   ],
   image: siloImage,
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: 'http://silo.thriveglobal.com/',
@@ -118,6 +122,7 @@ const goodnightSmartphone = {
     our always-on digital selves.`
   ],
   image: goodnightImg,
+  hasButton: true,
   link: {
     linkText: 'Get the Audiobook',
     linkTo:

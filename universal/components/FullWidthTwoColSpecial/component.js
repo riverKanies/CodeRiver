@@ -58,6 +58,7 @@ function renderButton ({
   return (null)
 }
 
+// Render Image as Link
 function renderImage ({
 hasButton,
 link,
