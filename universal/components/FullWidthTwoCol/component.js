@@ -15,6 +15,7 @@ type Props = {
   image: string,
   button: any,
   hasButton: boolean,
+  linktoURL: string,
   link: Object
 };
 
@@ -40,8 +41,9 @@ function renderLabel ({
 // True/False Logic For Button/Link
 function renderButton ({
   hasButton,
+  linktoURL,
   link
-  }: { hasButton: boolean, link: Object}) {
+  }: { hasButton: boolean, linktoURL: string, link: Object}) {
   if (hasButton) {
     return (
       <span className={styles.button}>
@@ -50,6 +52,23 @@ function renderButton ({
     )
   }
   return (null)
+}
+
+// True/False Logic For Wrapping Image In Anchor
+function renderImage ({
+  image,
+  title,
+  hasButton,
+  linktoURL
+  }: { image: string, title: string, hasButton: boolean, linktoURL: string }) {
+  if (hasButton) {
+    return (
+      <a className={styles.imgLink} href={linktoURL}><img className={styles.image} src={image} alt={title} /></a>
+    )
+  }
+  return (
+    <img className={styles.image} src={image} alt={title} />
+  )
 }
 
 const FullWidthTwoCol = ({
@@ -61,6 +80,7 @@ const FullWidthTwoCol = ({
   image = dummyImage,
   button = null,
   hasButton = true,
+  linktoURL = 'http://www.thriveglobal.com',
   link = {}
 
 }: Props) => {
@@ -69,7 +89,7 @@ const FullWidthTwoCol = ({
       <section className={styles.container}>
         <div className={styles.column}>
           <figure className={styles.imageWrap}>
-            <img className={styles.image} src={image} alt={title} />
+            {renderImage({image, title, hasButton, linktoURL})}
           </figure>
         </div>
         <div className={styles.column}>

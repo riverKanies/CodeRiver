@@ -5,7 +5,8 @@ import styles from './styles'
 // Components
 import TextBanner from 'components/TextBanner'
 import CTASection from 'components/CTASection'
-import VerticalTimeline from 'components/VerticalTimeline'
+// import VerticalTimeline from 'components/VerticalTimeline'
+// waiting for approval on content to put back in
 import TwoColTextImage from 'components/TwoColTextImage'
 import PathwaySection from 'components/PathwaySection'
 import QuoteSection from 'components/QuoteSection'
@@ -75,7 +76,6 @@ export const GrowView = () => (
     <section className={styles.content}>
       <TextBanner {...banner} />
       <CTASection {...linkToAssessment} />
-      <VerticalTimeline />
       <PathwaySection />
       <TwoColTextImage {...eCourse} />
       <QuoteSection {...quote} />

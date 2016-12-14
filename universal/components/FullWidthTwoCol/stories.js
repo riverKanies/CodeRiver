@@ -9,17 +9,11 @@ import dummyImage from './assets/thriveScience.jpg'
 const notes = `This story demonstrates the props that can be passed to
 FullWidthTwoCol.`
 
-<<<<<<< HEAD
 const defaultText = [
   `Morbi leo risus, porta ac consectetur ac, vestibulum at
   eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
   mattis consectetur purus sit amet fermentum.`
 ]
-=======
-const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
-eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
-mattis consectetur purus sit amet fermentum.`]
->>>>>>> master
 
 const defaultLabel = {
   label: 'Label',
@@ -38,15 +32,11 @@ const props = {
     false
   ],
   sectionText: defaultText,
-<<<<<<< HEAD
   image: dummyImage,
   hasButton: [
     true,
     false
   ]
-=======
-  image: dummyImage
->>>>>>> master
 }
 
 storiesOf('FullWidthTwoCol', module)
@@ -60,10 +50,7 @@ storiesOf('FullWidthTwoCol', module)
           hasLabel={boolean('Need a Label?', props.hasLabel, props.hasLabel[0])}
           label={defaultLabel}
           sectionText={text('Section Text', props.sectionText)}
-<<<<<<< HEAD
           hasButton={boolean('Need a Button?', props.hasButton, props.hasButton[0])}
-=======
->>>>>>> master
         />
       </WithNotes>
     )
