@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './styles'
 import TitleWithText from 'components/TitleWithText'
-import Button from 'components/Button'
 
 type Props = {
   title: string,
@@ -14,13 +13,24 @@ const Items = [
   {
     title: 'Partnerships: Corporate',
     description: `Interested in learning more about our corporate partnerships?
-                  Email us at corporate@thriveglobal.com`
+                  Email us at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'corporate@thriveglobal.com',
+      linkTo: 'mailto:corporate@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
   },
   {
     title: 'Partnerships: Media',
     description: `Interested in learning more about brand partnerships and
-                  sponsorships with Thrive Global? Email us at
-                  media@thriveglobal.com`
+                  sponsorships with Thrive Global? Email us at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'media@thriveglobal.com',
+      linkTo: 'mailto:media@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
   },
   {
     title: 'Partnerships: Commerce',
@@ -28,22 +38,32 @@ const Items = [
                   Email us at commerce@thriveglobal.com`,
     hasButton: 'buttonTrue',
     button: {
-      buttonText: 'Thrive With Us',
+      buttonText: 'jobs@thriveglobal.com',
       linkTo: 'mailto:jobs@thriveglobal.com',
-      buttonStyle: 'white'
+      buttonStyle: 'violet'
     }
   },
   {
     title: 'Press',
     description: `Are you a member of the press seeking information about
-                  Thrive Global? Email Monica Lee at monica@thriveglobal.com`
+                  Thrive Global? Email Monica Lee at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'monica@thriveglobal.com',
+      linkTo: 'mailto:monica@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
   },
   {
     title: 'Contact',
     description: `Interested in learning more about brand partnerships and
-                  sponsorships with Thrive Global? Email Sam Winkelman at
-                  sw@thriveglobal`,
-    link: 'mailto:sw@thriveglobal.com'
+                  sponsorships with Thrive Global? Email Sam Winkelman at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'sw@thriveglobal',
+      linkTo: 'mailto:sw@thriveglobal',
+      buttonStyle: 'violet'
+    }
   }
 ]
 
@@ -58,9 +78,6 @@ const MiscSection = ({
           item =>
             <section>
               <TitleWithText {...item} />
-              <span className={styles[hasButton]}>
-                <Button {...button} />
-              </span>
             </section>
         )}
       </section>
