@@ -28,7 +28,8 @@ const Items = [
     title: 'Contact',
     description: `Interested in learning more about brand partnerships and
                   sponsorships with Thrive Global? Email Sam Winkelman at
-                  sw@thriveglobal.com to learn more.`
+                  sw@thriveglobal`,
+    link: 'mailto:sw@thriveglobal.com'
   }
 ]
 
