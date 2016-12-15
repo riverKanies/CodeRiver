@@ -44,7 +44,7 @@ function renderAuthor ({
 }: { hasAuthor: boolean, author: string }) {
   if (hasAuthor) {
     return (
-      <span className={styles.authorWrap}>
+      <span className={`${styles.authorWrap} theAuthor`}>
         <p className={styles.author}>{author}</p>
       </span>
     )
@@ -115,7 +115,7 @@ function renderbgLink ({
         <header className={styles.headerWrap}>
           <h2 className={styles.header}>{title}</h2>
         </header>
-        <p className={styles.details}>{details}</p>
+        <p className={`${styles.details} copyContent`}>{details}</p>
         {renderAuthor({hasAuthor, author})}
         {renderButton({hasButton, externalLink})}
       </div>
