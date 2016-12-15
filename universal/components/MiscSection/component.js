@@ -17,7 +17,13 @@ const Items = [
   {
     title: 'Partnerships: Commerce',
     description: `Interested in learning more about the Thrive Global store?
-                  Email us at commerce@thriveglobal.com`
+                  Email us at commerce@thriveglobal.com`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'Thrive With Us',
+      linkTo: 'mailto:jobs@thriveglobal.com',
+      buttonStyle: 'white'
+    }
   },
   {
     title: 'Press',
