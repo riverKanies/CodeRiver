@@ -75,7 +75,7 @@ const SignUpForm = (props: signupProps) => {
                 />
               <Field
                 component={Input}
-                name='newsletter_opt_in'
+                name='gimme_newsletters'
                 type='checkbox'
                 label='Would you like to signup for our newsletter?'
                 theme='thriveInput'

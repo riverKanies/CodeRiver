@@ -14,6 +14,7 @@ const validate = createValidator({
 })
 
 function onSuccess (result, dispatch) {
+  console.log(result); return;
   browserHistory.push('registration-success')
 }
 
