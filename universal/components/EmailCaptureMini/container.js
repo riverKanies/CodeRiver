@@ -11,7 +11,7 @@ const validate = createValidator({
 
 export function handleSubmit (values, dispatch) {
   // dispatch event to be caught by middleware
-  const successMessage = `Welcome to The Thrive Tribe. We're so happy to have you.`
+  const successMessage = `Welcome to The Thrive Tribe. We're so happy to have you!`
   dispatch({
     type: actions.newsletterFormSubmitted,
     track: { email: values.email }
