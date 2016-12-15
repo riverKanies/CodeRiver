@@ -45,7 +45,7 @@ storiesOf('FeaturedStory', module)
         <FeaturedStory
           bgLink={boolean('Would you like the background image as a link?', props.bgLink, props.bgLink[1])}
           bgColor={select('Background Color', props.bgColor, props.bgColor[2])}
-          hasLabel={boolean('Does this need a content label?', props.hasLabel, props.hasLabel[0])}
+          hasLabel={boolean('Does this need a content label?', props.hasLabel, props.hasLabel[1])}
           title={text('Title Text', props.title)}
           details={text('Main text.', props.details)}
           hasAuthor={boolean('Would you like to show the author name?', props.hasAuthor, props.hasAuthor[1])}

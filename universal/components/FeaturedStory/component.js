@@ -21,17 +21,67 @@ type Props = {
   author: string,
   asset: string,
   hasButton: boolean,
-  externalLink: Object
+  externalLink: Object,
+  link: LinkProps
 }
 
 const defaultDetails = `
   Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a
   ante venenatis dapibus posuere velit aliquet.
 `
-
 const defaultTitle = "It's Time To Say Goodbye."
 
 const defaultAuthor = 'Koby Bryant'
+
+const linkDefaults = {
+  linkText: 'Read More',
+  linkTo: '/',
+  linkStyle: 'white',
+  target: '_blank'
+}
+
+// Logic - hasAuthor
+function renderAuthor ({
+  hasAuthor,
+  author
+}: { hasAuthor: boolean, author: string }) {
+  if (hasAuthor) {
+    return (
+      <span className={styles.authorWrap}>
+        <p className={styles.author}>{author}</p>
+      </span>
+    )
+  }
+  return null
+}
+
+// Logic - hasLabel
+function renderLabel ({
+    hasLabel,
+    label
+}: { hasLabel: boolean, label: string }) {
+  if (hasLabel) {
+    return (
+      <label className={styles.label}>{label}</label>
+    )
+  }
+  return null
+}
+
+// Logic hasButton
+function renderButton ({
+  hasButton,
+  externalLink
+}: { hasButton: boolean, externalLink: any }) {
+  if (hasButton) {
+    return (
+      <div className={styles.button}>
+        <ExternalLink {...externalLink} />
+      </div>
+    )
+  }
+  return null
+}
 
 // Logic - bgLink
 function renderbgLink ({
@@ -85,49 +135,6 @@ function renderbgLink ({
   )
 }
 
-// Logic - hasAuthor
-function renderAuthor ({
-  hasAuthor,
-  author
-}: { hasAuthor: boolean, author: string }) {
-  if (hasAuthor) {
-    return (
-      <span className={styles.authorWrap}>
-        <p className={styles.author}>{author}</p>
-      </span>
-    )
-  }
-  return null
-}
-
-// Logic - hasLabel
-function renderLabel ({
-    hasLabel,
-    label
-}: { hasLabel: boolean, label: string }) {
-  if (hasLabel) {
-    return (
-      <label className={styles.label}>{label}</label>
-    )
-  }
-  return null
-}
-
-// Logic hasButton
-function renderButton ({
-  hasButton,
-  externalLink
-}: { hasButton: boolean, externalLink: any }) {
-  if (hasButton) {
-    return (
-      <div className={styles.button}>
-        <ExternalLink {...externalLink} />
-      </div>
-    )
-  }
-  return null
-}
-
 const FeaturedStory = ({
   bgColor = 'default',
   bgLink = false,
@@ -139,8 +146,8 @@ const FeaturedStory = ({
   author = defaultAuthor,
   asset = 'kobe.jpg',
   hasButton = true,
-  externalLink,
-  link = LinkProps
+  externalLink = {},
+  link = linkDefaults
 }: Props) => {
   return (
     <section className={styles[bgColor]} style={{backgroundImage: `url('./assets/${asset}')`}} >
