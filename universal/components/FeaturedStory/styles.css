@@ -51,15 +51,6 @@
   text-transform: uppercase;
 }
 
-.labelTrue {
-  composes: label;
-}
-
-.labelFalse {
-  display: none;
-}
-
-
 .header {
   font-family: PlayfairBlack;
   font-size: 2em;
@@ -99,7 +90,6 @@
   display: block;
   clear: both;
   width: 100%;
-
   &::before {
     content: 'by';
     display: inline-block;
@@ -111,18 +101,6 @@
   }
 }
 
-.authorTrue {
-  composes: author;
-}
-
-.authorFalse {
-  display: none;
-}
-
-.buttonTrue {
+.button {
   display: block
-}
-
-.buttonFalse {
-  display: none;
 }
