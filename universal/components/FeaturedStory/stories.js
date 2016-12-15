@@ -48,7 +48,7 @@ storiesOf('FeaturedStory', module)
           hasLabel={boolean('Does this need a content label?', props.hasLabel, props.hasLabel[1])}
           title={text('Title Text', props.title)}
           details={text('Main text.', props.details)}
-          hasAuthor={boolean('Would you like to show the author name?', props.hasAuthor, props.hasAuthor[1])}
+          hasAuthor={boolean('Would you like to show the author name?', props.hasAuthor, props.hasAuthor[0])}
           hasButton={boolean('Does this need a button CTA?', props.hasButton, props.hasButton[0])}
         />
       </WithNotes>
