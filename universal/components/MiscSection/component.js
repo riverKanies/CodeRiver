@@ -1,6 +1,14 @@
 import React from 'react'
 import styles from './styles'
 import TitleWithText from 'components/TitleWithText'
+import Button from 'components/Button'
+
+type Props = {
+  title: string,
+  url: string,
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  button: Object
+}
 
 const Items = [
   {
@@ -39,13 +47,21 @@ const Items = [
   }
 ]
 
-export const MiscSection = () => {
+const MiscSection = ({
+  hasButton = 'buttonTrue',
+  button = {}
+}: Props) => {
   return (
     <section className={styles.SectionContainer}>
       <section className={styles.content}>
         {Items.map(
           item =>
-            <TitleWithText {...item} />
+            <section>
+              <TitleWithText {...item} />
+              <span className={styles[hasButton]}>
+                <Button {...button} />
+              </span>
+            </section>
         )}
       </section>
     </section>

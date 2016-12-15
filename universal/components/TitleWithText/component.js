@@ -5,13 +5,17 @@ import styles from './styles'
 type Props = {
   title: string,
   description: string,
-  linkText: string
+  linkText: string,
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  button: Object
 };
 
 const TitleWithText = ({
   title = 'Title With Some Text',
   description = 'Description goes here...',
-  linkText = 'Email goes here...'
+  linkText = 'Email goes here...',
+  hasButton: 'buttonTrue',
+  button: Object
   }: Props) => {
   return (
     <section className={styles.container} id={title.toLowerCase()}>
@@ -19,7 +23,9 @@ const TitleWithText = ({
         <h2>{title}</h2>
       </span>
       <p className={styles.text}>{description}</p>
-      <a className={styles.link}>{linkText}</a>
+      <span className={styles[hasButton]}>
+        <Button {...button} />
+      </span>
     </section>
   )
 }
