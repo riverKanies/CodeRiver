@@ -52,6 +52,15 @@
   padding: 1rem;
   text-transform: uppercase;
 }
+.headerWrap {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  text-align: center;
+}
 .header {
   font-family: PlayfairBlack;
   font-size: 2em;

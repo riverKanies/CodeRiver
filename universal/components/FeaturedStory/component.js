@@ -29,9 +29,6 @@ const defaultDetails = `
   Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a
   ante venenatis dapibus posuere velit aliquet.
 `
-const defaultTitle = "It's Time To Say Goodbye."
-
-const defaultAuthor = 'Koby Bryant'
 
 const linkDefaults = {
   linkText: 'Read More',
@@ -115,7 +112,9 @@ function renderbgLink ({
     return (
       <div className={styles.content}>
         {renderLabel({hasLabel, label})}
-        <h2 className={styles.header}>{title}</h2>
+        <header className={styles.headerWrap}>
+          <h2 className={styles.header}>{title}</h2>
+        </header>
         <p className={styles.details}>{details}</p>
         {renderAuthor({hasAuthor, author})}
         {renderButton({hasButton, externalLink})}
@@ -126,8 +125,10 @@ function renderbgLink ({
     <a className={styles.sectionLinkWrap} href={link.linkTo} target={link.target || '_blank'}>
       <div className={styles.content}>
         {renderLabel({hasLabel, label})}
-        <h2 className={styles.header}>{title}</h2>
-        <p className={styles.details}>{details}</p>
+        <header className={styles.headerWrap}>
+          <h2 className={styles.header}>{title}</h2>
+        </header>
+        <p className={`${styles.details} copyContent`}>{details}</p>
         {renderAuthor({hasAuthor, author})}
         {renderButton({hasButton, externalLink})}
       </div>
@@ -140,10 +141,10 @@ const FeaturedStory = ({
   bgLink = false,
   hasLabel = true,
   label = 'Stories',
-  title = defaultTitle,
+  title = 'Title',
   details = defaultDetails,
   hasAuthor = false,
-  author = defaultAuthor,
+  author = 'Author',
   asset = 'kobe.jpg',
   hasButton = true,
   externalLink = {},
