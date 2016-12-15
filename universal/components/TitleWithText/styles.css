@@ -53,3 +53,23 @@
     margin-top: 1rem;
   }
 }
+
+/* Button True/False */
+.hasButton {
+  display: block;
+  width: 100%;
+  height: auto;
+  float: left;
+  @media bp-papa-bear {
+    display: flex;
+  }
+}
+.buttonTrue {
+  composes: hasButton;
+  display: block;
+  margin-top: babyHeader;
+}
+.buttonFalse {
+  composes: hasButton;
+  display: none;
+}
