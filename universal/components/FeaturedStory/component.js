@@ -99,7 +99,7 @@ function renderbgLink ({
   link
   }: {
   bgLink: boolean,
-  bgColor: Array,
+  bgColor: 'default' | 'blue' | 'teal' | 'blurple',
   hasLabel: boolean,
   label: string,
   title: string,
