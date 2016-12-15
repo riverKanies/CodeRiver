@@ -3,8 +3,6 @@ import styles from './styles'
 import OneColTextWithHeader from 'components/OneColTextWithHeader'
 import MiscSection from 'components/MiscSection'
 
-// Content import
-
 // Page Content
 const ContactInro = {
   title: 'Contact Thrive Global',

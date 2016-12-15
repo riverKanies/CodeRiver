@@ -11,7 +11,7 @@ type Props = {
 
 const Items = [
   {
-    title: 'Partnerships: Corporate',
+    title: 'Corporate Partnerships',
     description: `Interested in learning more about our corporate partnerships?
                   Email us at`,
     hasButton: 'buttonTrue',
@@ -22,7 +22,7 @@ const Items = [
     }
   },
   {
-    title: 'Partnerships: Media',
+    title: 'Media Partnerships',
     description: `Interested in learning more about brand partnerships and
                   sponsorships with Thrive Global? Email us at`,
     hasButton: 'buttonTrue',
@@ -33,13 +33,13 @@ const Items = [
     }
   },
   {
-    title: 'Partnerships: Commerce',
+    title: 'Commerce Partnerships',
     description: `Interested in learning more about the Thrive Global store?
-                  Email us at commerce@thriveglobal.com`,
+                  Email us at`,
     hasButton: 'buttonTrue',
     button: {
-      buttonText: 'jobs@thriveglobal.com',
-      linkTo: 'mailto:jobs@thriveglobal.com',
+      buttonText: 'commerce@thriveglobal.com',
+      linkTo: 'mailto:commerce@thriveglobal.com',
       buttonStyle: 'violet'
     }
   },
@@ -49,19 +49,18 @@ const Items = [
                   Thrive Global? Email Monica Lee at`,
     hasButton: 'buttonTrue',
     button: {
-      buttonText: 'monica@thriveglobal.com',
-      linkTo: 'mailto:monica@thriveglobal.com',
+      buttonText: 'press@thriveglobal.com',
+      linkTo: 'mailto:press@thriveglobal.com',
       buttonStyle: 'violet'
     }
   },
   {
     title: 'Contact',
-    description: `Interested in learning more about brand partnerships and
-                  sponsorships with Thrive Global? Email Sam Winkelman at`,
+    description: `Say hello. E-mail us at`,
     hasButton: 'buttonTrue',
     button: {
-      buttonText: 'sw@thriveglobal',
-      linkTo: 'mailto:sw@thriveglobal',
+      buttonText: 'info@thriveglobal.com',
+      linkTo: 'mailto:info@thriveglobal.com',
       buttonStyle: 'violet'
     }
   }
