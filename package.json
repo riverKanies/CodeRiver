@@ -47,7 +47,7 @@
       }
     },
     "build": {
-      "command": "npm run clean && npm run compile",
+      "command": "npm run compile",
       "env": {
         "DEBUG": "app:*",
         "NODE_ENV": "production"
@@ -63,7 +63,7 @@
       "command": "node bin/server.babel",
       "env": {
         "DEBUG": "app:*",
-        "NODE_ENV": "test"
+        "NODE_ENV": "production"
       }
     },
     "start:prod": {
@@ -236,7 +236,8 @@
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.1.1",
-    "sitemap-webpack-plugin": "^0.1.1"
+    "sitemap-webpack-plugin": "^0.1.1",
+    "superagent": "^3.3.0"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/tests/preprocessor",
