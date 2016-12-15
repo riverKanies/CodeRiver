@@ -6,9 +6,9 @@ import ExternalLink from 'components/ExternalLink'
 type Props = {
   bgColor: 'default' | 'blue' | 'teal' | 'blurple',
   author: string,
-  hasAuthor: 'authorTrue' | 'authorFalse',
-  hasLabel: 'labelTrue' | 'labelFalse',
-  hasButton: 'buttonTrue' | 'buttonFalse',
+  hasAuthor: boolean,
+  hasLabel: boolean,
+  hasButton: boolean,
   details: any,
   title: string,
   asset: string,
@@ -22,6 +22,12 @@ const defaultDetails = 'this the details Cras justo odio, dapibus ac' +
 const defaultTitle = "It's Time To Say Goodbye."
 
 const defaultAuthor = 'Koby Bryant'
+
+// Logic - hasAuthor
+
+// Logic - hasLabel
+
+// Logic hasButton
 
 const FeaturedStory = ({
   bgColor = 'default',
