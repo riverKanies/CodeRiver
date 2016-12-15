@@ -20,13 +20,16 @@ import communityImg from './assets/thriveCommunity.jpg'
 
 // Content Definitions
 const thrivePulse = {
+  bgLink: true,
   bgColor: 'teal',
-  author: '',
+  hasAuthor: false,
+  hasLabel: true,
   label: 'Get Started',
   title: 'What\'s Your Thrive Pulse?',
   asset: 'pulseImg',
   details: `Begin with the Thrive Pulse, our 10-question assessment that will
     help you take stock of your life and identify ways you can thrive.`,
+  hasButton: true,
   externalLink: {
     linkText: 'Get Your Thrive Pulse',
     linkTo: '/pulse',
@@ -85,9 +88,9 @@ const thriveCommunity = {
   }
 }
 const pathways = {
+  bgLink: true,
   bgColor: 'blurple',
-  author: '',
-  hasAuthor: 'authorFalse',
+  hasAuthor: false,
   hasButton: true,
   details: [
     `Thrive Global is all about action – going from knowing what to do to actually
@@ -98,6 +101,7 @@ const pathways = {
   ],
   title: 'Pathways, Journeys, & Microsteps',
   asset: 'pathway.jpg',
+  hasLabel: true,
   label: 'Grow',
   externalLink: {
     linkText: 'Take the First Step',
@@ -152,8 +156,10 @@ const thriveStyle = {
   }
 }
 const thrivePoetry = {
+  bgLink: true,
   bgColor: 'blurple',
-  author: '',
+  hasAuthor: false,
+  hasLabel: true,
   label: 'Wisdom',
   title: 'Poetry & Philosophy',
   asset: '',
@@ -167,6 +173,7 @@ const thrivePoetry = {
     They’ll both be featured prominently in The Thrive Journal. Read the
     poetry of Mark Nepo at The Thrive Journal.`
   ],
+  hasButton: true,
   externalLink: {
     linkText: 'Read More',
     linkTo: 'https://journal.thriveglobal.com/in-muir-woods-fb35c3180c62#.bdq2lchsm',
@@ -174,10 +181,9 @@ const thrivePoetry = {
   }
 }
 const deathOverDinner = {
+  bgLink: true,
   bgColor: 'teal',
-  author: '',
-  hasAuthor: 'authorFalse',
-  hasLabel: 'labelFalse',
+  hasAuthor: false,
   details: [
     `Yes, really.  We have, if we’re lucky, about 30,000 days to play
     the game of life. How we play it will be determined by what we value.
@@ -186,7 +192,9 @@ const deathOverDinner = {
   ],
   title: 'Let\'s Have Dinner and Talk About Death',
   asset: 'string',
+  hasLabel: false,
   label: 'Wonder',
+  hasButton: true,
   externalLink: {
     linkText: 'Learn More',
     linkTo: 'https://journal.thriveglobal.com/michael-hebb-death-over-dinner-38ae6553d21b#.meoi8cu4n',
@@ -203,7 +211,7 @@ const thriveArt = {
   },
   sectionText: [
     `Art, as philosopher Alain de Botton says, is "an apothecary for the soul."
-     It  ignites a deeper truth and awakens the sense of wonder that slumbers
+     It ignites a deeper truth and awakens the sense of wonder that slumbers
      within us. The Thrive Journal will proudly feature art and artists from
      around the world to inspire that connectedness. See work from artists
      Trishla Jain and Isabella Huffington at The Thrive Journal.`
