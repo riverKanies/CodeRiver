@@ -29,7 +29,6 @@
   composes: fullWidthTwoCol;
   background: lightGray;
 }
-
 .fade {
   composes: fullWidthTwoCol;
   background: TheFader;
@@ -43,7 +42,7 @@
   display: block;
   max-width: containerWidth;
   margin: 0 auto;
-  padding: containerPadding;
+  padding: 0 containerPadding;
   float: left;
   position: relative;
   @media bp-papa-bear {
@@ -73,6 +72,7 @@
   margin: 0 auto;
   padding: 0 0;
   float: left;
+  position: relative;
   text-align: center;
   overflow: hidden;
   @media bp-papa-bear {
@@ -80,6 +80,16 @@
     height: 100%;
     float: none;
   }
+}
+.imgLink {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  overflow: hidden;
 }
 .image {
   display: inline-block;
@@ -130,32 +140,15 @@
   }
 }
 
-/* Label True/False */
-.hasLabel {
+.label {
   width: 100%;
   margin: 2rem 0;
   float: left;
 }
-.labelTrue {
-  composes: hasLabel;
-  display: block;
-}
-.labelFalse {
-  composes: hasLabel;
-  display: none;
-}
 
 /* Button True/False */
-.hasButton {
+.button {
   width: 100%;
   float: left;
-}
-.buttonTrue {
-  composes: hasButton;
-  display: block;
   margin-top: babyHeader;
-}
-.buttonFalse {
-  composes: hasButton;
-  display: none;
 }

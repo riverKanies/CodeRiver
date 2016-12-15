@@ -21,7 +21,7 @@ const banner = {
 
 const storeDescrip = {
   title: 'The Destination for Well-Being',
-  hasButton: 'buttonFalse',
+  hasButton: false,
   image: ourPic1,
   sectionText: [`Thrive Global offers a curated selection of the best technology
    and products - including our own, newly developed Thrive products - for

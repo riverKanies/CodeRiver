@@ -45,7 +45,7 @@ const eCourse = {
      and well-being. Guest teachers include Kobe Bryant, Wharton Professor
      Adam Grant, Warby Parker CEO Dave Gilboa, and more.`
   ],
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Take the e-Course',
     linkTo: 'https://learn.thriveglobal.com',
@@ -77,7 +77,7 @@ const thriveCommunity = {
     `how people are changing the way they work and live. We want to hear yours.`
   ],
   image: communityImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Read More',
     linkTo: 'https://journal.thriveglobal.com/join-the-thrive-global-community-3aa96f08423e#.nz1xe912c',
@@ -88,7 +88,7 @@ const pathways = {
   bgColor: 'blurple',
   author: '',
   hasAuthor: 'authorFalse',
-  hasLabel: 'labelTrue',
+  hasButton: true,
   details: [
     `Thrive Global is all about action – going from knowing what to do to actually
     doing it.  Begin by taking your Thrive Pulse.  Explore our pathways, journeys
@@ -119,7 +119,7 @@ const thriveApps = {
     from technology and reconnect with what really matters.`
   ],
   image: appsImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Get the Apps',
     linkTo: '/apps',
@@ -144,7 +144,7 @@ const thriveStyle = {
     outfits.`
   ],
   image: styleImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Read More',
     linkTo: 'https://medium.com/@ariannahuff/7585234da618#.t2phr2e2o',
@@ -209,7 +209,7 @@ const thriveArt = {
      Trishla Jain and Isabella Huffington at The Thrive Journal.`
   ],
   image: artImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: 'https://medium.com/@ariannahuff/30d21640ab0b#.bkyick4i5',
@@ -231,7 +231,7 @@ const thriveFoundation = {
      and civic leaders who are on the front line of serving others.`
   ],
   image: foundationImg,
-  hasButton: 'buttonTrue',
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: '/give',
@@ -253,6 +253,7 @@ const popUpShop = {
     days a week, from 10:00am to 7:00pm, December 1 through January 15, 2017.`
   ],
   image: popUpImg,
+  hasButton: true,
   link: {
     linkText: 'Learn More',
     linkTo: '/popup',
