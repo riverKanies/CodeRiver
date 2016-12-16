@@ -16,7 +16,7 @@ const TitleWithText = ({
       <span className={styles.iconWrap}>
         <h2>{title}</h2>
       </span>
-      <p className={styles.text}>{description}</p>
+      <p className={styles.text} dangerouslySetInnerHTML={{__html: description}} />
     </section>
   )
 }

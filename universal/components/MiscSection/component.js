@@ -6,17 +6,18 @@ const Items = [
   {
     title: 'Press',
     description: `Are you a member of the press seeking information about
-                  Thrive Global? Email Monica Lee at monica@thriveglobal.com.`
+                  Thrive Global? Email Monica Lee at
+                  <a href="mailto:monica@thriveglobal.com">monica@thriveglobal.com</a>.`
   },
   {
     title: 'Advertise',
     description: `Interested in learning more about brand partnerships and
                   sponsorships with Thrive Global? Email Sam Winkelman at
-                  sw@thriveglobal.com to learn more.`
+                  <a href="mailto:sw@thriveglobal.com">sw@thriveglobal.com</a> to learn more.`
   },
   {
     title: 'Contact',
-    description: 'Say hello. E-mail us at info@thriveglobal.com.'
+    description: 'Say hello. E-mail us at <a href="mailto:info@thriveglobal.com">info@thriveglobal.com</a>.'
   }
 ]
 
