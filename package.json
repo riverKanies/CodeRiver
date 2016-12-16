@@ -26,6 +26,7 @@
     "start:test": "better-npm-run start:test",
     "storybook:build": "build-storybook -c .storybook -0 .storybook-static",
     "storybook:start": "start-storybook -p 4003 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o docs",
     "test": "better-npm-run test",
     "test:all": "npm test && npm run test:features",
     "test:features": "better-npm-run nightwatch",
