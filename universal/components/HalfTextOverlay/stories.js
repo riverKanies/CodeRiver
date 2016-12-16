@@ -4,7 +4,7 @@ import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs'
 
 import HalfTextOverlay from './component'
-import dummyImage from './assets/arrianaH.jpg'
+import dummyImage from './assets/ariannaH.jpg'
 
 const notes = 'This story demonstrates the props that can be passed to HalfTextOverlay'
 
