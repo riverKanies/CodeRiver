@@ -40,8 +40,8 @@ export function reducer (state: any = initialState, action: any) {
   }
 }
 
-export function createAccount (data: any) {
-  let formData = data
+export function createAccount (data: any = {}) {
+  let formData = Object.create(data)
   formData['gimme_newsletters'] = data.gimme_newsletters || 'false'
   formData['gimme_communications'] = data.gimme_newsletters || 'false'
 
