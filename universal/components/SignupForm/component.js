@@ -25,10 +25,6 @@ const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: rende
   )
 }
 
-// const Checkbox = () => (
-//   <Input type='checkbox' />
-// )
-
 type signupProps = {
   renderField: string,
   handleSubmit: Function,
