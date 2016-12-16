@@ -55,6 +55,8 @@ const storeInfo = {
   sectionText: [
   (<div>
     <dl>
+      <dt>Address</dt>
+      <dd>419 Broome St. New York, NY 10012</dd>
       <dt>Date</dt>
       <dd>December 1 to January 15</dd>
       <dt>Hours</dt>
@@ -146,7 +148,6 @@ export const PopupStoreView = () => (
   <main role='main' className={styles.popupStore}>
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
-    <FullWidthText overrideStyles={{margin: '0', padding: '1px'}} {...mapUnit} />
     <FullWidthTwoCol {...storeDescrip} />
     <FullWidthText {...ourBrands} />
   </main>
