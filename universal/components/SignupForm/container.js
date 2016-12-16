@@ -1,4 +1,5 @@
 import { reduxForm } from 'redux-form'
+import { actions } from 'modules/Middleware/analytics'
 import { connect } from 'react-redux'
 import { createAccount, KEY } from 'modules/SignUp'
 import { genFormHandler } from 'lib/formHelpers'
@@ -14,7 +15,13 @@ const validate = createValidator({
 })
 
 function onSuccess (result, dispatch) {
-  console.log(result); return;
+  if (result.gimme_newsletters) {
+    dispatch({
+      type: actions.newsletterFormSubmitted,
+      track: { email: result.email }
+    })
+  }
+
   browserHistory.push('registration-success')
 }
 
