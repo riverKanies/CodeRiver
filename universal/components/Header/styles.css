@@ -405,6 +405,7 @@
   .brand {
     @media bp-papa-bear {
       width: 9rem;
+      margin-left: 2rem;
     }
     .thriveType {
       fill: white;
