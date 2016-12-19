@@ -16,8 +16,7 @@
   position: relative;
   z-index: 1000;
   background: gradientTeal;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   &::before {
     content: '';
@@ -58,9 +57,9 @@
 /* Logo */
 .brand {
   display: inline-block;
-  width: 40%;
+  width: 30%;
   height: auto;
-  margin: 0 30%;
+  margin: 0 35%;
   padding: 0 0;
   float: left;
   position: relative;
@@ -292,6 +291,10 @@
 ** bigHeader boolean = false, defaults to false
 */
 .default {
+  padding: 1rem 0;
+  @media bp-papa-bear {
+    padding: 0 0;
+  }
   .brand {
     @media bp-papa-bear {
       width: 7rem;
@@ -300,16 +303,30 @@
       left: 2rem;
     }
     .thriveType {
-      fill: bodyCopy;
+      fill: white;
     }
     .globalType {
-      fill: bodyCopy;
+      fill: ThriveTeal;
     }
     .petalTop {
       fill: ThriveTeal;
     }
     .petalBottom {
       fill: ThriveTeal;
+    }
+    @media bp-papa-bear {
+      .thriveType {
+        fill: bodyCopy;
+      }
+      .globalType {
+        fill: bodyCopy;
+      }
+      .petalTop {
+        fill: ThriveTeal;
+      }
+      .petalBottom {
+        fill: ThriveTeal;
+      }
     }
   }
   .mainNav {
@@ -339,7 +356,7 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   float: left;
   clear: both;
   position: relative;

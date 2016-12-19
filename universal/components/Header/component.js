@@ -120,16 +120,16 @@ class Header extends React.Component {
     if (!bigHeader) {
       return (
         <div className={styles.default}>
+          <figure className={styles.brand}>
+            <IndexLink
+              onClick={this.hideMenu}
+              id='linkHome'
+              to='/'
+            >
+              <ThriveLogo />
+            </IndexLink>
+          </figure>
           <section className={styles.navContainer}>
-            <figure className={styles.brand}>
-              <IndexLink
-                onClick={this.hideMenu}
-                id='linkHome'
-                to='/'
-              >
-                <ThriveLogo />
-              </IndexLink>
-            </figure>
             <MainNav />
             <nav role='navigation' className={styles.utilityNav}>
               {this.renderSignupOrProfile()}
