@@ -69,6 +69,13 @@ const SignUpForm = (props: signupProps) => {
                 label='Confirm Password'
                 theme='thriveInput'
                 />
+              <Field
+                component={Input}
+                name='gimme_newsletters'
+                type='checkbox'
+                label='Would you like to signup for our newsletter?'
+                theme='thriveInput'
+                />
               {renderSubmit(props)}
               {(props.message) ? <p>{props.message}</p> : null }
             </fieldset>

@@ -34,19 +34,6 @@ const storeDescrip = {
    mind, body, sleep, productivity, recharging, creativity, and giving.`]
 }
 
-const mapUnit = {
-  title: 'Where to Find Us',
-  sectionText: [
-   (<iframe src={('https://www.google.com/maps/embed?pb=' +
-     '!1m18!1m12!1m3!1d3023.861884042863!2d-74.00099998459477!' +
-     '3d40.72105687933087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!' +
-     '3m3!1m2!1s0x89c2598913d4e8d1%3A0x2da9d46060e7c577!2s419+Broome+' +
-     'St%2C+New+York%2C+NY+10013!5e0!3m2!1sen!2sus!4v1480450282395')}
-     width='600' height='450' frameBorder='0' style={{border: 0}}
-     allowFullScreen />)
-  ]
-}
-
 const storeInfo = {
   sectionClass: 'default',
   postContentStyle: 'postContentRight',
@@ -55,6 +42,8 @@ const storeInfo = {
   sectionText: [
   (<div>
     <dl>
+      <dt>Address</dt>
+      <dd>419 Broome St. New York, NY 10012</dd>
       <dt>Date</dt>
       <dd>December 1 to January 15</dd>
       <dt>Hours</dt>
@@ -146,7 +135,6 @@ export const PopupStoreView = () => (
   <main role='main' className={styles.popupStore}>
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
-    <FullWidthText overrideStyles={{margin: '0', padding: '1px'}} {...mapUnit} />
     <FullWidthTwoCol {...storeDescrip} />
     <FullWidthText {...ourBrands} />
   </main>

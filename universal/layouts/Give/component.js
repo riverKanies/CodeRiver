@@ -21,15 +21,16 @@ const giveBanner = {
 }
 
 const thriveFoundation = {
+  bgLink: false,
   details: [
     `The Thrive Foundation is a 501(c)3 organization that brings free Thrive trainings to nonprofit
     and civic leaders who are on the front lines of service others and at particular risk of burnout.
     The Thrive trainings teach these leaders that when they put their own oxygen masks on first,
     they are more effective at helping others.`
   ],
-  hasAuthor: 'authorFalse',
-  hasLabel: 'labelFalse',
-  hasButton: 'buttonFalse',
+  hasAuthor: false,
+  hasLabel: false,
+  hasButton: false,
   title: 'Thrive Foundation',
   asset: 'thriveFoundation.jpg'
 }
@@ -45,7 +46,7 @@ const trainNonProfits = {
     Global Citizen, Alliance for Children's Rights, EduCare Foundation
     and Lean In with free trainings to enhance well-being and performance.`,
     ` Interested in bringing Thrive to your nonprofit?
-    E-mail nonprofits@thriveglobal.com`
+    E-mail <a href="mailto:nonprofits@thriveglobal.com">nonprofits@thriveglobal.com</a>`
   ]
 }
 
@@ -60,15 +61,18 @@ const globalPovertyProject = {
 }
 
 const GivingisGood = {
+  bgLink: false,
   details: [
     `Whether it's volunteering, donating or just smiling at someone on the street,
     giving is a scientifically-proven way to increase your well-being.
     Read more stories at Thrive Global's Giving section. `
   ],
-  hasAuthor: 'authorFalse',
+  hasAuthor: false,
+  hasLabel: true,
   label: 'Journal',
   title: 'Why Giving is Good For You',
   asset: 'richard.jpg',
+  hasButton: true,
   externalLink: {
     linkText: 'Read More',
     linkTo: 'https://journal.thriveglobal.com/giving/home',

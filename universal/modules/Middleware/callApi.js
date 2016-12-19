@@ -43,6 +43,7 @@ export default function callAPIMiddleware ({ dispatch, getState }) {
           type: successType
         }))
         successCallback()
+        return Promise.resolve(data)
       },
       error => {
         const e = error.errors || { error: 'there was an error processing request' }

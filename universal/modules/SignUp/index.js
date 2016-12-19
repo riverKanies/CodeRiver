@@ -40,13 +40,17 @@ export function reducer (state: any = initialState, action: any) {
   }
 }
 
-export function createAccount (data: any) {
+export function createAccount (data: any = {}) {
+  let formData = Object.create(data)
+  formData['gimme_newsletters'] = data.gimme_newsletters || 'false'
+  formData['gimme_communications'] = data.gimme_newsletters || 'false'
+
   return {
     types: [
       actions.createPending,
       actions.createSuccess,
       actions.createFailure
     ],
-    callAPI: () => httpPost('/api/auth', { ...data, confirm_success_url: `${CLIENT_URL}/welcome` })
+    callAPI: () => httpPost('/api/auth', { ...formData, confirm_success_url: `${CLIENT_URL}/welcome` })
   }
 }

@@ -25,7 +25,7 @@ test:
   override:
     - npm run lint
     - npm run analyze
-    - npm test
+    - npm test -- --runInBand
     - npm run start:test:
         background: true
     - java -jar bin/selenium-server-standalone-3.0.1.jar:
