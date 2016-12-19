@@ -119,7 +119,7 @@ class Header extends React.Component {
 
     if (!bigHeader) {
       return (
-        <div>
+        <div className={styles.default}>
           <section className={styles.navContainer}>
             <figure className={styles.brand}>
               <IndexLink
@@ -141,7 +141,7 @@ class Header extends React.Component {
     }
 
     return (
-      <div>
+      <div className={styles.hasForehead}>
         <section className={styles.forehead}>
           <figure className={styles.brand}>
             <IndexLink

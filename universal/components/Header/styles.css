@@ -2,6 +2,9 @@
 @value navItem, MonLight from 'all';
 @value gradientTeal, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
 
+/* Base Styles
+** These don't change regardless of having the extra piece up top.
+*/
 .siteHeader {
   display: block;
   width: 100%;
@@ -28,51 +31,7 @@
   }
 }
 
-.forehead {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  float: left;
-  clear: both;
-  position: relative;
-  background: gradientTeal;
-  color: white;
-  &::before {
-    content: '';
-    display: block;
-    width: 7.3125rem;
-    height: 6.25rem;
-    margin: 0 0;
-    padding: 0 0;
-    float: right;
-    background-image: url('./assets/thriveVines.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-  }
-}
-.tagline {
-  display: none;
-  @media bp-papa-bear {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 0;
-    position: absolute;
-    bottom: 1rem;
-    right: 2rem;
-    font-family: MonLight;
-    font-size: 1.25rem;
-    line-height: 100%;
-    text-align: right;
-  }
-}
-
+/* Logo */
 .brand {
   display: inline-block;
   width: 40%;
@@ -85,13 +44,13 @@
   z-index: 9999;
   @media bp-papa-bear {
     display: block;
-    width: 9rem;
     height: auto;
     margin: 0 0;
     top: auto;
     left: auto;
   }
 }
+
 #linkHome {
   display: inline-block;
   width: 100%;
@@ -99,7 +58,7 @@
   margin: 0 0;
   padding: 1rem 1rem;
 }
-// Logo Inline SVG Selectors
+
 .thriveLogo {
   width: 100%;
   height: auto;
@@ -110,22 +69,12 @@
   @media bp-papa-bear {
     float: left;
   }
-}
-// Default = No Big Header
-.thriveType {
-  fill: white;
-}
-.globalType {
-  fill: ThriveTeal;
-}
-.petalTop {
-  fill: ThriveTeal;
-}
-.petalBottom {
-  fill: ThriveTeal;
+  * {
+    transition: fill 150ms ease-in-out;
+  }
 }
 
-
+/* Navigation */
 .navContainer {
   display: block;
   width: 100%;
@@ -184,7 +133,6 @@
   text-align: center;
   @media bp-papa-bear {
     display: inline-block;
-    width: 100%;
     margin: 0 auto;
     float: none;
   }
@@ -194,8 +142,8 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 0;
   float: left;
+  position: relative;
   font-family: navItem;
   font-size: 0.75rem;
   letter-spacing: .01rem;
@@ -212,6 +160,29 @@
     float: none;
     background: transparent;
     color: ThriveGray;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .44rem;
+      height: .44rem;
+      margin: 0 auto 0 -.22rem;
+      padding: 0 0;
+      float: none;
+      background: ThriveTeal;
+      border-radius: .22rem;
+      position: absolute;
+      bottom: -3rem;
+      left: 50%;
+      opacity: .85;
+      transition: all 250ms cubic-bezier(.04,.39,.94,.53);
+      z-index: 9999;
+    }
+  }
+  &:hover {
+    color: ThriveTeal;
+    &::after {
+      bottom: .5rem;
+    }
   }
 }
 
@@ -225,7 +196,6 @@
   @media bp-papa-bear {
     width: auto;
     height: auto;
-    margin: -2.875rem 2rem 0 0;
     float: right;
     position: relative;
     text-align: right;
@@ -240,6 +210,7 @@
   padding: .25rem 1.25rem;
   float: left;
   clear: both;
+  position: relative;
   background: transparent;
   border: 1px solid white;
   border-radius: 1.3125rem;
@@ -255,107 +226,170 @@
     display: block;
     width: auto;
     height: auto;
-    margin: 0 0 0 .75rem;
-    padding: .5rem 0;
+    margin: 0 0 0 1.5rem;
+    padding: 0 0;
     clear: none;
     background: transparent;
     border: none;
     text-align: right;
     text-transform: uppercase;
     color: ThriveGray;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .44rem;
+      height: .44rem;
+      margin: 0 auto 0 -.22rem;
+      padding: 0 0;
+      float: none;
+      background: ThriveTeal;
+      border-radius: .22rem;
+      position: absolute;
+      bottom: -3rem;
+      left: 50%;
+      opacity: .85;
+      transition: all 250ms cubic-bezier(.04,.39,.94,.53);
+      z-index: 9999;
+    }
+  }
+  &:hover {
+    color: ThriveTeal;
+    &::after {
+      bottom: .25rem;
+    }
   }
 }
-.search {
-  display: none;
-  margin: 0 12.5% 1rem 12.5%;
-  padding: .25rem 1.25rem;
+
+/* Default = .default
+** bigHeader boolean = false, defaults to false
+*/
+.default {
+  .brand {
+    @media bp-papa-bear {
+      width: 7rem;
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+    }
+    .thriveType {
+      fill: bodyCopy;
+    }
+    .globalType {
+      fill: bodyCopy;
+    }
+    .petalTop {
+      fill: ThriveTeal;
+    }
+    .petalBottom {
+      fill: ThriveTeal;
+    }
+  }
+  .mainNav {
+    @media bp-papa-bear {
+      margin-top: -.25rem;
+      padding: 1.25rem 0 1rem 0;
+    }
+  }
+  .utilityNav {
+    @media bp-papa-bear {
+      margin-top: -4.875rem;
+      padding-right: 2rem;
+    }
+  }
+  .link,
+  .linkUtility {
+    @media bp-papa-bear {
+      padding: 1.35rem 0 1rem;
+    }
+  }
+}
+
+
+
+
+/* bigHeader boolean = true, not default,
+** scope within selector: .hasForehead for specific styles
+*/
+.forehead {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   float: left;
   clear: both;
   position: relative;
-  transition: all 150ms ease-in-out;
-  @media bp-papa-bear {
+  background: gradientTeal;
+  color: white;
+  &::before {
+    content: '';
     display: block;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0 0 0 .75rem;
-    padding: .5rem .5rem;
-    clear: none;
-    background: transparent;
-    border: none;
+    width: 7.3125rem;
+    height: 6.25rem;
+    margin: 0 0;
+    padding: 0 0;
+    float: right;
+    background-image: url('./assets/thriveVines.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+.tagline {
+  display: none;
+  @media bp-papa-bear {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    font-family: MonLight;
+    font-size: 1.25rem;
+    line-height: 100%;
     text-align: right;
   }
 }
-.searchIcon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 0;
-  padding: 0 0;
-}
-
-.search {
-  fill: ThriveTeal;
-}
-
-.link {
-  cursor: pointer;
-  @media bp-papa-bear {
-    position: relative;
-    &::after {
-      content: '';
-      display: inline-block;
-      width: .44rem;
-      height: .44rem;
-      margin: 0 auto 0 -.22rem;
-      padding: 0 0;
-      float: none;
-      background: ThriveTeal;
-      border-radius: .22rem;
-      position: absolute;
-      bottom: -3rem;
-      left: 50%;
-      opacity: .85;
-      transition: all 250ms cubic-bezier(.04,.39,.94,.53);
-      z-index: 9999;
+.hasForehead {
+  .brand {
+    @media bp-papa-bear {
+      width: 9rem;
     }
-    &:hover {
-      color: ThriveTeal;
-      &::after {
-        bottom: .5rem;
-      }
+    .thriveType {
+      fill: white;
+    }
+    .globalType {
+      fill: ThriveTeal;
+    }
+    .petalTop {
+      fill: ThriveTeal;
+    }
+    .petalBottom {
+      fill: ThriveTeal;
     }
   }
-}
-.linkUtility {
-  cursor: pointer;
-  @media bp-papa-bear {
-    position: relative;
-    &::after {
-      content: '';
-      display: inline-block;
-      width: .44rem;
-      height: .44rem;
-      margin: 0 auto 0 -.22rem;
-      padding: 0 0;
-      float: none;
-      background: ThriveTeal;
-      border-radius: .22rem;
-      position: absolute;
-      bottom: -3rem;
-      left: 50%;
-      opacity: .85;
-      transition: all 250ms cubic-bezier(.04,.39,.94,.53);
-      z-index: 9999;
+  .link {
+    @media bp-papa-bear {
+      padding: 1.25rem 0 1rem 0;
     }
-    &:hover {
-      color: ThriveTeal;
-      &::after {
-        bottom: .25rem;
-      }
+  }
+  .utilityNav {
+    @media bp-papa-bear {
+      margin: -2.5rem 2rem 0 0;
+    }
+  }
+  .utilityLink {
+    @media bp-papa-bear {
+      padding: 1.25rem 0 1rem 0;
     }
   }
 }
 
+/* menuButton + drawer nav styles */
 .menuButton {
   display: block;
   width: 2rem;
