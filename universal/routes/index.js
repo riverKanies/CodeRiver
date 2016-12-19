@@ -9,6 +9,7 @@ import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
 import Team from 'layouts/Team'
 import Apps from 'layouts/Apps'
+import Press from 'layouts/Press'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
@@ -90,6 +91,10 @@ export const createRoutes = (store) => ([
       {
         path: 'give',
         component: Give
+      },
+      {
+        path: 'press',
+        component: Press
       },
       {
         path: 'apps',
