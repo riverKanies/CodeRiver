@@ -6,14 +6,15 @@ import { isLoggedIn } from 'modules/UserSession/selectors'
 import { deleteSession } from 'modules/UserSession'
 import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
+import MainNav from './MainNav/component.js'
+import { ThriveLogo, NavButton } from './svg.js'
 
 import styles from './styles'
-import mark from './assets/thriveLogo.svg'
 
 type Props = {
+  bigHeader: boolean,
   isLoggedIn: boolean,
-  dispatch: Function,
-  bigHeader: boolean
+  dispatch: Function
 }
 
 class Header extends React.Component {
@@ -99,6 +100,7 @@ class Header extends React.Component {
         </Link>
       )
     }
+
     return (
       <Link
         onClick={this.hideMenu}
@@ -115,7 +117,6 @@ class Header extends React.Component {
   render () {
     const { active } = this.state
     const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
-
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
 
@@ -126,67 +127,25 @@ class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+              <ThriveLogo />
             </IndexLink>
           </figure>
           <span className={styles.tagline}>More than living. Thriving.</span>
         </section>
 
         <section className={styles.navContainer}>
-          <nav role='navigation' className={styles.mainNav}>
-            <a
-              className={styles.link}
-              onClick={this.hideMenu}
-              href='https://journal.thriveglobal.com/'
-              target='_blank'
-            >
-              Journal
-            </a>
-            <Link
-              onClick={this.hideMenu}
-              id='navGrow'
-              to='/grow'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Grow
-            </Link>
-            <Link
-              id='navShop'
-              className={styles.link}
-              onClick={this.redirectToShopify}
-              activeClassName={styles.activeRoute}
-            >
-              Shop
-            </Link>
-            <Link onClick={this.hideMenu}
-              id='navGive'
-              to='/give'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Give
-            </Link>
-            <Link onClick={this.hideMenu}
-              id='navApps'
-              to='/apps'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Apps
-            </Link>
-          </nav>
+
+          <MainNav />
 
           <nav role='navigation' className={styles.utilityNav}>
             {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
           </nav>
+
         </section>
 
         <span className={styles.menuButton} onClick={this.toggleActive}>
-          <svg className={styles.button} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
-            <title>Open/Close Menu</title>
-            <path className={styles.topLine} d='M32,11.75H8A1.88,1.88,0,0,1,8,8H32a1.88,1.88,0,0,1,0,3.75Z' />
-            <path className={styles.middleLine} d='M32,21.88H8a1.88,1.88,0,0,1,0-3.75H32a1.88,1.88,0,0,1,0,3.75Z' />
-            <path className={styles.bottomLine} d='M32,32H8a1.88,1.88,0,0,1,0-3.75H32A1.88,1.88,0,0,1,32,32Z' />
-          </svg>
+          <NavButton />
         </span>
 
       </header>

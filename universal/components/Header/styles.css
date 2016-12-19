@@ -26,6 +26,7 @@
   margin: 0 auto;
   padding: 1rem 2rem;
   float: left;
+  clear: both;
   position: relative;
   background: gradientTeal;
   color: white;
@@ -90,6 +91,7 @@
   margin: 0 0;
   padding: 1rem 1rem;
 }
+// Logo Inline SVG Selectors
 .thriveLogo {
   width: 100%;
   height: auto;
@@ -101,6 +103,20 @@
     float: left;
   }
 }
+// Default = No Big Header
+.thriveType {
+  fill: white;
+}
+.globalType {
+  fill: ThriveTeal;
+}
+.petalTop {
+  fill: ThriveTeal;
+}
+.petalBottom {
+  fill: ThriveTeal;
+}
+
 
 .navContainer {
   display: block;
