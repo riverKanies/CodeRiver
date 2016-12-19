@@ -157,7 +157,7 @@ export const PWUCorporate = () => (
       <div className={styles.container4}>
         <p className={styles.p3}> Interested in learning more? </p>
         <p className={styles.p3}> Please direct inquiries to
-          <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
+          <a id='aboutCorporateEmail' href='mailto:corporate@thriveglobal.com'> corporate@thriveglobal.com</a>
         </p>
       </div>
     </div>
@@ -172,7 +172,7 @@ export const PWUContent = () => (
       <div className={styles.container3}>
         <p className={styles.p3}> Interested in learning more? </p>
         <p className={styles.p3}> Please direct inquiries to
-          <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
+          <a id='aboutContentEmail' href='mailto:media@thriveglobal.com'> media@thriveglobal.com</a>
         </p>
       </div>
     </div>
@@ -187,7 +187,7 @@ export const PWUCommerce = () => (
       <div className={styles.container3}>
         <p className={styles.p3}> Interested in learning more? </p>
         <p className={styles.p3}> Please direct inquiries to
-          <a href='mailto:kfriedrich@thriveglobal.com'> kfriedrich@thriveglobal.com</a>
+          <a id='aboutCommerceEmail' href='mailto:commerce@thriveglobal.com'> commerce@thriveglobal.com</a>
         </p>
       </div>
     </div>
