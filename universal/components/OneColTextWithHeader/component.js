@@ -3,6 +3,8 @@ import styles from './styles'
 
 type Props = {
   title: string,
+  bgColor: 'default' | 'gray',
+  textAlign: 'left' | 'center',
   hasSubtitle: boolean,
   subTitle: string,
   largeCopyContent: boolean,
@@ -24,7 +26,7 @@ function Header ({
     )
   }
   return (
-    <header className={styles.headerNoSub}>
+    <header className={styles.header}>
       <h1 className={styles.h1}>{title}</h1>
     </header>
   )
@@ -57,15 +59,17 @@ const defaultText = [
 
 const OneColTextWithHeader = ({
   title = 'Title',
+  bgColor = 'default',
+  textAlign = 'left',
   hasSubtitle = false,
   subTitle = 'Sub Title',
   largeCopyContent = false,
   text = defaultText
 }: Props) => {
   return (
-    <section className={styles.sectionContainer}>
+    <section className={styles[bgColor]}>
       <div className={styles.container}>
-        <section className={styles.content}>
+        <section className={styles[textAlign]}>
           <Header title={title} hasSubtitle={hasSubtitle} subTitle={subTitle} text={text} />
           <CopyContent largeCopyContent={largeCopyContent} text={text} />
         </section>
