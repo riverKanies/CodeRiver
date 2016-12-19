@@ -302,17 +302,19 @@
       top: 1rem;
       left: 2rem;
     }
-    .thriveType {
-      fill: white;
-    }
-    .globalType {
-      fill: ThriveTeal;
-    }
-    .petalTop {
-      fill: ThriveTeal;
-    }
-    .petalBottom {
-      fill: ThriveTeal;
+    @media (max-width: 46.874rem) {
+      .thriveType {
+        fill: white;
+      }
+      .globalType {
+        fill: ThriveTeal;
+      }
+      .petalTop {
+        fill: ThriveTeal;
+      }
+      .petalBottom {
+        fill: ThriveTeal;
+      }
     }
     @media bp-papa-bear {
       .thriveType {
