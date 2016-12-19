@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 import ContentLabel from 'components/ContentLabel'
 import Button from 'components/Button'
-import dummyImage from './assets/arrianaH.jpg'
+import dummyImage from './assets/ariannaH.jpg'
 
 type Props = {
   postLabel: Object,

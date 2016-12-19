@@ -36,7 +36,7 @@ storiesOf('QuoteSection', module)
         <QuoteSection
           bgColor={select('Background Color', Props.bgColor, 'default')}
           quote={text('Quote Text', defaultQuote)}
-          citation={text('Cite', 'Arriana Huffington')}
+          citation={text('Cite', 'Arianna Huffington')}
           quoteImage={text('Quote Image', dummyImage)}
           isLink={boolean('Does this need to link out?', false)}
           quoteURL={text('URL For Quote', Props.quoteUrl)}
