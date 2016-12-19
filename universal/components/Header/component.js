@@ -12,7 +12,8 @@ import mark from './assets/thriveLogo.svg'
 
 type Props = {
   isLoggedIn: boolean,
-  dispatch: Function
+  dispatch: Function,
+  bigHeader: boolean
 }
 
 class Header extends React.Component {
@@ -98,7 +99,6 @@ class Header extends React.Component {
         </Link>
       )
     }
-
     return (
       <Link
         onClick={this.hideMenu}
@@ -114,7 +114,6 @@ class Header extends React.Component {
 
   render () {
     const { active } = this.state
-
     const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
 
     return (
