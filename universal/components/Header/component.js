@@ -114,12 +114,34 @@ class Header extends React.Component {
     )
   }
 
-  render () {
-    const { active } = this.state
-    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
-    return (
-      <header id='header' role='banner' className={siteHeaderStyle}>
+  renderNav () {
+    const { bigHeader } = this.props
 
+    if (!bigHeader) {
+      return (
+        <div>
+          <section className={styles.navContainer}>
+            <figure className={styles.brand}>
+              <IndexLink
+                onClick={this.hideMenu}
+                id='linkHome'
+                to='/'
+              >
+                <ThriveLogo />
+              </IndexLink>
+            </figure>
+            <MainNav />
+            <nav role='navigation' className={styles.utilityNav}>
+              {this.renderSignupOrProfile()}
+              {this.renderLoginLogout()}
+            </nav>
+          </section>
+        </div>
+      )
+    }
+
+    return (
+      <div>
         <section className={styles.forehead}>
           <figure className={styles.brand}>
             <IndexLink
@@ -134,20 +156,25 @@ class Header extends React.Component {
         </section>
 
         <section className={styles.navContainer}>
-
           <MainNav />
-
           <nav role='navigation' className={styles.utilityNav}>
             {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
           </nav>
-
         </section>
+      </div>
+    )
+  }
 
+  render () {
+    const { active } = this.state
+    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
+    return (
+      <header id='header' role='banner' className={siteHeaderStyle}>
+        {this.renderNav()}
         <span className={styles.menuButton} onClick={this.toggleActive}>
           <NavButton />
         </span>
-
       </header>
     )
   }
