@@ -10,14 +10,37 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  padding: 0 0;
   float: left;
+  clear: both;
   position: relative;
-  background: rgba(255, 255, 255, 1);
   z-index: 1000;
+  background: gradientTeal;
   overflow-x: hidden;
   overflow-y: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
+  &::before {
+    content: '';
+    display: block;
+    width: 7.3125rem;
+    height: 6.25rem;
+    margin: 0 0;
+    padding: 0 0;
+    float: right;
+    background-image: url('./assets/thriveVines.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    @media bp-papa-bear {
+      display: none;
+    }
+  }
   @media bp-papa-bear {
+    padding: 0 0;
+    background: rgba(255, 255, 255, 1);
     text-align: center;
     overflow: hidden;
   }
@@ -28,6 +51,7 @@
     margin: 0 auto;
     float: left;
     position: relative;
+    background: transparent;
   }
 }
 
@@ -80,12 +104,12 @@
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  padding: 1.25rem 1.25rem 1.25rem;
+  padding: 1rem 2rem;
   float: left;
   clear: both;
   position: absolute;
   top: 0;
-  right: -100%;
+  right: -150%;
   background: gradientTeal;
   text-align: center;
   overflow: hidden;
@@ -98,12 +122,12 @@
     margin: 0 0;
     padding: 0 0;
     float: right;
-    background-image: url('./assets/thriveVines.png');
-    background-repeat: no-repeat;
-    background-position: top right;
     position: absolute;
     top: 0;
     right: 0;
+    background-image: url('./assets/thriveVines.png');
+    background-repeat: no-repeat;
+    background-position: top right;
     z-index: 2;
   }
   @media bp-papa-bear {
@@ -127,7 +151,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin: 5rem auto 0 auto;
+  margin: 7rem auto 0 auto;
   padding: 0 0;
   float: left;
   text-align: center;
@@ -141,7 +165,7 @@
 .link {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
   float: left;
   position: relative;
   font-family: navItem;
@@ -156,7 +180,7 @@
     display: inline-block;
     width: auto;
     height: auto;
-    margin: 0 .75rem;
+    margin: 0 .75rem 0 .75rem;
     float: none;
     background: transparent;
     color: ThriveGray;
@@ -177,11 +201,11 @@
       transition: all 250ms cubic-bezier(.04,.39,.94,.53);
       z-index: 9999;
     }
-  }
-  &:hover {
-    color: ThriveTeal;
-    &::after {
-      bottom: .5rem;
+    &:hover {
+      color: ThriveTeal;
+      &::after {
+        bottom: .5rem;
+      }
     }
   }
 }
@@ -222,6 +246,10 @@
   color: white;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+  &:hover {
+    background: white;
+    color: TrhiveTeal;
+  }
   @media bp-papa-bear {
     display: block;
     width: auto;
@@ -304,9 +332,6 @@
   }
 }
 
-
-
-
 /* bigHeader boolean = true, not default,
 ** scope within selector: .hasForehead for specific styles
 */
@@ -318,23 +343,26 @@
   float: left;
   clear: both;
   position: relative;
-  background: gradientTeal;
+  background: transparent;
   color: white;
-  &::before {
-    content: '';
-    display: block;
-    width: 7.3125rem;
-    height: 6.25rem;
-    margin: 0 0;
-    padding: 0 0;
-    float: right;
-    background-image: url('./assets/thriveVines.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
+  @media bp-papa-bear {
+    background: gradientTeal;
+    &::before {
+      content: '';
+      display: block;
+      width: 7.3125rem;
+      height: 6.25rem;
+      margin: 0 0;
+      padding: 0 0;
+      float: right;
+      background-image: url('./assets/thriveVines.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
   }
 }
 .tagline {
