@@ -51,7 +51,7 @@ function renderContentImage ({
   }: { hasContentImage: boolean, contentImage: string, contentImageText: string, title: Array<string> }) {
   if (hasContentImage) {
     return (
-      <span className={styles.contentImage}>
+      <span id='contentImage' className={styles.contentImage}>
         <i className={styles.details}>
           {contentImageText}
         </i>
@@ -77,7 +77,7 @@ const BannerSuper = ({
   return (
     <section className={styles.bannerSuper}>
       <span className={styles[bannerImageOverlay]}>
-        <img className={styles.bannerImage} src={bannerImage} alt={title} />
+        <img className={`${styles.bannerImage} bgImage`} src={bannerImage} alt={title} />
       </span>
       <div className={styles.content}>
         <header className={styles.bannerHeader}>
