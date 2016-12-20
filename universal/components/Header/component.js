@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { isLoggedIn } from 'modules/UserSession/selectors'
 import { deleteSession } from 'modules/UserSession'
-import { IndexLink, Link, withRouter } from 'react-router'
+import { IndexLink, Link } from 'react-router'
 import MainNav from './MainNav/component.js'
 import { ThriveLogo, NavButton } from './svg.js'
 
@@ -14,7 +14,7 @@ type Props = {
   bigHeader: boolean,
   isLoggedIn: boolean,
   dispatch: Function,
-  router: any
+  pathname: string
 }
 
 export class Header extends React.Component {
@@ -25,8 +25,7 @@ export class Header extends React.Component {
 
   props: Props
   state = {
-    active: false,
-    bigHeader: false
+    active: false
   }
 
   constructor () {
@@ -35,16 +34,6 @@ export class Header extends React.Component {
     this.toggleActive = this.toggleActive.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
     this.logOutUser = this.logOutUser.bind(this)
-  }
-
-  componentWillMount () {
-    this.setState({ bigHeader: this.props.bigHeader })
-
-    const { pathname } = this.props.router.getCurrentLocation()
-    const matches = ['/', '/home']
-    if (pathname && matches.includes(pathname.toLowerCase())) {
-      this.setState({ bigHeader: true })
-    }
   }
 
   logOutUser () {
@@ -120,9 +109,18 @@ export class Header extends React.Component {
     )
   }
 
-  renderNav () {
-    const { bigHeader } = this.state
+  renderBigHeader () {
+    if (!this.props.pathname) {
+      return false
+    }
 
+    const bigRoutes = ['/', '/home']
+
+    return bigRoutes.includes(this.props.pathname.toLowerCase())
+  }
+
+  renderNav () {
+    const bigHeader = this.renderBigHeader()
     if (!bigHeader) {
       return (
         <div className={styles.default}>
@@ -188,4 +186,14 @@ export class Header extends React.Component {
   }
 }
 
-export default withRouter(connect(isLoggedIn)(Header))
+const mapStateToProps = (state) => {
+  const loggedInSelector = isLoggedIn(state)
+  const location = state.location
+  console
+  return {
+    ...loggedInSelector,
+    pathname: location.pathname
+  }
+}
+
+export default connect(mapStateToProps)(Header)
