@@ -27,6 +27,9 @@
 ## Requirements
 * node `^6.7.0`
 * npm `^3.10.6`
+* want to run Nightmare feature tests using selenium? You'll need the JDK. Try here:
+ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
 
 ## Getting Started
 
