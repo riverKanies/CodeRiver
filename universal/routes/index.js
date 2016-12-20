@@ -28,6 +28,7 @@ import Pathway from 'layouts/Pathway'
 import About from 'layouts/About'
 import Journey from 'layouts/Journey'
 import NotFound from 'layouts/NotFound'
+import CorporatePledge from 'layouts/CorporatePledge'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -122,6 +123,10 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'corporate-pledge',
+        component: CorporatePledge
+      },
+      {
+        path: 'glassdoor',
         component: GlassDoor
       },
       {
