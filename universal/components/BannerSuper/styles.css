@@ -1,6 +1,6 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, bodyCopy from 'all';
 
-.fullscreenBanner {
+.bannerSuper {
   display: block;
   width: 100%;
   height: auto;
@@ -11,48 +11,17 @@
   background: white;
   text-align: center;
   @media bp-mama-bear {
+    lost-utility: clearfix;
     display: flex;
     flex-direction: column;
     flex-flow: center;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
     background: none;
-  }
-  &:hover {
-    @media bp-mama-bear {
-      p {
-        color: rgba(255, 255, 255, 1);
-      }
-    }
-  }
-}
-.fullHeight {
-  composes: fullscreenBanner;
-}
-.halfHeight {
-  composes: fullscreenBanner;
-  @media bp-mama-bear {
-    height: 50vh;
-  }
-}
-.quarterHeight {
-  composes: fullscreenBanner;
-  @media bp-mama-bear {
-    height: 25vh;
-  }
-}
-.thirdHeight {
-  composes: fullscreenBanner;
-  @media bp-mama-bear {
-    height: 33.33vh;
-  }
-}
-.twoThirdsHeight {
-  composes: fullscreenBanner;
-  @media bp-mama-bear {
-    height: 66.66vh;
   }
 }
 
@@ -109,6 +78,20 @@
   }
 }
 
+.content {
+  lost-center: containerWidth;
+  margin: 0 auto babyMargin auto;
+  padding: containerPadding;
+  float: none;
+  @media bp-mama-bear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+
 .bannerHeader {
   width: 100%;
   margin: 0 auto 1.25rem auto;
@@ -122,14 +105,33 @@
     text-align: inherit;
     color: white;
   }
-  .h1 {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: inherit;
-    color: inherit;
+  @media bp-papa-bear {
+    padding: 0 0 1.5rem 0;
+  }
+  &::after {
+    @media bp-mama-bear {
+      content: '';
+      display: inline-block;
+      width: 3.4375rem;
+      height: .0625rem;
+      margin: 1.5rem 0 0 0;
+      padding: 0 0;
+      float: none;
+      clear: both;
+      background: white;
+      text-align: center;
+    }
   }
 }
+
+.h1 {
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0;
+  text-align: inherit;
+  color: inherit;
+}
+
 .bannerText {
   width: 100%;
   clear: both;
@@ -145,45 +147,40 @@
     text-align: inherit;
     color: bodyCopy;
     @media bp-mama-bear {
-      color: rgba(255, 255, 255, .7);
+      font-size: 112.5%;
+      color: white;
       transition: color 100ms ease-in-out;
+    }
+    @media bp-papa-bear {
+      font-size: 125%;
     }
   }
 }
 
-/* Banner Content + Composed Positioning */
-.bannerContent {
-  lost-center: containerWidth;
-  margin: 0 auto babyMargin auto;
-  padding: containerPadding;
-  float: none;
-  @media bp-mama-bear {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 0;
-  }
+.buttonWrap {
+  width: 100%;
+  height: auto;
+  margin: 5rem auto 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
 }
-.defaultPosition {
-  composes: bannerContent;
-  @media bp-mama-bear {
-    text-align: center;
-  }
-}
-.bottomLeft {
-  composes: bannerContent;
-  @media bp-mama-bear {
+
+.contentImage {
+  display: block;
+  width: 9rem;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  img {
     display: block;
-    padding: 0 0 5.625rem 5.625rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    .bannerHeader {
-      text-align: left;
-    }
-    .bannerContent {
-      text-align: left;
-    }
+    width: 100%;
+    height: auto;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
   }
 }

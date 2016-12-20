@@ -1,4 +1,5 @@
 import React from 'react'
+import BannerSuper from 'components/BannerSuper'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import styles from './styles'
@@ -42,7 +43,7 @@ const pledgeBadge = {
   hasButton: true,
   link: {
     linkText: 'Get Started',
-    linkTo: 'javascript:void(0)',
+    linkTo: 'https://www.glassdoor.com/employers/solutions/thrive-pledge.htm',
     linkStyle: 'blue',
     target: '_blank'
   }
@@ -51,8 +52,11 @@ const pledgeBadge = {
 export const CorporatePledgeView = () => {
   return (
     <main role='main' className={styles.corporatePledge}>
-      <FullWidthTwoCol {...aboutPledge} />
-      <FullWidthTwoColSpecial {...pledgeBadge} />
+      <BannerSuper />
+      <section className={styles.pledgeContent}>
+        <FullWidthTwoCol {...aboutPledge} />
+        <FullWidthTwoColSpecial {...pledgeBadge} />
+      </section>
     </main>
   )
 }

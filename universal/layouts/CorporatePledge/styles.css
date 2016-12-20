@@ -1,0 +1,14 @@
+@value bp-mama-bear from 'all';
+
+.pledgeContent {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  @media bp-mama-bear {
+    margin-top: 100vh;
+  }
+}
