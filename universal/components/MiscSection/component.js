@@ -56,7 +56,7 @@ const Items = [
   },
   {
     title: 'Contact',
-    description: `Say hello. E-mail us at`,
+    description: `Say hello. Email us at`,
     hasButton: 'buttonTrue',
     button: {
       buttonText: 'info@thriveglobal.com',
@@ -71,17 +71,16 @@ const MiscSection = ({
   button = {}
 }: Props) => {
   return (
-    <section className={styles.SectionContainer}>
-      <section className={styles.content}>
+    <section className={styles.Container}>
+      <section className={styles.SectionContainer}>
         {Items.map(
           item =>
-            <section>
+            <section className={styles.content}>
               <TitleWithText {...item} />
             </section>
         )}
       </section>
     </section>
-
   )
 }
 

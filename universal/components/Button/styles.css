@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin from 'all';
 @value Mon, PlayBlackItalic from 'all';
 @value ThriveViolet, gradientCardThrive, ThriveBlue, ThriveTeal, ThriveBlurple from 'all';
 

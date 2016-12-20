@@ -1,24 +1,29 @@
 @value breakpoints: 'all';
 @value containerWidth, containerPadding from breakpoints;
 
-.container {
-  lost-center: containerWidth flex;
-  padding: 2rem;
+.SectionContainer {
+  lost-column: 1;
+  margin: 0 auto;
+  padding: babyPadding;
+  padding-top: 3rem;
+  background-color: white;
 }
 
 .content {
-  lost-center: 960px;
+  lost-column: 1;
+  padding: babyPadding;
+  float: left;
+  height: auto;
+  min-height: 250px;
+
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/3;
+  }
 }
 
 .title {
-  lost-column: 1;
-  margin: 2rem;
-  text-align: center;
-}
-
-.SectionContainer{
-  lost-column: 1;
-  padding: 2rem 1rem;
-  background-color: white;
   text-align: center;
 }
