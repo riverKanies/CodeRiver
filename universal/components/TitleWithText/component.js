@@ -7,16 +7,14 @@ type Props = {
   title: string,
   description: string,
   linkText: string,
-  hasButton: 'buttonTrue' | 'buttonFalse',
-  button: Object
+  buttonProps: Object
 };
 
 const TitleWithText = ({
   title = 'Title With Some Text',
   description = 'Description goes here...',
   linkText = 'Email goes here...',
-  hasButton = 'buttonTrue',
-  button = {}
+  buttonProps
   }: Props) => {
   return (
     <section className={styles.container} id={title.toLowerCase()}>
@@ -24,9 +22,12 @@ const TitleWithText = ({
         <h2>{title}</h2>
       </span>
       <p className={styles.text} dangerouslySetInnerHTML={{__html: description}} />
-      <span className={styles[hasButton]}>
-        <Button {...button} />
-      </span>
+      {
+        buttonProps && (
+          <span className={styles.buttonWrapper}>
+            <Button {...buttonProps} />
+          </span>)
+      }
     </section>
   )
 }

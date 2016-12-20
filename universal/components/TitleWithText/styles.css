@@ -48,21 +48,13 @@
 }
 
 /* Button True/False */
-.hasButton {
+.buttonWrapper {
   display: block;
   width: 100%;
   height: auto;
-
+  display: block;
+  margin-top: babyHeader;
   @media bp-papa-bear {
     display: flex;
   }
-}
-.buttonTrue {
-  composes: hasButton;
-  display: block;
-  margin-top: babyHeader;
-}
-.buttonFalse {
-  composes: hasButton;
-  display: none;
 }
