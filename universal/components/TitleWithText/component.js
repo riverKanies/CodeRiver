@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './styles'
 import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   title: string,
@@ -9,6 +10,21 @@ type Props = {
   linkText: string,
   buttonProps: Object
 };
+
+function renderButton (buttonProps: Object) {
+  if (buttonProps.external) {
+    return (
+      <span className={styles.buttonWrapper}>
+        <ExternalLink {...buttonProps} />
+      </span>
+    )
+  }
+  return (
+    <span className={styles.buttonWrapper}>
+      <Button {...buttonProps} />
+    </span>
+  )
+}
 
 const TitleWithText = ({
   title = 'Title With Some Text',
@@ -22,12 +38,7 @@ const TitleWithText = ({
         <h2>{title}</h2>
       </span>
       <p className={styles.text} dangerouslySetInnerHTML={{__html: description}} />
-      {
-        buttonProps && (
-          <span className={styles.buttonWrapper}>
-            <Button {...buttonProps} />
-          </span>)
-      }
+      {buttonProps && renderButton(buttonProps)}
     </section>
   )
 }

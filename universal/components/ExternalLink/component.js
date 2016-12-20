@@ -11,6 +11,7 @@ type Props = {
   segmentProps: Object,
   disabled: boolean,
   linkText: String,
+  buttonText: String,
   download: boolean,
   id: string,
   target: string
@@ -21,6 +22,7 @@ export const ExternalLink = ({
   linkTo,
   linkStyle,
   linkText,
+  buttonText,
   handleClick,
   segmentProps,
   disabled,
@@ -40,7 +42,7 @@ export const ExternalLink = ({
 
   return (
     <a {...linkProps} >
-      {children || linkText}
+      {children || buttonText || linkText}
     </a>
   )
 }

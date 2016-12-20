@@ -9,7 +9,7 @@ type Props = {
   button: Object
 }
 
-const Items = [
+const items = [
   {
     title: 'Corporate Partnerships',
     description: `Interested in learning more about our corporate partnerships?
@@ -18,7 +18,7 @@ const Items = [
     buttonProps: {
       buttonText: 'corporate@thriveglobal.com',
       linkTo: 'mailto:corporate@thriveglobal.com',
-      buttonStyle: 'violet'
+      external: true
     }
   },
   {
@@ -28,7 +28,7 @@ const Items = [
     buttonProps: {
       buttonText: 'media@thriveglobal.com',
       linkTo: 'mailto:media@thriveglobal.com',
-      buttonStyle: 'violet'
+      external: true
     }
   },
   {
@@ -38,7 +38,7 @@ const Items = [
     buttonProps: {
       buttonText: 'commerce@thriveglobal.com',
       linkTo: 'mailto:commerce@thriveglobal.com',
-      buttonStyle: 'violet'
+      external: true
     }
   },
   {
@@ -48,7 +48,7 @@ const Items = [
     buttonProps: {
       buttonText: 'press@thriveglobal.com',
       linkTo: 'mailto:press@thriveglobal.com',
-      buttonStyle: 'violet'
+      external: true
     }
   },
   {
@@ -57,7 +57,7 @@ const Items = [
     buttonProps: {
       buttonText: 'info@thriveglobal.com',
       linkTo: 'mailto:info@thriveglobal.com',
-      buttonStyle: 'violet'
+      external: true
     }
   }
 ]
@@ -69,9 +69,9 @@ const MiscSection = ({
   return (
     <section className={styles.SectionContainer}>
       <section className={styles.innerContainer}>
-        {Items.map(
-          item =>
-            <section>
+        {items.map(
+          (item, idx) =>
+            <section key={idx}>
               <TitleWithText {...item} />
             </section>
         )}
