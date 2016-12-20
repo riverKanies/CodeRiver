@@ -8,6 +8,7 @@ module.exports = [
   '/corporate-pledge',
   '/press',
   '/give',
+  '/glassdoor',
   '/grow',
   '/home',
   '/interests',
