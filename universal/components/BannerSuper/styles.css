@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, bodyCopy from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, bodyCopy, lightGray, darkGray, Mon from 'all';
 
 .bannerSuper {
   display: block;
@@ -10,6 +10,7 @@
   position: relative;
   background: white;
   text-align: center;
+  z-index: 400;
   @media bp-mama-bear {
     lost-utility: clearfix;
     display: flex;
@@ -167,14 +168,16 @@
 }
 
 .contentImage {
-  display: block;
-  width: 9rem;
-  height: auto;
-  margin: 0 0;
-  padding: 0 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  @media bp-mama-bear {
+    display: block;
+    width: 9rem;
+    height: auto;
+    margin: 0 0;
+    padding: 0 0;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
   img {
     display: block;
     width: 100%;
@@ -183,4 +186,19 @@
     padding: 0 0;
     float: left;
   }
+}
+
+.details {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  padding: 0 0;
+  float: left;
+  font-family: Mon;
+  font-size: .75rem;
+  font-style: normal;
+  line-height: 100%;
+  text-align: left;
+  color: white;
 }

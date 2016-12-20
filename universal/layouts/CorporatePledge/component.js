@@ -5,12 +5,31 @@ import FullWidthTwoColSpecial from 'components/FullWidthTwoColSpecial'
 import styles from './styles'
 
 // Content Import
-// import bannerImg from './assets/pledge-banner.jpg'
-// import glassdoorLogo from './assets/glassdoorLogo.svg'
+import bannerImg from './assets/pledge-banner.jpg'
+import glassdoorLogo from './assets/glassdoorLogo.svg'
 import aboutImg from './assets/about-pledge.jpg'
 import badgeImg from './assets/pledge-to-thrive.png'
 
 // Content
+const pledgeBanner = {
+  title: [
+    'Take the', 'Pledge To Thrive'
+  ],
+  bannerText: `Thrive Global and Glassdoor are partnering to showcase employers who prioritize a thriving workplace.`,
+  bannerImage: bannerImg,
+  bannerImageOverlay: 'overlayFalse',
+  hasButton: true,
+  hasContentImage: true,
+  contentImage: glassdoorLogo,
+  hasContentImageText: true,
+  contentImageText: 'in partnership with',
+  link: {
+    linkText: 'Take The Pledge',
+    linkTo: 'https://www.glassdoor.com/employers/solutions/thrive-pledge.htm',
+    linkStyle: 'bannerLinkTeal',
+    target: '_blank'
+  }
+}
 const aboutPledge = {
   sectionClass: 'default',
   title: 'About The Thrive Pledge',
@@ -31,7 +50,7 @@ const pledgeBadge = {
   sectionClass: 'transparent',
   title: 'Get the Badge',
   hasLabel: false,
-  hasColorBar: 'colorBarTrue',
+  hasColorBar: 'colorBarFalse',
   sectionText: [
     `Set your company apart by letting your employees and those you are recruiting
     know that this is a workplace that gets it about well-being and understands the
@@ -52,7 +71,8 @@ const pledgeBadge = {
 export const CorporatePledgeView = () => {
   return (
     <main role='main' className={styles.corporatePledge}>
-      <BannerSuper />
+      <BannerSuper {...pledgeBanner} />
+      <span className={styles.connector} />
       <section className={styles.pledgeContent}>
         <FullWidthTwoCol {...aboutPledge} />
         <FullWidthTwoColSpecial {...pledgeBadge} />

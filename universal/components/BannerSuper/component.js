@@ -13,26 +13,30 @@ type LinkProps = {
 }
 
 type Props = {
-  title: string,
+  title: Array<string>,
   bannerText: string,
   bannerImage: string,
   bannerImageOverlay: 'overlayTrue' | 'overlayFalse',
   hasButton: boolean,
   hasContentImage: boolean,
   contentImage: string,
+  hasContentImageText: boolean,
+  contentImageText: string,
   link: LinkProps
 };
 
 const defaultImage = dummyImage
 
 const BannerSuper = ({
-  title = 'Title',
+  title = ['Title'],
   bannerText = 'Hello, I am text!',
   bannerImage = defaultImage,
   bannerImageOverlay = 'overlayFalse',
   hasButton = true,
   hasContentImage = true,
   contentImage = extraImage,
+  hasContentImageText = true,
+  contentImageText = 'in partnership with',
   link
 }: Props) => {
   return (
@@ -52,6 +56,9 @@ const BannerSuper = ({
         </section>
       </div>
       <span className={styles.contentImage}>
+        <i className={styles.details}>
+          {contentImageText}
+        </i>
         <img src={contentImage} alt={title} />
       </span>
     </section>

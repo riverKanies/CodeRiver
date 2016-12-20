@@ -116,3 +116,15 @@
     color: #fff;
   }
 }
+
+.bannerLinkTeal {
+  @media bp-baby-bear {
+    composes: link;
+    background-color: ThriveTeal;
+    color: #000;
+  }
+  @media bp-mama-bear {
+    background-color: white;
+    color: ThriveTeal;
+  }
+}
