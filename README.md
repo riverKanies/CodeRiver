@@ -6,10 +6,8 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Table of Contents
-1. [Features](#features)
 1. [Requirements](#requirements)
 1. [Getting Started](#getting-started)
-1. [Application Structure](#application-structure)
 1. [Development](#development)
   1. [Developer Tools](#developer-tools)
   1. [Routing](#routing)
@@ -32,7 +30,9 @@
 
 ## Getting Started
 
-After confirming that your development environment meets the specified [requirements](#requirements), you can follow these steps to get the project up and running:
+After confirming that your development environment meets the specified
+[requirements](#requirements), you can follow these steps to get the project up
+and running:
 
 ```bash
 $ git clone https://github.com/spartansystems/thrive-marketing.git
@@ -45,7 +45,8 @@ If everything works, you should see the following:
 
 <img src="http://i.imgur.com/zR7VRG6.png?2" />
 
-While developing, you will probably rely mostly on `npm start`; however, there are additional scripts at your disposal:
+While developing, you will probably rely mostly on `npm start`; however, there
+are additional scripts at your disposal:
 
 |`npm run <script>`|Description|
 |------------------|-----------|
@@ -68,101 +69,65 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 |`debug:dev`|Start the app in dev mode with full debugging output in the console|
 |`debug:prod`|Start the app in prod mode with full debugging output in the console|
 
-## Application Structure
-
-The application structure presented in this boilerplate is **fractal**, where functionality is grouped primarily by feature rather than file type. Please note, however, that this structure is only meant to serve as a guide, it is by no means prescriptive. That said, it aims to represent generally accepted guidelines and patterns for building scalable applications. If you wish to read more about this pattern, please check out this [awesome writeup](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure) by [Justin Greenberg](https://github.com/justingreenberg).
-
-```
-.
-├── bin                      # Build/Start scripts
-├── blueprints               # Blueprint files for redux-cli
-├── build                    # All build-related configuration
-│   └── webpack              # Environment-specific configuration files for webpack
-├── client                   # Contains HTML templates used during build compilation
-│   └── index.js             # Client entry and rendering
-├── config                   # Project configuration settings
-├── server                   # Express application (uses webpack middleware)
-│   └── index.js             # Server application entry point
-└── universal                # Shared application source code
-    ├── components           # Reusable Presentational Components
-    ├── containers           # Reusable Container Components
-    │   └── AppContainer     # Primary wrapper for all application code in `universal`
-    ├── layouts              # Components that dictate major page structure
-    ├── lib                  # Shared libraries and utilities
-    ├── modules              # Redux-specific pieces including containers and redux modules
-    │   ├── Counter          # Counter Module API
-    │   └── Toast            # Toast Module API
-    ├── static               # Static assets (not imported anywhere in source code)
-    ├── styles               # Application-wide styles (generally settings)
-    ├── store                # Redux-specific pieces
-    │   ├── createStore.js   # Create and instrument redux store
-    │   └── reducers.js      # Reducer registry and injection
-    └── routes               # Main route definitions and async split points
-        └── index.js         # Route config file
-                              # Unit tests
-```
-
 ## Development
 
 #### Developer Tools
 
-**Make sure you install the [React DevTools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).**
-
-and also
-
-**Make sure you install the [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd).**
-Using the chrome extension allows your monitors to run on a separate thread and affords better performance and functionality. It comes with several of the most popular monitors, is easy to configure, filters actions, and doesn’t require installing any packages.
-
-However, adding the DevTools components to your project is simple. First, grab the packages from npm:
-
-```bash
-npm i --save-dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-monitor
-```
-
-Then follow the [manual integration walkthrough](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md).
+Make sure you install the [React DevTools Chrome
+Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
 
 ### Routing
-We use `react-router` [plain route definitions](https://github.com/reactjs/react-router/blob/master/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
+We use `react-router` [plain route
+definitions](https://github.com/reactjs/react-router/blob/master/docs/API.md#plainroute)
+(`<route>/index.js`) to define units of logic within our application. See the
+[application structure](#application-structure) section for more information.
 
 ## Testing
-### Configs
-Configs in `tests/config` are generated automatically when `npm run test` is run. That script executes the following three tasks in sequential order:
-  1. Generate spec and feature configs for Jest and place them in `tests/config/generated`.
-  2. Run unit and component tests via `npm run test:specs`.
-  3. Run feature tests via `npm run test:features`
-
-If you make changes to the test configs in `tests/config`, it's generally a good idea to run `npm run test:configs` to regenerate the configs.
-
 ### Unit Tests
-You can run just the unit tests via `npm run test:specs` or you can watch them via `npm run test:watch`. To add a unit test, simply create a `.spec.js` file in your component or module directory. Jest will pick up on these files automatically. Enzyme is supported as well so long as you import . If you are using `redux-cli`, test files should automatically be generated when you create a component or redux module.
-
-Coverage reports will be compiled to `~/coverage` by default. If you wish to change what reporters are used and where reports are compiled, you can do so by modifying `coverage_reporters` in `~/config/index.js`.
+You can run just the unit tests via `npm run test:specs` or you can watch them
+via `npm run test:watch`. To add a unit test, simply create a `.spec.js` file in
+your component or module directory. Jest will pick up on these files
+automatically. Enzyme is supported as well so long as you import . If you are
+using `redux-cli`, test files should automatically be generated when you create
+a component or redux module.
 
 ### Feature Tests
-You can run the feature tests via `npm run test:features` or watch them via `npm run test:features -- --watch`. Browser automation is provided by [NightmareJS](https://github.com/segmentio/nightmare), which uses Electron under the hood. To add a Jest feature test, simply create a `.feature.js` file in your component or module directory, then import Nightmare via the `browser` named variable from `tests/browser/config`. Check out the Nightmare docs for all the cool things you can do.
-
-To watch the feature tests run in the browser, set `show` to `true` in `tests/browser/config`. Due to the feature tests being long-running, it's recommended to make them asynchronous promises by using `async/await`. [Read more](https://facebook.github.io/jest/docs/tutorial-async.html) about Async testing via Jest.
+To run feature tests, run `npm run test:feature` and it will trigger the
+Nightwatch feature spec runner.
 
 ## Deployment
 
-### Static Deployments
-If you want to simply publish the site as a static client, the project is configured to use [surge.sh](http://surge.sh/).
+The client application is currently hosted on heroku, backed by an express
+server with caching managed by cloudflare. In order to deploy a new feature to
+stage do the following:
 
-Steps to publish:
-* `npm install -g surge`
-* `surge` to create your account and complete the initial build.
-* Update the new host domain path in the `publish:env` npm script in `package.json`.
-* Add tokens to CircleCI if you want to set up automatic deploys. See below for more information.
+* submit a pull request to master with the updated application code and a good
+  description of what you did
+* have circle validate your build
+* get an approval from someone else on the thrive team
+* merge your branch into master
 
-`circle.yml` is configured to publish on successful merges into master, but you will still need to provide it with a Surge auth token. [Read more](http://surge.sh/help/integrating-with-circleci) about Surge continous deployment via CIrcleCI.
+Once branches are merged to master, they are auto-deployed to
+[staging](https://thrive-marketing-stage.herokuapp.com)
+
+In order to deploy to production, manually deploy the master branch to through
+the heroku GUI for the app: https://thrive-marketing.herokuapp.com
 
 ## Build System
 
 ### Configuration
 
-Default project configuration can be found in `~/config/index.js`. Here you'll be able to redefine your `src` and `dist` directories, adjust compilation settings, tweak your vendor dependencies, and more. For the most part, you should be able to make changes in here **without ever having to touch the actual webpack build configuration**.
+Default project configuration can be found in `~/config/index.js`. Here you'll
+be able to redefine your `src` and `dist` directories, adjust compilation
+settings, tweak your vendor dependencies, and more. For the most part, you
+should be able to make changes in here **without ever having to touch the actual
+webpack build configuration**.
 
-If you need environment-specific overrides (useful for dynamically setting API endpoints, for example), you can edit `~/config/environments.js` and define overrides on a per-NODE_ENV basis. There are examples for both `development` and `production`, so use those as guidelines. Here are some common configuration options:
+If you need environment-specific overrides (useful for dynamically setting API
+endpoints, for example), you can edit `~/config/environments.js` and define
+overrides on a per-NODE_ENV basis. There are examples for both `development` and
+`production`, so use those as guidelines. Here are some common configuration
+options:
 
 |Key|Description|
 |---|-----------|
@@ -173,7 +138,11 @@ If you need environment-specific overrides (useful for dynamically setting API e
 |`compiler_devtool`|what type of source-maps to generate (set to `false`/`null` to disable)|
 |`compiler_vendor`|packages to separate into to the vendor bundle|
 
-Certain variables should be provided via an `.env` file. Please see `.env.sample` for those that can currently be set. If you add more variables to `.env` and want to reference them in the application code via `process.env.VARIABLE`, you will need to add it to the `Environments` webpack plugin commons list in `build/webpack.plugins.js`.
+Certain variables should be provided via an `.env` file. Please see
+`.env.sample` for those that can currently be set. If you add more variables to
+`.env` and want to reference them in the application code via
+`process.env.VARIABLE`, you will need to add it to the `Environments` webpack
+plugin commons list in `build/webpack.plugins.js`.
 
 ```bash
 # example .env file, contains default environment variables
@@ -186,7 +155,10 @@ API_PORT=3333
 ```
 
 ### Root Resolve
-Webpack is configured to make use of [resolve.root](http://webpack.github.io/docs/configuration.html#resolve-root), which lets you import local packages as if you were traversing from the root of your `~/universal` directory. Here's an example:
+Webpack is configured to make use of
+[resolve.root](http://webpack.github.io/docs/configuration.html#resolve-root),
+which lets you import local packages as if you were traversing from the root of
+your `~/universal` directory. Here's an example:
 
 ```js
 // current file: ~/universal/views/some/nested/View.js
@@ -199,7 +171,10 @@ import SomeComponent from 'components/SomeComponent' // Hooray!
 
 ### Globals
 
-These are global variables available to you anywhere in your source code. If you wish to modify them, they can be found as the `globals` key in `~/config/index.js`. When adding new globals, make sure you also add them to `~/.eslintrc`.
+These are global variables available to you anywhere in your source code. If you
+wish to modify them, they can be found as the `globals` key in
+`~/config/index.js`. When adding new globals, make sure you also add them to
+`~/.eslintrc`.
 
 |Variable|Description|
 |---|---|
@@ -218,31 +193,54 @@ These are global variables available to you anywhere in your source code. If you
 
 ### Styles
 
-`.css` file extensions are supported out of the box and are configured to use [CSS Modules](https://github.com/css-modules/css-modules). After being imported, styles will be processed with [PostCSS](https://github.com/postcss/postcss) for minification and autoprefixing, and will be extracted to a `.css` file during production builds.
+`.css` file extensions are supported out of the box and are configured to use
+[CSS Modules](https://github.com/css-modules/css-modules). After being imported,
+styles will be processed with [PostCSS](https://github.com/postcss/postcss) for
+minification and autoprefixing, and will be extracted to a `.css` file during
+production builds.
 
 #### Configured PostCSS Plugins
-* [stylelint](https://github.com/stylelint/stylelint) - CSS linting via [default community standards](https://github.com/stylelint/stylelint-config-standard/blob/master/index.js)
+* [stylelint](https://github.com/stylelint/stylelint) - CSS linting via [default
+  community
+standards](https://github.com/stylelint/stylelint-config-standard/blob/master/index.js)
 * [cssNext](http://cssnext.io/) - Like Babel but for new CSS specs.
-* [precss](https://github.com/jonathantneal/precss) - Allows you to use SASS-like syntax in CSS files.
-* [lost](https://github.com/peterramsing/lost) - A lightweight and extremely powerful grid system.
-* [fontMagician](https://github.com/jonathantneal/postcss-font-magician) - Creates all `@font-face` rules automagically.
-* [browserReporter](https://github.com/postcss/postcss-browser-reporter) - Like Redbox but for CSS. It overlays CSS errors at the top of the browser window so you don't have to constantly check the console to see if something is broken.
+* [precss](https://github.com/jonathantneal/precss) - Allows you to use
+  SASS-like syntax in CSS files.
+* [lost](https://github.com/peterramsing/lost) - A lightweight and extremely
+  powerful grid system.
+* [fontMagician](https://github.com/jonathantneal/postcss-font-magician) -
+  Creates all `@font-face` rules automagically.
+* [browserReporter](https://github.com/postcss/postcss-browser-reporter) - Like
+  Redbox but for CSS. It overlays CSS errors at the top of the browser window so
+you don't have to constantly check the console to see if something is broken.
 
 You can browser additional plugins at [postcss.parts](http://postcss.parts/)
 
 ### Server
 
-This app comes packaged with an Express server. It's important to note that the sole purpose of this server is to provide `webpack-dev-middleware` and `webpack-hot-middleware` for hot module replacement. Using a custom Express app in place of [webpack-dev-server](https://github.com/webpack/webpack-dev-server) makes it easier to extend the starter kit to include functionality such as API's, universal rendering, and more -- all without bloating the base boilerplate.
+This app comes packaged with an Express server. It's important to note that the
+sole purpose of this server is to provide `webpack-dev-middleware` and
+`webpack-hot-middleware` for hot module replacement. Using a custom Express app
+in place of [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+makes it easier to extend the starter kit to include functionality such as
+API's, universal rendering, and more -- all without bloating the base
+boilerplate.
 
 ### Production Optimization
 
-Babel is configured to use [babel-plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime) so transforms aren't inlined.
+Babel is configured to use
+[babel-plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime)
+so transforms aren't inlined.
 
-In production, webpack will extract styles to a `.css` file, minify your JavaScript, and perform additional optimizations such as module deduplication.
+In production, webpack will extract styles to a `.css` file, minify your
+JavaScript, and perform additional optimizations such as module deduplication.
 
 ## Learning Resources
 
-* [Starting out with react-redux-starter-kit](https://suspicious.website/2016/04/29/starting-out-with-react-redux-starter-kit/) is an introduction to the components used in this starter kit with a small example in the end.
+* [Starting out with
+  react-redux-starter-kit](https://suspicious.website/2016/04/29/starting-out-with-react-redux-starter-kit/)
+is an introduction to the components used in this starter kit with a small
+example in the end.
 
 
 ## Contributing
@@ -252,4 +250,6 @@ Please review the [contributing guidelines](/.github/CONTRIBUTING.md)
 
 ## Thanks
 
-This project wouldn't be without the awesome work Dave and the other contributors have done on [react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit/).
+This project wouldn't be without the awesome work Dave and the other
+contributors have done on
+[react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit/).
