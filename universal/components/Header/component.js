@@ -4,18 +4,20 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { isLoggedIn } from 'modules/UserSession/selectors'
 import { deleteSession } from 'modules/UserSession'
-import { redirectToShopify } from 'lib/sso'
 import { IndexLink, Link } from 'react-router'
+import MainNav from './MainNav/component.js'
+import { ThriveLogo, NavButton } from './svg.js'
 
 import styles from './styles'
-import mark from './assets/thriveLogo.svg'
 
 type Props = {
+  bigHeader: boolean,
   isLoggedIn: boolean,
-  dispatch: Function
+  dispatch: Function,
+  pathname: string
 }
 
-class Header extends React.Component {
+export class Header extends React.Component {
   toggleActive: Function;
   redirectToShopify: Function;
   hideMenu: Function;
@@ -25,23 +27,18 @@ class Header extends React.Component {
   state = {
     active: false
   }
+
   constructor () {
     super(...arguments)
 
     this.toggleActive = this.toggleActive.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
     this.logOutUser = this.logOutUser.bind(this)
-    this.redirectToShopify = this.redirectToShopify.bind(this)
   }
 
   logOutUser () {
     this.hideMenu()
     this.props.dispatch(deleteSession())
-  }
-
-  redirectToShopify () {
-    this.hideMenu()
-    redirectToShopify()
   }
 
   hideMenu () {
@@ -58,7 +55,7 @@ class Header extends React.Component {
     if (isLoggedIn) {
       return (
         <Link
-          id='navSignUp'
+          id='navProfile'
           onClick={this.hideMenu}
           to='/profile'
           className={styles.linkUtility}
@@ -90,7 +87,7 @@ class Header extends React.Component {
         <Link
           activeClassName={styles.activeRoute}
           className={styles.linkUtility}
-          id='navLogin'
+          id='navLogout'
           onClick={this.logOutUser}
           to='/'
         >
@@ -112,14 +109,45 @@ class Header extends React.Component {
     )
   }
 
-  render () {
-    const { active } = this.state
+  renderBigHeader () {
+    if (!this.props.pathname) {
+      return false
+    }
 
-    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
+    const bigRoutes = ['/', '/home']
+
+    return bigRoutes.includes(this.props.pathname.toLowerCase())
+  }
+
+  renderNav () {
+    const bigHeader = this.renderBigHeader()
+    if (!bigHeader) {
+      return (
+        <div className={styles.default} id='littleHeader'>
+          <figure className={styles.brand}>
+            <IndexLink
+              onClick={this.hideMenu}
+              id='linkHome'
+              to='/'
+            >
+              <ThriveLogo />
+            </IndexLink>
+          </figure>
+          <section className={styles.navContainer}>
+            <MainNav
+              hideMenu={this.hideMenu}
+            />
+            <nav role='navigation' className={styles.utilityNav}>
+              {this.renderSignupOrProfile()}
+              {this.renderLoginLogout()}
+            </nav>
+          </section>
+        </div>
+      )
+    }
 
     return (
-      <header id='header' role='banner' className={siteHeaderStyle}>
-
+      <div className={styles.hasForehead} id='bigHeader'>
         <section className={styles.forehead}>
           <figure className={styles.brand}>
             <IndexLink
@@ -127,72 +155,49 @@ class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              <img src={mark} className={styles.thriveLogo} alt='Thrive Global' />
+              <ThriveLogo />
             </IndexLink>
           </figure>
           <span className={styles.tagline}>More than living. Thriving.</span>
         </section>
 
         <section className={styles.navContainer}>
-          <nav role='navigation' className={styles.mainNav}>
-            <a
-              className={styles.link}
-              onClick={this.hideMenu}
-              href='https://journal.thriveglobal.com/'
-              target='_blank'
-            >
-              Journal
-            </a>
-            <Link
-              onClick={this.hideMenu}
-              id='navGrow'
-              to='/grow'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Grow
-            </Link>
-            <Link
-              id='navShop'
-              className={styles.link}
-              onClick={this.redirectToShopify}
-              activeClassName={styles.activeRoute}
-            >
-              Shop
-            </Link>
-            <Link onClick={this.hideMenu}
-              id='navGive'
-              to='/give'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Give
-            </Link>
-            <Link onClick={this.hideMenu}
-              id='navApps'
-              to='/apps'
-              className={styles.link}
-              activeClassName={styles.activeRoute}>
-              Apps
-            </Link>
-          </nav>
-
+          <MainNav hideMenu={this.hideMenu} />
           <nav role='navigation' className={styles.utilityNav}>
             {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
           </nav>
         </section>
+      </div>
+    )
+  }
 
-        <span className={styles.menuButton} onClick={this.toggleActive}>
-          <svg className={styles.button} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
-            <title>Open/Close Menu</title>
-            <path className={styles.topLine} d='M32,11.75H8A1.88,1.88,0,0,1,8,8H32a1.88,1.88,0,0,1,0,3.75Z' />
-            <path className={styles.middleLine} d='M32,21.88H8a1.88,1.88,0,0,1,0-3.75H32a1.88,1.88,0,0,1,0,3.75Z' />
-            <path className={styles.bottomLine} d='M32,32H8a1.88,1.88,0,0,1,0-3.75H32A1.88,1.88,0,0,1,32,32Z' />
-          </svg>
+  render () {
+    const { active } = this.state
+    const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
+    return (
+      <header id='header' role='banner' className={siteHeaderStyle}>
+        {this.renderNav()}
+        <span
+          id='navButtonWrapper'
+          className={styles.menuButton}
+          onClick={this.toggleActive}
+        >
+          <NavButton />
         </span>
-
       </header>
     )
   }
 }
 
-export default connect(isLoggedIn)(Header)
+const mapStateToProps = (state) => {
+  const loggedInSelector = isLoggedIn(state)
+  const location = state.location
+  console
+  return {
+    ...loggedInSelector,
+    pathname: location.pathname
+  }
+}
+
+export default connect(mapStateToProps)(Header)
