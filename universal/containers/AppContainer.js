@@ -14,7 +14,7 @@ class AppContainer extends React.Component {
   props: Props
   unsubscribe: any
 
-  componentDidMount () {
+  componentWillMount () {
     const { history, store } = this.props
 
     // Use history to update store with location
@@ -23,6 +23,15 @@ class AppContainer extends React.Component {
         type: analyticsActions.locationChange,
         location
       })
+    })
+  }
+
+  componentDidMount () {
+    const { store, history } = this.props
+
+    store.dispatch({
+      type: analyticsActions.locationChange,
+      location: history.getCurrentLocation()
     })
   }
 
