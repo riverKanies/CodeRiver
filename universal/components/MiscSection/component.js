@@ -15,7 +15,7 @@ const Items = [
     description: `Interested in learning more about our corporate partnerships?
                   Email us at`,
     hasButton: 'buttonTrue',
-    button: {
+    buttonProps: {
       buttonText: 'corporate@thriveglobal.com',
       linkTo: 'mailto:corporate@thriveglobal.com',
       buttonStyle: 'violet'
@@ -25,8 +25,7 @@ const Items = [
     title: 'Media Partnerships',
     description: `Interested in learning more about brand partnerships and
                   sponsorships with Thrive Global? Email us at`,
-    hasButton: 'buttonTrue',
-    button: {
+    buttonProps: {
       buttonText: 'media@thriveglobal.com',
       linkTo: 'mailto:media@thriveglobal.com',
       buttonStyle: 'violet'
@@ -36,8 +35,7 @@ const Items = [
     title: 'Commerce Partnerships',
     description: `Interested in learning more about the Thrive Global store?
                   Email us at`,
-    hasButton: 'buttonTrue',
-    button: {
+    buttonProps: {
       buttonText: 'commerce@thriveglobal.com',
       linkTo: 'mailto:commerce@thriveglobal.com',
       buttonStyle: 'violet'
@@ -47,8 +45,7 @@ const Items = [
     title: 'Press',
     description: `Are you a member of the press seeking information about
                   Thrive Global? Email Monica Lee at`,
-    hasButton: 'buttonTrue',
-    button: {
+    buttonProps: {
       buttonText: 'press@thriveglobal.com',
       linkTo: 'mailto:press@thriveglobal.com',
       buttonStyle: 'violet'
@@ -57,8 +54,7 @@ const Items = [
   {
     title: 'Contact',
     description: `Say hello. Email us at`,
-    hasButton: 'buttonTrue',
-    button: {
+    buttonProps: {
       buttonText: 'info@thriveglobal.com',
       linkTo: 'mailto:info@thriveglobal.com',
       buttonStyle: 'violet'
