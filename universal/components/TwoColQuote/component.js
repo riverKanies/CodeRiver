@@ -4,6 +4,7 @@ import styles from './styles'
 
 type Props = {
   bgColor: 'default' | 'white' | 'gray' | 'purple' | 'pattern',
+  byElement: 'showBy' | 'hideBy',
   quoteFont: 'Mon' | 'Playfair',
   quote: string[],
   quote2: string[],
@@ -21,6 +22,7 @@ const defaultQuote = [
 
 const TwoColQuote = ({
   bgColor = 'default',
+  byElement = 'showBy',
   quote = defaultQuote,
   quote2 = defaultQuote,
   quoteFont = 'Mon',
@@ -38,19 +40,17 @@ const TwoColQuote = ({
               <a href={quoteURL} target='_blank'><span>{quote}</span></a>
             </q>
             <cite className={styles.citation}>
-              <p className={styles.citationLine}>{citation}</p>
+              <p className={styles[byElement]}>{citation}</p>
             </cite>
           </section>
         </section>
-      </div>
-      <div className={styles.container}>
-        <section className={styles.quoteSection}>
+        <section className={`${styles.quoteSection} quoteSection`}>
           <section className={styles[quoteFont]}>
             <q className={styles.quote}>
               <a href={quoteURL2} target='_blank'><span>{quote2}</span></a>
             </q>
             <cite className={styles.citation}>
-              <p className={styles.citationLine}>{citation2}</p>
+              <p className={styles[byElement]}>{citation2}</p>
             </cite>
           </section>
         </section>

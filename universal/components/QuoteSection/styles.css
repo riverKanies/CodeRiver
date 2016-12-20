@@ -197,29 +197,38 @@
       width: 100%;
       text-align: left;
     }
-    &:first-child {
+  }
+}
+
+.showBy {
+  composes: citationLine;
+
+  &:first-child {
+    @media bp-papa-bear {
+      padding-left: 1.35rem;
+    }
+    &::before {
+      content: 'by';
+      display: inline-block;
+      margin: 0 .25rem 0 0;
+      padding: 0 0;
+      float: none;
+      font-family: Playfair;
+      font-style: italic;
+      text-transform: none;
       @media bp-papa-bear {
-        padding-left: 1.35rem;
-      }
-      &::before {
-        content: 'by';
-        display: inline-block;
-        margin: 0 .25rem 0 0;
-        padding: 0 0;
-        float: none;
-        font-family: Playfair;
-        font-style: italic;
-        text-transform: none;
-        @media bp-papa-bear {
-          margin: 0 0 0 0;
-          float: left;
-          position: absolute;
-          top: -.125rem;
-          left: 0;
-        }
+        margin: 0 0 0 0;
+        float: left;
+        position: absolute;
+        top: -.125rem;
+        left: 0;
       }
     }
   }
+}
+
+.hideBy {
+  composes: citationLine;
 }
 
 /* Quote Section Composed Styles */

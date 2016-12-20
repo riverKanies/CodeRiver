@@ -4,13 +4,18 @@ import styles from './styles'
 import TextBanner from 'components/TextBanner'
 import QuoteSection from 'components/QuoteSection'
 import CTASection from 'components/CTASection'
+import TwoColQuote from 'components/TwoColQuote'
+import BrandRow from 'components/BrandRow'
 
 import fortune from './assets/fortune.png'
-import ft from './assets/ft.png'
-import nyt from './assets/nyt.png'
+import ftlong from './assets/ftlong.png'
+import nytlong from './assets/nytlong.png'
+import bloomberg from './assets/bloomberg.png'
+import sb from './assets/sb.png'
+import fortunelong from './assets/fortunelong.png'
 
 const pressBanner = {
-  asset: 'growBannerPattern.png',
+  bgColor: 'default',
   hasTitle: 'titleTrue',
   subTitle: [
     'What people are saying...'
@@ -19,7 +24,8 @@ const pressBanner = {
 }
 
 const fortuneQuote = {
-  bgColor: 'white',
+  bgColor: 'pattern',
+  byElement: 'hideBy',
   quoteImage: fortune,
   imageShape: 'squareImage',
   isLink: true,
@@ -30,32 +36,31 @@ const fortuneQuote = {
     is hoping to turn sleeping well into the corporate world’s most celebrated productivity tool.`]
 }
 
-const nytQuote = {
+const quotes = {
   bgColor: 'white',
-  quoteImage: nyt,
-  imageShape: 'squareImage',
-  isLink: true,
+  byElement: 'hideBy',
   quoteURL: 'https://www.ft.com/content/a4322038-bc09-11e6-8b45-b8b81dd5d080',
+  quoteURL2:
+  'http://www.nytimes.com/2016/12/04/nyregion/not-sleeping-enough-arianna-huffington-wants-to-help.html?_r=0',
   quoteFont: 'Playfair',
-  citation: 'NYT',
-  quote: ['Not Sleeping Enough? Arianna Huffington Wants to Help']
+  citation: 'Financial Times',
+  citation2: 'The New York Times',
+  quote: ['Four weeks later, I can report that Huffington has changed my life...' +
+  'bedtime now means bedtime: a phase of leaving the day behind.'],
+  quote2: ['Not Sleeping Enough? Arianna Huffington Wants to Help.']
 }
 
-const ftQuote = {
-  bgColor: 'white',
-  quoteImage: ft,
-  imageShape: 'squareImage',
-  isLink: true,
-  quoteURL: 'http://www.nytimes.com/2016/12/04/nyregion/not-sleeping-enough-arianna-huffington-wants-to-help.html?_r=0',
-  quoteFont: 'Playfair',
-  citation: 'FT',
-  quote: ['Four weeks later, I can report that Huffington has changed my life...' +
-  'bedtime now means bedtime: a phase of leaving the day behind.']
-}
+const logos = [
+  { logoImage: bloomberg, link: null },
+  { logoImage: sb, link: null },
+  { logoImage: fortunelong, link: null },
+  { logoImage: nytlong, link: null },
+  { logoImage: ftlong, link: null }
+]
 
 const pressReleases = {
   colorScheme: 'white',
-  sectionWidth: 'twoThirdsWidth',
+  sectionWidth: 'defaultWidth',
   title: 'Press Releases',
   button: {
     linkTo: '/press-releases',
@@ -79,8 +84,8 @@ export const PressView = () => (
     <section className={styles.content}>
       <TextBanner {...pressBanner} />
       <QuoteSection {...fortuneQuote} />
-      <QuoteSection {...nytQuote} />
-      <QuoteSection {...ftQuote} />
+      <TwoColQuote {...quotes} />
+      <BrandRow logos={logos} />
       <CTASection {...pressReleases} />
     </section>
   </section>

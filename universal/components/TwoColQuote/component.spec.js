@@ -9,6 +9,6 @@ describe('(Component) TwoColQuote', () => {
 
     const target = subject.find('.quoteSection')
 
-    expect(target.length).toEqual(1)
+    expect(target.length).toEqual(2)
   })
 })
