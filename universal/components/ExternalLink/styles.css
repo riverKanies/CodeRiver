@@ -119,7 +119,11 @@
   composes: link;
   background-color: transparent;
   border-color: ThriveTeal;
-  color: #fff;
+  color: ThriveTeal;
+  &:hover {
+    background-color: ThriveTeal;
+    color: white;
+  }
   @media bp-mama-bear {
     background-color: ThriveTeal;
     color: white;
