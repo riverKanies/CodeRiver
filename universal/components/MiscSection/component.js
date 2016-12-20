@@ -71,11 +71,11 @@ const MiscSection = ({
   button = {}
 }: Props) => {
   return (
-    <section className={styles.Container}>
-      <section className={styles.SectionContainer}>
+    <section className={styles.SectionContainer}>
+      <section className={styles.innerContainer}>
         {Items.map(
           item =>
-            <section className={styles.content}>
+            <section>
               <TitleWithText {...item} />
             </section>
         )}
