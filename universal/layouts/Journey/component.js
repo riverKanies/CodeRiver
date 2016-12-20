@@ -12,8 +12,9 @@ type Props = {
   },
   journey: Object,
   microsteps: Array<any>,
+  pathway: Object,
   dispatch: Function
-}
+};
 
 class JourneyLayout extends React.Component {
   props: Props
@@ -32,8 +33,8 @@ class JourneyLayout extends React.Component {
   }
 
   render () {
-    const { journey, microsteps } = this.props
-    const detailProps = { microsteps, journey }
+    const { journey, microsteps, pathway } = this.props
+    const detailProps = { microsteps, journey, pathway }
 
     return (
       <Journey {...detailProps} />

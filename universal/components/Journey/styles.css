@@ -1,6 +1,6 @@
 @value containerWidth, containerPadding from 'all';
 /*
-This is the stylesheet for: Pathways
+This is the stylesheet for: Journeys
  */
 
 .container {
@@ -28,4 +28,19 @@ This is the stylesheet for: Pathways
   margin: 2rem 0;
   padding: 0 0.5rem;
   width: 100%;
+}
+
+.buttonWrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0 2.5rem 0;
+  float: left;
+  clear: both;
+  background: white;
+  text-align: center;
+  > a {
+    display: inline-block;
+  }
 }

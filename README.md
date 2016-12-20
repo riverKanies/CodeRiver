@@ -92,7 +92,7 @@ using `redux-cli`, test files should automatically be generated when you create
 a component or redux module.
 
 ### Feature Tests
-To run feature tests, run `npm run test:feature` and it will trigger the
+To run feature tests, run `npm run test:features` and it will trigger the
 Nightwatch feature spec runner.
 
 ## Deployment

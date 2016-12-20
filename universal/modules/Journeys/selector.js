@@ -12,10 +12,12 @@ export const getJourneyDetail = createSelector(
 
     const journey = list.find(p => parseInt(p.id) === parseInt(currentJourney))
     const microsteps = (detail && detail.microsteps) ? detail.microsteps : []
+    const pathway = (detail && detail.pathway) ? detail.pathway : {}
 
     return {
       journey,
-      microsteps
+      microsteps,
+      pathway
     }
   }
 )
