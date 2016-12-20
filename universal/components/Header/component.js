@@ -4,8 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { isLoggedIn } from 'modules/UserSession/selectors'
 import { deleteSession } from 'modules/UserSession'
-import { redirectToShopify } from 'lib/sso'
-import { IndexLink, Link } from 'react-router'
+import { IndexLink, Link, withRouter } from 'react-router'
 import MainNav from './MainNav/component.js'
 import { ThriveLogo, NavButton } from './svg.js'
 
@@ -14,10 +13,11 @@ import styles from './styles'
 type Props = {
   bigHeader: boolean,
   isLoggedIn: boolean,
-  dispatch: Function
+  dispatch: Function,
+  router: any
 }
 
-class Header extends React.Component {
+export class Header extends React.Component {
   toggleActive: Function;
   redirectToShopify: Function;
   hideMenu: Function;
@@ -25,25 +25,31 @@ class Header extends React.Component {
 
   props: Props
   state = {
-    active: false
+    active: false,
+    bigHeader: false
   }
+
   constructor () {
     super(...arguments)
 
     this.toggleActive = this.toggleActive.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
     this.logOutUser = this.logOutUser.bind(this)
-    this.redirectToShopify = this.redirectToShopify.bind(this)
+  }
+
+  componentWillMount () {
+    this.setState({ bigHeader: this.props.bigHeader })
+
+    const { pathname } = this.props.router.getCurrentLocation()
+    const matches = ['/', '/home']
+    if (pathname && matches.includes(pathname.toLowerCase())) {
+      this.setState({ bigHeader: true })
+    }
   }
 
   logOutUser () {
     this.hideMenu()
     this.props.dispatch(deleteSession())
-  }
-
-  redirectToShopify () {
-    this.hideMenu()
-    redirectToShopify()
   }
 
   hideMenu () {
@@ -115,7 +121,7 @@ class Header extends React.Component {
   }
 
   renderNav () {
-    const { bigHeader } = this.props
+    const { bigHeader } = this.state
 
     if (!bigHeader) {
       return (
@@ -130,7 +136,9 @@ class Header extends React.Component {
             </IndexLink>
           </figure>
           <section className={styles.navContainer}>
-            <MainNav />
+            <MainNav
+              hideMenu={this.hideMenu}
+            />
             <nav role='navigation' className={styles.utilityNav}>
               {this.renderSignupOrProfile()}
               {this.renderLoginLogout()}
@@ -156,7 +164,7 @@ class Header extends React.Component {
         </section>
 
         <section className={styles.navContainer}>
-          <MainNav />
+          <MainNav hideMenu={this.hideMenu} />
           <nav role='navigation' className={styles.utilityNav}>
             {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
@@ -180,4 +188,4 @@ class Header extends React.Component {
   }
 }
 
-export default connect(isLoggedIn)(Header)
+export default withRouter(connect(isLoggedIn)(Header))
