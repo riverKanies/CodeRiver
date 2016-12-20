@@ -135,6 +135,17 @@
   }
 }
 
+.large {
+  composes: sectionContent;
+
+  > p {
+    font-family: Playfair;
+    @media bp-mama-bear {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 .button {
   display: inline-block;
   margin: babyMargin 0 auto;

@@ -1,0 +1,131 @@
+/*
+  This is the stylesheet for: TwoColImage
+*/
+
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, babyHeader, mamaHeader, papaHeader, Mon, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, ThriveBlurple, ThrivinRock, lightGray from 'all';
+
+/* Base Section Styling + Composed Styles */
+.twoColImage {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  clear: both;
+  position: relative;
+  text-align: center;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+.default {
+  composes: twoColImage;
+  background: white;
+  color: bodyCopy;
+
+  .column {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.transparent {
+  composes: twoColImage;
+  background: transparent;
+  color: bodyCopy;
+}
+.lightGray {
+  composes: twoColImage;
+  background: lightGray;
+  color: bodyCopy;
+}
+.purple {
+  composes: twoColImage;
+  background: ThriveBlurple;
+  color: white;
+}
+.blue {
+  composes: twoColImage;
+  background: ThriveBlue;
+  color: white;
+}
+
+/* Container Styles */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  color: inherit;
+}
+
+/* Title True/False */
+.hasTitle {
+  lost-column: 1;
+  margin: 0 auto babyHeader auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  position: relative;
+  text-align: left;
+  color: inherit;
+  @media bp-mama-bear {
+    width: 100%;
+    margin: 0 auto mamaHeader auto;
+  }
+  @media bp-papa-bear {
+    margin: 0 auto papaHeader auto;
+  }
+  h2 {
+    text-align: inherit;
+    color: inherit;
+  }
+}
+.titleTrue {
+  composes: hasTitle;
+}
+.titleFalse {
+  display: none;
+}
+
+/* Column Styles */
+.columnWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+}
+.column {
+  lost-column: 1;
+  margin-bottom: babyMargin;
+  float: left;
+  text-align: inherit;
+  color: inherit;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media bp-mama-bear {
+    lost-column: 1/2;
+    margin-bottom: 0;
+  }
+  > img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    float: left;
+  }
+}
+
+.caption {
+  font-family: Mon;
+  color: ThrivinRock;
+  @media bp-grand-bear {
+    font-size: 1.5rem;
+  }
+}

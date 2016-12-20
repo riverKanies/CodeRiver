@@ -18,6 +18,10 @@
   margin: 0 auto;
   margin-bottom: 0;
   text-align: center;
+}
+
+.default {
+  composes: brands;
   &:first-child {
     margin-left: 1rem;
     @media bp-mama-bear {
@@ -44,6 +48,71 @@
   }
   @media bp-papa-bear {
     lost-column: 1/5;
+    float: left;
+  }
+}
+
+
+.quad {
+  composes: brands;
+  &:first-child {
+    margin-left: 1rem;
+    @media bp-mama-bear {
+      margin-left: inherit;
+    }
+    @media bp-papa-bear {
+      margin-left: 0;
+    }
+  }
+  &:last-child {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    @media bp-mama-bear {
+      float: left;
+    }
+    @media bp-papa-bear {
+      float: left;
+    }
+  }
+  @media bp-mama-bear {
+    lost-column: 1/2;
+    float: left;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/4;
+    float: left;
+  }
+}
+
+.trip {
+  composes: brands;
+  &:first-child {
+    margin-left: 1rem;
+    @media bp-mama-bear {
+      margin-left: inherit;
+    }
+    @media bp-papa-bear {
+      margin-left: 0;
+    }
+  }
+  &:last-child {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    @media bp-mama-bear {
+      float: left;
+    }
+    @media bp-papa-bear {
+      float: left;
+    }
+  }
+  @media bp-mama-bear {
+    lost-column: 1/2;
+    float: left;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/3;
     float: left;
   }
 }

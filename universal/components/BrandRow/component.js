@@ -9,16 +9,18 @@ import logo_five from './assets/logo_five.jpg'
 
 type LogoType = {
   logoImage: any,
-  link: string | null
+  link: string | null,
+  style: string | null
 }
 
 const Logo = ({
   logoImage = logo_one,
-  link
+  link,
+  style
 }: LogoType) => {
   if (link) {
     return (
-      <section className={styles.brands}>
+      <section className={styles[style]}>
         <a href={link} target='_blank'>
           <img className={styles.image} src={logoImage} />
         </a>
@@ -26,25 +28,29 @@ const Logo = ({
     )
   }
   return (
-    <section className={styles.brands}>
+    <section className={styles[style]}>
       <img className={styles.image} src={logoImage} />
     </section>
   )
 }
 
 const defaultLogos = [
-  { logoImage: logo_one, link: null },
-  { logoImage: logo_two, link: null },
-  { logoImage: logo_three, link: null },
-  { logoImage: logo_four, link: null },
-  { logoImage: logo_five, link: null }
+  { logoImage: logo_one, link: null, style: null },
+  { logoImage: logo_two, link: null, style: null },
+  { logoImage: logo_three, link: null, style: null },
+  { logoImage: logo_four, link: null, style: null },
+  { logoImage: logo_five, link: null, style: null }
 ]
-
+const styleSwitch = {
+  '4': 'quad',
+  '3': 'trip'
+}
 function BrandRow ({ logos = defaultLogos }: { logos: LogoType[] }) {
+  const ss = styleSwitch[logos.length] || 'default'
   return (
     <section className={styles.container}>
       <section className={styles.content}>
-        {logos.map((logo, i) => <Logo key={i} {...logo} />)}
+        {logos.map((logo, i) => <Logo key={i} {...logo} style={ss} />)}
       </section>
     </section>
   )

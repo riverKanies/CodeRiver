@@ -6,13 +6,15 @@ import QuoteSection from 'components/QuoteSection'
 import CTASection from 'components/CTASection'
 import TwoColQuote from 'components/TwoColQuote'
 import BrandRow from 'components/BrandRow'
+import TwoColImage from 'components/TwoColImage'
 
 import fortune from './assets/fortune.png'
 import ftlong from './assets/ftlong.png'
 import nytlong from './assets/nytlong.png'
 import bloomberg from './assets/bloomberg.png'
-import sb from './assets/sb.png'
 import fortunelong from './assets/fortunelong.png'
+import image_one from './assets/msnbc.jpg'
+import image_two from './assets/bloomberg-video-thumb.jpg'
 
 const pressBanner = {
   bgColor: 'default',
@@ -51,17 +53,25 @@ const quotes = {
 }
 
 const logos = [
-  { logoImage: bloomberg, link: null },
-  { logoImage: sb, link: null },
-  { logoImage: fortunelong, link: null },
-  { logoImage: nytlong, link: null },
-  { logoImage: ftlong, link: null }
+  { logoImage: bloomberg,
+    link: 'http://www.bloomberg.com/news/videos/2016-12-07/arianna-huffington-s-mission-to-end-the-burnout-epidemic'
+  },
+  { logoImage: fortunelong,
+    link: 'http://fortune.com/2016/12/01/a-ceos-most-important-duty/'
+  },
+  { logoImage: nytlong,
+    link: 'http://www.nytimes.com/2016/12/04/nyregion/not-sleeping-enough-arianna-huffington-wants-to-help.html'
+  },
+  { logoImage: ftlong,
+    link: 'https://www.ft.com/content/a4322038-bc09-11e6-8b45-b8b81dd5d080'
+  }
 ]
 
 const pressReleases = {
   colorScheme: 'white',
   sectionWidth: 'defaultWidth',
-  title: 'Press Releases',
+  sectionContent: 'large',
+  title: null,
   button: {
     linkTo: '/press-releases',
     buttonStyle: 'blue',
@@ -79,6 +89,26 @@ const pressReleases = {
   ]
 }
 
+const defaultVideoImages = [
+  {
+    image: image_one,
+    link: 'http://bit.ly/2hsPF04',
+    caption: 'MSNBC\'s Morning Joe'
+  },
+  {
+    image: image_two,
+    link: 'https://www.bloomberg.com/news/videos/2016-12-07/arianna-huffington-s-mission-to-end-the-burnout-epidemic',
+    caption: 'Bloomberg Technology'
+  }
+]
+
+const videoImages = {
+  bgColor: 'default',
+  hasTitle: 'titleTrue',
+  title: 'Other Press',
+  images: defaultVideoImages
+}
+
 export const PressView = () => (
   <section className={styles.container}>
     <section className={styles.content}>
@@ -87,6 +117,7 @@ export const PressView = () => (
       <TwoColQuote {...quotes} />
       <BrandRow logos={logos} />
       <CTASection {...pressReleases} />
+      <TwoColImage {...videoImages} />
     </section>
   </section>
 )
