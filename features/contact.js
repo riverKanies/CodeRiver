@@ -1,5 +1,5 @@
 module.exports = {
-  'Renders the Press page': function (browser) {
+  'Renders the Contact page': function (browser) {
     browser
       .url(browser.globals.local_url + 'contact')
       .waitForElementVisible('#textBannerTitle', 1000)
