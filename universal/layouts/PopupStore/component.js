@@ -4,7 +4,6 @@ import styles from './styles'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import Banner from 'components/Banner'
-import FullWidthText from 'components/FullWidthText'
 
 // Assets
 import streetImg from './assets/419BroomeStreetscape.jpg'
@@ -60,83 +59,12 @@ const storeInfo = {
   bgImage: streetImg
 }
 
-const ourBrands = {
-  title: 'Thrive Global Commerce Partners',
-  sectionText: [
-    (<ul>
-      <li>Acorns</li>
-      <li>Aloha</li>
-      <li>Aros</li>
-      <li>Audible</li>
-      <li>Breathometer</li>
-      <li>Coco-Mat</li>
-      <li>Color Genomics Inc</li>
-      <li>Consumer Physics</li>
-      <li>Crowdrise</li>
-      <li>Deepstream VR</li>
-      <li>Dermalogica</li>
-      <li>Doctors on Demand</li>
-      <li>Doppler Labs</li>
-      <li>Claritas Mind Science</li>
-      <li>FiftyThree</li>
-      <li>Fitbit</li>
-      <li>The Goodnight Company</li>
-      <li>Gunnar Optics</li>
-      <li>Happiest Baby</li>
-      <li>Headspace</li>
-      <li>Heartmath</li>
-      <li>Hello, Inc.</li>
-      <li>Hill House Home</li>
-      <li>House of Matcha</li>
-      <li>Humanscale</li>
-      <li>Hyperice</li>
-      <li>Iluminage</li>
-      <li>Isabella Huffington</li>
-      <li>Juice Beauty</li>
-      <li>Kikki-K</li>
-      <li>Kurbo</li>
-      <li>LAFCO</li>
-      <li>Levitas</li>
-      <li>La Roche Posay</li>
-      <li>Lifespan Fitness</li>
-      <li>Lighting Science</li>
-      <li>Lumoid</li>
-      <li>Moving Art</li>
-      <li>Murad</li>
-      <li>Muse</li>
-      <li>Peloton</li>
-      <li>Philips</li>
-      <li>Pil-ookie</li>
-      <li>Pour Les Femmes</li>
-      <li>Quell Relief</li>
-      <li>Rebecca Minkoff</li>
-      <li>Restworks</li>
-      <li>S'well</li>
-      <li>Sakara Life</li>
-      <li>Seedlings</li>
-      <li>Spire</li>
-      <li>Technogym</li>
-      <li>Thrive Market</li>
-      <li>Trishla Jain</li>
-      <li>Tribute.co</li>
-      <li>Twist</li>
-      <li>Ubiome</li>
-      <li>Upright Tech</li>
-      <li>Vida Health</li>
-      <li>Vinaya</li>
-      <li>Withings</li>
-      <li>Zeel</li>
-    </ul>)
-  ]
-}
-
 // Popup Page Layout
 export const PopupStoreView = () => (
   <main role='main' className={styles.popupStore}>
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
     <FullWidthTwoCol {...storeDescrip} />
-    <FullWidthText {...ourBrands} />
   </main>
 )
 
