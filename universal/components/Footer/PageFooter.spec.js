@@ -16,7 +16,7 @@ describe('(Component) Footer', () => {
     const expectedLinks = [
       { route: '/about', text: 'About Us' },
       { route: '/who-we-are#careers', text: 'Careers' },
-      { route: '/who-we-are#contact', text: 'Contact' },
+      { route: '/contact', text: 'Contact' },
       { route: '/about/corporate', text: 'Partnerships - Corporate' },
       { route: '/about/content', text: 'Partnerships - Media' },
       { route: '/about/commerce', text: 'Partnerships - Commerce' },
