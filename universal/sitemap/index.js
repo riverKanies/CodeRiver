@@ -6,6 +6,7 @@ module.exports = [
   '/about/corporate',
   '/apps',
   '/corporate-pledge',
+  '/contact',
   '/press',
   '/give',
   '/grow',

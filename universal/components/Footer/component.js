@@ -58,7 +58,7 @@ const Footer = ({
           <ul className={styles.list} id='footerLinks'>
             {genLink('/about', 'About Us')}
             {genLink('/who-we-are#careers', 'Careers')}
-            {genLink('/who-we-are#contact', 'Contact')}
+            {genLink('/contact', 'Contact')}
             {genLink('/about/corporate', 'Partnerships - Corporate')}
             {genLink('/about/content', 'Partnerships - Media')}
             {genLink('/about/commerce', 'Partnerships - Commerce')}

@@ -2,36 +2,85 @@ import React from 'react'
 import styles from './styles'
 import TitleWithText from 'components/TitleWithText'
 
+type Props = {
+  title: string,
+  url: string,
+  hasButton: 'buttonTrue' | 'buttonFalse',
+  button: Object
+}
+
 const Items = [
+  {
+    title: 'Corporate Partnerships',
+    description: `Interested in learning more about our corporate partnerships?
+                  Email us at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'corporate@thriveglobal.com',
+      linkTo: 'mailto:corporate@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
+  },
+  {
+    title: 'Media Partnerships',
+    description: `Interested in learning more about brand partnerships and
+                  sponsorships with Thrive Global? Email us at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'media@thriveglobal.com',
+      linkTo: 'mailto:media@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
+  },
+  {
+    title: 'Commerce Partnerships',
+    description: `Interested in learning more about the Thrive Global store?
+                  Email us at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'commerce@thriveglobal.com',
+      linkTo: 'mailto:commerce@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
+  },
   {
     title: 'Press',
     description: `Are you a member of the press seeking information about
-                  Thrive Global? Email Monica Lee at
-                  <a href="mailto:monica@thriveglobal.com">monica@thriveglobal.com</a>.`
-  },
-  {
-    title: 'Advertise',
-    description: `Interested in learning more about brand partnerships and
-                  sponsorships with Thrive Global? Email Sam Winkelman at
-                  <a href="mailto:sw@thriveglobal.com">sw@thriveglobal.com</a> to learn more.`
+                  Thrive Global? Email Monica Lee at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'press@thriveglobal.com',
+      linkTo: 'mailto:press@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
   },
   {
     title: 'Contact',
-    description: 'Say hello. E-mail us at <a href="mailto:info@thriveglobal.com">info@thriveglobal.com</a>.'
+    description: `Say hello. Email us at`,
+    hasButton: 'buttonTrue',
+    button: {
+      buttonText: 'info@thriveglobal.com',
+      linkTo: 'mailto:info@thriveglobal.com',
+      buttonStyle: 'violet'
+    }
   }
 ]
 
-export const MiscSection = () => {
+const MiscSection = ({
+  hasButton = 'buttonTrue',
+  button = {}
+}: Props) => {
   return (
     <section className={styles.SectionContainer}>
-      <section className={styles.content}>
+      <section className={styles.innerContainer}>
         {Items.map(
           item =>
-            <TitleWithText {...item} />
+            <section>
+              <TitleWithText {...item} />
+            </section>
         )}
       </section>
     </section>
-
   )
 }
 
