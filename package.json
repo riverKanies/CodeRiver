@@ -18,7 +18,7 @@
     "debug:dev": "better-npm-run debug:dev",
     "debug:prod": "better-npm-run debug:prod",
     "dev": "better-npm-run dev",
-    "lint": "eslint bin build config server universal tests",
+    "lint": "eslint bin build config server universal tests && bin/findBadAriannas.sh",
     "lint:fix": "npm run lint -- --fix",
     "heroku-postbuild": "better-npm-run build",
     "start": "better-npm-run start",

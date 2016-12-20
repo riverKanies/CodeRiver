@@ -6,7 +6,7 @@ import BrandRow from 'components/BrandRow'
 import QuoteSection from 'components/QuoteSection'
 import TextBanner from 'components/TextBanner'
 import FourColImage from 'components/FourColImage'
-import FullWidthText from 'components/FullWidthText'
+import OneColTextWithHeader from 'components/OneColTextWithHeader'
 import FeaturedStory from 'components/FeaturedStory'
 
 import hughImage from './assets/hugh.jpg'
@@ -36,12 +36,9 @@ const thriveFoundation = {
 }
 
 const trainNonProfits = {
-  sectionClass: 'fade',
-  sectionWidth: 'halfWidth',
-  divider: 'dividerTrue',
-  textAlign: 'textCenter',
+  textAlign: 'center',
   title: 'Thrive Global\'s Nonprofit Trainings',
-  sectionText: [
+  text: [
     `Thrive Global is proud to support nonprofit organizations including Khan Academy,
     Global Citizen, Alliance for Children's Rights, EduCare Foundation
     and Lean In with free trainings to enhance well-being and performance.`,
@@ -81,12 +78,10 @@ const GivingisGood = {
 }
 
 const mayorHeading = {
-  sectionClass: 'gray',
-  sectionWidth: 'halfWidth',
-  divider: 'dividerTrue',
-  textAlign: 'textCenter',
   title: 'Mayors',
-  sectionText: [
+  bgColor: 'gray',
+  textAlign: 'center',
+  text: [
     `Thrive Global is pleased to be working with the following U.S. mayors and their teams
      to support civic leaders on the front lines of serving others, beginning with:`
   ]
@@ -94,7 +89,7 @@ const mayorHeading = {
 
 const mayorSection = {
   bgColor: 'gray',
-  gutters: 'guttersFalse'
+  gutters: 'guttersTrue'
 }
 
 const mayorQuote = {
@@ -115,11 +110,11 @@ export const GiveView = () => (
     <section className={styles.content}>
       <TextBanner {...giveBanner} />
       <FeaturedStory {...thriveFoundation} />
-      <FullWidthText {...trainNonProfits} />
+      <OneColTextWithHeader {...trainNonProfits} />
       <BrandRow />
       <QuoteSection {...globalPovertyProject} />
       <FeaturedStory {...GivingisGood} />
-      <FullWidthText {...mayorHeading} />
+      <OneColTextWithHeader {...mayorHeading} />
       <FourColImage {...mayorSection} />
       <QuoteSection {...mayorQuote} />
     </section>
