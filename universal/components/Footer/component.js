@@ -66,7 +66,7 @@ const Footer = ({
               <a href='/popup'>Popup Store</a>
             </li>
             <li className={styles.footerLinks}>
-              <a href='/who-we-are#press'>Press</a>
+              <a href='/press'>Press</a>
             </li>
             <li className={styles.footerLinks}>
               <a href='/press-releases'>Press Releases</a>

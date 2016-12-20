@@ -7,7 +7,8 @@
   "plugins": [
     "babel",
     "react",
-    "promise"
+    "promise",
+    "thrive-custom"
   ],
   "env"     : {
     "browser" : true
@@ -29,6 +30,7 @@
     "no-console": 2,
     "generator-star-spacing": 0,
     "camelcase": 0,
-    "babel/generator-star-spacing": 1
+    "babel/generator-star-spacing": 1,
+    "thrive-custom/arianna": 2
   }
 }

@@ -1,0 +1,244 @@
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, backgroundGray, Mon, MonBold, Playfair from 'all';
+
+/* Full Width Container + composed BGColor Classes */
+
+.quoteContainer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  clear: both;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+/* Composed Styles At Bottom Of Stylesheet so Overrides Work */
+
+/* Content Grid Container */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+  @media bp-papa-bear {
+    display: flex;
+    flex-direction: row;
+    flex-flow: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Quote Section */
+.quoteSection {
+  lost-column: 1;
+  @media bp-papa-bear {
+    lost-column: 3/4 flex;
+  }
+}
+
+/* Content Styling */
+.quote {
+  width: 100%;
+  margin: 0 auto .5em;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  font-size: 1.25em;
+  line-height: 160%;
+  text-align: center;
+  color: bodyCopy;
+  @media bp-papa-bear {
+    text-align: left;
+  }
+  &::before {
+    content: '“';
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 0;
+    padding: 0 0;
+    position: absolute;
+    top: 0;
+    left: -1.25rem;
+    font-family: Playfair;
+    font-size: 150%;
+    color: darkGray;
+    transition: color 150ms ease-in-out;
+    @media bp-papa-bear {
+      top: .5rem;
+      left: -2rem;
+    }
+  }
+  &::after {
+    content: '”';
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: -.25em 0 0 .25em;
+    padding: 0 0;
+    font-family: Playfair;
+    font-size: 150%;
+    color: darkGray;
+    transition: color 150ms ease-in-out;
+    @media bp-papa-bear {
+      margin: -1em 0 0 .25em;
+    }
+  }
+  > a {
+    font-family: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: none;
+    transition: color 150ms ease-in-out;
+  }
+}
+
+.Mon {
+  font-family: MonBold;
+  @media bp-mama-bear {
+    font-size: 1.2em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.55em;
+  }
+}
+.Playfair {
+  font-family: Playfair;
+  @media bp-mama-bear {
+    font-size: 1.2em;
+  }
+  @media bp-papa-bear {
+    font-size: 1.5em;
+  }
+}
+
+.citation {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  font-family: Mon;
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 100%;
+  text-align: center;
+  color: darkGray;
+  text-transform: uppercase;
+  @media bp-mama-bear {
+    font-size: 1rem;
+  }
+  @media bp-papa-bear {
+    text-align: left;
+  }
+  .citationLine {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    float: left;
+    font-family: MonBold;
+    text-align: center;
+    @media bp-papa-bear {
+      width: 100%;
+      text-align: left;
+    }
+    &:first-child {
+      @media bp-papa-bear {
+        padding-left: 1.35rem;
+      }
+      &::before {
+        content: 'by';
+        display: inline-block;
+        margin: 0 .25rem 0 0;
+        padding: 0 0;
+        float: none;
+        font-family: Playfair;
+        font-style: italic;
+        text-transform: none;
+        @media bp-papa-bear {
+          margin: 0 0 0 0;
+          float: left;
+          position: absolute;
+          top: -.125rem;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Quote Section Composed Styles */
+.default {
+  composes: quoteContainer;
+  background: transparent;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.white {
+  composes: quoteContainer;
+  background: white;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.gray {
+  composes: quoteContainer;
+  background: #f0f0f0;
+  &:hover {
+    .quote {
+      &::before, &::after {
+        color: ThriveTeal;
+      }
+      > a {
+        color: ThriveTeal;
+      }
+    }
+  }
+}
+.purple {
+  composes: quoteContainer;
+  background: ThriveBlurple;
+  * {
+    color: white;
+  }
+  .quote {
+    &::before, &::after {
+      color: white;
+    }
+  }
+  .citation {
+    color: white;
+    &::before {
+      color: white;
+    }
+  }
+  &:hover {
+    .quote {
+      > a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
