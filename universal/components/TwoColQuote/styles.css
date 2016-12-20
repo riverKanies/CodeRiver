@@ -29,26 +29,30 @@
     flex-direction: row;
     flex-flow: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
 /* Quote Section */
 .quoteSection {
   lost-column: 1;
+  margin: 1rem auto;
+  @media bp-mama-bear {
+    padding: 0 2rem;
+  }
   @media bp-papa-bear {
-    lost-column: 3/4 flex;
+    padding: 0 3rem;
+    lost-column: 1/2 flex;
   }
 }
 
 /* Content Styling */
 .quote {
-  width: 100%;
   margin: 0 auto .5em;
   padding: 0 0;
   float: left;
   position: relative;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 160%;
   text-align: center;
   color: bodyCopy;
@@ -57,21 +61,19 @@
   }
   &::before {
     content: '“';
-    display: block;
+    display: inline-block;
     width: auto;
     height: auto;
-    margin: 0 0;
+    margin: 0 0.25rem;
     padding: 0 0;
-    position: absolute;
-    top: 0;
-    left: -1.25rem;
     font-family: Playfair;
     font-size: 150%;
     color: darkGray;
     transition: color 150ms ease-in-out;
     @media bp-papa-bear {
-      top: .5rem;
-      left: -2rem;
+      margin: 0 0.5rem 0 -1.5rem;
+      position: absolute;
+      top: 0.4rem;
     }
   }
   &::after {
@@ -148,37 +150,44 @@
       width: 100%;
       text-align: left;
     }
-    &:first-child {
+  }
+}
+.showBy {
+  composes: citationLine;
+
+  &:first-child {
+    @media bp-papa-bear {
+      padding-left: 1.35rem;
+    }
+    &::before {
+      content: 'by';
+      display: inline-block;
+      margin: 0 .25rem 0 0;
+      padding: 0 0;
+      float: none;
+      font-family: Playfair;
+      font-style: italic;
+      text-transform: none;
       @media bp-papa-bear {
-        padding-left: 1.35rem;
-      }
-      &::before {
-        content: 'by';
-        display: inline-block;
-        margin: 0 .25rem 0 0;
-        padding: 0 0;
-        float: none;
-        font-family: Playfair;
-        font-style: italic;
-        text-transform: none;
-        @media bp-papa-bear {
-          margin: 0 0 0 0;
-          float: left;
-          position: absolute;
-          top: -.125rem;
-          left: 0;
-        }
+        margin: 0 0 0 0;
+        float: left;
+        position: absolute;
+        top: -.125rem;
+        left: 0;
       }
     }
   }
+}
+.hideBy {
+  composes: citationLine;
 }
 
 /* Quote Section Composed Styles */
 .default {
   composes: quoteContainer;
   background: transparent;
-  &:hover {
-    .quote {
+  .quote {
+    &:hover {
       &::before, &::after {
         color: ThriveTeal;
       }
@@ -191,8 +200,8 @@
 .white {
   composes: quoteContainer;
   background: white;
-  &:hover {
-    .quote {
+  .quote {
+    &:hover {
       &::before, &::after {
         color: ThriveTeal;
       }
@@ -205,8 +214,8 @@
 .gray {
   composes: quoteContainer;
   background: #f0f0f0;
-  &:hover {
-    .quote {
+  .quote {
+    &:hover {
       &::before, &::after {
         color: ThriveTeal;
       }

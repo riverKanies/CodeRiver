@@ -6,6 +6,7 @@ import dummyImage from './assets/quote_imagePlaceholder.png'
 type Props = {
   bgColor: 'default' | 'white' | 'gray' | 'purple' | 'pattern',
   containerBorders: 'bordersTrue' | 'bordersFalse',
+  byElement: 'showBy' | 'hideBy',
   quoteFont: 'Mon' | 'Playfair',
   quote: Array<string>,
   citation: any,
@@ -60,14 +61,17 @@ function renderImg ({
 }
 
 // Render Citation Logic
-function renderCitation (citation: any) {
+function renderCitation (
+  citation: any,
+  byElement: string
+) {
   const paragraphs = Array.isArray(citation) ? citation : [citation]
 
   return (
     <cite className={styles.citation}>
       {
         paragraphs.map((paragraph, index) =>
-          <p className={styles.citationLine} key={index}>{paragraph}</p>
+          <p className={styles[byElement]} key={index}>{paragraph}</p>
       )}
     </cite>
   )
@@ -75,6 +79,7 @@ function renderCitation (citation: any) {
 
 const QuoteSection = ({
   containerBorders = 'bordersFalse',
+  byElement = 'showBy',
   bgColor = 'default',
   quote = defaultQuote,
   quoteFont = 'Mon',
@@ -94,7 +99,7 @@ const QuoteSection = ({
         <section className={styles.quoteSection}>
           <section className={styles[quoteFont]}>
             {renderQuote({isLink, quote, quoteURL})}
-            {renderCitation(citation)}
+            {renderCitation(citation, byElement)}
           </section>
         </section>
       </div>

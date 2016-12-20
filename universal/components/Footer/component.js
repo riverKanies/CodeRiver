@@ -25,6 +25,21 @@ const footerQuote = [
   So constantly give yourself this retreat, and renew yourself.`
 ]
 
+function genLink (path: string, text: string) {
+  if (path.match('#')) {
+    return (
+      <li className={styles.footerLinks}>
+        <a href={path}>{text}</a>
+      </li>
+    )
+  }
+  return (
+    <li className={styles.footerLinks}>
+      <Link to={path}>{text}</Link>
+    </li>
+  )
+}
+
 const Footer = ({
   quote = footerQuote,
   citation = '— Marcus Aurelius',
@@ -40,43 +55,16 @@ const Footer = ({
           <div className={styles.heading}>
             {heading}
           </div>
-          <ul className={styles.list}>
-            <li className={styles.footerLinks}>
-              <a href='/about'>About</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/who-we-are#advertise'>Advertise</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/who-we-are#careers'>Careers</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/who-we-are#contact'>Contact</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/about/corporate'>Partnerships - Corporate</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/about/content'>Partnerships - Media</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/about/commerce'>Partnerships - Commerce</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/popup'>Popup Store</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/press'>Press</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/press-releases'>Press Releases</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/team'>Team</a>
-            </li>
-            <li className={styles.footerLinks}>
-              <a href='/who-we-are'>Who We Are</a>
-            </li>
+          <ul className={styles.list} id='footerLinks'>
+            {genLink('/about', 'About Us')}
+            {genLink('/who-we-are#careers', 'Careers')}
+            {genLink('/contact', 'Contact')}
+            {genLink('/about/corporate', 'Partnerships - Corporate')}
+            {genLink('/about/content', 'Partnerships - Media')}
+            {genLink('/about/commerce', 'Partnerships - Commerce')}
+            {genLink('/popup', 'Pop-up Store')}
+            {genLink('/press', 'Press')}
+            {genLink('/team', 'Team')}
           </ul>
         </section>
         <section className={styles.footerQuote}>

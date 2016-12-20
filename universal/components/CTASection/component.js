@@ -7,7 +7,8 @@ type Props = {
   alignment: 'defaultLeft' | 'center',
   colorScheme: 'default' | 'white' | 'blue' | 'gray' | 'gradientPurpleTeal',
   sectionText: Array<string>,
-  sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
+  sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth' | 'offset',
+  sectionContent: 'sectionContent' | 'large',
   title: string,
   button: any
 }
@@ -21,6 +22,7 @@ const CTASection = ({
   alignment = 'defaultLeft',
   colorScheme = 'default',
   sectionWidth = 'defaultWidth',
+  sectionContent = 'sectionContent',
   title = 'Section Title',
   button = {},
   sectionText = defaultText
@@ -32,7 +34,7 @@ const CTASection = ({
           <header className={styles.header}>
             <h2>{title}</h2>
           </header>
-          <section className={styles.sectionContent}>
+          <section className={styles[sectionContent]}>
             {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </section>
           <section className={styles.button}>

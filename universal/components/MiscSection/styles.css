@@ -1,27 +1,19 @@
 @value breakpoints: 'all';
 @value containerWidth, containerPadding from breakpoints;
 
-.container {
-  lost-center: containerWidth flex;
-  padding: 2rem 1rem;
+.SectionContainer {
+  lost-column: 1;
+  margin: 0 auto;
+  padding: containerPadding;
+  padding-top: 3rem;
+  background-color: white;
 }
 
-.content {
-  padding-top: 10vh;
-  lost-center: 960px;
+.innerContainer {
+  max-width: containerWidth;
+  margin: 0 auto;
 }
 
 .title {
-  lost-column: 1;
-  margin-bottom: 1rem;
   text-align: center;
-  text-decoration: underline;
-}
-
-.SectionContainer{
- lost-column:1;
-  padding: 2rem 1rem;
-  background-color: white;
-  text-align: center;
-
 }

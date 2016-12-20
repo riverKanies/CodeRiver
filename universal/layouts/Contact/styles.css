@@ -1,0 +1,22 @@
+
+.AboutUsSection{
+	lost-column: 1 flex;
+ 	z-index: 4;
+ 	padding-left:10vh;
+	height: 80vh;
+	margin-top:30vh;
+ 	align-self: flex-end;
+}
+
+.AboutUsContent{
+	lost-column: 1 flex;
+}
+
+.AboutUsTitle{
+	lost-column: 1 flex;
+}
+
+.homePage {
+  min-height: 100%;
+  width: 100%;
+}

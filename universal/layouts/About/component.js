@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './styles'
 import OneColTextWithHeader from 'components/OneColTextWithHeader'
 import HalfTextOverlay from 'components/HalfTextOverlay'
-import MiscSection from 'components/MiscSection'
 
 // Content import
 import careersImg from './assets/team.jpg'
@@ -62,7 +61,6 @@ export const AboutView = () => {
     <main role='main' className={styles.homePage}>
       <OneColTextWithHeader {...aboutInro} />
       <HalfTextOverlay {...careers} />
-      <MiscSection />
     </main>
   )
 }

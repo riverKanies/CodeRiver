@@ -3,7 +3,7 @@ module.exports = {
     browser
       .url(browser.globals.local_url + 'corporate-pledge')
       .waitForElementVisible('header', 1000)
-      .assert.containsText('h1', 'Pledge To Thrive')
+      .assert.containsText('h1', 'Take the')
       .end()
   }
 }
