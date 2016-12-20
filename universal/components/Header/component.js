@@ -55,7 +55,7 @@ export class Header extends React.Component {
     if (isLoggedIn) {
       return (
         <Link
-          id='navSignUp'
+          id='navProfile'
           onClick={this.hideMenu}
           to='/profile'
           className={styles.linkUtility}
@@ -87,7 +87,7 @@ export class Header extends React.Component {
         <Link
           activeClassName={styles.activeRoute}
           className={styles.linkUtility}
-          id='navLogin'
+          id='navLogout'
           onClick={this.logOutUser}
           to='/'
         >
@@ -123,7 +123,7 @@ export class Header extends React.Component {
     const bigHeader = this.renderBigHeader()
     if (!bigHeader) {
       return (
-        <div className={styles.default}>
+        <div className={styles.default} id='littleHeader'>
           <figure className={styles.brand}>
             <IndexLink
               onClick={this.hideMenu}
@@ -147,7 +147,7 @@ export class Header extends React.Component {
     }
 
     return (
-      <div className={styles.hasForehead}>
+      <div className={styles.hasForehead} id='bigHeader'>
         <section className={styles.forehead}>
           <figure className={styles.brand}>
             <IndexLink
@@ -178,7 +178,11 @@ export class Header extends React.Component {
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
         {this.renderNav()}
-        <span className={styles.menuButton} onClick={this.toggleActive}>
+        <span
+          id='navButtonWrapper'
+          className={styles.menuButton}
+          onClick={this.toggleActive}
+        >
           <NavButton />
         </span>
       </header>
