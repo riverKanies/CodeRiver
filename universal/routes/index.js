@@ -28,6 +28,7 @@ import Pathway from 'layouts/Pathway'
 import About from 'layouts/About'
 import Journey from 'layouts/Journey'
 import NotFound from 'layouts/NotFound'
+import CorporatePledge from 'layouts/CorporatePledge'
 import Contact from 'layouts/Contact'
 
 function handleUpdate (prevState, nextState) {
@@ -123,6 +124,10 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'corporate-pledge',
+        component: CorporatePledge
+      },
+      {
+        path: 'glassdoor',
         component: GlassDoor
       },
       {

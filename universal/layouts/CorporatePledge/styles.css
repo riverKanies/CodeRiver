@@ -1,0 +1,61 @@
+@value bp-mama-bear, bp-papa-bear from 'all';
+
+.corporatePledge {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+}
+
+.connector {
+  @media bp-papa-bear {
+    display: block;
+    width: .125rem;
+    height: 5rem;
+    margin: 0 0 0 -.0625rem;
+    padding: 0 0;
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    background: darkGray;
+    z-index: 500;
+    &::before {
+      content: '';
+      display: block;
+      width: .5rem;
+      height: .5rem;
+      background: transparent;
+      border: .125rem solid darkGray;
+      border-radius: .25rem;
+      position: absolute;
+      top: -.45rem;
+      left: -.1875rem;;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: .5rem;
+      height: .5rem;
+      background: transparent;
+      border: .125rem solid darkGray;
+      border-radius: .25rem;
+      position: absolute;
+      bottom: -.45rem;
+      left: -.1875rem;
+    }
+  }
+}
+
+.pledgeContent {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  @media bp-mama-bear {
+    margin-top: 89vh;
+  }
+}

@@ -106,13 +106,31 @@
 }
 
 .bannerLink {
-  @media bp-baby-bear {
-    composes: link;
-    background-color: rgba(0, 0, 0, 1);
-    color: #000;
-  }
+  composes: link;
+  background-color: rgba(0, 0, 0, 1);
+  color: #000;
   @media bp-mama-bear {
     background-color: rgba(255, 255, 255, 1);
-    color: #fff;
+    color: white;
+  }
+}
+
+.tealBG {
+  composes: link;
+  background-color: transparent;
+  border-color: ThriveTeal;
+  color: ThriveTeal;
+  &:hover {
+    background-color: ThriveTeal;
+    color: white;
+  }
+  @media bp-mama-bear {
+    background-color: ThriveTeal;
+    color: white;
+    &:hover {
+      background-color: white;
+      border-color: white;
+      color: ThriveTeal;
+    }
   }
 }

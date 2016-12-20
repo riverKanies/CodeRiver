@@ -1,0 +1,224 @@
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, bodyCopy, lightGray, darkGray, Mon from 'all';
+
+.bannerSuper {
+  display: block;
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 auto;
+  padding: 0 0;
+  position: relative;
+  background: white;
+  text-align: center;
+  z-index: 400;
+  @media bp-mama-bear {
+    lost-utility: clearfix;
+    display: flex;
+    flex-direction: column;
+    flex-flow: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    background: none;
+  }
+}
+
+/* Banner Image Overlay, True/False */
+.bannerImageWrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.56rem auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  text-align: center;
+  @media bp-mama-bear {
+    z-index: -100;
+  }
+  @media bp-mama-bear {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+.overlayTrue {
+  composes: bannerImageWrap;
+  &::after {
+    @media bp-mama-bear {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0 0;
+      padding: 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(6, 6, 6, .65);
+    }
+  }
+}
+.overlayFalse {
+  composes: bannerImageWrap;
+}
+
+.bannerImage {
+  width: 100%;
+  text-align: center;
+  z-index: -100;
+  @media bp-mama-bear {
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+.content {
+  lost-center: containerWidth;
+  margin: 0 auto babyMargin auto;
+  padding: 0 containerPadding;
+  float: none;
+  @media bp-mama-bear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+
+.bannerHeader {
+  width: 100%;
+  margin: 0 auto 1.25rem auto;
+  color: bodyCopy;
+  text-align: left;
+  @media bp-mama-bear {
+    width: 100%;
+    margin: 0 auto;
+    text-align: inherit;
+    padding: 0;
+    text-align: inherit;
+    color: white;
+  }
+  @media bp-papa-bear {
+    padding: 0 0 1.5rem 0;
+  }
+  &::after {
+    @media bp-mama-bear {
+      content: '';
+      display: inline-block;
+      width: 3.4375rem;
+      height: .0625rem;
+      margin: 2rem 0 0 0;
+      padding: 0 0;
+      float: none;
+      clear: both;
+      background: white;
+      text-align: center;
+    }
+  }
+}
+
+.h1 {
+  width: 100%;
+  margin: 0 0 .35em 0;
+  padding: 0 0;
+  text-align: inherit;
+  color: inherit;
+  &:last-child {
+    margin: 0 0 0 0;
+  }
+}
+
+.bannerText {
+  width: 100%;
+  clear: both;
+  text-align: left;
+  color: inherit;
+  @media bp-mama-bear {
+    display: flex;
+    text-align: center;
+    color: white;
+  }
+}
+.p {
+  margin-bottom: 0;
+  text-align: inherit;
+  color: bodyCopy;
+  @media bp-mama-bear {
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 112.5%;
+    color: white;
+    transition: color 100ms ease-in-out;
+  }
+  @media bp-papa-bear {
+    font-size: 125%;
+  }
+}
+
+.buttonWrap {
+  width: 100%;
+  height: auto;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  @media bp-papa-bear {
+    margin: 5rem auto 0 auto;
+  }
+  > a {
+    float: left;
+    @media bp-mama-bear {
+      float: none;
+    }
+  }
+}
+
+.contentImage {
+  display: none;
+  @media bp-papa-bear {
+    display: block;
+    width: 9rem;
+    height: auto;
+    margin: 0 0;
+    padding: 0 0;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
+  }
+}
+
+.details {
+  display: none;
+  @media bp-papa-bear {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    padding: 0 0;
+    float: left;
+    font-family: Mon;
+    font-size: .75rem;
+    font-style: normal;
+    line-height: 100%;
+    text-align: left;
+    color: white;
+  }
+}

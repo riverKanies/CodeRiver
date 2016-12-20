@@ -9,6 +9,7 @@ module.exports = [
   '/contact',
   '/press',
   '/give',
+  '/glassdoor',
   '/grow',
   '/home',
   '/interests',

@@ -1,6 +1,5 @@
 import React from 'react'
 import QuoteSection from './component'
-
 import { shallow } from 'enzyme'
 
 describe('(Component) QuoteSection', () => {
