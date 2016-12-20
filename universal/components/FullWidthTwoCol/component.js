@@ -28,7 +28,7 @@ const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
   eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
   mattis consectetur purus sit amet fermentum.`]
 
-  // True/False Logic For Label
+// True/False Logic For Label
 function renderLabel ({
     hasLabel,
     label

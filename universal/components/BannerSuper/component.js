@@ -27,6 +27,41 @@ type Props = {
 
 const defaultImage = dummyImage
 
+// True/False Logic For Button
+function renderButton ({
+    hasButton,
+    link
+  }: { hasButton: boolean, link: LinkProps }) {
+  if (hasButton) {
+    return (
+      <section className={styles.buttonWrap}>
+        <ExternalLink {...link} />
+      </section>
+    )
+  }
+  return null
+}
+
+// True/False Logic Content Image
+function renderContentImage ({
+    hasContentImage,
+    contentImage,
+    contentImageText,
+    title
+  }: { hasContentImage: boolean, contentImage: string, contentImageText: string, title: Array<string> }) {
+  if (hasContentImage) {
+    return (
+      <span className={styles.contentImage}>
+        <i className={styles.details}>
+          {contentImageText}
+        </i>
+        <img src={contentImage} alt={title} />
+      </span>
+    )
+  }
+  return null
+}
+
 const BannerSuper = ({
   title = ['Title'],
   bannerText = 'Hello, I am text!',
@@ -46,21 +81,14 @@ const BannerSuper = ({
       </span>
       <div className={styles.content}>
         <header className={styles.bannerHeader}>
-          <h1 className={styles.h1}>{title}</h1>
+          {title.map((paragraph, i) => (<h1 className={styles.h1} key={i}>{paragraph}</h1>))}
         </header>
         <section className={styles.bannerText}>
-          <p>{bannerText}</p>
+          <p className={styles.p}>{bannerText}</p>
         </section>
-        <section className={styles.buttonWrap}>
-          <ExternalLink />
-        </section>
+        {renderButton({ hasButton, link })}
       </div>
-      <span className={styles.contentImage}>
-        <i className={styles.details}>
-          {contentImageText}
-        </i>
-        <img src={contentImage} alt={title} />
-      </span>
+      {renderContentImage({ hasContentImage, contentImage, contentImageText, title })}
     </section>
   )
 }

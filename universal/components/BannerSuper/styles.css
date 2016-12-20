@@ -31,7 +31,8 @@
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto 1.56rem;
+  margin: 0 auto 1.56rem auto;
+  padding: 0 0;
   float: left;
   position: relative;
   text-align: center;
@@ -82,7 +83,7 @@
 .content {
   lost-center: containerWidth;
   margin: 0 auto babyMargin auto;
-  padding: containerPadding;
+  padding: 0 containerPadding;
   float: none;
   @media bp-mama-bear {
     display: flex;
@@ -115,7 +116,7 @@
       display: inline-block;
       width: 3.4375rem;
       height: .0625rem;
-      margin: 1.5rem 0 0 0;
+      margin: 2rem 0 0 0;
       padding: 0 0;
       float: none;
       clear: both;
@@ -127,10 +128,13 @@
 
 .h1 {
   width: 100%;
-  margin: 0 0 0 0;
+  margin: 0 0 .35em 0;
   padding: 0 0;
   text-align: inherit;
   color: inherit;
+  &:last-child {
+    margin: 0 0 0 0;
+  }
 }
 
 .bannerText {
@@ -143,32 +147,45 @@
     text-align: center;
     color: white;
   }
-  p {
-    margin-bottom: 0;
-    text-align: inherit;
-    color: bodyCopy;
-    @media bp-mama-bear {
-      font-size: 112.5%;
-      color: white;
-      transition: color 100ms ease-in-out;
-    }
-    @media bp-papa-bear {
-      font-size: 125%;
-    }
+}
+.p {
+  margin-bottom: 0;
+  text-align: inherit;
+  color: bodyCopy;
+  @media bp-mama-bear {
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 112.5%;
+    color: white;
+    transition: color 100ms ease-in-out;
+  }
+  @media bp-papa-bear {
+    font-size: 125%;
   }
 }
 
 .buttonWrap {
   width: 100%;
   height: auto;
-  margin: 5rem auto 0 auto;
+  margin: 2.5rem auto 0 auto;
   padding: 0 0;
   float: left;
   clear: both;
+  @media bp-papa-bear {
+    margin: 5rem auto 0 auto;
+  }
+  > a {
+    float: left;
+    @media bp-mama-bear {
+      float: none;
+    }
+  }
 }
 
 .contentImage {
-  @media bp-mama-bear {
+  display: none;
+  @media bp-papa-bear {
     display: block;
     width: 9rem;
     height: auto;
@@ -189,16 +206,19 @@
 }
 
 .details {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 1rem auto;
-  padding: 0 0;
-  float: left;
-  font-family: Mon;
-  font-size: .75rem;
-  font-style: normal;
-  line-height: 100%;
-  text-align: left;
-  color: white;
+  display: none;
+  @media bp-papa-bear {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    padding: 0 0;
+    float: left;
+    font-family: Mon;
+    font-size: .75rem;
+    font-style: normal;
+    line-height: 100%;
+    text-align: left;
+    color: white;
+  }
 }

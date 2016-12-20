@@ -12,9 +12,7 @@ import badgeImg from './assets/pledge-to-thrive.png'
 
 // Content
 const pledgeBanner = {
-  title: [
-    'Take the', 'Pledge To Thrive'
-  ],
+  title: ['Take the', 'Pledge To Thrive'],
   bannerText: `Thrive Global and Glassdoor are partnering to showcase employers who prioritize a thriving workplace.`,
   bannerImage: bannerImg,
   bannerImageOverlay: 'overlayFalse',
@@ -26,10 +24,11 @@ const pledgeBanner = {
   link: {
     linkText: 'Take The Pledge',
     linkTo: 'https://www.glassdoor.com/employers/solutions/thrive-pledge.htm',
-    linkStyle: 'bannerLinkTeal',
+    linkStyle: 'tealBG',
     target: '_blank'
   }
 }
+
 const aboutPledge = {
   sectionClass: 'default',
   title: 'About The Thrive Pledge',
@@ -50,7 +49,7 @@ const pledgeBadge = {
   sectionClass: 'transparent',
   title: 'Get the Badge',
   hasLabel: false,
-  hasColorBar: 'colorBarFalse',
+  hasColorBar: 'colorBarTrue',
   sectionText: [
     `Set your company apart by letting your employees and those you are recruiting
     know that this is a workplace that gets it about well-being and understands the
