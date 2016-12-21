@@ -24,7 +24,7 @@ const FullscreenBanner = ({
 }: Props) => {
   return (
     <section className={`${styles[height]} banner`}>
-      <span className={styles[bannerImageOverlay]}>
+      <span className={`${styles[bannerImageOverlay]} imageWrap`}>
         <img className={styles.bannerImage} src={bannerImage} alt={title} />
       </span>
       <div className={`${styles[contentPosition]} bannerContent`}>
