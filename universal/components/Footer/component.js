@@ -75,18 +75,8 @@ const Footer = ({
           </section>
         </section>
         <section className={styles.footerBottom}>
-          <section className={styles.copyright}>
-            <p>Thrive Global © 2016</p>
-            <Link to='/thrive/privacy' className={styles.link}>
-              Privacy
-            </Link>
-            <p className={styles.ampersand}>&</p>
-            <Link to='/thrive/terms' className={styles.link}>
-              Terms
-            </Link>
-          </section>
-          <div className={styles.heading}>
-            {heading}
+          <div className={styles.copyright}>
+            Thrive Global © 2016
           </div>
           <ul className={styles.list} id='footerLinks'>
             {genLink('/about', 'About Us')}
@@ -98,6 +88,8 @@ const Footer = ({
             {genLink('/popup', 'Pop-up Store')}
             {genLink('/press', 'Press')}
             {genLink('/team', 'Team')}
+            {genLink('/thrive/privacy', 'Privacy')}
+            {genLink('/thrive/terms', 'Terms')}
           </ul>
         </section>
       </div>

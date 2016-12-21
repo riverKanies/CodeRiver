@@ -4,28 +4,20 @@
   background-color: ThrivinRock;
   margin: 0 auto;
   height: auto;
-  lost-column: 1;
-
-  @media bp-mama-bear {
-    display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-    height: auto
-  }
 }
 
 .footerTop {
-
+  padding: 3.75rem 2.5rem;
+  text-align: center;
 }
+
 .footerBottom {
   background: almostBlack;
+  height: 10rem;
 }
 
 .container {
-  lost-center: 90rem;
-  padding: 3.75rem 2.5rem;
+  padding: 0;
   margin: 0 auto;
   float: none;
 }
@@ -33,19 +25,42 @@
 /* ===== COLUMNS ===== */
 
 .footerQuote {
+  display: block;
   text-align: center;
   margin-right: 0;
   margin-bottom: 3.750rem;
   height: auto;
 
   p {
+    display: inline-block;
+    max-width: 400px;
     color: white;
-    text-align: center;
     margin-bottom: .625rem;
     font-family: Playfair;
     font-size: 1rem;
-    line-height: normal;
+    line-height: 1.8rem;
     letter-spacing: 1px;
+
+    &::before, &::after {
+      font-family: PlayBlack;
+      color: white;
+      display: inline-block;
+      margin: 0;
+    }
+
+    &::before {
+      content: '“';
+      font-size: 3.125rem;
+      margin-right: 1rem;
+      margin-left: -2rem;
+    }
+
+    &::after {
+      content: '”';
+      font-size: 1.8rem;
+      line-height: 1rem;
+      margin-left: .2rem;
+    }
 
     &.quote {
       @media bp-papa-bear {
@@ -54,81 +69,16 @@
     }
   }
 
-  &::before {
-    content: '“';
-    font-size: 3.125rem;
-    font-family: PlayBlack;
-    color: white;
-    float: none;
-    margin: 0;
-    text-align: center;
-
-    @media bp-papa-bear {
-      float: left;
-      margin: .625rem 1.25rem 0 -2.5rem;
-      text-align: left;
-    }
-  }
-
-  @media bp-papa-bear {
-    text-align: left;
-    display: block;
-    lost-column: 3.6/6;
-    margin-top: -1.25rem;
-    margin: 0 2.5rem;
-  }
 }
 
 .linksColumn {
-  display: flex;
-  flex-direction: column;
-  flex-flow: center;
-  align-items: center;
-  justify-content: center;
   height: auto;
-  lost-column: 1;
   margin-right: 0;
   margin-bottom: 3.750rem;
-
-  @media bp-grand-bear {
-    display: block;
-    lost-column: 1/6;
-    float: left;
-  }
 }
 
 .social {
   height: auto;
-}
-
-.copyright {
-  lost-column: 1;
-  display: inline-block;
-  font-size: .625rem;
-  font-family: Mon;
-  color: darkGray;
-  margin: 0 auto;
-  margin-top: 2.5rem;
-  text-align: center;
-  float: none;
-  line-height: normal;
-
-  p {
-    display: inline;
-
-    &::after {
-      content: ' |';
-      color: darkGray;
-      padding-left: .125rem;
-    }
-
-    &.ampersand {
-
-      &::after {
-        display: none;
-      }
-    }
-  }
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -140,12 +90,6 @@ cite {
   font-style: normal;
   text-align: center;
   display: inherit;
-  @media bp-mama-bear {
-    text-align: left;
-  }
-  @media bp-papa-bear {
-    text-align: left;
-  }
 }
 
 .heading {
@@ -157,57 +101,54 @@ cite {
 
 /* ===== LINKS ===== */
 
-a.link {
-  color: darkGray;
-  padding: 0 0.313rem;
+.footerLinkStyle {
   font-family: Mon;
-  &.link {
-    &:hover {
-      color: white;
-    }
-  }
+  font-size: .75rem;
+  color: rgba(238, 238, 238, 0.42);
+  line-height: 2.708;
+  display: inline-block;
+}
+
+.copyright {
+  composes: footerLinkStyle;
+  lost-column: 1/4;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .footerLinks {
-  color: darkGray;
-  font-size: .75rem;
-  line-height: 2;
-  font-family: Mon;
-  display: flex;
-  flex-direction: column;
-  flex-flow: center;
-  align-items: center;
-  justify-content: center;
+  composes: footerLinkStyle;
   height: auto;
-  text-align: center;
-
-  &:first-child {
-    margin-top: .625rem;
-  }
-
-  @media bp-grand-bear {
-    margin-top: 0.313rem;
-    text-align: left;
-    display: block;
-  }
 }
 
 .list {
-  padding-left: 0;
-  margin-top: 0;
-  @media bp-mama-bear {
-    margin-top: 1em;
-  }
+  lost-column: 3/4;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
   li {
-    @media bp-baby-bear {
-      margin-right: 0!important;
+
+    &::after {
+      content: '|';
+      display: inline-block;
+      color: rgba(238, 238, 238, 0.2);
+      margin: 0 6px;
+      font-size: .625rem;
     }
 
-    @media bp-grand-bear {
-      display: block;
+    &:last-child::after {
+      content: '';
     }
+
     a {
-      color: darkGray;
+      color: inherit;
       &:hover {
         color: white;
       }
@@ -252,11 +193,4 @@ a.link {
 
 .logo {
   width: 8rem;
-  height: auto;
-  float: none;
-  margin-top: 0.625rem;
-
-  @media bp-grand-bear {
-    margin-top: 1.563rem;
-  }
 }
