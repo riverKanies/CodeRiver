@@ -23,11 +23,13 @@
   background-color: backgroundGray;
   margin-bottom: 0.5rem;
   lost-column: 1;
+
   @media bp-mama-bear {
     lost-column: 1/2 3 12px;
+    margin-bottom: 1rem;
   }
   @media bp-papa-bear {
-    lost-column: 2/8 8 12px;
+    lost-column: 1/3 0;
   }
 }
 
