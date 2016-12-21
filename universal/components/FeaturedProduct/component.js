@@ -15,7 +15,7 @@ type Props = {
 const Product = ({
   productTitle = 'My product',
   productLink = 'javascript:void(0)',
-  productImage = image_pillow,
+  productImage = image_phone_bed,
   productSlug = 'my Slug is usually about a sentance long'
 }: Props) => {
   return (
@@ -48,7 +48,8 @@ class FeaturedProduct extends React.Component {
           />
           <Product
             productTitle={'goLITE BLU Energy Light'}
-            productLink='https://shop.thriveglobal.com/products/golite-blu-energy-light-hf3422-60-intense-blue-light-corded'
+            productLink={'https://shop.thriveglobal.com/' +
+            'products/golite-blu-energy-light-hf3422-60-intense-blue-light-corded'}
             productImage={image_golite}
             productSlug={'Philips goLITE BLU mimics the natural energizing power of daylight.'}
           />
