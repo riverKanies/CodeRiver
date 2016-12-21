@@ -1,24 +1,27 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, Mon, MonBold, PlayBlack, darkGray, lightGray, medGray, ThriveGray from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, Mon, MonBold, Playfair, PlayBlack, white, darkGray, lightGray, medGray, almostBlack, ThrivinRock from 'all';
 
 .footer {
-	background-color: ThriveGray;
+  background-color: ThrivinRock;
   margin: 0 auto;
   height: auto;
-  lost-column: 1;
+}
 
-  @media bp-mama-bear {
-    display: flex;
-    flex-direction: column;
-    flex-flow: center;
-    align-items: center;
-    justify-content: center;
-    height: auto
+.footerTop {
+  padding: 3.75rem 2.5rem;
+  text-align: center;
+}
+
+.footerBottom {
+  background: almostBlack;
+  height: auto;
+
+  @media bp-papa-bear {
+    height: 10rem;
   }
 }
 
 .container {
-	lost-center: 90rem;
-	padding: 3.75rem 2.5rem;
+  padding: 0;
   margin: 0 auto;
   float: none;
 }
@@ -26,248 +29,220 @@
 /* ===== COLUMNS ===== */
 
 .footerQuote {
-	display: flex;
-	flex-direction: column;
-	flex-flow: center;
-	lost-column: 1;
-	align-items: center;
-	text-align: center;
-	margin-right: 0;
-	margin-bottom: 3.750rem;
-	height: auto;
+  display: block;
+  text-align: center;
+  margin-right: 0;
+  margin-bottom: 1.5rem;
+  height: auto;
 
-	p {
-		color: darkGray;
-		text-align: center;
-		margin-bottom: .625rem;
-		font-family: MonBold;
-		font-size: 1rem;
-		line-height: normal;
-		letter-spacing: 1px;
+  p {
+    display: inline-block;
+    max-width: 600px;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-family: Playfair;
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    line-height: 1.8rem;
 
-		&.quote {
-			@media bp-papa-bear {
-				text-align: left;
-				font-size: 1.25rem;
-			}
-		}
-	}
+    &::before, &::after {
+      font-family: PlayBlack;
+      color: white;
+      display: inline-block;
+      margin: 0;
+      line-height: .75rem;
+    }
 
-	&::before {
-		content: '"';
-		font-size: 3.125rem;
-		font-family: PlayBlack;
-		color: white;
-		float: none;
-		margin: 0;
-		text-align: center;
+    &::before {
+      content: '“';
+      font-size: 3rem;
+      margin-right: .75rem;
+      margin-left: -1.75rem;
+      vertical-align: -1.25rem;
+    }
 
-		@media bp-papa-bear {
-			float: left;
-			margin: .625rem 1.25rem 0 -2.5rem;
-			text-align: left;
-	  }
-	}
+    &::after {
+      content: '”';
+      font-size: 1.4rem;
+      line-height: 1rem;
+      margin-left: .2rem;
+    }
 
-	@media bp-papa-bear {
-		text-align: left;
-		display: block;
-		lost-column: 3.6/6;
-		margin-top: -1.25rem;
-		margin: 0 2.5rem;
+    &.quote {
+      @media bp-papa-bear {
+        font-size: 1.25rem;
+      }
+    }
   }
+
 }
 
 .linksColumn {
-	display: flex;
-	flex-direction: column;
-	flex-flow: center;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	lost-column: 1;
-	margin-right: 0;
-	margin-bottom: 3.750rem;
-
-	@media bp-grand-bear {
-		display: block;
-		lost-column: 1/6;
-		float: left;
-  }
+  height: auto;
+  margin-right: 0;
+  margin-bottom: 3.750rem;
 }
 
-.socialColumn {
-	display: flex;
-	flex-direction: column;
-	flex-flow: center;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	lost-column: 1;
-
-	@media bp-grand-bear {
-		display: block;
-		lost-column: 1/6;
-		float: left;
-  }
+.social {
+  height: auto;
 }
 
-.copyright {
-	lost-column: 1;
-	display: inline-block;
-	font-size: .625rem;
-	font-family: Mon;
-	color: darkGray;
-	margin: 0 auto;
-	margin-top: 2.5rem;
-	text-align: center;
-	float: none;
-	line-height: normal;
+.footerLinkStyle {
+  font-family: Mon;
+  font-size: 1rem;
+  color: rgba(238, 238, 238, 0.42);
+  line-height: 2.708;
 
-	p {
-		display: inline;
-
-		&::after {
-			content: ' |';
-			color: darkGray;
-			padding-left: .125rem;
-		}
-
-		&.ampersand {
-
-			&::after {
-				display: none;
-			}
-		}
-	}
+  @media bp-papa-bear {
+    font-size: .75rem;
+    display: inline-block;
+  }
 }
 
 /* ===== TYPOGRAPHY ===== */
 
-cite {
-	color: darkGray;
-	font-size: .75rem;
-	font-weight: bold;
-	font-style: normal;
-	text-align: center;
-	display: inherit;
-	@media bp-mama-bear {
-		text-align: left;
-	}
-	@media bp-papa-bear {
-		text-align: left;
-	}
+.cite {
+  composes: footerLinkStyle;
+  font-style: normal;
+  text-transform: uppercase;
+  display: block;
 }
 
 .heading {
-	color: white;
-	font-size: .75rem;
-	font-family: MonBold;
-	text-transform: uppercase;
+  color: white;
+  font-size: .75rem;
+  font-family: MonBold;
+  text-transform: uppercase;
 }
 
 /* ===== LINKS ===== */
 
-a.link {
-	color: darkGray;
-	padding: 0 0.313rem;
-	font-family: Mon;
-	&.link {
-		&:hover {
-			color: white;
-		}
-	}
+.copyright {
+  composes: footerLinkStyle;
+  text-align: left;
+  padding-left: 1.5rem;
+  line-height: 4rem;
+  display: block;
+
+  @media bp-papa-bear {
+    text-align: center;
+    lost-column: 1/4;
+    display: inline-block;
+    padding: 0;
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .footerLinks {
-	color: darkGray;
-	font-size: .75rem;
-	line-height: 2;
-	font-family: Mon;
-	display: flex;
-	flex-direction: column;
-	flex-flow: center;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	text-align: center;
-
-  &:first-child {
-  	margin-top: .625rem;
-  }
-
-	@media bp-grand-bear {
-	  margin-top: 0.313rem;
-		text-align: left;
-		display: block;
-  }
+  composes: footerLinkStyle;
+  height: auto;
 }
 
 .list {
-	padding-left: 0;
-	margin-top: 0;
-	@media bp-mama-bear {
-		margin-top: 1em;
-	}
-	li {
-		@media bp-baby-bear {
-			margin-right: 0!important;
-	  }
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-		@media bp-grand-bear {
-			display: block;
-	  }
-		a {
-			color: darkGray;
-			&:hover {
-				color: white;
-			}
-		}
-	}
+  @media bp-papa-bear {
+    lost-column: 3/4;
+    float: right !important;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  li {
+    display: block;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.2);
+
+    a {
+      padding-left: 1.5rem;
+      line-height: 4rem;
+      display: block;
+      color: inherit;
+
+      &::after {
+        content: '〉';
+        font-size: 1.6rem;
+        display: inline-block;
+        float: right;
+        padding-right: 1.5rem;
+      }
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    @media bp-papa-bear {
+      border: none;
+      display: inline-block;
+
+      &::after {
+        content: '|';
+        display: inline-block;
+        color: rgba(238, 238, 238, 0.2);
+        margin: 0 6px;
+        font-size: .625rem;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      a {
+        line-height: inherit;
+        padding-left: 0;
+        display: inline-block;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 /* ===== SOCIAL ===== */
 
 .socialIcons {
-	color: lightGray;
-	margin-top: 1.25rem;
+  color: lightGray;
+  margin-top: 1.25rem;
 
-	span {
-		padding-right: 1.25rem;
-	}
+  span {
+    padding-right: 1.25rem;
+  }
 
-		&:last-child {
-			padding-right: 0;
-		}
+    &:last-child {
+      padding-right: 0;
+    }
 }
 
 .icon {
-	margin-right: 1.25rem;
-	display: inline;
-	fill: darkGray;
-	width: 1.25rem;
-	height: auto;
+  margin-right: 1.25rem;
+  display: inline;
+  fill: darkGray;
+  width: 1.25rem;
+  height: auto;
 
-	&:hover {
-		fill: white;
-	}
+  &:hover {
+    fill: white;
+  }
 }
 
 .facebookIcon {
-	fill: darkGray;
-	width: auto;
-	height: 1.25rem;
+  fill: darkGray;
+  width: auto;
+  height: 1.25rem;
 }
 
 /* ===== EXTRAS ===== */
 
 .logo {
-	width: 8rem;
-  height: auto;
-  float: none;
-	margin-top: 0.625rem;
-
-	@media bp-grand-bear {
-		margin-top: 1.563rem;
-  }
+  width: 8rem;
 }

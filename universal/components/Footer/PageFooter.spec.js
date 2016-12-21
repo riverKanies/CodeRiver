@@ -22,6 +22,8 @@ describe('(Component) Footer', () => {
       { route: '/about/commerce', text: 'Partnerships - Commerce' },
       { route: '/popup', text: 'Pop-up Store' },
       { route: '/team', text: 'Team' },
+      { route: '/thrive/privacy', text: 'Privacy' },
+      { route: '/thrive/terms', text: 'Terms' },
     ]
 
     const target = subject.find('#footerLinks')
@@ -64,18 +66,6 @@ describe('(Component) Footer', () => {
       target.children().forEach((link, idx) => {
         const expectedElem = expectedLinks[idx].route.match('#') ? 'a' : 'Link'
         expect(elemType(link)).toEqual(expectedElem)
-      })
-    })
-
-    it('has links that are all valid with react router', () => {
-      const store = createStore({})
-      const router = createRoutes(store)
-      const allRoutes = routesParser(router)
-
-      target.children().forEach((link) => {
-        if(elemType(link) === 'Link') {
-          expect(allRoutes).toContain(getLinkLocation(link))
-        }
       })
     })
   })

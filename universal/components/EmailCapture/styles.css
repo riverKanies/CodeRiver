@@ -6,28 +6,11 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: babyPadding;
-  background: url('./assets/emailBG.png') repeat;
+  padding: 6rem 0;
+  background: linear-gradient( 90deg, rgb(84, 84, 152) 0%, rgb(67, 45, 118) 100%);
+  height: 358px;
   position: relative;
   z-index: 500;
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0 0;
-    padding: 0 0;
-    background: gradientEmailCap;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  @media bp-mama-bear {
-    padding: mamaPadding;
-  }
-  @media bp-papa-bear {
-    padding: papaPadding
-  }
 }
 
 .container {
@@ -42,7 +25,7 @@
     @media bp-papa-bear {
       lost-center: 80% 10%;
     }
-    /* Standard Form Styles */
+
     input {
       appearance: none;
       width: 100%;
@@ -50,15 +33,15 @@
       margin: 0 auto;
       padding: .75rem 1.25rem;
       float: left;
-      background: transparent;
+      background: #fff;
       border: .125rem solid rgba(255, 255, 255, .3);
       outline: none;
       font-family: Mon;
       font-size: .88rem;
       line-height: 100%;
-      color: rgba(255, 255, 255, 1);
+      color: rgb(66, 65, 63);
       &::placeholder {
-        color: rgba(255, 255, 255, .7);
+        color: rgba(66, 65, 63, .80);
       }
     }
     button {

@@ -51,10 +51,30 @@ const Footer = ({
     <footer className={styles.footer}>
       <EmailCapture />
       <div className={styles.container}>
-        <section className={styles.linksColumn}>
-          <div className={styles.heading}>
-            {heading}
-          </div>
+        <section className={styles.footerTop}>
+          <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
+          <section className={styles.footerQuote}>
+            {quote.map((paragraph, index) => <p className={styles.quote} key={index}>{quote}</p>)}
+            <cite className={styles.cite}>{citation}</cite>
+          </section>
+          <section className={styles.social}>
+            <div className={styles.socialIcons}>
+              <a href='https://www.facebook.com/thriveglbl/' target='_blank'>
+                <Facebook />
+              </a>
+              <a href='https://twitter.com/thrive' target='_blank'>
+                <Twitter />
+              </a>
+              <a href='https://www.instagram.com/thrive/' target='_blank'>
+                <Instagram />
+              </a>
+              <a href='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
+                <Medium />
+              </a>
+            </div>
+          </section>
+        </section>
+        <section className={styles.footerBottom}>
           <ul className={styles.list} id='footerLinks'>
             {genLink('/about', 'About Us')}
             {genLink('/who-we-are#careers', 'Careers')}
@@ -64,41 +84,12 @@ const Footer = ({
             {genLink('/about/commerce', 'Partnerships - Commerce')}
             {genLink('/popup', 'Pop-up Store')}
             {genLink('/team', 'Team')}
+            {genLink('/thrive/privacy', 'Privacy')}
+            {genLink('/thrive/terms', 'Terms')}
           </ul>
-        </section>
-        <section className={styles.footerQuote}>
-          {quote.map((paragraph, index) => <p className={styles.quote} key={index}>{quote}</p>)}
-          <cite>{citation}</cite>
-        </section>
-        <section className={styles.socialColumn}>
-          <div className={styles.heading}>
-            {heading2}
+          <div className={styles.copyright}>
+            Thrive Global © 2016
           </div>
-          <div className={styles.socialIcons}>
-            <a href='https://www.facebook.com/thriveglbl/' target='_blank'>
-              <Facebook />
-            </a>
-            <a href='https://twitter.com/thrive' target='_blank'>
-              <Twitter />
-            </a>
-            <a href='https://www.instagram.com/thrive/' target='_blank'>
-              <Instagram />
-            </a>
-            <a href='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
-              <Medium />
-            </a>
-          </div>
-          <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
-        </section>
-        <section className={styles.copyright}>
-          <p>Thrive Global © 2016</p>
-          <Link to='/thrive/privacy' className={styles.link}>
-            Privacy
-          </Link>
-          <p className={styles.ampersand}>&</p>
-          <Link to='/thrive/terms' className={styles.link}>
-            Terms
-          </Link>
         </section>
       </div>
     </footer>
