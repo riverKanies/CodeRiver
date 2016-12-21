@@ -257,8 +257,8 @@ const popUpShop = {
     `Thrive Global's retail pop-up store in New York City offers live
     demonstrations, education and trials of the latest products and
     technologies across the categories of mind, body, sleep, productivity,
-    recharging, creativity and giving. Visit us at 419 Broome Street seven
-    days a week, from 10:00am to 7:00pm, December 1 through January 15, 2017.`
+    recharging, creativity and giving. Visit us at 419 Broome Street.
+    We’re open seven days a week from 10:00am to 7:00pm, December 1 through January 15, 2017.`
   ],
   image: popUpImg,
   hasButton: true,
