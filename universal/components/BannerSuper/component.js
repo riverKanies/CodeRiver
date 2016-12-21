@@ -27,6 +27,13 @@ type Props = {
 
 const defaultImage = dummyImage
 
+const linkDefaults = {
+  linkText: 'Button Text',
+  linkTo: 'javascript:void(0)',
+  linkStyle: 'tealBG',
+  target: '_blank'
+}
+
 // True/False Logic For Button
 function renderButton ({
     hasButton,
@@ -72,7 +79,7 @@ const BannerSuper = ({
   contentImage = extraImage,
   hasContentImageText = true,
   contentImageText = 'in partnership with',
-  link
+  link = linkDefaults
 }: Props) => {
   return (
     <section className={styles.bannerSuper}>
