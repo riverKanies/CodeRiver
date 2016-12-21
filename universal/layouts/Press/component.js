@@ -47,9 +47,9 @@ const quotes = {
   quoteFont: 'Playfair',
   citation: 'Financial Times',
   citation2: 'The New York Times',
-  quote: ['Four weeks later, I can report that Huffington has changed my life...' +
-  'bedtime now means bedtime: a phase of leaving the day behind.'],
-  quote2: ['Not Sleeping Enough? Arianna Huffington Wants to Help.']
+  quote: `Four weeks later, I can report that Huffington has changed my life...
+  bedtime now means bedtime: a phase of leaving the day behind.`,
+  quote2: `Not Sleeping Enough? Arianna Huffington Wants to Help.`
 }
 
 const logos = [
