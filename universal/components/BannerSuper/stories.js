@@ -2,8 +2,8 @@ import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
 import { withKnobs, text, select, boolean } from '@kadira/storybook-addon-knobs'
-
 import BannerSuper from './component'
+import dummyImage from './assets/pledge-banner.jpg'
 
 const notes = 'This story demonstrates the props that can be passed to BannerSuper.'
 
@@ -13,6 +13,7 @@ const defaulText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 const Props = {
   title: ['Title Text'],
   bannerText: defaulText,
+  bannerImage: dummyImage,
   bannerImageOverlay: [
     'overlayTrue',
     'overlayFalse'
@@ -39,6 +40,7 @@ storiesOf('BannerSuper', module)
         <BannerSuper
           title={text('Title Text', Props.title)}
           bannerText={text('Banner Copy Text', Props.bannerText)}
+          bannerImage={text('Banner background image URL.', Props.bannerImage)}
           bannerImageOverlay={
             select('Does this background image need an overlay for contrast?',
             Props.bannerImageOverlay,
