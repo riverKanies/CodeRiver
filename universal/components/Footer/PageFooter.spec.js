@@ -21,7 +21,6 @@ describe('(Component) Footer', () => {
       { route: '/about/content', text: 'Partnerships - Media' },
       { route: '/about/commerce', text: 'Partnerships - Commerce' },
       { route: '/popup', text: 'Pop-up Store' },
-      { route: '/press', text: 'Press' },
       { route: '/team', text: 'Team' },
       { route: '/thrive/privacy', text: 'Privacy' },
       { route: '/thrive/terms', text: 'Terms' },
