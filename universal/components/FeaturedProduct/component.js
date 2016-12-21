@@ -1,9 +1,8 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import image_muse from './assets/Muse_black-square.jpg'
-import image_sense from './assets/sense-with-voice.jpg'
-import image_pillow from './assets/thrive-pillow-square.jpg'
+import image_golite from './assets/goliteblue.jpg'
+import image_essentials from './assets/travelessentials.png'
 import image_phone_bed from './assets/phone-bed-square.jpg'
 
 type Props = {
@@ -48,22 +47,16 @@ class FeaturedProduct extends React.Component {
             productSlug={'Make putting your phone to bed a regular part of your nightly ritual.'}
           />
           <Product
-            productTitle={'Sense with Voice by Hello'}
-            productLink='https://shop.thriveglobal.com/products/sense-with-voice'
-            productImage={image_sense}
-            productSlug={'The sound machine, sleep monitor and smart alarm.'}
+            productTitle={'goLITE BLU Energy Light'}
+            productLink='https://shop.thriveglobal.com/products/golite-blu-energy-light-hf3422-60-intense-blue-light-corded'
+            productImage={image_golite}
+            productSlug={'Philips goLITE BLU mimics the natural energizing power of daylight.'}
           />
           <Product
-            productTitle={'Muse: The Brain-Sensing Headband'}
-            productLink='https://shop.thriveglobal.com/products/muse-the-brain-sensing-headband'
-            productImage={image_muse}
-            productSlug={'Make meditation easier.'}
-          />
-          <Product
-            productTitle={'The Thrive Pillow by Hill House Home'}
-            productLink='https://shop.thriveglobal.com/products/the-thrive-pillow-by-hill-house-home'
-            productImage={image_pillow}
-            productSlug={'Sleep your way to the top.'}
+            productTitle={'Arianna Huffington\'s Travel Essentials Kit'}
+            productLink='https://shop.thriveglobal.com/products/arianna-huffington-tgc-travel-essentials-deluxe-kit'
+            productImage={image_essentials}
+            productSlug={'A few travel accessories, curated by Arianna herself.'}
           />
         </section>
       </section>
