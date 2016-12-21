@@ -8,7 +8,7 @@ type Props = {
   details: Array<string>
 };
 
-const details = [
+const defaultDetails = [
   `Making a sustained behavioral change happens when we no longer feel we’re
   having to work to do something other than what we’d normally do.
   That is, it’s when we find a new equilibrium and create a new norm.`
@@ -23,12 +23,12 @@ const mediumDescription = [
   cursus commodo, tortor mauris condimentum nibh ut fermentum massa justo sit amet risus.`
 ]
 
-const BehaviorChangeSection = ({ title = 'Behavior Change' }: Props) => {
+const BehaviorChangeSection = ({ title = 'Behavior Change', details = defaultDetails }: Props) => {
   return (
     <section className={styles.container}>
       <section className={styles.title}>
         <h2>{title}</h2>
-        {details.map(paragraph => (<div className={styles.details}>{paragraph}</div>))}
+        {details.map((paragraph, i) => (<div key={i} className={styles.details}>{paragraph}</div>))}
       </section>
       <section className={styles.row}>
         <IconWithText description={shortDescription} />
