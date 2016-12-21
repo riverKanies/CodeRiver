@@ -2,7 +2,7 @@
 import React from 'react'
 import { Field } from 'redux-form'
 import GenericFormError from 'components/GenericFormError'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 import Input from 'components/Input'
 import styles from './styles'
 import FacebookAuth from 'components/FacebookAuth'
@@ -15,7 +15,8 @@ type renderSubmitField = {
 
 const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: renderSubmitField) => {
   return (
-    <Button
+    <ExternalLink
+      id='signupSubmit'
       type='submit'
       handleClick={handleSubmit}
       disabled={!valid || submitting}
