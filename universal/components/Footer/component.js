@@ -25,7 +25,7 @@ const footerQuote = [
   So constantly give yourself this retreat, and renew yourself.`
 ]
 
-function genLink(path: string, text: string) {
+function genLink (path: string, text: string) {
   if (path.match('#')) {
     return (
       <li className={styles.footerLinks}>
