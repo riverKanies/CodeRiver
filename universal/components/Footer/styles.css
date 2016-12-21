@@ -13,7 +13,11 @@
 
 .footerBottom {
   background: almostBlack;
-  height: 10rem;
+  height: auto;
+
+  @media bp-papa-bear {
+    height: 10rem;
+  }
 }
 
 .container {
@@ -28,36 +32,38 @@
   display: block;
   text-align: center;
   margin-right: 0;
-  margin-bottom: 3.750rem;
+  margin-bottom: 1.5rem;
   height: auto;
 
   p {
     display: inline-block;
-    max-width: 400px;
+    max-width: 500px;
     color: white;
-    margin-bottom: .625rem;
+    margin-bottom: 1.5rem;
     font-family: Playfair;
     font-size: 1rem;
+    letter-spacing: .015rem;
     line-height: 1.8rem;
-    letter-spacing: 1px;
 
     &::before, &::after {
       font-family: PlayBlack;
       color: white;
       display: inline-block;
       margin: 0;
+      line-height: .75rem;
     }
 
     &::before {
       content: '“';
-      font-size: 3.125rem;
-      margin-right: 1rem;
-      margin-left: -2rem;
+      font-size: 3rem;
+      margin-right: .75rem;
+      margin-left: -1.75rem;
+      vertical-align: -1.25rem;
     }
 
     &::after {
       content: '”';
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       line-height: 1rem;
       margin-left: .2rem;
     }
@@ -81,15 +87,25 @@
   height: auto;
 }
 
+.footerLinkStyle {
+  font-family: Mon;
+  font-size: 1rem;
+  color: rgba(238, 238, 238, 0.42);
+  line-height: 2.708;
+
+  @media bp-papa-bear {
+    font-size: .75rem;
+    display: inline-block;
+  }
+}
+
 /* ===== TYPOGRAPHY ===== */
 
-cite {
-  color: darkGray;
-  font-size: .75rem;
-  font-weight: bold;
+.cite {
+  composes: footerLinkStyle;
   font-style: normal;
-  text-align: center;
-  display: inherit;
+  text-transform: uppercase;
+  display: block;
 }
 
 .heading {
@@ -101,21 +117,23 @@ cite {
 
 /* ===== LINKS ===== */
 
-.footerLinkStyle {
-  font-family: Mon;
-  font-size: .75rem;
-  color: rgba(238, 238, 238, 0.42);
-  line-height: 2.708;
-  display: inline-block;
-}
-
 .copyright {
   composes: footerLinkStyle;
-  lost-column: 1/4;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  text-align: left;
+  padding-left: 1.5rem;
+  line-height: 4rem;
+  display: block;
+
+  @media bp-papa-bear {
+    text-align: center;
+    lost-column: 1/4;
+    display: inline-block;
+    padding: 0;
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .footerLinks {
@@ -124,33 +142,67 @@ cite {
 }
 
 .list {
-  lost-column: 3/4;
   margin: 0;
   padding: 0;
-  display: inline-block;
   list-style: none;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+
+  @media bp-papa-bear {
+    lost-column: 3/4;
+    float: right !important;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
 
   li {
-
-    &::after {
-      content: '|';
-      display: inline-block;
-      color: rgba(238, 238, 238, 0.2);
-      margin: 0 6px;
-      font-size: .625rem;
-    }
-
-    &:last-child::after {
-      content: '';
-    }
+    display: block;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.2);
 
     a {
+      padding-left: 1.5rem;
+      line-height: 4rem;
+      display: block;
       color: inherit;
+
+      &::after {
+        content: '〉';
+        font-size: 1.6rem;
+        display: inline-block;
+        float: right;
+        padding-right: 1.5rem;
+      }
+
       &:hover {
         color: white;
+      }
+    }
+
+    @media bp-papa-bear {
+      border: none;
+      display: inline-block;
+
+      &::after {
+        content: '|';
+        display: inline-block;
+        color: rgba(238, 238, 238, 0.2);
+        margin: 0 6px;
+        font-size: .625rem;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      a {
+        line-height: inherit;
+        padding-left: 0;
+        display: inline-block;
+
+        &::after {
+          display: none;
+        }
       }
     }
   }

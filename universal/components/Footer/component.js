@@ -55,7 +55,7 @@ const Footer = ({
           <img src={logoFooter} className={styles.logo} alt='Thrive Global' />
           <section className={styles.footerQuote}>
             {quote.map((paragraph, index) => <p className={styles.quote} key={index}>{quote}</p>)}
-            <cite>{citation}</cite>
+            <cite className={styles.cite}>{citation}</cite>
           </section>
           <section className={styles.social}>
             <div className={styles.socialIcons}>
@@ -75,9 +75,6 @@ const Footer = ({
           </section>
         </section>
         <section className={styles.footerBottom}>
-          <div className={styles.copyright}>
-            Thrive Global © 2016
-          </div>
           <ul className={styles.list} id='footerLinks'>
             {genLink('/about', 'About Us')}
             {genLink('/who-we-are#careers', 'Careers')}
@@ -91,6 +88,9 @@ const Footer = ({
             {genLink('/thrive/privacy', 'Privacy')}
             {genLink('/thrive/terms', 'Terms')}
           </ul>
+          <div className={styles.copyright}>
+            Thrive Global © 2016
+          </div>
         </section>
       </div>
     </footer>
