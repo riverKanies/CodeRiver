@@ -29,6 +29,12 @@ describe('(Component) BannerSuper', () => {
 
       expect(target.length).toEqual(1)
     })
+
+    it('has a default content image text', () => {
+      const target = subject.find('i')
+
+      expect(target.length).toEqual(1)
+    })
   })
   context('hasButton false', () => {
     const subject = shallow(<BannerSuper hasButton={false}/>)
@@ -42,8 +48,17 @@ describe('(Component) BannerSuper', () => {
   context('hasContentImage false', () => {
     const subject = shallow(<BannerSuper hasContentImage={false}/>)
 
-    it('has no button', () => {
+    it('has no content image', () => {
       const target = subject.find('#contentImage')
+
+      expect(target.length).toEqual(0)
+    })
+  })
+  context('hasContentImageText false', () => {
+    const subject = shallow(<BannerSuper hasContentImageText={false}/>)
+
+    it('has no content image text', () => {
+      const target = subject.find('i')
 
       expect(target.length).toEqual(0)
     })
