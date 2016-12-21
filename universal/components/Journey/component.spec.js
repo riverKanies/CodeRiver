@@ -33,6 +33,31 @@ describe('<Journey />', () => {
     const wrapper = mount(<Journey {...props}/>)
     const element = wrapper.find('ExternalLink').first()
 
-    expect(element.props().linkTo).toContain(props.pathway.share_text)
+    expect(element.props().linkTo).toContain(encodeURIComponent(props.pathway.share_text))
+  })
+
+  it('share link should contain microstep id', () => {
+    const wrapper = mount(<Journey {...props}/>)
+    const element = wrapper.find('ExternalLink').first()
+
+    expect(element.props().linkTo).toContain(encodeURIComponent(`#${props.microsteps[0].id}`))
+  })
+})
+
+describe('componentDidUpdate()', () => {
+  it('should focus on the appropriate anchor', () => {
+    const wrapper = mount(<Journey {...props}/>)
+    wrapper.setState({anchorHash: '#1'})
+    const anchor = wrapper.ref('#1')
+    wrapper.update()
+    expect(anchor.node === document.activeElement).toBe(true)
+  })
+
+  it('should not focus when the anchor does not match', () => {
+    const wrapper = mount(<Journey {...props}/>)
+    wrapper.setState({anchorHash: '#2'})
+    const anchor = wrapper.ref('#1')
+    wrapper.update()
+    expect(anchor.node === document.activeElement).toBe(false)
   })
 })

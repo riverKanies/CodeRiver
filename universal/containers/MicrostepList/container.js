@@ -11,7 +11,7 @@ import Filter from './Filter'
 type Props = {
   dispatch: Function,
   microsteps: Array<any>
-}
+};
 
 export class MicrostepsContainer extends React.Component {
   props: Props;

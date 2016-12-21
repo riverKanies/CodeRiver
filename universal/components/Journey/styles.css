@@ -44,3 +44,10 @@ This is the stylesheet for: Journeys
     display: inline-block;
   }
 }
+
+.hiddenAnchor {
+  opacity: 0;
+  filter:alpha(opacity=0);
+  width: 0;
+  overflow: hidden;
+}
