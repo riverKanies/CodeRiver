@@ -27,6 +27,13 @@ type Props = {
 
 const defaultImage = dummyImage
 
+const linkDefaults = {
+  linkText: 'Button Text',
+  linkTo: 'javascript:void(0)',
+  linkStyle: 'tealBG',
+  target: '_blank'
+}
+
 // True/False Logic For Button
 function renderButton ({
     hasButton,
@@ -43,18 +50,38 @@ function renderButton ({
 }
 
 // True/False Logic Content Image
+function renderContentImageText ({
+    hasContentImageText,
+    contentImageText
+  }: { hasContentImageText: boolean, contentImageText: string, contentImageText: string }) {
+  if (hasContentImageText) {
+    return (
+      <i className={styles.details}>
+        {contentImageText}
+      </i>
+    )
+  }
+  return null
+}
+
+// True/False Logic Content Image
 function renderContentImage ({
     hasContentImage,
     contentImage,
+    hasContentImageText,
     contentImageText,
     title
-  }: { hasContentImage: boolean, contentImage: string, contentImageText: string, title: Array<string> }) {
+  }: {
+    hasContentImage: boolean,
+    contentImage: string,
+    hasContentImageText: boolean,
+    contentImageText: string,
+    title: Array<string>
+  }) {
   if (hasContentImage) {
     return (
       <span id='contentImage' className={styles.contentImage}>
-        <i className={styles.details}>
-          {contentImageText}
-        </i>
+        {renderContentImageText({ hasContentImageText, contentImageText })}
         <img src={contentImage} alt={title} />
       </span>
     )
@@ -72,7 +99,7 @@ const BannerSuper = ({
   contentImage = extraImage,
   hasContentImageText = true,
   contentImageText = 'in partnership with',
-  link
+  link = linkDefaults
 }: Props) => {
   return (
     <section className={styles.bannerSuper}>
@@ -88,7 +115,9 @@ const BannerSuper = ({
         </section>
         {renderButton({ hasButton, link })}
       </div>
-      {renderContentImage({ hasContentImage, contentImage, contentImageText, title })}
+      {renderContentImage({
+        hasContentImage, contentImage, hasContentImageText, contentImageText, title
+      })}
     </section>
   )
 }
