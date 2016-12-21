@@ -23,11 +23,11 @@ const FullscreenBanner = ({
   height = 'fullHeight'
 }: Props) => {
   return (
-    <section className={styles[height]}>
+    <section className={`${styles[height]} banner`}>
       <span className={styles[bannerImageOverlay]}>
         <img className={styles.bannerImage} src={bannerImage} alt={title} />
       </span>
-      <div className={styles[contentPosition]}>
+      <div className={`${styles[contentPosition]} bannerContent`}>
         <header className={styles.bannerHeader}>
           <h1 className={styles.h1}>{title}</h1>
         </header>
