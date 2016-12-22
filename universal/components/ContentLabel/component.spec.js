@@ -6,7 +6,7 @@ describe('(Component) ContentLabel', () => {
   context('default props', () => {
     const subject = shallow(<ContentLabel />)
 
-    it('renders no lable if we dont pass one in, () => {
+    it('renders no lable if we dont pass one in', () => {
       const target = subject.find('i')
 
       expect(target.length).toEqual(0)
