@@ -12,7 +12,7 @@ const ContentLabel = ({
   label = 'Label Name',
   labelColor = 'defaultLabel'
 }: Props) => {
-  if (!label) {
+  if (label === 'Label Name') {
     return false
   }
   return (
