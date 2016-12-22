@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 const LOCAL_STORAGE_KEY = 'thrive_user_headers'
 
 function clientUrl () {
-  return (location) ? location.origin : ''
+  return (location && location.origin) ? location.origin : ''
 }
 
 export const CLIENT_URL = clientUrl()
@@ -36,10 +36,10 @@ export function saveHeaderObject (h) {
 }
 
 export function getLocalStorageHeaders () {
-  return JSON.parse(localStorage.getItem('thrive_user_headers'))
+  return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
 }
 
-export const clearHeaders = () => localStorage.setItem(LOCAL_STORAGE_KEY, null)
+export const clearHeaders = () => localStorage.setItem(LOCAL_STORAGE_KEY, '')
 
 function parseResponse (response) {
   saveHeaders(response.headers)

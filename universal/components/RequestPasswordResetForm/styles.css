@@ -4,7 +4,7 @@
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 /* Profile Styles */
-.login {
+.passwordReset {
   display: block;
   width: 100%;
   height: auto;
@@ -35,8 +35,13 @@
   text-align: center;
 }
 
+.message {
+  composes: greeting;
+  margin: 2rem 0rem;
+}
+
 /* Login Dialogue, .container is the column */
-.loginDialogue {
+.passwordResetDialogue {
   lost-center: containerWidth;
   margin: 0 auto;
   padding: containerPadding;
@@ -59,7 +64,7 @@
 
 /* All Form Styles */
 .socialSignIn,
-.loginForm,
+.passwordResetForm,
 .getInHere
  {
   appearance: none;
@@ -76,18 +81,6 @@
     width: 100%;
     float: left;
     clear: both;
-  }
-}
-
-.forgotPasswordLink {
-  color: bodyCopy;
-  margin-top: 1em;
-  lost-column: 1;
-  float: left;
-  clear: both;
-  text-align: center;
-  &:hover {
-    color: ThriveTeal;
   }
 }
 

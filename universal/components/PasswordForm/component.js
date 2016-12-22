@@ -10,12 +10,6 @@ export default function Form (props: FormType) {
     <form className={styles.changePassword} onSubmit={handleSubmit}>
       <fieldset className={styles.password}>
         <Field
-          theme='thriveInput'
-          component={Input}
-          type='password'
-          name='current_password'
-          label='Old Password' />
-        <Field
           component={Input}
           type='password'
           name='password'

@@ -7,7 +7,6 @@ import { passwordFormSelector } from 'modules/UserSession/selectors'
 import Form from './component'
 
 const validate = createValidator({
-  current_password: [required],
   password: [required, minLength(8)],
   password_confirmation: [required, match('password')]
 })
