@@ -19,7 +19,8 @@ storiesOf('Header', module)
     return (
       <WithNotes notes={notes}>
         <Header
-          bigHeader={boolean('Do you need the big site header?', Props.bigHeader, Props.bigHeader[1])}
+          bigHeader={boolean('Do you need the big site header?', Props.bigHeader,
+          Props.bigHeader[1])}
         />
       </WithNotes>
     )
