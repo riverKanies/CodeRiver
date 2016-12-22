@@ -13,7 +13,6 @@
   1. [Routing](#routing)
 1. [Testing](#testing)
 1. [Deployment](#deployment)
-    1. [Static Deployments With Surge](#static-deployments)
 1. [Production Optimization](#production-optimization)
 1. [Build System](#build-system)
   1. [Configuration](#configuration)
@@ -54,6 +53,7 @@ are additional scripts at your disposal:
 |`npm run <script>`|Description|
 |------------------|-----------|
 |`start`|Serves your app at `localhost:3000`. HMR will be enabled in development.|
+|`start:test`|Serves compiled assets in production mode at localhost:3000 |
 |`compile`|Compiles the application to disk (`~/dist` by default).|
 |`clean:project`|Runs `npm prune` && `npm cache clear` && `npm install`.|
 |`dev`|Same as `npm start`, but enables nodemon for the server as well.|
@@ -61,10 +61,7 @@ are additional scripts at your disposal:
 |`test`|Runs unit & feature tests with Jest.|
 |`test:features`|Runs just feature tests with Jest and Nightmare.|
 |`test:specs`|Runs just unit tests with Jest.|
-|`test:configs`|Generates the Jest test config files for unit and feature testing.|
 |`test:watch`|Runs the Jest spec tests and watches files for changes to rerun tests.|
-|`deploy:staging`|Compiles assets and deploys to staging env via Surge.|
-|`deploy:prod`|Same as `deploy:staging` but overrides `NODE_ENV` to "production".|
 |`lint`|Lint all `.js` files.|
 |`lint:fix`|Lint and fix all `.js` files. [Read more on this](http://eslint.org/docs/user-guide/command-line-interface.html#fix).|
 |`storybook:start`|Starts a storybook on the specified local port|
@@ -101,8 +98,12 @@ Nightwatch feature spec runner.
 ## Deployment
 
 The client application is currently hosted on heroku, backed by an express
-server with caching managed by cloudflare. In order to deploy a new feature to
-stage do the following:
+server with caching managed by cloudflare.
+
+### Staging Deployment
+
+In order to deploy a new feature to
+[staging](https://thrive-marketing-stage.herokuapp.com) do the following:
 
 * submit a pull request to master with the updated application code and a good
   description of what you did
@@ -110,11 +111,26 @@ stage do the following:
 * get an approval from someone else on the thrive team
 * merge your branch into master
 
-Once branches are merged to master, they are auto-deployed to
-[staging](https://thrive-marketing-stage.herokuapp.com)
+Once branches are merged to master, they are auto-deployed via heroku
 
-In order to deploy to production, manually deploy the master branch to through
-the heroku GUI for the app: https://thrive-marketing.herokuapp.com
+### Production Deployment
+
+1. Cut branch from master called deploy/production-yyyy-mm-dd-HH-MM
+1. Create a PR from that new branch to production with the following template
+  ```
+  merging the following updates from master, you can verify staging here
+  [staging](https://thrive-marketing-stage.herokuapp.com)
+
+  User facing changes:
+  _list all user facing changes here_
+
+  Non-User facing changes:
+  _list all non user facing changes here_
+
+  Any other considerations?
+  _anything else that comes to mind_
+  ```
+1. Once the PR has been approved and merged it will auto-deploy to production
 
 ## Build System
 
@@ -203,9 +219,6 @@ minification and autoprefixing, and will be extracted to a `.css` file during
 production builds.
 
 #### Configured PostCSS Plugins
-* [stylelint](https://github.com/stylelint/stylelint) - CSS linting via [default
-  community
-standards](https://github.com/stylelint/stylelint-config-standard/blob/master/index.js)
 * [cssNext](http://cssnext.io/) - Like Babel but for new CSS specs.
 * [precss](https://github.com/jonathantneal/precss) - Allows you to use
   SASS-like syntax in CSS files.
@@ -213,9 +226,6 @@ standards](https://github.com/stylelint/stylelint-config-standard/blob/master/in
   powerful grid system.
 * [fontMagician](https://github.com/jonathantneal/postcss-font-magician) -
   Creates all `@font-face` rules automagically.
-* [browserReporter](https://github.com/postcss/postcss-browser-reporter) - Like
-  Redbox but for CSS. It overlays CSS errors at the top of the browser window so
-you don't have to constantly check the console to see if something is broken.
 
 You can browser additional plugins at [postcss.parts](http://postcss.parts/)
 
@@ -249,7 +259,6 @@ example in the end.
 ## Contributing
 
 Please review the [contributing guidelines](/.github/CONTRIBUTING.md)
-
 
 ## Thanks
 
