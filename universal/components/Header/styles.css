@@ -247,7 +247,7 @@
   transition: all 150ms ease-in-out;
   &:hover {
     background: white;
-    color: TrhiveTeal;
+    color: ThriveTeal;
   }
   @media bp-papa-bear {
     display: block;
@@ -277,12 +277,6 @@
       opacity: .85;
       transition: all 250ms cubic-bezier(.04,.39,.94,.53);
       z-index: 9999;
-    }
-  }
-  &:hover {
-    color: ThriveTeal;
-    &::after {
-      bottom: .25rem;
     }
   }
 }
@@ -343,10 +337,19 @@
       padding-right: 2rem;
     }
   }
-  .link,
+  .link {
+    @media bp-papa-bear {
+      padding: 1.35rem 0 1rem;
+    }
+  }
   .linkUtility {
     @media bp-papa-bear {
       padding: 1.35rem 0 1rem;
+      &:hover {
+        &::after {
+          bottom: .25rem;
+        }
+      }
     }
   }
 }
@@ -427,12 +430,19 @@
   }
   .utilityNav {
     @media bp-papa-bear {
-      margin: -2.5rem 2rem 0 0;
+      margin: -3.75rem 2rem 0 0;
     }
   }
-  .utilityLink {
+  .linkUtility {
     @media bp-papa-bear {
       padding: 1.25rem 0 1rem 0;
+      background: none;
+      border-radius: 0;
+      &:hover {
+        &::after {
+          bottom: .5rem;
+        }
+      }
     }
   }
 }

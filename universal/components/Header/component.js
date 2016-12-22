@@ -14,7 +14,7 @@ type Props = {
   bigHeader: boolean,
   isLoggedIn: boolean,
   dispatch: Function,
-  pathname: string
+  pathname: any
 }
 
 export class Header extends React.Component {
