@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TextBanner
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, ThriveDarkPurple, lightGray, medGray, Mon, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, TheFader, ThriveBlue, ThriveBlurple, ThriveDarkPurple, lightGray, medGray, Mon, MonBlack, MonBold, Playfair, PlayfairBold, PlayBlackItalic from 'all';
 
 /* Base Section Styling + Composed Styles */
 .textBanner {
@@ -22,8 +22,16 @@
 }
 .default {
   composes: textBanner;
+  padding: 1rem 0;
   background-color: white;
   color: bodyCopy;
+  @media bp-mama-bear {
+    padding: 1rem 0;
+  }
+  @media bp-papa-bear {
+    padding: 2rem 0;
+  }
+
 }
 .image {
   composes: textBanner;
@@ -82,12 +90,21 @@
   color: bodyCopy;
 }
 
+/* Divider True/False */
 .divider {
   border-bottom: 1px solid #3c3d41;
   width: 4rem;
   margin: 0 auto;
   margin-bottom: 2rem;
   display: flex;
+}
+
+.dividerTrue {
+  composes: divider;
+}
+
+.dividerFalse {
+  display: none;
 }
 
 /* Container Styles */
@@ -116,18 +133,28 @@
   @media bp-papa-bear {
     margin: 0 auto papaHeader auto;
   }
-  h1 {
-    text-align: inherit;
-    color: inherit;
-    font-family: MonBold;
-    @media bp-mama-bear {
-      font-size: 3.25rem;
-    }
-    @media bp-papa-bear {
-      font-size: 4rem;
-      margin-top: 1.25rem;
-    }
+}
+
+.titleFont {
+  text-align: inherit;
+  color: inherit;
+  font-family: MonBold;
+  @media bp-mama-bear {
+    font-size: 3.25rem;
   }
+  @media bp-papa-bear {
+    font-size: 4rem;
+    margin-top: 1.25rem;
+  }
+}
+
+/* Fonts */
+.playfair {
+  composes: titleFont;
+  font-family: PlayBlackItalic;
+}
+.mon {
+  composes: titleFont;
 }
 
 /* Column Styles */
@@ -145,10 +172,12 @@
   text-align: inherit;
   color: inherit;
   h3 {
+    font-size: 1.125rem;
+    line-height: 150%;
+    font-weight: 400;
     text-align: center;
     color: inherit;
-    font-family: PlayfairBold;
-    font-style: italic;
+    font-family: Mon;
     &:first-child {
       margin-bottom: 0;
     }

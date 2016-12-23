@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, babyMargin, mamaPadding, mamaMargin, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, gradientPurpleTeal, ThriveBlue, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, container930, containerWidth, containerPadding, babyPadding, babyMargin, mamaPadding, mamaMargin, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, gradientPurpleTeal, ThriveBlue, backgroundGray, Mon, lightGray from 'all';
 
 .ctaSection {
   lost-utility: clearfix;
@@ -52,6 +52,13 @@
   }
 }
 
+.pattern {
+  composes: ctaSection;
+  background-color: backgroundGray;
+  background-image: url('./assets/growAriannaPattern.png');
+  background-repeat: repeat;
+}
+
 .defaultLeft {
   lost-center: containerWidth;
   margin: 0 auto;
@@ -97,6 +104,14 @@
   }
 }
 
+.fill930 {
+  max-width: 930px;
+  padding: 1.5rem;
+  @media bp-mama-bear {
+    padding: 1.5rem;
+  }
+}
+
 
 .header {
   width: 100%;
@@ -117,6 +132,16 @@
     float: left;
   }
 }
+
+.titleTrue {
+  composes: header;
+}
+
+.titleFalse {
+  display: none;
+}
+
+
 
 .sectionContent {
   lost-utility: clearfix;
@@ -139,7 +164,8 @@
   composes: sectionContent;
 
   > p {
-    font-family: Playfair;
+    font-family: Mon;
+    font-weight: 400;
     @media bp-mama-bear {
       font-size: 1.5rem;
     }

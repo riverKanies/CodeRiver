@@ -13,6 +13,7 @@
 @value bp-elder-bear: (min-width: elderBear);
 
 /* Container max-width cap */
+@value container930: 58.125rem;
 @value containerWidth: 90rem;
 @value containerPadding: 1.875rem;
 @value microstepContainerWidth: 43.75rem;
@@ -53,8 +54,8 @@
 @value almostBlack: #08090d;
 
 @value bodyCopy: #2b2a28;
-
 @value ThriveTeal: #71CBD2;
+@value ThriveAltTeal: #00859B;
 @value ThriveBlue: #0053D4;
 @value ThriveDarkBlue: #144085;
 @value ThriveRoyalBlue: #3F17A8;

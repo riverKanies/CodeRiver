@@ -3,7 +3,7 @@ module.exports = {
     browser
       .url(browser.globals.local_url + 'press')
       .waitForElementVisible('#textBannerTitle', 1000)
-      .assert.containsText('h1', 'Press')
+      .assert.containsText('h1', 'In the Press')
       .end()
   }
 }

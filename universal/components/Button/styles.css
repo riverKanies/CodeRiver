@@ -76,6 +76,12 @@
     padding: 10px 60px 8px;
   }
 
+  &-blackText {
+    composes: teal;
+    color: black;
+    padding: 10px 40px 8px;
+  }
+
   &:hover {
     background-color: ThriveTeal;
     color: #fff;

@@ -2,13 +2,12 @@
 import React from 'react'
 import styles from './styles'
 import image_one from './assets/defaultImage.png'
-import image_two from './assets/image2.png'
+import image_two from './assets/ft-arianna.jpg'
 
 type ImageProps = {
   image: any,
   link: string | null,
-  caption: string | null,
-  column: 'oneCol' | 'twoCol'
+  caption: string | null
 }
 
 type Props = {
@@ -24,12 +23,11 @@ type Props = {
 const RenderImage = ({
   link,
   caption,
-  column,
   image = image_one
 }: ImageProps) => {
   if (link) {
     return (
-      <div className={styles[column]}>
+      <div className={styles.column}>
         <a className={styles.imgLink} href={link} target='_blank'>
           <img className={styles.image} src={image} />
           <figcaption className={styles.caption}>{caption}</figcaption>
@@ -38,7 +36,7 @@ const RenderImage = ({
     )
   }
   return (
-    <div className={styles[column]}>
+    <div className={styles.column}>
       <img className={styles.image} src={image} />
       <figcaption className={styles.caption}>{caption}</figcaption>
     </div>
@@ -46,14 +44,14 @@ const RenderImage = ({
 }
 
 const defaultImages = [
-  { image: image_one, link: null, caption: null, column: 'twoCol' },
-  { image: image_two, link: null, caption: null, column: 'twoCol' }
+  { image: image_one, link: null, caption: null },
+  { image: image_two, link: null, caption: null }
 ]
 
-function TwoColImage ({
+function PressArticles ({
   bgColor = 'default',
   hasTitle = 'titleFalse',
-  title = 'TwoColImage',
+  title = 'PressArticles',
   images = defaultImages
 }: Props) {
   return (
@@ -70,4 +68,4 @@ function TwoColImage ({
   )
 }
 
-export default TwoColImage
+export default PressArticles

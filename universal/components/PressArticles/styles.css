@@ -1,11 +1,11 @@
 /*
-  This is the stylesheet for: TwoColImage
+  This is the stylesheet for: PressArticles
 */
 
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, container930, containerPadding, babyMargin, babyHeader, mamaHeader, papaHeader, Mon, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveBlue, ThriveBlurple, ThrivinRock, lightGray from 'all';
 
 /* Base Section Styling + Composed Styles */
-.twoColImage {
+.pressArticles {
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -22,7 +22,7 @@
   }
 }
 .default {
-  composes: twoColImage;
+  composes: pressArticles;
   background: white;
   color: bodyCopy;
 
@@ -33,22 +33,22 @@
   }
 }
 .transparent {
-  composes: twoColImage;
+  composes: pressArticles;
   background: transparent;
   color: bodyCopy;
 }
 .lightGray {
-  composes: twoColImage;
+  composes: pressArticles;
   background: lightGray;
   color: bodyCopy;
 }
 .purple {
-  composes: twoColImage;
+  composes: pressArticles;
   background: ThriveBlurple;
   color: white;
 }
 .blue {
-  composes: twoColImage;
+  composes: pressArticles;
   background: ThriveBlue;
   color: white;
 }
@@ -110,25 +110,15 @@
     margin-bottom: 0;
   }
   @media bp-mama-bear {
+    lost-column: 1/2;
     margin-bottom: 3rem;
   }
   .image {
     display: block;
     width: 100%;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 1rem 0;
     padding: 0 0;
     float: left;
-  }
-}
-
-.oneCol {
-  composes: column;
-}
-.twoCol {
-  composes: column;
-
-  @media bp-mama-bear {
-    lost-column: 1/2;
   }
 }
 
@@ -136,6 +126,6 @@
   font-family: Mon;
   color: ThrivinRock;
   @media bp-grand-bear {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 }

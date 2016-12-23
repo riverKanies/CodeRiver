@@ -6,8 +6,11 @@ type Props = {
   bgColor: 'default' | 'image' | 'imageTeal' | 'imageGrey' | 'imageDark' |
   'imageBlue' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'gradient',
   hasTitle: 'titleTrue' | 'titleFalse',
+  hasDivider: 'dividerTrue' | 'dividerFalse',
+  titleFont: 'mon' | 'playfair',
   title: string,
-  subTitle: any
+  subTitle: any,
+  divider: any
 }
 
 function renderSubtitle (subTitle: Array<string> | string) {
@@ -21,15 +24,17 @@ const TextBanner = ({
   bgColor = 'imageTeal',
   hasTitle = 'titleTrue',
   subTitle = ['Sub Title'],
+  hasDivider = 'dividerTrue',
+  titleFont = 'playfair',
   title = 'Title'
 }: Props) => {
   return (
     <section className={styles[bgColor]}>
       <div className={styles.container}>
-        <header className={styles.title}>
-          <h1 id='textBannerTitle'>{title}</h1>
-        </header>
-        <div className={styles.divider} />
+        <section className={styles.title}>
+          <h1 className={styles[titleFont]} id='textBannerTitle'>{title}</h1>
+        </section>
+        <div className={styles[hasDivider]} />
         <section className={styles.columnWrap}>
           <div className={styles.column}>
             {renderSubtitle(subTitle)}
