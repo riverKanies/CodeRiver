@@ -46,7 +46,8 @@ const storeInfo = {
       <dt>Date</dt>
       <dd>December 1 to January 15</dd>
       <dt>Hours</dt>
-      <dd>10am to 7pm, daily</dd>
+      <dd>10am to 6pm, Monday through Saturday</dd>
+      <dd>11am to 6pm, Sunday</dd>
       <dt>Phone</dt>
       <dd>(646) 649-4223</dd>
       <dt>Email</dt>
