@@ -1,1 +1,19 @@
-.container {}
+@value bp-mama-bear, bp-papa-bear, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa from 'all';
+
+.emailLink {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: negBaby auto babyMargin 0;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  background: white;
+  text-align: center;
+  @media bp-mama-bear {
+    margin: negMama auto mamaMargin 0;
+  }
+  @media bp-papa-bear {
+    margin: negMama auto papaMargin 0;
+  }
+}
