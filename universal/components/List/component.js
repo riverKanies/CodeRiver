@@ -46,16 +46,26 @@ function renderList ({
   )
 }
 
+const defaultList = [
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item'
+]
+
 const List = ({
   hasTitle = true,
   title = 'List Title',
   bulletList = true,
-  items = [
-    'Item One',
-    'Item Two',
-    'Item Three',
-    'Item Four'
-  ],
+  items = defaultList,
   itemWidth = 'half'
 }: Props) => {
   return (
