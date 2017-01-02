@@ -1,5 +1,4 @@
-@value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, MonLight, bodyCopy from 'all';
 
 /* Component Container Styles */
 .listSection {
@@ -74,8 +73,17 @@
 
 /* li widths */
 .itemWidth {
-  margin: 0 0;
+  margin: 0 0 .25em 0;
   padding: 0 0;
+  font-family: MonLight;
+  font-size: .88em;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-align: inherit;
+  color: bodyCopy;
+  @media bp-mama-bear {
+    font-size: 1em;
+  }
 }
 .full {
   composes: itemWidth;
