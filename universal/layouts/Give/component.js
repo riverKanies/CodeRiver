@@ -8,6 +8,7 @@ import TextBanner from 'components/TextBanner'
 import FourColImage from 'components/FourColImage'
 import OneColTextWithHeader from 'components/OneColTextWithHeader'
 import FeaturedStory from 'components/FeaturedStory'
+import ExternalLink from 'components/ExternalLink'
 
 import hughImage from './assets/hugh.jpg'
 
@@ -42,9 +43,15 @@ const trainNonProfits = {
     `Thrive Global is proud to support nonprofit organizations including Khan Academy,
     Global Citizen, Alliance for Children's Rights, EduCare Foundation
     and Lean In with free trainings to enhance well-being and performance.`,
-    ` Interested in bringing Thrive to your nonprofit?
-    E-mail <a href="mailto:nonprofits@thriveglobal.com">nonprofits@thriveglobal.com</a>`
+    ` Interested in bringing Thrive to your nonprofit?`
   ]
+}
+
+const emailButton = {
+  linkText: 'Email Us',
+  linkTo: 'mailto:nonprofits@thriveglobal.com',
+  linkStyle: 'violet',
+  target: '_self'
 }
 
 const globalPovertyProject = {
@@ -111,6 +118,9 @@ export const GiveView = () => (
       <TextBanner {...giveBanner} />
       <FeaturedStory {...thriveFoundation} />
       <OneColTextWithHeader {...trainNonProfits} />
+      <section className={styles.emailLink}>
+        <ExternalLink {...emailButton} />
+      </section>
       <BrandRow />
       <QuoteSection {...globalPovertyProject} />
       <FeaturedStory {...GivingisGood} />
