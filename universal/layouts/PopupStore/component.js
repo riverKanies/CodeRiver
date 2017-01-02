@@ -63,7 +63,7 @@ const storeInfo = {
 const ourBrands = {
   hasTitle: true,
   title: 'Thrive Global Commerce Partners',
-  listType: 'bullets',
+  bulletList: true,
   items: [
     'Acorns',
     'Aloha',
@@ -128,7 +128,7 @@ const ourBrands = {
     'Withings',
     'Zeel'
   ],
-  itemWidth: 'full'
+  itemWidth: 'third'
 }
 
 // Popup Page Layout

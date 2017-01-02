@@ -5,32 +5,64 @@ import styles from './styles'
 type Props = {
   hasTitle: boolean,
   title: string,
-  listType: 'bullets' | 'numbers' | 'blank' | 'underline',
+  // defaultList = ul
+  bulletList: boolean,
   items: Array<string>,
-  itemWidth: 'full' | 'half'
+  itemWidth: 'full' | 'half' | 'quarter' | 'third'
 };
+
+// Logic for renderTitle
+function renderTitle ({
+  hasTitle,
+  title
+}: { hasTitle: boolean, title: string }) {
+  if (hasTitle) {
+    return (
+      <header className={styles.header}>
+        <h3 className={styles.h3}>{title}</h3>
+      </header>
+    )
+  }
+  return null
+}
+
+// Logic for renderList
+function renderList ({
+  bulletList,
+  items,
+  itemWidth
+}: { bulletList: boolean, items: Array<string>, itemWidth: string }) {
+  if (bulletList) {
+    return (
+      <ul className={styles.ul}>
+        {items.map((listItem, index) => <li className={styles[itemWidth]} key={index}>{listItem}</li>)}
+      </ul>
+    )
+  }
+  return (
+    <ol className={styles.ol}>
+      {items.map((listItem, index) => <li className={styles[itemWidth]} key={index}>{listItem}</li>)}
+    </ol>
+  )
+}
 
 const List = ({
   hasTitle = true,
   title = 'List Title',
-  listType = 'bullets',
+  bulletList = true,
   items = [
     'Item One',
     'Item Two',
     'Item Three',
     'Item Four'
   ],
-  itemWidth = 'full'
+  itemWidth = 'half'
 }: Props) => {
   return (
-    <section className={styles.list}>
+    <section className={styles.listSection}>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h3>{title}</h3>
-        </header>
-        <ul className={styles[listType]}>
-          {items.map((listItem, index) => <li key={index}>{listItem}</li>)}
-        </ul>
+        {renderTitle({hasTitle, title})}
+        {renderList({bulletList, items, itemWidth})}
       </div>
     </section>
   )
