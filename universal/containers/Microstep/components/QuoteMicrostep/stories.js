@@ -16,7 +16,7 @@ Mentally preparing for what’s to come tomorrow will alleviate unknowns and str
 
 ----
 
-![Author Image](http://placekitten.com/g/600/600)
+![Author Image]('./assets/quote_imagePlaceholder.png')
 
 #### *by* Author Name
 ###### Wellbeing Consultant

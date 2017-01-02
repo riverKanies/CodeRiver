@@ -22,8 +22,8 @@ caught up in the storm you can return to the "eye" through this simple forgivene
 const props = {
   microstep: {
     description: markdown,
-    cta_link: 'https://placekitten.com/',
-    cta_text: 'cats!'
+    cta_link: './assets/_quote_imagePlaceholder.png',
+    cta_text: 'CTA Link'
   }
 }
 
