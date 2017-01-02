@@ -1,16 +1,26 @@
 @value breakpoints: 'all';
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from breakpoints;
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from breakpoints;
 
-.listContainer {
-  @media bp-baby-bear {
-    lost-column: 1;
-  }
+.list {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  clear: both;
   @media bp-mama-bear {
-    lost-column: 6/12;
+    padding: mamaPadding;
   }
   @media bp-papa-bear {
-    lost-column: 9/12;
+    padding: papaPadding;
   }
+}
+
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: 0 containerPadding;
+  float: none;
 }
 
 .header {
@@ -21,9 +31,9 @@
   float: left;
   position: relative;
   text-align: left;
-    h3 {
-      text-align: inherit;
-    }
+}
+.h3 {
+  text-align: inherit;
 }
 
 .list {
@@ -50,3 +60,16 @@
         }
     }
 }
+
+
+
+
+/*@media bp-baby-bear {
+  lost-column: 1;
+}
+@media bp-mama-bear {
+  lost-column: 6/12;
+}
+@media bp-papa-bear {
+  lost-column: 9/12;
+}*/

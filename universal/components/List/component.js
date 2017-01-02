@@ -10,10 +10,6 @@ type Props = {
   itemWidth: 'full' | 'half'
 };
 
-const renderList = (items) => items.map(
-  (item, idx) => (<li key={idx}>{item.text}</li>)
-)
-
 const List = ({
   hasTitle = true,
   title = 'List Title',
@@ -27,14 +23,16 @@ const List = ({
   itemWidth = 'full'
 }: Props) => {
   return (
-    <div className={styles.listContainer}>
-      <header className={styles.header}>
-        <h3>{title}</h3>
-      </header>
-      <ul className={styles[listType]}>
-        {renderList(items)}
-      </ul>
-    </div>
+    <section className={styles.list}>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <h3>{title}</h3>
+        </header>
+        <ul className={styles[listType]}>
+          {items.map((listItem, index) => <li key={index}>{listItem}</li>)}
+        </ul>
+      </div>
+    </section>
   )
 }
 
