@@ -7,6 +7,7 @@ module.exports = [
   '/apps',
   '/corporate-pledge',
   '/contact',
+  '/reset-password',
   '/press',
   '/give',
   '/glassdoor',

@@ -23,6 +23,7 @@ import CognitoForm from 'layouts/Cognito'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
+import ResetPassword from 'layouts/ResetPassword'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
 import About from 'layouts/About'
@@ -149,6 +150,10 @@ export const createRoutes = (store) => ([
       {
         path: 'profile',
         component: Profile
+      },
+      {
+        path: 'reset-password',
+        component: ResetPassword
       },
       {
         path: 'login',

@@ -1,5 +1,6 @@
 /* @flow */
 import {
+  CLIENT_URL,
   httpGet,
   httpPost,
   httpPut,
@@ -15,6 +16,9 @@ export const KEY = 'user-session'
 // Action Creators
 export const actions = {
   ...baseActions(KEY),
+  reqPassResetPending: `${KEY}/request-password-reset-pending`,
+  reqPassResetFailure: `${KEY}/request-password-reset-failure`,
+  reqPassResetSuccess: `${KEY}/request-password-reset-success`,
   registerPostLoginSSO: `${KEY}/register-post-login-sso`,
   clearPostLoginSSO: `${KEY}/clear-post-login-sso`,
   clearUserMessage: `${KEY}/clear-user-message`,
@@ -156,6 +160,18 @@ export function updatePassword (data: any) {
       actions.updateFailure
     ],
     callAPI: () => httpPut('/api/auth', data)
+  }
+}
+
+export function requestResetPassword (data: any) {
+  const redirect_url = `${CLIENT_URL}/reset-password`
+  return {
+    types: [
+      actions.reqPassResetPending,
+      actions.reqPassResetSuccess,
+      actions.reqPassResetFailure
+    ],
+    callAPI: () => httpPost('/api/auth/password', { ...data, redirect_url })
   }
 }
 
