@@ -4,6 +4,7 @@ import styles from './styles'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import FullWidthTwoCol from 'components/FullWidthTwoCol'
 import Banner from 'components/Banner'
+import List from 'components/List'
 
 // Assets
 import streetImg from './assets/419BroomeStreetscape.jpg'
@@ -46,8 +47,7 @@ const storeInfo = {
       <dt>Date</dt>
       <dd>December 1 to January 15</dd>
       <dt>Hours</dt>
-      <dd>10am to 6pm, Monday through Saturday</dd>
-      <dd>11am to 6pm, Sunday</dd>
+      <dd>10am to 7pm, daily</dd>
       <dt>Phone</dt>
       <dd>(646) 649-4223</dd>
       <dt>Email</dt>
@@ -60,12 +60,84 @@ const storeInfo = {
   bgImage: streetImg
 }
 
+const ourBrands = {
+  hasTitle: true,
+  title: 'Thrive Global Commerce Partners',
+  bulletList: true,
+  items: [
+    'Acorns',
+    'Aloha',
+    'Aros',
+    'Audible',
+    'Breathometer',
+    'Coco-Mat',
+    'Color Genomics Inc',
+    'Consumer Physics',
+    'Crowdrise',
+    'Deepstream VR',
+    'Dermalogica',
+    'Doctors on Demand',
+    'Doppler Labs',
+    'Claritas Mind Science',
+    'FiftyThree',
+    'Fitbit',
+    'The Goodnight Company',
+    'Gunnar Optics',
+    'Happiest Baby',
+    'Headspace',
+    'Heartmath',
+    'Hello, Inc.',
+    'Hill House Home',
+    'House of Matcha',
+    'Humanscale',
+    'Hyperice',
+    'Iluminage',
+    'Isabella Huffington',
+    'Juice Beauty',
+    'Kikki-K',
+    'Kurbo',
+    'LAFCO',
+    'Levitas',
+    'La Roche Posay',
+    'Lifespan Fitness',
+    'Lighting Science',
+    'Lumoid',
+    'Moving Art',
+    'Murad',
+    'Muse',
+    'Peloton',
+    'Philips',
+    'Pil-ookie',
+    'Pour Les Femmes',
+    'Quell Relief',
+    'Rebecca Minkoff',
+    'Restworks',
+    'S\'well',
+    'Sakara Life',
+    'Seedlings',
+    'Spire',
+    'Technogym',
+    'Thrive Market',
+    'Trishla Jain',
+    'Tribute.co',
+    'Twist',
+    'Ubiome',
+    'Upright Tech',
+    'Vida Health',
+    'Vinaya',
+    'Withings',
+    'Zeel'
+  ],
+  itemWidth: 'third'
+}
+
 // Popup Page Layout
 export const PopupStoreView = () => (
   <main role='main' className={styles.popupStore}>
     <Banner {...banner} />
     <HalfTextOverlay {...storeInfo} />
     <FullWidthTwoCol {...storeDescrip} />
+    <List {...ourBrands} />
   </main>
 )
 
