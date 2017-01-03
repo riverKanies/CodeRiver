@@ -5,7 +5,6 @@ import styles from './styles'
 type Props = {
   hasTitle: boolean,
   title: string,
-  // defaultList = ul
   bulletList: boolean,
   items: Array<string>,
   itemWidth: 'full' | 'half' | 'quarter' | 'third'
@@ -63,7 +62,7 @@ const defaultList = [
 
 const List = ({
   hasTitle = true,
-  title = 'List Title',
+  title,
   bulletList = true,
   items = defaultList,
   itemWidth = 'half'
