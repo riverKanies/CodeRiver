@@ -5,7 +5,6 @@ import styles from './styles'
 type Props = {
   hasTitle: boolean,
   title: string,
-  // defaultList = ul
   bulletList: boolean,
   items: Array<string>,
   itemWidth: 'full' | 'half' | 'quarter' | 'third'
@@ -35,37 +34,22 @@ function renderList ({
   if (bulletList) {
     return (
       <ul className={styles.ul}>
-        {items.map((listItem, index) => <li className={styles[itemWidth]} key={index}>{listItem}</li>)}
+        {items.map((list, index) => <li className={styles[itemWidth]} key={index}>{list}</li>)}
       </ul>
     )
   }
   return (
     <ol className={styles.ol}>
-      {items.map((listItem, index) => <li className={styles[itemWidth]} key={index}>{listItem}</li>)}
+      {items.map((list, index) => <li className={styles[itemWidth]} key={index}>{list}</li>)}
     </ol>
   )
 }
-
-const defaultList = [
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item',
-  'List Item'
-]
 
 const List = ({
   hasTitle = true,
   title = 'List Title',
   bulletList = true,
-  items = defaultList,
+  items,
   itemWidth = 'half'
 }: Props) => {
   return (
