@@ -40,7 +40,7 @@
       },
       "desiredCapabilities": {
         "browserName": "chrome",
-        "marionette": true
+        "marionette": false
       },
       "selenium" : {
         "start_process" : false

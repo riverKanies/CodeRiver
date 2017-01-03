@@ -1,0 +1,19 @@
+@value all: 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
+@value bodyCopy, ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
+
+.container {
+  > a {
+    width: 100%;
+    display: block;
+    margin: 0 0 1.5rem 0;
+  }
+  margin-bottom: 2.5rem;
+}
+
+.errors {
+  margin: 1rem;
+  color: red;
+}
+
