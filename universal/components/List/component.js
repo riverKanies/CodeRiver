@@ -34,22 +34,37 @@ function renderList ({
   if (bulletList) {
     return (
       <ul className={styles.ul}>
-        {items.map((list, index) => <li className={styles[itemWidth]} key={index}>{list}</li>)}
+        {items.map((listItem, index) => <li className={styles[itemWidth]} key={index}>{listItem}</li>)}
       </ul>
     )
   }
   return (
     <ol className={styles.ol}>
-      {items.map((list, index) => <li className={styles[itemWidth]} key={index}>{list}</li>)}
+      {items.map((listItem, index) => <li className={styles[itemWidth]} key={index}>{listItem}</li>)}
     </ol>
   )
 }
 
+const defaultList = [
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item',
+  'List Item'
+]
+
 const List = ({
   hasTitle = true,
-  title = 'List Title',
+  title,
   bulletList = true,
-  items,
+  items = defaultList,
   itemWidth = 'half'
 }: Props) => {
   return (
