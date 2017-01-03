@@ -113,8 +113,7 @@
 	margin: 1rem auto;
 	padding: 0 0;
 	float: left;
-	font-family: Playfair;
-	font-style: italic;
+	font-family: PlayfairItalic;
 	font-size: 1em;
 	line-height: 125%;
 	@media bp-mama-bear {

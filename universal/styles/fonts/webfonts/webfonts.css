@@ -92,6 +92,16 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'PlayfairBoldItalic';
+  src: url('./playfairdisplay-bolditalic.eot');
+  src: url('./playfairdisplay-bolditalic.eot?#iefix') format('embedded-opentype'),
+       url('./playfairdisplay-bolditalic.woff2') format('woff2'),
+       url('./playfairdisplay-bolditalic.woff') format('woff'),
+       url('./playfairdisplay-bolditalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Playfair Black */
 @font-face {
   font-family: 'PlayfairBlack';

@@ -114,8 +114,7 @@
 .special {
   composes: button;
   color: #fff;
-  font-family: Playfair;
-  font-style: italic;
+  font-family: PlayfairItalic;
   font-size: 1.25rem;
   text-transform: none;
   padding: 10px 0px 8px;

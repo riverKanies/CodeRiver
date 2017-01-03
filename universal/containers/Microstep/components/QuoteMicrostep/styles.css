@@ -42,9 +42,8 @@
     margin: 0 auto;
     padding: 0 0;
     float: left;
-    font-family: Playfair;
+    font-family: PlayfairBoldItalic;
     font-size: 1rem;
-    font-style: italic;
     color: inherit;
     @media bp-mama-bear {
       max-width: 40rem;
@@ -67,8 +66,7 @@
     line-height: 100%;
     text-transform: uppercase;
     & em {
-      font-family: Playfair;
-      font-style: italic;
+      font-family: PlayfairItalic;
       text-transform: lowercase;
     }
   }
@@ -165,8 +163,7 @@
   text-transform: uppercase;
   text-align: center;
   & em {
-    font-family: Playfair;
-    font-style: italic;
+    font-family: PlayfairItalic;
     text-transform: lowercase;
   }
 }

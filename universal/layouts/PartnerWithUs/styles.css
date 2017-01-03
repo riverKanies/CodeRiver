@@ -101,24 +101,18 @@
 .normalText {
   font-family: MontserratLight;
 	font-size: 16px;
-	font-weight: normal;
-	font-style: normal;
 	font-stretch: normal;
 }
 
 .serifItalicText {
-  font-family: Playfair;
+  font-family: PlayfairItalic;
 	font-size: 32px;
-	font-weight: normal;
-	font-style: italic;
   line-height: 2rem;
 }
 
 .serifText {
   font-family: Playfair;
 	font-size: 32px;
-	font-weight: normal;
-	font-style: normal;
   line-height: 2rem;
 }
 
@@ -174,7 +168,7 @@
 .threeCol {
   display: inline-block;
   width: 100%;
-  
+
   composes: marginLeft1 marginTop1;
   li {
     display: inline-block;

@@ -213,8 +213,7 @@
       margin: 0 .25rem 0 0;
       padding: 0 0;
       float: none;
-      font-family: Playfair;
-      font-style: italic;
+      font-family: PlayfairItalic;
       text-transform: none;
       @media bp-papa-bear {
         margin: 0 0 0 0;
