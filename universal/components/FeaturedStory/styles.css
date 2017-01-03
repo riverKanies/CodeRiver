@@ -83,7 +83,7 @@
   height: auto;
   margin-top: 1em;
   clear: both;
-  font-family: MonLight;
+  font-family: Mon;
   color: white;
   @media bp-mama-bear {
     max-width: 40rem;

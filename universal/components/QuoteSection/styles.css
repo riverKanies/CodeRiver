@@ -157,7 +157,7 @@
   }
 }
 .Playfair {
-  font-family: Playfair;
+  font-family: PlayfairBold;
   @media bp-mama-bear {
     font-size: 1.2em;
   }
