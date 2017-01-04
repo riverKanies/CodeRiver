@@ -15,7 +15,6 @@ import Interests from 'layouts/Interests'
 import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
-import PWUOverview from 'layouts/PartnerWithUs/Overview'
 import PWUCorporate from 'layouts/PartnerWithUs/Corporate'
 import PWUContent from 'layouts/PartnerWithUs/Content'
 import PWUCommerce from 'layouts/PartnerWithUs/Commerce'
@@ -51,25 +50,7 @@ export const createRoutes = (store) => ([
     childRoutes: [
       {
         path: 'partners**',
-        onEnter: (_, replace) => replace('/about' + _.params.splat)
-      },
-      {
-        path: 'about',
-        indexRoute: { component: PWUOverview },
-        childRoutes: [
-          {
-            path: 'corporate',
-            component: PWUCorporate
-          },
-          {
-            path: 'content',
-            component: PWUContent
-          },
-          {
-            path: 'commerce',
-            component: PWUCommerce
-          }
-        ]
+        onEnter: (_, replace) => replace('/who-we-are' + _.params.splat)
       },
       {
         path: '/home',
@@ -105,7 +86,21 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'about',
-        component: About
+        indexRoute: { component: About },
+        childRoutes: [
+          {
+            path: 'corporate',
+            component: PWUCorporate
+          },
+          {
+            path: 'content',
+            component: PWUContent
+          },
+          {
+            path: 'commerce',
+            component: PWUCommerce
+          }
+        ]
       },
       {
         path: 'team',

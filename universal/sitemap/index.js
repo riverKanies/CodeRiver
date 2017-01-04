@@ -25,6 +25,5 @@ module.exports = [
   '/registration-success',
   '/signup',
   '/team',
-  '/welcome',
-  '/who-we-are'
+  '/welcome'
 ]
