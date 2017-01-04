@@ -31,7 +31,11 @@ const ProductMicrostep = ({ microstep, showLabel = false }: Props) => {
       <section className={styles.content}>
         <header className={styles.header}>
           <h5 className={styles.label}>We Recommend</h5>
-          <h1 className={styles.msTitle}>{microstep.title}</h1>
+          <h1 className={styles.msTitle}>
+            <a onClick={genRedirectToShopify(microstep.link)}>
+              {microstep.title}
+            </a>
+          </h1>
         </header>
 
         <span id='microstep-name' className={styles.productBy}>
