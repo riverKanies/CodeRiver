@@ -1,0 +1,21 @@
+/*
+  This is the stylesheet for: FullBleedImage
+*/
+
+.fullBleedImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+}

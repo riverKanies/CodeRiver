@@ -13,7 +13,7 @@ module.exports = {
           browser.assert.ok(res.status === 404, 'we got our 404!')
           done()
         })
-    })
+    }).end()
   },
   'it should not return a 404 for a pre-defined thing': (browser) => {
     browser.perform(function (done) {
@@ -27,7 +27,7 @@ module.exports = {
           browser.assert.ok(res.status !== 404, 'we need to let react handle this')
           done()
         })
-    })
+    }).end()
   },
   'it should not return a 404 for a normal page': (browser) => {
     browser.perform(function (done) {
@@ -41,6 +41,6 @@ module.exports = {
           browser.assert.ok(res.status !== 404, 'we need to let react handle this')
           done()
         })
-    })
+    }).end()
   }
 }

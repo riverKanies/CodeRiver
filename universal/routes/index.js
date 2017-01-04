@@ -104,7 +104,7 @@ export const createRoutes = (store) => ([
         component: Apps
       },
       {
-        path: 'who-we-are',
+        path: 'about',
         component: About
       },
       {

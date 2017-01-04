@@ -9,7 +9,7 @@ type Props = {
   textAlign: 'textLeft'| 'textCenter' | 'textRight',
   header: 'headerTrue' | 'headerFalse',
   title: string,
-  sectionText: any,
+  sectionText: Array<string>,
   overrideStyles: {}
 };
 

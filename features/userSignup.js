@@ -7,7 +7,7 @@ module.exports = {
       .end()
   },
   'Can fill out the form': function (browser) {
-    var timestamp = new Date().getUTCMilliseconds()
+    var timestamp = Date.now()
     browser
       .url(browser.globals.local_url + 'signup')
       .waitForElementVisible('#header', 1000)

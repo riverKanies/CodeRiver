@@ -1,0 +1,119 @@
+/*
+  This is the stylesheet for: ThriveExperts
+*/
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, Mon from 'all';
+
+.expertSection {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  clear: both;
+  background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+}
+
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+
+.header {
+  lost-column: 1;
+  margin-bottom: babyHeader;
+  text-align: center;
+  h2 {
+    margin-bottom: 0;
+  }
+  @media bp-mama-bear {
+    margin-bottom: mamaHeader;
+  }
+  @media bp-papa-bear {
+    margin-bottom: papaHeader;
+  }
+}
+
+.theExperts {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+/* Expert Figure Styles */
+.expert {
+  lost-column: 1;
+  margin-bottom: 2rem;
+  @media bp-mama-bear {
+    lost-column: 1/2 2;
+    margin-bottom: 3rem;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/3 3;
+    margin-bottom: 4rem;
+  }
+}
+.expertImage {
+  display: inline-block;
+  width: 13.25rem;
+  height: 13.25rem;
+  margin: 0 auto 1.25rem auto;
+  padding: 0 0;
+  float: none;
+  position: relative;
+  border-radius: 6.625rem;
+  overflow: hidden;
+  text-align: center;
+  @media bp-papa-bear {
+    margin: 0 auto 2rem auto;
+  }
+  > img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
+  }
+}
+.expertDescription {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  .h3 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    padding: 0 0;
+    float: left;
+    clear: both;
+  }
+  .descriptionText {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    padding: 0 0;
+    float: left;
+    clear: both;
+    font-family: Mon;
+    font-size: .88em;
+    color: #9B9B9B;
+  }
+}

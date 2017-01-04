@@ -1,3 +1,5 @@
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, negBaby, negMama, negPapa, ThriveTeal, Mon, MonBold from 'all';
+
 .AboutUsSection{
 	lost-column: 1 flex;
  	z-index: 4;
@@ -12,7 +14,37 @@
 .AboutUsTitle{
 	lost-column: 1 flex;
 }
-.homePage {
-  min-height: 100%;
-  width: 100%;
+
+/* Learn More Styles */
+.learnMore {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: negBaby auto 0 auto;
+	padding: 0 0 babyMargin 0;
+	float: left;
+	background: white;
+	text-align: center;
+	@media bp-mama-bear {
+		margin: negMama auto 0 auto;
+		padding: 0 0 mamaMargin 0;
+	}
+	@media bp-papa-bear {
+		margin: negPapa auto 0 auto;
+		padding: 0 0 papaMargin 0;
+	}
+}
+.container {
+	lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+	p {
+		font-family: Mon;
+	}
+	a {
+		font-family: MonBold;
+		text-decoration: none;
+		color: ThriveTeal;
+	}
 }
