@@ -7,6 +7,7 @@ import styles from './styles'
 type Props = {
   children: any,
   handleClick: Function,
+  id: string,
   linkTo: string,
   buttonStyle: string,
   segmentProps: Object,
@@ -16,6 +17,7 @@ type Props = {
 }
 
 export const Button = ({
+  id,
   linkTo = '/',
   buttonStyle = 'violet',
   buttonText = 'Join Us',
@@ -31,7 +33,8 @@ export const Button = ({
     activeClassName: styles.activeStyle,
     disabled: disabled,
     to: linkTo,
-    download: download
+    download: download,
+    id: id
   }
 
   return (

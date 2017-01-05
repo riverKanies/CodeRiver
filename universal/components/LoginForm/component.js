@@ -17,6 +17,7 @@ type renderSubmitField = {
 const renderSubmit = ({ valid = false, submitting = false, handleSubmit }: renderSubmitField) => {
   return (
     <Button
+      id='loginSubmit'
       type='submit'
       handleClick={handleSubmit}
       disabled={!valid || submitting}
@@ -41,7 +42,7 @@ const LoginForm = (props: signupProps) => {
     className: styles.forgotPasswordLink
   }
   return (
-    <section className={styles.login}>
+    <section id='login' className={styles.login}>
       <header className={styles.greeting}>
         <h1>Log In</h1>
       </header>

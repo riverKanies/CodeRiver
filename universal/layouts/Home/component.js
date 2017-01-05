@@ -271,7 +271,7 @@ const popUpShop = {
 
 export const HomeView = () => {
   return (
-    <main role='main' className={styles.homePage}>
+    <main id='home' role='main' className={styles.homePage}>
       <MediumPostGridDynamic />
       <FeaturedProduct />
       <FeaturedStory {...thrivePulse} />
