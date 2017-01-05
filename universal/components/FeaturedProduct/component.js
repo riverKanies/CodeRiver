@@ -1,9 +1,14 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import image_golite from './assets/goliteblue.jpg'
-import image_essentials from './assets/travelessentials.png'
+
+// Default Image
 import image_phone_bed from './assets/phone-bed-square.jpg'
+
+// Product Image Import
+import Vyper from './assets/product_vyper.jpg'
+import Upright from './assets/product_upright.jpg'
+import innerBalance from './assets/product_inner-balance.jpg'
 
 type Props = {
   productTitle: string,
@@ -41,23 +46,38 @@ class FeaturedProduct extends React.Component {
         <section className={styles.content}>
           <h3 className={styles.header}>Shop</h3>
           <Product
-            productTitle={'The Phone Bed Charging Station'}
-            productLink='https://shop.thriveglobal.com/products/the-phone-bed-charging-station'
-            productImage={image_phone_bed}
-            productSlug={'Make putting your phone to bed a regular part of your nightly ritual.'}
+            productTitle={'Vyper, Fitness & Recovery Device'}
+            productLink={
+              'https://shop.thriveglobal.com/collections/body/products/vyper'
+            }
+            productImage={Vyper}
+            productSlug={
+              'The VYPER is a cutting-edge fitness and recovery device/roller that uses' +
+              'pressure and vibration to improve the body\'s overall performance.'
+            }
           />
           <Product
-            productTitle={'goLITE BLU Energy Light'}
-            productLink={'https://shop.thriveglobal.com/' +
-            'products/golite-blu-energy-light-hf3422-60-intense-blue-light-corded'}
-            productImage={image_golite}
-            productSlug={'Philips goLITE BLU mimics the natural energizing power of daylight.'}
+            productTitle={'Upright | Posture Trainer'}
+            productLink={
+              'https://shop.thriveglobal.com/collections/body/products/upright-wearable-posture-trainer'
+            }
+            productImage={Upright}
+            productSlug={
+              'Upright is a smart wearable posture trainer recommended by physicians and ' +
+              'chiropractors with proven success to decrease back pain and increase  productivity.'
+            }
           />
           <Product
-            productTitle={'Arianna Huffington\'s Travel Essentials Kit'}
-            productLink='https://shop.thriveglobal.com/products/arianna-huffington-tgc-travel-essentials-deluxe-kit'
-            productImage={image_essentials}
-            productSlug={'A few travel accessories, curated by Arianna herself.'}
+            productTitle={'Inner Balance™ Trainer'}
+            productLink={
+              'https://shop.thriveglobal.com/collections/unplug-recharge/products/' +
+              'inner-balance-trainer-release-stress-in-the-moment'
+            }
+            productImage={innerBalance}
+            productSlug={
+              'Inner Balance guides you to inner calm, clarity in decision-making and balanced composure. ' +
+              'We call this experience “Coherence."'
+            }
           />
         </section>
       </section>
