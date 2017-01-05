@@ -108,10 +108,12 @@
   clear: both;
   position: absolute;
   top: 0;
-  right: -150%;
+  right: 0;
   background: gradientTeal;
   text-align: center;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
   &::before {
     content: '';
@@ -137,6 +139,8 @@
     top: auto;
     right: auto;
     overflow: visible;
+    opacity: 1;
+    visibility: visible;
     background: white;
     border-bottom: .25rem solid ThriveTeal;
     &::before {
@@ -245,6 +249,7 @@
   color: white;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+  animation: move 1s once alternate;
   &:hover {
     background: white;
     color: ThriveTeal;
@@ -472,18 +477,6 @@
 }
 .button {
   transition: all 150ms cubic-bezier(.04,.39,.94,.53);
-  &:hover, &:focus {
-    .topLine {
-      transform: translateY(.625rem) rotate(90deg);
-    }
-    .middleLine {
-      opacity: 0;
-    }
-    .bottomLine {
-      transform: translateY(-.625rem);
-    }
-  }
-
 }
 .topLine, .middleLine, .bottomLine {
   fill: white;
@@ -502,7 +495,8 @@
     z-index: 9000;
   }
   .navContainer {
-    right: 0;
+    opacity: 1;
+    visibility: visible;
     z-index: 8000;
   }
   .button {
@@ -519,5 +513,31 @@
     .bottomLine {
       transform: translateY(-.625rem);
     }
+  }
+  .link {
+    animation: move 1.5s;
+    animation-delay: .5s;
+    animation-fill-mode: both;
+  }
+  .linkUtility {
+    animation: move 1s;
+    animation-fill-mode: both;
+  }
+  .activeRoute {
+    font-weight: bold;
+  }
+}
+
+/* keyframe animations */
+@keyframes move {
+  0% {
+    left: 50% auto;
+    top: -30px;
+    opacity: 0;
+  }
+  100% {
+    left: 50% auto;
+    top: 0;
+    opacity: 1;
   }
 }
