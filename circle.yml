@@ -25,13 +25,18 @@ test:
   override:
     - case $CIRCLE_NODE_INDEX in 1) npm run lint ;; 2) npm run analyze ;; 3) npm test -- --runInBand ;; esac:
         parallel: true
-    - npm run start:test:
+    - if [ $CIRCLE_NODE_INDEX = 0 ] then npm run start:test fi:
         background: true
-    - java -jar bin/selenium-server-standalone-3.0.1.jar:
+        parallel: true
+    - if [ $CIRCLE_NODE_INDEX = 0 ] java -jar bin/selenium-server-standalone-3.0.1.jar fi:
         background: true
-    - ./nightwatch/wait_for_server.sh
-    - npm run test:circle:features
-    - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
+        parallel: true
+    - if [ $CIRCLE_NODE_INDEX = 0 ] ./nightwatch/wait_for_server.sh fi:
+        parallel: true
+    - if [ $CIRCLE_NODE_INDEX = 0 ] npm run test:circle:features fi:
+        parallel: true
+    - if [ $CIRCLE_NODE_INDEX = 0 ] cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage fi:
+        parallel: true
 
 experimental:
   notify:
