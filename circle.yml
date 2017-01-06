@@ -23,15 +23,9 @@ test:
   pre:
     - npm run heroku-postbuild
   override:
-    - case $CIRCLE_NODE_INDEX in 1) npm run lint ;; 2) npm run analyze ;; 3) npm test -- --runInBand ;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) nohup npm run start:test & ;; 1) npm run lint ;; 2) npm run analyze ;; 3) npm test -- --runInBand ;; esac:
         parallel: true
-    - if [ $CIRCLE_NODE_INDEX = 0 ] ; then npm run start:test ; fi:
-        background: true
-        parallel: true
-    - if [ $CIRCLE_NODE_INDEX = 0 ] ; then java -jar bin/selenium-server-standalone-3.0.1.jar; fi:
-        background: true
-        parallel: true
-    - if [ $CIRCLE_NODE_INDEX = 0 ] ; then ./nightwatch/wait_for_server.sh; npm run test:circle:features; cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage; fi:
+    - if [ $CIRCLE_NODE_INDEX = 0 ] ; then nohup java -jar bin/selenium-server-standalone-3.0.1.jar &; ./nightwatch/wait_for_server.sh; npm run test:circle:features; cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage; fi:
         parallel: true
 
 experimental:
