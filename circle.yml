@@ -36,6 +36,7 @@ test:
         background: true
     - ./nightwatch/wait_for_server.sh
     - npm run test:circle:features
+        parallel: true
     - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
 
 experimental:
