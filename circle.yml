@@ -23,7 +23,7 @@ test:
   pre:
     - npm run heroku-postbuild
   override:
-    - case $CIRCLE_NODE_INDEX i  0) npm run lint ;;  1) npm run analyze ;;  2) npm test -- --runInBand ;;  3) npm run start:test ;;  4) java -jar bin/selenium-server-standalone-3.0.1.jar ;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) npm run lint ;; 1) npm run analyze ;; 2) npm test -- --runInBand ;; 3) npm run start:test ;; 4) java -jar bin/selenium-server-standalone-3.0.1.jar ;; esac:
         parallel: true
     - ./nightwatch/wait_for_server.sh
     - npm run test:circle:features
