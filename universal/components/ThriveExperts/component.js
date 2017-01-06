@@ -98,12 +98,12 @@ const ThriveExperts = ({
   title = 'Our Experts'
 }: Props) => {
   return (
-    <section className={styles.expertSection}>
+    <section className={`${styles.expertSection} thriveExperts`}>
       <div className={styles.container}>
         <header className={styles.header}>
           <h2>{title}</h2>
         </header>
-        <section className={styles.theExperts}>
+        <section className={`${styles.theExperts} experts`}>
           <Expert {...DavidA} />
           <Expert {...CharlesC} />
           <Expert {...SusanD} />

@@ -8,7 +8,7 @@ import ThriveExperts from './component'
 const notes = 'This story demonstrates the props that can be passed to ThriveExperts'
 
 const props = {
-  title: 'ThriveExperts Title'
+  title: 'Title'
 }
 
 storiesOf('ThriveExperts', module)
