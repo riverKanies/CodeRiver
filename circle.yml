@@ -23,11 +23,15 @@ test:
   pre:
     - npm run heroku-postbuild
   override:
-    - npm run lint
-    - npm run analyze
-    - npm test -- --runInBand
+    - npm run lint:
+        parallel: true
+    - npm run analyze:
+        parallel: true
+    - npm test -- --runInBand:
+        parallel: true
     - npm run start:test:
         background: true
+        parallel: true
     - java -jar bin/selenium-server-standalone-3.0.1.jar:
         background: true
     - ./nightwatch/wait_for_server.sh
