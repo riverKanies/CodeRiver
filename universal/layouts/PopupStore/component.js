@@ -38,7 +38,7 @@ const storeInfo = {
   sectionClass: 'default',
   postContentStyle: 'postContentRight',
   title: 'Open Through the Holidays',
-  postLabel: {},
+  url: 'https://goo.gl/maps/fz1a25bh3872',
   sectionText: [
   (<div>
     <dl>

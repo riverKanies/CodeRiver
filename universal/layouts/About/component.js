@@ -28,7 +28,7 @@ const introText = {
   sectionClass: 'white',
   divider: 'dividerFalse',
   sectionWidth: 'halfWidth',
-  textAlign: 'textLeft',
+  textAlign: 'alignLeft',
   header: 'headerFalse',
   sectionText: [
     `Thrive Global’s mission is to end the stress and burnout epidemic

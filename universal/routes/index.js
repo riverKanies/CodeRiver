@@ -26,6 +26,7 @@ import ResetPassword from 'layouts/ResetPassword'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import Pathway from 'layouts/Pathway'
 import About from 'layouts/About'
+import Careers from 'layouts/Careers'
 import Journey from 'layouts/Journey'
 import NotFound from 'layouts/NotFound'
 import CorporatePledge from 'layouts/CorporatePledge'
@@ -83,6 +84,10 @@ export const createRoutes = (store) => ([
       {
         path: 'apps',
         component: Apps
+      },
+      {
+        path: 'careers',
+        component: Careers
       },
       {
         path: 'about',

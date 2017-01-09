@@ -5,6 +5,7 @@ module.exports = [
   '/about/content',
   '/about/corporate',
   '/apps',
+  '/careers',
   '/corporate-pledge',
   '/contact',
   '/reset-password',

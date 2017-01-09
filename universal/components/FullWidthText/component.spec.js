@@ -1,11 +1,31 @@
 import React from 'react'
 import FullWidthText from './component'
-import { render } from 'enzyme'
+import { shallow } from 'enzyme'
 
 describe('(Component) FullWidthText', () => {
-  it('should render sectionText as HTML', () => {
-    const subject = render(<FullWidthText sectionText={['Test <a href="#">Test</a>', 'Test 2']} />)
-    const target = subject.find('a')
-    expect(target.length).toEqual(1)
+  context('with sectionText defined', () => {
+    const sectionText = [`Hello this is the text`,`Hello this some more text`]
+    const subject = shallow(<FullWidthText sectionText={sectionText} />)
+
+    it('should exist', () => {
+      const target = subject.find('h2')
+
+      expect(target.length).toEqual(1)
+    })
+
+    it('has two paragraphs', () => {
+      const target = subject.find('p')
+
+      expect(target.length).toEqual(2)
+    })
+  })
+  context('with no sectionText defined', () => {
+    const subject = shallow(<FullWidthText />)
+
+    it('should not exist', () => {
+      const target = subject.find('section')
+
+      expect(target.length).toEqual(0)
+    })
   })
 })

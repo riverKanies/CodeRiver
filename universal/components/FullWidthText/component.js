@@ -6,45 +6,39 @@ type Props = {
   sectionClass: 'default' | 'white' | 'blue' | 'gray' | 'tagalong' | 'fade',
   divider: 'dividerFalse' | 'dividerTrue',
   sectionWidth: 'defaultWidth' | 'fullWidth' | 'twoThirdsWidth' | 'halfWidth',
-  textAlign: 'textLeft'| 'textCenter' | 'textRight',
+  textStyle: 'alignLeft'| 'alignCenter' | 'alignRight' | 'bodyText',
   header: 'headerTrue' | 'headerFalse',
   title: string,
-  sectionText: Array<string>,
-  overrideStyles: {}
+  sectionText: Array<string>
 };
-
-const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
-eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
-mattis consectetur purus sit amet fermentum.`]
 
 const FullWidthText = ({
   sectionClass = 'default',
   divider = 'dividerFalse',
   sectionWidth = 'defaultWidth',
-  textAlign = 'textCenter',
+  textStyle = 'alignCenter',
   header = 'headerTrue',
   title = 'Title',
-  sectionText = defaultText,
-  overrideStyles = {}
+  sectionText
 }: Props) => {
+  if (!sectionText) {
+    return null
+  }
   return (
-    <section style={overrideStyles} className={styles[sectionClass]}>
-      <section style={overrideStyles} className={styles[textAlign]}>
+    <section className={styles[sectionClass]}>
+      <section className={styles[textStyle]}>
         <div className={styles[sectionWidth]}>
           <header className={styles[header]}>
             <h2>{title}</h2>
           </header>
           <div className={styles[divider]} />
-          <section className={styles.sectionContent} dangerouslySetInnerHTML={createHTMLContent(sectionText)} />
+          <section className={styles.sectionContent}>
+            {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+          </section>
         </div>
       </section>
     </section>
   )
-}
-
-function createHTMLContent (strings) {
-  const paragraphs = strings.map((paragraph, i) => (`<p>${paragraph}</p>`)).join('\n')
-  return {__html: paragraphs}
 }
 
 export default FullWidthText

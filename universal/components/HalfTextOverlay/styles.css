@@ -1,22 +1,33 @@
 /*
   This is the stylesheet for: HalfTextOverlay
 */
-@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, babyHeader, lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, Mon, MonBold, Playfair from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, bp-elder-bear, containerWidth, containerPadding, babyMargin, mamaMargin, papaMargin, babyHeader, lightGray, ThriveTeal, ThriveBlue, ThriveDarkBlue, ThriveRoyalBlue, ThriveBlurple, ThriveViolet, Mon, MonBold, Playfair from 'all';
+
+.default {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  background: none;
+  padding: 2rem 0;
+}
+
+.white {
+  composes: default;
+  background-color: white;
+  padding: 0;
+  @media bp-grand-bear {
+    padding: 1rem 0;
+  }
+}
 
 .gridWrap {
   lost-center: containerWidth;
-  margin: babyMargin auto 0 auto;
   padding: containerPadding;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
   float: none;
   clear: both;
-  position: relative;
-  @media bp-mama-bear {
-    margin: mamaMargin auto;
-  }
-  @media bp-papa-bear {
-    margin: papaMargin auto;
-  }
 }
 
 .halfOverlay {
@@ -37,7 +48,7 @@
   float: left;
   text-align: center;
   overflow: hidden;
-  @media bp-papa-bear {
+  @media bp-grand-bear {
     z-index: -100;
   }
 }
@@ -65,15 +76,15 @@
   height: auto;
   float: left;
   overflow: hidden;
-  background: ThriveBlue;
-  @media bp-papa-bear {
+  background: ThriveViolet;
+  opacity: 0.9;
+  @media bp-grand-bear {
     display: flex;
     width: 50%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 83, 212, .8);
   }
   > i {
     display: block;
@@ -93,7 +104,7 @@
   overflow: hidden;
   background: ThriveViolet;
   opacity: 0.9;
-  @media bp-papa-bear {
+  @media bp-grand-bear {
     width: 50%;
     height: 100%;
     position: absolute;
@@ -118,7 +129,7 @@
   padding: 0 0;
   float: left;
   z-index: 50;
-  @media bp-papa-bear {
+  @media bp-grand-bear {
     lost-flex-container: column;
     flex-flow: center;
     align-items: center;
@@ -130,14 +141,14 @@
   width: 100%;
   height: auto;
   padding: 1.5rem 1.5rem;
-  @media bp-papa-bear {
+  @media bp-elder-bear {
     padding: 0 10%;
   }
   p {
     font-family: Mon;
     text-align: left;
     color: white;
-    @media bp-papa-bear {
+    @media bp-grand-bear {
       font-family: MonBold;
       color: rgba(255, 255, 255, .7);
       transition: color 100ms ease-in-out;
@@ -151,28 +162,30 @@
 }
 .header {
   width: 100%;
-  margin: 0 auto 1.635rem;
+  margin: 0 auto 1rem;
   padding: 0 0;
   text-align: left;
   color: white;
+  h2 {
+    @media bp-mama-bear {
+      font-size: 1.5rem;
+      margin: 0 auto 1.5rem;
+    }
+    @media bp-elder-bear {
+      font-size: 2rem;
+      margin: 0 auto 1.635rem;
+    }
+  }
 }
 
 /* Button True/False */
-.hasButton {
+.buttonStyle {
   display: block;
+  margin-top: babyHeader;
   width: 100%;
   height: auto;
   float: left;
-  @media bp-papa-bear {
+  @media bp-grand-bear {
     display: flex;
   }
-}
-.buttonTrue {
-  composes: hasButton;
-  display: block;
-  margin-top: babyHeader;
-}
-.buttonFalse {
-  composes: hasButton;
-  display: none;
 }

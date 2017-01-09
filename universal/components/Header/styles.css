@@ -477,6 +477,18 @@
 }
 .button {
   transition: all 150ms cubic-bezier(.04,.39,.94,.53);
+  &:hover, &:focus {
+    .topLine {
+      transform: translateY(.625rem) rotate(90deg);
+    }
+    .middleLine {
+      opacity: 0;
+    }
+    .bottomLine {
+      transform: translateY(-.625rem);
+    }
+  }
+
 }
 .topLine, .middleLine, .bottomLine {
   fill: white;

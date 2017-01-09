@@ -1,63 +1,71 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
-import ContentLabel from 'components/ContentLabel'
-import Button from 'components/Button'
+import ExternalLink from 'components/ExternalLink'
 import dummyImage from './assets/ariannaH.jpg'
 
 type Props = {
-  postLabel: Object,
   title: string,
   sectionText: Array<string>,
   url: string,
+  target: string,
+  bgColor: string,
   bgImage: string,
-  hasButton: 'buttonTrue' | 'buttonFalse',
+  hasButton: boolean,
   button: Object,
   postContentStyle: 'postContent' | 'postContentRight',
   id: string
 }
 
-const defaultText = [`Morbi leo risus, porta ac consectetur ac, vestibulum at
-eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras
-mattis consectetur purus sit amet fermentum.`]
-
-const defaultLabel = {
-  label: 'Label',
-  labelColor: 'whiteLabel'
+function renderButton ({
+  hasButton,
+  button
+}: { hasButton: boolean, button: Object }) {
+  if (hasButton) {
+    return (
+      <span className={styles.buttonStyle}>
+        <ExternalLink {...button} />
+      </span>
+    )
+  }
+  return null
 }
 
 const HalfTextOverlay = ({
-  postLabel = defaultLabel,
   title = 'Headline',
-  sectionText = defaultText,
-  url = 'javascript:void(0)',
+  sectionText,
+  url = '#',
+  bgColor = 'default',
   bgImage = dummyImage,
   id = '',
-  hasButton = 'buttonFalse',
+  target = '_blank',
+  hasButton = false,
   button = {},
   postContentStyle = 'postContent'
 }: Props) => {
+  if (!sectionText) {
+    return null
+  }
   return (
-    <section className={styles.gridWrap} id={id}>
-      <section className={styles.halfOverlay}>
-        <span className={styles.imageWrap}>
-          <a className={styles.imgLinkWrap} href={url}><img className={styles.image} src={bgImage} alt={title} /></a>
-        </span>
-        <section className={styles[postContentStyle]}>
-          <ContentLabel {...postLabel} />
-          <div className={styles.contentWrap}>
-            <section className={styles.content}>
-              <a href={url}>
-                <header className={styles.header}>
-                  <h2>{title}</h2>
-                </header>
-                {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-              </a>
-              <span className={styles[hasButton]}>
-                <Button {...button} />
-              </span>
-            </section>
-          </div>
+    <section className={styles[bgColor]}>
+      <section className={styles.gridWrap} id={id}>
+        <section className={styles.halfOverlay}>
+          <span className={styles.imageWrap}>
+            <a className={styles.imgLinkWrap} href={url}><img className={styles.image} src={bgImage} alt={title} /></a>
+          </span>
+          <section className={styles[postContentStyle]}>
+            <div className={styles.contentWrap}>
+              <section className={styles.content}>
+                <a href={url} target={target}>
+                  <header className={styles.header}>
+                    <h2>{title}</h2>
+                  </header>
+                  {sectionText.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+                </a>
+                {renderButton({hasButton, button})}
+              </section>
+            </div>
+          </section>
         </section>
       </section>
     </section>

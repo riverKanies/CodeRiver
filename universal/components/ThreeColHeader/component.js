@@ -21,6 +21,20 @@ type Props = {
   footerText: Array<string>
 }
 
+// header logic
+function renderTitle ({
+  title
+}: { title: string }) {
+  if (title) {
+    return (
+      <header className={styles.header}>
+        <h2>{title}</h2>
+      </header>
+    )
+  }
+  return null
+}
+
 // footer logic
 function renderFooter ({
   hasFooter,
@@ -43,7 +57,7 @@ const colStuff = {
 
 const ThreeColHeader = ({
   bgColor = 'grayPattern',
-  title = 'Title',
+  title,
   colOne = colStuff,
   colTwo = colStuff,
   colThree = colStuff,
@@ -53,38 +67,28 @@ const ThreeColHeader = ({
   return (
     <section className={`${styles[bgColor]} threeColHeader`}>
       <div className={styles.container}>
-
-        <header className={styles.header}>
-          <h2>{title}</h2>
-        </header>
-
+        {renderTitle({title})}
         <section className={styles.columnWrap}>
-
           <div className={`${styles.column} contentColumn`}>
             <header className={styles.colHeader}>
               <h3>{colOne.title}</h3>
             </header>
             {colOne.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </div>
-
           <div className={`${styles.column} contentColumn`}>
             <header className={styles.colHeader}>
               <h3>{colTwo.title}</h3>
             </header>
             {colTwo.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </div>
-
           <div className={`${styles.column} contentColumn`}>
             <header className={styles.colHeader}>
               <h3>{colThree.title}</h3>
             </header>
             {colThree.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </div>
-
         </section>
-
         {renderFooter({hasFooter, footerText})}
-
       </div>
     </section>
   )

@@ -1,4 +1,4 @@
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, lightGray from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, TheFader, lightGray from 'all';
 
 .fullWidthText {
   display: block;
@@ -59,7 +59,7 @@
 }
 .tagalong {
   composes: fullWidthText;
-  padding-top: 0;
+  padding: 0;
   background: white;
   * {
     color: bodyCopy;
@@ -72,17 +72,26 @@
   padding: containerPadding;
   float: none;
 }
-.textLeft {
+.leftAlign {
   composes: container;
   text-align: left;
 }
-.textCenter {
+.centerAlign {
   composes: container;
   text-align: center;
 }
-.textRight {
+.rightAlign {
   composes: container;
   text-align: right;
+}
+.bodyText {
+  composes: container;
+  lost-center: 78rem;
+  text-align: left;
+  padding: 0 containerPadding;
+  @media bp-grand-bear {
+    padding: 0 0 1.5rem 0;
+  }
 }
 
 .columns {
@@ -110,7 +119,7 @@
 }
 .halfWidth {
   lost-column: 1;
-  @media bp-mama-bear {
+  @media bp-grand-bear {
     width: 50%;
     margin: 0 25%;
   }
@@ -119,7 +128,6 @@
 .header {
   width: 100%;
   margin: 0 auto;
-  padding: 5vh;
   position: relative;
   text-align: inherit;
   @media bp-mama-bear {
@@ -161,7 +169,7 @@
   margin: 0 auto;
   padding: 0 0;
   position: relative;
-  text-align: center;
+  text-align: inherit;
   p {
     display: block;
     width: 100%;
