@@ -15,7 +15,7 @@ type Props = {
   download: boolean,
   id: string,
   target: string
-}
+};
 
 export const ExternalLink = ({
   children,
