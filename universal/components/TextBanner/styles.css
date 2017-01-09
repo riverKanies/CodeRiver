@@ -95,7 +95,7 @@
   border-bottom: 1px solid #3c3d41;
   width: 4rem;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   display: flex;
 }
 
@@ -131,7 +131,7 @@
     margin: 0 auto mamaHeader auto;
   }
   @media bp-papa-bear {
-    margin: 0 auto papaHeader auto;
+    margin: 0 auto 1.375rem auto;
   }
 }
 

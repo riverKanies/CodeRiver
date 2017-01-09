@@ -18,6 +18,7 @@ type Props = {
     text: Array<string>
   },
   hasFooter: boolean,
+  footerTextQuote: 'quoteTrue' | 'quoteFalse',
   footerText: Array<string>
 }
 
@@ -38,12 +39,13 @@ function renderTitle ({
 // footer logic
 function renderFooter ({
   hasFooter,
+  footerTextQuote,
   footerText
-}: { hasFooter: boolean, footerText: Array<string> }) {
+}: { hasFooter: boolean, footerTextQuote: string, footerText: Array<string> }) {
   if (hasFooter) {
     return (
       <footer className={styles.footer}>
-        <span className={styles.extraText}>{footerText}</span>
+        <span className={styles[footerTextQuote]}>{footerText}</span>
       </footer>
     )
   }
@@ -62,6 +64,7 @@ const ThreeColHeader = ({
   colTwo = colStuff,
   colThree = colStuff,
   hasFooter = true,
+  footerTextQuote = 'quoteFalse',
   footerText = ['Footer Text']
 }: Props) => {
   return (
@@ -88,7 +91,9 @@ const ThreeColHeader = ({
             {colThree.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           </div>
         </section>
-        {renderFooter({hasFooter, footerText})}
+
+        {renderFooter({hasFooter, footerTextQuote, footerText})}
+
       </div>
     </section>
   )

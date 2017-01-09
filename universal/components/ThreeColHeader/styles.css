@@ -1,7 +1,7 @@
 /*
   This is the stylesheet for: TwoColHeader
 */
-@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayBlackItalic, PlayBlack from 'all';
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, babyMargin, babyHeader, mamaHeader, papaHeader, bodyCopy, ThriveBlue, ThriveBlurple, lightGray, medGray, MonBlack, MonBold, Playfair, PlayfairItalic, PlayBlackItalic, PlayBlack from 'all';
 
 /* Base Section Styling + Composed Styles */
 .threeColText {
@@ -149,8 +149,7 @@
   margin: 0 0;
   padding: 0 0;
   float: left;
-  font-family: Playfair;
-  font-style: italic;
+  font-family: PlayfairItalic;
   font-size: 1em;
   line-height: 150%;
   text-align: inherit;
@@ -161,4 +160,18 @@
   @media bp-papa-bear {
     font-size: 1.5em;
   }
+}
+.quoteTrue {
+  composes: extraText;
+  &::before {
+    content: '"';
+    display: inline;
+  }
+  &::after {
+    content: '"';
+    display: inline;
+  }
+}
+.quoteFalse {
+  composes: extraText;
 }

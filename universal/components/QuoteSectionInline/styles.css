@@ -1,0 +1,124 @@
+@value bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, bodyCopy, ThriveTeal, ThriveBlurple, lightGray, darkGray, backgroundGray, PlayfairItalic, Mon from 'all';
+
+/* Full Width Container + composed classes at end of stylesheet */
+.quoteContainer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  clear: both;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+}
+
+/* Content Grid Container */
+.container {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: 0 containerPadding;
+  float: none;
+}
+
+/* Quote Section */
+.quoteSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  @media bp-mama-bear {
+    width: 75%;
+    margin: 0 12.5%;
+  }
+  @media bp-papa-bear {
+    width: 66%;
+    margin: 0 17%;
+  }
+}
+.textLeft {
+  composes: quoteSection;
+  text-align: left;
+}
+.textCenter {
+  composes: quoteSection;
+  text-align: center;
+}
+.textRight {
+  composes: quoteSection;
+  text-align: right;
+}
+
+/* Content Styling */
+.quote {
+  width: 100%;
+  margin: 0 auto .94em auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  font-family: PlayfairItalic;
+  font-size: 1.25em;
+  line-height: 141%;
+  text-align: inherit;
+  color: inherit;
+  @media bp-mama-bear {
+    font-size: 1.75em;
+  }
+  @media bp-papa-bear {
+    font-size: 2.125em;
+  }
+}
+.citation {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  font-family: Mon;
+  font-style: normal;
+  font-size: .75em;
+  line-height: 1em;
+  text-align: inherit;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: .5;
+  @media bp-mama-bear {
+    font-size: .88em;
+  }
+  @media bp-mama-bear {
+    font-size: 1em;
+  }
+  &::before {
+    content: '— ';
+    display: inline;
+    text-align: inherit;
+    color: inherit;
+  }
+}
+
+/* Quote Section Color Theme Composed Styles */
+.default {
+  composes: quoteContainer;
+  background: transparent;
+}
+.pattern {
+  composes: quoteContainer;
+  background-color: backgroundGray;
+  background-image: url('./assets/growAriannaPattern.png');
+  background-repeat: repeat;
+}
+.white {
+  composes: quoteContainer;
+  background: white;
+}
+.gray {
+  composes: quoteContainer;
+  background: #f0f0f0;
+}
+.purple {
+  composes: quoteContainer;
+  background: ThriveBlurple;
+  * {
+    opacity: 1;
+    color: white;
+  }
+}

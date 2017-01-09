@@ -19,6 +19,10 @@ const props = {
   hasFooter: [
     true,
     false
+  ],
+  footerTextQuote: [
+    'quoteTrue',
+    'quoteFalse'
   ]
 }
 
@@ -30,6 +34,7 @@ storiesOf('ThreeColHeader', module)
         <ThreeColHeader
           bgColor={select('Background Color', props.bgColor, props.bgColor[5])}
           hasFooter={boolean('Do you need additional footer text?', props.hasFooter, props.hasFooter[0])}
+          footerTextQuote={select('Is the footer text a quote?', props.footerTextQuote, props.footerTextQuote[1])}
         />
       </WithNotes>
     )

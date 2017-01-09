@@ -8,7 +8,6 @@
   padding: babyPadding;
   float: left;
   position: relative;
-  text-align: center;
   @media bp-mama-bear {
     padding: mamaPadding;
   }
@@ -128,6 +127,7 @@
 .header {
   width: 100%;
   margin: 0 auto;
+  padding: 5vh 0;
   position: relative;
   text-align: inherit;
   @media bp-mama-bear {

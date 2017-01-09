@@ -15,6 +15,10 @@ const props = {
     'purple',
     'blue'
   ],
+  hasDivider: [
+    'dividerTrue',
+    'dividerFalse'
+  ],
   hasTitle: [
     'titleTrue',
     'titleFalse'
@@ -29,6 +33,7 @@ storiesOf('TextBanner', module)
       <WithNotes notes={notes}>
         <TextBanner
           bgColor={select('Background Color', props.bgColor, props.bgColor[0])}
+          hasDivider={select('Do you need a divider?', props.hasDivider, props.hasDivider[0])}
           title={text('Title', props.title)}
         />
       </WithNotes>

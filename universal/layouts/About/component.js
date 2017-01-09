@@ -5,7 +5,7 @@ import TextBanner from 'components/TextBanner'
 import FullBleedImage from 'components/FullBleedImage'
 import FullWidthText from 'components/FullWidthText'
 import ThreeColHeader from 'components/ThreeColHeader'
-import QuoteSection from 'components/QuoteSection'
+import QuoteSectionInline from 'components/QuoteSectionInline'
 import ThriveExperts from 'components/ThriveExperts'
 
 // Content import
@@ -68,6 +68,7 @@ const coreComponents = {
     ]
   },
   hasFooter: true,
+  footerTextQuote: 'quoteTrue',
   footerText: [
     `The combination of corporate, content, and commerce differentiates Thrive
     Global by reaching people at work, at home, and through the technology they
@@ -76,15 +77,12 @@ const coreComponents = {
 }
 const aboutQuote = {
   bgColor: 'white',
-  containerBorders: 'bordersFalse',
-  byElement: 'hideBy',
-  quoteFont: 'Playfair',
+  textAlign: 'textCenter',
   quote: [
     `Whatever your entry point is, take it. Come for the performance-enhancing
     benefits, stay for life-enhancing opportunities.`
   ],
-  citation: '—Arianna Huffington',
-  hasImage: 'imageTrue'
+  citation: 'Arianna Huffington'
 }
 
 export const AboutView = () => {
@@ -94,7 +92,7 @@ export const AboutView = () => {
       <FullBleedImage {...bannerIMG} />
       <FullWidthText {...introText} />
       <ThreeColHeader {...coreComponents} />
-      <QuoteSection id={styles.quote} {...aboutQuote} />
+      <QuoteSectionInline {...aboutQuote} />
       <ThriveExperts />
       <section className={styles.learnMore}>
         <div className={styles.container}>
