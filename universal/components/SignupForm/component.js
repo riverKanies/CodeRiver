@@ -5,7 +5,7 @@ import GenericFormError from 'components/GenericFormError'
 import ExternalLink from 'components/ExternalLink'
 import Input from 'components/Input'
 import styles from './styles'
-import FacebookAuth from 'components/FacebookAuth'
+import SocialAuth from 'components/SocialAuth'
 
 type renderSubmitField = {
   valid: boolean,
@@ -43,11 +43,9 @@ const SignUpForm = (props: signupProps) => {
       </header>
       <section className={styles.signUpDialogue}>
         <div className={styles.container}>
-          <section className={styles.socialSignIn}>
-            <FacebookAuth />
-          </section>
           <form className={styles.signUpForm}>
             <fieldset className={styles.timeToThrive}>
+              <SocialAuth />
               <GenericFormError {...props} />
               <Field
                 component={Input}

@@ -2,6 +2,10 @@
 @value Mon from 'all';
 @value ThriveViolet, ThriveBlue, ThriveTeal, ThriveBlurple from 'all';
 
+@value FacebookBlue: #3B5998;
+
+@value TwitterBlue: #00aced;
+
 .link {
   border: 2px solid;
   border-radius: 1px;
@@ -132,5 +136,49 @@
       border-color: white;
       color: ThriveTeal;
     }
+  }
+}
+
+.facebook {
+  composes: link;
+  border-color: FacebookBlue;
+  color: FacebookBlue;
+
+  &-medium {
+    composes: violet;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: violet;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: FacebookBlue;
+    border-color: FacebookBlue;
+    color: #fff;
+  }
+}
+
+.twitter {
+  composes: link;
+  border-color: TwitterBlue;
+  color: TwitterBlue;
+
+  &-medium {
+    composes: violet;
+    padding: 10px 40px 8px;
+  }
+
+  &-large {
+    composes: violet;
+    padding: 10px 60px 8px;
+  }
+
+  &:hover {
+    background-color: TwitterBlue;
+    border-color: TwitterBlue;
+    color: #fff;
   }
 }

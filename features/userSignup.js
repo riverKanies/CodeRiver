@@ -19,5 +19,25 @@ module.exports = {
       .pause(1000)
       .assert.urlContains('success')
       .end()
+  },
+  'Can initiate facebook auth': function (browser) {
+    browser
+      .url(browser.globals.local_url + 'signup')
+      .waitForElementVisible('#header', 1000)
+      .assert.containsText('h1', 'Sign up to start thriving')
+      .click('#facebookAuth')
+      .pause(1000)
+      .assert.urlContains('facebook.com')
+      .end()
+  },
+  'Can initiate twitter auth': function (browser) {
+    browser
+      .url(browser.globals.local_url + 'signup')
+      .waitForElementVisible('#header', 1000)
+      .assert.containsText('h1', 'Sign up to start thriving')
+      .click('#twitterAuth')
+      .pause(1000)
+      .assert.urlContains('twitter.com')
+      .end()
   }
 }
