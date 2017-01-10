@@ -1,4 +1,4 @@
-@value bp-baby-bear, bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding from 'all';
+@value bp-baby-bear, bp-mama-bear, bp-papa-bear, containerWidth, containerPadding, babyPadding, mamaPadding, papaPadding, MonLight from 'all';
 
 .sectionContainer {
   display: block;
@@ -75,5 +75,31 @@
   h3, h4 {
     margin: 0;
     padding-bottom: 4px;
+  }
+}
+.bio {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-family: MonLight;
+  font-size: .88em;
+  line-height: 150%;
+  letter-spacing: 0.0rem;
+  text-align: inherit;
+  @media bp-mama-bear {
+    font-size: 1em;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  strong, b {
+    font-family: MonBold;
+  }
+  em {
+    font-family: MonBold;
   }
 }

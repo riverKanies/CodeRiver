@@ -64,7 +64,7 @@ export class TeamSection extends React.Component {
           <div className={styles.modalText}>
             <h3> {member.name} </h3>
             <h4> {member.title} </h4>
-            <div dangerouslySetInnerHTML={{__html: member.bio}} />
+            <div className={styles.bio} dangerouslySetInnerHTML={{__html: member.bio}} />
           </div>
         </div>
       )
