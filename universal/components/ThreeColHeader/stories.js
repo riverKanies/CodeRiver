@@ -1,11 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { WithNotes } from '@kadira/storybook-addon-notes'
-import { withKnobs, select, boolean } from '@kadira/storybook-addon-knobs'
+import { withKnobs, select, text } from '@kadira/storybook-addon-knobs'
 
 import ThreeColHeader from './component'
 
-const notes = 'This story demonstrates the props that can be passed to ThreeColHeader'
+const notes = `This story demonstrates the props that can be passed to ThreeColHeader.
+This component also has the ability to handle inline links`
 
 const props = {
   bgColor: [
@@ -16,9 +17,8 @@ const props = {
     'blue',
     'grayPattern'
   ],
-  hasFooter: [
-    true,
-    false
+  footerText: [
+    'Hi this is the footer text, if you delete me, I will go away'
   ],
   footerTextQuote: [
     'quoteTrue',
@@ -33,8 +33,8 @@ storiesOf('ThreeColHeader', module)
       <WithNotes notes={notes}>
         <ThreeColHeader
           bgColor={select('Background Color', props.bgColor, props.bgColor[5])}
-          hasFooter={boolean('Do you need additional footer text?', props.hasFooter, props.hasFooter[0])}
           footerTextQuote={select('Is the footer text a quote?', props.footerTextQuote, props.footerTextQuote[1])}
+          footerText={text('Footer Text', props.footerText)}
         />
       </WithNotes>
     )

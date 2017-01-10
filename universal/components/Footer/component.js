@@ -82,6 +82,7 @@ const Footer = ({
             {genLink('/about/corporate', 'Partnerships - Corporate')}
             {genLink('/about/content', 'Partnerships - Media')}
             {genLink('/about/commerce', 'Partnerships - Commerce')}
+            {genLink('/press', 'Press')}
             {genLink('/popup', 'Pop-up Store')}
             {genLink('/team', 'Team')}
             {genLink('/thrive/privacy', 'Privacy')}

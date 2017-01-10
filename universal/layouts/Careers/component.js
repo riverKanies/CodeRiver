@@ -72,27 +72,49 @@ const coreComponents = {
   bgColor: 'default',
   colOne: {
     title: 'Press',
+    link: {
+      linkStyle: 'inline',
+      linkText: ' press@thriveglobal.com',
+      linkTo: 'mailto:press@thriveglobal.com',
+      target: '_self'
+    },
     text: [
       `Are you a member of the press seeking information about Thrive Global?
-      Email Monica Lee at press@thriveglobal.com`
+      Email Monica Lee at`
     ]
   },
   colTwo: {
     title: 'Media',
+    link: {
+      linkStyle: 'inline',
+      linkText: ' media@thriveglobal.com',
+      linkTo: 'mailto:media@thriveglobal.com',
+      target: '_self'
+    },
     text: [
-      `Interested in learning more about brand partnerships and sponsorships with Thrive Global?
-      Email us at media@thriveglobal.com`
+      `Interested in learning more about brand partnerships and sponsorships with Thrive Global? Email us at`
     ]
   },
   colThree: {
     title: 'Corporate',
+    link: {
+      linkStyle: 'inline',
+      linkText: ' info@thriveglobal.com',
+      linkTo: 'mailto:info@thriveglobal.com',
+      target: '_self'
+    },
     text: [
-      `Interested in learning more about our corporate partnerships? Email us at corporate@thriveglobal.com`
+      `Interested in learning more about our corporate partnerships? Email us at`
     ]
   },
-  hasFooter: true,
+  footerLink: {
+    linkStyle: 'inline',
+    linkText: ' info@thriveglobal.com',
+    linkTo: 'mailto:info@thriveglobal.com',
+    target: '_self'
+  },
   footerText: [
-    `Say hello. Contact us at info@thriveglobal.com`
+    `Say hello. Contact us at`
   ]
 }
 
