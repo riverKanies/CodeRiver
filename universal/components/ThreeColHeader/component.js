@@ -1,24 +1,28 @@
 /* @flow */
 import React from 'react'
 import styles from './styles'
+import ExternalLink from 'components/ExternalLink'
 
 type Props = {
   bgColor: 'default' | 'transparent' | 'lightGray' | 'purple' | 'blue' | 'grayPattern',
   title: string,
   colOne: {
     title: string,
-    text: Array<string>
+    text: Array<string>,
+    link: any
   },
   colTwo: {
     title: string,
-    text: Array<string>
+    text: Array<string>,
+    link: any
   },
   colThree: {
     title: string,
-    text: Array<string>
+    text: Array<string>,
+    link: any
   },
-  hasFooter: boolean,
   footerTextQuote: 'quoteTrue' | 'quoteFalse',
+  footerLink: any,
   footerText: Array<string>
 }
 
@@ -35,17 +39,41 @@ function renderTitle ({
   }
   return null
 }
+// inline link logic
+
+function renderLink ({
+  link
+}: { link: Object }) {
+  if (link) {
+    return (
+      <ExternalLink {...link} />
+    )
+  }
+  return null
+}
 
 // footer logic
 function renderFooter ({
-  hasFooter,
   footerTextQuote,
-  footerText
-}: { hasFooter: boolean, footerTextQuote: string, footerText: Array<string> }) {
-  if (hasFooter) {
+  footerText,
+  footerLink
+}: { footerTextQuote: string, footerText: Array<string>, footerLink: any }) {
+  if (footerLink) {
     return (
       <footer className={styles.footer}>
-        <span className={styles[footerTextQuote]}>{footerText}</span>
+        <span className={styles[footerTextQuote]}>
+          {footerText}
+          <ExternalLink {...footerLink} />
+        </span>
+      </footer>
+    )
+  }
+  if (footerText) {
+    return (
+      <footer className={styles.footer}>
+        <span className={styles[footerTextQuote]}>
+          {footerText}
+        </span>
       </footer>
     )
   }
@@ -54,7 +82,8 @@ function renderFooter ({
 
 const colStuff = {
   title: 'Column Title',
-  text: ['I am text.', 'More text!']
+  text: ['I am text.'],
+  link: null
 }
 
 const ThreeColHeader = ({
@@ -63,9 +92,9 @@ const ThreeColHeader = ({
   colOne = colStuff,
   colTwo = colStuff,
   colThree = colStuff,
-  hasFooter = true,
+  footerLink = null,
   footerTextQuote = 'quoteFalse',
-  footerText = ['Footer Text']
+  footerText
 }: Props) => {
   return (
     <section className={`${styles[bgColor]} threeColHeader`}>
@@ -76,24 +105,22 @@ const ThreeColHeader = ({
             <header className={styles.colHeader}>
               <h3>{colOne.title}</h3>
             </header>
-            {colOne.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            {colOne.text.map((paragraph, i) => (<p key={i}>{paragraph}{renderLink(colOne)}</p>))}
           </div>
           <div className={`${styles.column} contentColumn`}>
             <header className={styles.colHeader}>
               <h3>{colTwo.title}</h3>
             </header>
-            {colTwo.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            {colTwo.text.map((paragraph, i) => (<p key={i}>{paragraph}{renderLink(colTwo)}</p>))}
           </div>
           <div className={`${styles.column} contentColumn`}>
             <header className={styles.colHeader}>
               <h3>{colThree.title}</h3>
             </header>
-            {colThree.text.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            {colThree.text.map((paragraph, i) => (<p key={i}>{paragraph}{renderLink(colThree)}</p>))}
           </div>
         </section>
-
-        {renderFooter({hasFooter, footerTextQuote, footerText})}
-
+        {renderFooter({footerLink, footerTextQuote, footerText})}
       </div>
     </section>
   )

@@ -67,7 +67,6 @@ const coreComponents = {
       technology and products to equip consumers with the most effective tools for well-being.`
     ]
   },
-  hasFooter: true,
   footerTextQuote: 'quoteTrue',
   footerText: [
     `The combination of corporate, content, and commerce differentiates Thrive

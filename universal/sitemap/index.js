@@ -18,6 +18,7 @@ module.exports = [
   '/login',
   '/microsteps',
   '/popup',
+  '/press',
   '/press-releases',
   '/product-information-request',
   '/profile',
