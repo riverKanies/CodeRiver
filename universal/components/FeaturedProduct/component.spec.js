@@ -18,7 +18,7 @@ describe('(Component) FeaturedProduct', () => {
     it('should have 3 products', () => {
       const target = subject.find('figure')
 
-      expect(target.length).toEqual(3)
+      expect(target.length).toEqual(4)
     })
   })
 })
