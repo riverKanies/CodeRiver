@@ -22,9 +22,16 @@ dependencies:
 test:
   pre:
     - npm run heroku-postbuild
+    - npm run start:test:
+          background: true
   override:
-    - case $CIRCLE_NODE_INDEX in 0) ./bin/feature_tests.sh ;; 1) npm run lint ;; 2) npm run analyze ;; 3) npm test -- --runInBand ;; esac:
+    - ./bin/wait_for_node.sh
+    - ./parallel_tests.sh:
         parallel: true
+    - case $CIRCLE_NODE_INDEX in 0) ./bin/feature_tests.sh ;; 1) npm run lint ;; 2) npm run analyze ;; esac:
+        parallel: true
+  post:
+    - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
 
 experimental:
   notify:
