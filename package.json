@@ -21,6 +21,7 @@
     "lint": "eslint bin build config server universal tests && bin/findBadAriannas.sh",
     "lint:fix": "npm run lint -- --fix",
     "heroku-postbuild": "better-npm-run build",
+    "open-pr": "node bin/createProdPR.js",
     "start": "better-npm-run start",
     "start:prod": "better-npm-run start:prod",
     "start:test": "better-npm-run start:test",
