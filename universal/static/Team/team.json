@@ -7,7 +7,7 @@
   },
   {
     "name": "Aaron Graves",
-    "title": "VP of Engineering",
+    "title": "SVP of Engineering",
     "image": "/Team/images/Aaron_Graves.jpg",
     "bio": ""
   },
@@ -34,12 +34,6 @@
     "title": "Managing Editor",
     "image": "/Team/images/Callie_Schweitzer.png",
     "bio": "Callie is the Managing Editor at Thrive Global. She comes to Thrive from Time Inc. where she over saw digital growth for the company's 116 brands as Editorial Director of Audience Strategy. She also founded and was Editorial Director of Motto, TIME's empowerment platform for millennial women. She was previously at TIME overseeing audience growth and engagement, social media, search, newsletters, new product initiatives and content partnerships. She is also an award-winning journalist whose work has appeared in TIME, The New York Times, Mashable, The Huffington Post and PEOPLE. She was named to AdWeek's list of Future Publishers in 2015 and to Forbes’ 30 Under 30 in Media in December 2012 and 2013."
-  },
-  {
-    "name": "Lisa Chin Mollica",
-    "title": "Director of Product Design",
-    "image": "/Team/images/Lisa_Chin.jpg",
-    "bio": "Lisa is the Director of Product Design at Thrive Global. She loves to get her hands dirty building companies, mentoring people, and designing intuitive products. She has spent almost twenty years refining brands, creating compelling user experiences, and building things people love to share online. She founded a side-business called KidCash that helps parents create ways to incentivize productive behavior and mindfulness. She can't wait to build products that can improve people's lives at Thrive."
   },
   {
     "name": "Dae Hee Lee",
@@ -79,7 +73,7 @@
   },
   {
     "name": "Jonathan Berger",
-    "title": "Product Lead",
+    "title": "VP of Product",
     "image": "/Team/images/J_Berger.jpg",
     "bio": "<p>Jonathan Berger is a designer, developer and technologist who has been active in the NYC technology scene since around 2005, helping to organize events like the <a href=\"http://www.meetup.com/Agile-Experience-Design/\">Agile Experience Design Meetup</a>, the <a href=\"http://www.meetup.com/PivotalNY-Tech-Talks/\">Pivotal Labs Tech Talk series in NY</a>, <a href=\"http://nyc.startupweekend.org/\">Startup Weekend</a>, <a href=\"http://barcampnyc.org\">Barcamp</a>, <a href=\"http://web.archive.org/web/20100604014246/http://www.fashioncamp.org/\">Fashioncamp</a>, and <a href=\"http://www.ignitenyc.org\">IgniteNYC</a>. As a consultant he’s been on the team with almost 30 startups and enterprises in the past few years, and has spent the last seven years building 1) software and 2) an agile design practiceat <a href=\"http://pivotallabs.com\">Pivotal Labs</a>. As a startup founder he helped build <a href=\"http://marketpublique.com\">Market Publique</a>,an online vintage fashion marketplace and community. Prior to that, he earned a Bachelors in Philosophy at Vassar Collegeand a Masters in <a href=\"http://www.newschool.edu/media-studies\">Media Studies at the New School</a> (where he also spentquite a bit of time at <a href=\"http://www.newschool.edu/parsons/mfa-design-technology\">Parson’s Design + Technology program</a>).He has worked as a designer, developer, video editor, animator, and technology consultant for institutions as diverse as Eyebeam, MTV Networks, Yahoo!, Ogilvy, and the American Museum of Natural History.</p><p>Jonathan is an internationally-sought speaker who talks about startups, design, and technology at events like the <a href=\"http://mceconf.com\">Mobile Central Europe Conference</a>, <a href=\"http://leanuxnyc.co/nyc/\">LeanUX NYC</a>, <a href=\"http://agileuxnyc.com/\">Agile UX NYC</a>, <a href=\"http://agile2013.agilealliance.org/\">Agile 2013</a>, <a href=\"http://futureofwebdesign.com/new-york-2011/speakers/#jonathanpberger\">Future of Web Design</a>, <a href=\"http://www.web2expo.com/webexny2010/public/schedule/speaker/72236\">O’Reilly’s Web 2.0 Expo</a>, <a href=\"http://www.meetup.com/ny-tech/events/12976148/\">New York Tech Meetup</a>, <a href=\"http://www.meetup.com/fashion20/events/12126247/\">Fashion 2.0 Startup Showcase</a>, <a href=\"http://nyc.startupweekend.org/2010/09/15/wrap-up/\">Startup Weekend</a>, North Brooklyn Breakfast Club, The ProductGroup, and others.</p><p>He makes it a point of honor to include Comic Sans in every design project.</p> <p><em>Find him on <a href=\"http://twitter.com/jonathanpberger\">twitter</a>, <a href=\"https://github.com/jonathanpberger\">github</a>, <a href=\"http://flickr.com/images/jonathanpberger\">flickr</a>, etc. as @jonathanpberger</em>.</p>"
   },
@@ -102,16 +96,16 @@
     "bio": "<p>Kathryn is the Chief Marketing Officer at Thrive Global. She brings more than 20 years of sales, marketing and business operations expertise working for prominent companies in the US and abroad.  Kathryn currently oversees sales and marketing for Thrive Global’s three business pillars - corporate transformation, content & media, and commerce.  Kathryn recently left Google after 9 years where she led a variety of teams across sales, product and content.  Her last role was leading YouTube's global monetization strategy for content development, branded entertainment, advertising and the new subscription service RED.</p><p>Prior to this role, Kathryn was Head of Video Strategy for North, Central and South America, responsible for launching video ad products and developing Google's go-to-market strategy across all countries.  She started at Google running the US Media & Entertainment display sales team, working with film, television and gaming industries to develop digital marketing strategies for the largest media companies in the world.</p><p>Earlier in her career, she worked in magazine publishing where she held executive leadership roles at Hearst, Conde Nast, and American Express. She started her career as a senior financial consultant with KPMG after graduating with a Bachelor of Science from Cornell University. She currently lives in Summit, NJ with her husband and two sons, and enjoys baseball, skiing and golf.</p>"
   },
   {
-    "name": "Kieran Dahl",
-    "title": "Associate Editor, Audience Engagement",
-    "image": "/Team/images/Kieran_Dahl.jpg",
-    "bio": ""
-  },
-  {
     "name": "Kirsten Harman",
     "title": "Sales & Marketing Associate",
     "bio": "Kirsten joins Thrive Global as a Sales and Marketing Associate.  She comes from a background in client success at Glassdoor, where she worked with SMB and mid-level companies on their employer branding strategy and recruiting goals.  Prior to Glassdoor, Kirsten graduated from the University of Southern California with a degree in Business Administration and a minor in Communications.  She loves to stay active through running, yoga, and skiing, and enjoys to travel and explore new restaurants in her free time.",
     "image": "/Team/images/Kirsten_Harman.jpg"
+  },
+  {
+    "name": "Lisa Chin Mollica",
+    "title": "Director of Product Design",
+    "image": "/Team/images/Lisa_Chin.jpg",
+    "bio": "Lisa is the Director of Product Design at Thrive Global. She loves to get her hands dirty building companies, mentoring people, and designing intuitive products. She has spent almost twenty years refining brands, creating compelling user experiences, and building things people love to share online. She founded a side-business called KidCash that helps parents create ways to incentivize productive behavior and mindfulness. She can't wait to build products that can improve people's lives at Thrive."
   },
   {
     "name": "Margaux McGrath",
@@ -145,9 +139,9 @@
   },
   {
     "name": "Omar Niazi",
-    "title": "Lead Software Engineer",
+    "title": "Director of Software Engineering",
     "image": "/Team/images/Omar_Niazi.jpg",
-    "bio": "Omar is Lead Software Engineer at Thrive Global. He is a seasoned software engineer with a breadth of experience in multiple industries. He's architected apps from the ground up with a variety of companies in media, publishing, travel, and technology. As a developer, Omar played an integral part in the redesign of the NYTimes.com website, and he’s worked with large organizations like Twitter and Google to help them launch interesting projects. Omar has often been a leader for the teams he’s been on, because he’s skilled at his craft, committed to solving problems, and a friendly, approachable person to work with."
+    "bio": "<p>Omar is Director of Software Engineering at Thrive Global. He is a seasoned software engineer with a breadth of experience in multiple industries. He's architected apps from the ground up with a variety of companies in media, publishing, travel, and technology. As a developer, Omar played an integral part in the redesign of the NYTimes.com website, and he’s worked with large organizations like Twitter and Google to help them launch interesting projects. Omar has often been a leader for the teams he’s been on, because he’s skilled at his craft, committed to solving problems, and a friendly, approachable person to work with.</p><p><em>Find him on <a href=\"http://twitter.com/ramoizain\">twitter</a>, <a href=\"https://github.com/ramoizain\">github</a>, <a href=\"http://instagram.com/ramoizain\">instagram</a>, etc. as @ramoizain</em>.</p>"
   },
   {
     "name": "Rachel Stern",
