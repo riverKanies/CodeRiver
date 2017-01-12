@@ -185,7 +185,7 @@
 
 .inline {
   composes: link;
-  color: ThriveTeal;
+  color: #00859B;
   border: none;
   display: inline;
   padding: 0;
@@ -193,10 +193,10 @@
   font-size: inherit;
   text-align: inherit;
   text-transform: none;
-  transition: all 200ms cubic-bezier(.33,.89,.34,.98);
+  transition: all 100ms cubic-bezier(.33,.89,.34,.98);
 
   &:hover {
     text-decoration: underline;
-    color: #00859B;
+    color: #00A9C5;
   }
 }
