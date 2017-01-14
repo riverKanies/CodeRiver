@@ -115,22 +115,25 @@ Once branches are merged to master, they are auto-deployed via heroku
 
 ### Production Deployment
 
-1. Cut branch from master called deploy/production-yyyy-mm-dd-HH-MM
-1. Create a PR from that new branch to production with the following template
-  ```
-  merging the following updates from master, you can verify staging here
-  [staging](https://thrive-marketing-stage.herokuapp.com)
+New production deployment PR's _should_ be created every day. In order to
+'promote' all features from master onto production, log into github and grab the
+newest production pull request (and delete any other potentially stale ones).
 
-  User facing changes:
-  _list all user facing changes here_
+The pull request will be in the format of merging
+`deploy/production-YYYY-MM-DD-HH-MM` into `production`.
 
-  Non-User facing changes:
-  _list all non user facing changes here_
+If a pr does not exist yet, you can create one via the npm script `npm run
+open-pr`. For this script to run, you will need a GitHub api key set as an
+environment variable under `GH_TOKEN`.
 
-  Any other considerations?
-  _anything else that comes to mind_
-  ```
-1. Once the PR has been approved and merged it will auto-deploy to production
+Update the description on the pull request to be current with the new features
+that will be deployed and check out the PR app that was auto-generated to verify
+that the build is what you are expecitng.
+
+Lastly, get a review on the PR and merge. Once CI has completed, it will be
+auto-deployed.
+
+*Delete all branches after merge*
 
 ## Build System
 
