@@ -232,7 +232,7 @@
   }
 }
 /* Half Width Half Height Card */
-.halfHeight{
+.halfHeight {
   composes: postCard;
   width: 100%;
   height: imgCardBaby;
@@ -296,7 +296,7 @@
     width: 50%;
     transition: background 200ms ease-in-out;
   }
-  @media bp-papa-bear {
+  @media (min-width: 58.75em) {
     width: 25%;
   }
   .imageTrue {
@@ -393,7 +393,7 @@
     width: 50%;
     transition: background 200ms ease-in-out;
   }
-  @media bp-papa-bear {
+  @media (min-width: 58.75em) {
     width: 25%;
   }
   .imageTrue {

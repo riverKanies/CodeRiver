@@ -133,6 +133,7 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'popup',
+        onEnter: (_, replace) => replace('https://shop.thriveglobal.com/'),
         component: PopupStore
       },
       {
