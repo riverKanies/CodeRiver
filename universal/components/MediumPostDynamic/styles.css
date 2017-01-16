@@ -328,6 +328,7 @@
   }
   .imageContainer {
     position: relative;
+    max-height: imgCardBaby;
     top: auto;
     left: auto;
   }
@@ -424,6 +425,7 @@
   }
   .imageContainer {
     position: relative;
+    max-height: imgCardBaby;
     top: auto;
     left: auto;
   }

@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 @value navItem, MonLight from 'all';
-@value gradientTeal, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
+@value gradientTeal, bodyCopy, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
 
 /* Base Styles
 ** These don't change regardless of having the extra piece up top.

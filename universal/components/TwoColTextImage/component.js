@@ -47,10 +47,10 @@ const TwoColTextImage = ({
         {renderTitle({hasTitle, title})}
         <section className={styles.columnWrap}>
           <div className={styles.column}>
-            <img src={colOneImg} />
+            <img className={styles.image} src={colOneImg} />
           </div>
           <div className={styles.column}>
-            <img src={colTwoImg} />
+            <img className={styles.image} src={colTwoImg} />
           </div>
           {colTextOne.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
           <span className={styles.buttonWrap}>
