@@ -12,7 +12,6 @@ import Apps from 'layouts/Apps'
 import Press from 'layouts/Press'
 import Pulse from 'layouts/Pulse'
 import Interests from 'layouts/Interests'
-import PopupStore from 'layouts/PopupStore'
 import PulseScore from 'containers/PulseScore'
 import GlassDoor from 'layouts/GlassDoor'
 import PWUCorporate from 'layouts/PartnerWithUs/Corporate'
@@ -31,6 +30,8 @@ import Journey from 'layouts/Journey'
 import NotFound from 'layouts/NotFound'
 import CorporatePledge from 'layouts/CorporatePledge'
 import Contact from 'layouts/Contact'
+
+import { redirectToShopify } from 'lib/sso'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -133,8 +134,7 @@ export const createRoutes = (store) => ([
       },
       {
         path: 'popup',
-        onEnter: (_, replace) => replace('https://shop.thriveglobal.com/'),
-        component: PopupStore
+        onEnter: () => redirectToShopify()
       },
       {
         path: 'product-information-request',

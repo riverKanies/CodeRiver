@@ -83,7 +83,7 @@ const Footer = ({
             {genLink('/about/content', 'Partnerships - Media')}
             {genLink('/about/commerce', 'Partnerships - Commerce')}
             {genLink('/press', 'Press')}
-            {genLink('/popup', 'Pop-up Store')}
+            {genLink('https://shop.thriveglobal.com/', 'Pop-up Store')}
             {genLink('/team', 'Team')}
             {genLink('/thrive/privacy', 'Privacy')}
             {genLink('/thrive/terms', 'Terms')}
