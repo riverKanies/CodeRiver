@@ -1,6 +1,5 @@
 /* @flow */
 import React from 'react'
-
 import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import { registerSubdomain } from 'modules/UserSession'
 import { Router } from 'react-router'

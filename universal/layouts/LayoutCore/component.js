@@ -6,22 +6,14 @@ import 'styles/typography'
 
 import React from 'react'
 import Header from 'components/Header'
-import AccentureHeader from 'components/AccentureHeader'
 import Footer from 'components/Footer'
 import Helmet from 'react-helmet'
-import { connect } from 'react-redux'
 import { checkSession } from 'modules/UserSession'
-import { subdomainSelector } from 'modules/UserSession/selectors'
+import { connect } from 'react-redux'
 
 import styles from './styles'
 import headers from 'lib/headers'
 import segment from 'lib/segment'
-
-import whiteLabeled from 'lib/whiteLabeled'
-
-const WhiteLabeledHeader = whiteLabeled({
-  'accenture': AccentureHeader
-})
 
 import { toast } from 'modules/Toast'
 
@@ -47,8 +39,6 @@ export class LayoutCore extends React.Component {
   }
 
   render () {
-    const { subdomain } = this.props
-
     return (
       <section className={styles.mainContainer}>
         <Helmet
@@ -56,7 +46,7 @@ export class LayoutCore extends React.Component {
           script={headers.scripts}
         />
 
-        <WhiteLabeledHeader base={Header} subdomain={subdomain} />
+        <Header />
         <ToastContainer />
         <section className={styles.bodyContainer}>
           {this.props.children}
@@ -67,4 +57,4 @@ export class LayoutCore extends React.Component {
   }
 }
 
-export default connect(subdomainSelector)(LayoutCore)
+export default connect(() => ({}))(LayoutCore)

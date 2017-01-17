@@ -16,7 +16,10 @@ export const isLoggedIn = createSelector(
   (store) => {
     const { userData } = store
 
-    return { isLoggedIn: !!userData }
+    return {
+      isLoggedIn: !!userData,
+      subdomain: store.subdomain
+    }
   }
 )
 

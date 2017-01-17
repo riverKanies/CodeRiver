@@ -20,7 +20,7 @@ function whiteLabeled (options) {
 
       const RenderMe = options[subdomain] || base
 
-      return <RenderMe />
+      return <RenderMe {...this.props} />
     }
   }
 }

@@ -10,10 +10,7 @@ const WhiteLabeledHeader = whiteLabeled({
 })
 
 describe('<LayoutCore>', () => {
-  const wrapper = shallow(<LayoutCore subdomain='test'><div>Hello</div></LayoutCore>)
-  it('should contain the <WhiteLabeledComponent />', () => {
-    expect(wrapper.find('WhiteLabeledComponent').length).toBe(1)
-  })
+  const wrapper = shallow(<LayoutCore><div>Hello</div></LayoutCore>)
   it('should contain the <ToastContainer />', () => {
     expect(wrapper.contains(<ToastContainer />)).toBe(true)
   })

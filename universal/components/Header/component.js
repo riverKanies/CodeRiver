@@ -1,8 +1,6 @@
 /* @flow */
 // Site Header
 import React from 'react'
-import { connect } from 'react-redux'
-import { isLoggedIn } from 'modules/UserSession/selectors'
 import { deleteSession } from 'modules/UserSession'
 import { IndexLink, Link } from 'react-router'
 import MainNav from './MainNav/component.js'
@@ -197,14 +195,4 @@ export class Header extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  const loggedInSelector = isLoggedIn(state)
-  const location = state.location
-  console
-  return {
-    ...loggedInSelector,
-    pathname: location.pathname
-  }
-}
-
-export default connect(mapStateToProps)(Header)
+export default Header
