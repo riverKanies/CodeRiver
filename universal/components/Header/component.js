@@ -1,8 +1,6 @@
 /* @flow */
 // Site Header
 import React from 'react'
-import { connect } from 'react-redux'
-import { isLoggedIn } from 'modules/UserSession/selectors'
 import { deleteSession } from 'modules/UserSession'
 import { IndexLink, Link } from 'react-router'
 import MainNav from './MainNav/component.js'
@@ -14,7 +12,8 @@ type Props = {
   bigHeader: boolean,
   isLoggedIn: boolean,
   dispatch: Function,
-  pathname: any
+  pathname: any,
+  children: any
 }
 
 export class Header extends React.Component {
@@ -109,6 +108,12 @@ export class Header extends React.Component {
     )
   }
 
+  renderChildren () {
+    const { children } = this.props
+
+    return (children || <ThriveLogo />)
+  }
+
   renderBigHeader () {
     if (!this.props.pathname) {
       return false
@@ -130,7 +135,7 @@ export class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              <ThriveLogo />
+              {this.renderChildren()}
             </IndexLink>
           </figure>
           <section className={styles.navContainer}>
@@ -155,7 +160,7 @@ export class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              <ThriveLogo />
+              {this.renderChildren()}
             </IndexLink>
           </figure>
           <span className={styles.tagline}>More than living. Thriving.</span>
@@ -190,14 +195,4 @@ export class Header extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  const loggedInSelector = isLoggedIn(state)
-  const location = state.location
-  console
-  return {
-    ...loggedInSelector,
-    pathname: location.pathname
-  }
-}
-
-export default connect(mapStateToProps)(Header)
+export default Header

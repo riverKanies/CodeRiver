@@ -5,7 +5,8 @@ import {
   httpPost,
   httpPut,
   httpDelete,
-  clearHeaders
+  clearHeaders,
+  subdomain
 } from 'lib/http'
 
 import baseActions from 'modules/baseActions'
@@ -20,6 +21,7 @@ export const actions = {
   reqPassResetFailure: `${KEY}/request-password-reset-failure`,
   reqPassResetSuccess: `${KEY}/request-password-reset-success`,
   registerPostLoginSSO: `${KEY}/register-post-login-sso`,
+  registerSubdomain: `${KEY}/register-subdomain`,
   clearPostLoginSSO: `${KEY}/clear-post-login-sso`,
   clearUserMessage: `${KEY}/clear-user-message`,
   clearPasswordMessage: `${KEY}/clear-password-message`,
@@ -34,6 +36,7 @@ export const initialState = {
   requestPending: false,
   userMessage: null,
   passwordMessage: null,
+  subdomain: 'www',
   postLoginSSO: {
     provider: null,
     redirectTo: null
@@ -71,6 +74,12 @@ export function reducer (state: any = initialState, action: any) {
       return {
         ...state,
         passwordMessage: action.message
+      }
+
+    case actions.registerSubdomain:
+      return {
+        ...state,
+        subdomain: action.subdomain
       }
 
     case actions.deleteFailure:
@@ -238,5 +247,14 @@ export function registerPostLoginSSO (returnTo: string, provider: string = 'shop
     type: actions.registerPostLoginSSO,
     provider,
     returnTo
+  }
+}
+
+export function registerSubdomain () {
+  const current = subdomain().match(/accenture/) ? 'accenture' : 'www'
+
+  return {
+    type: actions.registerSubdomain,
+    subdomain: current
   }
 }

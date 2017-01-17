@@ -1,6 +1,7 @@
 /* @flow */
-import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import React from 'react'
+import { actions as analyticsActions } from 'modules/Middleware/analytics'
+import { registerSubdomain } from 'modules/UserSession'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import createRoutes from 'routes'
@@ -24,6 +25,8 @@ class AppContainer extends React.Component {
         location
       })
     })
+
+    store.dispatch(registerSubdomain())
   }
 
   componentDidMount () {

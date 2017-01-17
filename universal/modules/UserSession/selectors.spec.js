@@ -56,7 +56,7 @@ describe("subdomain selector", () => {
 
     const selected = subdomainSelector({
       [KEY]: {
-        userType: 'accenture'
+        subdomain: 'accenture'
       }
     })
 

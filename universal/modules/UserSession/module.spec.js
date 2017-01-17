@@ -2,15 +2,18 @@ import configureMockStore from 'redux-mock-store'
 import nock from 'nock'
 import thunk from 'redux-thunk'
 import callAPI from 'modules/Middleware/callApi'
-import { HOST_URL, CLIENT_URL } from 'lib/http'
+import * as http  from 'lib/http'
 import {
   reducer,
   initialState,
   actions,
   registerPostLoginSSO,
   clearPostLoginSSO,
-  requestResetPassword
+  requestResetPassword,
+  registerSubdomain
 } from './index'
+
+const { HOST_URL, CLIENT_URL } = http
 
 const genericError = {
   error: "there was an error processing request"
@@ -23,6 +26,10 @@ describe('UserSession module', () => {
   describe('REDUCER', () => {
     it('sets up initial state', () => {
       expect(reducer(undefined, {})).toEqual(initialState)
+    })
+
+    it('has a valid subdomain in the intial state', () => {
+      expect(reducer(undefined, {}).subdomain).toEqual('www')
     })
 
     context('requestPending attribtue', () => {
@@ -79,6 +86,37 @@ describe('UserSession module', () => {
         ).toEqual(false)
       })
 
+    })
+  })
+
+  context('registerSubdomain', () => {
+    http.subdomain = jest.fn(() => 'accenture')
+
+    it('should dispatch a register subdomain action to redux', () => {
+
+      const expectedActions = [
+        { type: actions.registerSubdomain, subdomain: 'accenture' }
+      ]
+
+      const store = mockStore({})
+
+      store.dispatch(registerSubdomain())
+
+      expect(store.getActions()).toEqual(expectedActions)
+    })
+
+    it('should update the subdomain in the store', () => {
+      expect(
+        reducer(initialState, {
+          type: actions.registerSubdomain,
+          subdomain: 'accenture'
+        })
+      ).toEqual(
+        {
+          ...initialState,
+          subdomain: 'accenture'
+        }
+      )
     })
   })
 

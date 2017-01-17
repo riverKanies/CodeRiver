@@ -1,13 +1,13 @@
 import { createSelector } from 'reselect'
 import { KEY } from 'modules/UserSession'
-import { getLocalStorageHeaders, subdomain } from 'lib/http'
+import { getLocalStorageHeaders } from 'lib/http'
 
 const sessionSelector = state => state[KEY]
 
 export const subdomainSelector = createSelector(
   [sessionSelector],
   store => {
-    return { subdomain: subdomain() }
+    return { subdomain: store.subdomain }
   }
 )
 
@@ -16,7 +16,10 @@ export const isLoggedIn = createSelector(
   (store) => {
     const { userData } = store
 
-    return { isLoggedIn: !!userData }
+    return {
+      isLoggedIn: !!userData,
+      subdomain: store.subdomain
+    }
   }
 )
 
