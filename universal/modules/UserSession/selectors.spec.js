@@ -1,5 +1,6 @@
-import { loginSelector, pulseSelector } from './selectors'
+import { loginSelector, pulseSelector, subdomainSelector } from './selectors'
 import { KEY } from 'modules/UserSession'
+import * as http from 'lib/http'
 
 describe("session loginSelector", () => {
   context("renderLoginForm", () => {
@@ -46,5 +47,19 @@ describe("session loginSelector", () => {
 
       expect(selected.renderLoginForm).toBe(false)
     })
+  })
+})
+
+describe("subdomain selector", () => {
+  it("should return the current subdomain", () => {
+    http.subdomain = jest.fn(() => 'accenture')
+
+    const selected = subdomainSelector({
+      [KEY]: {
+        userType: 'accenture'
+      }
+    })
+
+    expect(selected.subdomain).toEqual('accenture')
   })
 })

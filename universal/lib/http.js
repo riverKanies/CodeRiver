@@ -31,6 +31,17 @@ export const saveHeaders = (headers) => {
   }
 }
 
+export function subdomain (l = location) {
+  const domainArray = l.hostname ? l.hostname.split('.') : []
+  let subdomain = 'www'
+
+  if (domainArray.length > 2) {
+    subdomain = l.hostname.split('.').shift()
+  }
+
+  return subdomain
+}
+
 export function saveHeaderObject (h) {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(h))
 }
