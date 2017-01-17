@@ -16,12 +16,8 @@ const history = createMemoryHistory('/')
 
 describe('<AppContainer />', () => {
   const store = createStore({})
-  analytics.actions.locationChange = jest.fn(() => (
-    { type: 'a-do-nothin-bitch' }
-  ))
-
   userSession.registerSubdomain = jest.fn(() => (
-    { type: 'another-do-nothin-bitch' }
+    { type: 'do-nothin' }
   ))
 
   const wrapper = mount(<AppContainer store={store} history={history} />)

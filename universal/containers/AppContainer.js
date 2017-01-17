@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 
-import * as analytics from 'modules/Middleware/analytics'
+import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import { registerSubdomain } from 'modules/UserSession'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
@@ -22,7 +22,7 @@ class AppContainer extends React.Component {
     // Use history to update store with location
     this.unsubscribe = history.listen(location => {
       store.dispatch({
-        type: analytics.actions.locationChange,
+        type: analyticsActions.locationChange,
         location
       })
     })
@@ -34,7 +34,7 @@ class AppContainer extends React.Component {
     const { store, history } = this.props
 
     store.dispatch({
-      type: analytics.actions.locationChange,
+      type: analyticsActions.locationChange,
       location: history.getCurrentLocation()
     })
   }
