@@ -59,38 +59,44 @@ const Footer = ({
           </section>
           <section className={styles.social}>
             <div className={styles.socialIcons}>
-              <a href='https://www.facebook.com/thriveglbl/' target='_blank'>
+              <a
+                className={`${styles.iconWrap} {styles.iconFB}`}
+                href='https://www.facebook.com/thriveglbl/' target='_blank'>
                 <Facebook />
               </a>
-              <a href='https://twitter.com/thrive' target='_blank'>
+              <a className={`${styles.iconWrap} iconTW`} href='https://twitter.com/thrive' target='_blank'>
                 <Twitter />
               </a>
-              <a href='https://www.instagram.com/thrive/' target='_blank'>
+              <a className={`${styles.iconWrap} iconIG`} href='https://www.instagram.com/thrive/' target='_blank'>
                 <Instagram />
               </a>
-              <a href='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
+              <a
+                className={`${styles.iconWrap} iconMD`}
+                href='https://journal.thriveglobal.com/@thriveglobal' target='_blank'>
                 <Medium />
               </a>
             </div>
           </section>
         </section>
         <section className={styles.footerBottom}>
-          <ul className={styles.list} id='footerLinks'>
-            {genLink('/about', 'About Us')}
-            {genLink('/careers', 'Careers')}
-            {genLink('/contact', 'Contact')}
-            {genLink('/about/corporate', 'Partnerships - Corporate')}
-            {genLink('/about/content', 'Partnerships - Media')}
-            {genLink('/about/commerce', 'Partnerships - Commerce')}
-            {genLink('/press', 'Press')}
-            {genLink('https://shop.thriveglobal.com/#', 'Pop-up Store')}
-            {genLink('/team', 'Team')}
-            {genLink('/thrive/privacy', 'Privacy')}
-            {genLink('/thrive/terms', 'Terms')}
-          </ul>
-          <div className={styles.copyright}>
+          <nav role='navigation' className={styles.footerNav}>
+            <ul className={styles.list} id='footerLinks'>
+              {genLink('/about', 'About Us')}
+              {genLink('/careers', 'Careers')}
+              {genLink('/contact', 'Contact')}
+              {genLink('/about/corporate', 'Partnerships - Corporate')}
+              {genLink('/about/content', 'Partnerships - Media')}
+              {genLink('/about/commerce', 'Partnerships - Commerce')}
+              {genLink('/press', 'Press')}
+              {genLink('https://shop.thriveglobal.com/#', 'Pop-up Store')}
+              {genLink('/team', 'Team')}
+              {genLink('/thrive/privacy', 'Privacy')}
+              {genLink('/thrive/terms', 'Terms')}
+            </ul>
+          </nav>
+          <section className={styles.copyright}>
             Thrive Global © 2016
-          </div>
+          </section>
         </section>
       </div>
     </footer>

@@ -12,12 +12,26 @@
 }
 
 .footerBottom {
-  background: almostBlack;
+  display: block;
+  width: 100%;
   height: auto;
-
+  margin: 0 auto;
+  padding: 00;
+  float: left;
+  clear: both;
+  background: almostBlack;
   @media bp-papa-bear {
     height: 10rem;
+    padding: 3.75rem 0;
   }
+}
+
+.footerNav {
+  lost-column: 1;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
 }
 
 .container {
@@ -46,26 +60,23 @@
     line-height: 1.8rem;
 
     &::before, &::after {
-      font-family: PlayBlack;
-      color: white;
       display: inline;
-      margin: 0;
+      margin: 0 0;
+      padding: 0 0;
+      font-family: PlayBlack;
+      font-size: 1.4rem;
       line-height: .75rem;
+      color: white;
     }
 
     &::before {
       content: '“';
-      font-size: 3rem;
-      margin-right: .75rem;
-      margin-left: -1.75rem;
-      vertical-align: -1.25rem;
+      margin-right: .125em;
     }
 
     &::after {
       content: '”';
-      font-size: 1.4rem;
-      line-height: 1rem;
-      margin-left: .4rem;
+      margin-left: .125em;
     }
 
     &.quote {
@@ -90,6 +101,7 @@
 .footerLinkStyle {
   font-family: Mon;
   font-size: 1rem;
+  text-align: center;
   color: rgba(238, 238, 238, 0.42);
   line-height: 2.708;
 
@@ -106,6 +118,7 @@
   font-style: normal;
   text-transform: uppercase;
   display: block;
+  margin-bottom: 2.5em;
 }
 
 .heading {
@@ -119,21 +132,12 @@
 
 .copyright {
   composes: footerLinkStyle;
-  text-align: left;
-  padding-left: 1.5rem;
-  line-height: 4rem;
   display: block;
-
-  @media bp-papa-bear {
-    text-align: center;
-    lost-column: 1/4;
-    display: inline-block;
-    padding: 0;
-    float: left;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  lost-column: 1;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
 }
 
 .footerLinks {
@@ -147,12 +151,11 @@
   list-style: none;
 
   @media bp-papa-bear {
-    lost-column: 3/4;
-    float: right !important;
+    lost-center: 3/4;
+    float: none;
     display: inline-block;
+    clear: both;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: center;
   }
 
@@ -213,26 +216,45 @@
 .socialIcons {
   color: lightGray;
   margin-top: 1.25rem;
+}
 
-  span {
-    padding-right: 1.25rem;
+.iconWrap {
+  display: inline-block;
+  width: 2.125rem;
+  height: 2.125rem;
+  margin: 0 .625rem;
+  padding: 0 0;
+  float: none;
+  position: relative;
+  border-radius: 1.0625rem;
+  background: rgba(136,136,136,1);
+  transition: all ease-in-out 150ms;
+  &:first-child {
+    background: rgba(136,136,136,1);
   }
-
-    &:last-child {
-      padding-right: 0;
-    }
+  &:nth-child(2) {
+    background: rgba(180,180,180,1);
+  }
+  &:nth-child(3) {
+    background: rgba(105,105,105,1);
+  }
+  &:nth-child(4) {
+    background: rgba(40,40,40,1);
+  }
+  &:hover {
+    background: almostBlack;
+  }
 }
 
 .icon {
-  margin-right: 1.25rem;
-  display: inline;
-  fill: darkGray;
-  width: 1.25rem;
-  height: auto;
-
-  &:hover {
-    fill: white;
-  }
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: .5625rem 0 0 0;
+  padding: 0 0;
+  float: none;
+  text-align: center;
+  fill: white;
 }
 
 .facebookIcon {
@@ -245,4 +267,6 @@
 
 .logo {
   width: 8rem;
+  margin: 0 auto 4rem auto;
+  padding: 0 0;
 }
