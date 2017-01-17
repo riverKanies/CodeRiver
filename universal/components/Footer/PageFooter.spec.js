@@ -21,7 +21,7 @@ describe('(Component) Footer', () => {
       { route: '/about/content', text: 'Partnerships - Media' },
       { route: '/about/commerce', text: 'Partnerships - Commerce' },
       { route: '/press', text: 'Press' },
-      { route: 'https://shop.thriveglobal.com/', text: 'Pop-up Store' },
+      { route: 'https://shop.thriveglobal.com/#', text: 'Pop-up Store' },
       { route: '/team', text: 'Team' },
       { route: '/thrive/privacy', text: 'Privacy' },
       { route: '/thrive/terms', text: 'Terms' },
