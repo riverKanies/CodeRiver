@@ -14,7 +14,8 @@ type Props = {
   bigHeader: boolean,
   isLoggedIn: boolean,
   dispatch: Function,
-  pathname: any
+  pathname: any,
+  children: any
 }
 
 export class Header extends React.Component {
@@ -109,6 +110,12 @@ export class Header extends React.Component {
     )
   }
 
+  renderChildren () {
+    const { children } = this.props
+
+    return (children || <ThriveLogo />)
+  }
+
   renderBigHeader () {
     if (!this.props.pathname) {
       return false
@@ -130,7 +137,7 @@ export class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              <ThriveLogo />
+              {this.renderChildren()}
             </IndexLink>
           </figure>
           <section className={styles.navContainer}>
@@ -155,7 +162,7 @@ export class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              <ThriveLogo />
+              {this.renderChildren()}
             </IndexLink>
           </figure>
           <span className={styles.tagline}>More than living. Thriving.</span>

@@ -1,6 +1,8 @@
 /* @flow */
-import { actions as analyticsActions } from 'modules/Middleware/analytics'
 import React from 'react'
+
+import * as analytics from 'modules/Middleware/analytics'
+import { registerSubdomain } from 'modules/UserSession'
 import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import createRoutes from 'routes'
@@ -20,17 +22,19 @@ class AppContainer extends React.Component {
     // Use history to update store with location
     this.unsubscribe = history.listen(location => {
       store.dispatch({
-        type: analyticsActions.locationChange,
+        type: analytics.actions.locationChange,
         location
       })
     })
+
+    store.dispatch(registerSubdomain())
   }
 
   componentDidMount () {
     const { store, history } = this.props
 
     store.dispatch({
-      type: analyticsActions.locationChange,
+      type: analytics.actions.locationChange,
       location: history.getCurrentLocation()
     })
   }

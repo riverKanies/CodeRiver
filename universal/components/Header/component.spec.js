@@ -12,6 +12,10 @@ describe('(Component) Header', () => {
       expect(target.length).toEqual(1)
     })
 
+    it('should have the ThriveLogo', () => {
+      expect(subject.find('ThriveLogo').length).toEqual(1)
+    })
+
     it('should render the main nav setion', () => {
       const target = subject.find('MainNav')
 
@@ -113,5 +117,16 @@ describe('(Component) Header', () => {
       expect(target.length).toEqual(1)
     })
   })
+  context('pregnant (with child)', () => {
+    const CustomComponent = () => (<h1 className="blueberry">CUSTOM</h1>)
+    const wrapper = shallow(<Header><CustomComponent /></Header>)
 
+    it('should not be rendering the thrive logo', () => {
+      expect(wrapper.find('ThriveLogo').length).toEqual(0)
+    })
+
+    it('should have the CustomComponent', () => {
+      expect(wrapper.find('CustomComponent').length).toEqual(1)
+    })
+  })
 })
