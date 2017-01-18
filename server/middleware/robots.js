@@ -1,17 +1,11 @@
 module.exports = middleware
 
 var fs = require('fs')
+var getSubdomain = require('thrive-utilities').getSubdomain
 
 const txt = fs.readFileSync(`${__dirname}/disallow.txt`, 'utf8')
 
 const doNotCrawl = ['accenture']
-
-function getSubdomain (hostname) {
-  if (hostname.split('.').length <= 2) {
-    return 'www'
-  }
-  return hostname.split('.')[0].toLowerCase()
-}
 
 function okToCrawl (hostname) {
   const subdomain = getSubdomain(hostname)
