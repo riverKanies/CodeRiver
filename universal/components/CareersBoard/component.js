@@ -5,7 +5,7 @@ import styles from './styles'
 class CareersBoard extends React.Component {
   componentWillMount () {
     window.whr(document).ready(function () {
-      window.whr_embed(172222, { detail: 'titles', base: 'jobs', zoom: 'state', grouping: 'none' });
+      window.whr_embed(172222, { detail: 'titles', base: 'jobs', zoom: 'state', grouping: 'none' })
     })
   }
 
