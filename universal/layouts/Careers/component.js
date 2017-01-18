@@ -6,6 +6,7 @@ import FullBleedImage from 'components/FullBleedImage'
 import HalfTextOverlay from 'components/HalfTextOverlay'
 import FullWidthText from 'components/FullWidthText'
 import ThreeColHeader from 'components/ThreeColHeader'
+import CareersBoard from 'components/CareersBoard'
 
 // Content import
 import CareerBanner from './assets/mission.jpg'
@@ -124,6 +125,7 @@ export const CareersView = () => {
       <FullBleedImage {...bannerIMG} />
       <TextBanner {...careersHeader} />
       <FullWidthText {...careersText} />
+      <CareersBoard />
       <HalfTextOverlay {...careers} />
       <ThreeColHeader {...coreComponents} />
     </main>
