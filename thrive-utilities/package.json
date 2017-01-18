@@ -1,0 +1,11 @@
+{
+  "name": "thrive-utilities",
+  "version": "1.0.0",
+  "description": "shared thrive utilities for thrive-marketing ",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

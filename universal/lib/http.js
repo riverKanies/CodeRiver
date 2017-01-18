@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch'
+import { getSubdomain } from 'thrive-utilities'
 
 const LOCAL_STORAGE_KEY = 'thrive_user_headers'
 
@@ -32,14 +33,7 @@ export const saveHeaders = (headers) => {
 }
 
 export function subdomain (l = location) {
-  const domainArray = l.hostname ? l.hostname.split('.') : []
-  let subdomain = 'www'
-
-  if (domainArray.length > 2) {
-    subdomain = l.hostname.split('.').shift()
-  }
-
-  return subdomain
+  return getSubdomain(l.hostname || '')
 }
 
 export function saveHeaderObject (h) {

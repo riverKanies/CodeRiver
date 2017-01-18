@@ -40,7 +40,7 @@ module.exports = {
       .setValue('input[name=email]', `test@test.com`)
       .setValue('input[name=password]', 'testington')
       .click('#loginSubmit')
-      .pause(1000)
+      .pause(3000)
       .assert.urlContains('google.com')
       .end()
   }

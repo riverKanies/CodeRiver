@@ -3,17 +3,15 @@ import _debug from 'debug'
 import webpack from 'webpack'
 import webpackConfig from '../build/webpack.config'
 import config from '../config'
+import fourOfour from './middleware/fourOfour'
+import robots from './middleware/robots'
 
 const debug = _debug('app:server:express')
 const app = express()
 const paths = config.utils_paths
 
-app.use((req, res, next) => {
-  if (req.originalUrl.match(/404$/)) {
-    res.status(404)
-  }
-  next()
-})
+app.use(fourOfour)
+app.use(robots)
 
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement universal
