@@ -12,6 +12,11 @@ describe('(Component) Footer', () => {
     expect(subject.find('footer').length).toEqual(1)
   })
 
+  it('has the correct copyright', () => {
+    const currentYear = new Date().getFullYear()
+    expect(subject.find('.copyright').text()).toMatch(`${currentYear}`)
+  })
+
   context('footer links', () => {
     const expectedLinks = [
       { route: '/about', text: 'About Us' },
