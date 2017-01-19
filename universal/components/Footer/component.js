@@ -47,6 +47,7 @@ const Footer = ({
   heading2 = 'Follow Us',
   logoFooter = logo
 }: Props) => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className={styles.footer}>
       <EmailCapture />
@@ -94,8 +95,8 @@ const Footer = ({
               {genLink('/thrive/terms', 'Terms')}
             </ul>
           </nav>
-          <section className={styles.copyright}>
-            Thrive Global © 2016
+          <section className={`${styles.copyright} copyright`}>
+            Thrive Global © {currentYear}
           </section>
         </section>
       </div>
