@@ -14,7 +14,7 @@ type Props = {
   button: any
 }
 
-const button = {
+const returnButton = {
   buttonText: 'Return to Thrive Global',
   linkTo: '/',
   buttonStyle: 'violet'
@@ -29,6 +29,7 @@ const Four04 = ({
   author = defaultAuthor,
   details = '',
   label = 'Page Not Found',
+  button = returnButton,
   logo = mark
 }: Props) => {
   return (
