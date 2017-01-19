@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { reducer, initialState, actions, loadMediumPosts } from './index'
+import { reducer, initialState, actions, loadMediumPosts, loadAccenturePages } from './index'
 import callAPI from 'modules/Middleware/callApi'
 import nock from 'nock'
 import { HOST_URL } from 'lib/http'
@@ -93,6 +93,44 @@ describe('MediumPosts', () => {
         const store = mockStore({})
 
         return store.dispatch(loadMediumPosts())
+          .then(
+            () => expect(false).toEqual(true),
+            () => expect(store.getActions()).toEqual(expectedActions)
+          )
+      })
+    })
+    context('loadAccenturePages', () => {
+      it('dispatches happy path actions and calls api', () => {
+        nock(HOST_URL)
+          .get('/api/pages/Accenture')
+          .reply(200, [])
+
+        const expectedActions = [
+            { type: actions.fetchPending },
+            { type: actions.fetchSuccess, data: [] }
+        ]
+
+        const store = mockStore({})
+
+        return store.dispatch(loadAccenturePages())
+          .then(() => { // return of async actions
+            expect(store.getActions()).toEqual(expectedActions)
+          })
+      })
+
+      it('dispatches sad path actions and calls api', () => {
+        nock(HOST_URL)
+          .get('/api/pages/Accenture')
+          .reply(404, [])
+
+        const expectedActions = [
+            { type: actions.fetchPending },
+            { type: actions.fetchFailure, error: genericError }
+        ]
+
+        const store = mockStore({})
+
+        return store.dispatch(loadAccenturePages())
           .then(
             () => expect(false).toEqual(true),
             () => expect(store.getActions()).toEqual(expectedActions)

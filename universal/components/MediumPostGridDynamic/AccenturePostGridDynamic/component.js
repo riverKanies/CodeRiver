@@ -2,38 +2,27 @@
 import React from 'react'
 import styles from './styles'
 import MediumPostDynamic from 'components/MediumPostDynamic'
-import EmailCaptureMini from 'components/EmailCaptureMini'
 import { actions } from 'modules/Middleware/analytics'
-import Masonry from 'masonry-layout'
-
 import {
-  featuredHalfImage,
   featuredHalfHeightImage,
   featuredQuarterWhite,
   featuredQuarterBlue
-} from './sharedImageFormatting'
+} from '../sharedImageFormatting'
+
+const numberOfDisplayedStories = 10
 
 type Props = {
-  posts: Array<Object>,
-  dispatch: Function
+  dispatch: Function,
+  posts: Object
 }
 
-export default class MediumPostGridDynamic extends React.Component {
+export default class AccenturePostGridDynamic extends React.Component {
   genTracker: Function
   props: Props
 
   constructor () {
     super(...arguments)
     this.genTracker = this.genTracker.bind(this)
-  }
-
-  componentDidUpdate () {
-    /* eslint-disable */
-    var element = document.querySelector('.MediumPostGridDynamicMasonry')
-    if (element) {
-      new Masonry(element)
-    }
-    /* eslint-enable */
   }
 
   genTracker (articleId: string) {
@@ -46,14 +35,28 @@ export default class MediumPostGridDynamic extends React.Component {
     }
   }
 
-  renderPost (index: number) {
+  renderHBMS (postType: string) {
     const { posts } = this.props
+    let storyKey = postType + '_story'
+
+    if (!posts[storyKey]) return null
+
+    return (
+      <MediumPostDynamic
+        cardType='half'
+        hasImage='imageTrue'
+        hasSynopsis='synopsisTrue'
+        {...posts[storyKey]}
+        tags={[postType]}
+        trackClick={this.genTracker(posts[storyKey].medium_uid)}
+      />
+    )
+  }
+
+  renderPost (index: number) {
+    const { stories } = this.props.posts
 
     const s = [
-      featuredHalfImage,
-      featuredHalfHeightImage,
-      featuredHalfImage,
-      featuredHalfImage,
       featuredQuarterWhite,
       featuredQuarterBlue,
       featuredQuarterWhite,
@@ -62,36 +65,32 @@ export default class MediumPostGridDynamic extends React.Component {
       featuredHalfHeightImage
     ]
 
-    if (!posts[index] || !s[index]) {
+    if (!stories || !stories[index] || !s[index]) {
       return null
     }
 
     return <MediumPostDynamic
       {...s[index]}
-      {...posts[index]}
-      trackClick={this.genTracker(posts[index].medium_uid)}
+      {...stories[index]}
+      trackClick={this.genTracker(stories[index].medium_uid)}
+      key={stories[index].medium_uid}
     />
   }
 
   render () {
     const masonizeStyles = `${styles.posts} MediumPostGridDynamicMasonry`
+    let enumerator = Array.from(Array(numberOfDisplayedStories).keys())
 
     return (
       <section className={styles.featuredMediumPosts}>
         <section className={masonizeStyles}>
-          {this.renderPost(0)}
-          {this.renderPost(1)}
-          {this.renderPost(2)}
-          {this.renderPost(3)}
-          <EmailCaptureMini />
+          {this.renderHBMS('heart')}
+          {this.renderHBMS('body')}
+          {this.renderHBMS('mind')}
+          {this.renderHBMS('soul')}
         </section>
         <section className={styles.clear}>
-          {this.renderPost(4)}
-          {this.renderPost(5)}
-          {this.renderPost(6)}
-          {this.renderPost(7)}
-          {this.renderPost(8)}
-          {this.renderPost(9)}
+          {enumerator.map(i => this.renderPost(i))}
         </section>
       </section>
     )

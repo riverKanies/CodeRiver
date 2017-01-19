@@ -46,3 +46,14 @@ export function loadMediumPosts () {
     callAPI: () => http.httpGet('/api/medium/stories')
   }
 }
+
+export function loadAccenturePages () {
+  return {
+    types: [
+      actions.fetchPending,
+      actions.fetchSuccess,
+      actions.fetchFailure
+    ],
+    callAPI: () => http.httpGet('/api/pages/Accenture')
+  }
+}
