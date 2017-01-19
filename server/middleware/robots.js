@@ -10,7 +10,7 @@ const doNotCrawl = ['accenture']
 function okToCrawl (hostname) {
   const subdomain = getSubdomain(hostname)
 
-  return !doNotCrawl.find(function (s) { return s.match(subdomain) })
+  return !doNotCrawl.find(function (s) { return subdomain.match(s) })
 }
 
 function middleware (req, res, next) {

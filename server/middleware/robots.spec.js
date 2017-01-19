@@ -77,5 +77,20 @@ context('robots middleware', () => {
 
       expect(res.end).toHaveBeenCalled()
     })
+
+    it('calls end when getting accenture robots for subdomains containing accenture', () => {
+      const req = {
+        hostname: 'thrive-marketing-accenture.herokuapp.com',
+        url: '/robots.txt'
+      }
+      const res = {
+        end: jest.fn()
+      }
+      const next = jest.fn()
+
+      middleware(req, res, next)
+
+      expect(res.end).toHaveBeenCalled()
+    })
   })
 })
