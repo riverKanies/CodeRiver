@@ -93,14 +93,6 @@ export const AboutView = () => {
       <ThreeColHeader {...coreComponents} />
       <QuoteSectionInline {...aboutQuote} />
       <ThriveExperts />
-      <section className={styles.learnMore}>
-        <div className={styles.container}>
-          <h3>Interested in learning More?</h3>
-          <p>Please direct inquiries to
-            <a href='mailto:kfriedrich@thriveglobal.com' target='_self'> kfriedrich@thriveglobal.com</a>
-          </p>
-        </div>
-      </section>
     </main>
   )
 }
