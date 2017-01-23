@@ -65,8 +65,11 @@ export default class AccenturePostGridDynamic extends React.Component {
       featuredHalfHeightImage
     ]
 
-    if (!stories || !stories[index] || !s[index]) {
+    if (!stories || !stories[index]) {
       return null
+    }
+    if (!s[index]) {
+      s[index] = featuredHalfHeightImage
     }
 
     return <MediumPostDynamic
@@ -74,6 +77,7 @@ export default class AccenturePostGridDynamic extends React.Component {
       {...stories[index]}
       trackClick={this.genTracker(stories[index].medium_uid)}
       key={stories[index].medium_uid}
+      tags={stories[index].accenture_tags}
     />
   }
 

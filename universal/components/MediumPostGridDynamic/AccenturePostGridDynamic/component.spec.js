@@ -18,7 +18,7 @@ describe('(Component) AccenturePostGridDynamic', () => {
     const wrapper = shallow(
         <AccenturePostGridDynamic
          posts={{'stories': [
-           {'medium_uid': 1},
+           {'medium_uid': 1, 'accenture_tags': ['tag1']},
            {'medium_uid': 2},
            {'medium_uid': 3},
            {'medium_uid': 4},
@@ -28,6 +28,10 @@ describe('(Component) AccenturePostGridDynamic', () => {
 
     it('should render the correct amount of <MediumPostDynamic> elements', () => {
       expect(wrapper.find('MediumPostDynamic').length).toBe(4)
+    })
+
+    it('should render the post with a tag', () => {
+      expect(wrapper.find('MediumPostDynamic').first().props().accenture_tags).toEqual(['tag1'])
     })
   })
 })
