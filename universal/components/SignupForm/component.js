@@ -5,7 +5,6 @@ import GenericFormError from 'components/GenericFormError'
 import ExternalLink from 'components/ExternalLink'
 import Input from 'components/Input'
 import styles from './styles'
-import SocialAuth from 'components/SocialAuth'
 
 type renderSubmitField = {
   valid: boolean,
@@ -45,7 +44,6 @@ const SignUpForm = (props: signupProps) => {
         <div className={styles.container}>
           <form className={styles.signUpForm}>
             <fieldset className={styles.timeToThrive}>
-              <SocialAuth />
               <GenericFormError {...props} />
               <Field
                 component={Input}

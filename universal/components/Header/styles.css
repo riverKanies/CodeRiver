@@ -26,9 +26,6 @@
     margin: 0 0;
     padding: 0 0;
     float: right;
-    background-image: url('./assets/thriveVines.png');
-    background-repeat: no-repeat;
-    background-position: top right;
     position: absolute;
     top: 0;
     right: 0;
@@ -126,9 +123,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url('./assets/thriveVines.png');
-    background-repeat: no-repeat;
-    background-position: top right;
     z-index: 2;
   }
   @media bp-papa-bear {
@@ -382,9 +376,6 @@
       margin: 0 0;
       padding: 0 0;
       float: right;
-      background-image: url('./assets/thriveVines.png');
-      background-repeat: no-repeat;
-      background-position: top right;
       position: absolute;
       top: 0;
       right: 0;

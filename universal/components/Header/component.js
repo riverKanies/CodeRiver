@@ -4,7 +4,7 @@ import React from 'react'
 import { deleteSession } from 'modules/UserSession'
 import { IndexLink, Link } from 'react-router'
 import MainNav from './MainNav/component.js'
-import { ThriveLogo, NavButton } from './svg.js'
+import { NavButton } from './svg.js'
 
 import styles from './styles'
 
@@ -111,7 +111,7 @@ export class Header extends React.Component {
   renderChildren () {
     const { children } = this.props
 
-    return (children || <ThriveLogo />)
+    return (children || <p>no child content</p>)
   }
 
   renderBigHeader () {
@@ -163,7 +163,7 @@ export class Header extends React.Component {
               {this.renderChildren()}
             </IndexLink>
           </figure>
-          <span className={styles.tagline}>More than living. Thriving.</span>
+          <span className={styles.tagline}>Need a Plan? We're here to help.</span>
         </section>
 
         <section className={styles.navContainer}>

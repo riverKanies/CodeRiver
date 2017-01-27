@@ -24,43 +24,19 @@ class MainNav extends React.Component {
   render () {
     return (
       <nav role='navigation' className={styles.mainNav}>
-        <a
-          className={styles.link}
-          onClick={this.props.hideMenu}
-          href='https://journal.thriveglobal.com/'
-          target='_blank'
-        >
-          Journal
-        </a>
-        <Link
-          onClick={this.props.hideMenu}
-          id='navGrow'
-          to='/grow'
+        <Link onClick={this.props.hideMenu}
+          id='navWelcome'
+          to='/welcome'
           className={styles.link}
           activeClassName={styles.activeRoute}>
-          Grow
-        </Link>
-        <Link
-          id='navShop'
-          className={styles.link}
-          onClick={this.redirectToShopify}
-          activeClassName={styles.activeRoute}
-        >
-          Shop
+          Welcome
         </Link>
         <Link onClick={this.props.hideMenu}
-          id='navGive'
-          to='/give'
+          id='navAbout'
+          to='/home'
           className={styles.link}
           activeClassName={styles.activeRoute}>
-          Give
-        </Link>
-        <Link onClick={this.props.hideMenu}
-          id='navApps'
-          to='/apps'
-          className={styles.link}
-          activeClassName={styles.activeRoute}>
-          Apps
+          Home
         </Link>
       </nav>
     )

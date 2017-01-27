@@ -1,37 +1,13 @@
-import Content from 'layouts/Content'
-import PressReleases from 'layouts/Content/PressReleases'
-import EmbeddedMicrostep from 'layouts/EmbeddedMicrostep'
-import Microsteps from 'layouts/Microsteps'
-import Give from 'layouts/Give'
+
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
-import Grow from 'layouts/Grow'
 import SignUp from 'layouts/SignUp'
-import Team from 'layouts/Team'
-import Apps from 'layouts/Apps'
-import Press from 'layouts/Press'
-import Pulse from 'layouts/Pulse'
-import Interests from 'layouts/Interests'
-import PulseScore from 'containers/PulseScore'
-import GlassDoor from 'layouts/GlassDoor'
-import PWUCorporate from 'layouts/PartnerWithUs/Corporate'
-import PWUContent from 'layouts/PartnerWithUs/Content'
-import PWUCommerce from 'layouts/PartnerWithUs/Commerce'
-import CognitoForm from 'layouts/Cognito'
 import Welcome from 'components/Welcome'
 import Profile from 'layouts/Profile'
 import Login from 'layouts/Login'
 import ResetPassword from 'layouts/ResetPassword'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
-import Pathway from 'layouts/Pathway'
-import About from 'layouts/About'
-import Careers from 'layouts/Careers'
-import Journey from 'layouts/Journey'
 import NotFound from 'layouts/NotFound'
-import CorporatePledge from 'layouts/CorporatePledge'
-import Contact from 'layouts/Contact'
-
-import { redirectToShopify } from 'lib/sso'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -41,104 +17,18 @@ function handleUpdate (prevState, nextState) {
 
 export const createRoutes = (store) => ([
   {
-    path: '/steps/:id',
-    component: EmbeddedMicrostep
-  },
-  {
     path: '/',
     component: LayoutCore,
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
-      {
-        path: 'partners**',
-        onEnter: (_, replace) => replace('/who-we-are' + _.params.splat)
-      },
+      // {
+      //   path: 'partners**',
+      //   onEnter: (_, replace) => replace('/who-we-are' + _.params.splat)
+      // },
       {
         path: '/home',
         component: Home.component
-      },
-      {
-        path: 'microsteps',
-        component: Microsteps
-      },
-      {
-        path: 'pathways/:pathwayId/journeys/:journeyId',
-        component: Journey
-      },
-      {
-        path: 'pathways/:id',
-        component: Pathway
-      },
-      {
-        path: 'grow',
-        component: Grow
-      },
-      {
-        path: 'give',
-        component: Give
-      },
-      {
-        path: 'press',
-        component: Press
-      },
-      {
-        path: 'apps',
-        component: Apps
-      },
-      {
-        path: 'careers',
-        component: Careers
-      },
-      {
-        path: 'about',
-        indexRoute: { component: About },
-        childRoutes: [
-          {
-            path: 'corporate',
-            component: PWUCorporate
-          },
-          {
-            path: 'content',
-            component: PWUContent
-          },
-          {
-            path: 'commerce',
-            component: PWUCommerce
-          }
-        ]
-      },
-      {
-        path: 'team',
-        component: Team
-      },
-      {
-        path: 'pulse',
-        component: Pulse
-      },
-      {
-        path: 'interests',
-        component: Interests
-      },
-      {
-        path: 'pulsescore',
-        component: PulseScore
-      },
-      {
-        path: 'corporate-pledge',
-        component: CorporatePledge
-      },
-      {
-        path: 'glassdoor',
-        component: GlassDoor
-      },
-      {
-        path: 'popup',
-        onEnter: () => redirectToShopify()
-      },
-      {
-        path: 'product-information-request',
-        component: CognitoForm
       },
       {
         path: 'signup',
@@ -163,18 +53,6 @@ export const createRoutes = (store) => ([
       {
         path: 'registration-success',
         component: RegistrationSuccess
-      },
-      {
-        path: 'thrive/:page_id',
-        component: Content
-      },
-      {
-        path: 'press-releases',
-        component: PressReleases
-      },
-      {
-        path: 'contact',
-        component: Contact
       },
       {
         path: '*',

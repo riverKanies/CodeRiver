@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react'
-import SocialAuth from 'components/SocialAuth'
+//import SocialAuth from 'components/SocialAuth'
 import { Field } from 'redux-form'
 import Button from 'components/Button'
 import Input from 'components/Input'
@@ -50,7 +50,6 @@ const LoginForm = (props: signupProps) => {
         <div className={styles.container}>
           <form className={styles.loginForm}>
             <fieldset className={styles.getInHere}>
-              <SocialAuth />
               <GenericFormError {...props} />
               <Field
                 component={Input}

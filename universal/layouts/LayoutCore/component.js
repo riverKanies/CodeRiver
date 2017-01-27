@@ -6,7 +6,6 @@ import 'styles/typography'
 
 import React from 'react'
 import Header from 'components/Header'
-import Footer from 'components/Footer'
 import Helmet from 'react-helmet'
 import { checkSession } from 'modules/UserSession'
 import { connect } from 'react-redux'
@@ -51,7 +50,6 @@ export class LayoutCore extends React.Component {
         <section className={styles.bodyContainer}>
           {this.props.children}
         </section>
-        <Footer />
       </section>
     )
   }
