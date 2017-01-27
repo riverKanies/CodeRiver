@@ -368,7 +368,7 @@
   color: white;
   @media bp-papa-bear {
     background: gradientTeal;
-    &::before {
+    /*&::before {
       content: '';
       display: block;
       width: 7.3125rem;
@@ -380,7 +380,7 @@
       top: 0;
       right: 0;
       z-index: 2;
-    }
+    }*/
   }
 }
 .tagline {

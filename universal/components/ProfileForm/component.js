@@ -24,21 +24,6 @@ export default function Form (props: FormType) {
           name='email'
           label='Email'
         />
-      </fieldset>
-      <fieldset className={styles.accountPreferences}>
-        <Field
-          theme='thriveInput'
-          component={Input}
-          type='checkbox'
-          name='gimme_newsletters'
-          label='Newsletter'
-        />
-        <Field component={Input}
-          type='checkbox'
-          name='gimme_communications'
-          label='Send occasional emails from Thrive Global'
-          thrive='thriveInput'
-        />
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>
       <fieldset className={styles.save}>
