@@ -14,8 +14,8 @@ import React from 'react'
 
 setAddon(infoAddon)
 setOptions({
-  name: 'Thrive Global',
-  url: 'http://thriveglobal.com',
+  name: 'Plan Made',
+  url: 'http://myplanmade.com',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,

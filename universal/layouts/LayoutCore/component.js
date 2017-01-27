@@ -41,7 +41,7 @@ export class LayoutCore extends React.Component {
     return (
       <section className={styles.mainContainer}>
         <Helmet
-          title='Thrive'
+          title='Plan Made'
           script={headers.scripts}
         />
 

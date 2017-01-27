@@ -1,6 +1,6 @@
 {
-  "name": "thrive-marketing",
-  "description": "Thrive Marketing Site",
+  "name": "plan-made-frontend",
+  "description": "Plan Made Life Insurance Site",
   "scripts": {},
   "env": {
     "API_HOST": {

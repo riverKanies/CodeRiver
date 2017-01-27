@@ -6,13 +6,8 @@ machine:
     HOST: localhost
     PORT: 3000
     API_PROTOCOL: https
-    API_HOST: thrive-api-ci.herokuapp.com
+    API_HOST: plan-made.herokuapp.com
     API_PORT: 443
-    SHOPIFY_URL: https://thrive-global-store.myshopify.com
-    SEGMENT: B4DNEDpxrGAY0eqEPVLUJrlTzDkF1WLG
-    ROLLBAR: 4beb8546e6bd49079c194739433e1eca
-    NEW_RELIC_LICENSE_KEY: asdf
-    FACEBOOK_ID: 235633273523923
     ROLLBAR_ENV: test
 
 dependencies:
