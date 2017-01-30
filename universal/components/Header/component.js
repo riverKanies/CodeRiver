@@ -7,9 +7,9 @@ import MainNav from './MainNav/component.js'
 import { NavButton } from './svg.js'
 
 import styles from './styles'
+import logo from './PlanmadeLogo.png'
 
 type Props = {
-  bigHeader: boolean,
   isLoggedIn: boolean,
   dispatch: Function,
   pathname: any,
@@ -108,49 +108,7 @@ export class Header extends React.Component {
     )
   }
 
-  renderChildren () {
-    const { children } = this.props
-
-    return (children || <p>no child content</p>)
-  }
-
-  renderBigHeader () {
-    if (!this.props.pathname) {
-      return false
-    }
-
-    const bigRoutes = ['/', '/home']
-
-    return bigRoutes.includes(this.props.pathname.toLowerCase())
-  }
-
   renderNav () {
-    const bigHeader = this.renderBigHeader()
-    if (!bigHeader) {
-      return (
-        <div className={styles.default} id='littleHeader'>
-          <figure className={styles.brand}>
-            <IndexLink
-              onClick={this.hideMenu}
-              id='linkHome'
-              to='/'
-            >
-              {this.renderChildren()}
-            </IndexLink>
-          </figure>
-          <section className={styles.navContainer}>
-            <MainNav
-              hideMenu={this.hideMenu}
-            />
-            <nav role='navigation' className={styles.utilityNav}>
-              {this.renderSignupOrProfile()}
-              {this.renderLoginLogout()}
-            </nav>
-          </section>
-        </div>
-      )
-    }
-
     return (
       <div className={styles.hasForehead} id='bigHeader'>
         <section className={styles.forehead}>
@@ -160,7 +118,7 @@ export class Header extends React.Component {
               id='linkHome'
               to='/'
             >
-              {this.renderChildren()}
+              <img src={logo} className={styles.logo}/>
             </IndexLink>
           </figure>
           <span className={styles.tagline}>Need a Plan? We're here to help.</span>

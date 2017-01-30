@@ -70,6 +70,10 @@
     left: auto;
   }
 }
+.logo {
+  width: 110.3px;
+  height: 29.9px;
+}
 
 #linkHome {
   display: inline-block;

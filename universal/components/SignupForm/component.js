@@ -38,7 +38,7 @@ const SignUpForm = (props: signupProps) => {
   return (
     <section className={styles.signUp}>
       <header className={styles.greeting}>
-        <h1>Sign up to start thriving</h1>
+        <h1>Sign up to make a plan</h1>
       </header>
       <section className={styles.signUpDialogue}>
         <div className={styles.container}>
@@ -64,13 +64,6 @@ const SignUpForm = (props: signupProps) => {
                 name='password_confirmation'
                 type='password'
                 label='Confirm Password'
-                theme='thriveInput'
-                />
-              <Field
-                component={Input}
-                name='gimme_newsletters'
-                type='checkbox'
-                label='Would you like to signup for our newsletter?'
                 theme='thriveInput'
                 />
               {renderSubmit(props)}

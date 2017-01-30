@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import makeRootReducer from './reducers'
-import createLogger from 'redux-logger'
+//import createLogger from 'redux-logger'
 import callAPIMiddleware from 'modules/Middleware/callApi'
 import analyticsMiddleware from 'modules/Middleware/analytics'
 import ssoMiddleware from 'modules/Middleware/sso'
@@ -18,11 +18,11 @@ export default (preloadedState = {}) => {
   const enhancers = []
   if (__DEBUG__) {
     const devToolsExtension = window.devToolsExtension
-    const logger = createLogger()
+    //const logger = createLogger()
     if (typeof devToolsExtension === 'function') {
       enhancers.push(devToolsExtension())
     }
-    middleware.push(logger)
+    //middleware.push(logger)
   }
 
   // ======================================================
