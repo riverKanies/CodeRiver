@@ -1,24 +1,16 @@
 /* @flow */
 import React from 'react'
-import { redirectToShopify } from 'lib/sso'
 import { Link } from 'react-router'
 
 import styles from '../styles'
 
 class MainNav extends React.Component {
-  redirectToShopify: Function;
   props: {
     hideMenu: Function
   }
   constructor () {
     super(...arguments)
 
-    this.redirectToShopify = this.redirectToShopify.bind(this)
-  }
-
-  redirectToShopify () {
-    this.props.hideMenu()
-    redirectToShopify()
   }
 
   render () {

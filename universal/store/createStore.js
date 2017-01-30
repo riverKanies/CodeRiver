@@ -4,13 +4,12 @@ import makeRootReducer from './reducers'
 //import createLogger from 'redux-logger'
 import callAPIMiddleware from 'modules/Middleware/callApi'
 import analyticsMiddleware from 'modules/Middleware/analytics'
-import ssoMiddleware from 'modules/Middleware/sso'
 
 export default (preloadedState = {}) => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
-  const middleware = [thunk, callAPIMiddleware, analyticsMiddleware, ssoMiddleware]
+  const middleware = [thunk, callAPIMiddleware, analyticsMiddleware]
 
   // ======================================================
   // Store Enhancers

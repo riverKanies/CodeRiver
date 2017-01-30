@@ -14,7 +14,7 @@ export default class Layout extends React.Component {
             <h3>{message}</h3>
           </header>
           <span className={styles.buttonWrapper}>
-            <Button linkTo='/' buttonText='Start Thriving' />
+            <Button linkTo='/' buttonText='Start Planning' />
           </span>
         </div>
       </section>

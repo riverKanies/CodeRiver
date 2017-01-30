@@ -1,3 +1,9 @@
+Notes:
+Deploy:
+- npm run deploy:prod
+- npm run publish
+
+
 # Thrive Marketing Site
 
 [![CircleCI](https://circleci.com/gh/spartansystems/thrive-marketing/tree/master.svg?style=svg&circle-token=2c246cc4762c9c906be9a4df6a9617388ce6c682)](https://circleci.com/gh/spartansystems/thrive-marketing/tree/master)

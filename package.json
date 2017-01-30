@@ -16,9 +16,13 @@
     "compile": "better-npm-run compile",
     "debug:dev": "better-npm-run debug:dev",
     "debug:prod": "better-npm-run debug:prod",
+    "deploy": "better-npm-run deploy",
+    "deploy:staging": "better-npm-run build && better-npm-run publish:staging",
+    "deploy:prod": "better-npm-run deploy:prod",
     "dev": "better-npm-run dev",
     "lint": "eslint bin build config server universal tests && bin/findBadAriannas.sh",
     "lint:fix": "npm run lint -- --fix",
+    "publish": "better-npm-run publish",
     "heroku-postbuild": "better-npm-run build",
     "start": "better-npm-run start",
     "start:prod": "better-npm-run start:prod",
@@ -51,6 +55,25 @@
       "env": {
         "DEBUG": "app:*",
         "NODE_ENV": "production"
+      }
+    },
+    "deploy": {
+      "command": "npm run clean && npm run compile",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy:prod": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app:*"
+      }
+    },
+    "publish": {
+      "command": "surge --project ./dist/ --domain plan-made.surge.sh",
+      "env": {
+        "DEBUG": "app:*"
       }
     },
     "start": {

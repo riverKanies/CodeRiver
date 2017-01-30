@@ -4,7 +4,6 @@ import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required } from 'lib/validate'
 
 import { createSession } from 'modules/UserSession'
-import { actions as ssoMiddlewareActions } from 'modules/Middleware/sso'
 import component from './component'
 
 const validate = createValidator({

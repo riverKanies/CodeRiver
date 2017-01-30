@@ -10,7 +10,7 @@ function clientUrl () {
 export const CLIENT_URL = clientUrl()
 
 function hostUrl () {
-  if (window.location.hostname != "localhost") return "https://plan-made.herokuapp.com/"
+  if (window.location.hostname != "localhost") return "https://plan-made.herokuapp.com"
 
   const host = process.env.API_HOST
   const protocol = process.env.API_PROTOCOL

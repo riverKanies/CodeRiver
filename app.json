@@ -18,13 +18,7 @@
     "NODE_ENV": {
       "required": true
     },
-    "FACEBOOK_ID": {
-      "required": false
-    },
     "SEGMENT": {
-      "required": true
-    },
-    "SHOPIFY_URL": {
       "required": true
     }
   },
