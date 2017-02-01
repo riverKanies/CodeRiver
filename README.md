@@ -1,5 +1,7 @@
 Notes:
 Deploy:
+heroku: just push the repo ;} (and set env vars for api!)
+surge: *** doesn't handle url params well so I'm using heroku
 - npm run deploy:prod
 - npm run publish
 

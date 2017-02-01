@@ -1,0 +1,245 @@
+@value all: 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
+@value bodyCopy, ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
+
+/* Profile Styles */
+.profile {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  position: relative;
+  background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+  form {
+    fieldset {
+      margin-bottom: .25rem;
+    }
+  }
+}
+
+/* Greeting Styles */
+.greeting {
+  lost-column: 1;
+  margin-bottom: 5.5rem;
+  float: left;
+  clear: both;
+  text-align: center;
+}
+.h1 {
+  display: block;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0 0 2rem 0;
+  float: left;
+  text-align: inherit;
+  color: bodyCopy;
+  &::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 1px;
+    margin: 2rem auto 0 auto;
+    padding: 0 0;
+    float: none;
+    clear: both;
+    background: bodyCopy;
+  }
+}
+.h4 {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  text-align: inherit;
+  font-family: PlayfairItalic;
+  font-size: 1.125rem;
+  line-height: 100%;
+  letter-spacing: .02rem;
+  text-align: inherit;
+  color: bodyCopy;
+}
+
+/* My Account Styles, .container is the column */
+.myAccount {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+.container {
+  lost-column: 1;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  @media bp-mama-bear {
+    width: 80%;
+    margin: 0 10%;
+  }
+  @media bp-papa-bear {
+    width: 40%;
+    margin: 0 30%;
+  }
+}
+
+.accountHeader {
+  display: block;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  padding: 0 0;
+  float: left;
+  clear: both;
+  h3 {
+    margin-bottom: 0;
+    font-family: MonLight;
+    line-height: 100%;
+  }
+}
+
+/* All Form Styles */
+.myProfile,
+.accountAbout,
+.accountPreferences,
+.save,
+.changePassword,
+.password, {
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  border: 0px;
+}
+
+/* Input Styles */
+.inputWrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  border: none;
+}
+.label {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto .75rem;
+  padding: 0 0;
+  float: left;
+  font-family: MonLight;
+  font-size: .88rem;
+  line-height: 100%;
+  color: bodyCopy;
+  text-align: left;
+  @media bp-mama-bear {
+    font-size: 1rem;
+  }
+}
+.input {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
+  float: left;
+  font-family: Mon;
+  color: bodyCopy;
+  text-align: left;
+  background: white;
+  border: 2px solid lightGray;
+  border-radius: .125rem;
+  outline: none;
+  transition: border 150ms ease-in-out;
+  &:focus {
+    border-color: ThriveTeal;
+  }
+}
+
+.check {
+  appearance: none;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: -.125rem .625rem 0 0;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  font-family: Mon;
+  text-align: left;
+  background: white;
+  border: 2px solid lightGray;
+  border-radius: .125rem;
+  outline: none;
+  transition: 150ms ease-in-out;
+  @media bp-mama-bear {
+    margin: -.125rem .625rem 0 0;
+  }
+  &:checked {
+    background: ThriveTeal;
+    border-color: ThriveTeal;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      margin: 0 0;
+      padding: 0 0;
+      float: none;
+      position: absolute;
+      top: .25rem;
+      left: .25rem;
+      background: white;
+      border-radius: .25rem;
+    }
+  }
+}
+.submit {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0 0 0;
+  padding: 1.25rem 1.25rem;
+  float: left;
+  background: white;
+  outline: none;
+  border: 1px solid bodyCopy;
+  border-radius: .125rem;
+  font-family: MonLight;
+  font-size: .88rem;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 150ms cubic-bezier(.33,.89,.34,.98);
+  @media bp-mama-bear {
+    width: auto;
+    float: right;
+  }
+  &:hover, &:active {
+    background: ThriveTeal;
+    border-color: ThriveTeal;
+    color: white;
+  }
+}
+
+/* Form Specific Styles */
+.myProfile {
+  margin-bottom: 3.375rem;
+  padding-bottom: 3.375rem;
+  border-bottom: 1px solid lightGray;
+}
+.myProfile {
+
+
+}

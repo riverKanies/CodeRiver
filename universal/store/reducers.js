@@ -5,6 +5,7 @@ import { reducer as formReducer } from 'redux-form'
 import * as messages from 'modules/Messages'
 import * as session from 'modules/UserSession'
 import * as signup from 'modules/SignUp'
+import * as quoter from 'modules/Quoter'
 
 const locationState = {
   location: null
@@ -23,6 +24,7 @@ export const makeRootReducer = (asyncReducers) => {
     [messages.KEY]: messages.reducer,
     [session.KEY]: session.reducer,
     [signup.KEY]: signup.reducer,
+    [quoter.KEY]: quoter.reducer,
     location: locationReducer,
     form: formReducer,
     ...asyncReducers
