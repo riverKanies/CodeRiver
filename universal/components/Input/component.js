@@ -27,11 +27,17 @@ export default ({
         <div className={styles.inputWrap}>
           <label className={styles.label}>
             {label}
-            <select {...input} placeholder={label} type={type}>
+            <select {...input} >
               {selectArray.map((opt)=>{
                 return <option key={opt.name} value={opt.value}>{opt.name}</option>
               })}
             </select>
+            {
+              touched && (
+                (error && <Error error={error} />) ||
+                (warning && <Warning warning={warning} />)
+              )
+            }
           </label>
         </div>
       </div>

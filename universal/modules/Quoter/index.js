@@ -51,13 +51,20 @@ export function reducer (state: any = initialState, action: any) {
 
 export function getQuotes(data: any) {
   // get url params from data and use in httpGet below
-  console.log('getting quotes')
+  console.log('getting quotes', data)
+  let url = '/api/quotes'
+  const expectedParams = ['state', 'birthdate', 'gender', 'height', 'weight', 'rate_class', 'smoker', 'coverage', 'term']
+  expectedParams.forEach((p, i)=>{
+    const prompt = (i==0) ? '?' : '&'
+    url = url.concat(prompt, p, '=', data[p])
+  })
+  console.log('url with params: ', url)
   return {
     types: [
       actions.quotesPending,
       actions.quotesSuccess,
       actions.quotesFailure
     ],
-    callAPI: () => httpGet('/api/quotes')
+    callAPI: () => httpGet(url)
   }
 }
