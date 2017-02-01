@@ -17,8 +17,27 @@ export default ({
   label,
   type,
   theme = 'thriveInput',
+  selectArray,
+  example,
   meta: { touched, error, warning }
 }: FieldType) => {
+  if (type === 'select') {
+    return (
+      <div className={styles[theme]}>
+        <div className={styles.inputWrap}>
+          <label className={styles.label}>
+            {label}
+            <select {...input} placeholder={label} type={type}>
+              {selectArray.map((opt)=>{
+                return <option key={opt.name} value={opt.value}>{opt.name}</option>
+              })}
+            </select>
+          </label>
+        </div>
+      </div>
+    )
+  }
+
   if (type === 'checkbox') {
     return (
       <div className={styles[theme]}>
@@ -36,7 +55,7 @@ export default ({
     <div className={styles[theme]}>
       <div className={styles.inputWrap}>
         <label className={styles.label}>{label}</label>
-        <input className={styles.text} {...input} placeholder={label} type={type} />
+        <input className={styles.text} {...input} placeholder={example || label} type={type} />
         {
           touched && (
             (error && <Error error={error} />) ||
