@@ -6,11 +6,23 @@ import { Field } from 'redux-form'
 
 import Appendix from './ninjaQuoterApiAppendix'
 
-export default function Form (props: FormType) {
-  const { handleSubmit } = props
+function renderErrors(errors) {
+  if (errors.length == 0) return ''
+  return (<div style={{color: 'red'}}>
+    <strong>Some form values were invalid:</strong>
+    <ul>
+      {errors.map((e)=>{
+        return <li key={e.field}><strong >{e.field}: {e.message}</strong></li>
+      })}
+    </ul>
+  </div>)
+}
 
+export default function Form (props) {
+  const { handleSubmit } = props
   return (
     <form className={styles.myProfile} onSubmit={handleSubmit}>
+      {renderErrors(props.quoterErrors)}
       <fieldset className={styles.accountAbout}>
         <Field
           component={Input}
@@ -86,6 +98,7 @@ export default function Form (props: FormType) {
         />
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>
+      {renderErrors(props.quoterErrors)}
       <fieldset className={styles.save}>
         <input
           className={styles.submit}

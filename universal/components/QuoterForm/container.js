@@ -18,7 +18,7 @@ const validate = createValidator({
 })
 
 function onSuccess (result, dispatch) {
-  console.log('called onSuccess')
+  console.log('called onSuccess', result)
   // dispatch(setUserMessage('We Found Quotes!'))
   // setTimeout(() => dispatch(clearUserMessage()), 3000)
 }

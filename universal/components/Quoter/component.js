@@ -6,8 +6,7 @@ import styles from './styles'
 type Props = {
 }
 
-const Quoter = () => {
-
+const Quoter = (props) => {
   return (
     <section className={styles.profile}>
       <section className={styles.myAccount}>
@@ -15,7 +14,7 @@ const Quoter = () => {
           <header className={styles.accountHeader}>
             <h3>Get a Quote</h3>
           </header>
-          <QuoterForm />
+          <QuoterForm quoterErrors={props.errors}/>
         </div>
       </section>
     </section>

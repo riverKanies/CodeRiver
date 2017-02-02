@@ -14,7 +14,7 @@ export const actions = {
 export const initialState = {
   quotes: [],
   pending: false,
-  error: null
+  errors: []
 }
 
 export function reducer (state: any = initialState, action: any) {
@@ -24,24 +24,34 @@ export function reducer (state: any = initialState, action: any) {
         ...state,
         quotes: [],
         pending: true,
-        error: null
+        errors: []
       }
 
     case actions.quotesSuccess:
-      const quotes = JSON.parse(action.data.data).results
+      const errors = action.data.errors
+      if (errors) {
+        return {
+          ...state,
+          quotes: [],
+          pending: false,
+          errors: errors
+        }
+      }
+      const quotes = action.data.results
       return {
         ...state,
         quotes,
         pending: false,
-        error: null
+        errors: []
       }
 
     case actions.quotesFailure:
+      //console.log('failure', action)
       return {
         ...state,
         quotes: [],
         pending: false,
-        error: 'could not get quotes'
+        errors: [{field: 'request', message: 'failed to get quotes'}]
       }
 
     default:
