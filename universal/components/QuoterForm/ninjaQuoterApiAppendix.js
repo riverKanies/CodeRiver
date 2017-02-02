@@ -103,10 +103,6 @@ export const statesArray = [
         "value": "AK"
     },
     {
-        "name": "American Samoa",
-        "value": "AS"
-    },
-    {
         "name": "Arizona",
         "value": "AZ"
     },
@@ -135,20 +131,12 @@ export const statesArray = [
         "value": "DC"
     },
     {
-        "name": "Federated States Of Micronesia",
-        "value": "FM"
-    },
-    {
         "name": "Florida",
         "value": "FL"
     },
     {
         "name": "Georgia",
         "value": "GA"
-    },
-    {
-        "name": "Guam",
-        "value": "GU"
     },
     {
         "name": "Hawaii",
@@ -185,10 +173,6 @@ export const statesArray = [
     {
         "name": "Maine",
         "value": "ME"
-    },
-    {
-        "name": "Marshall Islands",
-        "value": "MH"
     },
     {
         "name": "Maryland",
@@ -251,10 +235,6 @@ export const statesArray = [
         "value": "ND"
     },
     {
-        "name": "Northern Mariana Islands",
-        "value": "MP"
-    },
-    {
         "name": "Ohio",
         "value": "OH"
     },
@@ -267,16 +247,8 @@ export const statesArray = [
         "value": "OR"
     },
     {
-        "name": "Palau",
-        "value": "PW"
-    },
-    {
         "name": "Pennsylvania",
         "value": "PA"
-    },
-    {
-        "name": "Puerto Rico",
-        "value": "PR"
     },
     {
         "name": "Rhode Island",
@@ -305,10 +277,6 @@ export const statesArray = [
     {
         "name": "Vermont",
         "value": "VT"
-    },
-    {
-        "name": "Virgin Islands",
-        "value": "VI"
     },
     {
         "name": "Virginia",
