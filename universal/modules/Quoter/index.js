@@ -37,7 +37,7 @@ export function reducer (state: any = initialState, action: any) {
           errors: errors
         }
       }
-      const quotes = action.data.results
+      const quotes = action.data.results.sort((a, b)=> (a - b))
       return {
         ...state,
         quotes,
@@ -61,9 +61,11 @@ export function reducer (state: any = initialState, action: any) {
 
 export function getQuotes(data: any) {
   // get url params from data and use in httpGet below
+  if (!data.coverage) data.coverage = "500000"
   console.log('getting quotes', data)
+
   let url = '/api/quotes'
-  const expectedParams = ['state', 'birthdate', 'gender', 'height', 'weight', 'rate_class', 'smoker', 'coverage', 'term']
+  const expectedParams = ['state', 'birthdate', 'gender', 'rate_class', 'smoker', 'coverage', 'term']
   expectedParams.forEach((p, i)=>{
     const prompt = (i==0) ? '?' : '&'
     url = url.concat(prompt, p, '=', data[p])

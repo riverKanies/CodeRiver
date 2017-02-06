@@ -9,11 +9,8 @@ const validate = createValidator({
   state: [required],
   birthdate: [required],
   gender: [required],
-  height: [required],
-  weight: [required],
   rate_class: [required],
   smoker: [required],
-  coverage: [required],
   term: [required]
 })
 

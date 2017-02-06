@@ -38,7 +38,7 @@ export default function Form (props) {
           type='birthdate'
           name='birthdate'
           label='Birthdate'
-          example='yyyy-mm-dd'
+          example='mm-dd-yyyy'
         />
         <Field
           component={Input}
@@ -47,22 +47,6 @@ export default function Form (props) {
           name='gender'
           label='Gender'
           selectArray={Appendix.gender}
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='height'
-          name='height'
-          label='Height'
-          example='inches ex: 70'
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='weight'
-          name='weight'
-          label='Weight'
-          example='pounds ex: 150'
         />
         <Field
           component={Input}
@@ -79,14 +63,6 @@ export default function Form (props) {
           name='smoker'
           label='Smoker'
           selectArray={Appendix.smoker}
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='coverage'
-          name='coverage'
-          label='Coverage'
-          example='dollars ex: 100000'
         />
         <Field
           component={Input}
