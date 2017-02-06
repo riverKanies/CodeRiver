@@ -40,22 +40,43 @@ export default function Form (props) {
           label='Birthdate'
           example='mm-dd-yyyy'
         />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='radio'
-          name='gender'
-          label='Male'
-          value='m'
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='radio'
-          name='gender'
-          label='Female'
-          value='f'
-        />
+        <div>
+          <text style={{float: "left", marginRight: "0.3em", marginBottom: "1em", marginTop: "0.2em"}}>I am</text>
+          <Field
+            component={Input}
+            theme='thriveInput'
+            type='radio'
+            name='gender'
+            label='Male'
+            value='m'
+          />
+          <Field
+            component={Input}
+            theme='thriveInput'
+            type='radio'
+            name='gender'
+            label='Female'
+            value='f'
+          />
+          <text style={{float: "left", marginRight: "0.3em", marginTop: "0.2em"}}>and I </text>
+          <Field
+            component={Input}
+            theme='thriveInput'
+            type='radio'
+            name='smoker'
+            label='do'
+            value='true'
+          />
+          <Field
+            component={Input}
+            theme='thriveInput'
+            type='radio'
+            name='smoker'
+            label='do not'
+            value='false'
+          />
+          <text style={{float: "left", marginTop: "0.2em"}}>smoke.</text>
+        </div>
         <Field
           component={Input}
           theme='thriveInput'
@@ -63,22 +84,6 @@ export default function Form (props) {
           name='rate_class'
           label='Rate Class'
           selectArray={Appendix.rateClasses}
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='select'
-          name='smoker'
-          label='Smoker'
-          selectArray={Appendix.smoker}
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='select'
-          name='term'
-          label='Term'
-          selectArray={Appendix.terms}
         />
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>

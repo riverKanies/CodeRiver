@@ -61,6 +61,31 @@
     color: red;
   }
 }
+
+.radio {
+  background: white;
+  border: 2px solid lightGray;
+  border-radius: .125rem;
+  font-family: Mon;
+  float: left;
+  margin-right: 0.3em;
+  padding: 0 4px 0 4px;
+  &:hover {
+    background-color: ThriveTeal;
+    border: 2px solid ThriveTeal;
+    color: white;
+  }
+}
+.radioHighlight {
+  composes: radio;
+  background-color: ThriveTeal;
+  border: 2px solid ThriveTeal;
+  color: white;
+}
+.radioInput {
+  appearance: none;
+}
+
 .check {
   appearance: none;
   display: inline-block;
@@ -128,4 +153,3 @@
       border-color: ThriveTeal;
     }
   }
-

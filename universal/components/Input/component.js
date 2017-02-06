@@ -25,9 +25,9 @@ export default ({
   if (type === 'radio') {
     return (
       <div className={styles[theme]}>
-        <div className={styles.inputWrap}>
-          <label className={styles.label}>
-            <input {...input} type={type} />
+        <div >
+          <label className={input.checked ? styles.radioHighlight : styles.radio}>
+            <input className={styles.radioInput} {...input} type={type} />
             {label}
             {
               touched && (

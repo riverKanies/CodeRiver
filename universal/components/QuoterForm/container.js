@@ -10,8 +10,7 @@ const validate = createValidator({
   birthdate: [required],
   gender: [required],
   rate_class: [required],
-  smoker: [required],
-  term: [required]
+  smoker: [required]
 })
 
 function onSuccess (result, dispatch) {
