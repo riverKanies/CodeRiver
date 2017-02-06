@@ -21,13 +21,33 @@ export default ({
   example,
   meta: { touched, error, warning }
 }: FieldType) => {
+
+  if (type === 'radio') {
+    return (
+      <div className={styles[theme]}>
+        <div className={styles.inputWrap}>
+          <label className={styles.label}>
+            <input {...input} type={type} />
+            {label}
+            {
+              touched && (
+                (error && <Error error={error} />) ||
+                (warning && <Warning warning={warning} />)
+              )
+            }
+          </label>
+        </div>
+      </div>
+    )
+  }
+
   if (type === 'select') {
     return (
       <div className={styles[theme]}>
         <div className={styles.inputWrap}>
           <label className={styles.label}>
             {label}
-            <select {...input} >
+            <select {...input}>
               {selectArray.map((opt)=>{
                 return <option key={opt.name} value={opt.value}>{opt.name}</option>
               })}

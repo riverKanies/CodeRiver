@@ -43,10 +43,18 @@ export default function Form (props) {
         <Field
           component={Input}
           theme='thriveInput'
-          type='select'
+          type='radio'
           name='gender'
-          label='Gender'
-          selectArray={Appendix.gender}
+          label='Male'
+          value='m'
+        />
+        <Field
+          component={Input}
+          theme='thriveInput'
+          type='radio'
+          name='gender'
+          label='Female'
+          value='f'
         />
         <Field
           component={Input}
