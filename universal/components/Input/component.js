@@ -29,13 +29,13 @@ export default ({
           <label className={input.checked ? styles.radioHighlight : styles.radio}>
             <input className={styles.radioInput} {...input} type={type} />
             {label}
-            {
-              touched && (
-                (error && <Error error={error} />) ||
-                (warning && <Warning warning={warning} />)
-              )
-            }
           </label>
+          {
+            touched && (
+              (error && <Error error={error} />) ||
+              (warning && <Warning warning={warning} />)
+            )
+          }
         </div>
       </div>
     )

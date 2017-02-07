@@ -20,6 +20,7 @@ function renderErrors(errors) {
 
 export default function Form (props) {
   const { handleSubmit } = props
+  const textStyles = {float: "left", marginRight: "0.3em", marginBottom: '2px', marginTop: "2px"}
   return (
     <form className={styles.myProfile} onSubmit={handleSubmit}>
       {renderErrors(props.quoterErrors)}
@@ -41,7 +42,7 @@ export default function Form (props) {
           example='mm-dd-yyyy'
         />
         <div>
-          <text style={{float: "left", marginRight: "0.3em", marginBottom: "1em", marginTop: "0.2em"}}>I am</text>
+          <text style={textStyles}>I am</text>
           <Field
             component={Input}
             theme='thriveInput'
@@ -58,7 +59,7 @@ export default function Form (props) {
             label='Female'
             value='f'
           />
-          <text style={{float: "left", marginRight: "0.3em", marginTop: "0.2em"}}>and I </text>
+          <text style={textStyles}>and I </text>
           <Field
             component={Input}
             theme='thriveInput'
@@ -75,7 +76,7 @@ export default function Form (props) {
             label='do not'
             value='false'
           />
-          <text style={{float: "left", marginTop: "0.2em"}}>smoke.</text>
+          <text style={textStyles}>smoke.</text>
         </div>
         <Field
           component={Input}

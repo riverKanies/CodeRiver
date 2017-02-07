@@ -59,10 +59,15 @@ export function reducer (state: any = initialState, action: any) {
   }
 }
 
+export const defaultValues = {
+  coverage: 500000,
+  term: 10
+}
+
 export function getQuotes(data: any) {
   // get url params from data and use in httpGet below
-  if (!data.coverage) data.coverage = "500000"
-  if (!data.term) data.term = "10"
+  if (!data.coverage) data.coverage = defaultValues.coverage
+  if (!data.term) data.term = defaultValues.term
   console.log('getting quotes', data)
 
   let url = '/api/quotes'

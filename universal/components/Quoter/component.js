@@ -1,8 +1,10 @@
 /* @flow */
 import React from 'react'
 import QuoterForm from 'components/QuoterForm'
-import { getQuotes } from 'modules/Quoter'
+import { getQuotes, defaultValues } from 'modules/Quoter'
 import styles from './styles'
+import formStyles from 'components/Input/styles.css'
+import profileStyles from 'components/QuoterForm/styles.css'
 
 import './sliderStyles.css'
 import Slider from 'rc-slider'
@@ -15,9 +17,11 @@ class Quoter extends React.Component {
     super(props)
 
     this.state = {}
-    this.state.coverage = 500000
+    this.state.coverage = defaultValues.coverage
+    this.state.term = defaultValues.term
 
     this.updateCoverage = this.updateCoverage.bind(this)
+    this.updateTerm = this.updateTerm.bind(this)
     this.updateQuotes = this.updateQuotes.bind(this)
   }
 
@@ -36,31 +40,59 @@ class Quoter extends React.Component {
   }
   renderQuotes(quotes) {
     if (quotes.length < 1) return ''
-    return (<div>
-      <div style={{ width: '100%' }}>
+    const terms = [10,15,20,30]
+    return (<div >
+      <div className={profileStyles.myProfile} style={{ width: '100%' }}>
         <p>Coverage: ${numberWithCommas(this.state.coverage)}</p>
         <Slider min={100000} max={1000000} value={this.state.coverage} step={100000} onChange={this.updateCoverage}/>
+        <p style={{marginTop: '20px'}}>Term:</p>
+        {terms.map((t,i)=>(
+          <label key={i} className={this.state.term == t ? formStyles.radioHighlight : formStyles.radio}>
+            <input className={formStyles.radioInput}
+              type='radio'
+              name='term'
+              value={t}
+              checked={this.state.term == t}
+              onChange={this.updateTerm}
+            />
+            {t} Years
+          </label>
+        ))}
         <button className={styles.submit} onClick={this.updateQuotes}>Update Quotes</button>
       </div>
-      <ul>
+      <br/>
+      <br/>
+      <section>
+      <ul style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
         {quotes.map((q,i)=>{
+          const textStyles = {textAlign: 'center', width: '100%'}
           return <li key={i}>
-            <img src={q.logo_url} />
-            <p>Company: {q.company_name}</p>
-            <p>Monthly Premium: ${q.premium_monthly}</p>
+            <div style={{
+                border: '2px solid grey',
+                borderRadius: '0.5rem',
+                padding: '1rem'}}>
+              <div style={{margin: 'auto', width: 160}}><img src={q.logo_url}/></div>
+              <p style={textStyles}>Company: {q.company_name}</p>
+              <p style={textStyles}>Monthly Premium: ${q.premium_monthly}</p>
+            </div>
             <br/>
           </li>
         })}
       </ul>
+      </section>
     </div>)
   }
   updateCoverage (coverage) {
     this.setState({coverage})
   }
+  updateTerm (e) {
+    const term = e.target.value
+    this.setState({term})
+  }
   updateQuotes () {
-    const { coverage } = this.state
+    const { coverage, term } = this.state
     const formData = this.props.form.values
-    const data = { ...formData, coverage }
+    const data = { ...formData, coverage, term }
     this.props.dispatch(getQuotes(data))
   }
 }
