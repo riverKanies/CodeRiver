@@ -14,6 +14,6 @@ type Props = {
 //   }
 // }
 
-const mapStateToProps = (store) => (store[KEY])
+const mapStateToProps = (store) => ({...store[KEY], form: store.form['quoter']})
 
 export default connect(mapStateToProps)(Quoter)//(QuoterContainer)

@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import QuoterForm from 'components/QuoterForm'
+import { getQuotes } from 'modules/Quoter'
 import styles from './styles'
 
 import './sliderStyles.css'
@@ -17,6 +18,7 @@ class Quoter extends React.Component {
     this.state.coverage = 500000
 
     this.updateCoverage = this.updateCoverage.bind(this)
+    this.updateQuotes = this.updateQuotes.bind(this)
   }
 
   render () {
@@ -33,11 +35,12 @@ class Quoter extends React.Component {
     </section>)
   }
   renderQuotes(quotes) {
-    //if (quotes.length < 1) return ''
+    if (quotes.length < 1) return ''
     return (<div>
       <div style={{ width: '100%' }}>
         <p>Coverage: ${numberWithCommas(this.state.coverage)}</p>
         <Slider min={100000} max={1000000} value={this.state.coverage} step={100000} onChange={this.updateCoverage}/>
+        <button className={styles.submit} onClick={this.updateQuotes}>Update Quotes</button>
       </div>
       <ul>
         {quotes.map((q,i)=>{
@@ -53,6 +56,12 @@ class Quoter extends React.Component {
   }
   updateCoverage (coverage) {
     this.setState({coverage})
+  }
+  updateQuotes () {
+    const { coverage } = this.state
+    const formData = this.props.form.values
+    const data = { ...formData, coverage }
+    this.props.dispatch(getQuotes(data))
   }
 }
 
