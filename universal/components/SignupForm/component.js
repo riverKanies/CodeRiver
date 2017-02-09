@@ -6,6 +6,8 @@ import ExternalLink from 'components/ExternalLink'
 import Input from 'components/Input'
 import styles from './styles'
 
+import { renderSelectedQuote } from 'components/QuoteCard'
+
 type renderSubmitField = {
   valid: boolean,
   submitting: boolean,
@@ -40,9 +42,9 @@ const SignUpForm = (props: signupProps) => {
       <header className={styles.greeting}>
         <h1>Sign up to make a plan</h1>
       </header>
-      {renderSelectedQuote(props.selectedQuote)}
       <section className={styles.signUpDialogue}>
         <div className={styles.container}>
+          {renderSelectedQuote(props.selectedQuote)}
           <form className={styles.signUpForm}>
             <fieldset className={styles.timeToThrive}>
               <GenericFormError {...props} />
@@ -75,11 +77,6 @@ const SignUpForm = (props: signupProps) => {
       </section>
     </section>
   )
-}
-
-function renderSelectedQuote(quote) {
-  if (!quote) return ''
-  return <p>You selected this plan: {quote.company_name} ${quote.premium_monthly}</p>
 }
 
 export default SignUpForm

@@ -1,7 +1,9 @@
 import { reduxForm } from 'redux-form'
+import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
 import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required } from 'lib/validate'
+import { KEY as QUOTERKEY } from 'modules/Quoter'
 
 import { createSession } from 'modules/UserSession'
 import component from './component'
@@ -21,8 +23,13 @@ const onSubmit = genFormHandler({
   onSuccess
 })
 
+const mapStateToProps = (store) => ({
+  selectedQuote: store[QUOTERKEY].selectedQuote
+})
+const container = connect(mapStateToProps)(component)
+
 export default reduxForm({
   form: 'login',
   validate,
   onSubmit
-})(component)
+})(container)
