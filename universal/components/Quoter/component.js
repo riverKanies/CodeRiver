@@ -10,6 +10,8 @@ import profileStyles from 'components/QuoterForm/styles.css'
 import './sliderStyles.css'
 import Slider from 'rc-slider'
 
+import { browserHistory } from 'react-router'
+
 type Props = {
 }
 
@@ -81,6 +83,7 @@ class Quoter extends React.Component {
   selectQuote (i) {
     return (e) => {
       this.props.dispatch({type: actions.selectQuote, data: this.props.quotes[i]})
+      browserHistory.push('/signup')
     }
   }
   updateCoverage (coverage) {
