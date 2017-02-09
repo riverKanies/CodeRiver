@@ -20,7 +20,13 @@ function renderErrors(errors) {
 
 export default function Form (props) {
   const { handleSubmit } = props
-  const textStyles = {float: "left", marginRight: "0.3em", marginBottom: '2px', marginTop: "2px"}
+  const textStyles = {float: "left", marginRight: "0.3em", marginBottom: '5px', marginTop: "2px"}
+  const rateClassOptions = [
+    {label: 1, value: 's'},
+    {label: 2, value: 's'},
+    {label: 3, value: 'sp'},
+    {label: 4, value: 'p'},
+    {label: 5, value: 'pp'}]
   return (
     <form className={styles.myProfile} onSubmit={handleSubmit}>
       {renderErrors(props.quoterErrors)}
@@ -76,16 +82,19 @@ export default function Form (props) {
             label='do not'
             value='false'
           />
-          <text style={textStyles}>smoke.</text>
+          <text style={textStyles}>smoke. My overall health is </text>
+          {rateClassOptions.map((op,i)=>{
+            return (<Field key={i}
+              component={Input}
+              theme='thriveInput'
+              type='radio'
+              name='rateClass'
+              label={op.label}
+              value={op.value}
+            />)
+          })}
+          <text style={textStyles}>.</text>
         </div>
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='select'
-          name='rate_class'
-          label='Rate Class'
-          selectArray={Appendix.rateClasses}
-        />
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>
       {renderErrors(props.quoterErrors)}
