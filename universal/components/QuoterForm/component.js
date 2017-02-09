@@ -88,7 +88,7 @@ export default function Form (props) {
               component={Input}
               theme='thriveInput'
               type='radio'
-              name='rateClass'
+              name='rate_class'
               label={op.label}
               value={op.value}
             />)
