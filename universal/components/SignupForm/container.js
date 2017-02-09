@@ -2,6 +2,7 @@ import { reduxForm } from 'redux-form'
 import { actions } from 'modules/Middleware/analytics'
 import { connect } from 'react-redux'
 import { createAccount, KEY } from 'modules/SignUp'
+import { KEY as QUOTERKEY } from 'modules/Quoter'
 import { genFormHandler } from 'lib/formHelpers'
 import { browserHistory } from 'react-router'
 import { createValidator, required, email, minLength, match } from 'lib/validate'
@@ -30,7 +31,10 @@ const onSubmit = genFormHandler({
   onSuccess
 })
 
-const mapStateToProps = (store) => ({ message: store[KEY].message })
+const mapStateToProps = (store) => ({
+  message: store[KEY].message,
+  selectedQuote: store[QUOTERKEY].selectedQuote
+})
 const container = connect(mapStateToProps)(component)
 
 export default reduxForm({

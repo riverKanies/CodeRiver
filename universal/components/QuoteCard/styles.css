@@ -1,0 +1,21 @@
+@value ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+
+
+/* Quote Card */
+.card {
+  border: 2px solid grey;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  &:hover {
+    border-color: ThriveTeal;
+  }
+}
+.cardHighlight {
+  composes: card;
+  border-color: ThriveTeal;
+}
+
+.text {
+  text-align: center;
+  width: 100%;
+}

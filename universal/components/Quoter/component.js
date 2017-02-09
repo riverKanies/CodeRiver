@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import QuoterForm from 'components/QuoterForm'
+import QuoteCard from 'components/QuoteCard'
 import { getQuotes, defaultValues, actions } from 'modules/Quoter'
 import styles from './styles'
 import formStyles from 'components/Input/styles.css'
@@ -66,15 +67,10 @@ class Quoter extends React.Component {
       <section>
       <ul style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
         {quotes.map((q,i)=>{
-          const textStyles = {textAlign: 'center', width: '100%'}
           const selectedQuoteId = idQuote(this.props.selectedQuote)
           const quoteId = idQuote(this.props.quotes[i])
           return <li key={i}>
-            <div className={quoteId == selectedQuoteId ? styles.cardHighlight : styles.card} onClick={this.selectQuote(i)}>
-              <div style={{margin: 'auto', width: 160}}><img src={q.logo_url}/></div>
-              <p style={textStyles}>Company: {q.company_name}</p>
-              <p style={textStyles}>Monthly Premium: ${q.premium_monthly}</p>
-            </div>
+            <QuoteCard isSelected={quoteId == selectedQuoteId} onClick={this.selectQuote(i)} quote={q}/>
             <br/>
           </li>
         })}

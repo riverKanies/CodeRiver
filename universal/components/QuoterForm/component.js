@@ -22,10 +22,11 @@ export default function Form (props) {
   const { handleSubmit } = props
   const textStyles = {float: "left", marginRight: "0.3em", marginBottom: '5px', marginTop: "2px"}
   const rateClassOptions = [
-    {label: 1, value: 's'},
-    {label: 2, value: 'sp'},
-    {label: 3, value: 'p'},
-    {label: 4, value: 'pp'}]
+    {label: 1, value: 't1'},
+    {label: 2, value: 's'},
+    {label: 3, value: 'sp'},
+    {label: 4, value: 'p'},
+    {label: 5, value: 'pp'}]
   return (
     <form className={styles.myProfile} onSubmit={handleSubmit}>
       {renderErrors(props.quoterErrors)}
