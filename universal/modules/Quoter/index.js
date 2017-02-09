@@ -7,18 +7,26 @@ export const KEY = 'quoter'
 export const actions = {
   quotesPending: `${KEY}/quotes-pending`,
   quotesSuccess: `${KEY}/quotes-success`,
-  quotesFailure: `${KEY}/quotes-failure`
+  quotesFailure: `${KEY}/quotes-failure`,
+  selectQuote: `${KEY}/select-quote`
 }
 
 // Reducer
 export const initialState = {
   quotes: [],
   pending: false,
-  errors: []
+  errors: [],
+  selectedQuote: null
 }
 
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
+    case actions.selectQuote:
+      console.log('set quote', action.data)
+      return {
+        ...state,
+        selectedQuote: action.data
+      }
     case actions.quotesPending:
       return {
         ...state,

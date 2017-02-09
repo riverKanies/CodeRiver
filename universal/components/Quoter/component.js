@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import QuoterForm from 'components/QuoterForm'
-import { getQuotes, defaultValues } from 'modules/Quoter'
+import { getQuotes, defaultValues, actions } from 'modules/Quoter'
 import styles from './styles'
 import formStyles from 'components/Input/styles.css'
 import profileStyles from 'components/QuoterForm/styles.css'
@@ -20,6 +20,7 @@ class Quoter extends React.Component {
     this.state.coverage = defaultValues.coverage
     this.state.term = defaultValues.term
 
+    this.selectQuote = this.selectQuote.bind(this)
     this.updateCoverage = this.updateCoverage.bind(this)
     this.updateTerm = this.updateTerm.bind(this)
     this.updateQuotes = this.updateQuotes.bind(this)
@@ -66,11 +67,10 @@ class Quoter extends React.Component {
       <ul style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
         {quotes.map((q,i)=>{
           const textStyles = {textAlign: 'center', width: '100%'}
+          const selectedQuoteId = idQuote(this.props.selectedQuote)
+          const quoteId = idQuote(this.props.quotes[i])
           return <li key={i}>
-            <div style={{
-                border: '2px solid grey',
-                borderRadius: '0.5rem',
-                padding: '1rem'}}>
+            <div className={quoteId == selectedQuoteId ? styles.cardHighlight : styles.card} onClick={this.selectQuote(i)}>
               <div style={{margin: 'auto', width: 160}}><img src={q.logo_url}/></div>
               <p style={textStyles}>Company: {q.company_name}</p>
               <p style={textStyles}>Monthly Premium: ${q.premium_monthly}</p>
@@ -81,6 +81,11 @@ class Quoter extends React.Component {
       </ul>
       </section>
     </div>)
+  }
+  selectQuote (i) {
+    return (e) => {
+      this.props.dispatch({type: actions.selectQuote, data: this.props.quotes[i]})
+    }
   }
   updateCoverage (coverage) {
     this.setState({coverage})
@@ -93,8 +98,15 @@ class Quoter extends React.Component {
     const { coverage, term } = this.state
     const formData = this.props.form.values
     const data = { ...formData, coverage, term }
+    this.setState({selectedQuote: null})
     this.props.dispatch(getQuotes(data))
   }
+}
+
+function idQuote(quote) {
+  if (!quote) return null
+  const id = quote.company_code+quote.product_name+quote.premium_monthly
+  return id
 }
 
 function numberWithCommas(x) {
