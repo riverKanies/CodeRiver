@@ -83,7 +83,8 @@ class Quoter extends React.Component {
   selectQuote (i) {
     return (e) => {
       this.props.dispatch({type: actions.selectQuote, data: this.props.quotes[i]})
-      browserHistory.push('/signup')
+      const redirectPath = this.props.isLoggedIn ? '/profile' : '/signup'
+      browserHistory.push(redirectPath)
     }
   }
   updateCoverage (coverage) {

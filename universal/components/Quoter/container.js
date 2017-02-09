@@ -4,16 +4,11 @@ import { connect } from 'react-redux'
 import Quoter from './component'
 import { KEY } from 'modules/Quoter'
 
+import * as sessionSelectors from 'modules/UserSession/selectors'
 
-type Props = {
+const mapStateToProps = (store) => {
+  const { isLoggedIn } = sessionSelectors.isLoggedIn(store)
+  return ({...store[KEY], form: store.form['quoter'], isLoggedIn})
 }
-
-// export class QuoterContainer extends React.Component {
-//   render () {
-//     return <Quoter />
-//   }
-// }
-
-const mapStateToProps = (store) => ({...store[KEY], form: store.form['quoter']})
 
 export default connect(mapStateToProps)(Quoter)//(QuoterContainer)
