@@ -57,6 +57,20 @@ const SignUpForm = (props: signupProps) => {
               />
               <Field
                 component={Input}
+                name='name'
+                type='name'
+                label='Full Name'
+                theme='thriveInput'
+              />
+              <Field
+                component={Input}
+                name='phone'
+                type='phone'
+                label='Phone Number'
+                theme='thriveInput'
+              />
+              <Field
+                component={Input}
                 name='password'
                 type='password'
                 label='Password'

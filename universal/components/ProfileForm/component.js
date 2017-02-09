@@ -24,6 +24,13 @@ export default function Form (props: FormType) {
           name='email'
           label='Email'
         />
+        <Field
+          component={Input}
+          theme='thriveInput'
+          type='phone'
+          name='phone'
+          label='Phone'
+        />
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>
       <fieldset className={styles.save}>
