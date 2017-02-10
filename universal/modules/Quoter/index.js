@@ -1,5 +1,6 @@
 /* @flow */
 import { httpGet } from 'lib/http'
+import { SELECTED_QUOTE_KEY } from './constants'
 
 
 export const KEY = 'quoter'
@@ -12,6 +13,7 @@ export const actions = {
 }
 
 // Reducer
+localStorage.removeItem(SELECTED_QUOTE_KEY)
 export const initialState = {
   quotes: [],
   pending: false,
@@ -22,7 +24,7 @@ export const initialState = {
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
     case actions.selectQuote:
-      console.log('set quote', action.data)
+      localStorage.setItem(SELECTED_QUOTE_KEY, JSON.stringify(action.data))
       return {
         ...state,
         selectedQuote: action.data

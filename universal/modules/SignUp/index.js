@@ -1,6 +1,7 @@
 /* @flow */
 import { httpPost, CLIENT_URL } from 'lib/http'
 import baseActions from 'modules/baseActions'
+import { SELECTED_QUOTE_KEY } from 'modules/Quoter/constants'
 
 // Name
 export const KEY = 'sign-up'
@@ -42,8 +43,8 @@ export function reducer (state: any = initialState, action: any) {
 
 export function createAccount (data: any = {}) {
   let formData = { ...data }
-  formData['gimme_newsletters'] = data.gimme_newsletters || 'false'
-  formData['gimme_communications'] = data.gimme_newsletters || 'false'
+  const quote = JSON.parse(localStorage.getItem(SELECTED_QUOTE_KEY))
+  if (quote) formData.quote = quote
 
   return {
     types: [
