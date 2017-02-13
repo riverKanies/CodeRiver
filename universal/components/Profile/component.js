@@ -14,7 +14,8 @@ type Props = {
 const Profile = ({
   email,
   name,
-  quote
+  quote,
+  query
 }: Props) => {
   if (!email) return null
   const displayName = name || email
@@ -29,6 +30,7 @@ const Profile = ({
           <header className={styles.accountHeader}>
             <h3>My Account</h3>
           </header>
+          {renderQueryData(query)}
           {renderSelectedQuote(quote)}
           <ProfileForm />
           <header className={styles.accountHeader}>
@@ -39,6 +41,21 @@ const Profile = ({
       </section>
     </section>
   )
+}
+
+function renderQueryData(query) {
+  if (!query.state) return ''
+  return(<div>
+    <p>Query Data:</p>
+    <p>State: {query.state},
+    Birthdate: {query.birthdate},
+    Gender: {query.gender},
+    Smoker: {query.smoker},
+    Rate Class: {query.rate_class},
+    Coverage: {query.coverage},
+    Term: {query.term}</p>
+    <br/>
+  </div>)
 }
 
 export default Profile

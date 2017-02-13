@@ -1,6 +1,6 @@
 /* @flow */
 import { httpGet } from 'lib/http'
-import { SELECTED_QUOTE_KEY } from './constants'
+import { SELECTED_QUOTE_KEY, QUERY_KEY } from './constants'
 
 
 export const KEY = 'quoter'
@@ -14,6 +14,7 @@ export const actions = {
 
 // Reducer
 localStorage.removeItem(SELECTED_QUOTE_KEY)
+localStorage.removeItem(QUERY_KEY)
 export const initialState = {
   quotes: [],
   pending: false,
@@ -79,6 +80,7 @@ export function getQuotes(data: any) {
   if (!data.coverage) data.coverage = defaultValues.coverage
   if (!data.term) data.term = defaultValues.term
   console.log('getting quotes', data)
+  localStorage.setItem(QUERY_KEY, JSON.stringify(data))
 
   let url = '/api/quotes'
   const expectedParams = ['state', 'birthdate', 'gender', 'rate_class', 'smoker', 'coverage', 'term']
@@ -86,7 +88,6 @@ export function getQuotes(data: any) {
     const prompt = (i==0) ? '?' : '&'
     url = url.concat(prompt, p, '=', data[p])
   })
-  console.log('url with params: ', url)
   return {
     types: [
       actions.quotesPending,

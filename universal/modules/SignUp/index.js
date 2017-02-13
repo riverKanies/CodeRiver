@@ -1,7 +1,7 @@
 /* @flow */
 import { httpPost, CLIENT_URL } from 'lib/http'
 import baseActions from 'modules/baseActions'
-import { SELECTED_QUOTE_KEY } from 'modules/Quoter/constants'
+import { SELECTED_QUOTE_KEY, QUERY_KEY } from 'modules/Quoter/constants'
 
 // Name
 export const KEY = 'sign-up'
@@ -45,6 +45,8 @@ export function createAccount (data: any = {}) {
   let formData = { ...data }
   const quote = JSON.parse(localStorage.getItem(SELECTED_QUOTE_KEY))
   if (quote) formData.quote = quote
+  const query = JSON.parse(localStorage.getItem(QUERY_KEY))
+  if (query) formData.query = query
 
   return {
     types: [
