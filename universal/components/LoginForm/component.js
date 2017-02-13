@@ -8,8 +8,6 @@ import { Link } from 'react-router'
 import GenericFormError from 'components/GenericFormError'
 import styles from './styles'
 
-import { renderSelectedQuote } from 'components/QuoteCard'
-
 type renderSubmitField = {
   valid: boolean,
   submitting: boolean,
@@ -50,7 +48,6 @@ const LoginForm = (props: signupProps) => {
       </header>
       <section className={styles.loginDialogue}>
         <div className={styles.container}>
-          {renderSelectedQuote(props.selectedQuote)}
           <form className={styles.loginForm}>
             <fieldset className={styles.getInHere}>
               <GenericFormError {...props} />

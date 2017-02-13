@@ -3,6 +3,7 @@ import React from 'react'
 import QuoterForm from 'components/QuoterForm'
 import QuoteCard from 'components/QuoteCard'
 import { getQuotes, defaultValues, actions } from 'modules/Quoter'
+import { apiUpdateQuote } from 'modules/UserSession'
 import styles from './styles'
 import formStyles from 'components/Input/styles.css'
 import profileStyles from 'components/QuoterForm/styles.css'
@@ -82,8 +83,13 @@ class Quoter extends React.Component {
   }
   selectQuote (i) {
     return (e) => {
-      this.props.dispatch({type: actions.selectQuote, data: this.props.quotes[i]})
-      const redirectPath = this.props.isLoggedIn ? '/profile' : '/signup'
+      const quote = this.props.quotes[i]
+      this.props.dispatch({type: actions.selectQuote, data: quote})
+      let redirectPath = '/signup'
+      if (this.props.isLoggedIn) {
+        this.props.dispatch(apiUpdateQuote(quote))
+        redirectPath = '/profile'
+      }
       browserHistory.push(redirectPath)
     }
   }

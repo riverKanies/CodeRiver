@@ -26,7 +26,10 @@ export const actions = {
   clearUserMessage: `${KEY}/clear-user-message`,
   clearPasswordMessage: `${KEY}/clear-password-message`,
   setUserMessage: `${KEY}/set-user-message`,
-  setPasswordMessage: `${KEY}/set-password-message`
+  setPasswordMessage: `${KEY}/set-password-message`,
+  updateQuotePending: `${KEY}/update-quote-pending`,
+  updateQuoteFailure: `${KEY}/update-quote-failure`,
+  updateQuoteSuccess: `${KEY}/update-quote-success`
 }
 
 // Reducer
@@ -45,6 +48,14 @@ export const initialState = {
 
 export function reducer (state: any = initialState, action: any) {
   switch (action.type) {
+    case actions.updateQuotePending:
+    case actions.updateQuoteFailure:
+    case actions.updateQuoteSuccess:
+      return {
+        ...state,
+        userData: {...state.userData, quote: action.data}
+      }
+
     case actions.deletePending:
     case actions.fetchPending:
     case actions.createPending:
@@ -256,5 +267,17 @@ export function registerSubdomain () {
   return {
     type: actions.registerSubdomain,
     subdomain: current
+  }
+}
+
+export function apiUpdateQuote(data: any) {
+  let url = '/api/quotes'
+  return {
+    types: [
+      actions.updateQuotePending,
+      actions.updateQuoteSuccess,
+      actions.updateQuoteFailure
+    ],
+    callAPI: () => httpPost(url, {quote: data})
   }
 }

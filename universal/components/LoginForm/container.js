@@ -23,13 +23,8 @@ const onSubmit = genFormHandler({
   onSuccess
 })
 
-const mapStateToProps = (store) => ({
-  selectedQuote: store[QUOTERKEY].selectedQuote
-})
-const container = connect(mapStateToProps)(component)
-
 export default reduxForm({
   form: 'login',
   validate,
   onSubmit
-})(container)
+})(component)
