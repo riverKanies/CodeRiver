@@ -25,7 +25,7 @@ export default ({
 
   if (type === 'quoteInput') {
     return (
-      <div className={styles[theme]}>
+      <label className={styles.formBlockWrap}>
           <input className={styles.planMadeText}
             {...input}
             placeholder={example || label}
@@ -37,32 +37,28 @@ export default ({
               (warning && <Warning warning={warning} />)
             )
           }
-      </div>
+      </label>
     )
   }
 
   if (type === 'radio') {
     return (
-      <div className={styles[theme]}>
-        <div >
-          <label className={input.checked ? styles.radioHighlight : styles.radio}>
-            <input className={styles.radioInput} {...input} type={type} />
-            {label}
-          </label>
-          {
-            touched && (
-              (error && <Error error={error} />) ||
-              (warning && <Warning warning={warning} />)
-            )
-          }
-        </div>
-      </div>
+      <label className={input.checked ? styles.radioHighlight : styles.radio}>
+        <input className={styles.radioInput} {...input} type={type} />
+        {label}
+        {
+          touched && (
+            (error && <Error error={error} />) ||
+            (warning && <Warning warning={warning} />)
+          )
+        }
+      </label>
     )
   }
 
   if (type === 'select') {
     return (
-      <div className={styles[theme]}>
+      <div className={styles.formBlockWrap}>
         <select className={styles.select} {...input}>
           {selectArray.map((opt)=>{
             return <option key={opt.name} value={opt.value}>{opt.name}</option>

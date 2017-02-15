@@ -3,6 +3,13 @@
 @value bodyCopy, ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
+.text {
+  display: inline-block;
+  margin-right: 0.3em;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
 /* All Form Styles */
 .myProfile,
 .accountAbout,
@@ -16,6 +23,7 @@
   padding: 0 0;
   float: left;
   border: 0px;
+  text-align: center;
 }
 
 .submit {

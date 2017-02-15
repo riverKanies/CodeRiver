@@ -67,7 +67,7 @@
   border: 2px solid lightGray;
   border-radius: .125rem;
   font-family: Mon;
-  float: left;
+  display: inline-block;
   margin-right: 0.3em;
   margin-bottom: 3px;
   padding: 0 4px 0 4px;
@@ -75,6 +75,14 @@
     background-color: ThriveTeal;
     border: 2px solid ThriveTeal;
     color: white;
+  }
+  .error {
+    display: inline-block;
+    font-family: MonLight;
+    font-size: .88rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: red;
   }
 }
 .radioHighlight {
@@ -156,13 +164,12 @@
 }
 
 .planMadeText {
-  display: block;
+  display: inline-block;
   width: 120px;
   margin: 0 auto;
   padding: 2px 5px;
   margin-right: 5px;
   margin-bottom: 3px;
-  float: left;
   font-family: Mon;
   text-align: left;
   background: white;
@@ -175,9 +182,18 @@
   }
 }
 
+.formBlockWrap {
+  display: inline-block;
+  .error {
+    display: inline-block;
+    font-family: MonLight;
+    font-size: .88rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: red;
+  }
+}
 .select {
-  display: block;
-  float: left;
   appearance: none;
   background: transparent;
   border: 2px solid lightGray;

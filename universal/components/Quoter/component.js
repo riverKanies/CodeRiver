@@ -36,7 +36,7 @@ class Quoter extends React.Component {
         <div className={styles.container}>
           {this.renderQuotes(this.props.quotes)}
           <header className={styles.accountHeader}>
-            <h3>Get a Quote</h3>
+            <h3>Let's get started</h3>
           </header>
           <QuoterForm quoterErrors={this.props.errors}/>
         </div>

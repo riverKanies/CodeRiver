@@ -30,8 +30,7 @@ export default function Form (props) {
   return (
     <form className={styles.myProfile} onSubmit={handleSubmit}>
       {renderErrors(props.quoterErrors)}
-      <fieldset className={styles.accountAbout}>
-        <text style={textStyles}>I'm a</text>
+        <text className={styles.text}>I'm a</text>
         <Field
           component={Input}
           theme='thriveInput'
@@ -48,7 +47,7 @@ export default function Form (props) {
           label='Woman'
           value='f'
         />
-        <text style={textStyles}>and I live in</text>
+        <text className={styles.text}>and I live in</text>
         <Field
           component={Input}
           theme='thriveInput'
@@ -57,7 +56,8 @@ export default function Form (props) {
           label='State'
           selectArray={Appendix.states}
         />
-        <text style={textStyles}>My birthdate is</text>
+        <br/>
+        <text className={styles.text}>My birthdate is</text>
         <Field
           component={Input}
           theme='thriveInput'
@@ -78,7 +78,8 @@ export default function Form (props) {
             }
           }}
         />
-        <text style={textStyles}>I</text>
+        <br/>
+        <text className={styles.text}>I</text>
         <Field
           component={Input}
           theme='thriveInput'
@@ -95,8 +96,10 @@ export default function Form (props) {
           label='do not'
           value='false'
         />
-        <text style={textStyles}>use tobacco</text>
-        <text style={textStyles}>On a scale from 1-5 I rate my overall health as </text>
+        <text className={styles.text}>use tobacco</text>
+        <br/>
+        <text className={styles.text}>On a scale from 1-5 I rate my overall health as </text>
+        <br/>
         {rateClassOptions.map((op,i)=>{
           return (<Field key={i}
             component={Input}
@@ -108,7 +111,6 @@ export default function Form (props) {
           />)
         })}
         {(props.message) ? <p>{props.message}</p> : null }
-      </fieldset>
       {renderErrors(props.quoterErrors)}
       <fieldset className={styles.save}>
         <input
