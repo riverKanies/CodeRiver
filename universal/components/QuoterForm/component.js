@@ -30,94 +30,95 @@ export default function Form (props) {
   return (
     <form className={styles.myProfile} onSubmit={handleSubmit}>
       {renderErrors(props.quoterErrors)}
-        <text className={styles.text}>I'm a</text>
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='radio'
-          name='gender'
-          label='Man'
-          value='m'
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='radio'
-          name='gender'
-          label='Woman'
-          value='f'
-        />
-        <text className={styles.text}>and I live in</text>
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='select'
-          name='state'
-          label='State'
-          selectArray={Appendix.states}
-        />
-        <br/>
-        <text className={styles.text}>My birthdate is</text>
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='quoteInput'
-          name='birthdate'
-          example='mm-dd-yyyy'
-          onChangeFunc={(onChangeFunc)=>{
-            return (e)=>{
-              const length = e.target.value.length
-              if (length == 3 || length == 6) {
-                if (e.target.value.slice(-1) != '-') {
-                  const pre = e.target.value.slice(0,-1)
-                  const post = e.target.value.slice(-1)
-                  e.target.value = `${pre}-${post}`
-                }
+      <text className={styles.text}>I'm a</text>
+      <Field
+        component={Input}
+        theme='thriveInput'
+        type='radio'
+        name='gender'
+        label='Man'
+        value='m'
+      />
+      <Field
+        component={Input}
+        theme='thriveInput'
+        type='radio'
+        name='gender'
+        label='Woman'
+        value='f'
+      />
+      <text className={styles.text}>and I live in</text>
+      <Field
+        component={Input}
+        theme='thriveInput'
+        type='select'
+        name='state'
+        label='State'
+        selectArray={Appendix.states}
+      />
+      <br/>
+      <text className={styles.text}>My birthdate is</text>
+      <Field
+        component={Input}
+        theme='thriveInput'
+        type='quoteInput'
+        name='birthdate'
+        example='mm-dd-yyyy'
+        onChangeFunc={(onChangeFunc)=>{
+          return (e)=>{
+            const length = e.target.value.length
+            if (length == 3 || length == 6) {
+              if (e.target.value.slice(-1) != '-') {
+                const pre = e.target.value.slice(0,-1)
+                const post = e.target.value.slice(-1)
+                e.target.value = `${pre}-${post}`
               }
-              return onChangeFunc(e)
             }
-          }}
-        />
-        <br/>
-        <text className={styles.text}>I</text>
-        <Field
+            return onChangeFunc(e)
+          }
+        }}
+      />
+      <br/>
+      <text className={styles.text}>I</text>
+      <Field
+        component={Input}
+        theme='thriveInput'
+        type='radio'
+        name='smoker'
+        label='do'
+        value='true'
+      />
+      <Field
+        component={Input}
+        theme='thriveInput'
+        type='radio'
+        name='smoker'
+        label='do not'
+        value='false'
+      />
+      <text className={styles.text}>use tobacco</text>
+      <br/>
+      <text className={styles.text}>On a scale from 1-5 I rate my overall health as </text>
+      <br/>
+      {rateClassOptions.map((op,i)=>{
+        return (<Field key={i}
           component={Input}
           theme='thriveInput'
           type='radio'
-          name='smoker'
-          label='do'
-          value='true'
-        />
-        <Field
-          component={Input}
-          theme='thriveInput'
-          type='radio'
-          name='smoker'
-          label='do not'
-          value='false'
-        />
-        <text className={styles.text}>use tobacco</text>
-        <br/>
-        <text className={styles.text}>On a scale from 1-5 I rate my overall health as </text>
-        <br/>
-        {rateClassOptions.map((op,i)=>{
-          return (<Field key={i}
-            component={Input}
-            theme='thriveInput'
-            type='radio'
-            name='rate_class'
-            label={op.label}
-            value={op.value}
-          />)
-        })}
-        {(props.message) ? <p>{props.message}</p> : null }
+          name='rate_class'
+          label={op.label}
+          value={op.value}
+        />)
+      })}
+      {(props.message) ? <p>{props.message}</p> : null }
       {renderErrors(props.quoterErrors)}
-      <fieldset className={styles.save}>
-        <input
-          className={styles.submit}
-          type='submit'
-        />
-      </fieldset>
+      <br/>
+      <input
+        className={styles.submit}
+        style={{float: 'none', display: 'inline-block'}}
+        type='submit'
+        value='Get Quotes'
+      />
     </form>
   )
 }
