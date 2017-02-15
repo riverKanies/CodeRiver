@@ -30,8 +30,8 @@ const Profile = ({
           <header className={styles.accountHeader}>
             <h3>My Account</h3>
           </header>
-          {renderQueryData(query)}
           {renderSelectedQuote(quote)}
+          {renderQueryData(query)}
           <ProfileForm />
           <header className={styles.accountHeader}>
             <h3>Change Password</h3>
@@ -46,7 +46,7 @@ const Profile = ({
 function renderQueryData(query) {
   if (!query.state) return ''
   return(<div>
-    <p>Query Data:</p>
+    <p>Personal Details:</p>
     <p>State: {query.state},
     Birthdate: {query.birthdate},
     Gender: {query.gender},

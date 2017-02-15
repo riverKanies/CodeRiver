@@ -19,7 +19,8 @@ export default ({
   theme = 'thriveInput',
   selectArray,
   example,
-  meta: { touched, error, warning }
+  meta: { touched, error, warning },
+  onChangeFunc
 }: FieldType) => {
 
   if (type === 'radio') {
@@ -81,7 +82,11 @@ export default ({
     <div className={styles[theme]}>
       <div className={styles.inputWrap}>
         <label className={styles.label}>{label}</label>
-        <input className={styles.text} {...input} placeholder={example || label} type={type} />
+        <input className={styles.text}
+          {...input}
+          placeholder={example || label}
+          type={type}
+          onChange={onChangeFunc ? onChangeFunc(input.onChange) : input.onChange} />
         {
           touched && (
             (error && <Error error={error} />) ||

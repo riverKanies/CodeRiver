@@ -46,6 +46,19 @@ export default function Form (props) {
           name='birthdate'
           label='Birthdate'
           example='mm-dd-yyyy'
+          onChangeFunc={(onChangeFunc)=>{
+            return (e)=>{
+              const length = e.target.value.length
+              if (length == 3 || length == 6) {
+                if (e.target.value.slice(-1) != '-') {
+                  const pre = e.target.value.slice(0,-1)
+                  const post = e.target.value.slice(-1)
+                  e.target.value = `${pre}-${post}`
+                }
+              }
+              return onChangeFunc(e)
+            }
+          }}
         />
         <div>
           <text style={textStyles}>I am</text>
