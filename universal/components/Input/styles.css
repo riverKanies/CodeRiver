@@ -137,20 +137,54 @@
 }
 
 .text {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1.25rem 1.25rem;
-    float: left;
-    font-family: Mon;
-    color: bodyCopy;
-    text-align: left;
-    background: white;
-    border: 2px solid lightGray;
-    border-radius: .125rem;
-    outline: none;
-    transition: border 150ms ease-in-out;
-    &:focus {
-      border-color: ThriveTeal;
-    }
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
+  float: left;
+  font-family: Mon;
+  color: bodyCopy;
+  text-align: left;
+  background: white;
+  border: 2px solid lightGray;
+  border-radius: .125rem;
+  outline: none;
+  transition: border 150ms ease-in-out;
+  &:focus {
+    border-color: ThriveTeal;
   }
+}
+
+.planMadeText {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  padding: 2px 5px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  float: left;
+  font-family: Mon;
+  text-align: left;
+  background: white;
+  border: 2px solid lightGray;
+  border-radius: .125rem;
+  outline: none;
+  transition: border 150ms ease-in-out;
+  &:focus {
+    border-color: ThriveTeal;
+  }
+}
+
+.select {
+  display: block;
+  float: left;
+  appearance: none;
+  background: transparent;
+  border: 2px solid lightGray;
+  border-radius: .125rem;
+  width: 90px;
+  padding-left: 5px;
+  margin-bottom: 3px;
+  font-family: Mon;
+  margin-right: 5px;
+}

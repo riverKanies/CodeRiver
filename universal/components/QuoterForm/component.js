@@ -31,6 +31,24 @@ export default function Form (props) {
     <form className={styles.myProfile} onSubmit={handleSubmit}>
       {renderErrors(props.quoterErrors)}
       <fieldset className={styles.accountAbout}>
+        <text style={textStyles}>I'm a</text>
+        <Field
+          component={Input}
+          theme='thriveInput'
+          type='radio'
+          name='gender'
+          label='Man'
+          value='m'
+        />
+        <Field
+          component={Input}
+          theme='thriveInput'
+          type='radio'
+          name='gender'
+          label='Woman'
+          value='f'
+        />
+        <text style={textStyles}>and I live in</text>
         <Field
           component={Input}
           theme='thriveInput'
@@ -39,12 +57,12 @@ export default function Form (props) {
           label='State'
           selectArray={Appendix.states}
         />
+        <text style={textStyles}>My birthdate is</text>
         <Field
           component={Input}
           theme='thriveInput'
-          type='birthdate'
+          type='quoteInput'
           name='birthdate'
-          label='Birthdate'
           example='mm-dd-yyyy'
           onChangeFunc={(onChangeFunc)=>{
             return (e)=>{
@@ -60,54 +78,35 @@ export default function Form (props) {
             }
           }}
         />
-        <div>
-          <text style={textStyles}>I am</text>
-          <Field
+        <text style={textStyles}>I</text>
+        <Field
+          component={Input}
+          theme='thriveInput'
+          type='radio'
+          name='smoker'
+          label='do'
+          value='true'
+        />
+        <Field
+          component={Input}
+          theme='thriveInput'
+          type='radio'
+          name='smoker'
+          label='do not'
+          value='false'
+        />
+        <text style={textStyles}>use tobacco</text>
+        <text style={textStyles}>On a scale from 1-5 I rate my overall health as </text>
+        {rateClassOptions.map((op,i)=>{
+          return (<Field key={i}
             component={Input}
             theme='thriveInput'
             type='radio'
-            name='gender'
-            label='Male'
-            value='m'
-          />
-          <Field
-            component={Input}
-            theme='thriveInput'
-            type='radio'
-            name='gender'
-            label='Female'
-            value='f'
-          />
-          <text style={textStyles}>and I </text>
-          <Field
-            component={Input}
-            theme='thriveInput'
-            type='radio'
-            name='smoker'
-            label='do'
-            value='true'
-          />
-          <Field
-            component={Input}
-            theme='thriveInput'
-            type='radio'
-            name='smoker'
-            label='do not'
-            value='false'
-          />
-          <text style={textStyles}>smoke. My overall health is </text>
-          {rateClassOptions.map((op,i)=>{
-            return (<Field key={i}
-              component={Input}
-              theme='thriveInput'
-              type='radio'
-              name='rate_class'
-              label={op.label}
-              value={op.value}
-            />)
-          })}
-          <text style={textStyles}>.</text>
-        </div>
+            name='rate_class'
+            label={op.label}
+            value={op.value}
+          />)
+        })}
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>
       {renderErrors(props.quoterErrors)}

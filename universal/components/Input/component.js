@@ -23,6 +23,24 @@ export default ({
   onChangeFunc
 }: FieldType) => {
 
+  if (type === 'quoteInput') {
+    return (
+      <div className={styles[theme]}>
+          <input className={styles.planMadeText}
+            {...input}
+            placeholder={example || label}
+            type={type}
+            onChange={onChangeFunc ? onChangeFunc(input.onChange) : input.onChange} />
+          {
+            touched && (
+              (error && <Error error={error} />) ||
+              (warning && <Warning warning={warning} />)
+            )
+          }
+      </div>
+    )
+  }
+
   if (type === 'radio') {
     return (
       <div className={styles[theme]}>
@@ -45,22 +63,17 @@ export default ({
   if (type === 'select') {
     return (
       <div className={styles[theme]}>
-        <div className={styles.inputWrap}>
-          <label className={styles.label}>
-            {label}
-            <select {...input}>
-              {selectArray.map((opt)=>{
-                return <option key={opt.name} value={opt.value}>{opt.name}</option>
-              })}
-            </select>
-            {
-              touched && (
-                (error && <Error error={error} />) ||
-                (warning && <Warning warning={warning} />)
-              )
-            }
-          </label>
-        </div>
+        <select className={styles.select} {...input}>
+          {selectArray.map((opt)=>{
+            return <option key={opt.name} value={opt.value}>{opt.name}</option>
+          })}
+        </select>
+        {
+          touched && (
+            (error && <Error error={error} />) ||
+            (warning && <Warning warning={warning} />)
+          )
+        }
       </div>
     )
   }
@@ -82,11 +95,7 @@ export default ({
     <div className={styles[theme]}>
       <div className={styles.inputWrap}>
         <label className={styles.label}>{label}</label>
-        <input className={styles.text}
-          {...input}
-          placeholder={example || label}
-          type={type}
-          onChange={onChangeFunc ? onChangeFunc(input.onChange) : input.onChange} />
+        <input className={styles.text} {...input} placeholder={example || label} type={type} />
         {
           touched && (
             (error && <Error error={error} />) ||
