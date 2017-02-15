@@ -57,9 +57,12 @@ export default ({
   }
 
   if (type === 'select') {
+    let special = {}
+    if (input.value == '') special.value = 'Select a State'
     return (
       <div className={styles.formBlockWrap}>
-        <select className={styles.select} {...input}>
+        <select className={styles.select} {...input} {...special}>
+          <option disabled >Select a State</option>
           {selectArray.map((opt)=>{
             return <option key={opt.name} value={opt.value}>{opt.name}</option>
           })}
