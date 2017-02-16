@@ -90,6 +90,22 @@
     margin: 0 30%;
   }
 }
+.cardContainer {
+  width: 100%;
+  lost-center: containerWidth;
+}
+.card {
+  lost-column: 1;
+  height: 200px;
+  margin-bottom: 20px;
+  @media bp-papa-bear {
+    lost-column: 1/2;
+    margin-bottom: 1rem;
+  }
+  @media bp-grand-bear {
+    lost-column: 1/3;
+  }
+}
 
 .accountHeader {
   display: block;

@@ -33,8 +33,8 @@ class Quoter extends React.Component {
   render () {
     return (<section className={styles.profile}>
       <section className={styles.myAccount}>
+        {this.renderQuotes(this.props.quotes)}
         <div className={styles.container}>
-          {this.renderQuotes(this.props.quotes)}
           <header className={styles.accountHeader}>
             <h3>Let's get started</h3>
           </header>
@@ -48,31 +48,33 @@ class Quoter extends React.Component {
     const terms = [10,15,20,30]
     return (<div >
       <div className={profileStyles.myProfile} style={{ width: '100%' }}>
-        <p>Coverage: ${numberWithCommas(this.state.coverage)}</p>
-        <Slider min={100000} max={1000000} value={this.state.coverage} step={100000} onChange={this.updateCoverage}/>
-        <p style={{marginTop: '20px'}}>Term:</p>
-        {terms.map((t,i)=>(
-          <label key={i} className={this.state.term == t ? formStyles.radioHighlight : formStyles.radio}>
-            <input className={formStyles.radioInput}
-              type='radio'
-              name='term'
-              value={t}
-              checked={this.state.term == t}
-              onChange={this.updateTerm}
-            />
-            {t} Years
-          </label>
-        ))}
-        <button className={styles.submit} onClick={this.updateQuotes}>Update Quotes</button>
+      <div className={styles.container}>
+          <p>Coverage: ${numberWithCommas(this.state.coverage)}</p>
+          <Slider min={100000} max={1000000} value={this.state.coverage} step={100000} onChange={this.updateCoverage}/>
+          <p style={{marginTop: '20px'}}>Term:</p>
+          {terms.map((t,i)=>(
+            <label key={i} className={this.state.term == t ? formStyles.radioHighlight : formStyles.radio}>
+              <input className={formStyles.radioInput}
+                type='radio'
+                name='term'
+                value={t}
+                checked={this.state.term == t}
+                onChange={this.updateTerm}
+              />
+              {t} Years
+            </label>
+          ))}
+          <button className={styles.submit} onClick={this.updateQuotes}>Update Quotes</button>
+        </div>
       </div>
       <br/>
       <br/>
-      <section>
-      <ul style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
+      <section >
+      <ul className={styles.cardContainer} style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
         {quotes.map((q,i)=>{
           const selectedQuoteId = idQuote(this.props.selectedQuote)
           const quoteId = idQuote(this.props.quotes[i])
-          return <li key={i}>
+          return <li className={styles.card} key={i}>
             <QuoteCard isSelected={quoteId == selectedQuoteId} onClick={this.selectQuote(i)} quote={q}/>
             <br/>
           </li>
