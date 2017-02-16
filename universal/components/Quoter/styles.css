@@ -96,8 +96,8 @@
 }
 .card {
   lost-column: 1;
-  height: 200px;
-  margin-bottom: 20px;
+  /*height: 200px;*/
+  /*margin-bottom: 20px;*/
   @media bp-papa-bear {
     lost-column: 1/2;
     margin-bottom: 1rem;
@@ -259,4 +259,7 @@
 .myProfile {
 
 
+}
+.colorText {
+  color: ThriveTeal;
 }

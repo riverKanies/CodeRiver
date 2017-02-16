@@ -49,9 +49,10 @@ class Quoter extends React.Component {
     return (<div >
       <div className={profileStyles.myProfile} style={{ width: '100%' }}>
       <div className={styles.container}>
-          <p>Coverage: ${numberWithCommas(this.state.coverage)}</p>
+          <h3 className={styles.colorText}>${numberWithCommas(this.state.coverage)}</h3>
           <Slider min={100000} max={1000000} value={this.state.coverage} step={100000} onChange={this.updateCoverage}/>
-          <p style={{marginTop: '20px'}}>Term:</p>
+          <br/>
+          <br/>
           {terms.map((t,i)=>(
             <label key={i} className={this.state.term == t ? formStyles.radioHighlight : formStyles.radio}>
               <input className={formStyles.radioInput}
@@ -64,12 +65,16 @@ class Quoter extends React.Component {
               {t} Years
             </label>
           ))}
-          <button className={styles.submit} onClick={this.updateQuotes}>Update Quotes</button>
+          <br/>
+          <button className={styles.submit} style={{float: 'none', display: 'inline-block'}} onClick={this.updateQuotes}>Update Quotes</button>
         </div>
       </div>
       <br/>
       <br/>
       <section >
+      <header className={styles.accountHeader}>
+        <h3>Next, click on a plan that looks good to you</h3>
+      </header>
       <ul className={styles.cardContainer} style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
         {quotes.map((q,i)=>{
           const selectedQuoteId = idQuote(this.props.selectedQuote)
