@@ -5,7 +5,8 @@ import 'styles/fonts/webfonts/webfonts'
 import 'styles/typography'
 
 import React from 'react'
-import Header from 'components/Header'
+//import Header from 'components/Header'
+import HeaderTwo from 'components/HeaderTwo'
 import Helmet from 'react-helmet'
 import { checkSession } from 'modules/UserSession'
 import { connect } from 'react-redux'
@@ -45,7 +46,7 @@ export class LayoutCore extends React.Component {
           script={headers.scripts}
         />
 
-        <Header />
+        <HeaderTwo />
         <ToastContainer />
         <section className={styles.bodyContainer}>
           {this.props.children}
