@@ -127,6 +127,7 @@ export class Header extends React.Component {
     //   <span className={styles.tagline}>Need a Plan? We're here to help.</span>
     // </section>
 
+    const droppedStyle = {paddingBottom: 120}
     return (
       <div>
         <section className={styles.navContainer}>
@@ -140,7 +141,10 @@ export class Header extends React.Component {
               activeClassName={styles.activeRoute}>
               Welcome
             </Link>
-            <div className={styles.dropdown+' '+styles.linkUtility} onClick={this.drop}>
+            <div className={styles.dropdown+' '+styles.linkUtility}
+              onClick={this.drop}
+              style={this.state.dropped ? droppedStyle : {}}
+            >
               <section >Drop It</section>
               {this.renderDropdown(['Dropped 1', 'Dropped 2', 'Dropped 3'])}
             </div>
@@ -177,7 +181,6 @@ export class Header extends React.Component {
 
   render () {
     const { active } = this.state
-    console.log('active', active)
     const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
