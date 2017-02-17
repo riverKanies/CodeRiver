@@ -177,6 +177,7 @@ export class Header extends React.Component {
 
   render () {
     const { active } = this.state
+    console.log('active', active)
     const siteHeaderStyle = !active ? styles.siteHeader : styles.siteHeaderActive
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>

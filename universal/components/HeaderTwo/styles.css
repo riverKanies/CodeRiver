@@ -58,7 +58,8 @@
 .siteHeader {
   display: block;
   width: 100%;
-  height: auto;
+  /*height: auto;*/
+  height: 70px;
   margin: 0 auto;
   padding: 0 0;
   float: left;
@@ -68,7 +69,8 @@
   background: gradientTeal;
   overflow: hidden;
   transition: all 200ms cubic-bezier(.04,.39,.94,.53);
-  /*&::before {
+
+  &::before {
     content: '';
     display: block;
     width: 7.3125rem;
@@ -83,7 +85,7 @@
     @media bp-papa-bear {
       display: none;
     }
-  }*/
+  }
   @media bp-papa-bear {
     padding: 0 0;
     background: rgba(255, 255, 255, 1);
@@ -152,7 +154,7 @@
 .navContainer {
   margin-bottom: 10px;
   border-bottom: .25rem solid ThriveTeal;
-  /*visibility: hidden;*/
+  visibility: hidden;
   height: 20px;
 
   /*display: block;
@@ -184,23 +186,23 @@
     right: 0;
     z-index: 2;
   }*/
-  /*@media bp-papa-bear {
-    display: block;
+  @media bp-papa-bear {
+    /*display: block;
     height: auto;
     padding: 0 0;
     position: relative;
     top: auto;
     right: auto;
     overflow: visible;
-    opacity: 1;
+    opacity: 1;*/
     visibility: visible;
-    background: white;
+    /*background: white;
     border-bottom: .25rem solid ThriveTeal;
     &::before {
       content: '';
       display: none;
-    }
-  }*/
+    }*/
+  }
 }
 
 .mainNav {
