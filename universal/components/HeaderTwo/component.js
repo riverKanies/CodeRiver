@@ -145,8 +145,8 @@ export class Header extends React.Component {
               onClick={this.drop}
               style={this.state.dropped ? droppedStyle : {}}
             >
-              <section >Drop It</section>
-              {this.renderDropdown(['Dropped 1', 'Dropped 2', 'Dropped 3'])}
+              <section >Why PlanMade</section>
+              {this.renderDropdown([{label: 'Our Mission', url: '/ourmission'}])}
             </div>
             <Link onClick={this.hideMenu}
               id='navAbout'
@@ -171,10 +171,10 @@ export class Header extends React.Component {
       return <Link key={i}
         onClick={this.hideMenu}
         id={`nav${i}`}
-        to={`/drop${i}`}
+        to={l.url}
         className={styles.dropdownContent}
         style={{marginTop: dist}}>
-        {l}
+        {l.label}
       </Link>
     })
   }
@@ -185,7 +185,7 @@ export class Header extends React.Component {
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
         {this.renderNav()}
-        <div style={{width: '100%', borderBottom: '1px solid grey'}} />
+        <div className={styles.separator} />
         <span
           id='navButtonWrapper'
           className={styles.menuButton}

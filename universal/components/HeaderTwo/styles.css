@@ -1,10 +1,15 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 @value navItem, MonLight from 'all';
-@value gradientTeal, bodyCopy, white, ThriveGray, ThriveTeal, ThriveBlue from 'all';
+@value gradientTeal, bodyCopy, white, PlanMadeTeal, PlanMadeRed, PlanMadeGray, PlanMadeDarkGray, ThriveGray, ThriveTeal, ThriveBlue from 'all';
 
 /* Base Styles
 ** These don't change regardless of having the extra piece up top.
 */
+
+.separator {
+  width: 100%;
+  border-bottom: 1px solid PlanMadeGray;
+}
 
 .dropdown {
   display: inline-block;
@@ -43,7 +48,7 @@
   animation: move 1s once alternate;*/
   &:hover {
     background: white;
-    color: ThriveTeal;
+    color: PlanMadeRed;
   }
   @media bp-papa-bear {
     /*margin-left: -70px;*/
@@ -51,16 +56,18 @@
     /*position: absolute;*/
     /*display: block;*/
     display: inline-block;
-    width: auto;
+    width: 100px;
     height: auto;
     /*margin: 0 0 0 1.5rem;*/
     padding: 0 0;
     clear: none;
     background: transparent;
+    /*background: grey;
+    border-radius: 2px;*/
     border: none;
-    /*text-align: right;*/
+    text-align: right;
     text-transform: uppercase;
-    color: ThriveGray;
+    color: PlanMadeDarkGray;
   }
 }
 
@@ -273,7 +280,7 @@
   animation: move 1s once alternate;
   &:hover {
     background: white;
-    color: ThriveTeal;
+    color: PlanMadeRed;
   }
   @media bp-papa-bear {
     display: block;
@@ -286,7 +293,7 @@
     border: none;
     text-align: right;
     text-transform: uppercase;
-    color: ThriveGray;
+    color: PlanMadeTeal;
     /*&::after {
       content: '';
       display: inline-block;
@@ -538,8 +545,8 @@
     animation-fill-mode: both;
   }
   .linkUtility {
-    animation: move 1s;
-    animation-fill-mode: both;
+    /*animation: move 1s;
+    animation-fill-mode: both;*/
   }
   .activeRoute {
     font-weight: bold;
