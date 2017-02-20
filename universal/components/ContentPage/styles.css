@@ -34,3 +34,15 @@
   font-family: PT serif;
   color: PlanMadeDarkGray;
 }
+
+.link {
+  border-radius: 10px;
+  background: PlanMadeTeal;
+  color: white;
+  padding: 10px;
+  margin-right: 20px;
+}
+.link2 {
+  composes: link;
+  background: PlanMadeDarkGray;
+}

@@ -18,6 +18,10 @@ class OurMission extends React.Component {
             "Lastly, we believe life insurance is one of the easiest ways to provide much needed financial protection for your family. Far too few individuals own life insurance (only 25% of Americans own individual coverage), and we believe this needs to change. An easier way to buy is a step in the right direction."
           ]}
           footNote="We have many industry-shaking things occurring behind the scenes. Stay tuned for some big news—we’ll be excited to share it."
+          links={[
+            {label: 'Free Quote', url: '/'},
+            {label: 'Learn More', url: '/contact'}
+          ]}
         />
       </main>
     )
