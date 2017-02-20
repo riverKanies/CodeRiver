@@ -3,11 +3,9 @@
 import React from 'react'
 import { deleteSession } from 'modules/UserSession'
 import { IndexLink, Link } from 'react-router'
-//import MainNav from './MainNav/component.js'
 import { NavButton } from './svg.js'
 
 import styles from './styles'
-import logo from './PlanmadeLogo.png'
 
 type Props = {
   isLoggedIn: boolean,
@@ -129,19 +127,12 @@ export class Header extends React.Component {
             id='linkHome'
             to='/'
           >
-            <img src={logo} className={styles.logo}/>
+            <div className={styles.logo}/>
           </IndexLink>
         </figure>
 
         <section className={styles.navContainer}>
           <nav role='navigation' >
-            <Link onClick={this.hideMenu}
-              id='navWelcome'
-              to='/welcome'
-              className={styles.linkUtility}
-              activeClassName={styles.activeRoute}>
-              Welcome
-            </Link>
             <div className={styles.dropdown+' '+styles.linkUtility}
               onClick={this.drop}
               style={this.state.dropped ? droppedStyle3 : {}}
@@ -165,14 +156,6 @@ export class Header extends React.Component {
                 {label: 'Contact Us', url: '/contactus'}
               ], true)}
             </div>
-            <Link onClick={this.hideMenu}
-              id='navAbout'
-              to='/home'
-              className={styles.linkUtility}
-              activeClassName={styles.activeRoute}>
-              Home
-            </Link>
-
             {this.renderSignupOrProfile()}
             {this.renderLoginLogout()}
           </nav>
