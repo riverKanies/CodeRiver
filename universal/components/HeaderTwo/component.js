@@ -32,8 +32,12 @@ export class Header extends React.Component {
 
     this.state = {}
     this.state.dropped = false
+    this.state.dropped2 = false
+
 
     this.drop = this.drop.bind(this)
+    this.drop2 = this.drop2.bind(this)
+
     this.toggleActive = this.toggleActive.bind(this)
     this.hideMenu = this.hideMenu.bind(this)
     this.logOutUser = this.logOutUser.bind(this)
@@ -114,7 +118,9 @@ export class Header extends React.Component {
 
   renderNav () {
 
-    const droppedStyle = {paddingBottom: 120}
+    const droppedStyle4 = {paddingBottom: 180}
+    const droppedStyle3 = {paddingBottom: 140}
+
     return (
       <div>
         <figure className={styles.brand}>
@@ -126,7 +132,7 @@ export class Header extends React.Component {
             <img src={logo} className={styles.logo}/>
           </IndexLink>
         </figure>
-        
+
         <section className={styles.navContainer}>
           <nav role='navigation' >
             <Link onClick={this.hideMenu}
@@ -138,10 +144,26 @@ export class Header extends React.Component {
             </Link>
             <div className={styles.dropdown+' '+styles.linkUtility}
               onClick={this.drop}
-              style={this.state.dropped ? droppedStyle : {}}
+              style={this.state.dropped ? droppedStyle3 : {}}
             >
-              <section >Why PlanMade</section>
-              {this.renderDropdown([{label: 'Our Mission', url: '/ourmission'}])}
+              <section >Work With Us</section>
+              {this.renderDropdown([
+                {label: 'Employees', url: '/employees'},
+                {label: 'Employers', url: '/employers'},
+                {label: 'Brokers', url: '/brokers'}
+              ])}
+            </div>
+            <div className={styles.dropdown+' '+styles.linkUtility}
+              onClick={this.drop2}
+              style={this.state.dropped2 ? droppedStyle4 : {}}
+            >
+              <section >Company</section>
+              {this.renderDropdown([
+                {label: 'About', url: '/ourmission'},
+                {label: 'FAQs', url: '/faqs'},
+                {label: 'Partnerships', url: '/partnerships'},
+                {label: 'Contact Us', url: '/contactus'}
+              ], true)}
             </div>
             <Link onClick={this.hideMenu}
               id='navAbout'
@@ -159,8 +181,9 @@ export class Header extends React.Component {
     )
   }
 
-  renderDropdown (links) {
-    if (!this.state.dropped) return ''
+  renderDropdown (links, isSecondMenu) {
+    if (isSecondMenu && !this.state.dropped2) return ''
+    if (!isSecondMenu && !this.state.dropped) return ''
     return links.map((l, i)=>{
       const dist = 20+40*i
       return <Link key={i}
@@ -193,7 +216,10 @@ export class Header extends React.Component {
   }
 
   drop () {
-    this.setState({dropped: !this.state.dropped})
+    this.setState({dropped: !this.state.dropped, dropped2: false})
+  }
+  drop2 () {
+    this.setState({dropped2: !this.state.dropped2, dropped: false})
   }
 }
 
