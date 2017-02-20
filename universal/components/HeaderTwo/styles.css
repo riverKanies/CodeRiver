@@ -7,8 +7,11 @@
 */
 
 .separator {
-  width: 100%;
-  border-bottom: 1px solid PlanMadeGray;
+  @media bp-papa-bear {
+    margin-top: 35px;
+    width: 100%;
+    border-bottom: 1px solid PlanMadeGray;
+  }
 }
 
 .dropdown {
@@ -75,16 +78,16 @@
   display: block;
   width: 100%;
   /*height: auto;*/
-  height: 70px;
+  height: 50px;
   margin: 0 auto;
   padding: 0 0;
   float: left;
   clear: both;
   /*position: relative;*/
   z-index: 1000;
-  background: gradientTeal;
+  background: PlanMadeTeal;
   overflow: hidden;
-  transition: all 200ms cubic-bezier(.04,.39,.94,.53);
+  /*transition: all 200ms cubic-bezier(.04,.39,.94,.53);*/
 
   &::before {
     content: '';
@@ -108,15 +111,6 @@
     text-align: center;
     overflow: hidden;
   }
-  > div {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    float: left;
-    /*position: relative;*/
-    background: transparent;
-  }
 }
 
 /* Logo */
@@ -124,13 +118,14 @@
   display: inline-block;
   width: 30%;
   height: auto;
-  margin: 0 35%;
-  padding: 0 0;
+  /*margin: 0 35%;*/
+  padding: 10px 20px;
   float: left;
   position: relative;
   text-align: center;
   z-index: 9999;
   @media bp-papa-bear {
+    padding-top: 0;
     display: block;
     height: auto;
     margin: 0 0;
@@ -139,6 +134,7 @@
   }
 }
 .logo {
+  background: PlanMadeTeal;
   width: 110.3px;
   height: 29.9px;
 }
@@ -151,23 +147,9 @@
   padding: 1rem 1rem;
 }
 
-.thriveLogo {
-  width: 100%;
-  height: auto;
-  margin: 0 0 0 0;
-  padding: 0 0;
-  float: none;
-  z-index: 1200;
-  @media bp-papa-bear {
-    float: left;
-  }
-  * {
-    transition: fill 150ms ease-in-out;
-  }
-}
-
 /* Navigation */
 .navContainer {
+  margin-right: 20px;
   /*margin-bottom: 10px;*/
   visibility: hidden;
   height: 30px;
@@ -294,23 +276,6 @@
     text-align: right;
     text-transform: uppercase;
     color: PlanMadeTeal;
-    /*&::after {
-      content: '';
-      display: inline-block;
-      width: .44rem;
-      height: .44rem;
-      margin: 0 auto 0 -.22rem;
-      padding: 0 0;
-      float: none;
-      background: ThriveTeal;
-      border-radius: .22rem;
-      position: absolute;
-      bottom: -3rem;
-      left: 50%;
-      opacity: .85;
-      transition: all 250ms cubic-bezier(.04,.39,.94,.53);
-      z-index: 9999;
-    }*/
   }
 }
 
@@ -387,102 +352,12 @@
   }
 }
 
-/* bigHeader boolean = true, not default,
-** scope within selector: .hasForehead for specific styles
-*/
-.forehead {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem 0;
-  float: left;
-  clear: both;
-  position: relative;
-  background: transparent;
-  color: white;
-  @media bp-papa-bear {
-    background: gradientTeal;
-    /*&::before {
-      content: '';
-      display: block;
-      width: 7.3125rem;
-      height: 6.25rem;
-      margin: 0 0;
-      padding: 0 0;
-      float: right;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 2;
-    }*/
-  }
-}
-.tagline {
-  display: none;
-  @media bp-papa-bear {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 0;
-    position: absolute;
-    bottom: 1rem;
-    right: 2rem;
-    font-family: MonLight;
-    font-size: 1.25rem;
-    line-height: 100%;
-    text-align: right;
-  }
-}
-.hasForehead {
-  .brand {
-    @media bp-papa-bear {
-      width: 9rem;
-      margin-left: 2rem;
-    }
-    .thriveType {
-      fill: white;
-    }
-    .globalType {
-      fill: ThriveTeal;
-    }
-    .petalTop {
-      fill: ThriveTeal;
-    }
-    .petalBottom {
-      fill: ThriveTeal;
-    }
-  }
-  .link {
-    @media bp-papa-bear {
-      padding: 1.25rem 0 1rem 0;
-    }
-  }
-  .utilityNav {
-    @media bp-papa-bear {
-      margin: -3.75rem 2rem 0 0;
-    }
-  }
-  .linkUtility {
-    @media bp-papa-bear {
-      padding: 1.25rem 0 1rem 0;
-      background: none;
-      border-radius: 0;
-      &:hover {
-        &::after {
-          bottom: .5rem;
-        }
-      }
-    }
-  }
-}
-
 /* menuButton + drawer nav styles */
 .menuButton {
   display: block;
   width: 2rem;
   height: 2rem;
-  margin: 2.375rem 2.375rem 0 0;
+  margin: .7rem 1.5rem 0 0;
   padding: 0 0;
   float: right;
   position: absolute;

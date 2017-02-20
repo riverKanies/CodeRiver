@@ -114,26 +114,21 @@ export class Header extends React.Component {
 
   renderNav () {
 
-    // <section className={styles.forehead}>
-    //   <figure className={styles.brand}>
-    //     <IndexLink
-    //       onClick={this.hideMenu}
-    //       id='linkHome'
-    //       to='/'
-    //     >
-    //       <img src={logo} className={styles.logo}/>
-    //     </IndexLink>
-    //   </figure>
-    //   <span className={styles.tagline}>Need a Plan? We're here to help.</span>
-    // </section>
-
     const droppedStyle = {paddingBottom: 120}
     return (
       <div>
+        <figure className={styles.brand}>
+          <IndexLink
+            onClick={this.hideMenu}
+            id='linkHome'
+            to='/'
+          >
+            <img src={logo} className={styles.logo}/>
+          </IndexLink>
+        </figure>
+        
         <section className={styles.navContainer}>
-
           <nav role='navigation' >
-
             <Link onClick={this.hideMenu}
               id='navWelcome'
               to='/welcome'
