@@ -1,6 +1,6 @@
 @value all: 'all';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
-@value bodyCopy, ThriveTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value bodyCopy, PlanMadeTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 /* Profile Styles */
@@ -178,7 +178,7 @@
   outline: none;
   transition: border 150ms ease-in-out;
   &:focus {
-    border-color: ThriveTeal;
+    border-color: PlanMadeTeal;
   }
 }
 
@@ -202,8 +202,8 @@
     margin: -.125rem .625rem 0 0;
   }
   &:checked {
-    background: ThriveTeal;
-    border-color: ThriveTeal;
+    background: PlanMadeTeal;
+    border-color: PlanMadeTeal;
     &::after {
       content: '';
       display: inline-block;
@@ -244,8 +244,8 @@
     float: right;
   }
   &:hover, &:active {
-    background: ThriveTeal;
-    border-color: ThriveTeal;
+    background: PlanMadeTeal;
+    border-color: PlanMadeTeal;
     color: white;
   }
 }
@@ -261,5 +261,5 @@
 
 }
 .colorText {
-  color: ThriveTeal;
+  color: PlanMadeTeal;
 }

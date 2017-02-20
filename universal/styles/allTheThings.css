@@ -53,13 +53,13 @@
 @value white: #ffffff;
 @value black: #000000;
 @value backgroundGray: #f0f0f0;
-@value lightGray: #e1e3e5;
+/*@value lightGray: #e1e3e5;*/
+@value lightGray: #cccccc;
 @value medGray: #333333;
 @value darkGray: #999999;
 @value almostBlack: #08090d;
 
 @value bodyCopy: #2b2a28;
-@value ThriveTeal: #71CBD2;
 @value ThriveAltTeal: #00859B;
 @value ThriveBlue: #0053D4;
 @value ThriveDarkBlue: #144085;
@@ -71,16 +71,16 @@
 @value ThriveGray: #303030;
 @value ThrivinRock: #2E313A;
 
-@value gradientTeal: linear-gradient(to right, #096e77 0%, ThriveTeal 100%);
+@value gradientTeal: linear-gradient(to right, #096e77 0%, PlanMadeTeal 100%);
 @value TheFader: linear-gradient(rgba(230,230,230,1), rgba(255,255,255,1) 6rem, rgba(255,255,255,1));
 @value gradientBlurple: linear-gradient(to right, ThriveBlue 0%, #6061A4 100%);
 @value gradientEmailCap: linear-gradient(-40deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
-@value gradientCardThrive: linear-gradient(136deg, #007a98 0%, ThriveTeal 100%);
-@value gradientPathwayCard: linear-gradient(-40deg, #007a98 0%, ThriveTeal 100%);
-@value gradientPathwayCardHover: linear-gradient(to top, #007a98 0%, ThriveTeal 90%);
+@value gradientCardThrive: linear-gradient(136deg, #007a98 0%, PlanMadeTeal 100%);
+@value gradientPathwayCard: linear-gradient(-40deg, #007a98 0%, PlanMadeTeal 100%);
+@value gradientPathwayCardHover: linear-gradient(to top, #007a98 0%, PlanMadeTeal 90%);
 @value gradientJourneyCard: linear-gradient(-40deg, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
 @value gradientJourneyCardHover: linear-gradient(to top, rgba(35,15,168,.9) 0%, rgba(13,117,163,.9) 100%);
-@value gradientPurpleTeal: linear-gradient(to right, #432d76 0%, ThriveTeal 100%);
+@value gradientPurpleTeal: linear-gradient(to right, #432d76 0%, PlanMadeTeal 100%);
 
  /* fonts */
 

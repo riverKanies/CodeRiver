@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 @value navItem, MonLight from 'all';
-@value gradientTeal, bodyCopy, white, PlanMadeTeal, PlanMadeRed, PlanMadeGray, PlanMadeDarkGray, ThriveGray, ThriveTeal, ThriveBlue from 'all';
+@value gradientTeal, bodyCopy, white, PlanMadeTeal, PlanMadeRed, PlanMadeGray, PlanMadeDarkGray, ThriveGray, ThriveBlue from 'all';
 
 /* Base Styles
 ** These don't change regardless of having the extra piece up top.
@@ -199,7 +199,7 @@
       margin: 0 auto 0 -.22rem;
       padding: 0 0;
       float: none;
-      background: ThriveTeal;
+      background: PlanMadeTeal;
       border-radius: .22rem;
       position: absolute;
       bottom: -3rem;
@@ -209,7 +209,7 @@
       z-index: 9999;
     }
     &:hover {
-      color: ThriveTeal;
+      color: PlanMadeTeal;
       &::after {
         bottom: .5rem;
       }
@@ -297,13 +297,13 @@
         fill: white;
       }
       .globalType {
-        fill: ThriveTeal;
+        fill: PlanMadeTeal;
       }
       .petalTop {
-        fill: ThriveTeal;
+        fill: PlanMadeTeal;
       }
       .petalBottom {
-        fill: ThriveTeal;
+        fill: PlanMadeTeal;
       }
     }
     @media bp-papa-bear {
@@ -314,10 +314,10 @@
         fill: bodyCopy;
       }
       .petalTop {
-        fill: ThriveTeal;
+        fill: PlanMadeTeal;
       }
       .petalBottom {
-        fill: ThriveTeal;
+        fill: PlanMadeTeal;
       }
     }
   }
