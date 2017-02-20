@@ -167,7 +167,7 @@ export class Header extends React.Component {
   renderDropdown (links) {
     if (!this.state.dropped) return ''
     return links.map((l, i)=>{
-      const dist = 40*i
+      const dist = 20+40*i
       return <Link key={i}
         onClick={this.hideMenu}
         id={`nav${i}`}
@@ -185,6 +185,7 @@ export class Header extends React.Component {
     return (
       <header id='header' role='banner' className={siteHeaderStyle}>
         {this.renderNav()}
+        <div style={{width: '100%', borderBottom: '1px solid grey'}} />
         <span
           id='navButtonWrapper'
           className={styles.menuButton}

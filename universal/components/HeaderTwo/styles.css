@@ -8,7 +8,8 @@
 
 .dropdown {
   display: inline-block;
-  /*position: relative;*/
+  /*position: relative;
+  z-index: 100000;*/
   margin-bottom: 10px;
 }
 .dropdownContent {
@@ -160,10 +161,9 @@
 
 /* Navigation */
 .navContainer {
-  margin-bottom: 10px;
-  border-bottom: .25rem solid ThriveTeal;
+  /*margin-bottom: 10px;*/
   visibility: hidden;
-  height: 20px;
+  height: 30px;
 
   @media bp-papa-bear {
     float: right;

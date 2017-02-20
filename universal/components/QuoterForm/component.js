@@ -57,6 +57,7 @@ export default function Form (props) {
         selectArray={Appendix.states}
       />
       <br/>
+      <br/>
       <text className={styles.text}>My birthdate is</text>
       <Field
         component={Input}
@@ -79,6 +80,7 @@ export default function Form (props) {
         }}
       />
       <br/>
+      <br/>
       <text className={styles.text}>I</text>
       <Field
         component={Input}
@@ -97,6 +99,7 @@ export default function Form (props) {
         value='false'
       />
       <text className={styles.text}>use tobacco</text>
+      <br/>
       <br/>
       <text className={styles.text}>On a scale from 1-5 I rate my overall health as </text>
       <br/>
