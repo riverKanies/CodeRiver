@@ -1,0 +1,36 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
+@value PlanMadeDarkGray, PlanMadeTeal from all;
+
+.container {
+  background: white;
+  padding: 100px 10px;
+  @media bp-mama-bear {
+    padding: 80px 10%;
+  }
+  @media bp-papa-bear {
+    padding: 80px 15%;
+  }
+}
+
+.header {
+  font-family: montserrat;
+  color: PlanMadeTeal;
+}
+
+.subheader {
+  font-family: montserratLight;
+  color: PlanMadeDarkGray;
+}
+
+.body {
+  margin-bottom: 0;
+  font-family: PT serif;
+  color: PlanMadeDarkGray;
+}
+
+.footNote {
+  margin-top: 30px;
+  font-style: italic;
+  font-family: PT serif;
+  color: PlanMadeDarkGray;
+}

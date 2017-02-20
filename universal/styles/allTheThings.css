@@ -45,6 +45,11 @@
 @value papaHeader: 3.125rem;
 
 /* colors */
+@value PlanMadeGray: #cccccc;
+@value PlanMadeTeal: #99cccc;
+@value PlanMadeDarkGray: #999999;
+@value PlanMadeRed: #ff3333;
+
 @value white: #ffffff;
 @value black: #000000;
 @value backgroundGray: #f0f0f0;

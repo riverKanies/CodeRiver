@@ -1,4 +1,6 @@
 
+import OurMission from 'layouts/OurMission'
+
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import SignUp from 'layouts/SignUp'
@@ -22,10 +24,10 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
-      // {
-      //   path: 'partners**',
-      //   onEnter: (_, replace) => replace('/who-we-are' + _.params.splat)
-      // },
+      {
+        path: '/ourmission',
+        component: OurMission
+      },
       {
         path: '/home',
         component: Home.component
