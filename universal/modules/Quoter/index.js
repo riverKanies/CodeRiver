@@ -48,7 +48,7 @@ export function reducer (state: any = initialState, action: any) {
           errors: errors
         }
       }
-      const quotes = action.data.results.sort((a, b)=> (a - b))
+      const quotes = action.data.results.sort((a, b)=> (a.premium_monthly - b.premium_monthly))
       return {
         ...state,
         quotes,
