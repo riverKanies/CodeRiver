@@ -65,6 +65,7 @@ const ContactUsForm = (props) => {
                 theme='thriveInput'
               />
               {renderSubmit(props)}
+              {props.contacted ? <p>Thank you for contacting us! We’ll be in touch shortly.</p> : ''}
             </fieldset>
           </form>
         </div>

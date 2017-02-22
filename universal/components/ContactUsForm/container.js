@@ -1,7 +1,9 @@
 import { reduxForm } from 'redux-form'
 import { genFormHandler } from 'lib/formHelpers'
 import { createValidator, required, email, integer, minLength } from 'lib/validate'
+import { connect } from 'react-redux'
 
+import { KEY } from 'modules/ContactUs'
 import { contactUs } from 'modules/ContactUs'
 import component from './component'
 
@@ -20,8 +22,14 @@ const onSubmit = genFormHandler({
   onSuccess
 })
 
+const mapStateToProps = (store) => ({
+  contacted: store[KEY].contacted
+})
+const container = connect(mapStateToProps)(component)
+
+
 export default reduxForm({
   form: 'contactus',
   validate,
   onSubmit
-})(component)
+})(container)
