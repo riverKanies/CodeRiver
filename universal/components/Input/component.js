@@ -90,6 +90,23 @@ export default ({
     )
   }
 
+  if (type === 'textarea') {
+    return (
+      <div className={styles[theme]}>
+        <div className={styles.inputWrap}>
+          <label className={styles.label}>{label}</label>
+          <textarea className={styles.text} {...input} placeholder={example || label} />
+          {
+            touched && (
+              (error && <Error error={error} />) ||
+              (warning && <Warning warning={warning} />)
+            )
+          }
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={styles[theme]}>
       <div className={styles.inputWrap}>

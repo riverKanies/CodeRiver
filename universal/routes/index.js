@@ -10,6 +10,7 @@ import Login from 'layouts/Login'
 import ResetPassword from 'layouts/ResetPassword'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import NotFound from 'layouts/NotFound'
+import ContactUs from 'layouts/ContactUs'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -24,6 +25,10 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
+      {
+        path: '/contactus',
+        component: ContactUs
+      },
       {
         path: '/ourmission',
         component: OurMission

@@ -6,6 +6,7 @@ import * as messages from 'modules/Messages'
 import * as session from 'modules/UserSession'
 import * as signup from 'modules/SignUp'
 import * as quoter from 'modules/Quoter'
+import * as contactus from 'modules/ContactUs'
 
 const locationState = {
   location: null
@@ -25,6 +26,7 @@ export const makeRootReducer = (asyncReducers) => {
     [session.KEY]: session.reducer,
     [signup.KEY]: signup.reducer,
     [quoter.KEY]: quoter.reducer,
+    [contactus.KEY]: contactus.reducer,
     location: locationReducer,
     form: formReducer,
     ...asyncReducers

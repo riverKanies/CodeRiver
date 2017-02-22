@@ -1,0 +1,91 @@
+@value all: 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
+@value bodyCopy, PlanMadeTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
+
+.signUp {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: babyPadding;
+  float: left;
+  position: relative;
+  background: white;
+  @media bp-mama-bear {
+    padding: mamaPadding;
+  }
+  @media bp-papa-bear {
+    padding: papaPadding;
+  }
+  form {
+    fieldset {
+      margin-bottom: .25rem;
+    }
+  }
+}
+
+/* Greeting Styles */
+.greeting {
+  lost-column: 1;
+  margin-bottom: 5.5rem;
+  float: left;
+  clear: both;
+  text-align: center;
+}
+
+/* Login Dialogue, .container is the column */
+.signUpDialogue {
+  lost-center: containerWidth;
+  margin: 0 auto;
+  padding: containerPadding;
+  float: none;
+}
+.container {
+  lost-column: 1;
+  padding: 0 0;
+  float: left;
+  position: relative;
+  @media bp-mama-bear {
+    width: 80%;
+    margin: 0 10%;
+  }
+  @media bp-papa-bear {
+    width: 40%;
+    margin: 0 30%;
+  }
+}
+
+/* All Form Styles */
+.socialSignIn,
+.signUpForm,
+.timeToThrive
+ {
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+  float: left;
+  border: 0px;
+}
+.timeToThrive {
+  > a {
+    display: block;
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+}
+
+/* FB Login Styles */
+.socialSignIn {
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 0;
+  float: left;
+  text-align: center;
+  border: 0px;
+}
