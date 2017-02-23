@@ -3,6 +3,9 @@ import Employers from 'layouts/Employers'
 import Brokers from 'layouts/Brokers'
 import OurMission from 'layouts/OurMission'
 
+import ContactUs from 'layouts/ContactUs'
+import Press from 'layouts/Press'
+
 import Home from 'layouts/Home'
 import LayoutCore from 'layouts/LayoutCore'
 import SignUp from 'layouts/SignUp'
@@ -12,7 +15,6 @@ import Login from 'layouts/Login'
 import ResetPassword from 'layouts/ResetPassword'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import NotFound from 'layouts/NotFound'
-import ContactUs from 'layouts/ContactUs'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -38,6 +40,10 @@ export const createRoutes = (store) => ([
       {
         path: '/employees',
         component: Employees
+      },
+      {
+        path: '/press',
+        component: Press
       },
       {
         path: '/contactus',
