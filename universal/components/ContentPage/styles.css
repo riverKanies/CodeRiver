@@ -46,3 +46,21 @@
   composes: link;
   background: PlanMadeDarkGray;
 }
+
+.iconContainer {
+  lost-center: containerWidth;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.icon {
+  display: block;
+  lost-column: 1;
+  margin-bottom: 25px;
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/4;
+  }
+}
