@@ -99,10 +99,10 @@
 /* Logo */
 .brand {
   display: inline-block;
-  width: 30%;
+  /*width: 30%;*/
   height: auto;
   /*margin: 0 35%;*/
-  padding: 0 20px;
+  padding: 0 0px;
   float: left;
   position: relative;
   text-align: center;
@@ -127,8 +127,9 @@
     background: url('assets/PlanMadeLogo.png') no-repeat;
     background-size: 250px 250px;
     background-position: center center;
-    margin-left: 100px;
-    margin-top: 2px;
+    /*margin-left: 100px;
+    margin-top: 2px;*/
+    margin: 2px 0 0 50px;
   }
 }
 
@@ -252,8 +253,8 @@
   text-transform: uppercase;
   color: white;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
-  animation: move 1s once alternate;
+  /*transition: all 150ms ease-in-out;
+  animation: move 1s once alternate;*/
   &:hover {
     background: white;
     color: PlanMadeRed;
