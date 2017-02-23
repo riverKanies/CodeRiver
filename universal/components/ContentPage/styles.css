@@ -64,3 +64,11 @@
     lost-column: 1/4;
   }
 }
+.icon3 {
+  display: block;
+  lost-column: 1;
+  margin-bottom: 25px;
+  @media bp-papa-bear {
+    lost-column: 1/3;
+  }
+}

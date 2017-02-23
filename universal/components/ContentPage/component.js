@@ -25,9 +25,10 @@ class ContentPage extends React.Component {
   renderIcons() {
     const { icons } = this.props
     if (!icons) return ''
+    const iconClass = (icons.length == 3)? 'icon3' : 'icon'
     return (<div className={styles.iconContainer}>
       {this.props.icons.map((icon, i)=>{
-        return <div key={i} className={styles.icon}>
+        return <div key={i} className={styles[iconClass]}>
           <img src={icon.image} />
           <p>{icon.caption}</p>
         </div>
