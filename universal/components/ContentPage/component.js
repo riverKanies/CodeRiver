@@ -16,10 +16,7 @@ class ContentPage extends React.Component {
       <p className={styles.footNote}>{this.props.footNote}</p>
       <br/>
       <br/>
-      {this.props.links.map((l,i)=>{
-        const linkClass = isEven(i) ? styles.link : styles.link2
-        return <Link key={i} to={l.url} className={linkClass}>{l.label}</Link>
-      })}
+      {this.renderLinks()}
     </div>)
   }
   renderIcons() {
@@ -63,6 +60,14 @@ class ContentPage extends React.Component {
     if (!paragraphs) return ''
     return paragraphs.map((p,i)=>{
       return <p key={i} className={styles.body}>{p}</p>
+    })
+  }
+  renderLinks() {
+    const { links } = this.props
+    if (!links) return ''
+    return links.map((l,i)=>{
+      const linkClass = isEven(i) ? styles.link : styles.link2
+      return <Link key={i} to={l.url} className={linkClass}>{l.label}</Link>
     })
   }
 }
