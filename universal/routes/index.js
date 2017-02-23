@@ -2,7 +2,6 @@ import Employees from 'layouts/Employees'
 import Employers from 'layouts/Employers'
 import Brokers from 'layouts/Brokers'
 import FAQs from 'layouts/FAQs'
-import OurMission from 'layouts/OurMission'
 
 import ContactUs from 'layouts/ContactUs'
 import Press from 'layouts/Press'
@@ -53,10 +52,6 @@ export const createRoutes = (store) => ([
       {
         path: '/contactus',
         component: ContactUs
-      },
-      {
-        path: '/ourmission',
-        component: OurMission
       },
       {
         path: '/home',

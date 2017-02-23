@@ -150,7 +150,7 @@ export class Header extends React.Component {
             >
               <section >Company</section>
               {this.renderDropdown([
-                {label: 'About', url: '/ourmission'},
+                {label: 'About', url: '/about'},
                 {label: 'FAQs', url: '/faqs'},
                 {label: 'Partnerships', url: '/partnerships'},
                 {label: 'Contact Us', url: '/contactus'}
