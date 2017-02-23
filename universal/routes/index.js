@@ -1,5 +1,6 @@
 import Employees from 'layouts/Employees'
 import Employers from 'layouts/Employers'
+import Brokers from 'layouts/Brokers'
 import OurMission from 'layouts/OurMission'
 
 import Home from 'layouts/Home'
@@ -26,6 +27,10 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
+      {
+        path: '/brokers',
+        component: Brokers
+      },
       {
         path: '/employers',
         component: Employers
