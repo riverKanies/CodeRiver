@@ -3,6 +3,8 @@ import Employers from 'layouts/Employers'
 import Brokers from 'layouts/Brokers'
 import FAQs from 'layouts/FAQs'
 import Licenses from 'layouts/Licenses'
+import Terms from 'layouts/Terms'
+import Privacy from 'layouts/Privacy'
 
 import ContactUs from 'layouts/ContactUs'
 import Press from 'layouts/Press'
@@ -30,6 +32,14 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
+      {
+        path: '/privacy',
+        component: Privacy
+      },
+      {
+        path: '/terms',
+        component: Terms
+      },
       {
         path: '/licenses',
         component: Licenses

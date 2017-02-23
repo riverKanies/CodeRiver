@@ -15,7 +15,7 @@ export class Footer extends React.Component {
       </section>
       <section className={styles.section}>
         <h3>Resources</h3>
-        <Link id='licences' to='/licences' className={styles.link}>Licences</Link>
+        <Link id='licenses' to='/licenses' className={styles.link}>Licenses</Link>
         <Link id='blog' to='/blog' className={styles.link}>blog</Link>
       </section>
     </div>)
