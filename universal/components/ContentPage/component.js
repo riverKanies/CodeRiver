@@ -39,6 +39,18 @@ class ContentPage extends React.Component {
     const { sections } = this.props
     if (!sections) return ''
     return sections.map((sec, i)=>{
+      if (sec.paragraphs) {
+        return (<div key={i}>
+          <strong className={styles.body}>{sec.heading}</strong>
+          {sec.paragraphs.map((p, j)=>{
+            if ( j == (sec.paragraphs.length-1) ) {
+              return <p key={j} className={styles.body}>{p}</p>
+            }
+            return <p key={j} className={styles.body}>{p}<br/><br/></p>
+          })}
+          <br/>
+        </div>)
+      }
       return (<div key={i}>
         <strong className={styles.body}>{sec.heading}</strong>
         <p className={styles.body}>{sec.body}</p>
