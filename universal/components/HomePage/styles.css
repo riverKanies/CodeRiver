@@ -1,0 +1,61 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
+@value PlanMadeDarkGray, PlanMadeTeal, PlanMadeRed from all;
+
+.container {
+  background: white;
+  padding: 100px 10px 0;
+  @media bp-mama-bear {
+    padding: 80px 10% 0;
+  }
+  @media bp-papa-bear {
+    padding: 80px 15% 0;
+  }
+}
+
+.city {
+  height: 400px;
+  text-align: center;
+  background: url('./assets/city.jpg') no-repeat;
+  background-position: center -2cm;
+}
+
+.link {
+  font-family: montserrat;
+  border-radius: 4px;
+  background: white;
+  color: PlanMadeDarkGray;
+  border: 1px solid PlanMadeDarkGray;
+  padding: 10px;
+  margin-right: 20px;
+  &:hover {
+    border-color: PlanMadeRed;
+    color: PlanMadeRed;
+  }
+}
+
+.header {
+  font-family: montserrat;
+  color: PlanMadeTeal;
+}
+
+.subheader {
+  margin-top: 50px;
+  font-family: montserratLight;
+  color: PlanMadeDarkGray;
+}
+
+.iconContainer {
+  lost-center: containerWidth;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.icon3 {
+  color: PlanMadeTeal;
+  display: block;
+  lost-column: 1;
+  margin-bottom: 25px;
+  @media bp-papa-bear {
+    lost-column: 1/3;
+  }
+}

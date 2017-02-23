@@ -133,6 +133,15 @@ export class Header extends React.Component {
 
         <section className={styles.navContainer}>
           <nav role='navigation' >
+            <Link
+              id="navQuote"
+              to="/quote"
+              className={styles.linkUtility}
+              activeClassName={styles.activeRoute}
+            >
+              Quote
+            </Link>
+
             <div className={styles.dropdown+' '+styles.linkUtility}
               onClick={this.drop}
               style={this.state.dropped ? droppedStyle3 : {}}

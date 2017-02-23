@@ -10,6 +10,7 @@ import ContactUs from 'layouts/ContactUs'
 import Press from 'layouts/Press'
 
 import Home from 'layouts/Home'
+import Quote from 'layouts/Quote'
 import LayoutCore from 'layouts/LayoutCore'
 import SignUp from 'layouts/SignUp'
 import Welcome from 'components/Welcome'
@@ -69,8 +70,8 @@ export const createRoutes = (store) => ([
         component: ContactUs
       },
       {
-        path: '/home',
-        component: Home.component
+        path: '/quote',
+        component: Quote.component
       },
       {
         path: 'signup',
