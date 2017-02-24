@@ -38,7 +38,7 @@ class ContentPage extends React.Component {
     return sections.map((sec, i)=>{
       if (sec.paragraphs) {
         return (<div key={i}>
-          <strong className={styles.body}>{sec.heading}</strong>
+          <strong className={styles.bodyHeading}>{sec.heading}</strong>
           {sec.paragraphs.map((p, j)=>{
             if ( j == (sec.paragraphs.length-1) ) {
               return <p key={j} className={styles.body}>{p}</p>
@@ -49,7 +49,7 @@ class ContentPage extends React.Component {
         </div>)
       }
       return (<div key={i}>
-        <strong className={styles.body}>{sec.heading}</strong>
+        <strong className={styles.bodyHeading}>{sec.heading}</strong>
         <p className={styles.body}>{sec.body}</p>
         <br/>
       </div>)

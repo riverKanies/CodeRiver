@@ -15,16 +15,24 @@
 .header {
   font-family: montserrat;
   color: PlanMadeTeal;
+  margin-bottom: 40px;
 }
 
 .subheader {
   font-family: montserratLight;
   color: PlanMadeDarkGray;
+  margin-bottom: 40px;
 }
 
 .body {
+  margin-top: 10px;
   margin-bottom: 0;
   font-family: PT serif;
+  color: PlanMadeDarkGray;
+}
+
+.bodyHeading {
+  font-family: montserratLight;
   color: PlanMadeDarkGray;
 }
 
@@ -54,21 +62,29 @@
   margin-top: 20px;
 }
 .icon {
+  color: PlanMadeDarkGray;
   display: block;
   lost-column: 1;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   @media bp-mama-bear {
     lost-column: 1/2;
   }
   @media bp-papa-bear {
     lost-column: 1/4;
   }
+  > img {
+    margin-bottom: 10px;
+  }
 }
 .icon3 {
+  color: PlanMadeDarkGray;
   display: block;
   lost-column: 1;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   @media bp-papa-bear {
     lost-column: 1/3;
+  }
+  > img {
+    margin-bottom: 10px;
   }
 }
