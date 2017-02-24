@@ -63,7 +63,11 @@ class ContentPage extends React.Component {
     })
   }
   renderLinks() {
-    const { links } = this.props
+    const { links, specialLink } = this.props
+    if (specialLink) {
+      return <a className={styles.link2} target="_blank" href={specialLink.href}>{specialLink.label}</a>
+    }
+
     if (!links) return ''
     return links.map((l,i)=>{
       const linkClass = isEven(i) ? styles.link : styles.link2
