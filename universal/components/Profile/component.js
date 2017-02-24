@@ -47,15 +47,41 @@ function renderQueryData(query) {
   if (!query.state) return ''
   return(<div>
     <p>Personal Details:</p>
-    <p>State: {query.state},
-    Birthdate: {query.birthdate},
-    Gender: {query.gender},
-    Smoker: {query.smoker},
-    Rate Class: {query.rate_class},
-    Coverage: {query.coverage},
-    Term: {query.term}</p>
-    <br/>
+    <table className={styles.table}>
+      <tr>
+        <td className={styles.cell}>State:</td>
+        <td className={styles.cell}>{query.state}</td>
+      </tr>
+      <tr>
+        <td className={styles.cell}>Birthdate:</td>
+        <td className={styles.cell}>{query.birthdate}</td>
+      </tr>
+      <tr>
+        <td className={styles.cell}>Gender:</td>
+        <td className={styles.cell}>{renderGender(query.gender)}</td>
+      </tr>
+      <tr>
+        <td className={styles.cell}>Tobacco Use:</td>
+        <td className={styles.cell}>{renderSmoker(query.smoker)}</td>
+      </tr>
+      <tr>
+        <td className={styles.cell}>Coverage Amount (Last Selected):</td>
+        <td className={styles.cell}>${query.coverage}</td>
+      </tr>
+      <tr>
+        <td className={styles.cell}>Term Duration (Last Selected):</td>
+        <td className={styles.cell}>{query.term} yrs</td>
+      </tr>
+    </table>
   </div>)
+}
+function renderGender(gender) {
+  if (gender == 'f') return 'Female'
+  return 'Male'
+}
+function renderSmoker(smoker) {
+  if (smoker == 'false') return 'Non-Smoker'
+  return 'Smoker'
 }
 
 export default Profile

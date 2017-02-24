@@ -1,9 +1,20 @@
 @value all: 'all';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
-@value bodyCopy, PlanMadeTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value bodyCopy, PlanMadeTeal, PlanMadeDarkGray, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 /* Profile Styles */
+.table {
+  font-family: MonLight;
+  font-size: .75rem;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.cell {
+  color: PlanMadeDarkGray;
+  width: 50%;
+}
+
 .profile {
   display: block;
   width: 100%;
