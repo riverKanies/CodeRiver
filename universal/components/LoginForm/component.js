@@ -66,6 +66,14 @@ const LoginForm = (props: signupProps) => {
                 theme='thriveInput'
               />
               {renderSubmit(props)}
+              <Link
+                id='navSignUp'
+                to='/signup'
+                className={styles.forgotPasswordLink}
+                style={{marginTop: '1rem'}}
+              >
+                Need to Sign Up?
+              </Link>
               <Link {...forgotPasswordProps}>Forgot your password?</Link>
             </fieldset>
           </form>

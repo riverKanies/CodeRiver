@@ -54,7 +54,7 @@ export class Header extends React.Component {
     this.setState({active: !this.state.active})
   }
 
-  renderSignupOrProfile () {
+  renderProfile () {
     const { isLoggedIn } = this.props
 
     if (isLoggedIn) {
@@ -71,17 +71,7 @@ export class Header extends React.Component {
       )
     }
 
-    return (
-      <Link
-        id='navSignUp'
-        onClick={this.hideMenu}
-        to='/signup'
-        className={styles.linkUtility}
-        activeClassName={styles.activeRoute}
-      >
-        Sign Up
-      </Link>
-    )
+    return ''
   }
 
   renderLoginLogout () {
@@ -165,7 +155,7 @@ export class Header extends React.Component {
                 {label: 'Contact Us', url: '/contactus'}
               ], true)}
             </div>
-            {this.renderSignupOrProfile()}
+            {this.renderProfile()}
             {this.renderLoginLogout()}
           </nav>
         </section>
