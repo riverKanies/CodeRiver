@@ -2,7 +2,7 @@
 import React from 'react'
 
 import styles from './styles'
-import buttonStyles from 'styles/button.css'
+import buttonStyles from 'styles/content.css'
 
 type Props = {
   children: any,

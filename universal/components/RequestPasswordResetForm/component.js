@@ -5,6 +5,7 @@ import Button from 'components/Button'
 import Input from 'components/Input'
 import GenericFormError from 'components/GenericFormError'
 import styles from './styles'
+import contentStyles from 'styles/content.css'
 
 type renderSubmitField = {
   valid: boolean,
@@ -36,7 +37,7 @@ const Form = (props: Props) => {
   return (
     <section className={styles.passwordReset}>
       <header className={styles.greeting}>
-        <h1>Reset Password</h1>
+        <h1 className={contentStyles.header}>Reset Password</h1>
       </header>
       <section className={styles.passwordResetDialogue}>
         <div className={styles.container}>

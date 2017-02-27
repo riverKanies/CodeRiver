@@ -2,6 +2,7 @@
 import React from 'react'
 import PasswordForm from 'components/PasswordForm'
 import styles from './styles'
+import contentStyles from 'styles/content.css'
 
 type Props = {
   email: string,
@@ -21,8 +22,8 @@ const PasswordReset = ({
   return (
     <section className={styles.profile}>
       <header className={styles.greeting}>
-        <h1 className={styles.h1}>Welcome, {displayName}</h1>
-        <h4 className={styles.h4}>Please provide us with a new password</h4>
+        <h1 className={contentStyles.header}>Welcome, {displayName}</h1>
+        <h3 className={contentStyles.subheader}>Please provide us with a new password</h3>
       </header>
       <section className={styles.myAccount}>
         <div className={styles.container}>

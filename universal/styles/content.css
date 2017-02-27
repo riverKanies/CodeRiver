@@ -1,4 +1,4 @@
-@value PlanMadeDarkGray, PlanMadeRed from 'all';
+@value PlanMadeDarkGray, PlanMadeRed, PlanMadeTeal from 'all';
 
 .button {
   text-align: center;
@@ -12,4 +12,16 @@
     border-color: PlanMadeRed;
     color: PlanMadeRed;
   }
+}
+
+.header {
+  font-family: montserrat;
+  color: PlanMadeTeal;
+  margin-bottom: 40px;
+}
+
+.subheader {
+  font-family: montserratLight;
+  color: PlanMadeDarkGray;
+  margin-bottom: 40px;
 }

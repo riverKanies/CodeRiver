@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles'
-import buttonStyles from 'styles/button.css'
+import buttonStyles from 'styles/content.css'
 import type { Form as FormType } from 'lib/types'
 import Input from 'components/Input'
 import { Field } from 'redux-form'

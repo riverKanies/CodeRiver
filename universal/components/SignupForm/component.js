@@ -5,6 +5,7 @@ import GenericFormError from 'components/GenericFormError'
 import ExternalLink from 'components/ExternalLink'
 import Input from 'components/Input'
 import styles from './styles'
+import contentStyles from 'styles/content.css'
 
 import { renderSelectedQuote } from 'components/QuoteCard'
 
@@ -40,7 +41,7 @@ const SignUpForm = (props: signupProps) => {
   return (
     <section className={styles.signUp}>
       <header className={styles.greeting}>
-        <h1>Sign up to make a plan</h1>
+        <h1 className={contentStyles.header}>Sign up to make a plan</h1>
       </header>
       <section className={styles.signUpDialogue}>
         <div className={styles.container}>

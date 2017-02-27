@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import styles from './styles'
-import buttonStyles from 'styles/button.css'
+import buttonStyles from 'styles/content.css'
 
 type Props = {
   children: any,

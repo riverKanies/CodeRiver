@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import styles from './styles'
-import buttonStyles from 'styles/button.css'
+import buttonStyles from 'styles/content.css'
 
 import imageCity from './assets/city.jpg'
 import imageClock from './assets/clock.png'

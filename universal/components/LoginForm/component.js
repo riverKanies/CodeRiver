@@ -7,6 +7,7 @@ import Input from 'components/Input'
 import { Link } from 'react-router'
 import GenericFormError from 'components/GenericFormError'
 import styles from './styles'
+import contentStyles from 'styles/content.css'
 
 type renderSubmitField = {
   valid: boolean,
@@ -44,7 +45,7 @@ const LoginForm = (props: signupProps) => {
   return (
     <section id='login' className={styles.login}>
       <header className={styles.greeting}>
-        <h1>Log In</h1>
+        <h1 className={contentStyles.header}>Log In</h1>
       </header>
       <section className={styles.loginDialogue}>
         <div className={styles.container}>
