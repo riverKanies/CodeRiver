@@ -4,10 +4,13 @@
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 /* All Form Styles */
+.save {
+  text-align: center;
+}
+
 .myProfile,
 .accountAbout,
 .accountPreferences,
-.save,
 .changePassword {
   appearance: none;
   display: block;

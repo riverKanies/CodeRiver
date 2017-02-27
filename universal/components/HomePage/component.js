@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import styles from './styles'
+import buttonStyles from 'styles/button.css'
 
 import imageCity from './assets/city.jpg'
 import imageClock from './assets/clock.png'
@@ -15,7 +16,7 @@ class HomePage extends React.Component {
         <h3 className={styles.subheader}>The best life insurance.</h3>
         <h1 className={styles.header}>Now for Everyone.</h1>
         <br/>
-        <Link to='/quote' className={styles.link}>Get a Quote</Link>
+        <Link to='/quote' className={buttonStyles.button}>Get a Quote</Link>
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.icon3}>

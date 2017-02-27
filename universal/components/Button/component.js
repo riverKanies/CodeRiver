@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import styles from './styles'
+import buttonStyles from 'styles/button.css'
 
 type Props = {
   children: any,
@@ -28,7 +29,7 @@ export const Button = ({
   disabled
  }: Props) => {
   const linkProps = {
-    className: styles[buttonStyle],
+    className: buttonStyles.button,//styles[buttonStyle],
     onClick: handleClick,
     activeClassName: styles.activeStyle,
     disabled: disabled,

@@ -1,5 +1,5 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
-@value PlanMadeDarkGray, PlanMadeTeal from all;
+@value PlanMadeDarkGray, PlanMadeTeal, PlanMadeRed from all;
 
 .container {
   background: white;
@@ -44,15 +44,19 @@
 }
 
 .link {
-  border-radius: 10px;
-  background: PlanMadeTeal;
-  color: white;
+  text-align: center;
+  font-family: montserrat;
+  border-radius: 4px;
+  background: white;
+  color: PlanMadeDarkGray;
+  border: 1px solid PlanMadeDarkGray;
+  padding: 10px;
+  &:hover {
+    border-color: PlanMadeRed;
+    color: PlanMadeRed;
+  }
   padding: 10px;
   margin-right: 20px;
-}
-.link2 {
-  composes: link;
-  background: PlanMadeDarkGray;
 }
 
 .iconContainer {

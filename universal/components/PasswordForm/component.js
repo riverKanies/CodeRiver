@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles'
+import buttonStyles from 'styles/button.css'
 import { Field } from 'redux-form'
 import type { Form as FormType } from 'lib/types'
 import Input from 'components/Input'
@@ -24,7 +25,7 @@ export default function Form (props: FormType) {
         {(props.message) ? <p>{props.message}</p> : null }
       </fieldset>
       <fieldset className={styles.save}>
-        <input className={styles.submit} type='submit' value='Change' />
+        <input className={buttonStyles.button} type='submit' value='Change' />
       </fieldset>
     </form>
   )

@@ -2,6 +2,7 @@
 import React from 'react'
 
 import styles from './styles'
+import buttonStyles from 'styles/button.css'
 
 type Props = {
   children: any,
@@ -31,7 +32,7 @@ export const ExternalLink = ({
   id
  }: Props) => {
   const linkProps = {
-    className: styles[linkStyle],
+    className: buttonStyles.button,//styles[linkStyle],
     onClick: handleClick,
     disabled,
     href: linkTo,

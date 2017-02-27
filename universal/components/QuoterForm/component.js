@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles'
+import buttonStyles from 'styles/button.css'
 import type { Form as FormType } from 'lib/types'
 import Input from 'components/Input'
 import { Field } from 'redux-form'
@@ -117,8 +118,8 @@ export default function Form (props) {
       {renderErrors(props.quoterErrors)}
       <br/>
       <input
-        className={styles.submit}
-        style={{float: 'none', display: 'inline-block'}}
+        className={buttonStyles.button}
+        style={{float: 'none', display: 'inline-block', marginTop: '30px'}}
         type='submit'
         value='Get Quotes'
       />

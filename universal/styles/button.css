@@ -1,0 +1,15 @@
+@value PlanMadeDarkGray, PlanMadeRed from 'all';
+
+.button {
+  text-align: center;
+  font-family: montserrat;
+  border-radius: 4px;
+  background: white;
+  color: PlanMadeDarkGray;
+  border: 1px solid PlanMadeDarkGray;
+  padding: 10px;
+  &:hover {
+    border-color: PlanMadeRed;
+    color: PlanMadeRed;
+  }
+}

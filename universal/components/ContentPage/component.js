@@ -65,20 +65,14 @@ class ContentPage extends React.Component {
   renderLinks() {
     const { links, specialLink } = this.props
     if (specialLink) {
-      return <a className={styles.link2} target="_blank" href={specialLink.href}>{specialLink.label}</a>
+      return <a className={styles.link} target="_blank" href={specialLink.href}>{specialLink.label}</a>
     }
 
     if (!links) return ''
     return links.map((l,i)=>{
-      const linkClass = isEven(i) ? styles.link : styles.link2
-      return <Link key={i} to={l.url} className={linkClass}>{l.label}</Link>
+      return <Link key={i} to={l.url} className={styles.link}>{l.label}</Link>
     })
   }
-}
-
-function isEven(n) {
-  n = Number(n);
-  return n === 0 || !!(n && !(n%2));
 }
 
 export default ContentPage
