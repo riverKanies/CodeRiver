@@ -6,6 +6,7 @@ import { getQuotes, defaultValues, actions } from 'modules/Quoter'
 import { apiUpdateQuote } from 'modules/UserSession'
 import styles from './styles'
 import formStyles from 'components/Input/styles.css'
+import contentStyles from 'styles/content.css'
 import profileStyles from 'components/QuoterForm/styles.css'
 
 import './sliderStyles.css'
@@ -36,7 +37,7 @@ class Quoter extends React.Component {
         {this.renderQuotes(this.props.quotes)}
         <div className={styles.container}>
           <header className={styles.accountHeader}>
-            <h3>Let's get started</h3>
+            <h1 className={contentStyles.header}>Let's get started</h1>
           </header>
           <QuoterForm quoterErrors={this.props.errors}/>
         </div>
@@ -66,14 +67,14 @@ class Quoter extends React.Component {
             </label>
           ))}
           <br/>
-          <button className={styles.submit} style={{float: 'none', display: 'inline-block'}} onClick={this.updateQuotes}>Update Quotes</button>
+          <button className={contentStyles.button} style={{float: 'none', display: 'inline-block', marginTop: '30px'}} onClick={this.updateQuotes}>Update Quotes</button>
         </div>
       </div>
       <br/>
       <br/>
       <section >
       <header className={styles.accountHeader}>
-        <h3>Next, click on a plan that looks good to you</h3>
+        <h3 className={contentStyles.subheader}>Next, click on a plan that looks good to you</h3>
       </header>
       <ul className={styles.cardContainer} style={{listStyleType: 'none', paddingLeft: 0, float: 'left'}}>
         {quotes.map((q,i)=>{

@@ -1,6 +1,6 @@
 @value all: 'all';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
-@value bodyCopy, PlanMadeTeal, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value bodyCopy, PlanMadeTeal, PlanMadeDarkGray, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 .base {
@@ -63,10 +63,14 @@
 }
 
 .radio {
+  font-family: MonLight;
+  font-size: 1.5em;
+  color: PlanMadeDarkGray;
+
   background: white;
   border: 2px solid lightGray;
   border-radius: .125rem;
-  font-family: Mon;
+  /*font-family: Mon;*/
   display: inline-block;
   margin-right: 0.3em;
   margin-bottom: 3px;
@@ -164,13 +168,17 @@
 }
 
 .planMadeText {
+  font-family: MonLight;
+  font-size: 1.5em;
+  color: PlanMadeDarkGray;
+
   display: inline-block;
-  width: 120px;
+  width: 175px;
   margin: 0 auto;
   padding: 2px 5px;
   margin-right: 5px;
   margin-bottom: 3px;
-  font-family: Mon;
+  /*font-family: Mon;*/
   text-align: left;
   background: white;
   border: 2px solid lightGray;
@@ -194,13 +202,17 @@
   }
 }
 .select {
+  font-family: MonLight;
+  font-size: 1.5em;
+  color: PlanMadeDarkGray;
+
   appearance: none;
   background: transparent;
   border: 2px solid lightGray;
   border-radius: .125rem;
-  width: 123px;
+  width: 175px;
   padding-left: 5px;
   margin-bottom: 3px;
-  font-family: Mon;
+  /*font-family: Mon;*/
   margin-right: 5px;
 }
