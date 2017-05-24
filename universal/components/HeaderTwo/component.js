@@ -117,46 +117,40 @@ export class Header extends React.Component {
             id='linkHome'
             to='/'
           >
-            <div className={styles.logo}/>
+            <h1 className={styles.logo}>CodeRiver</h1>
           </IndexLink>
         </figure>
 
         <section className={styles.navContainer}>
           <nav role='navigation' >
             <Link
-              id="navQuote"
-              to="/quote"
+              id="navProcess"
+              to="/process"
               className={styles.linkUtility}
               activeClassName={styles.activeRoute}
             >
-              Get A Quote
+              Process
             </Link>
-
-            <div className={styles.dropdown+' '+styles.linkUtility}
-              onClick={this.drop}
-              style={this.state.dropped ? droppedStyle3 : {}}
+          </nav>
+          <nav role='navigation' >
+            <Link
+              id="navPortfolio"
+              to="/portfolio"
+              className={styles.linkUtility}
+              activeClassName={styles.activeRoute}
             >
-              <section >Work With Us</section>
-              {this.renderDropdown([
-                {label: 'Employees', url: '/employees'},
-                {label: 'Employers', url: '/employers'},
-                {label: 'Brokers', url: '/brokers'}
-              ])}
-            </div>
-            <div className={styles.dropdown+' '+styles.linkUtility}
-              onClick={this.drop2}
-              style={this.state.dropped2 ? droppedStyle4 : {}}
+              Portfolio
+            </Link>
+          </nav>
+          <nav role='navigation' >
+            <Link
+              id="navPricing"
+              to="/pricing"
+              className={styles.linkUtility}
+              activeClassName={styles.activeRoute}
             >
-              <section >Company</section>
-              {this.renderDropdown([
-                {label: 'About', url: '/about'},
-                {label: 'FAQs', url: '/faqs'},
-                {label: 'Partnerships', url: '/partnerships'},
-                {label: 'Contact Us', url: '/contactus'}
-              ], true)}
-            </div>
-            {this.renderProfile()}
-            {this.renderLoginLogout()}
+              Pricing
+            </Link>
           </nav>
         </section>
       </div>

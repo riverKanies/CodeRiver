@@ -1,16 +1,3 @@
-import Employees from 'layouts/Employees'
-import Employers from 'layouts/Employers'
-import Brokers from 'layouts/Brokers'
-import FAQs from 'layouts/FAQs'
-import Licenses from 'layouts/Licenses'
-import Terms from 'layouts/Terms'
-import Privacy from 'layouts/Privacy'
-import Partnerships from 'layouts/Partnerships'
-import About from 'layouts/About'
-import Blog from 'layouts/Blog'
-
-import ContactUs from 'layouts/ContactUs'
-import Press from 'layouts/Press'
 
 import Home from 'layouts/Home'
 import Quote from 'layouts/Quote'
@@ -36,54 +23,6 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
-      {
-        path: '/blog',
-        component: Blog
-      },
-      {
-        path: '/about',
-        component: About
-      },
-      {
-        path: '/partnerships',
-        component: Partnerships
-      },
-      {
-        path: '/privacy',
-        component: Privacy
-      },
-      {
-        path: '/terms',
-        component: Terms
-      },
-      {
-        path: '/licenses',
-        component: Licenses
-      },
-      {
-        path: '/faqs',
-        component: FAQs
-      },
-      {
-        path: '/brokers',
-        component: Brokers
-      },
-      {
-        path: '/employers',
-        component: Employers
-      },
-      {
-        path: '/employees',
-        component: Employees
-      },
-      {
-        path: '/press',
-        component: Press
-      },
-      {
-        path: '/contactus',
-        component: ContactUs
-      },
       {
         path: '/quote',
         component: Quote.component
