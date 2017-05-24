@@ -1,15 +1,15 @@
 @value all: 'all';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
-@value bodyCopy, PlanMadeTeal, PlanMadeDarkGray, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value bodyCopy, CodeRiverTeal, CodeRiverDarkGray, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 .base {
   label {
-    color: PlanMadeTeal;
+    color: CodeRiverTeal;
   }
 
   input {
-    border-color: PlanMadeTeal;
+    border-color: CodeRiverTeal;
     color: darkGray;
     &::placeholder { color: darkGray }
   }
@@ -65,7 +65,7 @@
 .radio {
   font-family: MonLight;
   font-size: 1.5em;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 
   background: white;
   border: 2px solid lightGray;
@@ -76,8 +76,8 @@
   margin-bottom: 3px;
   padding: 0 4px 0 4px;
   &:hover {
-    background-color: PlanMadeTeal;
-    border: 2px solid PlanMadeTeal;
+    background-color: CodeRiverTeal;
+    border: 2px solid CodeRiverTeal;
     color: white;
   }
   .error {
@@ -91,8 +91,8 @@
 }
 .radioHighlight {
   composes: radio;
-  background-color: PlanMadeTeal;
-  border: 2px solid PlanMadeTeal;
+  background-color: CodeRiverTeal;
+  border: 2px solid CodeRiverTeal;
   color: white;
 }
 .radioInput {
@@ -119,8 +119,8 @@
     margin: -.125rem .625rem 0 0;
   }
   &:checked {
-    background: PlanMadeTeal;
-    border-color: PlanMadeTeal;
+    background: CodeRiverTeal;
+    border-color: CodeRiverTeal;
     &::after {
       content: '';
       display: inline-block;
@@ -163,14 +163,14 @@
   outline: none;
   transition: border 150ms ease-in-out;
   &:focus {
-    border-color: PlanMadeTeal;
+    border-color: CodeRiverTeal;
   }
 }
 
 .planMadeText {
   font-family: MonLight;
   font-size: 1.5em;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 
   display: inline-block;
   width: 175px;
@@ -186,7 +186,7 @@
   outline: none;
   transition: border 150ms ease-in-out;
   &:focus {
-    border-color: PlanMadeTeal;
+    border-color: CodeRiverTeal;
   }
 }
 
@@ -204,7 +204,7 @@
 .select {
   font-family: MonLight;
   font-size: 1.5em;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 
   appearance: none;
   background: transparent;

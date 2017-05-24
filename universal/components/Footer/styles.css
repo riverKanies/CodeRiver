@@ -1,11 +1,11 @@
 
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 @value navItem, MonLight from 'all';
-@value gradientTeal, bodyCopy, white, PlanMadeTeal, PlanMadeRed, PlanMadeGray, PlanMadeDarkGray, ThriveGray, ThriveBlue from 'all';
+@value gradientTeal, bodyCopy, white, CodeRiverTeal, CodeRiverBlue, CodeRiverGray, CodeRiverDarkGray, ThriveGray, ThriveBlue from 'all';
 
 .footer {
   width: 100%;
-  background-color: PlanMadeTeal;
+  background-color: CodeRiverTeal;
   lost-center: containerWidth;
   text-align: left;
   padding: 30px 0 0 30px;
@@ -24,7 +24,7 @@
   /*text-transform: uppercase;*/
   width: 100%;
   &:hover {
-    color: PlanMadeRed;
+    color: CodeRiverBlue;
   }
 }
 

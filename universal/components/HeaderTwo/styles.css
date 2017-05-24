@@ -1,6 +1,6 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from 'all';
 @value navItem, MonLight from 'all';
-@value gradientTeal, bodyCopy, white, PlanMadeTeal, PlanMadeRed, PlanMadeGray, PlanMadeDarkGray, ThriveGray, ThriveBlue from 'all';
+@value gradientTeal, bodyCopy, white, CodeRiverTeal, CodeRiverBlue, CodeRiverGray, CodeRiverDarkGray, ThriveGray, ThriveBlue from 'all';
 
 /* Base Styles
 ** These don't change regardless of having the extra piece up top.
@@ -10,7 +10,7 @@
   @media bp-papa-bear {
     margin-top: 45px;
     width: 100%;
-    border-bottom: 1px solid PlanMadeGray;
+    border-bottom: 1px solid CodeRiverGray;
   }
 }
 
@@ -28,7 +28,7 @@
   height: auto;
   margin-left: -80px;
   clear: both;
-  background: PlanMadeTeal;
+  background: CodeRiverTeal;
   border: 1px solid white;
   border-radius: 1.3125rem;
   font-family: navItem;
@@ -39,7 +39,7 @@
   color: white;
   &:hover {
     background: white;
-    color: PlanMadeRed;
+    color: CodeRiverBlue;
   }
   @media bp-papa-bear {
     margin-left: -120px;
@@ -53,7 +53,7 @@
     border: none;
     text-align: right;
     text-transform: uppercase;
-    color: PlanMadeDarkGray;
+    color: CodeRiverDarkGray;
   }
 }
 
@@ -68,7 +68,7 @@
   clear: both;
   /*position: relative;*/
   z-index: 1000;
-  background: PlanMadeTeal;
+  background: CodeRiverTeal;
   overflow: hidden;
   /*transition: all 200ms cubic-bezier(.04,.39,.94,.53);*/
 
@@ -120,7 +120,7 @@
   margin-left: 10px;
   font-family: MonLight;
   font-size: 2.3em;
-  color: PlanMadeRed;
+  color: CodeRiverBlue;
   @media bp-papa-bear {
 
   }
@@ -194,7 +194,7 @@
       margin: 0 auto 0 -.22rem;
       padding: 0 0;
       float: none;
-      background: PlanMadeTeal;
+      background: CodeRiverTeal;
       border-radius: .22rem;
       position: absolute;
       bottom: -3rem;
@@ -204,7 +204,7 @@
       z-index: 9999;
     }
     &:hover {
-      color: PlanMadeTeal;
+      color: CodeRiverTeal;
       &::after {
         bottom: .5rem;
       }
@@ -251,7 +251,7 @@
   animation: move 1s once alternate;*/
   &:hover {
     background: white;
-    color: PlanMadeRed;
+    color: CodeRiverBlue;
   }
   @media bp-papa-bear {
     display: block;
@@ -264,10 +264,10 @@
     border: none;
     text-align: right;
     text-transform: uppercase;
-    color: PlanMadeTeal;
+    color: CodeRiverTeal;
     &:hover {
       background: transparent;
-      color: PlanMadeRed;
+      color: CodeRiverBlue;
     }
   }
 }
@@ -292,13 +292,13 @@
         fill: white;
       }
       .globalType {
-        fill: PlanMadeTeal;
+        fill: CodeRiverTeal;
       }
       .petalTop {
-        fill: PlanMadeTeal;
+        fill: CodeRiverTeal;
       }
       .petalBottom {
-        fill: PlanMadeTeal;
+        fill: CodeRiverTeal;
       }
     }
     @media bp-papa-bear {
@@ -309,10 +309,10 @@
         fill: bodyCopy;
       }
       .petalTop {
-        fill: PlanMadeTeal;
+        fill: CodeRiverTeal;
       }
       .petalBottom {
-        fill: PlanMadeTeal;
+        fill: CodeRiverTeal;
       }
     }
   }

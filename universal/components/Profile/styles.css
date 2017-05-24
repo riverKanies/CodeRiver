@@ -1,6 +1,6 @@
 @value all: 'all';
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear, babyPadding, mamaPadding, papaPadding, containerWidth, containerPadding from all;
-@value bodyCopy, PlanMadeTeal, PlanMadeDarkGray, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
+@value bodyCopy, CodeRiverTeal, CodeRiverDarkGray, ThriveBlue, lightGray, darkGray, gradientCardThrive from all;
 @value Mon, MonLight, MonBold, MonBlack, Playfair, PlayBlack from all;
 
 /* Profile Styles */
@@ -11,7 +11,7 @@
   margin-bottom: 30px;
 }
 .cell {
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
   width: 50%;
 }
 
@@ -172,7 +172,7 @@
   outline: none;
   transition: border 150ms ease-in-out;
   &:focus {
-    border-color: PlanMadeTeal;
+    border-color: CodeRiverTeal;
   }
 }
 
@@ -196,8 +196,8 @@
     margin: -.125rem .625rem 0 0;
   }
   &:checked {
-    background: PlanMadeTeal;
-    border-color: PlanMadeTeal;
+    background: CodeRiverTeal;
+    border-color: CodeRiverTeal;
     &::after {
       content: '';
       display: inline-block;
@@ -238,8 +238,8 @@
     float: right;
   }
   &:hover, &:active {
-    background: PlanMadeTeal;
-    border-color: PlanMadeTeal;
+    background: CodeRiverTeal;
+    border-color: CodeRiverTeal;
     color: white;
   }
 }

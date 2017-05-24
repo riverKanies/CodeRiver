@@ -1,5 +1,5 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
-@value PlanMadeDarkGray, PlanMadeTeal, PlanMadeRed from all;
+@value CodeRiverDarkGray, CodeRiverTeal, CodeRiverBlue from all;
 
 .container {
   background: white;
@@ -14,13 +14,13 @@
 
 .header {
   font-family: montserrat;
-  color: PlanMadeTeal;
+  color: CodeRiverTeal;
   margin-bottom: 40px;
 }
 
 .subheader {
   font-family: montserratLight;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
   margin-bottom: 40px;
 }
 
@@ -28,19 +28,19 @@
   margin-top: 10px;
   margin-bottom: 0;
   font-family: PT serif;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 }
 
 .bodyHeading {
   font-family: montserratLight;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 }
 
 .footNote {
   margin-top: 30px;
   font-style: italic;
   font-family: PT serif;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 }
 
 .link {
@@ -48,12 +48,12 @@
   font-family: montserrat;
   border-radius: 4px;
   background: white;
-  color: PlanMadeDarkGray;
-  border: 1px solid PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
+  border: 1px solid CodeRiverDarkGray;
   padding: 10px;
   &:hover {
-    border-color: PlanMadeRed;
-    color: PlanMadeRed;
+    border-color: CodeRiverBlue;
+    color: CodeRiverBlue;
   }
   padding: 10px;
   margin-right: 20px;
@@ -66,7 +66,7 @@
   margin-top: 20px;
 }
 .icon {
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
   display: block;
   lost-column: 1;
   margin-bottom: 35px;
@@ -81,7 +81,7 @@
   }
 }
 .icon3 {
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
   display: block;
   lost-column: 1;
   margin-bottom: 35px;

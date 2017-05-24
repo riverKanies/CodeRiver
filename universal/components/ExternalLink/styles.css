@@ -1,6 +1,6 @@
 @value bp-baby-bear, bp-mama-bear, bp-papa-bear, bp-grand-bear, containerWidth, containerPadding from 'all';
 @value Mon from 'all';
-@value ThriveViolet, ThriveBlue, PlanMadeTeal, ThriveBlurple from 'all';
+@value ThriveViolet, ThriveBlue, CodeRiverTeal, ThriveBlurple from 'all';
 
 @value FacebookBlue: #3B5998;
 
@@ -67,8 +67,8 @@
 
 .teal {
   composes: link;
-  border-color: PlanMadeTeal;
-  color: PlanMadeTeal;
+  border-color: CodeRiverTeal;
+  color: CodeRiverTeal;
 
   &-medium {
     composes: teal;
@@ -81,9 +81,9 @@
   }
 
   &:hover {
-    background-color: PlanMadeTeal;
+    background-color: CodeRiverTeal;
     color: #fff;
-    border-color: PlanMadeTeal;
+    border-color: CodeRiverTeal;
   }
 }
 
@@ -122,19 +122,19 @@
 .tealBG {
   composes: link;
   background-color: transparent;
-  border-color: PlanMadeTeal;
-  color: PlanMadeTeal;
+  border-color: CodeRiverTeal;
+  color: CodeRiverTeal;
   &:hover {
-    background-color: PlanMadeTeal;
+    background-color: CodeRiverTeal;
     color: white;
   }
   @media bp-mama-bear {
-    background-color: PlanMadeTeal;
+    background-color: CodeRiverTeal;
     color: white;
     &:hover {
       background-color: white;
       border-color: white;
-      color: PlanMadeTeal;
+      color: CodeRiverTeal;
     }
   }
 }

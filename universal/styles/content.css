@@ -1,27 +1,27 @@
-@value PlanMadeDarkGray, PlanMadeRed, PlanMadeTeal from 'all';
+@value CodeRiverDarkGray, CodeRiverBlue, CodeRiverTeal from 'all';
 
 .button {
   text-align: center;
   font-family: montserrat;
   border-radius: 4px;
   background: white;
-  color: PlanMadeDarkGray;
-  border: 1px solid PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
+  border: 1px solid CodeRiverDarkGray;
   padding: 10px;
   &:hover {
-    border-color: PlanMadeRed;
-    color: PlanMadeRed;
+    border-color: CodeRiverBlue;
+    color: CodeRiverBlue;
   }
 }
 
 .header {
   font-family: montserrat;
-  color: PlanMadeTeal;
+  color: CodeRiverTeal;
   margin-bottom: 40px;
 }
 
 .subheader {
   font-family: montserratLight;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
   margin-bottom: 40px;
 }

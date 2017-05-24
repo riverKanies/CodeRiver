@@ -3,7 +3,7 @@
 */
 
 @value containerWidth, containerPadding, bp-mama-bear, bp-papa-bear from 'all';
-@value ThriveBlue, PlanMadeTeal, ThriveBlurple, backgroundGray, darkGray, ThrivinRock from 'all';
+@value ThriveBlue, CodeRiverTeal, ThriveBlurple, backgroundGray, darkGray, ThrivinRock from 'all';
 @value PlayBlack, Playfair, MonLight, Mon from 'all';
 
 .container {

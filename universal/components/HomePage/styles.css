@@ -1,5 +1,5 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
-@value PlanMadeDarkGray, PlanMadeTeal, PlanMadeRed from all;
+@value CodeRiverDarkGray, CodeRiverTeal, CodeRiverBlue from all;
 
 .container {
   background: white;
@@ -36,20 +36,20 @@
   font-family: montserrat;
   border-radius: 4px;
   background: white;
-  color: PlanMadeDarkGray;
-  border: 1px solid PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
+  border: 1px solid CodeRiverDarkGray;
   padding: 10px;
   margin-right: 20px;
   &:hover {
-    border-color: PlanMadeRed;
-    color: PlanMadeRed;
+    border-color: CodeRiverBlue;
+    color: CodeRiverBlue;
   }
 }
 
 .header {
   margin-top: 40px;
   font-family: montserrat;
-  color: PlanMadeTeal;
+  color: CodeRiverTeal;
   font-size: 2.2em;
   line-height: 1.1em;
 }
@@ -57,7 +57,7 @@
 .subheader {
   margin-top: 50px;
   font-family: montserratLight;
-  color: PlanMadeDarkGray;
+  color: CodeRiverDarkGray;
 }
 
 .iconContainer {
@@ -67,7 +67,7 @@
   margin-top: 60px;
 }
 .icon3 {
-  color: PlanMadeTeal;
+  color: CodeRiverTeal;
   display: block;
   lost-column: 1;
   margin-bottom: 25px;
