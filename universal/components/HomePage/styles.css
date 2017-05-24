@@ -19,6 +19,19 @@
   background-position: center -2cm;
 }
 
+.me {
+  height: 500px;
+  text-align: center;
+  background: url('./assets/professionalProfile.jpg') no-repeat;
+  background-position: center 0cm;
+  background-size: cover;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .link {
   font-family: montserrat;
   border-radius: 4px;
@@ -34,8 +47,11 @@
 }
 
 .header {
+  margin-top: 40px;
   font-family: montserrat;
   color: PlanMadeTeal;
+  font-size: 2.2em;
+  line-height: 1.1em;
 }
 
 .subheader {
@@ -48,14 +64,20 @@
   lost-center: containerWidth;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .icon3 {
   color: PlanMadeTeal;
   display: block;
   lost-column: 1;
   margin-bottom: 25px;
-  @media bp-papa-bear {
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-grand-bear {
     lost-column: 1/3;
   }
+}
+.imageIcon {
+  height: 150px;
 }

@@ -4,32 +4,38 @@ import { Link } from 'react-router'
 import styles from './styles'
 import buttonStyles from 'styles/content.css'
 
-import imageCity from './assets/city.jpg'
 import imageClock from './assets/clock.png'
 import imageComputer from './assets/computer.png'
 import imageMail from './assets/mail.png'
 
+import imageIdea from './assets/idea.png'
+import imageDecision from './assets/decision.png'
+import imageApp from './assets/app.png'
+
 class HomePage extends React.Component {
   render () {
     return (<div className={styles.container}>
-      <div className={styles.city}>
-        <h3 className={styles.subheader}>The best life insurance.</h3>
-        <h1 className={styles.header}>Now for Everyone.</h1>
+      <div className={styles.intro}>
+        <h3 className={styles.subheader}>Hi I'm River Kanies, software engineer, artist and Chattanoogan.</h3>
+      </div>
+      <div className={styles.me}/>
+      <div className={styles.intro}>
+        <h1 className={styles.header}>I empower entreprenuers with novel ideas to make those ideas a reality, on a budget.</h1>
         <br/>
-        <Link to='/quote' className={buttonStyles.button}>Get a Quote</Link>
+        <Link to='/contact' className={buttonStyles.button}>Get a Quote</Link>
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.icon3}>
-          <img src={imageComputer} />
-          <p>Shop and apply for coverage online</p>
+          <img className={styles.imageIcon} src={imageIdea} />
+          <p>Affordable prototypes for custom web applications</p>
         </div>
         <div className={styles.icon3}>
-          <img src={imageClock} />
-          <p>85% of applicants approved within 48 hours</p>
+          <img className={styles.imageIcon} src={imageApp} />
+          <p>Full-stack services: interactive frontends, 3rd party integrations</p>
         </div>
         <div className={styles.icon3}>
-          <img src={imageMail} />
-          <p>E-policy delivered to your inbox</p>
+          <img className={styles.imageIcon} src={imageDecision} />
+          <p>I specialize in automating complex decision making processes. I can do the math</p>
         </div>
       </div>
     </div>)
