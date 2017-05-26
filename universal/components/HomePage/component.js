@@ -4,10 +4,6 @@ import { Link } from 'react-router'
 import styles from './styles'
 import buttonStyles from 'styles/content.css'
 
-import imageClock from './assets/clock.png'
-import imageComputer from './assets/computer.png'
-import imageMail from './assets/mail.png'
-
 import imageIdea from './assets/idea.png'
 import imageDecision from './assets/decision.png'
 import imageApp from './assets/app.png'
@@ -21,8 +17,8 @@ class HomePage extends React.Component {
       <div className={styles.me}/>
       <div className={styles.intro}>
         <h1 className={styles.header}>I empower entreprenuers with novel ideas to make those ideas a reality, on a budget.</h1>
-        <br/>
-        <Link to='/contact' className={buttonStyles.button}>Get a Quote</Link>
+        <br/><br/>
+        <Link to='/contact' className={buttonStyles.button}>Get a Quote</Link><br/><br/><br/><br/>
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.icon3}>
@@ -37,7 +33,7 @@ class HomePage extends React.Component {
           <img className={styles.imageIcon} src={imageDecision} />
           <p>I specialize in automating complex decision making processes. I can do the math</p>
         </div>
-      </div>
+      </div><br/><br/>
     </div>)
   }
 }

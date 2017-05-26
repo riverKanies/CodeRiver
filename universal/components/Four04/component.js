@@ -13,7 +13,7 @@ type Props = {
 }
 
 const returnButton = {
-  buttonText: 'Return to Plan Made',
+  buttonText: 'Return to CodeRiver',
   linkTo: '/',
   buttonStyle: 'violet'
 }

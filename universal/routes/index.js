@@ -1,6 +1,4 @@
-
 import Home from 'layouts/Home'
-import Quote from 'layouts/Quote'
 import LayoutCore from 'layouts/LayoutCore'
 import SignUp from 'layouts/SignUp'
 import Welcome from 'components/Welcome'
@@ -9,6 +7,8 @@ import Login from 'layouts/Login'
 import ResetPassword from 'layouts/ResetPassword'
 import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import NotFound from 'layouts/NotFound'
+
+import Pricing from 'layouts/Pricing'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -24,8 +24,8 @@ export const createRoutes = (store) => ([
     onChange: handleUpdate,
     childRoutes: [
       {
-        path: '/quote',
-        component: Quote.component
+        path: 'pricing',
+        component: Pricing
       },
       {
         path: 'signup',

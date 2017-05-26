@@ -14,7 +14,7 @@ import React from 'react'
 
 setAddon(infoAddon)
 setOptions({
-  name: 'Plan Made',
+  name: 'CodeRiver',
   url: 'http://myplanmade.com',
   goFullScreen: false,
   showLeftPanel: true,

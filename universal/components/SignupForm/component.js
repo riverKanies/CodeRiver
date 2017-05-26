@@ -7,8 +7,6 @@ import Input from 'components/Input'
 import styles from './styles'
 import contentStyles from 'styles/content.css'
 
-import { renderSelectedQuote } from 'components/QuoteCard'
-
 type renderSubmitField = {
   valid: boolean,
   submitting: boolean,
@@ -45,7 +43,6 @@ const SignUpForm = (props: signupProps) => {
       </header>
       <section className={styles.signUpDialogue}>
         <div className={styles.container}>
-          {renderSelectedQuote(props.selectedQuote)}
           <form className={styles.signUpForm}>
             <fieldset className={styles.timeToThrive}>
               <GenericFormError {...props} />

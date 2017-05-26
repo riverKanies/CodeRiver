@@ -12,17 +12,10 @@
   }
 }
 
-.city {
-  height: 400px;
-  text-align: center;
-  background: url('./assets/city.jpg') no-repeat;
-  background-position: center -2cm;
-}
-
 .me {
   height: 500px;
   text-align: center;
-  background: url('./assets/professionalProfile.jpg') no-repeat;
+  background: url('./assets/professionalProfile.png') no-repeat;
   background-position: center 0cm;
   background-size: cover;
 }
@@ -70,7 +63,7 @@
   color: CodeRiverTeal;
   display: block;
   lost-column: 1;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   @media bp-mama-bear {
     lost-column: 1/2;
   }
