@@ -23,7 +23,7 @@
 .graphicsContainer {
   lost-center: containerWidth;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   margin-top: 20px;
 }
 .computerSection {
@@ -44,16 +44,16 @@
   vertical-align: bottom;
   background-color: CodeRiverLightGray;
   width:90%;
-  margin-left: 5%;
+  margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 5px;
   border-radius: 15px;
 }
 .imageContainerMobile {
   margin: 0 auto;
+  padding: 5px 0;
   background-color: CodeRiverDarkGray;
-  width:200px;
-  height: 380px;
+  width:60%;
   border-radius: 15px;
 }
 .computerStand {
@@ -75,18 +75,26 @@
   border-radius: 5px;
 }
 .imageMobile {
-  width: 180px;
-  margin-top: 30px;
+  margin-top: 10px;
+  width: 90%;
   border-radius: 2px;
 }
 .mobileButton {
   height: 40px;
   width: 40px;
-  margin-left: 80px;
+  margin: 0 auto;
   border-radius: 50%;
   border-color: CodeRiverLightGray;
   border-width: 2px;
   border-style: solid;
+  @media bp-papa-bear {
+    height: 20px;
+    width: 20px;
+  }
+  @media bp-grand-bear {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .body {
