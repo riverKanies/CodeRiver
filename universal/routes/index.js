@@ -9,6 +9,7 @@ import RegistrationSuccess from 'layouts/RegistrationSuccess'
 import NotFound from 'layouts/NotFound'
 
 import Pricing from 'layouts/Pricing'
+import Portfolio from 'layouts/Portfolio'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -23,6 +24,10 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
+      {
+        path: 'portfolio',
+        component: Portfolio
+      },
       {
         path: 'pricing',
         component: Pricing

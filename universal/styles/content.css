@@ -1,4 +1,16 @@
-@value CodeRiverDarkGray, CodeRiverBlue, CodeRiverTeal from 'all';
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
+@value CodeRiverDarkGray, CodeRiverTeal, CodeRiverBlue from all;
+
+.container {
+  background: white;
+  padding: 100px 10px;
+  @media bp-mama-bear {
+    padding: 80px 10%;
+  }
+  @media bp-papa-bear {
+    padding: 80px 15%;
+  }
+}
 
 .button {
   text-align: center;

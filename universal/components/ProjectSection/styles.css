@@ -1,0 +1,99 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
+@value CodeRiverDarkGray, CodeRiverLightGray, CodeRiverTeal, CodeRiverBlue from all;
+
+.header {
+  text-align: center;
+  font-family: montserrat;
+  color: CodeRiverTeal;
+  margin-bottom: 40px;
+}
+
+.subheader {
+  font-family: montserratLight;
+  color: CodeRiverDarkGray;
+  margin-bottom: 40px;
+}
+
+.imageContainer {
+  background-color: CodeRiverLightGray;
+  width:70%;
+  margin-left: 15%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+
+.image {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5px;
+}
+
+.body {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: PT serif;
+  color: CodeRiverDarkGray;
+}
+
+.bodyHeading {
+  font-family: montserratLight;
+  color: CodeRiverDarkGray;
+}
+
+.footNote {
+  margin-top: 30px;
+  font-style: italic;
+  font-family: PT serif;
+  color: CodeRiverDarkGray;
+}
+
+.link {
+  text-align: center;
+  font-family: montserrat;
+  border-radius: 4px;
+  background: white;
+  color: CodeRiverDarkGray;
+  border: 1px solid CodeRiverDarkGray;
+  padding: 10px;
+  &:hover {
+    border-color: CodeRiverBlue;
+    color: CodeRiverBlue;
+  }
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.iconContainer {
+  lost-center: containerWidth;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.icon {
+  color: CodeRiverDarkGray;
+  display: block;
+  lost-column: 1;
+  margin-bottom: 35px;
+  @media bp-mama-bear {
+    lost-column: 1/2;
+  }
+  @media bp-papa-bear {
+    lost-column: 1/4;
+  }
+  > img {
+    margin-bottom: 10px;
+  }
+}
+.icon3 {
+  color: CodeRiverDarkGray;
+  display: block;
+  lost-column: 1;
+  margin-bottom: 35px;
+  @media bp-papa-bear {
+    lost-column: 1/3;
+  }
+  > img {
+    margin-bottom: 10px;
+  }
+}
