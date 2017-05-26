@@ -37,3 +37,26 @@
   color: CodeRiverDarkGray;
   margin-bottom: 40px;
 }
+
+.link {
+  text-align: center;
+  font-family: montserrat;
+  border-radius: 4px;
+  background: white;
+  color: CodeRiverDarkGray;
+  border: 1px solid CodeRiverDarkGray;
+  padding: 10px;
+  &:hover {
+    border-color: CodeRiverBlue;
+    color: CodeRiverBlue;
+  }
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.body {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: PT serif;
+  color: CodeRiverDarkGray;
+}

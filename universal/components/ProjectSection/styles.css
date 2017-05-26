@@ -1,9 +1,15 @@
 @value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
 @value CodeRiverDarkGray, CodeRiverLightGray, CodeRiverTeal, CodeRiverBlue from all;
 
+.container {
+  margin-bottom: 3em;
+  padding-top: 2em;
+}
+
 .header {
   text-align: center;
   font-family: montserrat;
+  line-height: 1.2em;
   color: CodeRiverTeal;
   margin-bottom: 40px;
 }
@@ -14,19 +20,73 @@
   margin-bottom: 40px;
 }
 
+.graphicsContainer {
+  lost-center: containerWidth;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.computerSection {
+  lost-column: 1;
+  margin-bottom: 20px;
+  @media bp-papa-bear {
+    lost-column: 2/3;
+  }
+}
+.mobileSection {
+  lost-column: 1;
+  @media bp-papa-bear {
+    lost-column: 1/3;
+  }
+}
+
 .imageContainer {
+  vertical-align: bottom;
   background-color: CodeRiverLightGray;
-  width:70%;
-  margin-left: 15%;
+  width:90%;
+  margin-left: 5%;
   padding-top: 10px;
   padding-bottom: 5px;
   border-radius: 15px;
 }
+.imageContainerMobile {
+  margin: 0 auto;
+  background-color: CodeRiverDarkGray;
+  width:200px;
+  height: 380px;
+  border-radius: 15px;
+}
+.computerStand {
+  width: 10%;
+  margin-left: 45%;
+  background-color: CodeRiverDarkGray;
+  height: 15px;
+}
+.computerFoot {
+  width: 20%;
+  margin-left: 40%;
+  background-color: CodeRiverLightGray;
+  height: 10px;
+  border-radius: 7px 7px 0 0;
+}
 
 .image {
   width: 90%;
-  margin-left: 5%;
   border-radius: 5px;
+}
+.imageMobile {
+  width: 180px;
+  margin-top: 30px;
+  border-radius: 2px;
+}
+.mobileButton {
+  height: 40px;
+  width: 40px;
+  margin-left: 80px;
+  border-radius: 50%;
+  border-color: CodeRiverLightGray;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .body {
