@@ -1,0 +1,39 @@
+@value bp-mama-bear, bp-papa-bear, bp-grand-bear from all;
+@value CodeRiverDarkGray, CodeRiverLightGray, CodeRiverTeal, CodeRiverBlue from all;
+
+.pricingContainer {
+  lost-center: containerWidth;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+.contentSection {
+  lost-column: 1;
+  margin-bottom: 20px;
+  @media bp-papa-bear {
+    lost-column: 1/2;
+  }
+}
+.imageSection {
+  lost-column: 1;
+  margin-bottom: 20px;
+  @media bp-papa-bear {
+    margin-top: 30%;
+    lost-column: 1/2;
+  }
+}
+.frame {
+  width: 300px;
+  margin: 0 auto;
+}
+.triangle {
+  width: 0px;
+  border-left: 15px solid grey;
+  border-bottom: 15px solid grey;
+
+  border-top: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+.image {
+  width: 300px;
+}
