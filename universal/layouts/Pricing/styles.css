@@ -28,11 +28,12 @@
 }
 .triangle {
   width: 0px;
-  border-left: 15px solid grey;
-  border-bottom: 15px solid grey;
+  /*border-left: 15px solid grey;*/
+  border-bottom: 20px solid grey;
 
   border-top: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-right: 30px solid transparent;
+  border-left: 0px solid transparent;
 }
 .image {
   width: 300px;

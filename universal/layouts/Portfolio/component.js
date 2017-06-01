@@ -26,7 +26,7 @@ class Portfolio extends React.Component {
           tech={'This is a two piece app, the frontend and backend are completely decoupled. The frontend is a mobile-friendly react based static site. The backend is a Ruby on Rails API server.'}
         />
         <ProjectSection
-          header={'Musih Therapy Stroke Rehabilitation'}
+          header={'Music Therapy Stroke Rehabilitation'}
           link={'http://musicrehabapp.herokuapp.com/'}
           image={imageMusicRehab}
           description={'Martha Summa has a vision of better rehabilitation tools...'}
