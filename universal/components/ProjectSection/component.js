@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import styles from './styles'
+import contentStyles from 'styles/content.css'
 
 class ProjectSection extends React.Component {
   render () {
@@ -28,7 +29,7 @@ class ProjectSection extends React.Component {
 
       <section>
         <h2 className={styles.header}>{this.props.header}</h2>
-        <p className={styles.body}>{this.props.description}</p>
+        <p className={contentStyles.body}>{this.props.description}</p>
       </section>
       <p className={styles.footNote}>{this.props.tech}</p>
     </div>)

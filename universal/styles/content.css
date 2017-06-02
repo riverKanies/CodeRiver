@@ -27,12 +27,14 @@
 }
 
 .header {
+  text-align: center;
   font-family: montserrat;
   color: CodeRiverTeal;
   margin-bottom: 40px;
 }
 
 .subheader {
+  text-align: center;
   font-family: montserratLight;
   color: CodeRiverDarkGray;
   margin-bottom: 40px;
@@ -53,8 +55,13 @@
   padding: 10px;
   margin-right: 20px;
 }
+.linkContainer {
+  padding-top: 30px;
+  text-align: center;
+}
 
 .body {
+  text-indent: 30px;
   margin-top: 10px;
   margin-bottom: 20px;
   font-family: PT serif;

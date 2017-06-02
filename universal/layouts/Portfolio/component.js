@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import ProjectSection from 'components/ProjectSection'
+import MainCTA from 'components/MainCTA'
 
 import styles from './styles'
 import contentStyles from 'styles/content.css'
@@ -34,7 +35,7 @@ class Portfolio extends React.Component {
         />
         <div style={{textAlign: 'center'}}>
           <p className={contentStyles.body}>I've helped many entrepreneurs in realizing their dreams. You could be next.</p>
-          <Link to='contact' className={contentStyles.link}>Let's work together</Link>
+          <MainCTA />
         </div>
       </main>
     )
