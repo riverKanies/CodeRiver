@@ -45,7 +45,7 @@ class Portfolio extends React.Component {
           tech={'Ruby on Rails app backed by a PostgreSQL database.'}
         />
         <div style={{textAlign: 'center'}}>
-          <p className={contentStyles.body}>I've helped many entrepreneurs in realizing their dreams. You could be next.</p>
+          <p className={contentStyles.oneliner}>I've helped many entrepreneurs in realizing their dreams. You could be next.</p>
           <MainCTA />
         </div>
       </main>

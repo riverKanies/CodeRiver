@@ -60,10 +60,13 @@
   text-align: center;
 }
 
-.body {
-  text-indent: 30px;
+.oneliner {
   margin-top: 10px;
   margin-bottom: 20px;
   font-family: PT serif;
   color: CodeRiverDarkGray;
+}
+.body {
+  composes: oneliner;
+  text-indent: 30px;
 }

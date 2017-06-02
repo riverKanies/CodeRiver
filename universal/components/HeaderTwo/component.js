@@ -152,6 +152,16 @@ export class Header extends React.Component {
               Pricing
             </Link>
           </nav>
+          <nav role='navigation' >
+            <Link
+              id="navContact"
+              to="/contact"
+              className={styles.linkUtility}
+              activeClassName={styles.activeRoute}
+            >
+              Contact
+            </Link>
+          </nav>
         </section>
       </div>
     )

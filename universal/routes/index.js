@@ -10,6 +10,7 @@ import NotFound from 'layouts/NotFound'
 
 import Pricing from 'layouts/Pricing'
 import Portfolio from 'layouts/Portfolio'
+import Contact from 'layouts/Contact'
 
 function handleUpdate (prevState, nextState) {
   if (nextState.location.action !== 'POP') {
@@ -24,6 +25,10 @@ export const createRoutes = (store) => ([
     indexRoute: Home,
     onChange: handleUpdate,
     childRoutes: [
+      {
+        path: 'contact',
+        component: Contact
+      },
       {
         path: 'portfolio',
         component: Portfolio
