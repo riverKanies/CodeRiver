@@ -26,6 +26,7 @@ class Portfolio extends React.Component {
           image={imagePlanMade}
           mobileImage={imagePlanMadeMobile}
           description={'Chris Thompson is a young aspiring entrepreneur working in the life insurance space. I was able to get him a fully functional MVP app to help him validate his business model and catch the attention of investors. This project involved an integration with a 3rd party service for quote data, automated emails to help get users engaged with the bussiness, and an interactive form for modifying quote data.'}
+          testimonial={""}
           tech={'This is a two piece app, the frontend and backend are completely decoupled. The frontend is a mobile-friendly react based static site. The backend is a Ruby on Rails API server with a PostgreSQL database.'}
         />
         <ProjectSection
@@ -34,6 +35,7 @@ class Portfolio extends React.Component {
           image={imageMusicRehab}
           mobileImage={imageMusicRehabMobile}
           description={"Martha Summa has designed a tool that utilizes music to help with attention focus. It can be applicable to helping with stroke, autism, Parkinson’s, Traumatic Brain Injury (TBI), and many other conditions. The app utilizes graphic and audio resources stored on AWS S3 to test and improve patients' attention span. The app also includes reporting and administrative interfaces for managing patients and assessing their progress."}
+          testimonial={"I was introduced to River shortly after winning Chattanooga’s Company Lab (CoLab) December 2016 “Will This Float” contest for the idea of automating biomedical music protocols into software or an app that could be used to help persons with motor, speech, and cognition difficulties.  After just one short meeting lasting less than an hour, River instantly understood the concepts and data structures of what we were trying to accomplish, and he took the idea along with some loose logic flows I’d created and was able to create a prototype within a couple of weeks that was unveiled with many positive responses at CoLab’s 2017 spring accelerator showcase.  He consistently met deadlines with great quality work and a real concern for making sure the outcomes were successful, and I’m looking forward to continuing more innovative development efforts with him in the future."}
           tech={'This is a two piece app, the frontend and backend are completely decoupled. The frontend is a mobile-friendly react based static site. The backend is a Ruby on Rails API server with a PostgreSQL database.'}
         />
         <ProjectSection
@@ -42,6 +44,7 @@ class Portfolio extends React.Component {
           image={imageTemper}
           mobileImage={imageTemperMobile}
           description={"SimpleFocus, a local Chattanooga consultancy, brought me on to build some features for their Temper app. Temper measures how customers feel about a business so that the bussiness knows what to improve. I built two full-stack features on the app that involved integrations with 3rd party services and interfaces for managing those integrations. The first feature was exporting response data to both CSV and XLS files to AWS S3 buckets and automated emails to send the links to download those files. The second was an integration with Zapier to allow customers to have their data sent out, in real time, to any of the services integrated with Zapier."}
+          testimonial={"River worked well with our team, got his work done quickly, and was very open to feedback."}
           tech={'Ruby on Rails app backed by a PostgreSQL database.'}
         />
         <div style={{textAlign: 'center'}}>
